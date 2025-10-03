@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snow Rider 3D</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+    #gameContainer {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #gameContainer canvas {
+      width: 100% !important;
+      height: 100% !important;
+    }
+    #loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div id="loader">Loading Snow Rider 3D...</div>
+  <div id="gameContainer"></div>
+
+  <script>
+    // Load Unity WebGL game from external CDN
+    (function() {
+      const loader = document.getElementById('loader');
+
+      // Create and append stylesheet
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'https://cdn.jsdelivr.net/gh/drippy-cat/snowrider3D@c82fe583cbffafa502b0aa3ed2da0053972e0c80/TemplateData/style.css';
+      document.head.appendChild(link);
+
+      // Load UnityProgress script
+      const progressScript = document.createElement('script');
+      progressScript.src = 'https://cdn.jsdelivr.net/gh/drippy-cat/snowrider3D@c82fe583cbffafa502b0aa3ed2da0053972e0c80/TemplateData/UnityProgress.js';
+      progressScript.onerror = function() {
+        loader.textContent = 'Error loading progress script';
+      };
+      document.head.appendChild(progressScript);
+
+      // Load UnityLoader script
+      const loaderScript = document.createElement('script');
+      loaderScript.src = 'https://cdn.jsdelivr.net/gh/drippy-cat/snowrider3D@c82fe583cbffafa502b0aa3ed2da0053972e0c80/Build/UnityLoader.js';
+      loaderScript.onerror = function() {
+        loader.textContent = 'Error loading Unity loader';
+      };
+      loaderScript.onload = function() {
+        // Wait a bit for UnityLoader to initialize
+        setTimeout(function() {
+          try {
+            if (typeof UnityLoader !== 'undefined') {
+              var gameInstance = UnityLoader.instantiate(
+                "gameContainer",
+                "https://cdn.jsdelivr.net/gh/drippy-cat/snowrider3D@c82fe583cbffafa502b0aa3ed2da0053972e0c80/Build/SnowRider3D-gd-1.json",
+                {
+                  onProgress: function(gameInstance, progress) {
+                    if (typeof UnityProgress !== 'undefined') {
+                      UnityProgress(gameInstance, progress);
+                    }
+                    if (progress === 1) {
+                      loader.style.display = 'none';
+                    }
+                  },
+                  Module: {
+                    onRuntimeInitialized: function() {
+                      loader.style.display = 'none';
+                      if (typeof UnityProgress !== 'undefined') {
+                        UnityProgress(gameInstance, "complete");
+                      }
+                    }
+                  }
+                }
+              );
+            } else {
+              loader.textContent = 'UnityLoader not available';
+            }
+          } catch(e) {
+            loader.textContent = 'Error initializing game: ' + e.message;
+            console.error('Game initialization error:', e);
+          }
+        }, 100);
+      };
+      document.head.appendChild(loaderScript);
+    })();
+  </script>
+</body>
+</html>
