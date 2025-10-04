@@ -18,6 +18,9 @@ const games = [
   { id: 'time-shooter-2', name: 'Time Shooter 2', url: '/games/Time Shooter 2 (1) copy.html', icon: '🔫' },
   { id: 'time-shooter-3', name: 'Time Shooter 3 SWAT', url: '/games/Time Shooter 3_ SWAT (1).html', icon: '🔫' },
   { id: 'vex-6', name: 'Vex 6', url: '/games/Vex 6.html', icon: '🏃' },
+  { id: 'vex-8', name: 'Vex 8', url: '/games/Vex 8 copy copy copy.html', icon: '🏃' },
+  { id: 'repo', name: 'R.E.P.O', url: '/games/R.E.P.O copy copy copy.html', icon: '🎮' },
+  { id: 'online-viewer', name: 'Online Viewer', url: '/games/online_viewer_net (1) copy.html', icon: '📺' },
 ];
 
 function App() {
