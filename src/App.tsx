@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Search, Mic, Image, Grid2x2 as Grid, User } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Search, Mic, Image, Grid2x2 as Grid, User, ArrowLeft, LayoutGrid } from 'lucide-react';
 
 const games = [
   { id: '1v1-lol', name: '1v1.LoL', url: '/games/1v1.LoL (1).html', icon: '🎮' },
@@ -31,7 +31,7 @@ function App() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     const searchQuery = searchInputRef.current?.value || '';
-    if (searchQuery.trim().toLowerCase() === 'gleep') {
+    if (searchQuery.trim().toLowerCase() === 'cobweb') {
       setShowGameGrid(true);
     } else if (searchQuery.trim()) {
       window.open(`https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`, '_blank');
@@ -40,12 +40,24 @@ function App() {
 
   const handleLuckySearch = () => {
     const searchQuery = searchInputRef.current?.value || '';
-    if (searchQuery.trim().toLowerCase() === 'gleep') {
+    if (searchQuery.trim().toLowerCase() === 'cobweb') {
       setShowGameGrid(true);
     } else if (searchQuery.trim()) {
       window.open(`https://www.google.com/search?q=${encodeURIComponent(searchQuery)}&btnI=1`, '_blank');
     }
   };
+
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.key === '\\') {
+        e.preventDefault();
+        window.location.href = 'https://manhasset.instructure.com/';
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, []);
 
   const playGame = (gameUrl: string) => {
     setCurrentGame(gameUrl);
@@ -53,7 +65,26 @@ function App() {
 
   if (currentGame) {
     return (
-      <div className="w-screen h-screen bg-black overflow-hidden">
+      <div className="w-screen h-screen bg-black overflow-hidden relative">
+        <div className="absolute top-4 left-4 flex gap-3 z-50">
+          <button
+            onClick={() => setCurrentGame(null)}
+            className="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors flex items-center gap-2 shadow-lg"
+          >
+            <ArrowLeft size={18} />
+            Back to Search
+          </button>
+          <button
+            onClick={() => {
+              setCurrentGame(null);
+              setShowGameGrid(true);
+            }}
+            className="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors flex items-center gap-2 shadow-lg"
+          >
+            <LayoutGrid size={18} />
+            Game List
+          </button>
+        </div>
         <iframe
           src={currentGame}
           className="w-full h-full border-none"
@@ -141,6 +172,11 @@ function App() {
               type="text"
               onFocus={() => setIsSearchFocused(true)}
               onBlur={() => setIsSearchFocused(false)}
+              onKeyDown={(e) => {
+                if (e.key === 'Backspace') {
+                  e.stopPropagation();
+                }
+              }}
               placeholder="Search Geegle or type a URL"
               className="flex-1 outline-none text-gray-100 text-base bg-transparent placeholder-gray-500"
             />
