@@ -20,7 +20,6 @@ const games = [
   { id: 'vex-6', name: 'Vex 6', url: '/games/Vex 6.html', icon: '🏃' },
   { id: 'vex-8', name: 'Vex 8', url: '/games/Vex 8 copy copy copy.html', icon: '🏃' },
   { id: 'repo', name: 'R.E.P.O', url: '/games/R.E.P.O copy copy copy.html', icon: '🎮' },
-  { id: 'online-viewer', name: 'Online Viewer', url: '/games/online_viewer_net (1) copy.html', icon: '📺' },
 ];
 
 function App() {
