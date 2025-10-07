@@ -61,12 +61,13 @@ function App() {
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.key === '\\') {
         e.preventDefault();
+        e.stopPropagation();
         window.location.href = 'https://manhasset.instructure.com/';
       }
     };
 
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
+    document.addEventListener('keydown', handleKeyPress, true);
+    return () => document.removeEventListener('keydown', handleKeyPress, true);
   }, []);
 
   const playGame = (gameUrl: string) => {
