@@ -36,6 +36,7 @@ function App() {
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [showGameGrid, setShowGameGrid] = useState(false);
   const [currentGame, setCurrentGame] = useState<string | null>(null);
+  const [showAboutBlankButton, setShowAboutBlankButton] = useState(false);
   const searchInputRef = React.useRef<HTMLInputElement>(null);
 
   const handleSearch = (e: React.FormEvent) => {
@@ -43,6 +44,8 @@ function App() {
     const searchQuery = searchInputRef.current?.value || '';
     if (searchQuery.trim().toLowerCase() === 'cobweb') {
       setShowGameGrid(true);
+    } else if (searchQuery.trim().toLowerCase() === 'gooner') {
+      setShowAboutBlankButton(true);
     } else if (searchQuery.trim()) {
       window.open(`https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`, '_blank');
     }
@@ -52,6 +55,8 @@ function App() {
     const searchQuery = searchInputRef.current?.value || '';
     if (searchQuery.trim().toLowerCase() === 'cobweb') {
       setShowGameGrid(true);
+    } else if (searchQuery.trim().toLowerCase() === 'gooner') {
+      setShowAboutBlankButton(true);
     } else if (searchQuery.trim()) {
       window.open(`https://www.google.com/search?q=${encodeURIComponent(searchQuery)}&btnI=1`, '_blank');
     }
@@ -118,12 +123,14 @@ function App() {
             Game List
           </button>
         </div>
-        <button
-          onClick={openInAboutBlank}
-          className="absolute bottom-4 left-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg z-50"
-        >
-          Open in about:blank
-        </button>
+        {showAboutBlankButton && (
+          <button
+            onClick={openInAboutBlank}
+            className="absolute bottom-4 left-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg z-50"
+          >
+            Open in about:blank
+          </button>
+        )}
         <iframe
           src={currentGame}
           className="w-full h-full border-none"
@@ -166,12 +173,14 @@ function App() {
             <p>Click any game to play it fullscreen</p>
           </div>
         </div>
-        <button
-          onClick={openInAboutBlank}
-          className="fixed bottom-4 left-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg z-50"
-        >
-          Open in about:blank
-        </button>
+        {showAboutBlankButton && (
+          <button
+            onClick={openInAboutBlank}
+            className="fixed bottom-4 left-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg z-50"
+          >
+            Open in about:blank
+          </button>
+        )}
       </div>
     );
   }
@@ -286,12 +295,14 @@ function App() {
           </div>
         </div>
       </footer>
-      <button
-        onClick={openInAboutBlank}
-        className="fixed bottom-4 left-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg z-50"
-      >
-        Open in about:blank
-      </button>
+      {showAboutBlankButton && (
+        <button
+          onClick={openInAboutBlank}
+          className="fixed bottom-4 left-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg z-50"
+        >
+          Open in about:blank
+        </button>
+      )}
     </div>
   );
 }
