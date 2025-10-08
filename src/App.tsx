@@ -74,6 +74,28 @@ function App() {
     setCurrentGame(gameUrl);
   };
 
+  const openInAboutBlank = () => {
+    const newWindow = window.open('about:blank', '_blank');
+    if (newWindow) {
+      newWindow.document.write(`
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <title>Geegle</title>
+            <style>
+              body, html { margin: 0; padding: 0; overflow: hidden; width: 100%; height: 100%; }
+              iframe { width: 100%; height: 100%; border: none; }
+            </style>
+          </head>
+          <body>
+            <iframe src="${window.location.href}"></iframe>
+          </body>
+        </html>
+      `);
+      newWindow.document.close();
+    }
+  };
+
   if (currentGame) {
     return (
       <div className="w-screen h-screen bg-black overflow-hidden relative">
@@ -96,6 +118,12 @@ function App() {
             Game List
           </button>
         </div>
+        <button
+          onClick={openInAboutBlank}
+          className="absolute bottom-4 left-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg z-50"
+        >
+          Open in about:blank
+        </button>
         <iframe
           src={currentGame}
           className="w-full h-full border-none"
@@ -109,7 +137,7 @@ function App() {
 
   if (showGameGrid) {
     return (
-      <div className="w-screen h-screen bg-gray-900 overflow-y-scroll">
+      <div className="w-screen h-screen bg-gray-900 overflow-y-scroll relative">
         <div className="p-8">
           <div className="mb-8 text-center sticky top-0 bg-gray-900 py-4 z-10">
             <h1 className="text-5xl font-bold text-white mb-4">Choose Your Game</h1>
@@ -138,6 +166,12 @@ function App() {
             <p>Click any game to play it fullscreen</p>
           </div>
         </div>
+        <button
+          onClick={openInAboutBlank}
+          className="fixed bottom-4 left-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg z-50"
+        >
+          Open in about:blank
+        </button>
       </div>
     );
   }
@@ -252,6 +286,12 @@ function App() {
           </div>
         </div>
       </footer>
+      <button
+        onClick={openInAboutBlank}
+        className="fixed bottom-4 left-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg z-50"
+      >
+        Open in about:blank
+      </button>
     </div>
   );
 }
