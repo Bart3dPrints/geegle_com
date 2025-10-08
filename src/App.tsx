@@ -42,9 +42,8 @@ function App() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     const searchQuery = searchInputRef.current?.value || '';
-    if (searchQuery.trim().toLowerCase() === 'cobweb') {
+    if (searchQuery.trim().toLowerCase() === 'gooner') {
       setShowGameGrid(true);
-    } else if (searchQuery.trim().toLowerCase() === 'gooner') {
       setShowAboutBlankButton(true);
     } else if (searchQuery.trim()) {
       window.open(`https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`, '_blank');
@@ -53,9 +52,8 @@ function App() {
 
   const handleLuckySearch = () => {
     const searchQuery = searchInputRef.current?.value || '';
-    if (searchQuery.trim().toLowerCase() === 'cobweb') {
+    if (searchQuery.trim().toLowerCase() === 'gooner') {
       setShowGameGrid(true);
-    } else if (searchQuery.trim().toLowerCase() === 'gooner') {
       setShowAboutBlankButton(true);
     } else if (searchQuery.trim()) {
       window.open(`https://www.google.com/search?q=${encodeURIComponent(searchQuery)}&btnI=1`, '_blank');
