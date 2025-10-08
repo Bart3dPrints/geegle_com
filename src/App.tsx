@@ -75,24 +75,24 @@ function App() {
   };
 
   const openInAboutBlank = () => {
-    const newWindow = window.open('about:blank', '_blank');
-    if (newWindow) {
-      newWindow.document.write(`
-        <!DOCTYPE html>
-        <html>
-          <head>
-            <title>Geegle</title>
-            <style>
-              body, html { margin: 0; padding: 0; overflow: hidden; width: 100%; height: 100%; }
-              iframe { width: 100%; height: 100%; border: none; }
-            </style>
-          </head>
-          <body>
-            <iframe src="${window.location.href}"></iframe>
-          </body>
-        </html>
-      `);
-      newWindow.document.close();
+    try {
+      const win = window.open();
+      if (win) {
+        win.document.body.style.margin = '0';
+        win.document.body.style.height = '100vh';
+        const iframe = win.document.createElement('iframe');
+        iframe.style.border = 'none';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.margin = '0';
+        iframe.src = window.location.href;
+        win.document.body.appendChild(iframe);
+      } else {
+        alert('Please allow popups for this site');
+      }
+    } catch (e) {
+      console.error('Failed to open about:blank:', e);
+      alert('Failed to open about:blank. Please allow popups for this site.');
     }
   };
 
