@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Search, Mic, Image, Grid2x2 as Grid, User, ArrowLeft, LayoutGrid } from 'lucide-react';
 
 const games = [
+  { id: 'web-proxy', name: 'Web Proxy', url: 'proxy', icon: '🌐' },
   { id: '1v1-lol', name: '1v1.LoL', url: '/games/1v1.LoL (1).html', icon: '🎮' },
   { id: 'bloxorz', name: 'Bloxorz', url: '/games/Bloxorz copy copy.html', icon: '🧊' },
   { id: 'bowmasters', name: 'Bowmasters', url: '/games/Bowmasters copy.html', icon: '🏹' },
@@ -37,7 +38,10 @@ function App() {
   const [showGameGrid, setShowGameGrid] = useState(false);
   const [currentGame, setCurrentGame] = useState<string | null>(null);
   const [showAboutBlankButton, setShowAboutBlankButton] = useState(false);
+  const [showProxy, setShowProxy] = useState(false);
+  const [proxyUrl, setProxyUrl] = useState('');
   const searchInputRef = React.useRef<HTMLInputElement>(null);
+  const proxyInputRef = React.useRef<HTMLInputElement>(null);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -65,7 +69,11 @@ function App() {
       if (e.key === '\\') {
         e.preventDefault();
         e.stopPropagation();
-        window.location.href = 'https://manhasset.instructure.com/';
+        if (window.self !== window.top) {
+          window.top!.location.href = 'https://manhasset.instructure.com/';
+        } else {
+          window.location.href = 'https://manhasset.instructure.com/';
+        }
       }
     };
 
@@ -74,7 +82,24 @@ function App() {
   }, []);
 
   const playGame = (gameUrl: string) => {
-    setCurrentGame(gameUrl);
+    if (gameUrl === 'proxy') {
+      setShowProxy(true);
+      setShowGameGrid(false);
+    } else {
+      setCurrentGame(gameUrl);
+    }
+  };
+
+  const handleProxySearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    const url = proxyInputRef.current?.value || '';
+    if (url.trim()) {
+      let formattedUrl = url.trim();
+      if (!formattedUrl.startsWith('http://') && !formattedUrl.startsWith('https://')) {
+        formattedUrl = 'https://' + formattedUrl;
+      }
+      setProxyUrl(formattedUrl);
+    }
   };
 
   const openInAboutBlank = () => {
@@ -139,6 +164,78 @@ function App() {
           allow="fullscreen"
           style={{ display: 'block' }}
         />
+      </div>
+    );
+  }
+
+  if (showProxy) {
+    return (
+      <div className="w-screen h-screen bg-gray-900 flex flex-col">
+        <div className="bg-gray-800 p-4 flex items-center gap-4 shadow-lg">
+          <button
+            onClick={() => {
+              setShowProxy(false);
+              setShowAboutBlankButton(false);
+              setProxyUrl('');
+            }}
+            className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors flex items-center gap-2"
+          >
+            <ArrowLeft size={18} />
+            Back to Search
+          </button>
+          <button
+            onClick={() => {
+              setShowProxy(false);
+              setShowGameGrid(true);
+            }}
+            className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors flex items-center gap-2"
+          >
+            <LayoutGrid size={18} />
+            Game List
+          </button>
+          <form onSubmit={handleProxySearch} className="flex-1 flex items-center gap-2">
+            <div className="flex-1 flex items-center gap-2 px-4 py-2 bg-gray-700 rounded-lg">
+              <Search size={18} className="text-gray-400" />
+              <input
+                ref={proxyInputRef}
+                type="text"
+                placeholder="Enter URL (e.g., google.com)"
+                className="flex-1 outline-none text-gray-100 bg-transparent placeholder-gray-400"
+              />
+            </div>
+            <button
+              type="submit"
+              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Go
+            </button>
+          </form>
+        </div>
+        <div className="flex-1 relative">
+          {proxyUrl ? (
+            <iframe
+              src={proxyUrl}
+              className="w-full h-full border-none"
+              title="Web Proxy"
+              sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox"
+            />
+          ) : (
+            <div className="flex items-center justify-center h-full text-gray-400">
+              <div className="text-center">
+                <div className="text-6xl mb-4">🌐</div>
+                <p className="text-xl">Enter a URL to browse the web</p>
+              </div>
+            </div>
+          )}
+        </div>
+        {showAboutBlankButton && (
+          <button
+            onClick={openInAboutBlank}
+            className="fixed bottom-4 left-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg z-50"
+          >
+            Open in about:blank
+          </button>
+        )}
       </div>
     );
   }
