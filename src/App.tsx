@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Mic, Image, Grid2x2 as Grid, User, ArrowLeft, LayoutGrid, ChevronDown } from 'lucide-react';
+import { Search, Mic, Image, Grid2x2 as Grid, User, ArrowLeft, ChevronDown } from 'lucide-react';
+
+const PROXY_GAME_IDS = new Set(['heilos', 'doge', 'vapor', 'awpproxy', 'overcloaked', 'voidproxy1']);
 
 const games = [
   { id: 'heilos', name: 'Heilos Proxy', url: '/games/heilos.html', icon: '🌐' },
@@ -48,7 +50,8 @@ function App() {
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [showGameGrid, setShowGameGrid] = useState(false);
   const [currentGame, setCurrentGame] = useState<string | null>(null);
-  const [showAboutBlankButton, setShowAboutBlankButton] = useState(false);
+  const [currentGameId, setCurrentGameId] = useState<string | null>(null);
+  const [showProxyWarning, setShowProxyWarning] = useState(false);
   const [showProxy, setShowProxy] = useState(false);
   const [proxyUrl, setProxyUrl] = useState('');
   const [selectedProxy, setSelectedProxy] = useState(proxies[0]);
@@ -61,7 +64,6 @@ function App() {
     const searchQuery = searchInputRef.current?.value || '';
     if (searchQuery.trim().toLowerCase() === 'gooner') {
       setShowGameGrid(true);
-      setShowAboutBlankButton(true);
     } else if (searchQuery.trim()) {
       window.open(`https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`, '_blank');
     }
@@ -71,7 +73,6 @@ function App() {
     const searchQuery = searchInputRef.current?.value || '';
     if (searchQuery.trim().toLowerCase() === 'gooner') {
       setShowGameGrid(true);
-      setShowAboutBlankButton(true);
     } else if (searchQuery.trim()) {
       window.open(`https://www.google.com/search?q=${encodeURIComponent(searchQuery)}&btnI=1`, '_blank');
     }
@@ -95,12 +96,16 @@ function App() {
     return () => document.removeEventListener('keydown', handleKeyPress, true);
   }, []);
 
-  const playGame = (gameUrl: string) => {
+  const playGame = (gameId: string, gameUrl: string) => {
     if (gameUrl === 'proxy') {
       setShowProxy(true);
       setShowGameGrid(false);
     } else {
       setCurrentGame(gameUrl);
+      setCurrentGameId(gameId);
+      if (PROXY_GAME_IDS.has(gameId)) {
+        setShowProxyWarning(true);
+      }
     }
   };
 
@@ -120,51 +125,43 @@ function App() {
     }
   };
 
-  const openInAboutBlank = () => {
-    try {
-      const win = window.open();
-      if (win) {
-        win.document.body.style.margin = '0';
-        win.document.body.style.height = '100vh';
-        const iframe = win.document.createElement('iframe');
-        iframe.style.border = 'none';
-        iframe.style.width = '100%';
-        iframe.style.height = '100%';
-        iframe.style.margin = '0';
-        iframe.src = window.location.href;
-        win.document.body.appendChild(iframe);
-      } else {
-        alert('Please allow popups for this site');
-      }
-    } catch (e) {
-      console.error('Failed to open about:blank:', e);
-      alert('Failed to open about:blank. Please allow popups for this site.');
-    }
-  };
-
   if (currentGame) {
+    const isProxyGame = currentGameId && PROXY_GAME_IDS.has(currentGameId);
     return (
       <div className="w-screen h-screen bg-black overflow-hidden relative">
-        <div className="absolute top-4 left-4 z-50">
-          <button
-            onClick={() => {
-              setCurrentGame(null);
-              setShowGameGrid(true);
-            }}
-            className="p-1.5 bg-gray-800/80 text-white rounded hover:bg-gray-700 transition-colors shadow-lg"
-            aria-label="Back"
-          >
-            <ArrowLeft size={14} />
-          </button>
-        </div>
-        {showAboutBlankButton && (
-          <button
-            onClick={openInAboutBlank}
-            className="absolute bottom-4 left-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg z-50"
-          >
-            Open in about:blank
-          </button>
+        {/* Proxy warning popup */}
+        {showProxyWarning && (
+          <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/60">
+            <div className="bg-gray-900 border border-yellow-500 rounded-xl p-6 max-w-sm mx-4 shadow-2xl text-center">
+              <div className="text-3xl mb-3">⚠️</div>
+              <p className="text-white font-medium text-base leading-relaxed">
+                Please ignore and exit out of any pop-ups or redirects from these proxies.
+              </p>
+              <button
+                onClick={() => setShowProxyWarning(false)}
+                className="mt-5 px-6 py-2 bg-yellow-500 hover:bg-yellow-400 text-black font-semibold rounded-lg transition-colors"
+              >
+                Got it
+              </button>
+            </div>
+          </div>
         )}
+
+        {/* Back button: top-left for regular games, bottom-left for proxy games */}
+        <button
+          onClick={() => {
+            setCurrentGame(null);
+            setCurrentGameId(null);
+            setShowGameGrid(true);
+          }}
+          className={`absolute z-40 p-1.5 bg-gray-800/80 text-white rounded hover:bg-gray-700 transition-colors shadow-lg ${
+            isProxyGame ? 'bottom-4 left-4' : 'top-4 left-4'
+          }`}
+          aria-label="Back"
+        >
+          <ArrowLeft size={14} />
+        </button>
+
         <iframe
           src={currentGame}
           className="w-full h-full border-none"
@@ -263,14 +260,6 @@ function App() {
             </div>
           )}
         </div>
-        {showAboutBlankButton && (
-          <button
-            onClick={openInAboutBlank}
-            className="fixed bottom-6 left-6 px-5 py-3 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white rounded-xl transition-all shadow-2xl font-medium z-50"
-          >
-            Open in about:blank
-          </button>
-        )}
       </div>
     );
   }
@@ -282,10 +271,7 @@ function App() {
           <div className="mb-8 text-center sticky top-0 bg-gray-900 py-4 z-10">
             <h1 className="text-5xl font-bold text-white mb-4">Choose Your Game</h1>
             <button
-              onClick={() => {
-                setShowGameGrid(false);
-                setShowAboutBlankButton(false);
-              }}
+              onClick={() => setShowGameGrid(false)}
               className="px-6 py-2 bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors"
             >
               Back to Search
@@ -296,7 +282,7 @@ function App() {
             {games.map((game) => (
               <button
                 key={game.id}
-                onClick={() => playGame(game.url)}
+                onClick={() => playGame(game.id, game.url)}
                 className="bg-gray-800 hover:bg-gray-700 border-2 border-gray-700 hover:border-blue-500 rounded-xl p-8 transition-all transform hover:scale-105 flex flex-col items-center gap-4 cursor-pointer"
               >
                 <div className="text-6xl">{game.icon}</div>
@@ -309,14 +295,6 @@ function App() {
             <p>Bart made this. Thank him. Email hongbo_wang@mufsd.org (School email) or hongbowang0821@gmail.com (personal email) for any requests or suggestions. :)</p>
           </div>
         </div>
-        {showAboutBlankButton && (
-          <button
-            onClick={openInAboutBlank}
-            className="fixed bottom-4 left-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg z-50"
-          >
-            Open in about:blank
-          </button>
-        )}
       </div>
     );
   }
