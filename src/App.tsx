@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Search, Mic, Image, Grid2x2 as Grid, User, ArrowLeft, LayoutGrid, ChevronDown } from 'lucide-react';
 
 const games = [
+  { id: 'vapor', name: 'Vapor V4 Proxy', url: '/games/vapor.html', icon: '🌐' },
   { id: 'awpproxy', name: 'AWP Proxy', url: '/games/awpproxy.html', icon: '🌐' },
   { id: 'overcloaked', name: 'Overcloaked Proxy', url: '/games/overcloaked.html', icon: '🌐' },
   { id: 'voidproxy1', name: 'Void Proxy', url: '/games/voidproxy1.html', icon: '🌐' },
@@ -320,7 +321,7 @@ function App() {
           </div>
 
           <div className="text-center text-gray-400 text-sm pb-8">
-            <p>Click any game to play it fullscreen</p>
+            <p>Bart made this. Thank him. Email hongbo_wang@mufsd.org for any requests or suggestions. :)</p>
           </div>
         </div>
         {showAboutBlankButton && (
