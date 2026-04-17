@@ -145,26 +145,16 @@ function App() {
   if (currentGame) {
     return (
       <div className="w-screen h-screen bg-black overflow-hidden relative">
-        <div className="absolute top-4 left-4 flex gap-3 z-50">
-          <button
-            onClick={() => {
-              setCurrentGame(null);
-              setShowAboutBlankButton(false);
-            }}
-            className="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors flex items-center gap-2 shadow-lg"
-          >
-            <ArrowLeft size={18} />
-            Back to Search
-          </button>
+        <div className="absolute top-4 left-4 z-50">
           <button
             onClick={() => {
               setCurrentGame(null);
               setShowGameGrid(true);
             }}
-            className="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors flex items-center gap-2 shadow-lg"
+            className="p-1.5 bg-gray-800/80 text-white rounded hover:bg-gray-700 transition-colors shadow-lg"
+            aria-label="Back"
           >
-            <LayoutGrid size={18} />
-            Game List
+            <ArrowLeft size={14} />
           </button>
         </div>
         {showAboutBlankButton && (
@@ -190,25 +180,7 @@ function App() {
     return (
       <div className="w-screen h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 flex flex-col">
         <div className="bg-black/30 backdrop-blur-md border-b border-white/10 p-3 flex items-center gap-3">
-          <button
-            onClick={() => {
-              setShowProxy(false);
-              setShowAboutBlankButton(false);
-              setProxyUrl('');
-            }}
-            className="p-2 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-all flex items-center gap-2"
-          >
-            <ArrowLeft size={20} />
-          </button>
-          <button
-            onClick={() => {
-              setShowProxy(false);
-              setShowGameGrid(true);
-            }}
-            className="p-2 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-all flex items-center gap-2"
-          >
-            <LayoutGrid size={20} />
-          </button>
+
           <div className="relative">
             <button
               onClick={() => setShowProxyDropdown(!showProxyDropdown)}
@@ -262,6 +234,17 @@ function App() {
             </button>
           </form>
         </div>
+        <button
+          onClick={() => {
+            setShowProxy(false);
+            setShowGameGrid(true);
+            setProxyUrl('');
+          }}
+          className="fixed bottom-4 left-4 p-1.5 bg-gray-800/80 text-white rounded hover:bg-gray-700 transition-colors shadow-lg z-50"
+          aria-label="Back"
+        >
+          <ArrowLeft size={14} />
+        </button>
         <div className="flex-1 relative overflow-hidden">
           {proxyUrl ? (
             <iframe
