@@ -1,1 +1,9 @@
-<embed src="https://learn.with.deagan.ccs-hawaii.com/?/" style="position:fixed; width:100%; height:100%">
+<!DOCTYPE html>
+<html>
+<head>
+
+    </head>
+    <body>
+<iframe src="https://learn.with.deagan.ccs-hawaii.com/?/" style="width: 100vw; height: 100vh; border: none;" frameborder="0" allow="fullscreen" object-fit:screen;></iframe>
+        </body>
+        </html>
