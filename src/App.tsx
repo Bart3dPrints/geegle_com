@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Search, Mic, Image, Grid2x2 as Grid, User, ArrowLeft, LayoutGrid, ChevronDown } from 'lucide-react';
 
 const games = [
+  { id: 'doge', name: 'Dogeub Proxy', url: '/games/doge.html', icon: '🌐' },
   { id: 'vapor', name: 'Vapor V4 Proxy', url: '/games/vapor.html', icon: '🌐' },
   { id: 'awpproxy', name: 'AWP Proxy', url: '/games/awpproxy.html', icon: '🌐' },
   { id: 'overcloaked', name: 'Overcloaked Proxy', url: '/games/overcloaked.html', icon: '🌐' },
