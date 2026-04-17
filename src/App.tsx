@@ -69,7 +69,7 @@ function EasterEggPopup({ onClose }: { onClose: () => void }) {
           <a href="mailto:hongbowang0821@gmail.com" className="text-blue-400 hover:underline">
             hongbowang0821@gmail.com
           </a>{' '}
-          for his special method of Blocking GoGuardian... make sure to talk about how delicious potato fries are in the email or he wont believe you...
+          for his special method of Blocking GoGuardian... make sure to talk about how delicious potato fries are in the email or else he wont believe you...
         </p>
         <button
           onClick={onClose}
