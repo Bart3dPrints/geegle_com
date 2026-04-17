@@ -28,7 +28,7 @@ const games = [
   { id: 'minecraft', name: 'Minecraft 1.12.2', url: '/games/Minecraft 1.12.2.html', icon: '⛏️' },
   { id: 'nazi-zombies', name: 'Nazi Zombies Portable', url: '/games/Nazi Zombies_ Portable (1) copy.html', icon: '🧟' },
   { id: 'plinko', name: 'Plinko', url: '/games/Plinko (1) copy.html', icon: '🎰' },
-  { id: 'ragdoll-archers', name: 'Ragdoll Archers', url: '/games/Ragdoll Archers copy.html', icon: '🏹' },
+  { id: 'ragdollarchers', name: 'Ragdoll Archers', url: '/games/ragdollarchers.html', icon: '🏹' },
   { id: 'shellshock', name: 'Shell Shockers', url: '/games/online_viewer_net (5).html', icon: '🥚' },
   { id: 'slope', name: 'Slope', url: '/games/Slope.html', icon: '⛷️' },
   { id: 'snow-rider', name: 'Snow Rider 3D', url: '/games/snow-rider.html', icon: '🏂' },
