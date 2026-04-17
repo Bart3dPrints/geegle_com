@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Mic, Image, Grid2x2 as Grid, User, ArrowLeft, LayoutGrid } from 'lucide-react';
+import { Search, Mic, Image, Grid2x2 as Grid, User, ArrowLeft, LayoutGrid, ChevronDown } from 'lucide-react';
 
 const games = [
   { id: 'web-proxy', name: 'Web Proxy', url: 'proxy', icon: '🌐' },
@@ -33,6 +33,12 @@ const games = [
   { id: 'repo', name: 'R.E.P.O', url: '/games/R.E.P.O copy copy copy.html', icon: '🎮' },
 ];
 
+const proxies = [
+  { id: 'proxy1', name: 'Proxy 1', url: '/proxies/fernproxy.html' },
+  { id: 'proxy2', name: 'Proxy 2', url: '/proxies/overcloakedproxy.html' },
+  { id: 'proxy3', name: 'Proxy 3', url: '/proxies/voidproxy.html' },
+];
+
 function App() {
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [showGameGrid, setShowGameGrid] = useState(false);
@@ -40,6 +46,8 @@ function App() {
   const [showAboutBlankButton, setShowAboutBlankButton] = useState(false);
   const [showProxy, setShowProxy] = useState(false);
   const [proxyUrl, setProxyUrl] = useState('');
+  const [selectedProxy, setSelectedProxy] = useState(proxies[0]);
+  const [showProxyDropdown, setShowProxyDropdown] = useState(false);
   const searchInputRef = React.useRef<HTMLInputElement>(null);
   const proxyInputRef = React.useRef<HTMLInputElement>(null);
 
@@ -95,18 +103,15 @@ function App() {
     e.preventDefault();
     const query = proxyInputRef.current?.value || '';
     if (query.trim()) {
-      let formattedUrl = query.trim();
-      // Check if it looks like a URL
-      if (formattedUrl.includes('.') && !formattedUrl.includes(' ')) {
-        // It's a URL
-        if (!formattedUrl.startsWith('http://') && !formattedUrl.startsWith('https://')) {
-          formattedUrl = 'https://' + formattedUrl;
+      let searchUrl = query.trim();
+      if (searchUrl.includes('.') && !searchUrl.includes(' ')) {
+        if (!searchUrl.startsWith('http://') && !searchUrl.startsWith('https://')) {
+          searchUrl = 'https://' + searchUrl;
         }
-        setProxyUrl(formattedUrl);
       } else {
-        // It's a search query
-        setProxyUrl(`https://www.google.com/search?q=${encodeURIComponent(formattedUrl)}&igu=1`);
+        searchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchUrl)}`;
       }
+      setProxyUrl(searchUrl);
     }
   };
 
@@ -199,6 +204,36 @@ function App() {
           >
             <LayoutGrid size={20} />
           </button>
+          <div className="relative">
+            <button
+              onClick={() => setShowProxyDropdown(!showProxyDropdown)}
+              className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-all flex items-center gap-2 border border-white/20"
+            >
+              {selectedProxy.name}
+              <ChevronDown size={16} />
+            </button>
+            {showProxyDropdown && (
+              <div className="absolute top-full left-0 mt-2 w-48 bg-gray-800 border border-white/20 rounded-lg shadow-xl z-50">
+                {proxies.map((proxy) => (
+                  <button
+                    key={proxy.id}
+                    onClick={() => {
+                      setSelectedProxy(proxy);
+                      setShowProxyDropdown(false);
+                      setProxyUrl('');
+                    }}
+                    className={`w-full text-left px-4 py-2 transition-colors ${
+                      selectedProxy.id === proxy.id
+                        ? 'bg-blue-500 text-white'
+                        : 'text-white hover:bg-white/10'
+                    }`}
+                  >
+                    {proxy.name}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
           <form onSubmit={handleProxySearch} className="flex-1 flex items-center gap-2">
             <div className="flex-1 flex items-center gap-3 px-4 py-3 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 focus-within:border-white/40 transition-all">
               <Search size={20} className="text-white/60" />
