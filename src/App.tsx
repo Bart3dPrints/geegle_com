@@ -368,7 +368,7 @@ function App() {
 
         <div className="p-8">
           <div className="mb-8 text-center sticky top-0 bg-gray-900 py-4 z-10">
-            <h1 className="text-5xl font-bold text-white mb-4">Choose Your Game</h1>
+            <h1 className="text-5xl font-bold text-white mb-4">Choose Your Application</h1>
             <button onClick={exitGameGrid} className="px-6 py-2 bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors mb-4">
               Back to Search
             </button>
