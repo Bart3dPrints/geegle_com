@@ -321,7 +321,7 @@ function App() {
           </div>
 
           <div className="text-center text-gray-400 text-sm pb-8">
-            <p>Bart made this. Thank him. Email hongbo_wang@mufsd.org for any requests or suggestions. :)</p>
+            <p>Bart made this. Thank him. Email hongbo_wang@mufsd.org (School email) or hongbowang0821@gmail.com (personal email) for any requests or suggestions. :)</p>
           </div>
         </div>
         {showAboutBlankButton && (
