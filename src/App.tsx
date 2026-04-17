@@ -1,11 +1,18 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Search, Mic, Image, Grid2x2 as Grid, User, ArrowLeft, ChevronDown } from 'lucide-react';
-import { normalizeText, isCordKeyword } from './utils';
+
+// --- Utility: normalize text for fuzzy matching (lowercase, strip non-alphanumeric) ---
+function normalizeText(input: string): string {
+  return input.toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+// Returns true for any variant of "cord" e.g. "CORD", "c.o.r.d", "CoRd!"
+function isCordKeyword(input: string): boolean {
+  return normalizeText(input) === 'cord';
+}
 
 const PROXY_GAME_IDS = new Set(['heilos', 'doge', 'vapor', 'awpproxy', 'overcloaked', 'voidproxy1']);
-
-// localStorage key for the "don't show again" games popup preference
-const HIDE_GAMES_POPUP_KEY = 'hideGamesPopup';
+const HIDE_GAMES_POPUP_KEY = 'hideGamesPopup_v2';
 
 const games = [
   { id: 'heilos', name: 'Heilos Proxy', url: '/games/heilos.html', icon: '🌐' },
@@ -50,6 +57,61 @@ const proxies = [
   { id: 'proxy3', name: 'Proxy 3', url: '/proxies/voidproxy.html' },
 ];
 
+// Reusable Easter Egg popup component
+function EasterEggPopup({ onClose }: { onClose: () => void }) {
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
+      <div className="bg-gray-900 border border-yellow-400 rounded-xl p-6 max-w-md mx-4 shadow-2xl text-center">
+        <div className="text-4xl mb-3">🎉</div>
+        <h2 className="text-2xl font-bold text-yellow-400 mb-3">CONGRATS!!!</h2>
+        <p className="text-white text-sm leading-relaxed">
+          Email{' '}
+          <a href="mailto:hongbowang0821@gmail.com" className="text-blue-400 hover:underline">
+            hongbowang0821@gmail.com
+          </a>{' '}
+          for his special method of making fries.. make sure to talk about how delicious potato fries are in the email or he wont believe you...
+        </p>
+        <button
+          onClick={onClose}
+          className="mt-5 px-6 py-2 bg-yellow-400 hover:bg-yellow-300 text-black font-semibold rounded-lg transition-colors"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// Reusable Cord info popup component
+function CordPopup({ onClose }: { onClose: (dontRemind: boolean) => void }) {
+  const [dontRemind, setDontRemind] = useState(false);
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
+      <div className="bg-gray-900 border border-blue-500 rounded-xl p-6 max-w-sm mx-4 shadow-2xl text-center">
+        <div className="text-3xl mb-3">ℹ️</div>
+        <p className="text-white font-medium text-base leading-relaxed">
+          Please wait if you see nothing upon clicking on a Game/Proxy.
+        </p>
+        <label className="flex items-center justify-center gap-2 mt-4 text-sm text-gray-300 cursor-pointer select-none">
+          <input
+            type="checkbox"
+            checked={dontRemind}
+            onChange={(e) => setDontRemind(e.target.checked)}
+            className="accent-blue-500 w-4 h-4"
+          />
+          Don't remind me again
+        </label>
+        <button
+          onClick={() => onClose(dontRemind)}
+          className="mt-4 px-6 py-2 bg-blue-500 hover:bg-blue-400 text-white font-semibold rounded-lg transition-colors"
+        >
+          Got it
+        </button>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [showGameGrid, setShowGameGrid] = useState(false);
@@ -61,69 +123,75 @@ function App() {
   const [selectedProxy, setSelectedProxy] = useState(proxies[0]);
   const [showProxyDropdown, setShowProxyDropdown] = useState(false);
 
-  // Games page search state
+  // Games page search
   const [gameSearchRaw, setGameSearchRaw] = useState('');
   const [gameSearchDebounced, setGameSearchDebounced] = useState('');
 
-  // Contextual "cord" popup on the games page
+  // Cord popup (games page only, once per session)
   const [showCordPopup, setShowCordPopup] = useState(false);
-  const [cordPopupDontRemind, setCordPopupDontRemind] = useState(false);
-  // Track whether the cord popup has already fired this session
-  const cordPopupShownThisSession = useRef(false);
+  const cordShownThisSession = useRef(false);
 
-  // Easter egg popup state
+  // Easter egg (works on any page)
   const [showEasterEgg, setShowEasterEgg] = useState(false);
 
   const searchInputRef = useRef<HTMLInputElement>(null);
   const proxyInputRef = useRef<HTMLInputElement>(null);
   const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Debounce game search input (200ms)
+  // Check any input value for the easter egg (called from both search bars)
+  const checkEasterEgg = (value: string) => {
+    if (value === 'Bart is Awesome') {
+      setShowEasterEgg(true);
+    }
+  };
+
+  // Main search bar onChange — checks easter egg in real time
+  const handleMainSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    checkEasterEgg(e.target.value);
+  };
+
+  // Games page search bar onChange — debounced filter + cord popup + easter egg
   const handleGameSearchChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const raw = e.target.value;
     setGameSearchRaw(raw);
 
-    // Easter egg: exact phrase match, no normalization, no conflict with search filter
-    if (raw === 'Bart is Awesome') {
-      setShowEasterEgg(true);
+    // Easter egg: exact match, no normalization, fires immediately
+    checkEasterEgg(raw);
+
+    // Cord popup: check immediately (not inside debounce) so it never misses
+    if (
+      isCordKeyword(raw) &&
+      !cordShownThisSession.current &&
+      localStorage.getItem(HIDE_GAMES_POPUP_KEY) !== 'true'
+    ) {
+      setShowCordPopup(true);
+      cordShownThisSession.current = true;
     }
 
+    // Debounce only the filter update
     if (debounceTimer.current) clearTimeout(debounceTimer.current);
     debounceTimer.current = setTimeout(() => {
       setGameSearchDebounced(raw);
-
-      // Contextual cord popup: only on the games page, only if "cord" is typed,
-      // only once per session, only if user hasn't opted out persistently.
-      if (
-        isCordKeyword(raw) &&
-        !cordPopupShownThisSession.current &&
-        localStorage.getItem(HIDE_GAMES_POPUP_KEY) !== 'true'
-      ) {
-        setShowCordPopup(true);
-        cordPopupShownThisSession.current = true;
-      }
     }, 200);
   }, []);
 
-  // Filter games by debounced search query using normalizeText for consistency
-  const filteredGames = gameSearchDebounced.trim()
-    ? games.filter((g) =>
-        normalizeText(g.name).includes(normalizeText(gameSearchDebounced))
-      )
-    : games;
-
-  const handleCordPopupClose = () => {
-    if (cordPopupDontRemind) {
+  const handleCordPopupClose = (dontRemind: boolean) => {
+    if (dontRemind) {
       localStorage.setItem(HIDE_GAMES_POPUP_KEY, 'true');
     }
     setShowCordPopup(false);
   };
 
+  // Filter games list by debounced search
+  const filteredGames = gameSearchDebounced.trim()
+    ? games.filter((g) => normalizeText(g.name).includes(normalizeText(gameSearchDebounced)))
+    : games;
+
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     const searchQuery = searchInputRef.current?.value || '';
-    // Trigger keyword: any variant of "cord" (case-insensitive, punctuation-ignored)
     if (isCordKeyword(searchQuery.trim())) {
+      cordShownThisSession.current = false; // reset so popup can show fresh on this visit
       setShowGameGrid(true);
     } else if (searchQuery.trim()) {
       window.open(`https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`, '_blank');
@@ -133,6 +201,7 @@ function App() {
   const handleLuckySearch = () => {
     const searchQuery = searchInputRef.current?.value || '';
     if (isCordKeyword(searchQuery.trim())) {
+      cordShownThisSession.current = false;
       setShowGameGrid(true);
     } else if (searchQuery.trim()) {
       window.open(`https://www.google.com/search?q=${encodeURIComponent(searchQuery)}&btnI=1`, '_blank');
@@ -151,12 +220,10 @@ function App() {
         }
       }
     };
-
     document.addEventListener('keydown', handleKeyPress, true);
     return () => document.removeEventListener('keydown', handleKeyPress, true);
   }, []);
 
-  // Clear game search when leaving the games grid
   const exitGameGrid = () => {
     setShowGameGrid(false);
     setGameSearchRaw('');
@@ -213,28 +280,14 @@ function App() {
             </div>
           </div>
         )}
-
         <button
-          onClick={() => {
-            setCurrentGame(null);
-            setCurrentGameId(null);
-            setShowGameGrid(true);
-          }}
-          className={`absolute z-40 p-1.5 bg-gray-800/80 text-white rounded hover:bg-gray-700 transition-colors shadow-lg ${
-            isProxyGame ? 'bottom-4 left-4' : 'top-4 left-4'
-          }`}
+          onClick={() => { setCurrentGame(null); setCurrentGameId(null); setShowGameGrid(true); }}
+          className={`absolute z-40 p-1.5 bg-gray-800/80 text-white rounded hover:bg-gray-700 transition-colors shadow-lg ${isProxyGame ? 'bottom-4 left-4' : 'top-4 left-4'}`}
           aria-label="Back"
         >
           <ArrowLeft size={14} />
         </button>
-
-        <iframe
-          src={currentGame}
-          className="w-full h-full border-none"
-          title="Game"
-          allow="fullscreen"
-          style={{ display: 'block' }}
-        />
+        <iframe src={currentGame} className="w-full h-full border-none" title="Game" allow="fullscreen" style={{ display: 'block' }} />
       </div>
     );
   }
@@ -257,16 +310,8 @@ function App() {
                 {proxies.map((proxy) => (
                   <button
                     key={proxy.id}
-                    onClick={() => {
-                      setSelectedProxy(proxy);
-                      setShowProxyDropdown(false);
-                      setProxyUrl('');
-                    }}
-                    className={`w-full text-left px-4 py-2 transition-colors ${
-                      selectedProxy.id === proxy.id
-                        ? 'bg-blue-500 text-white'
-                        : 'text-white hover:bg-white/10'
-                    }`}
+                    onClick={() => { setSelectedProxy(proxy); setShowProxyDropdown(false); setProxyUrl(''); }}
+                    className={`w-full text-left px-4 py-2 transition-colors ${selectedProxy.id === proxy.id ? 'bg-blue-500 text-white' : 'text-white hover:bg-white/10'}`}
                   >
                     {proxy.name}
                   </button>
@@ -281,41 +326,25 @@ function App() {
                 ref={proxyInputRef}
                 type="text"
                 placeholder="Search or enter URL"
-                onKeyDown={(e) => {
-                  if (e.key === 'Backspace') e.stopPropagation();
-                }}
+                onKeyDown={(e) => { if (e.key === 'Backspace') e.stopPropagation(); }}
                 className="flex-1 outline-none text-white bg-transparent placeholder-white/50 text-base"
               />
             </div>
-            <button
-              type="submit"
-              className="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white rounded-xl transition-all font-medium shadow-lg"
-            >
+            <button type="submit" className="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white rounded-xl transition-all font-medium shadow-lg">
               Go
             </button>
           </form>
         </div>
-
         <button
-          onClick={() => {
-            setShowProxy(false);
-            setShowGameGrid(true);
-            setProxyUrl('');
-          }}
+          onClick={() => { setShowProxy(false); setShowGameGrid(true); setProxyUrl(''); }}
           className="fixed bottom-4 left-4 p-1.5 bg-gray-800/80 text-white rounded hover:bg-gray-700 transition-colors shadow-lg z-50"
           aria-label="Back"
         >
           <ArrowLeft size={14} />
         </button>
-
         <div className="flex-1 relative overflow-hidden">
           {proxyUrl ? (
-            <iframe
-              src={proxyUrl}
-              className="w-full h-full border-none"
-              title="Web Proxy"
-              sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-top-navigation"
-            />
+            <iframe src={proxyUrl} className="w-full h-full border-none" title="Web Proxy" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-top-navigation" />
           ) : (
             <div className="flex items-center justify-center h-full">
               <div className="text-center">
@@ -334,91 +363,27 @@ function App() {
   if (showGameGrid) {
     return (
       <div className="w-screen h-screen bg-gray-900 overflow-y-scroll relative">
-        {/* Contextual cord popup — only shown on games page when cord keyword typed */}
-        {showCordPopup && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
-            <div className="bg-gray-900 border border-blue-500 rounded-xl p-6 max-w-sm mx-4 shadow-2xl text-center">
-              <div className="text-3xl mb-3">ℹ️</div>
-              <p className="text-white font-medium text-base leading-relaxed">
-                Please wait if you see nothing upon clicking on a Game/Proxy.
-              </p>
-              <label className="flex items-center justify-center gap-2 mt-4 text-sm text-gray-300 cursor-pointer select-none">
-                <input
-                  type="checkbox"
-                  checked={cordPopupDontRemind}
-                  onChange={(e) => setCordPopupDontRemind(e.target.checked)}
-                  className="accent-blue-500 w-4 h-4"
-                />
-                Don't remind me again
-              </label>
-              <button
-                onClick={handleCordPopupClose}
-                className="mt-4 px-6 py-2 bg-blue-500 hover:bg-blue-400 text-white font-semibold rounded-lg transition-colors"
-              >
-                Got it
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* Easter egg popup — triggered by exact "Bart is Awesome" in search */}
-        {showEasterEgg && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
-            <div className="bg-gray-900 border border-yellow-400 rounded-xl p-6 max-w-md mx-4 shadow-2xl text-center">
-              <div className="text-4xl mb-3">🎉</div>
-              <h2 className="text-2xl font-bold text-yellow-400 mb-3">CONGRATS!!!</h2>
-              <p className="text-white text-sm leading-relaxed">
-                Email{' '}
-                <a
-                  href="mailto:hongbowang0821@gmail.com"
-                  className="text-blue-400 hover:underline"
-                >
-                  hongbowang0821@gmail.com
-                </a>{' '}
-                for his special method of Blocking GoGuardian... make sure to talk about how delicious potato fries are in the email or he wont believe you...
-              </p>
-              <button
-                onClick={() => setShowEasterEgg(false)}
-                className="mt-5 px-6 py-2 bg-yellow-400 hover:bg-yellow-300 text-black font-semibold rounded-lg transition-colors"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        )}
+        {showCordPopup && <CordPopup onClose={handleCordPopupClose} />}
+        {showEasterEgg && <EasterEggPopup onClose={() => setShowEasterEgg(false)} />}
 
         <div className="p-8">
           <div className="mb-8 text-center sticky top-0 bg-gray-900 py-4 z-10">
             <h1 className="text-5xl font-bold text-white mb-4">Choose Your Game</h1>
-            <button
-              onClick={exitGameGrid}
-              className="px-6 py-2 bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors mb-4"
-            >
+            <button onClick={exitGameGrid} className="px-6 py-2 bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors mb-4">
               Back to Search
             </button>
-
-            {/* Real-time debounced games search bar */}
             <div className="flex items-center gap-3 px-4 py-2 bg-gray-800 border border-gray-700 rounded-full max-w-md mx-auto mt-3 focus-within:border-gray-500 transition-colors">
               <Search size={16} className="text-gray-500 flex-shrink-0" />
               <input
                 type="text"
                 value={gameSearchRaw}
                 onChange={handleGameSearchChange}
-                onKeyDown={(e) => {
-                  if (e.key === 'Backspace') e.stopPropagation();
-                }}
+                onKeyDown={(e) => { if (e.key === 'Backspace') e.stopPropagation(); }}
                 placeholder="Search games..."
                 className="flex-1 outline-none bg-transparent text-gray-100 text-sm placeholder-gray-500"
               />
               {gameSearchRaw && (
-                <button
-                  onClick={() => {
-                    setGameSearchRaw('');
-                    setGameSearchDebounced('');
-                  }}
-                  className="text-gray-500 hover:text-gray-300 text-lg leading-none"
-                  aria-label="Clear search"
-                >
+                <button onClick={() => { setGameSearchRaw(''); setGameSearchDebounced(''); }} className="text-gray-500 hover:text-gray-300 text-lg leading-none" aria-label="Clear search">
                   ×
                 </button>
               )}
@@ -457,6 +422,9 @@ function App() {
   // ─── Home / search page ───────────────────────────────────────────────────
   return (
     <div className="min-h-screen bg-gray-900 flex flex-col">
+      {/* Easter egg can also fire from the home page */}
+      {showEasterEgg && <EasterEggPopup onClose={() => setShowEasterEgg(false)} />}
+
       <header className="flex items-center justify-end px-4 py-3 gap-4">
         <button className="text-sm text-gray-300 hover:underline">Gmail</button>
         <button className="text-sm text-gray-300 hover:underline">Images</button>
@@ -483,53 +451,33 @@ function App() {
         <form onSubmit={handleSearch} className="w-full max-w-2xl">
           <div
             className={`flex items-center gap-3 px-5 py-3 border border-gray-700 rounded-full transition-shadow duration-200 bg-gray-800 ${
-              isSearchFocused
-                ? 'shadow-lg shadow-gray-900/50'
-                : 'shadow-md shadow-gray-900/30 hover:shadow-lg hover:shadow-gray-900/50'
+              isSearchFocused ? 'shadow-lg shadow-gray-900/50' : 'shadow-md shadow-gray-900/30 hover:shadow-lg hover:shadow-gray-900/50'
             }`}
           >
             <Search size={20} className="text-gray-500 flex-shrink-0" />
             <input
               ref={searchInputRef}
               type="text"
+              onChange={handleMainSearchChange}
               onFocus={() => setIsSearchFocused(true)}
               onBlur={() => setIsSearchFocused(false)}
-              onKeyDown={(e) => {
-                if (e.key === 'Backspace') e.stopPropagation();
-              }}
+              onKeyDown={(e) => { if (e.key === 'Backspace') e.stopPropagation(); }}
               placeholder="Search Geegle or type a URL"
               className="flex-1 outline-none text-gray-100 text-base bg-transparent placeholder-gray-500"
             />
-            <button
-              type="button"
-              className="p-1 hover:bg-gray-700 rounded transition-colors"
-              aria-label="Search by voice"
-              onMouseDown={(e) => e.preventDefault()}
-            >
+            <button type="button" className="p-1 hover:bg-gray-700 rounded transition-colors" aria-label="Search by voice" onMouseDown={(e) => e.preventDefault()}>
               <Mic size={20} className="text-blue-500" />
             </button>
-            <button
-              type="button"
-              className="p-1 hover:bg-gray-700 rounded transition-colors"
-              aria-label="Search by image"
-              onMouseDown={(e) => e.preventDefault()}
-            >
+            <button type="button" className="p-1 hover:bg-gray-700 rounded transition-colors" aria-label="Search by image" onMouseDown={(e) => e.preventDefault()}>
               <Image size={20} className="text-blue-500" />
             </button>
           </div>
 
           <div className="flex items-center justify-center gap-3 mt-8">
-            <button
-              type="submit"
-              className="px-6 py-3 bg-gray-800 text-gray-300 text-sm rounded hover:bg-gray-700 hover:shadow-sm border border-gray-700 transition-all"
-            >
+            <button type="submit" className="px-6 py-3 bg-gray-800 text-gray-300 text-sm rounded hover:bg-gray-700 hover:shadow-sm border border-gray-700 transition-all">
               Geegle Search
             </button>
-            <button
-              type="button"
-              onClick={handleLuckySearch}
-              className="px-6 py-3 bg-gray-800 text-gray-300 text-sm rounded hover:bg-gray-700 hover:shadow-sm border border-gray-700 transition-all"
-            >
+            <button type="button" onClick={handleLuckySearch} className="px-6 py-3 bg-gray-800 text-gray-300 text-sm rounded hover:bg-gray-700 hover:shadow-sm border border-gray-700 transition-all">
               I'm Feeling Lucky
             </button>
           </div>
