@@ -12,7 +12,7 @@ const games = [
   { id: 'voidproxy1', name: 'Void Proxy', url: '/games/voidproxy1.html', icon: '🌐' },
   { id: '1v1', name: '1v1.LoL', url: '/games/1v1.html', icon: '🎮' },
   { id: 'bloxorz', name: 'Bloxorz', url: '/games/Bloxorz copy copy.html', icon: '🧊' },
-  { id: 'bowmasters', name: 'Bowmasters', url: '/games/Bowmasters copy.html', icon: '🏹' },
+  { id: 'bowmasters', name: 'Bowmasters', url: '/games/Bowmasters.html', icon: '🏹' },
   { id: 'buckshot-roulette', name: 'Buckshot Roulette', url: '/games/Buckshot Roulette.html', icon: '🎯' },
   { id: 'chat-bot', name: 'Chat Bot (A.I)', url: '/games/Chat Bot (A._.I) (1).html', icon: '🤖' },
   { id: 'code-editor', name: 'Code Editor', url: '/games/Code Editor (1).html', icon: '💻' },
