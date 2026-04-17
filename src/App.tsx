@@ -30,6 +30,7 @@ const games = [
   { id: 'plinko', name: 'Plinko', url: '/games/Plinko (1) copy.html', icon: '🎰' },
   { id: 'ragdollarchers', name: 'Ragdoll Archers', url: '/games/ragdollarchers.html', icon: '🏹' },
   { id: 'slope', name: 'Slope', url: '/games/Slope.html', icon: '⛷️' },
+  { id: 'slope3', name: 'Slope 3', url: '/games/slope3.html', icon: '⛷️' },
   { id: 'snow-rider', name: 'Snow Rider 3D', url: '/games/snow-rider.html', icon: '🏂' },
   { id: 'soundboard', name: 'Soundboard', url: '/games/Soundboard.html', icon: '🔊' },
   { id: 'time-shooter-2', name: 'Time Shooter 2', url: '/games/Time Shooter 2 (1) copy.html', icon: '🔫' },
