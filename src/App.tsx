@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Search, Mic, Image, Grid2x2 as Grid, User, ArrowLeft, LayoutGrid, ChevronDown } from 'lucide-react';
 
 const games = [
-  { id: 'voidproxy1', name: 'Web Proxy', url: '/games/voidproxy1.html', icon: '🌐' },
+  { id: 'overcloaked', name: 'Overcloaked Proxy', url: '/games/overcloaked.html', icon: '🌐' },
+  { id: 'voidproxy1', name: 'Void Proxy', url: '/games/voidproxy1.html', icon: '🌐' },
   { id: '1v1-lol', name: '1v1.LoL', url: '/games/1v1.LoL (1).html', icon: '🎮' },
   { id: 'bloxorz', name: 'Bloxorz', url: '/games/Bloxorz copy copy.html', icon: '🧊' },
   { id: 'bowmasters', name: 'Bowmasters', url: '/games/Bowmasters copy.html', icon: '🏹' },
