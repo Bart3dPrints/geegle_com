@@ -17,7 +17,7 @@ const games = [
   { id: 'heilos', name: 'Heilos Proxy', url: '/games/heilos.html', icon: '🌐' },
   { id: 'doge', name: 'Dogeub Proxy', url: '/games/doge.html', icon: '🌐' },
   { id: 'vapor', name: 'Vapor V4 Proxy', url: '/games/vapor.html', icon: '🌐' },
-  { id: 'awpproxy', name: 'AWP Proxy', url: '/games/awpproxy.html', icon: '🌐' },
+  { id: 'lucide', name: 'Lucide Proxy', url: '/games/lucide.html', icon: '🌐' },
   { id: 'overcloaked', name: 'Overcloaked Proxy', url: '/games/overcloaked.html', icon: '🌐' },
   { id: 'voidproxy1', name: 'Void Proxy', url: '/games/voidproxy1.html', icon: '🌐' },
   { id: '1v1', name: '1v1.LoL', url: '/games/1v1.html', icon: '🎮' },
