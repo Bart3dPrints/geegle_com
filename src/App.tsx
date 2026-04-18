@@ -1,18 +1,17 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Search, Mic, Image, Grid2x2 as Grid, User, ArrowLeft, ChevronDown } from 'lucide-react';
 
-// --- Utility: normalize text for fuzzy matching (lowercase, strip non-alphanumeric) ---
+// Normalize: lowercase + strip non-alphanumeric
 function normalizeText(input: string): string {
   return input.toLowerCase().replace(/[^a-z0-9]/g, '');
 }
 
-// Returns true for any variant of "cord" e.g. "CORD", "c.o.r.d", "CoRd!"
 function isCordKeyword(input: string): boolean {
   return normalizeText(input) === 'cord';
 }
 
 const PROXY_GAME_IDS = new Set(['heilos', 'doge', 'vapor', 'awpproxy', 'overcloaked', 'voidproxy1']);
-const HIDE_GAMES_POPUP_KEY = 'hideGamesPopup_v2';
+const DONT_SHOW_POPUP = 'geegle_popup_dismissed';
 
 const games = [
   { id: 'heilos', name: 'Heilos Proxy', url: '/games/heilos.html', icon: '🌐' },
@@ -57,53 +56,43 @@ const proxies = [
   { id: 'proxy3', name: 'Proxy 3', url: '/proxies/voidproxy.html' },
 ];
 
-// Reusable Easter Egg popup component
-function EasterEggPopup({ onClose }: { onClose: () => void }) {
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
-      <div className="bg-gray-900 border border-yellow-400 rounded-xl p-6 max-w-md mx-4 shadow-2xl text-center">
-        <div className="text-4xl mb-3">🎉</div>
-        <h2 className="text-2xl font-bold text-yellow-400 mb-3">CONGRATS!!!</h2>
-        <p className="text-white text-sm leading-relaxed">
-          Email{' '}
-          <a href="mailto:hongbowang0821@gmail.com" className="text-blue-400 hover:underline">
-            hongbowang0821@gmail.com
-          </a>{' '}
-          for his special method of making fries.. make sure to talk about how delicious potato fries are in the email or he wont believe you...
-        </p>
-        <button
-          onClick={onClose}
-          className="mt-5 px-6 py-2 bg-yellow-400 hover:bg-yellow-300 text-black font-semibold rounded-lg transition-colors"
-        >
-          Close
-        </button>
-      </div>
-    </div>
-  );
-}
-
-// Reusable Cord info popup component
+// ── Cord info popup ──────────────────────────────────────────────────────────
 function CordPopup({ onClose }: { onClose: (dontRemind: boolean) => void }) {
-  const [dontRemind, setDontRemind] = useState(false);
+  const [checked, setChecked] = useState(false);
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
-      <div className="bg-gray-900 border border-blue-500 rounded-xl p-6 max-w-sm mx-4 shadow-2xl text-center">
-        <div className="text-3xl mb-3">ℹ️</div>
-        <p className="text-white font-medium text-base leading-relaxed">
+    <div style={{
+      position: 'fixed', inset: 0, zIndex: 9999,
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      background: 'rgba(0,0,0,0.7)'
+    }}>
+      <div style={{
+        background: '#111827', border: '2px solid #3b82f6', borderRadius: 16,
+        padding: 32, maxWidth: 380, width: '90%', textAlign: 'center',
+        boxShadow: '0 25px 50px rgba(0,0,0,0.5)'
+      }}>
+        <div style={{ fontSize: 36, marginBottom: 12 }}>ℹ️</div>
+        <p style={{ color: '#fff', fontSize: 16, lineHeight: 1.6, margin: '0 0 20px' }}>
           Please wait if you see nothing upon clicking on a Game/Proxy.
         </p>
-        <label className="flex items-center justify-center gap-2 mt-4 text-sm text-gray-300 cursor-pointer select-none">
+        <label style={{
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          gap: 8, color: '#9ca3af', fontSize: 14, cursor: 'pointer', marginBottom: 20
+        }}>
           <input
             type="checkbox"
-            checked={dontRemind}
-            onChange={(e) => setDontRemind(e.target.checked)}
-            className="accent-blue-500 w-4 h-4"
+            checked={checked}
+            onChange={e => setChecked(e.target.checked)}
+            style={{ width: 16, height: 16, accentColor: '#3b82f6' }}
           />
           Don't remind me again
         </label>
         <button
-          onClick={() => onClose(dontRemind)}
-          className="mt-4 px-6 py-2 bg-blue-500 hover:bg-blue-400 text-white font-semibold rounded-lg transition-colors"
+          onClick={() => onClose(checked)}
+          style={{
+            background: '#3b82f6', color: '#fff', border: 'none',
+            borderRadius: 8, padding: '10px 32px', fontSize: 15,
+            fontWeight: 600, cursor: 'pointer'
+          }}
         >
           Got it
         </button>
@@ -112,155 +101,156 @@ function CordPopup({ onClose }: { onClose: (dontRemind: boolean) => void }) {
   );
 }
 
+// ── Easter egg popup ─────────────────────────────────────────────────────────
+function EasterEggPopup({ onClose }: { onClose: () => void }) {
+  return (
+    <div style={{
+      position: 'fixed', inset: 0, zIndex: 9999,
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      background: 'rgba(0,0,0,0.7)'
+    }}>
+      <div style={{
+        background: '#111827', border: '2px solid #facc15', borderRadius: 16,
+        padding: 32, maxWidth: 420, width: '90%', textAlign: 'center',
+        boxShadow: '0 25px 50px rgba(0,0,0,0.5)'
+      }}>
+        <div style={{ fontSize: 40, marginBottom: 12 }}>🎉</div>
+        <h2 style={{ color: '#facc15', fontSize: 24, fontWeight: 700, marginBottom: 16 }}>CONGRATS!!!</h2>
+        <p style={{ color: '#fff', fontSize: 14, lineHeight: 1.7, margin: '0 0 24px' }}>
+          Email{' '}
+          <a href="mailto:hongbowang0821@gmail.com" style={{ color: '#60a5fa' }}>
+            hongbowang0821@gmail.com
+          </a>{' '}
+          for his special method of making fries.. make sure to talk about how delicious potato fries are in the email or he wont believe you...
+        </p>
+        <button
+          onClick={onClose}
+          style={{
+            background: '#facc15', color: '#000', border: 'none',
+            borderRadius: 8, padding: '10px 32px', fontSize: 15,
+            fontWeight: 600, cursor: 'pointer'
+          }}
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// ── Main App ─────────────────────────────────────────────────────────────────
 function App() {
-  const [isSearchFocused, setIsSearchFocused] = useState(false);
-  const [showGameGrid, setShowGameGrid] = useState(false);
+  const [page, setPage] = useState<'home' | 'games' | 'game' | 'proxy'>('home');
   const [currentGame, setCurrentGame] = useState<string | null>(null);
   const [currentGameId, setCurrentGameId] = useState<string | null>(null);
-  const [showProxyWarning, setShowProxyWarning] = useState(false);
-  const [showProxy, setShowProxy] = useState(false);
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
+
+  // Proxy page state
   const [proxyUrl, setProxyUrl] = useState('');
   const [selectedProxy, setSelectedProxy] = useState(proxies[0]);
   const [showProxyDropdown, setShowProxyDropdown] = useState(false);
 
-  // Games page search
-  const [gameSearchRaw, setGameSearchRaw] = useState('');
-  const [gameSearchDebounced, setGameSearchDebounced] = useState('');
+  // Games search
+  const [gameSearch, setGameSearch] = useState('');
+  const [gameSearchDisplay, setGameSearchDisplay] = useState('');
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Cord popup (games page only, once per session)
+  // Popups
   const [showCordPopup, setShowCordPopup] = useState(false);
-  const cordShownThisSession = useRef(false);
-
-  // Easter egg (works on any page)
+  const [showProxyWarning, setShowProxyWarning] = useState(false);
   const [showEasterEgg, setShowEasterEgg] = useState(false);
 
   const searchInputRef = useRef<HTMLInputElement>(null);
   const proxyInputRef = useRef<HTMLInputElement>(null);
-  const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Check any input value for the easter egg (called from both search bars)
-  const checkEasterEgg = (value: string) => {
-    if (value === 'Bart is Awesome') {
-      setShowEasterEgg(true);
-    }
-  };
-
-  // Main search bar onChange — checks easter egg in real time
-  const handleMainSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    checkEasterEgg(e.target.value);
-  };
-
-  // Games page search bar onChange — debounced filter + cord popup + easter egg
-  const handleGameSearchChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    const raw = e.target.value;
-    setGameSearchRaw(raw);
-
-    // Easter egg: exact match, no normalization, fires immediately
-    checkEasterEgg(raw);
-
-    // Cord popup: check immediately (not inside debounce) so it never misses
-    if (
-      isCordKeyword(raw) &&
-      !cordShownThisSession.current &&
-      localStorage.getItem(HIDE_GAMES_POPUP_KEY) !== 'true'
-    ) {
-      setShowCordPopup(true);
-      cordShownThisSession.current = true;
-    }
-
-    // Debounce only the filter update
-    if (debounceTimer.current) clearTimeout(debounceTimer.current);
-    debounceTimer.current = setTimeout(() => {
-      setGameSearchDebounced(raw);
-    }, 200);
+  // Panic key
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === '\\' && e.target !== proxyInputRef.current) {
+        e.preventDefault();
+        e.stopPropagation();
+        const url = 'https://manhasset.instructure.com/';
+        if (window.self !== window.top) window.top!.location.href = url;
+        else window.location.href = url;
+      }
+    };
+    document.addEventListener('keydown', handler, true);
+    return () => document.removeEventListener('keydown', handler, true);
   }, []);
+
+  // Go to games page — show popup unless user opted out
+  const goToGames = () => {
+    setPage('games');
+    setGameSearch('');
+    setGameSearchDisplay('');
+    const dismissed = localStorage.getItem(DONT_SHOW_POPUP) === 'true';
+    if (!dismissed) {
+      setShowCordPopup(true);
+    }
+  };
 
   const handleCordPopupClose = (dontRemind: boolean) => {
     if (dontRemind) {
-      localStorage.setItem(HIDE_GAMES_POPUP_KEY, 'true');
+      localStorage.setItem(DONT_SHOW_POPUP, 'true');
     }
     setShowCordPopup(false);
   };
 
-  // Filter games list by debounced search
-  const filteredGames = gameSearchDebounced.trim()
-    ? games.filter((g) => normalizeText(g.name).includes(normalizeText(gameSearchDebounced)))
-    : games;
-
+  // Home page search submit
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    const searchQuery = searchInputRef.current?.value || '';
-    if (isCordKeyword(searchQuery.trim())) {
-      cordShownThisSession.current = false; // reset so popup can show fresh on this visit
-      setShowGameGrid(true);
-    } else if (searchQuery.trim()) {
-      window.open(`https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`, '_blank');
-    }
+    const q = searchInputRef.current?.value || '';
+    if (q === 'Bart is Awesome') { setShowEasterEgg(true); return; }
+    if (isCordKeyword(q.trim())) { goToGames(); return; }
+    if (q.trim()) window.open(`https://www.google.com/search?q=${encodeURIComponent(q)}`, '_blank');
   };
 
   const handleLuckySearch = () => {
-    const searchQuery = searchInputRef.current?.value || '';
-    if (isCordKeyword(searchQuery.trim())) {
-      cordShownThisSession.current = false;
-      setShowGameGrid(true);
-    } else if (searchQuery.trim()) {
-      window.open(`https://www.google.com/search?q=${encodeURIComponent(searchQuery)}&btnI=1`, '_blank');
-    }
+    const q = searchInputRef.current?.value || '';
+    if (q === 'Bart is Awesome') { setShowEasterEgg(true); return; }
+    if (isCordKeyword(q.trim())) { goToGames(); return; }
+    if (q.trim()) window.open(`https://www.google.com/search?q=${encodeURIComponent(q)}&btnI=1`, '_blank');
   };
 
-  useEffect(() => {
-    const handleKeyPress = (e: KeyboardEvent) => {
-      if (e.key === '\\' && e.target !== proxyInputRef.current) {
-        e.preventDefault();
-        e.stopPropagation();
-        if (window.self !== window.top) {
-          window.top!.location.href = 'https://manhasset.instructure.com/';
-        } else {
-          window.location.href = 'https://manhasset.instructure.com/';
-        }
-      }
-    };
-    document.addEventListener('keydown', handleKeyPress, true);
-    return () => document.removeEventListener('keydown', handleKeyPress, true);
+  const handleMainSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.value === 'Bart is Awesome') setShowEasterEgg(true);
+  };
+
+  // Games page search
+  const handleGameSearchChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const raw = e.target.value;
+    setGameSearchDisplay(raw);
+    if (raw === 'Bart is Awesome') setShowEasterEgg(true);
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => setGameSearch(raw), 200);
   }, []);
 
-  const exitGameGrid = () => {
-    setShowGameGrid(false);
-    setGameSearchRaw('');
-    setGameSearchDebounced('');
-  };
+  const filteredGames = gameSearch.trim()
+    ? games.filter(g => normalizeText(g.name).includes(normalizeText(gameSearch)))
+    : games;
 
-  const playGame = (gameId: string, gameUrl: string) => {
-    if (gameUrl === 'proxy') {
-      setShowProxy(true);
-      setShowGameGrid(false);
-    } else {
-      setCurrentGame(gameUrl);
-      setCurrentGameId(gameId);
-      if (PROXY_GAME_IDS.has(gameId)) {
-        setShowProxyWarning(true);
-      }
-    }
+  const playGame = (id: string, url: string) => {
+    setCurrentGame(url);
+    setCurrentGameId(id);
+    setPage('game');
+    if (PROXY_GAME_IDS.has(id)) setShowProxyWarning(true);
   };
 
   const handleProxySearch = (e: React.FormEvent) => {
     e.preventDefault();
-    const query = proxyInputRef.current?.value || '';
-    if (query.trim()) {
-      let searchUrl = query.trim();
-      if (searchUrl.includes('.') && !searchUrl.includes(' ')) {
-        if (!searchUrl.startsWith('http://') && !searchUrl.startsWith('https://')) {
-          searchUrl = 'https://' + searchUrl;
-        }
-      } else {
-        searchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchUrl)}`;
-      }
-      setProxyUrl(searchUrl);
+    const q = proxyInputRef.current?.value || '';
+    if (!q.trim()) return;
+    let url = q.trim();
+    if (url.includes('.') && !url.includes(' ')) {
+      if (!url.startsWith('http://') && !url.startsWith('https://')) url = 'https://' + url;
+    } else {
+      url = `https://www.google.com/search?q=${encodeURIComponent(url)}`;
     }
+    setProxyUrl(url);
   };
 
-  // ─── Game view ────────────────────────────────────────────────────────────
-  if (currentGame) {
+  // ── Game iframe view ───────────────────────────────────────────────────────
+  if (page === 'game' && currentGame) {
     const isProxyGame = currentGameId && PROXY_GAME_IDS.has(currentGameId);
     return (
       <div className="w-screen h-screen bg-black overflow-hidden relative">
@@ -281,7 +271,7 @@ function App() {
           </div>
         )}
         <button
-          onClick={() => { setCurrentGame(null); setCurrentGameId(null); setShowGameGrid(true); }}
+          onClick={() => { setPage('games'); setCurrentGame(null); setCurrentGameId(null); }}
           className={`absolute z-40 p-1.5 bg-gray-800/80 text-white rounded hover:bg-gray-700 transition-colors shadow-lg ${isProxyGame ? 'bottom-4 left-4' : 'top-4 left-4'}`}
           aria-label="Back"
         >
@@ -292,8 +282,8 @@ function App() {
     );
   }
 
-  // ─── Proxy view ───────────────────────────────────────────────────────────
-  if (showProxy) {
+  // ── Proxy page ─────────────────────────────────────────────────────────────
+  if (page === 'proxy') {
     return (
       <div className="w-screen h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 flex flex-col">
         <div className="bg-black/30 backdrop-blur-md border-b border-white/10 p-3 flex items-center gap-3">
@@ -307,13 +297,13 @@ function App() {
             </button>
             {showProxyDropdown && (
               <div className="absolute top-full left-0 mt-2 w-48 bg-gray-800 border border-white/20 rounded-lg shadow-xl z-50">
-                {proxies.map((proxy) => (
+                {proxies.map(p => (
                   <button
-                    key={proxy.id}
-                    onClick={() => { setSelectedProxy(proxy); setShowProxyDropdown(false); setProxyUrl(''); }}
-                    className={`w-full text-left px-4 py-2 transition-colors ${selectedProxy.id === proxy.id ? 'bg-blue-500 text-white' : 'text-white hover:bg-white/10'}`}
+                    key={p.id}
+                    onClick={() => { setSelectedProxy(p); setShowProxyDropdown(false); setProxyUrl(''); }}
+                    className={`w-full text-left px-4 py-2 transition-colors ${selectedProxy.id === p.id ? 'bg-blue-500 text-white' : 'text-white hover:bg-white/10'}`}
                   >
-                    {proxy.name}
+                    {p.name}
                   </button>
                 ))}
               </div>
@@ -326,7 +316,7 @@ function App() {
                 ref={proxyInputRef}
                 type="text"
                 placeholder="Search or enter URL"
-                onKeyDown={(e) => { if (e.key === 'Backspace') e.stopPropagation(); }}
+                onKeyDown={e => { if (e.key === 'Backspace') e.stopPropagation(); }}
                 className="flex-1 outline-none text-white bg-transparent placeholder-white/50 text-base"
               />
             </div>
@@ -336,7 +326,7 @@ function App() {
           </form>
         </div>
         <button
-          onClick={() => { setShowProxy(false); setShowGameGrid(true); setProxyUrl(''); }}
+          onClick={() => { setPage('games'); setProxyUrl(''); }}
           className="fixed bottom-4 left-4 p-1.5 bg-gray-800/80 text-white rounded hover:bg-gray-700 transition-colors shadow-lg z-50"
           aria-label="Back"
         >
@@ -359,8 +349,8 @@ function App() {
     );
   }
 
-  // ─── Games grid ───────────────────────────────────────────────────────────
-  if (showGameGrid) {
+  // ── Games grid ─────────────────────────────────────────────────────────────
+  if (page === 'games') {
     return (
       <div className="w-screen h-screen bg-gray-900 overflow-y-scroll relative">
         {showCordPopup && <CordPopup onClose={handleCordPopupClose} />}
@@ -369,23 +359,24 @@ function App() {
         <div className="p-8">
           <div className="mb-8 text-center sticky top-0 bg-gray-900 py-4 z-10">
             <h1 className="text-5xl font-bold text-white mb-4">Choose Your Game</h1>
-            <button onClick={exitGameGrid} className="px-6 py-2 bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors mb-4">
+            <button
+              onClick={() => setPage('home')}
+              className="px-6 py-2 bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors mb-4"
+            >
               Back to Search
             </button>
             <div className="flex items-center gap-3 px-4 py-2 bg-gray-800 border border-gray-700 rounded-full max-w-md mx-auto mt-3 focus-within:border-gray-500 transition-colors">
               <Search size={16} className="text-gray-500 flex-shrink-0" />
               <input
                 type="text"
-                value={gameSearchRaw}
+                value={gameSearchDisplay}
                 onChange={handleGameSearchChange}
-                onKeyDown={(e) => { if (e.key === 'Backspace') e.stopPropagation(); }}
+                onKeyDown={e => { if (e.key === 'Backspace') e.stopPropagation(); }}
                 placeholder="Search games..."
                 className="flex-1 outline-none bg-transparent text-gray-100 text-sm placeholder-gray-500"
               />
-              {gameSearchRaw && (
-                <button onClick={() => { setGameSearchRaw(''); setGameSearchDebounced(''); }} className="text-gray-500 hover:text-gray-300 text-lg leading-none" aria-label="Clear search">
-                  ×
-                </button>
+              {gameSearchDisplay && (
+                <button onClick={() => { setGameSearchDisplay(''); setGameSearch(''); }} className="text-gray-500 hover:text-gray-300 text-lg leading-none">×</button>
               )}
             </div>
           </div>
@@ -398,7 +389,7 @@ function App() {
             </div>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto pb-8">
-              {filteredGames.map((game) => (
+              {filteredGames.map(game => (
                 <button
                   key={game.id}
                   onClick={() => playGame(game.id, game.url)}
@@ -412,17 +403,16 @@ function App() {
           )}
 
           <div className="text-center text-gray-400 text-sm pb-8">
-            <p>Bart made this. Thank him. Email hongbo_wang@mufsd.org (School email) or hongbowang0821@gmail.com (personal email) for any requests or suggestions. :)</p>
+            <p>Bart made this. Thank him. :)</p>
           </div>
         </div>
       </div>
     );
   }
 
-  // ─── Home / search page ───────────────────────────────────────────────────
+  // ── Home page ──────────────────────────────────────────────────────────────
   return (
     <div className="min-h-screen bg-gray-900 flex flex-col">
-      {/* Easter egg can also fire from the home page */}
       {showEasterEgg && <EasterEggPopup onClose={() => setShowEasterEgg(false)} />}
 
       <header className="flex items-center justify-end px-4 py-3 gap-4">
@@ -449,11 +439,7 @@ function App() {
         </div>
 
         <form onSubmit={handleSearch} className="w-full max-w-2xl">
-          <div
-            className={`flex items-center gap-3 px-5 py-3 border border-gray-700 rounded-full transition-shadow duration-200 bg-gray-800 ${
-              isSearchFocused ? 'shadow-lg shadow-gray-900/50' : 'shadow-md shadow-gray-900/30 hover:shadow-lg hover:shadow-gray-900/50'
-            }`}
-          >
+          <div className={`flex items-center gap-3 px-5 py-3 border border-gray-700 rounded-full transition-shadow duration-200 bg-gray-800 ${isSearchFocused ? 'shadow-lg shadow-gray-900/50' : 'shadow-md shadow-gray-900/30 hover:shadow-lg hover:shadow-gray-900/50'}`}>
             <Search size={20} className="text-gray-500 flex-shrink-0" />
             <input
               ref={searchInputRef}
@@ -461,14 +447,14 @@ function App() {
               onChange={handleMainSearchChange}
               onFocus={() => setIsSearchFocused(true)}
               onBlur={() => setIsSearchFocused(false)}
-              onKeyDown={(e) => { if (e.key === 'Backspace') e.stopPropagation(); }}
+              onKeyDown={e => { if (e.key === 'Backspace') e.stopPropagation(); }}
               placeholder="Search Geegle or type a URL"
               className="flex-1 outline-none text-gray-100 text-base bg-transparent placeholder-gray-500"
             />
-            <button type="button" className="p-1 hover:bg-gray-700 rounded transition-colors" aria-label="Search by voice" onMouseDown={(e) => e.preventDefault()}>
+            <button type="button" className="p-1 hover:bg-gray-700 rounded transition-colors" aria-label="Search by voice" onMouseDown={e => e.preventDefault()}>
               <Mic size={20} className="text-blue-500" />
             </button>
-            <button type="button" className="p-1 hover:bg-gray-700 rounded transition-colors" aria-label="Search by image" onMouseDown={(e) => e.preventDefault()}>
+            <button type="button" className="p-1 hover:bg-gray-700 rounded transition-colors" aria-label="Search by image" onMouseDown={e => e.preventDefault()}>
               <Image size={20} className="text-blue-500" />
             </button>
           </div>
