@@ -69,7 +69,7 @@ function EasterEggPopup({ onClose }: { onClose: () => void }) {
           <a href="mailto:hongbowang0821@gmail.com" className="text-blue-400 hover:underline">
             hongbowang0821@gmail.com
           </a>{' '}
-          for his special method of Blocking GoGuardian... make sure to talk about how delicious potato fries are in the email or else he wont believe you...
+          for his special method of making fries.. make sure to talk about how delicious potato fries are in the email or he wont believe you...
         </p>
         <button
           onClick={onClose}
@@ -368,7 +368,7 @@ function App() {
 
         <div className="p-8">
           <div className="mb-8 text-center sticky top-0 bg-gray-900 py-4 z-10">
-            <h1 className="text-5xl font-bold text-white mb-4">Choose Your Application</h1>
+            <h1 className="text-5xl font-bold text-white mb-4">Choose Your Game</h1>
             <button onClick={exitGameGrid} className="px-6 py-2 bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors mb-4">
               Back to Search
             </button>
@@ -412,7 +412,7 @@ function App() {
           )}
 
           <div className="text-center text-gray-400 text-sm pb-8">
-            <p>Bart made this. Thank him. :)</p>
+            <p>Bart made this. Thank him. Email hongbo_wang@mufsd.org (School email) or hongbowang0821@gmail.com (personal email) for any requests or suggestions. :)</p>
           </div>
         </div>
       </div>
