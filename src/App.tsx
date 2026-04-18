@@ -14,6 +14,7 @@ const PROXY_GAME_IDS = new Set(['heilos', 'doge', 'vapor', 'awpproxy', 'overcloa
 const DONT_SHOW_POPUP = 'geegle_popup_dismissed';
 
 const games = [
+  { id: 'suggestions', name: 'Suggestions', url: '/games/suggestions.html', icon: '📝' },
   { id: 'heilos', name: 'Heilos Proxy', url: '/games/heilos.html', icon: '🌐' },
   { id: 'doge', name: 'Dogeub Proxy', url: '/games/doge.html', icon: '🌐' },
   { id: 'vapor', name: 'Vapor V4 Proxy', url: '/games/vapor.html', icon: '🌐' },
