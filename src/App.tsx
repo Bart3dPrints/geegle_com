@@ -8,6 +8,37 @@ function isCordKeyword(input: string): boolean {
   return normalizeText(input) === 'cord';
 }
 
+function formatGameName(name: string): string {
+  const specialCases: { [key: string]: string } = {
+    '1v1.lol': '1v1.LoL',
+    '1v1 lol': '1v1.LoL',
+    'five nights at freddy\'s': "Five Nights at Freddy's",
+    'r.e.p.o': 'R.E.P.O',
+    'bmx 2': 'BMX 2',
+    'bfdi branches': 'BFDI Branches',
+    'x-men': 'X-Men',
+  };
+
+  const lowerName = name.toLowerCase();
+  for (const [key, value] of Object.entries(specialCases)) {
+    if (lowerName === key || lowerName.includes(key)) {
+      return name.split(' ').map((word, i) => {
+        const lowerWord = word.toLowerCase();
+        if (lowerName.includes(key) && lowerWord === key.split(' ')[0]) return value;
+        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+      }).join(' ').replace(/\b(at|vs|the)\b/gi, (m) => m.toLowerCase());
+    }
+  }
+
+  return name.split(' ').map(word => {
+    if (word.length === 0) return word;
+    if (['at', 'vs', 'the', 'and', 'of', 'or', 'in'].includes(word.toLowerCase())) {
+      return word.toLowerCase();
+    }
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  }).join(' ');
+}
+
 const PROXY_GAME_IDS = new Set(['heilos', 'doge', 'vapor', 'lucide', 'overcloaked', 'voidproxy1']);
 const DONT_SHOW_POPUP = 'geegle_popup_dismissed';
 
@@ -3082,8 +3113,8 @@ function App() {
         {showEasterEgg && <EasterEggPopup onClose={() => setShowEasterEgg(false)} />}
 
         <div style={{ position: 'relative', zIndex: 1, padding: 32 }}>
-          {/* Sticky header */}
-          <div style={{ position: 'sticky', top: 0, zIndex: 10, background: 'rgba(5,5,8,0.85)', backdropFilter: 'blur(12px)', textAlign: 'center', paddingTop: 16, paddingBottom: 16, marginBottom: 32, borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+          {/* Sticky header with fade effect */}
+          <div style={{ position: 'sticky', top: 0, zIndex: 10, background: 'linear-gradient(to bottom, rgba(5,5,8,0.95), rgba(5,5,8,0.7), transparent)', backdropFilter: 'blur(12px)', textAlign: 'center', paddingTop: 16, paddingBottom: 32, marginBottom: 32, borderBottom: 'none' }}>
             <h1 style={{ fontSize: 44, fontWeight: 700, color: '#fff', marginBottom: 16 }}>Choose Your Game</h1>
             <button
               onClick={() => setPage('home')}
@@ -3144,7 +3175,7 @@ function App() {
                   }}
                 >
                   <div style={{ fontSize: 52 }}>{game.icon}</div>
-                  <span style={{ color: '#f3f4f6', fontSize: 15, fontWeight: 600, textAlign: 'center' }}>{game.name}</span>
+                  <span style={{ color: '#f3f4f6', fontSize: 15, fontWeight: 600, textAlign: 'center' }}>{formatGameName(game.name)}</span>
                 </button>
               ))}
             </div>
