@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Search, Mic, Image, Grid2x2 as Grid, User, ArrowLeft, ChevronDown, Settings, X, Palette, Key } from 'lucide-react';
+import { Search, Mic, Image, Grid2x2 as Grid, User, ArrowLeft, ChevronDown } from 'lucide-react';
 
 function normalizeText(input: string): string {
   return input.toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -61,12 +61,12 @@ const games = [
   { id: 'voidproxy1', name: 'Void Proxy', url: '/games/voidproxy1.html', icon: '🌐' },
 
   // ── All other games (alphabetical) ──
-  { id: 'cl1', name: '1 (Classic)', url: '/games/cl1.html', icon: '🎮' },
+  { id: 'cl1', name: '1 (Game)', url: '/games/cl1.html', icon: '🎮' },
   { id: 'cl1on1soccer', name: '1 on 1 Soccer', url: '/games/cl1on1soccer.html', icon: '⚽' },
   { id: 'cl10bullets', name: '10 Bullets', url: '/games/cl10bullets.html', icon: '🔫' },
   { id: 'cl10minutestildawn', name: '10 Minutes Till Dawn', url: '/games/cl10minutestildawn.html', icon: '🎮' },
   { id: 'cl10morebullets', name: '10 More Bullets', url: '/games/cl10morebullets.html', icon: '🔫' },
-  { id: 'cl10yardfight', name: '10 Yard Fight', url: '/games/cl10yardfight.html', icon: '🏈' },
+  { id: 'cl10yardfight', name: '10 Yard Fight', url: '/games/cl10yardfight.html', icon: '🎮' },
   { id: 'cl100in1nes', name: '100 in 1 NES', url: '/games/cl100in1nes.html', icon: '🎮' },
   { id: 'cl100roomsofenemies', name: '100 Rooms of Enemies', url: '/games/cl100RoomsOfEnemies.html', icon: '🎮' },
   { id: 'cl12minibattles', name: '12 Mini Battles', url: '/games/cl12minibattles.html', icon: '🎮' },
@@ -77,11 +77,11 @@ const games = [
   { id: 'cl2doom', name: '2 Doom', url: '/games/cl2doom.html', icon: '💀' },
   { id: 'cl234playergame', name: '2-3-4 Player Game', url: '/games/cl234playergame.html', icon: '🎮' },
   { id: 'cl20smallmazes', name: '20 Small Mazes', url: '/games/cl20smallmazes.html', icon: '🎮' },
-  { id: 'cl2048', name: '2048', url: '/games/cl2048.html', icon: '🔢' },
-  { id: 'cl2048cupcakes', name: '2048 Cupcakes', url: '/games/cl2048cupcakes.html', icon: '🍰' },
+  { id: 'cl2048', name: '2048', url: '/games/cl2048.html', icon: '🧩' },
+  { id: 'cl2048cupcakes', name: '2048 Cupcakes', url: '/games/cl2048cupcakes.html', icon: '🧩' },
   { id: 'cl2dshooting', name: '2D Shooting', url: '/games/cl2Dshooting.html', icon: '🔫' },
-  { id: 'cl3dash', name: '3 Dash', url: '/games/cl3dash.html', icon: '🔷' },
-  { id: 'cl3dasheditor', name: '3 Dash Editor', url: '/games/cl3dasheditor.html', icon: '🔷' },
+  { id: 'cl3dash', name: '3 Dash', url: '/games/cl3dash.html', icon: '🎮' },
+  { id: 'cl3dasheditor', name: '3 Dash Editor', url: '/games/cl3dasheditor.html', icon: '🎮' },
   { id: 'cl3pandas', name: '3 Pandas', url: '/games/cl3pandas.html', icon: '🎮' },
   { id: 'cl3pandasfantasy', name: '3 Pandas Fantasy', url: '/games/cl3pandasfantasy.html', icon: '🎮' },
   { id: 'cl3pandasbrazil', name: '3 Pandas in Brazil', url: '/games/cl3pandasbrazil.html', icon: '🎮' },
@@ -90,7 +90,7 @@ const games = [
   { id: 'cl3slices2', name: '3 Slices 2', url: '/games/cl3slices2.html', icon: '🎮' },
   { id: 'cl3dpinballspacecadet', name: '3D Pinball Space Cadet', url: '/games/cl3dpinballspacecadet.html', icon: '🏀' },
   { id: 'cl40xescape', name: '40x Escape', url: '/games/cl40xescape.html', icon: '🎮' },
-  { id: 'cl4thandgoal', name: '4th and Goal', url: '/games/cl4thandgoal.html', icon: '🏈' },
+  { id: 'cl4thandgoal', name: '4th and Goal', url: '/games/cl4thandgoal.html', icon: '🎮' },
   { id: 'cl500calibercontractz', name: '500 Caliber Contractz', url: '/games/cl500calibercontractz.html', icon: '🎮' },
   { id: 'cl60secondsburgerrun', name: '60 Seconds Burger Run', url: '/games/cl60secondsburgerrun.html', icon: '🍕' },
   { id: 'cl60secondssantarun', name: '60 Seconds Santa Run', url: '/games/cl60secondssantarun.html', icon: '🎮' },
@@ -100,34 +100,39 @@ const games = [
   { id: 'cl9007199254740992', name: '9007199254740992', url: '/games/cl9007199254740992.html', icon: '🎮' },
   { id: 'cl99balls', name: '99 Balls', url: '/games/cl99balls.html', icon: '🎮' },
   { id: 'cl99nightsitf', name: '99 Nights in the Forest', url: '/games/cl99nightsitf.html', icon: '🎮' },
-  { id: 'cladofai', name: 'A Dance of Fire and Ice', url: '/games/clADOFAI.html', icon: '🎶' },
-  { id: 'cladarkroom', name: 'A Dark Room', url: '/games/clADarkRoom.html', icon: '🕯️' },
+  { id: 'cladofai', name: 'A Dance of Fire and Ice', url: '/games/clADOFAI.html', icon: '🎵' },
+  { id: 'cladarkroom', name: 'A Dark Room', url: '/games/clADarkRoom.html', icon: '🎮' },
   { id: 'clabandoned3', name: 'Abandoned 3', url: '/games/clabandoned3.html', icon: '🎮' },
   { id: 'clabsolutemadness', name: 'Absolute Madness', url: '/games/clabsolutemadness.html', icon: '🎮' },
   { id: 'clacecombat2', name: 'Ace Combat 2', url: '/games/clacecombat2.html', icon: '🎮' },
   { id: 'clacecombat3', name: 'Ace Combat 3', url: '/games/clacecombat3.html', icon: '🎮' },
   { id: 'clacegangstertaxi', name: 'Ace Gangster Taxi', url: '/games/clacegangstertaxi.html', icon: '🎮' },
+  { id: 'clachievmentunlocked', name: 'Achi Ev Ment Unlocked', url: '/games/clachievmentunlocked.html', icon: '🎮' },
+  { id: 'clachievmentunlocked2', name: 'Achi Ev Ment Unlocked 2', url: '/games/clachievmentunlocked2.html', icon: '🎮' },
+  { id: 'clachievmentunlocked3', name: 'Achi Ev Ment Unlocked 3', url: '/games/clachievmentunlocked3.html', icon: '🎮' },
   { id: 'clachievementunlocked', name: 'Achievement Unlocked', url: '/games/clachievementunlocked.html', icon: '🎮' },
   { id: 'clachillies', name: 'Achillies', url: '/games/clachillies.html', icon: '🎮' },
   { id: 'clachillies2', name: 'Achillies 2', url: '/games/clachillies2.html', icon: '🎮' },
-  { id: 'cladatewithdeath', name: 'A Date with Death', url: '/games/cladatewithdeath.html', icon: '🎮' },
-  { id: 'cladayintheoffice', name: 'A Day in the Office', url: '/games/cladayintheoffice.html', icon: '🎮' },
+  { id: 'cladatewithdeath', name: 'Adate with Death', url: '/games/cladatewithdeath.html', icon: '🎮' },
+  { id: 'cladayintheoffice', name: 'Aday in the Office', url: '/games/cladayintheoffice.html', icon: '🎮' },
   { id: 'cladvancewars', name: 'Advance Wars', url: '/games/cladvancewars.html', icon: '🪖' },
   { id: 'cladvancewars2', name: 'Advance Wars 2', url: '/games/cladvancewars2.html', icon: '🪖' },
   { id: 'cladvancewarsdualstrike', name: 'Advance Wars Dual Strike', url: '/games/cladvancewarsdualstrike.html', icon: '🪖' },
-  { id: 'cladventneon', name: 'Advent Neon', url: '/games/cladventneon.html', icon: '🎮' },
-  { id: 'cladventurecapitalist', name: 'Adventure Capitalist', url: '/games/cladventurecapitalist.html', icon: '💰' },
-  { id: 'claflac', name: 'AFLAC', url: '/games/claflac.html', icon: '🦆' },
+  { id: 'cladventneon', name: 'Adventneon', url: '/games/cladventneon.html', icon: '🎮' },
+  { id: 'cladventurecapitalist', name: 'Adventure Capitalist', url: '/games/cladventurecapitalist.html', icon: '🎮' },
+  { id: 'claflac', name: 'Aflac', url: '/games/claflac.html', icon: '🎮' },
   { id: 'claftertheweek', name: 'After the Week', url: '/games/claftertheweek.html', icon: '🎮' },
-  { id: 'clagariolite', name: 'Agario Lite', url: '/games/clagariolite.html', icon: '🎮' },
-  { id: 'clageofwar', name: 'Age of War', url: '/games/clageofwar.html', icon: '⚔️' },
-  { id: 'clageofwar2', name: 'Age of War 2', url: '/games/clageofwar2.html', icon: '⚔️' },
+  { id: 'clagariolite', name: 'Aga Rio Lite', url: '/games/clagariolite.html', icon: '🎮' },
+  { id: 'clageofwar', name: 'Age of War', url: '/games/clageofwar.html', icon: '🪖' },
+  { id: 'clageofwar2', name: 'Age of War 2', url: '/games/clageofwar2.html', icon: '🪖' },
   { id: 'clagesofconflict', name: 'Ages of Conflict', url: '/games/clagesofconflict.html', icon: '🎮' },
   { id: 'clagesofempire', name: 'Ages of Empire', url: '/games/clagesofempire.html', icon: '🎮' },
   { id: 'clahoysurvival', name: 'Ahoy Survival', url: '/games/clahoysurvival.html', icon: '🎮' },
   { id: 'clai', name: 'AI', url: '/games/clai.html', icon: '🎮' },
   { id: 'clairlinetycoonidle', name: 'Airline Tycoon Idle', url: '/games/clairlinetycoonidle.html', icon: '👆' },
-  { id: 'clakumanorgaiden', name: 'Akumano Gaiden', url: '/games/clakumanorgaiden.html', icon: '🎮' },
+  { id: 'clakoopasrevenge', name: 'Akoopa Srevenge', url: '/games/clakoopasrevenge.html', icon: '🎮' },
+  { id: 'clakoopasrevenge2', name: 'Akoopa Srevenge 2', url: '/games/clakoopasrevenge2.html', icon: '🎮' },
+  { id: 'clakumanorgaiden', name: 'Aku Man Org Aiden', url: '/games/clakumanorgaiden.html', icon: '🎮' },
   { id: 'claladdinsnes', name: 'Aladdin SNES', url: '/games/claladdinsnes.html', icon: '🎮' },
   { id: 'clalexkiddinmiracleworld', name: 'Alex Kidd in Miracle World', url: '/games/clalexkiddinmiracleworld.html', icon: '🎮' },
   { id: 'clalienhominid', name: 'Alien Hominid', url: '/games/clalienhominid.html', icon: '🌌' },
@@ -139,7 +144,7 @@ const games = [
   { id: 'clallocation', name: 'Allocation', url: '/games/clallocation.html', icon: '🎮' },
   { id: 'claltered-beast', name: 'Altered Beast', url: '/games/clAltered%20Beast.html', icon: '🎮' },
   { id: 'clamaze', name: 'Amaze', url: '/games/clamaze.html', icon: '🎮' },
-  { id: 'clambulencearush', name: 'Ambulance Rush', url: '/games/clambulencearush.html', icon: '🎮' },
+  { id: 'clambulencearush', name: 'Amb Ule Ncea Rush', url: '/games/clambulencearush.html', icon: '🎮' },
   { id: 'clamidstthesky', name: 'Amidst the Sky', url: '/games/clamidstthesky.html', icon: '🎮' },
   { id: 'clamigopancho', name: 'Amigo Pancho', url: '/games/clamigopancho.html', icon: '🎮' },
   { id: 'clamigopancho2', name: 'Amigo Pancho 2', url: '/games/clamigopancho2.html', icon: '🎮' },
@@ -150,57 +155,59 @@ const games = [
   { id: 'clamigopancho7', name: 'Amigo Pancho 7', url: '/games/clamigopancho7.html', icon: '🎮' },
   { id: 'clamongus', name: 'Amongus', url: '/games/clamongus.html', icon: '🎮' },
   { id: 'clamorphous', name: 'Amorphous', url: '/games/clamorphous.html', icon: '🎮' },
-  { id: 'clantarttycoon', name: 'Antart Tycoon', url: '/games/clantarttycoon.html', icon: '👆' },
+  { id: 'clantarttycoon', name: 'An Tart Tycoon', url: '/games/clantarttycoon.html', icon: '👆' },
   { id: 'clancientsins', name: 'Ancient Sins', url: '/games/clancientsins.html', icon: '🎮' },
-  { id: 'clanemonesfall', name: 'Anemone Fall', url: '/games/clanemonesfall.html', icon: '🎮' },
+  { id: 'clanemonesfall', name: 'Anemones Fall', url: '/games/clanemonesfall.html', icon: '🎮' },
   { id: 'clangrybirds', name: 'Angry Birds', url: '/games/clangrybirds.html', icon: '🐦' },
   { id: 'clangrybirdsshowdown', name: 'Angry Birds Showdown', url: '/games/clangrybirdsshowdown.html', icon: '🐦' },
   { id: 'clangrybirdsslingshotfrenzy', name: 'Angry Birds Slingshot Frenzy', url: '/games/clangrybirdsslingshotfrenzy.html', icon: '🐦' },
-  { id: 'clangrybirds-space', name: 'Angry Birds Space', url: '/games/clangrybirds-space.html', icon: '🌌' },
+  { id: 'clangry-birdsspace', name: 'Angry Birdsspace', url: '/games/clangry-birdsspace.html', icon: '🌌' },
+  { id: 'clangrybirds-space', name: 'Angrybirds Space', url: '/games/clangrybirds-space.html', icon: '🌌' },
   { id: 'clanimalcrossingwildworld', name: 'Animal Crossing Wild World', url: '/games/clanimalcrossingwildworld.html', icon: '🎮' },
   { id: 'clanimalforestn64', name: 'Animal Forest N64', url: '/games/clanimalforestn64.html', icon: '🎮' },
-  { id: 'clannsmb', name: 'Another New Super Mario Bros', url: '/games/clannsmb.html', icon: '🎮' },
+  { id: 'clannsmb', name: 'Annsmb', url: '/games/clannsmb.html', icon: '🎮' },
   { id: 'clanotherworld', name: 'Another World', url: '/games/clanotherworld.html', icon: '🎮' },
-  { id: 'clantimatterdimensions', name: 'Antimatter Dimensions', url: '/games/clantimatterdimensions.html', icon: '♾️' },
-  { id: 'clapesvshelium', name: 'Apes vs Helium', url: '/games/clapesvshelium.html', icon: '🦍' },
+  { id: 'clantimatterdimensions', name: 'Antimatter Dimensions', url: '/games/clantimatterdimensions.html', icon: '🎮' },
+  { id: 'clapesvshelium', name: 'Apes vs Helium', url: '/games/clapesvshelium.html', icon: '🎮' },
   { id: 'clapotris', name: 'Apotris', url: '/games/clapotris.html', icon: '🎮' },
   { id: 'clappleshooter', name: 'Apple Shooter', url: '/games/clappleshooter.html', icon: '🔫' },
   { id: 'clappleworm', name: 'Apple Worm', url: '/games/clappleworm.html', icon: '🎮' },
   { id: 'claquaparkio', name: 'Aqua Park IO', url: '/games/claquaparkio.html', icon: '🎮' },
   { id: 'clarcadevolley', name: 'Arcade Volley', url: '/games/clarcadevolley.html', icon: '🎮' },
-  { id: 'clarceuslegend', name: 'Arceus Legend', url: '/games/clarceuslegend.html', icon: '⚔️' },
+  { id: 'clarceuslegend', name: 'Arceuslegend', url: '/games/clarceuslegend.html', icon: '⚔️' },
   { id: 'clarcheryworldtour', name: 'Archery World Tour', url: '/games/clarcheryworldtour.html', icon: '🎮' },
-  { id: 'clarchesspelago', name: 'Archipelago', url: '/games/clarchesspelago.html', icon: '♟️' },
+  { id: 'clarchesspelago', name: 'Arches Spela Go', url: '/games/clarchesspelago.html', icon: '♟️' },
   { id: 'clarchimedesclient', name: 'Archimedes Client', url: '/games/clarchimedesclient.html', icon: '🎮' },
   { id: 'clarena', name: 'Arena', url: '/games/clarena.html', icon: '🎮' },
   { id: 'clarmormayhem2', name: 'Armor Mayhem 2', url: '/games/clarmormayhem2.html', icon: '🎮' },
   { id: 'clarsonate', name: 'Arsonate', url: '/games/clarsonate.html', icon: '🎮' },
-  { id: 'clarthursnightmare', name: "Arthur's Nightmare", url: '/games/clarthursnightmare.html', icon: '🧟' },
+  { id: 'clarthursnightmare', name: 'Arthur Snightmare', url: '/games/clarthursnightmare.html', icon: '🧟' },
   { id: 'clasdutydemands', name: 'As Duty Demands', url: '/games/clasdutydemands.html', icon: '🎮' },
   { id: 'clascent', name: 'Ascent', url: '/games/clascent.html', icon: '🎮' },
-  { id: 'clasmallworldcup', name: 'A Small World Cup', url: '/games/clasmallworldcup.html', icon: '🎮' },
+  { id: 'clasmallworldcup', name: 'Asmall Worldcup', url: '/games/clasmallworldcup.html', icon: '🎮' },
+  { id: 'classesmentexaminationque', name: 'Asses Ment Examination Que', url: '/games/classesmentexaminationque.html', icon: '🎮' },
   { id: 'classessmentexamination', name: 'Assessment Examination', url: '/games/classessmentexamination.html', icon: '🎮' },
-  { id: 'clasteroids', name: 'Asteroids', url: '/games/clasteroids.html', icon: '🌠' },
-  { id: 'clasteroidsalt', name: 'Asteroids Alt', url: '/games/clasteroidsALT.html', icon: '🌠' },
-  { id: 'clasteroidsarcade', name: 'Asteroids Arcade', url: '/games/clasteroidsarcade.html', icon: '🌠' },
+  { id: 'clasteroids', name: 'Asteroids', url: '/games/clasteroids.html', icon: '🎮' },
+  { id: 'clasteroidsalt', name: 'Asteroids Alt', url: '/games/clasteroidsALT.html', icon: '🎮' },
+  { id: 'clasteroidsarcade', name: 'Asteroids Arcade', url: '/games/clasteroidsarcade.html', icon: '🎮' },
   { id: 'clastraclient', name: 'Astra Client', url: '/games/clastraclient.html', icon: '🎮' },
-  { id: 'clastrawasm', name: 'Astra WASM', url: '/games/clastrawasm.html', icon: '🎮' },
+  { id: 'clastrawasm', name: 'Astra Was M', url: '/games/clastrawasm.html', icon: '🎮' },
   { id: 'clastrosdreamland', name: 'Astros Dreamland', url: '/games/clAstrosDreamland.html', icon: '🌌' },
   { id: 'clastynax', name: 'Astynax', url: '/games/clastynax.html', icon: '🎮' },
   { id: 'clatariadventure', name: 'Atari Adventure', url: '/games/clatariadventure.html', icon: '🎮' },
   { id: 'clattackhole', name: 'Attack Hole', url: '/games/clattackhole.html', icon: '🎮' },
-  { id: 'clavalanche', name: 'Avalanche', url: '/games/clavalanche.html', icon: '🏔️' },
+  { id: 'clavalanche', name: 'Avalanche', url: '/games/clavalanche.html', icon: '🎮' },
   { id: 'claviamasters', name: 'Avia Masters', url: '/games/claviamasters.html', icon: '🎮' },
   { id: 'claviamastersbuggy', name: 'Avia Masters Buggy', url: '/games/claviamastersbuggy.html', icon: '🎮' },
   { id: 'clawesomepirates', name: 'Awesome Pirates', url: '/games/clAwesomePirates.html', icon: '🎮' },
   { id: 'clawesomeplanes', name: 'Awesome Planes', url: '/games/clawesomeplanes.html', icon: '✈️' },
   { id: 'clawesometanks', name: 'Awesome Tanks', url: '/games/clawesometanks.html', icon: '🪖' },
   { id: 'clawesometanks2', name: 'Awesome Tanks 2', url: '/games/clawesometanks2.html', icon: '🪖' },
-  { id: 'claxbattler', name: 'Ax Battler', url: '/games/claxbattler.html', icon: '🎮' },
+  { id: 'claxbattler', name: 'Ax Battle R', url: '/games/claxbattler.html', icon: '🎮' },
   { id: 'claxisfootballleague', name: 'Axis Football League', url: '/games/claxisfootballleague.html', icon: '⚽' },
   { id: 'clb3313', name: 'B 3313', url: '/games/clB3313.html', icon: '🎮' },
   { id: 'clb3313unabandoneda2', name: 'B 3313 Unabandoned A2', url: '/games/clb3313unabandonedA2.html', icon: '🎮' },
-  { id: 'clb3313v102', name: 'B3313 v1.02', url: '/games/clb3313v102.html', icon: '🎮' },
+  { id: 'clb3313v102', name: 'B 3313 V 102', url: '/games/clb3313v102.html', icon: '🎮' },
   { id: 'clbabeltower', name: 'Babel Tower', url: '/games/clbabeltower.html', icon: '🎮' },
   { id: 'clbabychiccoadventure', name: 'Baby Chic Co Adventure', url: '/games/clbabychiccoadventure.html', icon: '🎮' },
   { id: 'clbabykaizo', name: 'Baby Kai Zo', url: '/games/clbabykaizo.html', icon: '🎮' },
@@ -254,7 +261,7 @@ const games = [
   { id: 'clbasketrandom', name: 'Basket Random', url: '/games/clbasketrandom.html', icon: '🎮' },
   { id: 'clbasketrandomgood', name: 'Basket Random Good', url: '/games/clbasketrandomgood.html', icon: '🎮' },
   { id: 'clbasketslamdunk2', name: 'Basket Slam Dunk 2', url: '/games/clbasketslamdunk2.html', icon: '🏀' },
-  { id: 'clbasketballfrvr', name: 'Basketball FRVR', url: '/games/clbasketballfrvr.html', icon: '🏀' },
+  { id: 'clbasketballfrvr', name: 'Basketball Fr VR', url: '/games/clbasketballfrvr.html', icon: '🏀' },
   { id: 'clbasketballlegends-1', name: 'Basketball Legends', url: '/games/clbasketballlegends(1).html', icon: '🏀' },
   { id: 'clbasketballstars', name: 'Basketball Stars', url: '/games/clbasketballstars.html', icon: '🏀' },
   { id: 'clbasketballsuperstars', name: 'Basketball Superstars', url: '/games/clbasketballsuperstars.html', icon: '🏀' },
@@ -265,7 +272,7 @@ const games = [
   { id: 'clbattles', name: 'Battles', url: '/games/clbattles.html', icon: '🎮' },
   { id: 'clbazookaboy', name: 'Bazooka Boy', url: '/games/clbazookaboy.html', icon: '🎮' },
   { id: 'clbballlegend', name: 'Bball Legend', url: '/games/clbballlegend.html', icon: '⚔️' },
-  { id: 'clbejeweledtwistds', name: 'Bejeweled Twist DS', url: '/games/clbejeweledtwistds.html', icon: '🎮' },
+  { id: 'clbejeweledtwistds', name: 'Be Jeweled Twist DS', url: '/games/clbejeweledtwistds.html', icon: '🎮' },
   { id: 'clbejeweledtwistflash', name: 'Be Jeweled Twist Flash', url: '/games/clbejeweledtwistflash.html', icon: '🎮' },
   { id: 'clbeachboxingsim', name: 'Beach Boxing Sim', url: '/games/clbeachboxingsim.html', icon: '🎮' },
   { id: 'clbeamrider', name: 'Beam Rider', url: '/games/clbeamrider.html', icon: '🎮' },
@@ -297,7 +304,7 @@ const games = [
   { id: 'clblackknight', name: 'Black Knight', url: '/games/clblackknight.html', icon: '⚔️' },
   { id: 'clblackjack', name: 'Blackjack', url: '/games/clblackjack.html', icon: '♟️' },
   { id: 'clblackjackbattle', name: 'Blackjack Battle', url: '/games/clblackjackbattle.html', icon: '♟️' },
-  { id: 'clblackjackhhhh', name: 'Blackjack', url: '/games/clblackjackhhhh.html', icon: '♟️' },
+  { id: 'clblackjackhhhh', name: 'Blackjack Hh Hh', url: '/games/clblackjackhhhh.html', icon: '♟️' },
   { id: 'clblackout', name: 'Blackout', url: '/games/clblackout.html', icon: '🎮' },
   { id: 'clblacksmithlab', name: 'Blacksmith Lab', url: '/games/clblacksmithlab.html', icon: '🎮' },
   { id: 'clblazedrifter', name: 'Blaze Drifter', url: '/games/clblazedrifter.html', icon: '🎮' },
@@ -315,7 +322,7 @@ const games = [
   { id: 'clblood', name: 'Blood', url: '/games/clblood.html', icon: '🎮' },
   { id: 'clbloodmoney', name: 'Blood Money', url: '/games/clbloodmoney.html', icon: '🎮' },
   { id: 'clbloodtournament', name: 'Blood Tournament', url: '/games/clbloodtournament.html', icon: '🎮' },
-  { id: 'clbloons', name: 'Bloons', url: '/games/clbloons.html', icon: '🎈' },
+  { id: 'clbloons', name: 'Bloons', url: '/games/clbloons.html', icon: '🎮' },
   { id: 'clbloons2', name: 'Bloons 2', url: '/games/clbloons2.html', icon: '🎮' },
   { id: 'clbloonspp1', name: 'Bloons Pp 1', url: '/games/clbloonspp1.html', icon: '🎮' },
   { id: 'clbloonspp2', name: 'Bloons Pp 2', url: '/games/clbloonspp2.html', icon: '🎮' },
@@ -339,7 +346,7 @@ const games = [
   { id: 'clbobtherobber2', name: 'Bob the Robber 2', url: '/games/clbobtherobber2.html', icon: '🎮' },
   { id: 'clbobtherobber5', name: 'Bob the Robber 5', url: '/games/clbobtherobber5.html', icon: '🎮' },
   { id: 'clbollybeat', name: 'Boll Ybeat', url: '/games/clbollybeat.html', icon: '🎵' },
-  { id: 'clbomberman', name: 'Bomberman', url: '/games/clbomberman.html', icon: '💣' },
+  { id: 'clbomberman', name: 'Bomberman', url: '/games/clbomberman.html', icon: '🎮' },
   { id: 'clbomberman2', name: 'Bomberman 2', url: '/games/clbomberman2.html', icon: '🎮' },
   { id: 'clbombermanhero', name: 'Bomberman Hero', url: '/games/clbombermanhero.html', icon: '🎮' },
   { id: 'clbombermanworld', name: 'Bomberman World', url: '/games/clbombermanworld.html', icon: '🎮' },
@@ -424,7 +431,7 @@ const games = [
   { id: 'clcatslovecake2', name: 'Cats Love Cake 2', url: '/games/clcatslovecake2.html', icon: '🎮' },
   { id: 'clcavecrawler', name: 'Cave Crawl Er', url: '/games/clcavecrawler.html', icon: '🎮' },
   { id: 'clcavestory', name: 'Cave Story', url: '/games/clcavestory.html', icon: '🎮' },
-  { id: 'clceleste', name: 'Celeste', url: '/games/clceleste.html', icon: '🏔️' },
+  { id: 'clceleste', name: 'Celeste', url: '/games/clceleste.html', icon: '🎮' },
   { id: 'clceleste2', name: 'Celeste 2', url: '/games/clceleste2.html', icon: '🎮' },
   { id: 'clcelestemariodx', name: 'Celeste Mario DX', url: '/games/clcelestemariodx.html', icon: '🍄' },
   { id: 'clcellardoor', name: 'Cellar Door', url: '/games/clcellardoor.html', icon: '🎮' },
@@ -448,95 +455,95 @@ const games = [
   { id: 'clchuzzle', name: 'Chuzzle', url: '/games/clchuzzle.html', icon: '🎮' },
   { id: 'clciviballs', name: 'Civ Iballs', url: '/games/clciviballs.html', icon: '🎮' },
   { id: 'clciviballs2', name: 'Civ Iballs 2', url: '/games/clciviballs2.html', icon: '🎮' },
-  { id: 'cla-walk-in-the-forest--v1-0', name: 'A Walk in the Forest (v 1.0)', url: '/games/clA%20Walk%20in%20The%20Forest%20(v1.0).html', icon: '🎮' },
-  { id: 'clacko_s-mach-bike-challenge--v1-0', name: "Acko's Mach Bike Challenge v1.0", url: '/games/clAcko_s%20Mach%20Bike%20Challenge%20(v1.0).html', icon: '🏎️' },
-  { id: 'clcartoonnetworktabletennisultimatetournament', name: 'Cartoon Network Table Tennis Ultimate Tournament', url: '/games/clCartoonNetworkTableTennisUltimateTournament.html', icon: '🏐' },
-  { id: 'clceliasstupidromhack', name: 'Celias Stupid Rom Hack', url: '/games/clCeliasStupidROMHack.html', icon: '🎮' },
-  { id: 'clcelltosingularity', name: 'Cell to Singularity', url: '/games/clCellToSingularity.html', icon: '🎮' },
-  { id: 'clchickencs', name: 'Chicken CS', url: '/games/clChickenCS.html', icon: '🎮' },
-  { id: 'clcircloo2', name: 'Circloo 2', url: '/games/clCircloO2.html', icon: '🎮' },
-  { id: 'clcolorboxmustard', name: 'Colorboxmustard', url: '/games/clColorboxmustard.html', icon: '🧩' },
-  { id: 'clcrystalcastles', name: 'Crystal Castles', url: '/games/clCrystalCastles.html', icon: '⚔️' },
-  { id: 'cldashmetry', name: 'Dashmetry', url: '/games/clDashmetry.html', icon: '🎮' },
-  { id: 'cldknescollection-1', name: 'Dknes Collection', url: '/games/clDKNESCollection(1).html', icon: '🎮' },
-  { id: 'cldragonballzthelegacyofgoku', name: 'Dragon Ball Z: Legacy of Goku', url: '/games/clDragonBallZTheLegacyofGoku.html', icon: '⚔️' },
-  { id: 'cldragonquestix', name: 'Dragon Quest IX', url: '/games/clDragonQuestIX.html', icon: '⚔️' },
-  { id: 'cldragonxclient', name: 'Dragonxclient', url: '/games/clDragonxclient.html', icon: '⚔️' },
-  { id: 'cleaglercrafttech', name: 'Eagler Craft Tech', url: '/games/clEaglerCraftTech.html', icon: '⛏️' },
-  { id: 'cleaglercraft-alpha-126-offline', name: 'Eaglercraft Alpha 126 Offline', url: '/games/clEaglercraft-Alpha-126-Offline.html', icon: '⛏️' },
-  { id: 'cleaglercraft-beta-1-3-offline', name: 'Eaglercraft Beta 1.3 Offline', url: '/games/clEaglercraft-Beta-1.3-Offline.html', icon: '⛏️' },
-  { id: 'cleaglercraft-beta-13-offline', name: 'Eaglercraft Beta 13 Offline', url: '/games/clEaglercraft-Beta-13-Offline.html', icon: '⛏️' },
-  { id: 'cleaglercraft-indev-offline-1', name: 'Eaglercraft Indev Offline', url: '/games/clEaglercraft-Indev-Offline(1).html', icon: '⛏️' },
-  { id: 'cleaglercraftl_19_v0_7_0_offline_signed-1', name: 'Eaglercraft L19 v0.7.0 Offline', url: '/games/clEaglercraftL_19_v0_7_0_Offline_Signed(1).html', icon: '⛏️' },
-  { id: 'cleaglercraftx188-u29', name: 'Eaglercraft X 1.88 (U29)', url: '/games/clEaglercraftX188(u29).html', icon: '⛏️' },
-  { id: 'cleaglercraftx-188u29', name: 'Eaglercraft X 1.88 U29', url: '/games/clEaglercraftX-188u29.html', icon: '⛏️' },
-  { id: 'cleaglercraftz_1112-1', name: 'Eaglercraft Z 1112', url: '/games/clEaglercraftZ_1112(1).html', icon: '⛏️' },
-  { id: 'clffsonic2', name: 'FFSonic 2', url: '/games/clFFsonic2.html', icon: '💨' },
-  { id: 'clffsonic3', name: 'FFSonic 3', url: '/games/clFFsonic3.html', icon: '💨' },
-  { id: 'clffsonic4', name: 'FFSonic 4', url: '/games/clFFsonic4.html', icon: '💨' },
-  { id: 'clffsonic5', name: 'FFSonic 5', url: '/games/clFFsonic5.html', icon: '💨' },
-  { id: 'clffsonic61', name: 'FFSonic 61', url: '/games/clFFsonic61.html', icon: '💨' },
-  { id: 'clffsonic62', name: 'FFSonic 62', url: '/games/clFFsonic62.html', icon: '💨' },
-  { id: 'clfifainternationalsoccer', name: 'Fif Ainternationalsoccer', url: '/games/clFIFAinternationalsoccer.html', icon: '⚽' },
-  { id: 'clfifaroadtoworldcup98', name: 'Fif Aroadtoworldcup 98', url: '/games/clFIFAroadtoworldcup98.html', icon: '🎮' },
-  { id: 'clfifasoccer06', name: 'Fif Asoccer 06', url: '/games/clFIFAsoccer06.html', icon: '⚽' },
-  { id: 'clfifasoccer95', name: 'Fif Asoccer 95', url: '/games/clFIFAsoccer95.html', icon: '⚽' },
-  { id: 'clfifasoccer96', name: 'Fif Asoccer 96', url: '/games/clFIFAsoccer96.html', icon: '⚽' },
-  { id: 'clfifasoccer97', name: 'Fif Asoccer 97', url: '/games/clFIFAsoccer97.html', icon: '⚽' },
-  { id: 'clfifastreet2', name: 'Fif Astreet 2', url: '/games/clFIFAstreet2.html', icon: '🎮' },
-  { id: 'clfifa2000-1', name: 'Fifa 2000', url: '/games/clFIFA2000(1).html', icon: '⚽' },
-  { id: 'clfifa99', name: 'Fifa 99', url: '/games/clFIFA99.html', icon: '⚽' },
-  { id: 'clgain-ground', name: 'Gain Ground', url: '/games/clGain%20Ground.html', icon: '🎮' },
-  { id: 'clgettothetopalthoughthereisnotop', name: 'Gettothetopalthoughthereisnotop', url: '/games/clGettothetopalthoughthereisnotop.html', icon: '🎮' },
-  { id: 'clhelios-offline--1', name: 'Helios Offline', url: '/games/clHelios-Offline%20(1).html', icon: '🎮' },
-  { id: 'clhinohomo', name: 'Hi No Homo', url: '/games/clHiNoHomo.html', icon: '🎮' },
-  { id: 'clhighspeed', name: 'High Speed', url: '/games/clHighSpeed.html', icon: '🏎️' },
-  { id: 'clhil-climbracing2', name: 'Hil Climb Racing 2', url: '/games/clHil%20ClimbRacing2.html', icon: '🏎️' },
-  { id: 'clhoennslastwish', name: 'Hoenns Last Wish', url: '/games/clHoennsLastWish.html', icon: '🎮' },
-  { id: 'clinkwell--v1-04', name: 'Inkwell (v 1.04)', url: '/games/clInkwell%20(v1.04).html', icon: '🎮' },
-  { id: 'cljump', name: 'Jump', url: '/games/clJUMP.html', icon: '🏃' },
-  { id: 'clkengriffeyjrpresentsmajorleaguebaseball', name: 'Ken Griffey Jr Presents Major League Baseball', url: '/games/clKenGriffeyJrPresentsMajorLeagueBaseball.html', icon: '⚾' },
-  { id: 'cllearntofly3debug', name: 'Learn to Fly 3 Debug', url: '/games/clLearnToFly3Debug.html', icon: '🎮' },
-  { id: 'cllegacyofgoku', name: 'Legacy of Goku', url: '/games/clLegacyOfGoku.html', icon: '🎮' },
-  { id: 'cllse', name: 'Lse', url: '/games/clLSE.html', icon: '🎮' },
-  { id: 'clclmadnessambulation', name: 'Madness Am Bulat Ion', url: '/games/clclmadnessambulation.html', icon: '🎮' },
-  { id: 'clmario-party-advance', name: 'Mario Party Advance', url: '/games/clMario%20Party%20Advance.html', icon: '🍄' },
-  { id: 'clminceraft-i-notmine_v6-1', name: 'Minceraft I Not Mine V6', url: '/games/clMinceraft-I-NotMine_V6(1).html', icon: '🎮' },
-  { id: 'clmoemon-emerald-vanilla---v1-1-0', name: 'Moemon Emerald Vanilla+ (v 1.1.0)', url: '/games/clMoemon%20Emerald%20Vanilla+%20(v1.1.0).html', icon: '🎮' },
-  { id: 'clnautilusos-1', name: 'Nautilus Os', url: '/games/clNautilusOS(1).html', icon: '🎮' },
-  { id: 'clnicktoonsfreezeframefrenzy', name: 'Nicktoons Freeze Frame Frenzy', url: '/games/clNicktoonsFreezeFrameFrenzy.html', icon: '🎮' },
-  { id: 'clnutsandboltsscrewingpuzzle', name: 'Nutsand Bolts Screwing Puzzle', url: '/games/clNutsandBoltsScrewingPuzzle.html', icon: '🧩' },
-  { id: 'clorangeroulette', name: 'Orange Roulette', url: '/games/clOrangeRoulette.html', icon: '🎮' },
-  { id: 'cloutrunarcade', name: 'Outrun Arcade', url: '/games/clOutrunArcade.html', icon: '🏃' },
-  { id: 'cloutrungenesis', name: 'Outrun Genesis', url: '/games/clOutrunGenesis.html', icon: '🏃' },
-  { id: 'clo-oo', name: 'Öoo', url: '/games/clÖoo.html', icon: '🎮' },
-  { id: 'clpapermariopracticehack', name: 'Paper Mario Practice Hack', url: '/games/clPaperMarioPracticeHack.html', icon: '🍄' },
-  { id: 'clpokeheartgoldgenerations', name: 'Poke Heartgold Generations', url: '/games/clPokeHeartgoldGenerations.html', icon: '🐾' },
-  { id: 'clpokethetaemeraldex', name: 'Poke Theta Emerald EX', url: '/games/clPokeThetaEmeraldEX.html', icon: '🐾' },
-  { id: 'clpokemonemeraldrouge', name: 'Pokemonemeraldrouge', url: '/games/clPokemonemeraldrouge.html', icon: '🐾' },
-  { id: 'clpokemonrocketedition', name: 'Pokemonrocketedition', url: '/games/clPokemonrocketedition.html', icon: '🐾' },
-  { id: 'clpoke-mon-emerald-rush-edition--2-0', name: 'Pokémon Emerald Rush Edition (2.0)', url: '/games/clPokémon%20Emerald%20Rush%20Edition%20(2.0).html', icon: '🐾' },
-  { id: 'clpoke-mon-trade-_stache--v1-1', name: 'Pokémon Trade& Stache (v 1.1)', url: '/games/clPokémon%20Trade&_Stache%20(V1.1).html', icon: '🐾' },
-  { id: 'clpoke-mon-two--v1-1', name: 'Pokémon Two (v 1.1)', url: '/games/clPokémon%20TWO%20(v1.1).html', icon: '🐾' },
-  { id: 'clpoke-monstunningsteel', name: 'Pokémonstunningsteel', url: '/games/clPokémonstunningsteel.html', icon: '🐾' },
-  { id: 'clpou', name: 'Pou', url: '/games/clPou.html', icon: '🎮' },
-  { id: 'clscamptonthegreatfightrecreate', name: 'Scampton the Great Fight Recreate', url: '/games/clScamptonTheGreatFightRecreate.html', icon: '🎮' },
-  { id: 'clskyriders', name: 'Sky Riders', url: '/games/clSkyRiders.html', icon: '🎮' },
-  { id: 'clsonic---knuckles---sonic-the-hedgehog-3', name: 'Sonic & Knuckles + Sonic the Hedgehog 3', url: '/games/clSonic%20&%20Knuckles%20+%20Sonic%20The%20Hedgehog%203.html', icon: '💨' },
-  { id: 'clsonic1scorerush', name: 'Sonic 1 Score Rush', url: '/games/clSonic1ScoreRush.html', icon: '💨' },
-  { id: 'clsonic1thesuperchallenges', name: 'Sonic 1 the Super Challenges', url: '/games/clSonic1TheSuperChallenges.html', icon: '💨' },
-  { id: 'clsonic2scorerush', name: 'Sonic 2 Score Rush', url: '/games/clSonic2ScoreRush.html', icon: '💨' },
-  { id: 'clsonicinsm64', name: 'Sonic in Sm64', url: '/games/clSonicInSM64.html', icon: '💨' },
-  { id: 'clsonicinsmw-1', name: 'Sonicin Smw', url: '/games/clSonicinSMW(1).html', icon: '💨' },
-  { id: 'clsovereignoftheskys', name: 'Sovereignoftheskys', url: '/games/clSovereignoftheskys.html', icon: '🎮' },
-  { id: 'clspongebobpowerkartgrandprix', name: 'Spongebob Power Kart Grand Prix', url: '/games/clSpongebobPowerKartGrandPrix.html', icon: '🏎️' },
-  { id: 'clsportsheadsicehockey', name: 'Sports Heads Ice Hockey', url: '/games/clSportsHeadsIceHockey.html', icon: '🏒' },
-  { id: 'clssf2tarcade', name: 'Ssf 2 T Arcade', url: '/games/clSSF2TArcade.html', icon: '🎮' },
-  { id: 'clstickmankingdomclash', name: 'Stickman Kingdomclash', url: '/games/clStickmanKingdomclash.html', icon: '🕴️' },
-  { id: 'clstreetfighter2hfarcade-1', name: 'Street Fighter 2 Hf Arcade', url: '/games/clStreetFighter2HFArcade(1).html', icon: '🥊' },
-  { id: 'clthesunforthevampire', name: 'The Sun for the Vampire', url: '/games/clTheSunForTheVampire.html', icon: '🧛' },
-  { id: 'cltuff_client_offline_wasm-1', name: 'Tuff Client Offline Wasm', url: '/games/clTuff_Client_Offline_WASM(1).html', icon: '⚔️' },
-  { id: 'cluvuvwevwevweonyetenvewveugwemubwemossas', name: 'Uvuvwevwevwe Onyetenvewve Ugwemubwem Ossas', url: '/games/clUvuvwevwevweOnyetenvewveUgwemubwemOssas.html', icon: '🎮' },
+  { id: 'cla-walk-in-the-forest--v1-0', name: 'Cl A Walk in the Forest (v 1.0)', url: '/games/clA%20Walk%20in%20The%20Forest%20(v1.0).html', icon: '🎮' },
+  { id: 'clacko_s-mach-bike-challenge--v1-0', name: 'Cl Acko S Mach Bike Challenge (v 1.0)', url: '/games/clAcko_s%20Mach%20Bike%20Challenge%20(v1.0).html', icon: '🏎️' },
+  { id: 'clcartoonnetworktabletennisultimatetournament', name: 'Cl Cartoon Network Table Tennis Ultimate Tournament', url: '/games/clCartoonNetworkTableTennisUltimateTournament.html', icon: '🏐' },
+  { id: 'clceliasstupidromhack', name: 'Cl Celias Stupid Rom Hack', url: '/games/clCeliasStupidROMHack.html', icon: '🎮' },
+  { id: 'clcelltosingularity', name: 'Cl Cell to Singularity', url: '/games/clCellToSingularity.html', icon: '🎮' },
+  { id: 'clchickencs', name: 'Cl Chicken Cs', url: '/games/clChickenCS.html', icon: '🎮' },
+  { id: 'clcircloo2', name: 'Cl Circlo O 2', url: '/games/clCircloO2.html', icon: '🎮' },
+  { id: 'clcolorboxmustard', name: 'Cl Colorboxmustard', url: '/games/clColorboxmustard.html', icon: '🧩' },
+  { id: 'clcrystalcastles', name: 'Cl Crystal Castles', url: '/games/clCrystalCastles.html', icon: '⚔️' },
+  { id: 'cldashmetry', name: 'Cl Dashmetry', url: '/games/clDashmetry.html', icon: '🎮' },
+  { id: 'cldknescollection-1', name: 'Cl Dknes Collection', url: '/games/clDKNESCollection(1).html', icon: '🎮' },
+  { id: 'cldragonballzthelegacyofgoku', name: 'Cl Dragon Ball Z the Legacyof Goku', url: '/games/clDragonBallZTheLegacyofGoku.html', icon: '⚔️' },
+  { id: 'cldragonquestix', name: 'Cl Dragon Quest IX', url: '/games/clDragonQuestIX.html', icon: '⚔️' },
+  { id: 'cldragonxclient', name: 'Cl Dragonxclient', url: '/games/clDragonxclient.html', icon: '⚔️' },
+  { id: 'cleaglercrafttech', name: 'Cl Eagler Craft Tech', url: '/games/clEaglerCraftTech.html', icon: '⛏️' },
+  { id: 'cleaglercraft-alpha-126-offline', name: 'Cl Eaglercraft Alpha 126 Offline', url: '/games/clEaglercraft-Alpha-126-Offline.html', icon: '⛏️' },
+  { id: 'cleaglercraft-beta-1-3-offline', name: 'Cl Eaglercraft Beta 1.3 Offline', url: '/games/clEaglercraft-Beta-1.3-Offline.html', icon: '⛏️' },
+  { id: 'cleaglercraft-beta-13-offline', name: 'Cl Eaglercraft Beta 13 Offline', url: '/games/clEaglercraft-Beta-13-Offline.html', icon: '⛏️' },
+  { id: 'cleaglercraft-indev-offline-1', name: 'Cl Eaglercraft Indev Offline', url: '/games/clEaglercraft-Indev-Offline(1).html', icon: '⛏️' },
+  { id: 'cleaglercraftl_19_v0_7_0_offline_signed-1', name: 'Cl Eaglercraft L 19 V 0 7 0 Offline Signed', url: '/games/clEaglercraftL_19_v0_7_0_Offline_Signed(1).html', icon: '⛏️' },
+  { id: 'cleaglercraftx188-u29', name: 'Cl Eaglercraft X 188(u 29)', url: '/games/clEaglercraftX188(u29).html', icon: '⛏️' },
+  { id: 'cleaglercraftx-188u29', name: 'Cl Eaglercraft X 188u29', url: '/games/clEaglercraftX-188u29.html', icon: '⛏️' },
+  { id: 'cleaglercraftz_1112-1', name: 'Cl Eaglercraft Z 1112', url: '/games/clEaglercraftZ_1112(1).html', icon: '⛏️' },
+  { id: 'clffsonic2', name: 'Cl F Fsonic 2', url: '/games/clFFsonic2.html', icon: '💨' },
+  { id: 'clffsonic3', name: 'Cl F Fsonic 3', url: '/games/clFFsonic3.html', icon: '💨' },
+  { id: 'clffsonic4', name: 'Cl F Fsonic 4', url: '/games/clFFsonic4.html', icon: '💨' },
+  { id: 'clffsonic5', name: 'Cl F Fsonic 5', url: '/games/clFFsonic5.html', icon: '💨' },
+  { id: 'clffsonic61', name: 'Cl F Fsonic 61', url: '/games/clFFsonic61.html', icon: '💨' },
+  { id: 'clffsonic62', name: 'Cl F Fsonic 62', url: '/games/clFFsonic62.html', icon: '💨' },
+  { id: 'clfifainternationalsoccer', name: 'Cl Fif Ainternationalsoccer', url: '/games/clFIFAinternationalsoccer.html', icon: '⚽' },
+  { id: 'clfifaroadtoworldcup98', name: 'Cl Fif Aroadtoworldcup 98', url: '/games/clFIFAroadtoworldcup98.html', icon: '🎮' },
+  { id: 'clfifasoccer06', name: 'Cl Fif Asoccer 06', url: '/games/clFIFAsoccer06.html', icon: '⚽' },
+  { id: 'clfifasoccer95', name: 'Cl Fif Asoccer 95', url: '/games/clFIFAsoccer95.html', icon: '⚽' },
+  { id: 'clfifasoccer96', name: 'Cl Fif Asoccer 96', url: '/games/clFIFAsoccer96.html', icon: '⚽' },
+  { id: 'clfifasoccer97', name: 'Cl Fif Asoccer 97', url: '/games/clFIFAsoccer97.html', icon: '⚽' },
+  { id: 'clfifastreet2', name: 'Cl Fif Astreet 2', url: '/games/clFIFAstreet2.html', icon: '🎮' },
+  { id: 'clfifa2000-1', name: 'Cl Fifa 2000', url: '/games/clFIFA2000(1).html', icon: '⚽' },
+  { id: 'clfifa99', name: 'Cl Fifa 99', url: '/games/clFIFA99.html', icon: '⚽' },
+  { id: 'clgain-ground', name: 'Cl Gain Ground', url: '/games/clGain%20Ground.html', icon: '🎮' },
+  { id: 'clgettothetopalthoughthereisnotop', name: 'Cl Gettothetopalthoughthereisnotop', url: '/games/clGettothetopalthoughthereisnotop.html', icon: '🎮' },
+  { id: 'clhelios-offline--1', name: 'Cl Helios Offline', url: '/games/clHelios-Offline%20(1).html', icon: '🎮' },
+  { id: 'clhinohomo', name: 'Cl Hi No Homo', url: '/games/clHiNoHomo.html', icon: '🎮' },
+  { id: 'clhighspeed', name: 'Cl High Speed', url: '/games/clHighSpeed.html', icon: '🏎️' },
+  { id: 'clhil-climbracing2', name: 'Cl Hil Climb Racing 2', url: '/games/clHil%20ClimbRacing2.html', icon: '🏎️' },
+  { id: 'clhoennslastwish', name: 'Cl Hoenns Last Wish', url: '/games/clHoennsLastWish.html', icon: '🎮' },
+  { id: 'clinkwell--v1-04', name: 'Cl Inkwell (v 1.04)', url: '/games/clInkwell%20(v1.04).html', icon: '🎮' },
+  { id: 'cljump', name: 'Cl Jump', url: '/games/clJUMP.html', icon: '🏃' },
+  { id: 'clkengriffeyjrpresentsmajorleaguebaseball', name: 'Cl Ken Griffey Jr Presents Major League Baseball', url: '/games/clKenGriffeyJrPresentsMajorLeagueBaseball.html', icon: '⚾' },
+  { id: 'cllearntofly3debug', name: 'Cl Learn to Fly 3 Debug', url: '/games/clLearnToFly3Debug.html', icon: '🎮' },
+  { id: 'cllegacyofgoku', name: 'Cl Legacy of Goku', url: '/games/clLegacyOfGoku.html', icon: '🎮' },
+  { id: 'cllse', name: 'Cl Lse', url: '/games/clLSE.html', icon: '🎮' },
+  { id: 'clclmadnessambulation', name: 'Cl Madness Am Bulat Ion', url: '/games/clclmadnessambulation.html', icon: '🎮' },
+  { id: 'clmario-party-advance', name: 'Cl Mario Party Advance', url: '/games/clMario%20Party%20Advance.html', icon: '🍄' },
+  { id: 'clminceraft-i-notmine_v6-1', name: 'Cl Minceraft I Not Mine V6', url: '/games/clMinceraft-I-NotMine_V6(1).html', icon: '🎮' },
+  { id: 'clmoemon-emerald-vanilla---v1-1-0', name: 'Cl Moemon Emerald Vanilla+ (v 1.1.0)', url: '/games/clMoemon%20Emerald%20Vanilla+%20(v1.1.0).html', icon: '🎮' },
+  { id: 'clnautilusos-1', name: 'Cl Nautilus Os', url: '/games/clNautilusOS(1).html', icon: '🎮' },
+  { id: 'clnicktoonsfreezeframefrenzy', name: 'Cl Nicktoons Freeze Frame Frenzy', url: '/games/clNicktoonsFreezeFrameFrenzy.html', icon: '🎮' },
+  { id: 'clnutsandboltsscrewingpuzzle', name: 'Cl Nutsand Bolts Screwing Puzzle', url: '/games/clNutsandBoltsScrewingPuzzle.html', icon: '🧩' },
+  { id: 'clorangeroulette', name: 'Cl Orange Roulette', url: '/games/clOrangeRoulette.html', icon: '🎮' },
+  { id: 'cloutrunarcade', name: 'Cl Outrun Arcade', url: '/games/clOutrunArcade.html', icon: '🏃' },
+  { id: 'cloutrungenesis', name: 'Cl Outrun Genesis', url: '/games/clOutrunGenesis.html', icon: '🏃' },
+  { id: 'clo-oo', name: 'Cl Öoo', url: '/games/clÖoo.html', icon: '🎮' },
+  { id: 'clpapermariopracticehack', name: 'Cl Paper Mario Practice Hack', url: '/games/clPaperMarioPracticeHack.html', icon: '🍄' },
+  { id: 'clpokeheartgoldgenerations', name: 'Cl Poke Heartgold Generations', url: '/games/clPokeHeartgoldGenerations.html', icon: '🐾' },
+  { id: 'clpokethetaemeraldex', name: 'Cl Poke Theta Emerald EX', url: '/games/clPokeThetaEmeraldEX.html', icon: '🐾' },
+  { id: 'clpokemonemeraldrouge', name: 'Cl Pokemonemeraldrouge', url: '/games/clPokemonemeraldrouge.html', icon: '🐾' },
+  { id: 'clpokemonrocketedition', name: 'Cl Pokemonrocketedition', url: '/games/clPokemonrocketedition.html', icon: '🐾' },
+  { id: 'clpoke-mon-emerald-rush-edition--2-0', name: 'Cl Pokémon Emerald Rush Edition (2.0)', url: '/games/clPokémon%20Emerald%20Rush%20Edition%20(2.0).html', icon: '🐾' },
+  { id: 'clpoke-mon-trade-_stache--v1-1', name: 'Cl Pokémon Trade& Stache (v 1.1)', url: '/games/clPokémon%20Trade&_Stache%20(V1.1).html', icon: '🐾' },
+  { id: 'clpoke-mon-two--v1-1', name: 'Cl Pokémon Two (v 1.1)', url: '/games/clPokémon%20TWO%20(v1.1).html', icon: '🐾' },
+  { id: 'clpoke-monstunningsteel', name: 'Cl Pokémonstunningsteel', url: '/games/clPokémonstunningsteel.html', icon: '🐾' },
+  { id: 'clpou', name: 'Cl Pou', url: '/games/clPou.html', icon: '🎮' },
+  { id: 'clscamptonthegreatfightrecreate', name: 'Cl Scampton the Great Fight Recreate', url: '/games/clScamptonTheGreatFightRecreate.html', icon: '🎮' },
+  { id: 'clskyriders', name: 'Cl Sky Riders', url: '/games/clSkyRiders.html', icon: '🎮' },
+  { id: 'clsonic---knuckles---sonic-the-hedgehog-3', name: 'Cl Sonic & Knuckles + Sonic the Hedgehog 3', url: '/games/clSonic%20&%20Knuckles%20+%20Sonic%20The%20Hedgehog%203.html', icon: '💨' },
+  { id: 'clsonic1scorerush', name: 'Cl Sonic 1 Score Rush', url: '/games/clSonic1ScoreRush.html', icon: '💨' },
+  { id: 'clsonic1thesuperchallenges', name: 'Cl Sonic 1 the Super Challenges', url: '/games/clSonic1TheSuperChallenges.html', icon: '💨' },
+  { id: 'clsonic2scorerush', name: 'Cl Sonic 2 Score Rush', url: '/games/clSonic2ScoreRush.html', icon: '💨' },
+  { id: 'clsonicinsm64', name: 'Cl Sonic in Sm64', url: '/games/clSonicInSM64.html', icon: '💨' },
+  { id: 'clsonicinsmw-1', name: 'Cl Sonicin Smw', url: '/games/clSonicinSMW(1).html', icon: '💨' },
+  { id: 'clsovereignoftheskys', name: 'Cl Sovereignoftheskys', url: '/games/clSovereignoftheskys.html', icon: '🎮' },
+  { id: 'clspongebobpowerkartgrandprix', name: 'Cl Spongebob Power Kart Grand Prix', url: '/games/clSpongebobPowerKartGrandPrix.html', icon: '🏎️' },
+  { id: 'clsportsheadsicehockey', name: 'Cl Sports Heads Ice Hockey', url: '/games/clSportsHeadsIceHockey.html', icon: '🏒' },
+  { id: 'clssf2tarcade', name: 'Cl Ssf 2 T Arcade', url: '/games/clSSF2TArcade.html', icon: '🎮' },
+  { id: 'clstickmankingdomclash', name: 'Cl Stickman Kingdomclash', url: '/games/clStickmanKingdomclash.html', icon: '🕴️' },
+  { id: 'clstreetfighter2hfarcade-1', name: 'Cl Street Fighter 2 Hf Arcade', url: '/games/clStreetFighter2HFArcade(1).html', icon: '🥊' },
+  { id: 'clthesunforthevampire', name: 'Cl the Sun for the Vampire', url: '/games/clTheSunForTheVampire.html', icon: '🎮' },
+  { id: 'cltuff_client_offline_wasm-1', name: 'Cl Tuff Client Offline Wasm', url: '/games/clTuff_Client_Offline_WASM(1).html', icon: '⚔️' },
+  { id: 'cluvuvwevwevweonyetenvewveugwemubwemossas', name: 'Cl Uvuvwevwevwe Onyetenvewve Ugwemubwem Ossas', url: '/games/clUvuvwevwevweOnyetenvewveUgwemubwemOssas.html', icon: '🎮' },
   { id: 'clclashnslash', name: 'Clash Nslash', url: '/games/clclashnslash.html', icon: '🎮' },
   { id: 'clclashofvikings', name: 'Clash of Vikings', url: '/games/clclashofvikings.html', icon: '🎮' },
   { id: 'clclayuncraft', name: 'Clay Un Craft', url: '/games/clclayuncraft.html', icon: '⛏️' },
@@ -610,48 +617,48 @@ const games = [
   { id: 'clcrazycattle3d', name: 'Crazy Cattle 3D', url: '/games/clcrazycattle3d.html', icon: '🎮' },
   { id: 'clcrazyclimber', name: 'Crazy Climber', url: '/games/clcrazyclimber.html', icon: '🎮' },
   { id: 'clcrazyfrogracer', name: 'Crazy Frog Racer', url: '/games/clcrazyfrogracer.html', icon: '🏎️' },
-  { id: 'clcrazymotorcycle', name: 'Crazy Motorcycle', url: '/games/clcrazymotorcycle.html', icon: '🏍️' },
+  { id: 'clcrazymotorcycle', name: 'Crazy Motorcycle', url: '/games/clcrazymotorcycle.html', icon: '🏎️' },
   { id: 'clcrazypenguincatapult', name: 'Crazy Penguin Catapult', url: '/games/clcrazypenguincatapult.html', icon: '🎮' },
   { id: 'clcrazyplanelanding', name: 'Crazy Plane Landing', url: '/games/clcrazyplanelanding.html', icon: '✈️' },
   { id: 'clcrazytaxigba', name: 'Crazy Taxi GBA', url: '/games/clcrazytaxigba.html', icon: '🎮' },
-  { id: 'clcrazychicken3d', name: 'Crazy Chicken 3D', url: '/games/clcrazychicken3D.html', icon: '🎮' },
-  { id: 'clcreaturecardidle', name: 'Creature Card Idle', url: '/games/clcreaturecardidle.html', icon: '🃏' },
+  { id: 'clcrazychicken3d', name: 'Crazychicken 3 D', url: '/games/clcrazychicken3D.html', icon: '🎮' },
+  { id: 'clcreaturecardidle', name: 'Creature Card Idle', url: '/games/clcreaturecardidle.html', icon: '👆' },
   { id: 'clcreeperworld2', name: 'Creeper World 2', url: '/games/clcreeperworld2.html', icon: '🧟' },
   { id: 'clcreepyinternetstories', name: 'Creepy Internet Stories', url: '/games/clcreepyinternetstories.html', icon: '🧟' },
-  { id: 'clcreepynightfunkin', name: 'Creepy Night Funk in', url: '/games/clcreepynightfunkin.html', icon: '🎵' },
+  { id: 'clcreepynightfunkin', name: 'Creepy Night Funk in', url: '/games/clcreepynightfunkin.html', icon: '🧟' },
   { id: 'clcrimsonmadness', name: 'Crimson Madness', url: '/games/clcrimsonmadness.html', icon: '🎮' },
-  { id: 'clcrossyroad', name: 'Crossy Road', url: '/games/clcrossyroad.html', icon: '🐔' },
+  { id: 'clcrossyroad', name: 'Cross Yroad', url: '/games/clcrossyroad.html', icon: '🎮' },
   { id: 'clcrunchball3000', name: 'Crunch Ball 3000', url: '/games/clcrunchball3000.html', icon: '🎮' },
-  { id: 'clcs1-6', name: 'CS 1.6', url: '/games/clcs1.6.html', icon: '🎮' },
-  { id: 'clcs6', name: 'CS 6', url: '/games/clcs6.html', icon: '🎮' },
-  { id: 'clcsgoclicker', name: 'CS:GO Clicker', url: '/games/clcsgoclicker.html', icon: '👆' },
-  { id: 'clcsds', name: 'CSDS', url: '/games/clcsds.html', icon: '🎮' },
-  { id: 'clctgpnitro', name: 'CTGP Nitro', url: '/games/clctgpnitro.html', icon: '🎮' },
+  { id: 'clcs1-6', name: 'Cs 1.6', url: '/games/clcs1.6.html', icon: '🎮' },
+  { id: 'clcs6', name: 'Cs 6', url: '/games/clcs6.html', icon: '🎮' },
+  { id: 'clcsgoclicker', name: 'Cs Go Click Er', url: '/games/clcsgoclicker.html', icon: '👆' },
+  { id: 'clcsds', name: 'Csds', url: '/games/clcsds.html', icon: '🎮' },
+  { id: 'clctgpnitro', name: 'Ct Gp Nitro', url: '/games/clctgpnitro.html', icon: '🎮' },
   { id: 'clcurveball-1', name: 'Curve Ball', url: '/games/clcurveball(1).html', icon: '🎮' },
   { id: 'clcustomersupport', name: 'Customer Support', url: '/games/clcustomersupport.html', icon: '🎮' },
   { id: 'clcuttherope', name: 'Cut the Rope', url: '/games/clcuttherope.html', icon: '🎮' },
   { id: 'clcuttheropeholiday', name: 'Cut the Rope Holiday', url: '/games/clcuttheropeholiday.html', icon: '🎮' },
   { id: 'clcuttheropetimetravel', name: 'Cut the Rope Time Travel', url: '/games/clcuttheropetimetravel.html', icon: '🎮' },
-  { id: 'clcvooc', name: 'CVOOC', url: '/games/clcvooc.html', icon: '🎮' },
-  { id: 'clcyberbungracing', name: 'Cyberbung Racing', url: '/games/clcyberbungracing.html', icon: '🏎️' },
+  { id: 'clcvooc', name: 'Cvooc', url: '/games/clcvooc.html', icon: '🎮' },
+  { id: 'clcyberbungracing', name: 'Cyber Bung Racing', url: '/games/clcyberbungracing.html', icon: '🏎️' },
   { id: 'clcybersensation', name: 'Cyber Sensation', url: '/games/clcybersensation.html', icon: '🎮' },
   { id: 'cldadish', name: 'Dadish', url: '/games/cldadish.html', icon: '🎮' },
-  { id: 'cldadnme', name: 'Dad N Me', url: '/games/cldadnme.html', icon: '🎮' },
-  { id: 'cldaggerfall', name: 'Daggerfall', url: '/games/cldaggerfall.html', icon: '🎮' },
+  { id: 'cldadnme', name: 'Dadnme', url: '/games/cldadnme.html', icon: '🎮' },
+  { id: 'cldaggerfall', name: 'Dagger Fall', url: '/games/cldaggerfall.html', icon: '🎮' },
   { id: 'cldandysworldclicker', name: 'Dandy Sworld Click Er', url: '/games/cldandysworldclicker.html', icon: '👆' },
   { id: 'cldanktomb', name: 'Dank Tomb', url: '/games/cldanktomb.html', icon: '🎮' },
   { id: 'cldasharena', name: 'Dash Arena', url: '/games/cldasharena.html', icon: '🎮' },
   { id: 'cldashio', name: 'Dashio', url: '/games/cldashio.html', icon: '🎮' },
   { id: 'cldatewithiraq', name: 'Date with Iraq', url: '/games/cldatewithiraq.html', icon: '🎮' },
-  { id: 'cldborigins', name: 'DB Origins', url: '/games/cldborigins.html', icon: '🎮' },
-  { id: 'cldborigins2', name: 'DB Origins 2', url: '/games/cldborigins2.html', icon: '🎮' },
-  { id: 'cldbsniper', name: 'DB Sniper', url: '/games/cldbsniper.html', icon: '🔫' },
-  { id: 'cldbzattacksaiyans', name: 'DBZ Attack Saiyans', url: '/games/cldbzattacksaiyans.html', icon: '🎮' },
-  { id: 'cldbzdevolution', name: 'DBZ Devolution', url: '/games/cldbzdevolution.html', icon: '🎮' },
-  { id: 'cldbzsuperwarriorssonic', name: 'DBZ Super Warriors Sonic', url: '/games/cldbzsuperwarriorssonic.html', icon: '💨' },
-  { id: 'cldbzwarriors2', name: 'DBZ Warriors 2', url: '/games/cldbzwarriors2.html', icon: '🪖' },
-  { id: 'clddlc64', name: 'DDLC 64', url: '/games/clddlc64.html', icon: '🎮' },
-  { id: 'cldementium', name: 'Dementium', url: '/games/cldementium.html', icon: '🎮' },
+  { id: 'cldborigins', name: 'Db Origins', url: '/games/cldborigins.html', icon: '🎮' },
+  { id: 'cldborigins2', name: 'Db Origins 2', url: '/games/cldborigins2.html', icon: '🎮' },
+  { id: 'cldbsniper', name: 'Db Sniper', url: '/games/cldbsniper.html', icon: '🔫' },
+  { id: 'cldbzattacksaiyans', name: 'Dbz Attack Saiyans', url: '/games/cldbzattacksaiyans.html', icon: '🎮' },
+  { id: 'cldbzdevolution', name: 'Dbz Devolution', url: '/games/cldbzdevolution.html', icon: '🎮' },
+  { id: 'cldbzsuperwarriorssonic', name: 'Dbz Super Warriors Sonic', url: '/games/cldbzsuperwarriorssonic.html', icon: '💨' },
+  { id: 'cldbzwarriors2', name: 'Dbz Warriors 2', url: '/games/cldbzwarriors2.html', icon: '🪖' },
+  { id: 'clddlc64', name: 'Ddlc 64', url: '/games/clddlc64.html', icon: '🎮' },
+  { id: 'cldementium', name: 'De Men Tiu M', url: '/games/cldementium.html', icon: '🎮' },
   { id: 'cldeadestate', name: 'Dead Estate', url: '/games/cldeadestate.html', icon: '🧟' },
   { id: 'cldeadfrontieroutbreak', name: 'Dead Frontier Outbreak', url: '/games/cldeadfrontieroutbreak.html', icon: '🧟' },
   { id: 'cldeadfrontieroutbreak2', name: 'Dead Frontier Outbreak 2', url: '/games/cldeadfrontieroutbreak2.html', icon: '🧟' },
@@ -668,52 +675,52 @@ const games = [
   { id: 'cldecision2', name: 'Decision 2', url: '/games/cldecision2.html', icon: '🎮' },
   { id: 'cldecision3', name: 'Decision 3', url: '/games/cldecision3.html', icon: '🎮' },
   { id: 'cldecisionmedieval', name: 'Decision Medieval', url: '/games/cldecisionmedieval.html', icon: '⚔️' },
-  { id: 'cldeepersleep', name: 'Deeper Sleep', url: '/games/cldeepersleep.html', icon: '😴' },
+  { id: 'cldeepersleep', name: 'Deeper Sleep', url: '/games/cldeepersleep.html', icon: '🎮' },
   { id: 'cldeepestsword', name: 'Deepest Sword', url: '/games/cldeepestsword.html', icon: '⚔️' },
   { id: 'cldefendyourcastle', name: 'Defend Your Castle', url: '/games/cldefendyourcastle.html', icon: '⚔️' },
   { id: 'cldefendyournuts', name: 'Defend Your Nuts', url: '/games/cldefendyournuts.html', icon: '🎮' },
   { id: 'cldefendyournuts2', name: 'Defend Your Nuts 2', url: '/games/cldefendyournuts2.html', icon: '🎮' },
   { id: 'cldefenderarcade', name: 'Defender Arcade', url: '/games/cldefenderarcade.html', icon: '🎮' },
-  { id: 'cldeltarune', name: 'Delta Rune', url: '/games/cldeltarune.html', icon: '♦️' },
-  { id: 'cldeltatraveler', name: 'Delta Traveler', url: '/games/cldeltatraveler.html', icon: '♦️' },
+  { id: 'cldeltarune', name: 'Delta Rune', url: '/games/cldeltarune.html', icon: '🎮' },
+  { id: 'cldeltatraveler', name: 'Delta Traveler', url: '/games/cldeltatraveler.html', icon: '🎮' },
   { id: 'cldemolitionderbycrashracing', name: 'Demolition Derby Crash Racing', url: '/games/cldemolitionderbycrashracing.html', icon: '🏎️' },
   { id: 'cldemonblade', name: 'Demon Blade', url: '/games/cldemonblade.html', icon: '🎮' },
   { id: 'cldemonbluff', name: 'Demon Bluff', url: '/games/cldemonbluff.html', icon: '🎮' },
-  { id: 'cldiablo', name: 'Diablo', url: '/games/cldiablo.html', icon: '😈' },
+  { id: 'cldiablo', name: 'Diablo', url: '/games/cldiablo.html', icon: '🎮' },
   { id: 'cldiamondhollow', name: 'Diamond Hollow', url: '/games/cldiamondhollow.html', icon: '🎮' },
   { id: 'cldiamondhollow2', name: 'Diamond Hollow 2', url: '/games/cldiamondhollow2.html', icon: '🎮' },
-  { id: 'cldiddykong-racing', name: 'Diddy Kong Racing', url: '/games/cldiddykong-racing.html', icon: '🏎️' },
-  { id: 'cldieinthedungeon', name: 'Die in the Dungeon', url: '/games/cldieinthedungeon.html', icon: '🎴' },
+  { id: 'cldiddykong-racing', name: 'Diddykong Racing', url: '/games/cldiddykong-racing.html', icon: '🏎️' },
+  { id: 'cldieinthedungeon', name: 'Die in the Dungeon', url: '/games/cldieinthedungeon.html', icon: '⚔️' },
   { id: 'cldigdug26', name: 'Dig Dug 26', url: '/games/cldigdug26.html', icon: '🎮' },
   { id: 'cldigtochina', name: 'Dig to China', url: '/games/cldigtochina.html', icon: '🎮' },
   { id: 'cldigdeep', name: 'Digdeep', url: '/games/cldigdeep.html', icon: '🎮' },
   { id: 'cldigdug', name: 'Digdug', url: '/games/cldigdug.html', icon: '🎮' },
   { id: 'cldigdug2', name: 'Digdug 2', url: '/games/cldigdug2.html', icon: '🎮' },
   { id: 'cldimensionalincident', name: 'Dimensional Incident', url: '/games/cldimensionalincident.html', icon: '🎮' },
-  { id: 'cldinodudes', name: 'Dino Dudes', url: '/games/cldinodudes.html', icon: '🦕' },
-  { id: 'cldinorunenterplanetd', name: 'Dino Run Enter Planet D', url: '/games/cldinorunenterplanetd.html', icon: '🦕' },
-  { id: 'cldinorunmarathonofdoom', name: 'Dino Run Marathon of Doom', url: '/games/cldinorunmarathonofdoom.html', icon: '🦕' },
-  { id: 'cldinorun', name: 'Dinorun', url: '/games/cldinorun.html', icon: '🦕' },
+  { id: 'cldinodudes', name: 'Dino Dudes', url: '/games/cldinodudes.html', icon: '🎮' },
+  { id: 'cldinorunenterplanetd', name: 'Dino Run Enter Planet D', url: '/games/cldinorunenterplanetd.html', icon: '✈️' },
+  { id: 'cldinorunmarathonofdoom', name: 'Dino Run Marathon of Doom', url: '/games/cldinorunmarathonofdoom.html', icon: '💀' },
+  { id: 'cldinorun', name: 'Dinorun', url: '/games/cldinorun.html', icon: '🎮' },
   { id: 'cldiredecks', name: 'Dire Decks', url: '/games/cldiredecks.html', icon: '🎮' },
-  { id: 'cldkccompetitioncart', name: 'DK Competition Cart', url: '/games/cldkccompetitioncart.html', icon: '🦍' },
-  { id: 'cldodecadragons', name: 'Dodeca Dragons', url: '/games/cldodecadragons.html', icon: '⚔️' },
+  { id: 'cldkccompetitioncart', name: 'Dk Ccompetition Cart', url: '/games/cldkccompetitioncart.html', icon: '🦍' },
+  { id: 'cldodecadragons', name: 'Do Dec Adragons', url: '/games/cldodecadragons.html', icon: '⚔️' },
   { id: 'cldoblox', name: 'Doblox', url: '/games/cldoblox.html', icon: '🎮' },
   { id: 'cldogeminer', name: 'Doge Miner', url: '/games/cldogeminer.html', icon: '🎮' },
-  { id: 'cldokidokiliteratureclub', name: 'Doki Doki Literature Club', url: '/games/cldokidokiliteratureclub.html', icon: '📚' },
-  { id: 'cldomeromantik', name: 'Domeomantik', url: '/games/cldomeromantik.html', icon: '🎮' },
-  { id: 'cldonkeykong', name: 'Donkey Kong', url: '/games/cldonkeykong.html', icon: '🦍' },
-  { id: 'cldonkeykong64', name: 'Donkey Kong 64', url: '/games/cldonkeykong64.html', icon: '🦍' },
-  { id: 'cldonkeykong94', name: 'Donkey Kong 94', url: '/games/cldonkeykong94.html', icon: '🦍' },
-  { id: 'cldonkeykongcountry', name: 'Donkey Kong Country', url: '/games/cldonkeykongcountry.html', icon: '🦍' },
-  { id: 'cldonkeykongcountry2', name: 'Donkey Kong Country 2', url: '/games/cldonkeykongcountry2.html', icon: '🦍' },
-  { id: 'cldonkeykongcountry3', name: 'Donkey Kong Country 3', url: '/games/cldonkeykongcountry3.html', icon: '🦍' },
-  { id: 'cldonkeykongnes', name: 'Donkey Kong NES', url: '/games/cldonkeykongnes.html', icon: '🦍' },
+  { id: 'cldokidokiliteratureclub', name: 'Doki Doki Literature Club', url: '/games/cldokidokiliteratureclub.html', icon: '🎮' },
+  { id: 'cldomeromantik', name: 'Dome Roman Tik', url: '/games/cldomeromantik.html', icon: '🎮' },
+  { id: 'cldonkeykong', name: 'Donkey Kong', url: '/games/cldonkeykong.html', icon: '🎮' },
+  { id: 'cldonkeykong64', name: 'Donkey Kong 64', url: '/games/cldonkeykong64.html', icon: '🎮' },
+  { id: 'cldonkeykong94', name: 'Donkey Kong 94', url: '/games/cldonkeykong94.html', icon: '🎮' },
+  { id: 'cldonkeykongcountry', name: 'Donkey Kong Country', url: '/games/cldonkeykongcountry.html', icon: '🎮' },
+  { id: 'cldonkeykongcountry2', name: 'Donkey Kong Country 2', url: '/games/cldonkeykongcountry2.html', icon: '🎮' },
+  { id: 'cldonkeykongcountry3', name: 'Donkey Kong Country 3', url: '/games/cldonkeykongcountry3.html', icon: '🎮' },
+  { id: 'cldonkeykongnes', name: 'Donkey Kong NES', url: '/games/cldonkeykongnes.html', icon: '🎮' },
   { id: 'cldontescape', name: 'Dont Escape', url: '/games/cldontescape.html', icon: '🎮' },
   { id: 'cldontescape2', name: 'Dont Escape 2', url: '/games/cldontescape2.html', icon: '🎮' },
   { id: 'cldontescape3', name: 'Dont Escape 3', url: '/games/cldontescape3.html', icon: '🎮' },
-  { id: 'cldontyoulectureme', name: "Don't You Lecture Me", url: '/games/cldontyoulectureme.html.html', icon: '🎮' },
-  { id: 'cldoodlejump', name: 'Doodle Jump', url: '/games/cldoodlejump.html', icon: '🦘' },
-  { id: 'cldoodlejumpgoober', name: 'Doodle Jump Goober', url: '/games/cldoodlejumpgoober.html', icon: '🦘' },
+  { id: 'cldontyoulectureme', name: 'Dontyoulectureme.html', url: '/games/cldontyoulectureme.html.html', icon: '🎮' },
+  { id: 'cldoodlejump', name: 'Doodle Jump', url: '/games/cldoodlejump.html', icon: '🏃' },
+  { id: 'cldoodlejumpgoober', name: 'Doodle Jump Goober', url: '/games/cldoodlejumpgoober.html', icon: '🏃' },
   { id: 'cldoom', name: 'Doom', url: '/games/cldoom.html', icon: '💀' },
   { id: 'cldoom2', name: 'Doom 2', url: '/games/cldoom2.html', icon: '💀' },
   { id: 'cldoom2dos', name: 'Doom 2 Dos', url: '/games/cldoom2dos.html', icon: '💀' },
@@ -721,16 +728,16 @@ const games = [
   { id: 'cldoom2ddos', name: 'Doom 2D Dos', url: '/games/cldoom2dDOS.html', icon: '💀' },
   { id: 'cldoom3pack', name: 'Doom 3 Pack', url: '/games/cldoom3pack.html', icon: '💀' },
   { id: 'cldoom64', name: 'Doom 64', url: '/games/cldoom64.html', icon: '💀' },
-  { id: 'cldoomemscripten', name: 'Doom Emscripten', url: '/games/cldoomemscripten.html', icon: '💀' },
+  { id: 'cldoomemscripten', name: 'Doom Em Script En', url: '/games/cldoomemscripten.html', icon: '💀' },
   { id: 'cldoomps', name: 'Doomps', url: '/games/cldoomps.html', icon: '💀' },
   { id: 'cldoomzio', name: 'Doomzio', url: '/games/cldoomzio.html', icon: '💀' },
   { id: 'cldoorscastle', name: 'Doors Castle', url: '/games/cldoorscastle.html', icon: '⚔️' },
-  { id: 'cldoswasmx', name: 'DOSwasmx', url: '/games/cldoswasmx.html', icon: '🎮' },
+  { id: 'cldoswasmx', name: 'Dos Was Mx', url: '/games/cldoswasmx.html', icon: '🎮' },
   { id: 'cldoubledribble', name: 'Double Dribble', url: '/games/cldoubledribble.html', icon: '🎮' },
-  { id: 'cldouchebaglife', name: 'Douchebag Life', url: '/games/cldouchebaglife.html', icon: '🎮' },
-  { id: 'cldouchebagworkout2', name: 'Douchebag Workout 2', url: '/games/cldouchebagworkout2.html', icon: '🎮' },
+  { id: 'cldouchebaglife', name: 'Douche Bag Life', url: '/games/cldouchebaglife.html', icon: '🎮' },
+  { id: 'cldouchebagworkout2', name: 'Douche Bag Workout 2', url: '/games/cldouchebagworkout2.html', icon: '🎮' },
   { id: 'cldownthemountain', name: 'Down the Mountain', url: '/games/cldownthemountain.html', icon: '🎮' },
-  { id: 'cldrweedgaster', name: 'Dr. Weedgaster', url: '/games/cldrweedgaster.html', icon: '🎮' },
+  { id: 'cldrweedgaster', name: 'Dr Weed Gas Ter', url: '/games/cldrweedgaster.html', icon: '🎮' },
   { id: 'cldragonquest5ds', name: 'Dragon Quest 5 DS', url: '/games/cldragonquest5ds.html', icon: '⚔️' },
   { id: 'cldragonwarriormonsters', name: 'Dragon Warrior Monsters', url: '/games/cldragonwarriormonsters.html', icon: '⚔️' },
   { id: 'cldragonballadvance', name: 'Dragonball Advance', url: '/games/cldragonballadvance.html', icon: '🏀' },
@@ -743,23 +750,23 @@ const games = [
   { id: 'cldriftboss', name: 'Drift Boss', url: '/games/cldriftboss.html', icon: '🎮' },
   { id: 'cldriftsimulator', name: 'Drift Simulator', url: '/games/cldriftsimulator.html', icon: '🎮' },
   { id: 'drive-mad', name: 'Drive Mad', url: '/games/Drive%20Mad%20(1).html', icon: '🚗' },
-  { id: 'cldrivemady', name: 'Drive Mad Y', url: '/games/cldrivemady.html', icon: '🚗' },
+  { id: 'cldrivemady', name: 'Drive Mady', url: '/games/cldrivemady.html', icon: '🎮' },
   { id: 'cldriverussia', name: 'Drive Russia', url: '/games/cldriverussia.html', icon: '🏎️' },
   { id: 'cldrivenwild', name: 'Driven Wild', url: '/games/cldrivenwild.html', icon: '🎮' },
-  { id: 'cldrmario', name: 'Dr. Mario', url: '/games/cldrmario.html', icon: '🍄' },
-  { id: 'dta6', name: 'DTA 6', url: '/games/dta6.html', icon: '🎮' },
-  { id: 'cldubstep', name: 'Dubstep', url: '/games/cldubstep.html', icon: '🎧' },
-  { id: 'clduckhunt', name: 'Duck Hunt', url: '/games/clduckhunt.html', icon: '🦆' },
-  { id: 'clducklfe5', name: 'Duck Life 5', url: '/games/clducklfe5.html', icon: '🎮' },
-  { id: 'clducklife', name: 'Duck Life', url: '/games/clducklife.html', icon: '🐥' },
-  { id: 'clducklife2', name: 'Duck Life 2', url: '/games/clducklife2.html', icon: '🐥' },
-  { id: 'clducklife3', name: 'Duck Life 3', url: '/games/clducklife3.html', icon: '🐥' },
-  { id: 'clducklife4', name: 'Duck Life 4', url: '/games/clducklife4.html', icon: '🐥' },
-  { id: 'clducklifebattle', name: 'Duck Life Battle', url: '/games/clducklifebattle.html', icon: '🐥' },
-  { id: 'clducklifespace', name: 'Duck Life Space', url: '/games/clducklifespace.html', icon: '🐥' },
-  { id: 'clducklingsio', name: 'Ducklings IO', url: '/games/clducklingsio.html', icon: '🐣' },
-  { id: 'clducktales', name: 'Ducktales', url: '/games/clducktales.html', icon: '🦆' },
-  { id: 'clducktales2', name: 'Ducktales 2', url: '/games/clducktales2.html', icon: '🦆' },
+  { id: 'cldrmario', name: 'Drmario', url: '/games/cldrmario.html', icon: '🍄' },
+  { id: 'dta6', name: 'Dta 6', url: '/games/dta6.html', icon: '🎮' },
+  { id: 'cldubstep', name: 'Dubstep', url: '/games/cldubstep.html', icon: '🎮' },
+  { id: 'clduckhunt', name: 'Duck Hunt', url: '/games/clduckhunt.html', icon: '🎮' },
+  { id: 'clducklfe5', name: 'Duck Lfe 5', url: '/games/clducklfe5.html', icon: '🎮' },
+  { id: 'clducklife', name: 'Duck Life', url: '/games/clducklife.html', icon: '🎮' },
+  { id: 'clducklife2', name: 'Duck Life 2', url: '/games/clducklife2.html', icon: '🎮' },
+  { id: 'clducklife3', name: 'Duck Life 3', url: '/games/clducklife3.html', icon: '🎮' },
+  { id: 'clducklife4', name: 'Duck Life 4', url: '/games/clducklife4.html', icon: '🎮' },
+  { id: 'clducklifebattle', name: 'Duck Life Battle', url: '/games/clducklifebattle.html', icon: '🎮' },
+  { id: 'clducklifespace', name: 'Duck Life Space', url: '/games/clducklifespace.html', icon: '🌌' },
+  { id: 'clducklingsio', name: 'Ducklings IO', url: '/games/clducklingsio.html', icon: '🎮' },
+  { id: 'clducktales', name: 'Ducktales', url: '/games/clducktales.html', icon: '🎮' },
+  { id: 'clducktales2', name: 'Ducktales 2', url: '/games/clducktales2.html', icon: '🎮' },
   { id: 'cldud', name: 'Dud', url: '/games/cldud.html', icon: '🎮' },
   { id: 'cldukenukem2', name: 'Duke Nukem 2', url: '/games/cldukenukem2.html', icon: '🎮' },
   { id: 'cldukenukem3d', name: 'Duke Nukem 3D', url: '/games/cldukenukem3d.html', icon: '🎮' },
@@ -767,7 +774,7 @@ const games = [
   { id: 'cldumpling', name: 'Dumpling', url: '/games/cldumpling.html', icon: '🎮' },
   { id: 'cldunebuggy', name: 'Dune Buggy', url: '/games/cldunebuggy.html', icon: '🎮' },
   { id: 'cldunedash', name: 'Dune Dash', url: '/games/cldunedash.html', icon: '🎮' },
-  { id: 'cldungeondeck', name: 'Dungeon Deck', url: '/games/cldungeondeck.html', icon: '🎴' },
+  { id: 'cldungeondeck', name: 'Dungeon Deck', url: '/games/cldungeondeck.html', icon: '⚔️' },
   { id: 'cldungeonraid', name: 'Dungeon Raid', url: '/games/cldungeonraid.html', icon: '⚔️' },
   { id: 'cldungeonsanddegenerategamblers', name: 'Dungeons and Degenerate Gamblers', url: '/games/cldungeonsanddegenerategamblers.html', icon: '⚔️' },
   { id: 'cldunkshot', name: 'Dunk Shot', url: '/games/cldunkshot.html', icon: '🏀' },
@@ -795,7 +802,7 @@ const games = [
   { id: 'clearthwormjim--1', name: 'Earthworm Jim', url: '/games/clearthwormjim%20(1).html', icon: '🎮' },
   { id: 'clearthwormjim2--1', name: 'Earthworm Jim 2', url: '/games/clearthwormjim2%20(1).html', icon: '🎮' },
   { id: 'eb-client-v1-0-0r2-wasm', name: 'Eb.client.v 1.0.0 R 2.wasm', url: '/games/EB.Client.V1.0.0R2.WASM.html', icon: '🎮' },
-  { id: 'cleccothedolphin', name: 'Ecco the Dolphin', url: '/games/cleccothedolphin.html', icon: '🐟' },
+  { id: 'cleccothedolphin', name: 'Ec Co the Dolphin', url: '/games/cleccothedolphin.html', icon: '🐟' },
   { id: 'cledelweiss', name: 'Edelweiss', url: '/games/cledelweiss.html', icon: '🎮' },
   { id: 'cleffinghail', name: 'Eff Ing Hail', url: '/games/cleffinghail.html', icon: '🎮' },
   { id: 'cleffingmachines', name: 'Eff Ing Machines', url: '/games/cleffingmachines.html', icon: '🎮' },
@@ -907,18 +914,18 @@ const games = [
   { id: 'clfloodrunner2', name: 'Flood Runner 2', url: '/games/clfloodrunner2.html', icon: '🏃' },
   { id: 'clfloodrunner4', name: 'Flood Runner 4', url: '/games/clfloodrunner4.html', icon: '🏃' },
   { id: 'clfluidism', name: 'Fluid Is M', url: '/games/clfluidism.html', icon: '🎮' },
-  { id: 'clfnfaethos', name: 'FNF: A Ethos', url: '/games/clfnfaethos.html', icon: '🎮' },
+  { id: 'clfnfaethos', name: 'Fn Fa Ethos', url: '/games/clfnfaethos.html', icon: '🎮' },
   { id: 'clfnfagoti', name: 'Fn Fagot I', url: '/games/clfnfagoti.html', icon: '🎮' },
   { id: 'clfnfakage', name: 'Fn Faka Ge', url: '/games/clfnfakage.html', icon: '🎮' },
   { id: 'clfnfannie', name: 'Fn Fannie', url: '/games/clfnfannie.html', icon: '🎮' },
-  { id: 'clfnfbside', name: 'FNF: B-Side', url: '/games/clfnfbside.html', icon: '🎮' },
-  { id: 'clfnfdsides', name: 'FNF: D-Sides', url: '/games/clfnfdsides.html', icon: '🎮' },
-  { id: 'clfnffnaf1', name: 'FNF: FNAF 1', url: '/games/clfnffnaf1.html', icon: '🧟' },
-  { id: 'clfnffnaf2', name: 'FNF: FNAF 2', url: '/games/clfnffnaf2.html', icon: '🧟' },
-  { id: 'clfnffnaf3', name: 'FNF: FNAF 3', url: '/games/clfnffnaf3.html', icon: '🧟' },
-  { id: 'clfnffnatpt', name: 'FNF: FNAF Pt', url: '/games/clfnffnatpt.html', icon: '🎮' },
-  { id: 'clfnfhorkglorpgloop', name: 'FNF: Horkglo RPG Loop', url: '/games/clfnfhorkglorpgloop.html', icon: '⚔️' },
-  { id: 'clfnfmcmadness', name: 'FNF: MC Madness', url: '/games/clfnfmcmadness.html', icon: '🎮' },
+  { id: 'clfnfbside', name: 'Fn Fb Side', url: '/games/clfnfbside.html', icon: '🎮' },
+  { id: 'clfnfdsides', name: 'Fn Fd Sides', url: '/games/clfnfdsides.html', icon: '🎮' },
+  { id: 'clfnffnaf1', name: 'Fn Ff Naf 1', url: '/games/clfnffnaf1.html', icon: '🧟' },
+  { id: 'clfnffnaf2', name: 'Fn Ff Naf 2', url: '/games/clfnffnaf2.html', icon: '🧟' },
+  { id: 'clfnffnaf3', name: 'Fn Ff Naf 3', url: '/games/clfnffnaf3.html', icon: '🧟' },
+  { id: 'clfnffnatpt', name: 'Fn Ff Nat Pt', url: '/games/clfnffnatpt.html', icon: '🎮' },
+  { id: 'clfnfhorkglorpgloop', name: 'Fn Fh or Kg Lo RPG Loop', url: '/games/clfnfhorkglorpgloop.html', icon: '⚔️' },
+  { id: 'clfnfmcmadness', name: 'Fn Fm Cmadness', url: '/games/clfnfmcmadness.html', icon: '🎮' },
   { id: 'clfnac1', name: 'Fnac 1', url: '/games/clfnac1.html', icon: '🎮' },
   { id: 'clfnac2', name: 'Fnac 2', url: '/games/clfnac2.html', icon: '🎮' },
   { id: 'clfnaf3remastered', name: 'Fnaf 3 Remastered', url: '/games/clfnaf3remastered.html', icon: '🧟' },
@@ -982,7 +989,7 @@ const games = [
   { id: 'clfnfrottensmoothie', name: 'Fnf Rotten Smoothie', url: '/games/clfnfrottensmoothie.html', icon: '🎮' },
   { id: 'clfnfselfpaced', name: 'Fnf Self Paced', url: '/games/clfnfselfpaced.html', icon: '🏎️' },
   { id: 'clfnfshaggyxmatt', name: 'Fnf Shaggy Xmatt', url: '/games/clfnfshaggyxmatt.html', icon: '🏎️' },
-  { id: 'clfnfsohv2', name: 'FNF: SOHV 2', url: '/games/clfnfsohv2.html', icon: '🏎️' },
+  { id: 'clfnfsohv2', name: 'Fnf So Hv 2', url: '/games/clfnfsohv2.html', icon: '🏎️' },
   { id: 'clfnfsonicexe', name: 'Fnf Sonic Exe', url: '/games/clfnfsonicexe.html', icon: '💨' },
   { id: 'clfnfsonicexe4', name: 'Fnf Sonic Exe 4', url: '/games/clfnfsonicexe4.html', icon: '💨' },
   { id: 'clfnfstarlightmayhem', name: 'Fnf Starlight Mayhem', url: '/games/clfnfstarlightmayhem.html', icon: '🏎️' },
@@ -1038,7 +1045,7 @@ const games = [
   { id: 'clfzero', name: 'Fzero', url: '/games/clfzero.html', icon: '🎮' },
   { id: 'clfzerox', name: 'Fzerox', url: '/games/clfzerox.html', icon: '🎮' },
   { id: 'clgachaverse', name: 'Ga Cha Verse', url: '/games/clgachaverse.html', icon: '🎮' },
-  { id: 'clgalaga', name: 'Galaga', url: '/games/clgalaga.html', icon: '👾' },
+  { id: 'clgalaga', name: 'Galaga', url: '/games/clgalaga.html', icon: '🎮' },
   { id: 'clgameandwatchcollection', name: 'Game and Watch Collection', url: '/games/clgameandwatchcollection.html', icon: '🎮' },
   { id: 'clgamewatchgallery3', name: 'Game Watch Gallery 3', url: '/games/clgamewatchgallery3.html', icon: '🎮' },
   { id: 'clgangstabean', name: 'Gangsta Bean', url: '/games/clgangstabean.html', icon: '🎮' },
@@ -1137,10 +1144,10 @@ const games = [
   { id: 'clgymstack', name: 'Gym Stack', url: '/games/clgymstack.html', icon: '🎮' },
   { id: 'clgyromite', name: 'Gyro Mite', url: '/games/clgyromite.html', icon: '🎮' },
   { id: 'clhacx', name: 'Hacx', url: '/games/clhacx.html', icon: '🎮' },
-  { id: 'clhajimeippo', name: 'Hajime no Ippo', url: '/games/clhajimeippo.html', icon: '🎮' },
-  { id: 'clhajimenoippo', name: 'Hajime no Ippo', url: '/games/clhajimenoippo.html', icon: '🎮' },
+  { id: 'clhajimeippo', name: 'Hajime Ip Po', url: '/games/clhajimeippo.html', icon: '🎮' },
+  { id: 'clhajimenoippo', name: 'Hajime No Ip Po', url: '/games/clhajimenoippo.html', icon: '🎮' },
   { id: 'clhalocombatdevolved', name: 'Halo Combat Devolved', url: '/games/clhalocombatdevolved.html', icon: '🎮' },
-  { id: 'clhandulum', name: 'Handulum', url: '/games/clhandulum.html', icon: '🎮' },
+  { id: 'clhandulum', name: 'Hand Ul Um', url: '/games/clhandulum.html', icon: '🎮' },
   { id: 'clhandsofwar--1', name: 'Hands of War', url: '/games/clhandsofwar%20(1).html', icon: '🪖' },
   { id: 'clhandshakes', name: 'Handshakes', url: '/games/clhandshakes.html', icon: '🎮' },
   { id: 'clhangonsms', name: 'Hang on Sms', url: '/games/clhangonsms.html', icon: '🎮' },
@@ -1194,7 +1201,7 @@ const games = [
   { id: 'clhotwax', name: 'Hotwax', url: '/games/clhotwax.html', icon: '🎮' },
   { id: 'clhouseofhazards', name: 'House of Hazards', url: '/games/clhouseofhazards.html', icon: '🎮' },
   { id: 'clhoverracerdrive', name: 'Hover Racer Drive', url: '/games/clhoverracerdrive.html', icon: '🏎️' },
-  { id: 'clhuggywuggypixel', name: 'Huggy Wuggy Pixel', url: '/games/clhuggywuggypixel.html', icon: '🎮' },
+  { id: 'clhuggywuggypixel', name: 'Hug Gy Wu Ggy Pixel', url: '/games/clhuggywuggypixel.html', icon: '🎮' },
   { id: 'clhumanexpenditureprogram', name: 'Human Expenditure Program', url: '/games/clhumanexpenditureprogram.html', icon: '🎮' },
   { id: 'clhungryknight', name: 'Hungry Knight', url: '/games/clhungryknight.html', icon: '⚔️' },
   { id: 'clhungrylamu', name: 'Hungry la Mu', url: '/games/clhungrylamu.html', icon: '🎮' },
@@ -1209,70 +1216,70 @@ const games = [
   { id: 'clidlefootballmanager', name: 'Idle Football Manager', url: '/games/clidlefootballmanager.html', icon: '⚽' },
   { id: 'clidleidlegamedev', name: 'Idle Idle Game Dev', url: '/games/clidleidlegamedev.html', icon: '👆' },
   { id: 'clidleminertycoon', name: 'Idle Miner Tycoon', url: '/games/clidleminertycoon.html', icon: '👆' },
-  { id: 'clidleminorzamnshes12', name: 'Idle Minerzamnshes 12', url: '/games/clidleminorzamnshes12.html', icon: '👆' },
-  { id: 'clidledice', name: 'Idle Dice', url: '/games/clidledice.html', icon: '👆' },
-  { id: 'clihateyou', name: 'I Hate You', url: '/games/clihateyou.html', icon: '🎮' },
-  { id: 'climpossiblequiz--1', name: 'Impossible Quiz', url: '/games/climpossiblequiz%20(1).html', icon: '🧠' },
-  { id: 'climpossiblequiz2', name: 'Impossible Quiz 2', url: '/games/climpossiblequiz2.html', icon: '🧠' },
-  { id: 'clintellisphere', name: 'Intellisphere', url: '/games/clintellisphere.html', icon: '🎮' },
+  { id: 'clidleminorzamnshes12', name: 'Idle Minor Zam Nshe S 12', url: '/games/clidleminorzamnshes12.html', icon: '👆' },
+  { id: 'clidledice', name: 'Idled Ice', url: '/games/clidledice.html', icon: '👆' },
+  { id: 'clihateyou', name: 'Ihate You', url: '/games/clihateyou.html', icon: '🎮' },
+  { id: 'climpossiblequiz--1', name: 'Impossible Quiz', url: '/games/climpossiblequiz%20(1).html', icon: '🎮' },
+  { id: 'climpossiblequiz2', name: 'Impossible Quiz 2', url: '/games/climpossiblequiz2.html', icon: '🎮' },
+  { id: 'clintellisphere', name: 'In Tell Isphere', url: '/games/clintellisphere.html', icon: '🎮' },
   { id: 'clinclementemerald', name: 'Inclement Emerald', url: '/games/clinclementemerald.html', icon: '🎮' },
-  { id: 'clindiantrucksimiulator', name: 'Indian Truck Simulator', url: '/games/clindiantrucksimiulator.html', icon: '🎮' },
-  { id: 'clinfinitecraft', name: 'Infinite Craft', url: '/games/clinfinitecraft.html', icon: '🌍' },
+  { id: 'clindiantrucksimiulator', name: 'Indian Trucks Imi Ul at or', url: '/games/clindiantrucksimiulator.html', icon: '🎮' },
+  { id: 'clinfinitecraft', name: 'Infinite Craft', url: '/games/clinfinitecraft.html', icon: '⛏️' },
   { id: 'clinkgame', name: 'Inkgame', url: '/games/clinkgame.html', icon: '🎮' },
   { id: 'clinnkeeper', name: 'Innkeeper', url: '/games/clinnkeeper.html', icon: '🎮' },
   { id: 'clinsidestory', name: 'Inside Story', url: '/games/clinsidestory.html', icon: '🎮' },
-  { id: 'clinsomniary', name: 'Insomniary', url: '/games/clinsomniary.html', icon: '🎮' },
+  { id: 'clinsomniary', name: 'Insomnia Ry', url: '/games/clinsomniary.html', icon: '🎮' },
   { id: 'clintoruins', name: 'Into Ruins', url: '/games/clintoruins.html', icon: '🎮' },
-  { id: 'clintospace', name: 'Into Space', url: '/games/clintospace.html', icon: '🚀' },
-  { id: 'clintospace2', name: 'Into Space 2', url: '/games/clintospace2.html', icon: '🚀' },
-  { id: 'clintospace3', name: 'Into Space 3', url: '/games/clintospace3.html', icon: '🚀' },
+  { id: 'clintospace', name: 'Into Space', url: '/games/clintospace.html', icon: '🌌' },
+  { id: 'clintospace2', name: 'Into Space 2', url: '/games/clintospace2.html', icon: '🌌' },
+  { id: 'clintospace3', name: 'Into Space 3', url: '/games/clintospace3.html', icon: '🌌' },
   { id: 'clintothedeepweb', name: 'Into the Deep Web', url: '/games/clintothedeepweb.html', icon: '🎮' },
-  { id: 'clintrusion', name: 'Intrusion', url: '/games/clintrusion.html', icon: '🔫' },
+  { id: 'clintrusion', name: 'Intrusion', url: '/games/clintrusion.html', icon: '🎮' },
   { id: 'cliqball', name: 'Iqball', url: '/games/cliqball.html', icon: '🎮' },
-  { id: 'clironsnout', name: 'Iron Snout', url: '/games/clironsnout.html', icon: '🐷' },
+  { id: 'clironsnout', name: 'Iron Snout', url: '/games/clironsnout.html', icon: '🎮' },
   { id: 'clironsoldier', name: 'Iron Soldier', url: '/games/clironsoldier.html', icon: '🪖' },
   { id: 'clirori', name: 'Irori', url: '/games/clirori.html', icon: '🎮' },
-  { id: 'clitgetssolonelyhere', name: 'It Gets So Lonely Here', url: '/games/clitgetssolonelyhere.html', icon: '💔' },
+  { id: 'clitgetssolonelyhere', name: 'It Gets So Lonely Here', url: '/games/clitgetssolonelyhere.html', icon: '🎮' },
   { id: 'cliwbtg', name: 'Iwbtg', url: '/games/cliwbtg.html', icon: '🎮' },
   { id: 'cljacksmith', name: 'Jack Smith', url: '/games/cljacksmith.html', icon: '🎮' },
-  { id: 'cljacksmithencryptedorsmthn', name: 'Jack Smith Encrypted', url: '/games/cljacksmithencryptedorsmthn.html', icon: '🎮' },
-  { id: 'cljailbreakobbbobob', name: 'Jailbreak Obby', url: '/games/cljailbreakobbbobob.html', icon: '🎮' },
+  { id: 'cljacksmithencryptedorsmthn', name: 'Jack Smith Encrypted or Sm Th N', url: '/games/cljacksmithencryptedorsmthn.html', icon: '🎮' },
+  { id: 'cljailbreakobbbobob', name: 'Jailbreak Obbb Obob', url: '/games/cljailbreakobbbobob.html', icon: '🎮' },
   { id: 'cljamesbondjr', name: 'James Bond Jr', url: '/games/cljamesbondjr.html', icon: '🎮' },
   { id: 'cljazzjackrabbit', name: 'Jazz Jackrabbit', url: '/games/cljazzjackrabbit.html', icon: '🎮' },
   { id: 'cljazzjackrabbit2', name: 'Jazz Jackrabbit 2', url: '/games/cljazzjackrabbit2.html', icon: '🎮' },
-  { id: 'cljefflings', name: 'Jefflings', url: '/games/cljefflings.html', icon: '🎮' },
+  { id: 'cljefflings', name: 'Jef Flings', url: '/games/cljefflings.html', icon: '🎮' },
   { id: 'cljellydadhero', name: 'Jelly Dad Hero', url: '/games/cljellydadhero.html', icon: '🎮' },
   { id: 'cljellydrift', name: 'Jelly Drift', url: '/games/cljellydrift.html', icon: '🎮' },
   { id: 'cljellymario', name: 'Jelly Mario', url: '/games/cljellymario.html', icon: '🍄' },
   { id: 'cljellytruck', name: 'Jelly Truck', url: '/games/cljellytruck.html', icon: '🎮' },
   { id: 'cljellytruckgood', name: 'Jelly Truck Good', url: '/games/cljellytruckgood.html', icon: '🎮' },
   { id: 'cljetforcegemini', name: 'Jet Force Gemini', url: '/games/cljetforcegemini.html', icon: '✈️' },
-  { id: 'cljetskiracing', name: 'Jet Ski Racing', url: '/games/cljetskiracing.html', icon: '🚤' },
+  { id: 'cljetskiracing', name: 'Jet Ski Racing', url: '/games/cljetskiracing.html', icon: '🏎️' },
   { id: 'cljetpackjoyride', name: 'Jetpack Joyride', url: '/games/cljetpackjoyride.html', icon: '✈️' },
   { id: 'cljetrush', name: 'Jetrush', url: '/games/cljetrush.html', icon: '✈️' },
-  { id: 'cljmocraft', name: 'JMO Craft', url: '/games/cljmocraft.html', icon: '🪨' },
-  { id: 'cljohnnytrigger', name: 'Johnny Trigger', url: '/games/cljohnnytrigger.html', icon: '🔫' },
-  { id: 'cljohnnyupgrade', name: 'Johnny Upgrade', url: '/games/cljohnnyupgrade.html', icon: '⬆️' },
-  { id: 'cljojobaps1', name: 'JoJo Baps 1', url: '/games/cljojobaps1.html', icon: '🎮' },
+  { id: 'cljmocraft', name: 'Jmo Craft', url: '/games/cljmocraft.html', icon: '⛏️' },
+  { id: 'cljohnnytrigger', name: 'Johnny Trigger', url: '/games/cljohnnytrigger.html', icon: '🎮' },
+  { id: 'cljohnnyupgrade', name: 'Johnny Upgrade', url: '/games/cljohnnyupgrade.html', icon: '🎮' },
+  { id: 'cljojobaps1', name: 'Jojo Bap S 1', url: '/games/cljojobaps1.html', icon: '🎮' },
   { id: 'cljourneyarcade', name: 'Journey Arcade', url: '/games/cljourneyarcade.html', icon: '🎮' },
   { id: 'cljourneydownhill', name: 'Journey Downhill', url: '/games/cljourneydownhill.html', icon: '🎮' },
-  { id: 'cljoustarcade', name: 'Joust Arcade', url: '/games/cljoustarcade.html', icon: '🦅' },
+  { id: 'cljoustarcade', name: 'Joust Arcade', url: '/games/cljoustarcade.html', icon: '🌌' },
   { id: 'cljsvecx', name: 'Jsvecx', url: '/games/cljsvecx.html', icon: '🎮' },
   { id: 'cljumbomario', name: 'Jumbo Mario', url: '/games/cljumbomario.html', icon: '🍄' },
-  { id: 'cljumpingshell', name: 'Jumping Shell', url: '/games/cljumpingshell.html', icon: '🐢' },
+  { id: 'cljumpingshell', name: 'Jumping Shell', url: '/games/cljumpingshell.html', icon: '🏃' },
   { id: 'cljunglebooksnes', name: 'Jungle Books NES', url: '/games/cljunglebooksnes.html', icon: '🎮' },
   { id: 'cljungledeerhunting', name: 'Jungle Deer Hunting', url: '/games/cljungledeerhunting.html', icon: '🎮' },
   { id: 'cljurassicpark', name: 'Jurassic Park', url: '/games/cljurassicpark.html', icon: '🎮' },
-  { id: 'cljustaplatformer', name: 'Just a Platformer', url: '/games/cljustaplatformer.html', icon: '🏃' },
+  { id: 'cljustaplatformer', name: 'Just Aplatformer', url: '/games/cljustaplatformer.html', icon: '🏃' },
   { id: 'cljustfalllol', name: 'Just Fall LOL', url: '/games/cljustfalllol.html', icon: '🎮' },
   { id: 'cljusthitthebutton', name: 'Just Hit the Button', url: '/games/cljusthitthebutton.html', icon: '🎮' },
   { id: 'cljustinclient', name: 'Just in Client', url: '/games/cljustinclient.html', icon: '🎮' },
   { id: 'cljustoneboss', name: 'Just One Boss', url: '/games/cljustoneboss.html', icon: '🎮' },
-  { id: 'cljustaplatformere', name: 'Just a Platformer E', url: '/games/cljustaplatformerE.html', icon: '🏃' },
-  { id: 'cljustaplatformere2', name: 'Just a Platformer E2', url: '/games/cljustaplatformerE2.html', icon: '🏃' },
-  { id: 'clkaizomarioworld', name: 'Kaizo Mario World', url: '/games/clkaizomarioworld.html', icon: '🍄' },
+  { id: 'cljustaplatformere', name: 'Justaplatformer E', url: '/games/cljustaplatformerE.html', icon: '🏃' },
+  { id: 'cljustaplatformere2', name: 'Justaplatformer E 2', url: '/games/cljustaplatformerE2.html', icon: '🏃' },
+  { id: 'clkaizomarioworld', name: 'Kai Zo Mario World', url: '/games/clkaizomarioworld.html', icon: '🍄' },
   { id: 'clkalikan', name: 'Kalikan', url: '/games/clkalikan.html', icon: '🎮' },
-  { id: 'clkanyezone', name: 'Kanye Zone', url: '/games/clkanyezone.html', icon: '🎤' },
+  { id: 'clkanyezone', name: 'Kanye Zone', url: '/games/clkanyezone.html', icon: '🎮' },
   { id: 'clkapi', name: 'Kapi', url: '/games/clkapi.html', icon: '🎮' },
   { id: 'clkaratebros', name: 'Karate Bros', url: '/games/clkaratebros.html', icon: '🎮' },
   { id: 'clkarlson', name: 'Karlson', url: '/games/clkarlson.html', icon: '🎮' },
@@ -1280,32 +1287,32 @@ const games = [
   { id: 'clkeroseneclient', name: 'Kerosene Client', url: '/games/clkeroseneclient.html', icon: '🎮' },
   { id: 'clkillover', name: 'Kill Over', url: '/games/clkillover.html', icon: '🎮' },
   { id: 'clkilltheiceagebabyadventure', name: 'Kill the Ice Age Baby Adventure', url: '/games/clkilltheiceagebabyadventure.html', icon: '🎮' },
-  { id: 'clkillerinstinct', name: 'Killer Instinct', url: '/games/clkillerinstinct.html', icon: '👊' },
-  { id: 'clkimjonguntilepuzzle', name: 'Kim Jong-Un Tile Puzzle', url: '/games/clkimjonguntilepuzzle.html', icon: '🔫' },
+  { id: 'clkillerinstinct', name: 'Killer Instinct', url: '/games/clkillerinstinct.html', icon: '🎮' },
+  { id: 'clkimjonguntilepuzzle', name: 'Kim Jong Until Epuzzle', url: '/games/clkimjonguntilepuzzle.html', icon: '🔫' },
   { id: 'clkingdomheartsdays', name: 'Kingdom Hearts Days', url: '/games/clkingdomheartsdays.html', icon: '🎮' },
   { id: 'clkingdomheartsrecoded', name: 'Kingdom Hearts Recoded', url: '/games/clkingdomheartsrecoded.html', icon: '🎮' },
   { id: 'clkingdomheartsrecodedalt', name: 'Kingdom Hearts Recoded Alt', url: '/games/clkingdomheartsrecodedalt.html', icon: '🎮' },
   { id: 'clkirby64', name: 'Kirby 64', url: '/games/clkirby64.html', icon: '⭐' },
   { id: 'clkirby64crystalshards', name: 'Kirby 64 Crystal Shards', url: '/games/clkirby64crystalshards.html', icon: '⭐' },
-  { id: 'clkirbyandtheamzingmirror', name: 'Kirby and the Amazing Mirror', url: '/games/clkirbyandtheamzingmirror.html', icon: '⭐' },
+  { id: 'clkirbyandtheamzingmirror', name: 'Kirby and the Am Zing Mirror', url: '/games/clkirbyandtheamzingmirror.html', icon: '⭐' },
   { id: 'clkirbycanvascurse', name: 'Kirby Canvas Curse', url: '/games/clkirbycanvascurse.html', icon: '⭐' },
   { id: 'clkirbysadventure', name: 'Kirby Sadventure', url: '/games/clkirbysadventure.html', icon: '⭐' },
   { id: 'clkirbysdreamland', name: 'Kirby Sdreamland', url: '/games/clkirbysdreamland.html', icon: '⭐' },
   { id: 'clkirbysdreamland3', name: 'Kirby Sdreamland 3', url: '/games/clkirbysdreamland3.html', icon: '⭐' },
-  { id: 'clkirbysoftandwet', name: "Kirby's Soft and Wet", url: '/games/clkirbysoftandwet.html', icon: '⭐' },
+  { id: 'clkirbysoftandwet', name: 'Kirby Soft and Wet', url: '/games/clkirbysoftandwet.html', icon: '⭐' },
   { id: 'clkirbysqueaksquad', name: 'Kirby Squeak Squad', url: '/games/clkirbysqueaksquad.html', icon: '⭐' },
   { id: 'clkirbysuperstar', name: 'Kirby Superstar', url: '/games/clkirbysuperstar.html', icon: '⭐' },
   { id: 'clkirbysuperstarultra', name: 'Kirby Superstar Ultra', url: '/games/clkirbysuperstarultra.html', icon: '⭐' },
   { id: 'clkirbytiltandtumble', name: 'Kirby Tilt and Tumble', url: '/games/clkirbytiltandtumble.html', icon: '⭐' },
-  { id: 'clkittencannon', name: 'Kitten Cannon', url: '/games/clkittencannon.html', icon: '🐱' },
+  { id: 'clkittencannon', name: 'Kitten Cannon', url: '/games/clkittencannon.html', icon: '🎮' },
   { id: 'clklifur', name: 'Klifur', url: '/games/clklifur.html', icon: '🎮' },
   { id: 'clknifehit', name: 'Knife Hit', url: '/games/clknifehit.html', icon: '🎮' },
-  { id: 'clknightmaretower', name: 'Knightmare Tower', url: '/games/clknightmaretower.html', icon: '🏰' },
+  { id: 'clknightmaretower', name: 'Knightmare Tower', url: '/games/clknightmaretower.html', icon: '🧟' },
   { id: 'clknockknock', name: 'Knock Knock', url: '/games/clknockknock.html', icon: '🎮' },
   { id: 'clkonkrio', name: 'Konkrio', url: '/games/clkonkrio.html', icon: '🎮' },
-  { id: 'clkoopasrevenge', name: "Koopa's Revenge", url: '/games/clkoopasrevenge.html', icon: '🎮' },
+  { id: 'clkoopasrevenge', name: 'Koopa Srevenge', url: '/games/clkoopasrevenge.html', icon: '🎮' },
   { id: 'clkourio', name: 'Kourio', url: '/games/clkourio.html', icon: '🎮' },
-  { id: 'clks2teams', name: 'KS 2 Teams', url: '/games/clks2teams.html', icon: '🎮' },
+  { id: 'clks2teams', name: 'Ks 2 Teams', url: '/games/clks2teams.html', icon: '🎮' },
   { id: 'cllaceysflashgames', name: 'Lacey Sflash Games', url: '/games/cllaceysflashgames.html', icon: '🎮' },
   { id: 'cllambdaclient', name: 'Lambda Client', url: '/games/cllambdaclient.html', icon: '🎮' },
   { id: 'cllastfirered', name: 'Last Firered', url: '/games/cllastfirered.html', icon: '🎮' },
@@ -1324,58 +1331,58 @@ const games = [
   { id: 'cllegobatman2superheroes', name: 'Lego Batman 2 Superheroes', url: '/games/cllegobatman2superheroes.html', icon: '🎮' },
   { id: 'cllegoindianajones', name: 'Lego Indiana Jones', url: '/games/cllegoindianajones.html', icon: '🎮' },
   { id: 'cllegoindianajones2', name: 'Lego Indiana Jones 2', url: '/games/cllegoindianajones2.html', icon: '🎮' },
-  { id: 'cllegoninjago', name: 'Lego Ninjago', url: '/games/cllegoninjago.html', icon: '🎮' },
+  { id: 'cllegoninjago', name: 'Lego Ninja Go', url: '/games/cllegoninjago.html', icon: '🎮' },
   { id: 'cllegostarwars', name: 'Lego Star Wars', url: '/games/cllegostarwars.html', icon: '🪖' },
   { id: 'cllegostarwars2gba', name: 'Lego Star Wars 2 GBA', url: '/games/cllegostarwars2gba.html', icon: '🪖' },
   { id: 'cllegostarwarsgba', name: 'Lego Star Wars GBA', url: '/games/cllegostarwarsgba.html', icon: '🪖' },
   { id: 'cllemmings', name: 'Lemmings', url: '/games/cllemmings.html', icon: '🎮' },
   { id: 'clletitconsume', name: 'Let It Consume', url: '/games/clletitconsume.html', icon: '🎮' },
-  { id: 'clletsgoeevee', name: "Let's Go Eevee", url: '/games/clletsgoeevee.html', icon: '🎮' },
+  { id: 'clletsgoeevee', name: 'Lets Go Ee Vee', url: '/games/clletsgoeevee.html', icon: '🎮' },
   { id: 'clletsgopikachu', name: 'Lets Go Pikachu', url: '/games/clletsgopikachu.html', icon: '🐾' },
   { id: 'clleveldevil', name: 'Level Devil', url: '/games/clleveldevil.html', icon: '🎮' },
   { id: 'clleverwarriors', name: 'Lever Warriors', url: '/games/clleverwarriors.html', icon: '🪖' },
   { id: 'cllightitup', name: 'Light It Up', url: '/games/cllightitup.html', icon: '🎮' },
-  { id: 'cllilrunmo', name: 'Lil Runmo', url: '/games/cllilrunmo.html', icon: '🎮' },
+  { id: 'cllilrunmo', name: 'Lil Run Mo', url: '/games/cllilrunmo.html', icon: '🎮' },
   { id: 'lime', name: 'Lime', url: '/games/lime.html', icon: '🎮' },
   { id: 'cllinerider', name: 'Line Rider', url: '/games/cllinerider.html', icon: '🎮' },
-  { id: 'cllinktothepast', name: 'Link to the Past', url: '/games/cllinktothepast.html', icon: '🗡️' },
-  { id: 'cllinksawakeningdx', name: 'Links Awakening DX', url: '/games/cllinksawakeningdx.html', icon: '🗡️' },
-  { id: 'cllittlealchemy2', name: 'Little Alchemy 2', url: '/games/cllittlealchemy2.html', icon: '⚗️' },
-  { id: 'cllittlerunmo', name: 'Little Runmo', url: '/games/cllittlerunmo.html', icon: '🎮' },
+  { id: 'cllinktothepast', name: 'Link to the Past', url: '/games/cllinktothepast.html', icon: '🎮' },
+  { id: 'cllinksawakeningdx', name: 'Links Awakening DX', url: '/games/cllinksawakeningdx.html', icon: '🎮' },
+  { id: 'cllittlealchemy2', name: 'Little Alchemy 2', url: '/games/cllittlealchemy2.html', icon: '🎮' },
+  { id: 'cllittlerunmo', name: 'Little Run Mo', url: '/games/cllittlerunmo.html', icon: '🎮' },
   { id: 'cllockthedoor', name: 'Lock the Door', url: '/games/cllockthedoor.html', icon: '🎮' },
   { id: 'clloderunner', name: 'Lode Runner', url: '/games/clloderunner.html', icon: '🏃' },
   { id: 'cllonewolf', name: 'Lone Wolf', url: '/games/cllonewolf.html', icon: '🎮' },
-  { id: 'cllosangelesshark', name: 'Los Angeles Shark', url: '/games/cllosangelesshark.html', icon: '🦈' },
-  { id: 'cllowknight', name: 'Hollow Knight', url: '/games/cllowknight.html', icon: '⚔️' },
-  { id: 'clloz1', name: 'Legend of Zelda 1', url: '/games/clloz1.html', icon: '🎮' },
-  { id: 'cllozlinkawakening', name: "Link's Awakening", url: '/games/cllozlinkawakening.html', icon: '🎮' },
-  { id: 'cllozminishcap', name: 'Legend of Zelda: Minish Cap', url: '/games/cllozminishcap.html', icon: '🎮' },
-  { id: 'cllozoracleofseasons', name: 'Legend of Zelda: Oracle of Seasons', url: '/games/cllozoracleofseasons.html', icon: '🐟' },
-  { id: 'cllozphantomhourglass', name: 'Legend of Zelda: Phantom Hourglass', url: '/games/cllozphantomhourglass.html', icon: '🎮' },
+  { id: 'cllosangelesshark', name: 'Los Angeles Shark', url: '/games/cllosangelesshark.html', icon: '🐟' },
+  { id: 'cllowknight', name: 'Low Knight', url: '/games/cllowknight.html', icon: '⚔️' },
+  { id: 'clloz1', name: 'Loz 1', url: '/games/clloz1.html', icon: '🎮' },
+  { id: 'cllozlinkawakening', name: 'Loz Link Awakening', url: '/games/cllozlinkawakening.html', icon: '🎮' },
+  { id: 'cllozminishcap', name: 'Loz Mini Sh Cap', url: '/games/cllozminishcap.html', icon: '🎮' },
+  { id: 'cllozoracleofseasons', name: 'Loz Oracle of Seasons', url: '/games/cllozoracleofseasons.html', icon: '🐟' },
+  { id: 'cllozphantomhourglass', name: 'Loz Phantom Hourglass', url: '/games/cllozphantomhourglass.html', icon: '🎮' },
   { id: 'lucid', name: 'Lucid', url: '/games/lucid.html', icon: '🎮' },
   { id: 'clluckyblocks', name: 'Lucky Blocks', url: '/games/clluckyblocks.html', icon: '🎮' },
-  { id: 'cllumberobby', name: 'Lumber Obby', url: '/games/cllumberobby.html', icon: '🏃' },
+  { id: 'cllumberobby', name: 'Lumber Ob by', url: '/games/cllumberobby.html', icon: '🏃' },
   { id: 'cllummm', name: 'Lummm', url: '/games/cllummm.html', icon: '🎮' },
   { id: 'clmachrider', name: 'Mach Rider', url: '/games/clmachrider.html', icon: '🎮' },
-  { id: 'clmadalinstuntcars', name: 'Madalin Stunt Cars', url: '/games/clmadalinstuntcars.html', icon: '🎮' },
-  { id: 'clmadalinstuntcarsgood', name: 'Madalin Stunt Cars Good', url: '/games/clmadalinstuntcarsgood.html', icon: '🎮' },
-  { id: 'clmadalinstuntcarsmultiplayerfixed', name: 'Madalin Stunt Cars Multiplayer Fixed', url: '/games/clmadalinstuntcarsmultiplayerfixed.html', icon: '🎮' },
+  { id: 'clmadalinstuntcars', name: 'Mad Al in Stunt Cars', url: '/games/clmadalinstuntcars.html', icon: '🎮' },
+  { id: 'clmadalinstuntcarsgood', name: 'Mad Al in Stunt Cars Good', url: '/games/clmadalinstuntcarsgood.html', icon: '🎮' },
+  { id: 'clmadalinstuntcarsmultiplayerfixed', name: 'Mad Al in Stunt Cars Multiplayer Fixed', url: '/games/clmadalinstuntcarsmultiplayerfixed.html', icon: '🎮' },
   { id: 'clmadskillsmotocross2', name: 'Mad Skills Motocross 2', url: '/games/clmadskillsmotocross2.html', icon: '🏎️' },
   { id: 'clmadstick', name: 'Mad Stick', url: '/games/clmadstick.html', icon: '🎮' },
   { id: 'clmadstuntcars2', name: 'Mad Stunt Cars 2', url: '/games/clmadstuntcars2.html', icon: '🎮' },
-  { id: 'clmadden93', name: 'Madden 93', url: '/games/clmadden93.html', icon: '🏈' },
-  { id: 'clmadden94', name: 'Madden 94', url: '/games/clmadden94.html', icon: '🏈' },
-  { id: 'clmadden95', name: 'Madden 95', url: '/games/clmadden95.html', icon: '🏈' },
-  { id: 'clmadden96', name: 'Madden 96', url: '/games/clmadden96.html', icon: '🏈' },
-  { id: 'clmadden99', name: 'Madden 99', url: '/games/clmadden99.html', icon: '🏈' },
-  { id: 'clmaddenfootball', name: 'Madden Football', url: '/games/clmaddenfootball.html', icon: '🏈' },
-  { id: 'clmaddenfootball64', name: 'Madden Football 64', url: '/games/clmaddenfootball64.html', icon: '🏈' },
-  { id: 'clmaddennfl', name: 'Madden NFL', url: '/games/clmaddennfl.html', icon: '🏈' },
-  { id: 'clmaddennfl2000', name: 'Madden NFL 2000', url: '/games/clmaddennfl2000.html', icon: '🏈' },
-  { id: 'clmaddennfl2001', name: 'Madden NFL 2001', url: '/games/clmaddennfl2001.html', icon: '🏈' },
-  { id: 'clmaddennfl2002', name: 'Madden NFL 2002', url: '/games/clmaddennfl2002.html', icon: '🏈' },
-  { id: 'clmaddy98', name: 'Madden 98', url: '/games/clmaddy98.html', icon: '🎮' },
-  { id: 'clmadnessaccelerant', name: 'Madness Accelerant', url: '/games/clmadnessaccelerant.html', icon: '🎮' },
+  { id: 'clmadden93', name: 'Madden 93', url: '/games/clmadden93.html', icon: '🎮' },
+  { id: 'clmadden94', name: 'Madden 94', url: '/games/clmadden94.html', icon: '🎮' },
+  { id: 'clmadden95', name: 'Madden 95', url: '/games/clmadden95.html', icon: '🎮' },
+  { id: 'clmadden96', name: 'Madden 96', url: '/games/clmadden96.html', icon: '🎮' },
+  { id: 'clmadden99', name: 'Madden 99', url: '/games/clmadden99.html', icon: '🎮' },
+  { id: 'clmaddenfootball', name: 'Madden Football', url: '/games/clmaddenfootball.html', icon: '⚽' },
+  { id: 'clmaddenfootball64', name: 'Madden Football 64', url: '/games/clmaddenfootball64.html', icon: '⚽' },
+  { id: 'clmaddennfl', name: 'Madden NFL', url: '/games/clmaddennfl.html', icon: '🎮' },
+  { id: 'clmaddennfl2000', name: 'Madden NFL 2000', url: '/games/clmaddennfl2000.html', icon: '🎮' },
+  { id: 'clmaddennfl2001', name: 'Madden NFL 2001', url: '/games/clmaddennfl2001.html', icon: '🎮' },
+  { id: 'clmaddennfl2002', name: 'Madden NFL 2002', url: '/games/clmaddennfl2002.html', icon: '🎮' },
+  { id: 'clmaddy98', name: 'Maddy 98', url: '/games/clmaddy98.html', icon: '🎮' },
+  { id: 'clmadnessaccelerant', name: 'Madness Acc Ele Rant', url: '/games/clmadnessaccelerant.html', icon: '🎮' },
   { id: 'clmadnesscombatdefense', name: 'Madness Combat Defense', url: '/games/clmadnesscombatdefense.html', icon: '🎮' },
   { id: 'clmadnesscombatnexus', name: 'Madness Combat Nexus', url: '/games/clmadnesscombatnexus.html', icon: '🎮' },
   { id: 'clmadnessgemini', name: 'Madness Gemini', url: '/games/clmadnessgemini.html', icon: '🎮' },
@@ -1387,20 +1394,20 @@ const games = [
   { id: 'clmadnesss2010', name: 'Madness S 2010', url: '/games/clmadnesss2010.html', icon: '🎮' },
   { id: 'clmadnessstand', name: 'Madness Stand', url: '/games/clmadnessstand.html', icon: '🎮' },
   { id: 'clmagetoweridle', name: 'Mage Tower Idle', url: '/games/clmagetoweridle.html', icon: '👆' },
-  { id: 'clmagictiles3', name: 'Magic Tiles 3', url: '/games/clmagictiles3.html', icon: '🎹' },
-  { id: 'clmajorasmask', name: "Majora's Mask", url: '/games/clmajorasmask.html', icon: '🗡️' },
+  { id: 'clmagictiles3', name: 'Magic Tiles 3', url: '/games/clmagictiles3.html', icon: '🎮' },
+  { id: 'clmajorasmask', name: 'Major As Mask', url: '/games/clmajorasmask.html', icon: '🗡️' },
   { id: 'clmakesureitsclosed', name: 'Make Sure Its Closed', url: '/games/clmakesureitsclosed.html', icon: '🎮' },
   { id: 'clmami', name: 'Mami', url: '/games/clmami.html', icon: '🎮' },
   { id: 'clmanagod', name: 'Managod', url: '/games/clmanagod.html', icon: '🎮' },
   { id: 'clmarbleracer-1', name: 'Marble Racer', url: '/games/clmarbleracer(1).html', icon: '🏎️' },
   { id: 'clmari0', name: 'Mari 0', url: '/games/clmari0.html', icon: '🎮' },
   { id: 'clmario3', name: 'Mario 3', url: '/games/clmario3.html', icon: '🍄' },
-  { id: 'clmario64webgl', name: 'Mario 64 WebGL', url: '/games/clmario64webgl.html', icon: '🍄' },
+  { id: 'clmario64webgl', name: 'Mario 64 Web Gl', url: '/games/clmario64webgl.html', icon: '🍄' },
   { id: 'clmarioandluigisuperstarsaga', name: 'Mario and Luigi Superstar Saga', url: '/games/clmarioandluigisuperstarsaga.html', icon: '🍄' },
   { id: 'clmariobrosnes', name: 'Mario Bros NES', url: '/games/clmariobrosnes.html', icon: '🍄' },
   { id: 'clmariobuilder64-1', name: 'Mario Builder 64', url: '/games/clmariobuilder64(1).html', icon: '🍄' },
   { id: 'clmariocombat', name: 'Mario Combat', url: '/games/clmariocombat.html', icon: '🍄' },
-  { id: 'clmariogolf', name: 'Mario Golf', url: '/games/clmariogolf.html', icon: '⛳' },
+  { id: 'clmariogolf', name: 'Mario Golf', url: '/games/clmariogolf.html', icon: '🍄' },
   { id: 'clmarioismissingdoneright', name: 'Mario Is Missing Done Right', url: '/games/clMarioisMissingDoneRight.html', icon: '🍄' },
   { id: 'clmariokart64', name: 'Mario Kart 64', url: '/games/clmariokart64.html', icon: '🍄' },
   { id: 'clmariokartds', name: 'Mario Kart DS', url: '/games/clmariokartds.html', icon: '🍄' },
@@ -1423,18 +1430,18 @@ const games = [
   { id: 'clmarvelvsstreetfighter', name: 'Marvel vs Street Fighter', url: '/games/clMarvelVsStreetFighter.html', icon: '🥊' },
   { id: 'clmarvelvsstreetfighterjp', name: 'Marvel vs Street Fighter JP', url: '/games/clmarvelvsstreetfighterjp.html', icon: '🥊' },
   { id: 'clmaskedforcesunlimited', name: 'Masked Forces Unlimited', url: '/games/clmaskedforcesunlimited.html', icon: '🎮' },
-  { id: 'clmastermindworldconquerer', name: 'Mastermind World Conquerer', url: '/games/clmastermindworldconquerer.html', icon: '🎮' },
+  { id: 'clmastermindworldconquerer', name: 'Mastermind World Conquer Er', url: '/games/clmastermindworldconquerer.html', icon: '🎮' },
   { id: 'clmatrixrampage', name: 'Matrix Rampage', url: '/games/clmatrixrampage.html', icon: '🎮' },
   { id: 'clmattv2', name: 'Mattv 2', url: '/games/clmattv2.html', icon: '🎮' },
   { id: 'clmauimallard', name: 'Maui Mallard', url: '/games/clmauimallard.html', icon: '🎮' },
   { id: 'clmaxpayne', name: 'Max Payne', url: '/games/clmaxpayne.html', icon: '🎮' },
-  { id: 'clmcfpsfbhd', name: 'MCFP SFB HD', url: '/games/clmcfpsfbhd.html', icon: '💀' },
-  { id: 'clmcraerally', name: 'McRae Rally', url: '/games/clmcraerally.html', icon: '🎮' },
+  { id: 'clmcfpsfbhd', name: 'Mcfp Sfb HD', url: '/games/clmcfpsfbhd.html', icon: '💀' },
+  { id: 'clmcraerally', name: 'Mcrae Rally', url: '/games/clmcraerally.html', icon: '🎮' },
   { id: 'clmeatboyflash', name: 'Meat Boy Flash', url: '/games/clmeatboyflash.html', icon: '🎮' },
   { id: 'clmeatboy', name: 'Meatboy', url: '/games/clmeatboy.html', icon: '🎮' },
   { id: 'clmedalofhonor-1', name: 'Medal of Honor', url: '/games/clmedalofhonor(1).html', icon: '🎮' },
-  { id: 'clmedievil', name: 'MediEvil', url: '/games/clmedievil.html', icon: '🎮' },
-  { id: 'clmedievalshark', name: 'Medieval Shark', url: '/games/clmedievalshark.html', icon: '🦈' },
+  { id: 'clmedievil', name: 'Medi Evil', url: '/games/clmedievil.html', icon: '🎮' },
+  { id: 'clmedievalshark', name: 'Medieval Shark', url: '/games/clmedievalshark.html', icon: '⚔️' },
   { id: 'clmegachess', name: 'Mega Chess', url: '/games/clmegachess.html', icon: '♟️' },
   { id: 'clmegaclient', name: 'Mega Client', url: '/games/clmegaclient.html', icon: '🎮' },
   { id: 'clmegaman2', name: 'Mega Man 2', url: '/games/clmegaman2.html', icon: '🤖' },
@@ -1442,11 +1449,11 @@ const games = [
   { id: 'clmegaman3', name: 'Mega Man 3', url: '/games/clmegaman3.html', icon: '🤖' },
   { id: 'clmegaman4', name: 'Mega Man 4', url: '/games/clmegaman4.html', icon: '🤖' },
   { id: 'clmegaman5', name: 'Mega Man 5', url: '/games/clmegaman5.html', icon: '🤖' },
-  { id: 'clmegaman5gb', name: 'Mega Man 5 GB', url: '/games/clmegaman5gb.html', icon: '🤖' },
+  { id: 'clmegaman5gb', name: 'Mega Man 5 Gb', url: '/games/clmegaman5gb.html', icon: '🤖' },
   { id: 'clmegaman6', name: 'Mega Man 6', url: '/games/clmegaman6.html', icon: '🤖' },
   { id: 'clmegaman7', name: 'Mega Man 7', url: '/games/clmegaman7.html', icon: '🤖' },
   { id: 'clmegaman8', name: 'Mega Man 8', url: '/games/clmegaman8.html', icon: '🤖' },
-  { id: 'clmegamanbasscftf', name: 'Mega Man & Bass CFTF', url: '/games/clmegamanbasscftf.html', icon: '🤖' },
+  { id: 'clmegamanbasscftf', name: 'Mega Man Bass Cft F', url: '/games/clmegamanbasscftf.html', icon: '🤖' },
   { id: 'clmegamanbattlechipchallenge', name: 'Mega Man Battle Chip Challenge', url: '/games/clmegamanbattlechipchallenge.html', icon: '🤖' },
   { id: 'clmegamanbn5tc', name: 'Mega Man Bn 5 Tc', url: '/games/clmegamanbn5tc.html', icon: '🤖' },
   { id: 'clmegamanbn5tp', name: 'Mega Man Bn 5 Tp', url: '/games/clmegamanbn5tp.html', icon: '🤖' },
@@ -1539,7 +1546,7 @@ const games = [
   { id: 'clmonsterswing', name: 'Monsters Wing', url: '/games/clmonsterswing.html', icon: '🎮' },
   { id: 'clmoonemeraldextremerandomizer', name: 'Moon Emerald Extreme Randomize R', url: '/games/clmoonemeraldextremerandomizer.html', icon: '🎮' },
   { id: 'clmortkom4', name: 'Mort Kom 4', url: '/games/clmortkom4.html', icon: '🎮' },
-  { id: 'clmortalkombat', name: 'Mortal Kombat', url: '/games/clmortalkombat.html', icon: '👊' },
+  { id: 'clmortalkombat', name: 'Mortal Kombat', url: '/games/clmortalkombat.html', icon: '🥊' },
   { id: 'clmortalkombat2', name: 'Mortal Kombat 2', url: '/games/clmortalkombat2.html', icon: '🥊' },
   { id: 'clmortalkombat2a', name: 'Mortal Kombat 2 a', url: '/games/clmortalkombat2a.html', icon: '🥊' },
   { id: 'clmortalkombat3', name: 'Mortal Kombat 3', url: '/games/clmortalkombat3.html', icon: '🥊' },
@@ -1556,8 +1563,8 @@ const games = [
   { id: 'clmotox3mspookyland', name: 'Moto X 3 Mspooky Land', url: '/games/clmotox3mspookyland.html', icon: '🏎️' },
   { id: 'clmotox3mwinter', name: 'Moto X 3 Mwinter', url: '/games/clmotox3mwinter.html', icon: '🏎️' },
   { id: 'clmountainbikeracer', name: 'Mountain Bike Racer', url: '/games/clmountainbikeracer.html', icon: '🏎️' },
-  { id: 'clmrdriller', name: 'Mr. Driller', url: '/games/clmrdriller.html', icon: '🎮' },
-  { id: 'clmrdriller2', name: 'Mr. Driller 2', url: '/games/clmrdriller2.html', icon: '🎮' },
+  { id: 'clmrdriller', name: 'Mr Dr Iller', url: '/games/clmrdriller.html', icon: '🎮' },
+  { id: 'clmrdriller2', name: 'Mr Dr Iller 2', url: '/games/clmrdriller2.html', icon: '🎮' },
   { id: 'clmrmine', name: 'Mrmine', url: '/games/clmrmine.html', icon: '🎮' },
   { id: 'clmrracer', name: 'Mrracer', url: '/games/clmrracer.html', icon: '🏎️' },
   { id: 'clmspacman--1', name: 'Ms Pacman', url: '/games/clmspacman%20(1).html', icon: '🎮' },
@@ -1613,7 +1620,7 @@ const games = [
   { id: 'clnintendogslab', name: 'Nintendogs Lab', url: '/games/clnintendogslab.html', icon: '🎮' },
   { id: 'clnitclient', name: 'Nit Client', url: '/games/clnitclient.html', icon: '🎮' },
   { id: 'clnitromemustdie', name: 'Nitro Me Must Die', url: '/games/clnitromemustdie.html', icon: '🎮' },
-  { id: 'clnomoregameasdsadfagfggdfs', name: 'No More Games DS', url: '/games/clnomoregameasdsadfagfggdfs.html', icon: '🎮' },
+  { id: 'clnomoregameasdsadfagfggdfs', name: 'No More Game As DS Adf Agf Gg Df S', url: '/games/clnomoregameasdsadfagfggdfs.html', icon: '🎮' },
   { id: 'clnoobminer', name: 'Noob Miner', url: '/games/clnoobminer.html', icon: '🎮' },
   { id: 'clnotyourpawn', name: 'Not Your Pawn', url: '/games/clnotyourpawn.html', icon: '🎮' },
   { id: 'clnovaclient', name: 'Nova Client', url: '/games/clnovaclient.html', icon: '🎮' },
@@ -1651,7 +1658,7 @@ const games = [
   { id: 'cloperius', name: 'Operius', url: '/games/cloperius.html', icon: '🎮' },
   { id: 'clopposumcountry', name: 'Opp Osum Country', url: '/games/clopposumcountry.html', icon: '🎮' },
   { id: 'cloppositeday', name: 'Opposite Day', url: '/games/cloppositeday.html', icon: '🎮' },
-  { id: 'clormmimastickwithclsoitcanberememberedoyeahclalienhominid', name: 'Alien Hominid (Classic)', url: '/games/clormmimastickwithclsoitcanberememberedoyeahclalienhominid.html', icon: '🌌' },
+  { id: 'clormmimastickwithclsoitcanberememberedoyeahclalienhominid', name: 'Or Mmimas Tick with Cl So It Can Be Remembered Oye Ahcl Alien Hominid', url: '/games/clormmimastickwithclsoitcanberememberedoyeahclalienhominid.html', icon: '🌌' },
   { id: 'clortalkombat4', name: 'Or Tal Kombat 4', url: '/games/clortalkombat4.html', icon: '🥊' },
   { id: 'clorbofcreation', name: 'Orb of Creation', url: '/games/clorbofcreation.html', icon: '🎮' },
   { id: 'clordinarysonicromhack', name: 'Ordinary Sonic Rom Hack', url: '/games/clordinarysonicromhack.html', icon: '💨' },
@@ -1666,7 +1673,7 @@ const games = [
   { id: 'clovo2', name: 'Ovo 2', url: '/games/clovo2.html', icon: '🎮' },
   { id: 'clovodimensions', name: 'Ovo Dimensions', url: '/games/clovodimensions.html', icon: '🎮' },
   { id: 'clovofixed', name: 'Ovo Fixed', url: '/games/clovofixed.html', icon: '🎮' },
-  { id: 'clpacman', name: 'Pacman', url: '/games/clpacman.html', icon: '👾' },
+  { id: 'clpacman', name: 'Pacman', url: '/games/clpacman.html', icon: '🎮' },
   { id: 'clpacmansuperfast', name: 'Pacman Super Fast', url: '/games/clpacmansuperfast.html', icon: '🎮' },
   { id: 'clpacmanworld3', name: 'Pacman World 3', url: '/games/clpacmanworld3.html', icon: '🎮' },
   { id: 'clpacmanworldg', name: 'Pacman World G', url: '/games/clpacmanworldg.html', icon: '🎮' },
@@ -1736,8 +1743,8 @@ const games = [
   { id: 'clpicodriller', name: 'Pico Dr Iller', url: '/games/clpicodriller.html', icon: '🎮' },
   { id: 'clpicolife', name: 'Pico Life', url: '/games/clpicolife.html', icon: '🎮' },
   { id: 'clpiconightpunkin', name: 'Pico Night Punk in', url: '/games/clpiconightpunkin.html', icon: '🎮' },
-  { id: 'clpicosschool', name: "Pico's School", url: '/games/clpicosschool.html', icon: '🎮' },
-  { id: 'clpicovsbeardx', name: 'Pico vs. Beard X', url: '/games/clpicovsbeardx.html', icon: '🎮' },
+  { id: 'clpicosschool', name: 'Pico Sschool', url: '/games/clpicosschool.html', icon: '🎮' },
+  { id: 'clpicovsbeardx', name: 'Pico vs Beard X', url: '/games/clpicovsbeardx.html', icon: '🎮' },
   { id: 'clpicohot', name: 'Picohot', url: '/games/clpicohot.html', icon: '🎮' },
   { id: 'clpiecesofcake', name: 'Pieces of Cake', url: '/games/clpiecesofcake.html', icon: '🎮' },
   { id: 'clpikwip', name: 'Pikwip', url: '/games/clpikwip.html', icon: '🎮' },
@@ -1755,34 +1762,34 @@ const games = [
   { id: 'clpixelshooter', name: 'Pixel Shooter', url: '/games/clpixelshooter.html', icon: '🔫' },
   { id: 'clpixelspeedrun', name: 'Pixel Speedrun', url: '/games/clpixelspeedrun.html', icon: '🏎️' },
   { id: 'clpixelwarfare', name: 'Pixel Warfare', url: '/games/clpixelwarfare.html', icon: '🪖' },
-  { id: 'clpizzapapa', name: 'Pizza Papa', url: '/games/clpizzapapa.html', icon: '👨‍🍳' },
+  { id: 'clpizzapapa', name: 'Pizza Papa', url: '/games/clpizzapapa.html', icon: '🍕' },
   { id: 'clpizzatower', name: 'Pizza Tower', url: '/games/clpizzatower.html', icon: '🍕' },
-  { id: 'clpkmnarutoans', name: 'PKM Naruto ANS', url: '/games/clpkmnarutoans.html', icon: '🎮' },
-  { id: 'clplazmaburst', name: 'Plazma Burst', url: '/games/clplazmaburst.html', icon: '🎮' },
-  { id: 'clplangman', name: 'Plangman', url: '/games/clplangman.html', icon: '🎮' },
+  { id: 'clpkmnarutoans', name: 'Pkm Naruto an S', url: '/games/clpkmnarutoans.html', icon: '🎮' },
+  { id: 'clplazmaburst', name: 'Pla Zm Aburst', url: '/games/clplazmaburst.html', icon: '🎮' },
+  { id: 'clplangman', name: 'Plan Gman', url: '/games/clplangman.html', icon: '🎮' },
   { id: 'clplanetlife', name: 'Planet Life', url: '/games/clplanetlife.html', icon: '✈️' },
   { id: 'clplantsvszombies', name: 'Plants vs Zombies', url: '/games/clplantsvszombies.html', icon: '🧟' },
   { id: 'clplantsvszombiesnds', name: 'Plants vs Zombies Nds', url: '/games/clplantsvszombiesnds.html', icon: '🧟' },
   { id: 'clplinko', name: 'Plinko', url: '/games/clplinko.html', icon: '🎮' },
   { id: 'clplonky', name: 'Plonky', url: '/games/clplonky.html', icon: '🎮' },
-  { id: 'clpokegschronicles', name: 'Pokegs Chronicles', url: '/games/clpokegschronicles.html', icon: '🐾' },
-  { id: 'clpogo3d', name: 'Pogo 3D', url: '/games/clpogo3D.html', icon: '🎮' },
+  { id: 'clpokegschronicles', name: 'Po Kegs Chronicles', url: '/games/clpokegschronicles.html', icon: '🐾' },
+  { id: 'clpogo3d', name: 'Pogo 3 D', url: '/games/clpogo3D.html', icon: '🎮' },
   { id: 'clpokeacademylifeforever', name: 'Poke Academy Life Forever', url: '/games/clpokeacademylifeforever.html', icon: '🐾' },
   { id: 'clpokeallin', name: 'Poke All in', url: '/games/clpokeallin.html', icon: '🐾' },
   { id: 'clpokebattlefact', name: 'Poke Battle Fact', url: '/games/clpokebattlefact.html', icon: '🐾' },
   { id: 'clpokeblack', name: 'Poke Black', url: '/games/clpokeblack.html', icon: '🐾' },
   { id: 'clpokeblack2alt', name: 'Poke Black 2 Alt', url: '/games/clpokeblack2alt.html', icon: '🐾' },
   { id: 'clpokeblackalt', name: 'Poke Black Alt', url: '/games/clpokeblackalt.html', icon: '🐾' },
-  { id: 'clpokeblazeblack2redux', name: 'Poke Blaze Black 2 Redux', url: '/games/clpokeblazeblack2redux.html', icon: '🐾' },
+  { id: 'clpokeblazeblack2redux', name: 'Poke Blaze Black 2 Red Ux', url: '/games/clpokeblazeblack2redux.html', icon: '🐾' },
   { id: 'clpokeblue', name: 'Poke Blue', url: '/games/clpokeblue.html', icon: '🐾' },
   { id: 'clpokeclassic', name: 'Poke Classic', url: '/games/clpokeclassic.html', icon: '🐾' },
   { id: 'clpokecrown', name: 'Poke Crown', url: '/games/clpokecrown.html', icon: '🐾' },
-  { id: 'clpokecrystaladvanceredux', name: 'Poke Crystal Advance Redux', url: '/games/clpokecrystaladvanceredux.html', icon: '🐾' },
+  { id: 'clpokecrystaladvanceredux', name: 'Poke Crystal Advance Red Ux', url: '/games/clpokecrystaladvanceredux.html', icon: '🐾' },
   { id: 'clpokecrystalclear', name: 'Poke Crystal Clear', url: '/games/clpokecrystalclear.html', icon: '🐾' },
   { id: 'clpokediamond', name: 'Poke Diamond', url: '/games/clpokediamond.html', icon: '🐾' },
   { id: 'clpokedreamstone', name: 'Poke Dream Stone', url: '/games/clpokedreamstone.html', icon: '🐾' },
-  { id: 'clpokeeliteredux', name: 'Poke Elite Redux', url: '/games/clpokeeliteredux.html', icon: '🐾' },
-  { id: 'clpokeelysiuma', name: 'Poke Elysium A', url: '/games/clpokeelysiuma.html', icon: '🐾' },
+  { id: 'clpokeeliteredux', name: 'Poke Elite Red Ux', url: '/games/clpokeeliteredux.html', icon: '🐾' },
+  { id: 'clpokeelysiuma', name: 'Poke Elysium a', url: '/games/clpokeelysiuma.html', icon: '🐾' },
   { id: 'clpokeelysiumb', name: 'Poke Elysium B', url: '/games/clpokeelysiumb.html', icon: '🐾' },
   { id: 'clpokeemeraldenhanced', name: 'Poke Emerald Enhanced', url: '/games/clpokeemeraldenhanced.html', icon: '🐾' },
   { id: 'clpokeemeraldexceeded', name: 'Poke Emerald Exceeded', url: '/games/clpokeemeraldexceeded.html', icon: '🐾' },
@@ -1793,14 +1800,14 @@ const games = [
   { id: 'clpokeemeraldz', name: 'Poke Emerald Z', url: '/games/clpokeemeraldz.html', icon: '🐾' },
   { id: 'clpokefiregold', name: 'Poke Fire Gold', url: '/games/clpokefiregold.html', icon: '🐾' },
   { id: 'clpokeflora', name: 'Poke Flora', url: '/games/clpokeflora.html', icon: '🐾' },
-  { id: 'clpokefrlgplus', name: 'Poke FRLG Plus', url: '/games/clpokefrlgplus.html', icon: '🐾' },
+  { id: 'clpokefrlgplus', name: 'Poke Fr Lgpl US', url: '/games/clpokefrlgplus.html', icon: '🐾' },
   { id: 'clpokefuseddimension', name: 'Poke Fused Dimension', url: '/games/clpokefuseddimension.html', icon: '🐾' },
   { id: 'clpokegaia', name: 'Poke Gaia', url: '/games/clpokegaia.html', icon: '🐾' },
   { id: 'clpokegoldenshield', name: 'Poke Golden Shield', url: '/games/clpokegoldenshield.html', icon: '🐾' },
   { id: 'clpokeheartgold', name: 'Poke Heartgold', url: '/games/clpokeheartgold.html', icon: '🐾' },
   { id: 'clpokelightplatinum', name: 'Poke Light Platinum', url: '/games/clpokelightplatinum.html', icon: '🐾' },
-  { id: 'clpokeliquidcrysta', name: 'Poke Liquid Crystal', url: '/games/clpokeliquidcrysta.html', icon: '🐾' },
-  { id: 'clpokemegamoemon', name: 'Poke Mega Moemon', url: '/games/clpokemegamoemon.html', icon: '🐾' },
+  { id: 'clpokeliquidcrysta', name: 'Poke Liquid Cry St a', url: '/games/clpokeliquidcrysta.html', icon: '🐾' },
+  { id: 'clpokemegamoemon', name: 'Poke Mega Moe Mon', url: '/games/clpokemegamoemon.html', icon: '🐾' },
   { id: 'clpokemoonemerald', name: 'Poke Moon Emerald', url: '/games/clpokemoonemerald.html', icon: '🐾' },
   { id: 'clpokemoongalaxy', name: 'Poke Moon Galaxy', url: '/games/clpokemoongalaxy.html', icon: '🐾' },
   { id: 'clpokemysteryexplorersofsky', name: 'Poke Mystery Explorers of Sky', url: '/games/clpokemysteryexplorersofsky.html', icon: '🐾' },
@@ -1835,42 +1842,42 @@ const games = [
   { id: 'clpokeultraviolet', name: 'Poke Ultraviolet', url: '/games/clpokeultraviolet.html', icon: '🐾' },
   { id: 'clpokeunovaemerald', name: 'Poke Unova Emerald', url: '/games/clpokeunovaemerald.html', icon: '🐾' },
   { id: 'clpokevega', name: 'Poke Vega', url: '/games/clpokevega.html', icon: '🐾' },
-  { id: 'clpokevoltwhite2redux', name: 'Poke Volt White 2 Redux', url: '/games/clpokevoltwhite2redux.html', icon: '🐾' },
+  { id: 'clpokevoltwhite2redux', name: 'Poke Volt White 2 Red Ux', url: '/games/clpokevoltwhite2redux.html', icon: '🐾' },
   { id: 'clpokevoyager', name: 'Poke Voyager', url: '/games/clpokevoyager.html', icon: '🐾' },
   { id: 'clpokewhite', name: 'Poke White', url: '/games/clpokewhite.html', icon: '🐾' },
   { id: 'clpokewhite2', name: 'Poke White 2', url: '/games/clpokewhite2.html', icon: '🐾' },
   { id: 'clpokewhite2alt', name: 'Poke White 2 Alt', url: '/games/clpokewhite2alt.html', icon: '🐾' },
   { id: 'clpokeyellow', name: 'Poke Yellow', url: '/games/clpokeyellow.html', icon: '🐾' },
-  { id: 'clpokeblack2', name: 'Pokemon Black 2', url: '/games/clpokeblack2.html.html', icon: '🐾' },
+  { id: 'clpokeblack2', name: 'Pokeblack 2.html', url: '/games/clpokeblack2.html.html', icon: '🐾' },
   { id: 'clpokeambrosia', name: 'Pokemon Ambrosia', url: '/games/clPokeAmbrosia.html', icon: '🐾' },
   { id: 'clpokemonamnesia', name: 'Pokemon Amnesia', url: '/games/clpokemonamnesia.html', icon: '🐾' },
   { id: 'clpokemonclover', name: 'Pokemon Clover', url: '/games/clpokemonclover.html', icon: '🐾' },
-  { id: 'clpokemoncrystal', name: 'Pokemon Crystal', url: '/games/clpokemoncrystal.html', icon: '💎' },
-  { id: 'clpokemonemerald', name: 'Pokemon Emerald', url: '/games/clpokemonemerald.html', icon: '💚' },
+  { id: 'clpokemoncrystal', name: 'Pokemon Crystal', url: '/games/clpokemoncrystal.html', icon: '🐾' },
+  { id: 'clpokemonemerald', name: 'Pokemon Emerald', url: '/games/clpokemonemerald.html', icon: '🐾' },
   { id: 'clpokemonemeraldcrest', name: 'Pokemon Emerald Crest', url: '/games/clpokemonemeraldcrest.html', icon: '🐾' },
   { id: 'clpokemonemeraldimperium', name: 'Pokemon Emerald Imperium', url: '/games/clpokemonemeraldimperium.html', icon: '🐾' },
-  { id: 'clpokemonemeraldkaizo', name: 'Pokemon Emerald Kaizo', url: '/games/clpokemonemeraldkaizo.html', icon: '🐾' },
+  { id: 'clpokemonemeraldkaizo', name: 'Pokemon Emerald Kai Zo', url: '/games/clpokemonemeraldkaizo.html', icon: '🐾' },
   { id: 'clpokemonemeraldmini', name: 'Pokemon Emerald Mini', url: '/games/clpokemonemeraldmini.html', icon: '🐾' },
   { id: 'clpokeemeraldrogueex', name: 'Pokemon Emerald Rogue EX', url: '/games/clPokeEmeraldRogueEX.html', icon: '🐾' },
   { id: 'clpokemonemeraldseaglass', name: 'Pokemon Emerald Sea Glass', url: '/games/clpokemonemeraldseaglass.html', icon: '🐾' },
   { id: 'clpokemonenergizedemerald', name: 'Pokemon Energized Emerald', url: '/games/clpokemonenergizedemerald.html', icon: '🐾' },
-  { id: 'clpokemonevolvedsfdgsdfs', name: 'Pokemon Evolved', url: '/games/clpokemonevolvedsfdgsdfs.html', icon: '🐾' },
-  { id: 'clpokemonfirered', name: 'Pokemon Firered', url: '/games/clpokemonfirered.html', icon: '🔥' },
+  { id: 'clpokemonevolvedsfdgsdfs', name: 'Pokemon Evolved Sf Dgs Df S', url: '/games/clpokemonevolvedsfdgsdfs.html', icon: '🐾' },
+  { id: 'clpokemonfirered', name: 'Pokemon Firered', url: '/games/clpokemonfirered.html', icon: '🐾' },
   { id: 'clpokemonfireredandleafgreenplusedition', name: 'Pokemon Firered and Leafgreen Plus Edition', url: '/games/clpokemonfireredandleafgreenplusedition.html', icon: '🐾' },
   { id: 'clpokemonfireredrandomized', name: 'Pokemon Firered Randomized', url: '/games/clpokemonfireredrandomized.html', icon: '🐾' },
   { id: 'clpokefusion3', name: 'Pokemon Fusion 3', url: '/games/clPokeFusion3.html', icon: '🐾' },
-  { id: 'clpokemongold', name: 'Pokemon Gold', url: '/games/clpokemongold.html', icon: '🥇' },
-  { id: 'clpokemonkaizoironfirered', name: 'Pokemon Kaizo Iron Firered', url: '/games/clpokemonkaizoironfirered.html', icon: '🐾' },
+  { id: 'clpokemongold', name: 'Pokemon Gold', url: '/games/clpokemongold.html', icon: '🐾' },
+  { id: 'clpokemonkaizoironfirered', name: 'Pokemon Kai Zo Iron Firered', url: '/games/clpokemonkaizoironfirered.html', icon: '🐾' },
   { id: 'clpokemonlazarus', name: 'Pokemon Lazarus', url: '/games/clpokemonlazarus.html', icon: '🐾' },
-  { id: 'clpokemonleafgreen', name: 'Pokemon Leafgreen', url: '/games/clpokemonleafgreen.html', icon: '🌿' },
+  { id: 'clpokemonleafgreen', name: 'Pokemon Leafgreen', url: '/games/clpokemonleafgreen.html', icon: '🐾' },
   { id: 'clpokemonmodernemerald', name: 'Pokemon Modern Emerald', url: '/games/clpokemonmodernemerald.html', icon: '🐾' },
   { id: 'clpokemonmysterydungeon', name: 'Pokemon Mystery Dungeon', url: '/games/clpokemonmysterydungeon.html', icon: '🐾' },
   { id: 'clpokemonquetzal', name: 'Pokemon Quetzal', url: '/games/clpokemonquetzal.html', icon: '🐾' },
   { id: 'clpokemonroaringred', name: 'Pokemon Roaring Red', url: '/games/clpokemonroaringred.html', icon: '🐾' },
-  { id: 'clpokemonruby', name: 'Pokemon Ruby', url: '/games/clpokemonruby.html', icon: '♦️' },
-  { id: 'clpokemonsapphire', name: 'Pokemon Sapphire', url: '/games/clpokemonsapphire.html', icon: '💙' },
+  { id: 'clpokemonruby', name: 'Pokemon Ruby', url: '/games/clpokemonruby.html', icon: '🐾' },
+  { id: 'clpokemonsapphire', name: 'Pokemon Sapphire', url: '/games/clpokemonsapphire.html', icon: '🐾' },
   { id: 'clpokemonshinsigma', name: 'Pokemon Shin Sigma', url: '/games/clpokemonshinsigma.html', icon: '🐾' },
-  { id: 'clpokemonsilver', name: 'Pokemon Silver', url: '/games/clpokemonsilver.html', icon: '🥈' },
+  { id: 'clpokemonsilver', name: 'Pokemon Silver', url: '/games/clpokemonsilver.html', icon: '🐾' },
   { id: 'clpokemonsnap', name: 'Pokemon Snap', url: '/games/clpokemonsnap.html', icon: '🐾' },
   { id: 'clpokemonstadium', name: 'Pokemon Stadium', url: '/games/clpokemonstadium.html', icon: '🐾' },
   { id: 'clpokemonstadium2', name: 'Pokemon Stadium 2', url: '/games/clpokemonstadium2.html', icon: '🐾' },
@@ -1881,18 +1888,18 @@ const games = [
   { id: 'clpokemonvolume2', name: 'Pokemon Volume 2', url: '/games/clpokemonvolume2.html', icon: '🐾' },
   { id: 'clpokemonvolume3', name: 'Pokemon Volume 3', url: '/games/clpokemonvolume3.html', icon: '🐾' },
   { id: 'clpokemonvolume4', name: 'Pokemon Volume 4', url: '/games/clpokemonvolume4.html', icon: '🐾' },
-  { id: 'clpokemonperfectemerald5-5', name: 'Pokemon Perfect Emerald 5.5', url: '/games/clpokemonperfectemerald5.5.html', icon: '🐾' },
-  { id: 'clpokemonsaiph', name: 'Pokemon Saiph', url: '/games/clpokemonsaiph.html', icon: '🐾' },
-  { id: 'clpokemonsaiph2', name: 'Pokemon Saiph 2', url: '/games/clpokemonsaiph2.html', icon: '🐾' },
-  { id: 'clpokemonslgreen', name: 'Pokemon Leaf Green (S)', url: '/games/clpokemonslgreen.html', icon: '🐾' },
-  { id: 'clpokemonsmred', name: 'Pokemon Mystery Red', url: '/games/clpokemonsmred.html', icon: '🐾' },
-  { id: 'clpokemonsors', name: 'Pokemon Sors', url: '/games/clpokemonsors.html', icon: '🐾' },
-  { id: 'clpokemonsors2', name: 'Pokemon Sors 2', url: '/games/clpokemonsors2.html', icon: '🐾' },
-  { id: 'clpokerowe', name: 'Pokerowe', url: '/games/clpokerowe.html', icon: '🐾' },
+  { id: 'clpokemonperfectemerald5-5', name: 'Pokemonperfectemerald 5.5', url: '/games/clpokemonperfectemerald5.5.html', icon: '🐾' },
+  { id: 'clpokemonsaiph', name: 'Pokemons AI Ph', url: '/games/clpokemonsaiph.html', icon: '🐾' },
+  { id: 'clpokemonsaiph2', name: 'Pokemons AI Ph 2', url: '/games/clpokemonsaiph2.html', icon: '🐾' },
+  { id: 'clpokemonslgreen', name: 'Pokemons Lgreen', url: '/games/clpokemonslgreen.html', icon: '🐾' },
+  { id: 'clpokemonsmred', name: 'Pokemons Mred', url: '/games/clpokemonsmred.html', icon: '🐾' },
+  { id: 'clpokemonsors', name: 'Pokemons or S', url: '/games/clpokemonsors.html', icon: '🐾' },
+  { id: 'clpokemonsors2', name: 'Pokemons or S 2', url: '/games/clpokemonsors2.html', icon: '🐾' },
+  { id: 'clpokerowe', name: 'Poker Owe', url: '/games/clpokerowe.html', icon: '🐾' },
   { id: 'clpokered', name: 'Pokered', url: '/games/clpokered.html', icon: '🐾' },
   { id: 'clpolicepursuit2', name: 'Police Pursuit 2', url: '/games/clpolicepursuit2.html', icon: '🎮' },
   { id: 'clpolishedcrystal', name: 'Polished Crystal', url: '/games/clpolishedcrystal.html', icon: '🎮' },
-  { id: 'clpolytrackbutnotflagged-1', name: 'Poly Track', url: '/games/clpolytrackbutnotflagged(1).html', icon: '🎮' },
+  { id: 'clpolytrackbutnotflagged-1', name: 'Poly Track But Not Flagged', url: '/games/clpolytrackbutnotflagged(1).html', icon: '🎮' },
   { id: 'clpolytrackworksnow', name: 'Poly Track Works Now', url: '/games/clpolytrackworksnow.html', icon: '🏂' },
   { id: 'clpomgetsinternet', name: 'Pom Gets Internet', url: '/games/clpomgetsinternet.html', icon: '🎮' },
   { id: 'clpoorbunny', name: 'Poor Bunny', url: '/games/clpoorbunny.html', icon: '🎮' },
@@ -1902,58 +1909,58 @@ const games = [
   { id: 'clportal2d', name: 'Portal 2D', url: '/games/clportal2d.html', icon: '🎮' },
   { id: 'clportaldefendersfastbreak', name: 'Portal Defenders Fast Break', url: '/games/clportaldefendersfastbreak.html', icon: '🎮' },
   { id: 'clportalflash', name: 'Portal Flash', url: '/games/clportalflash.html', icon: '🎮' },
-  { id: 'clportaldefenderstd', name: 'Portal Defenders TD', url: '/games/clportaldefendersTD.html', icon: '🎮' },
+  { id: 'clportaldefenderstd', name: 'Portaldefenders Td', url: '/games/clportaldefendersTD.html', icon: '🎮' },
   { id: 'clporter', name: 'Porter', url: '/games/clporter.html', icon: '🎮' },
   { id: 'clportraitofruin', name: 'Portrait of Ruin', url: '/games/clportraitofruin.html', icon: '🎮' },
   { id: 'clpossessquest', name: 'Possess Quest', url: '/games/clpossessquest.html', icon: '⚔️' },
   { id: 'clpostal', name: 'Postal', url: '/games/clpostal.html', icon: '🎮' },
-  { id: 'clpotatomanseeksthetroof', name: 'Potato Man Seeks the Troof', url: '/games/clpotatomanseeksthetroof.html', icon: '🎮' },
+  { id: 'clpotatomanseeksthetroof', name: 'Potato Man Seeks the Tro of', url: '/games/clpotatomanseeksthetroof.html', icon: '🎮' },
   { id: 'clpou-1', name: 'Pou', url: '/games/clpou(1).html', icon: '🎮' },
   { id: 'clpowerslave', name: 'Power Slave', url: '/games/clpowerslave.html', icon: '🎮' },
-  { id: 'clpraxisfighterx', name: 'Praxis Fighter X', url: '/games/clpraxisfighterx.html', icon: '👊' },
+  { id: 'clpraxisfighterx', name: 'Praxis Fighter X', url: '/games/clpraxisfighterx.html', icon: '🥊' },
   { id: 'clprebronzeage', name: 'Pre Bronze Age', url: '/games/clprebronzeage.html', icon: '🎮' },
-  { id: 'clprecivilationbronzeage', name: 'Precivilization Bronze Age', url: '/games/clprecivilationbronzeage.html', icon: '🎮' },
+  { id: 'clprecivilationbronzeage', name: 'Pre Civil Ation Bronze Age', url: '/games/clprecivilationbronzeage.html', icon: '🎮' },
   { id: 'clprecisionclient', name: 'Precision Client', url: '/games/clprecisionclient.html', icon: '🎮' },
-  { id: 'clprehistoricshark', name: 'Prehistoric Shark', url: '/games/clprehistoricshark.html', icon: '🦈' },
-  { id: 'clprestigetree', name: 'Prestige Tree', url: '/games/clprestigetree.html', icon: '🌳' },
+  { id: 'clprehistoricshark', name: 'Prehistoric Shark', url: '/games/clprehistoricshark.html', icon: '🐟' },
+  { id: 'clprestigetree', name: 'Prestige Tree', url: '/games/clprestigetree.html', icon: '🎮' },
   { id: 'clprimary', name: 'Primary', url: '/games/clprimary.html', icon: '🎮' },
-  { id: 'clprismarine', name: 'Prismarine', url: '/games/clprismarine.html', icon: '🎮' },
+  { id: 'clprismarine', name: 'Pris Marine', url: '/games/clprismarine.html', icon: '🎮' },
   { id: 'clprismclient', name: 'Prism Client', url: '/games/clprismclient.html', icon: '🎮' },
   { id: 'clprowrestling', name: 'Pro Wrestling', url: '/games/clprowrestling.html', icon: '🎮' },
   { id: 'clprocessortycoon', name: 'Processor Tycoon', url: '/games/clprocessortycoon.html', icon: '👆' },
   { id: 'clprofessorlaytonandthecuriousvillage', name: 'Professor Layton and the Curious Village', url: '/games/clprofessorlaytonandthecuriousvillage.html', icon: '🎮' },
-  { id: 'clpuckman', name: 'Puckman', url: '/games/clpuckman.html', icon: '👾' },
+  { id: 'clpuckman', name: 'Puckman', url: '/games/clpuckman.html', icon: '🏒' },
   { id: 'clpullfrog', name: 'Pull Frog', url: '/games/clpullfrog.html', icon: '🎮' },
   { id: 'clpumpkinrun', name: 'Pumpkin Run', url: '/games/clpumpkinrun.html', icon: '🎮' },
-  { id: 'clpunchout', name: 'Punch Out', url: '/games/clpunchout.html', icon: '🥊' },
-  { id: 'clpunchthetrump', name: 'Punch the Trump', url: '/games/clpunchthetrump.html', icon: '👊' },
+  { id: 'clpunchout', name: 'Punch Out', url: '/games/clpunchout.html', icon: '🎮' },
+  { id: 'clpunchthetrump', name: 'Punch the Trump', url: '/games/clpunchthetrump.html', icon: '🎮' },
   { id: 'clpuppethockey', name: 'Puppet Hockey', url: '/games/clpuppethockey.html', icon: '🏒' },
   { id: 'clpuppetmaster', name: 'Puppet Master', url: '/games/clpuppetmaster.html', icon: '🎮' },
   { id: 'clpushyourluck', name: 'Push Your Luck', url: '/games/clpushyourluck.html', icon: '🎮' },
-  { id: 'clpuyopuyofever', name: 'Puyo Puyo Fever', url: '/games/clpuyopuyofever.html', icon: '🟡' },
-  { id: 'clpvz2gardenless', name: 'PvZ 2 Gardenless', url: '/games/clpvz2gardenless.html', icon: '🎮' },
-  { id: 'clpvz', name: 'Plants vs Zombies', url: '/games/clpvz.html', icon: '🎮' },
-  { id: 'clpvz2', name: 'Plants vs Zombies 2', url: '/games/clpvz2.html', icon: '🎮' },
-  { id: 'pvzm', name: 'PvZ Multiplayer', url: '/games/PVZM.html', icon: '🎮' },
-  { id: 'clpyrotoad', name: 'PyroToad', url: '/games/clpyrotoad.html', icon: '🍄' },
-  { id: 'clqbert', name: 'Qbert', url: '/games/clqbert.html', icon: '🟠' },
-  { id: 'clqbertarcade', name: 'Qbert Arcade', url: '/games/clqbertarcade.html', icon: '🟠' },
-  { id: 'clqtrewired', name: 'QT Rewired', url: '/games/clqtrewired.html', icon: '🎮' },
-  { id: 'clquake', name: 'Quake', url: '/games/clquake.html', icon: '🔫' },
-  { id: 'clquake2', name: 'Quake 2', url: '/games/clquake2.html', icon: '🔫' },
-  { id: 'clquake64', name: 'Quake 64', url: '/games/clquake64.html', icon: '🔫' },
+  { id: 'clpuyopuyofever', name: 'Puyo Puyo Fever', url: '/games/clpuyopuyofever.html', icon: '🎮' },
+  { id: 'clpvz2gardenless', name: 'Pv Z 2 Garden Less', url: '/games/clpvz2gardenless.html', icon: '🎮' },
+  { id: 'clpvz', name: 'Pvz', url: '/games/clpvz.html', icon: '🎮' },
+  { id: 'clpvz2', name: 'Pvz 2', url: '/games/clpvz2.html', icon: '🎮' },
+  { id: 'pvzm', name: 'Pvzm', url: '/games/PVZM.html', icon: '🎮' },
+  { id: 'clpyrotoad', name: 'Pyro Toad', url: '/games/clpyrotoad.html', icon: '🍄' },
+  { id: 'clqbert', name: 'Qbert', url: '/games/clqbert.html', icon: '🎮' },
+  { id: 'clqbertarcade', name: 'Qbert Arcade', url: '/games/clqbertarcade.html', icon: '🎮' },
+  { id: 'clqtrewired', name: 'Qt Rewired', url: '/games/clqtrewired.html', icon: '🎮' },
+  { id: 'clquake', name: 'Quake', url: '/games/clquake.html', icon: '💀' },
+  { id: 'clquake2', name: 'Quake 2', url: '/games/clquake2.html', icon: '💀' },
+  { id: 'clquake64', name: 'Quake 64', url: '/games/clquake64.html', icon: '💀' },
   { id: 'clquantumclicker', name: 'Quantum Clicker', url: '/games/clQuantumClicker.html', icon: '👆' },
   { id: 'clquickieworld', name: 'Quickie World', url: '/games/clquickieworld.html', icon: '🎮' },
   { id: 'clqwop', name: 'Qwop', url: '/games/clqwop.html', icon: '🎮' },
   { id: 'repo', name: 'R.E.P.O', url: '/games/R.E.P.O%20copy%20copy%20copy.html', icon: '👻' },
-  { id: 'clragollhit', name: 'Ragoll Hit', url: '/games/clragollhit.html', icon: '🎮' },
+  { id: 'clragollhit', name: 'Ra Goll Hit', url: '/games/clragollhit.html', icon: '🎮' },
   { id: 'clracemaster3d', name: 'Race Master 3D', url: '/games/clracemaster3d.html', icon: '🏎️' },
   { id: 'clracingarena', name: 'Racing Arena', url: '/games/clracingarena.html', icon: '🏎️' },
   { id: 'clradracer', name: 'Rad Racer', url: '/games/clradracer.html', icon: '🏎️' },
   { id: 'clradicalred', name: 'Radical Red', url: '/games/clradicalred.html', icon: '🎮' },
-  { id: 'clraftwars', name: 'Raft Wars', url: '/games/clraftwars.html', icon: '🛶' },
-  { id: 'clraftwars2', name: 'Raft Wars 2', url: '/games/clraftwars2.html', icon: '🛶' },
-  { id: 'clragdollachivement', name: 'Ragdoll Achievement', url: '/games/clragdollachivement.html', icon: '🎮' },
+  { id: 'clraftwars', name: 'Raft Wars', url: '/games/clraftwars.html', icon: '🪖' },
+  { id: 'clraftwars2', name: 'Raft Wars 2', url: '/games/clraftwars2.html', icon: '🪖' },
+  { id: 'clragdollachivement', name: 'Ragdoll Achive Ment', url: '/games/clragdollachivement.html', icon: '🎮' },
   { id: 'clragdollarchers', name: 'Ragdoll Archers', url: '/games/clragdollarchers.html', icon: '🎮' },
   { id: 'clragdolldrop', name: 'Ragdoll Drop', url: '/games/clragdolldrop.html', icon: '🎮' },
   { id: 'clragdollhit', name: 'Ragdoll Hit', url: '/games/clragdollhit.html', icon: '🎮' },
@@ -1962,21 +1969,21 @@ const games = [
   { id: 'clragdollsoccer', name: 'Ragdoll Soccer', url: '/games/clragdollsoccer.html', icon: '⚽' },
   { id: 'clrainbowsix', name: 'Rainbow Six', url: '/games/clrainbowsix.html', icon: '🎮' },
   { id: 'clrainbowsixalt', name: 'Rainbow Six Alt', url: '/games/clrainbowsixalt.html', icon: '🎮' },
-  { id: 'clraldiscrackhouse', name: 'Raldis Crack House', url: '/games/clraldiscrackhouse.html', icon: '🎮' },
+  { id: 'clraldiscrackhouse', name: 'Ral Disc Rack House', url: '/games/clraldiscrackhouse.html', icon: '🎮' },
   { id: 'clravenbase', name: 'Raven Base', url: '/games/clravenbase.html', icon: '🏀' },
   { id: 'clray1', name: 'Ray 1', url: '/games/clray1.html', icon: '🎮' },
   { id: 'clray2', name: 'Ray 2', url: '/games/clray2.html', icon: '🎮' },
   { id: 'clrayman', name: 'Rayman', url: '/games/clrayman.html', icon: '🎮' },
-  { id: 'clraze', name: 'Raze', url: '/games/clraze.html', icon: '🔫' },
-  { id: 'clraze2', name: 'Raze 2', url: '/games/clraze2.html', icon: '🔫' },
-  { id: 'clraze3', name: 'Raze 3', url: '/games/clraze3.html', icon: '🔫' },
-  { id: 'clre3', name: 'RE3', url: '/games/clre3.html', icon: '🎮' },
+  { id: 'clraze', name: 'Raze', url: '/games/clraze.html', icon: '🎮' },
+  { id: 'clraze2', name: 'Raze 2', url: '/games/clraze2.html', icon: '🎮' },
+  { id: 'clraze3', name: 'Raze 3', url: '/games/clraze3.html', icon: '🎮' },
+  { id: 'clre3', name: 'Re 3', url: '/games/clre3.html', icon: '🎮' },
   { id: 'clreachthecore', name: 'Reach the Core', url: '/games/clreachthecore.html', icon: '🎮' },
-  { id: 'clreacticore', name: 'Reacticore', url: '/games/clreacticore.html', icon: '🎮' },
+  { id: 'clreacticore', name: 'React Icore', url: '/games/clreacticore.html', icon: '🎮' },
   { id: 'clrealflightsim', name: 'Real Flight Sim', url: '/games/clrealflightsim.html', icon: '✈️' },
   { id: 'clrebornclient', name: 'Reborn Client', url: '/games/clrebornclient.html', icon: '🎮' },
-  { id: 'clrebuild', name: 'Rebuild', url: '/games/clrebuild.html', icon: '🏗️' },
-  { id: 'clrebuild2', name: 'Rebuild 2', url: '/games/clrebuild2.html', icon: '🏗️' },
+  { id: 'clrebuild', name: 'Rebuild', url: '/games/clrebuild.html', icon: '⛏️' },
+  { id: 'clrebuild2', name: 'Rebuild 2', url: '/games/clrebuild2.html', icon: '⛏️' },
   { id: 'clrecoil', name: 'Recoil', url: '/games/clrecoil.html', icon: '🎮' },
   { id: 'clredalert', name: 'Red Alert', url: '/games/clredalert.html', icon: '🎮' },
   { id: 'clredball2', name: 'Red Ball 2', url: '/games/clredball2.html', icon: '🎮' },
@@ -1986,31 +1993,31 @@ const games = [
   { id: 'clredball4vol3', name: 'Red Ball 4 Vol 3', url: '/games/clredball4vol3.html', icon: '🎮' },
   { id: 'clredhanded', name: 'Red Handed', url: '/games/clredhanded.html', icon: '🎮' },
   { id: 'clredtierunner', name: 'Red Tie Runner', url: '/games/clredtierunner.html', icon: '🏃' },
-  { id: 'redvbluefix', name: 'Red vs Blue Fix', url: '/games/redvbluefix.html', icon: '🎮' },
+  { id: 'redvbluefix', name: 'Red Vblue Fix', url: '/games/redvbluefix.html', icon: '🎮' },
   { id: 'clredvsblue2', name: 'Red vs Blue 2', url: '/games/clredvsblue2.html', icon: '🎮' },
   { id: 'clredvsbluewar', name: 'Red vs Blue War', url: '/games/clredvsbluewar.html', icon: '🪖' },
   { id: 'clredball', name: 'Redball', url: '/games/clredball.html', icon: '🎮' },
   { id: 'clreignofcentipede', name: 'Reign of Centipede', url: '/games/clreignofcentipede.html', icon: '🎮' },
   { id: 'clrepobad', name: 'Repobad', url: '/games/clrepobad.html', icon: '🎮' },
   { id: 'clresentclient', name: 'Resent Client', url: '/games/clresentclient.html', icon: '🎮' },
-  { id: 'clresidentevil', name: 'Resident Evil', url: '/games/clresidentevil.html', icon: '🧟' },
-  { id: 'clresidentevil2', name: 'Resident Evil 2', url: '/games/clresidentevil2.html', icon: '🧟' },
-  { id: 'clresidentevil2d1', name: 'Resident Evil 2D 1', url: '/games/clresidentevil2d1.html', icon: '🧟' },
-  { id: 'clresidentevil2d2', name: 'Resident Evil 2D 2', url: '/games/clresidentevil2d2.html', icon: '🧟' },
+  { id: 'clresidentevil', name: 'Resident Evil', url: '/games/clresidentevil.html', icon: '🎮' },
+  { id: 'clresidentevil2', name: 'Resident Evil 2', url: '/games/clresidentevil2.html', icon: '🎮' },
+  { id: 'clresidentevil2d1', name: 'Resident Evil 2D 1', url: '/games/clresidentevil2d1.html', icon: '🎮' },
+  { id: 'clresidentevil2d2', name: 'Resident Evil 2D 2', url: '/games/clresidentevil2d2.html', icon: '🎮' },
   { id: 'clresizer', name: 'Resizer', url: '/games/clresizer.html', icon: '🎮' },
-  { id: 'clresortempire', name: 'Resort Empire', url: '/games/clresortempire.html', icon: '🏖️' },
-  { id: 'clretrobowl', name: 'Retro Bowl', url: '/games/clretrobowl.html', icon: '🏈' },
-  { id: 'clretrobowlcollege', name: 'Retro Bowl College', url: '/games/clretrobowlcollege.html', icon: '🏈' },
+  { id: 'clresortempire', name: 'Resort Empire', url: '/games/clresortempire.html', icon: '🎮' },
+  { id: 'clretrobowl', name: 'Retro Bowl', url: '/games/clretrobowl.html', icon: '🎮' },
+  { id: 'clretrobowlcollege', name: 'Retro Bowl College', url: '/games/clretrobowlcollege.html', icon: '🎮' },
   { id: 'clretrohighway', name: 'Retro Highway', url: '/games/clretrohighway.html', icon: '🎮' },
   { id: 'clretropingpong', name: 'Retro Ping Pong', url: '/games/clretropingpong.html', icon: '🎮' },
-  { id: 'clreturnman', name: 'Return Man', url: '/games/clreturnman.html', icon: '🏈' },
-  { id: 'clreturnman2', name: 'Return Man 2', url: '/games/clreturnman2.html', icon: '🏈' },
+  { id: 'clreturnman', name: 'Return Man', url: '/games/clreturnman.html', icon: '🎮' },
+  { id: 'clreturnman2', name: 'Return Man 2', url: '/games/clreturnman2.html', icon: '🎮' },
   { id: 'clreturntoriddleschool', name: 'Return to Riddle School', url: '/games/clreturntoriddleschool.html', icon: '🎮' },
   { id: 'clrevolutionidle', name: 'Revolution Idle', url: '/games/clrevolutionidle.html', icon: '👆' },
   { id: 'clrewrite2', name: 'Rewrite 2', url: '/games/clrewrite2.html', icon: '🎮' },
   { id: 'clrh', name: 'Rh', url: '/games/clrh.html', icon: '🎮' },
-  { id: 'clrhythymymheaven', name: 'Rhythmy Mheaven', url: '/games/clrhythymymheaven.html', icon: '🎮' },
-  { id: 'clrhythmheaven', name: 'Rhythm Heaven', url: '/games/clrhythmheaven.html', icon: '🥁' },
+  { id: 'clrhythymymheaven', name: 'Rh Ythy My Mheaven', url: '/games/clrhythymymheaven.html', icon: '🎮' },
+  { id: 'clrhythmheaven', name: 'Rhythm Heaven', url: '/games/clrhythmheaven.html', icon: '🎵' },
   { id: 'clricochetkills2', name: 'Ricochet Kills 2', url: '/games/clricochetkills2.html', icon: '🎮' },
   { id: 'clriddle', name: 'Riddle', url: '/games/clriddle.html', icon: '🎮' },
   { id: 'clriddlemiddleschool', name: 'Riddle Middle School', url: '/games/clriddlemiddleschool.html', icon: '🎮' },
@@ -2019,8 +2026,8 @@ const games = [
   { id: 'clriddleschool3', name: 'Riddle School 3', url: '/games/clriddleschool3.html', icon: '🎮' },
   { id: 'clriddletransfer', name: 'Riddle Transfer', url: '/games/clriddletransfer.html', icon: '🎮' },
   { id: 'clriddletransfer2', name: 'Riddle Transfer 2', url: '/games/clriddletransfer2.html', icon: '🎮' },
-  { id: 'riddleuneversityfix', name: 'Riddle University Fix', url: '/games/riddleuneversityfix.html', icon: '🎮' },
-  { id: 'clriddleschool445544444--444-444', name: 'Riddle School (Alt)', url: '/games/clriddleschool445544444$$444$444.html', icon: '🎮' },
+  { id: 'riddleuneversityfix', name: 'Riddle Unevers It Yfix', url: '/games/riddleuneversityfix.html', icon: '🎮' },
+  { id: 'clriddleschool445544444--444-444', name: 'Riddleschool 445544444$$444$444', url: '/games/clriddleschool445544444$$444$444.html', icon: '🎮' },
   { id: 'clridgeracer', name: 'Ridge Racer', url: '/games/clridgeracer.html', icon: '🏎️' },
   { id: 'clrisehigher', name: 'Rise Higher', url: '/games/clrisehigher.html', icon: '🎮' },
   { id: 'clristar', name: 'Ristar', url: '/games/clristar.html', icon: '🌌' },
@@ -2030,36 +2037,36 @@ const games = [
   { id: 'clroadofthedead2', name: 'Road of the Dead 2', url: '/games/clroadofthedead2.html', icon: '🧟' },
   { id: 'clroadrunnernes', name: 'Roadrunner NES', url: '/games/clroadrunnernes.html', icon: '🏃' },
   { id: 'clrocketgoalio', name: 'Rocket Go Alio', url: '/games/clrocketgoalio.html', icon: '🌌' },
-  { id: 'clrocketjump', name: 'Rocket Jump', url: '/games/clrocketjump.html', icon: '🚀' },
+  { id: 'clrocketjump', name: 'Rocket Jump', url: '/games/clrocketjump.html', icon: '🏃' },
   { id: 'clrocketknight2--1', name: 'Rocket Knight 2', url: '/games/clrocketknight2%20(1).html', icon: '⚔️' },
   { id: 'clrocketknightadventures', name: 'Rocket Knight Adventures', url: '/games/clrocketknightadventures.html', icon: '⚔️' },
-  { id: 'clrocketleague', name: 'Rocket League', url: '/games/clrocketleague.html', icon: '🚗' },
+  { id: 'clrocketleague', name: 'Rocket League', url: '/games/clrocketleague.html', icon: '🌌' },
   { id: 'clrocketsoccerderby', name: 'Rocket Soccer Derby', url: '/games/clrocketsoccerderby.html', icon: '⚽' },
   { id: 'clrodha', name: 'Rodha', url: '/games/clrodha.html', icon: '🎮' },
   { id: 'clroguesoul', name: 'Rogue Soul', url: '/games/clroguesoul.html', icon: '🎮' },
   { id: 'clroguesoul2', name: 'Rogue Soul 2', url: '/games/clroguesoul2.html', icon: '🎮' },
-  { id: 'clrollyvortex', name: 'Rolly Vortex', url: '/games/clrollyvortex.html', icon: '🎮' },
-  { id: 'clrollerballer', name: 'Rollerballer', url: '/games/clrollerballer.html', icon: '🎮' },
+  { id: 'clrollyvortex', name: 'Roll Yvortex', url: '/games/clrollyvortex.html', icon: '🎮' },
+  { id: 'clrollerballer', name: 'Roller Ball Er', url: '/games/clrollerballer.html', icon: '🎮' },
   { id: 'clrollingsky', name: 'Rolling Sky', url: '/games/clrollingsky.html', icon: '🎮' },
   { id: 'clrolypolymonster', name: 'Roly Poly Monster', url: '/games/clrolypolymonster.html', icon: '🎮' },
   { id: 'clrooftoprun', name: 'Rooftop Run', url: '/games/clrooftoprun.html', icon: '🎮' },
-  { id: 'clrooftopsnipers', name: 'Rooftop Snipers', url: '/games/clrooftopsnipers.html', icon: '🎯' },
-  { id: 'clrooftopsnipers2', name: 'Rooftop Snipers 2', url: '/games/clrooftopsnipers2.html', icon: '🎯' },
-  { id: 'clroomclicker', name: 'Room Clicker', url: '/games/clroomclicker.html', icon: '👆' },
+  { id: 'clrooftopsnipers', name: 'Rooftop Snipers', url: '/games/clrooftopsnipers.html', icon: '🔫' },
+  { id: 'clrooftopsnipers2', name: 'Rooftop Snipers 2', url: '/games/clrooftopsnipers2.html', icon: '🔫' },
+  { id: 'clroomclicker', name: 'Room Click Er', url: '/games/clroomclicker.html', icon: '👆' },
   { id: 'clrosegold', name: 'Rose Gold', url: '/games/clrosegold.html', icon: '🎮' },
   { id: 'clrotate', name: 'Rotate', url: '/games/clrotate.html', icon: '🎮' },
   { id: 'clroulettehero', name: 'Roulette Hero', url: '/games/clroulettehero.html', icon: '🎮' },
-  { id: 'clrouletteknight', name: 'Roulette Knight', url: '/games/clrouletteknight.html', icon: '🎴' },
-  { id: 'clrun', name: 'Run', url: '/games/clrun.html', icon: '🏃' },
-  { id: 'clrun2', name: 'Run 2', url: '/games/clrun2.html', icon: '🏃' },
-  { id: 'clrunningfred', name: 'Running Fred', url: '/games/clrunningfred.html', icon: '🏃' },
+  { id: 'clrouletteknight', name: 'Roulette Knight', url: '/games/clrouletteknight.html', icon: '⚔️' },
+  { id: 'clrun', name: 'Run', url: '/games/clrun.html', icon: '🎮' },
+  { id: 'clrun2', name: 'Run 2', url: '/games/clrun2.html', icon: '🎮' },
+  { id: 'clrunningfred', name: 'Running Fred', url: '/games/clrunningfred.html', icon: '🎮' },
   { id: 'clrussianbuckshot', name: 'Russian Buckshot', url: '/games/clrussianbuckshot.html', icon: '🎮' },
   { id: 'clrussiancardriver', name: 'Russian Card River', url: '/games/clrussiancardriver.html', icon: '🏎️' },
   { id: 'clrussiansandbox', name: 'Russian Sandbox', url: '/games/clrussiansandbox.html', icon: '🎮' },
-  { id: 'clsaihatestation', name: 'Saihate Station', url: '/games/clsaihatestation.html', icon: '🎮' },
-  { id: 'clsandtris', name: 'Sandtris', url: '/games/clsandtris.html', icon: '🎮' },
+  { id: 'clsaihatestation', name: 'Sai Hate Station', url: '/games/clsaihatestation.html', icon: '🎮' },
+  { id: 'clsandtris', name: 'Sand Tr Is', url: '/games/clsandtris.html', icon: '🎮' },
   { id: 'clsandboxcity', name: 'Sandbox City', url: '/games/clsandboxcity.html', icon: '🎮' },
-  { id: 'clsandboxels', name: 'Sandboxels', url: '/games/clsandboxels.html', icon: '🎮' },
+  { id: 'clsandboxels', name: 'Sandbox Els', url: '/games/clsandboxels.html', icon: '🎮' },
   { id: 'clsandsofthecoliseum', name: 'Sands of the Coliseum', url: '/games/clsandsofthecoliseum.html', icon: '🎮' },
   { id: 'clsandstone-1', name: 'Sandstone', url: '/games/clsandstone(1).html', icon: '🎮' },
   { id: 'clsantarun', name: 'Santa Run', url: '/games/clsantarun.html', icon: '🎮' },
@@ -2068,18 +2075,18 @@ const games = [
   { id: 'clsatryn', name: 'Satryn', url: '/games/clsatryn.html', icon: '🎮' },
   { id: 'clsaulgoodmanrun', name: 'Saul Goodman Run', url: '/games/clsaulgoodmanrun.html', icon: '🎮' },
   { id: 'clsausageflip', name: 'Sausage Flip', url: '/games/clsausageflip.html', icon: '🎮' },
-  { id: 'clsayorisnotebook', name: "Sayori's Notebook", url: '/games/clsayorisnotebook.html', icon: '🎮' },
+  { id: 'clsayorisnotebook', name: 'Say or Is Notebook', url: '/games/clsayorisnotebook.html', icon: '🎮' },
   { id: 'clscalethedepths', name: 'Scale the Depths', url: '/games/clscalethedepths.html', icon: '🎮' },
   { id: 'clscarletandviolet', name: 'Scarlet and Violet', url: '/games/clscarletandviolet.html', icon: '🎮' },
   { id: 'clscarletshift', name: 'Scarlet Shift', url: '/games/clscarletshift.html', icon: '🎮' },
-  { id: 'clscarymazegame', name: 'Scary Maze Game', url: '/games/clscarymazegame.html', icon: '😱' },
-  { id: 'clscaryshawarma', name: 'Scary Shawarma', url: '/games/clscaryshawarma.html', icon: '😱' },
-  { id: 'clscaryteacher3d', name: 'Scary Teacher 3D', url: '/games/clscaryteacher3d.html', icon: '😱' },
+  { id: 'clscarymazegame', name: 'Scary Maze Game', url: '/games/clscarymazegame.html', icon: '🧟' },
+  { id: 'clscaryshawarma', name: 'Scary Shawarma', url: '/games/clscaryshawarma.html', icon: '🧟' },
+  { id: 'clscaryteacher3d', name: 'Scary Teacher 3D', url: '/games/clscaryteacher3d.html', icon: '🧟' },
   { id: 'clschoolboyrunaway', name: 'Schoolboy Runaway', url: '/games/clschoolboyrunaway.html', icon: '🎮' },
   { id: 'clscrapmetal3', name: 'Scrap Metal 3', url: '/games/clscrapmetal3.html', icon: '🎮' },
   { id: 'clscrapyarddog', name: 'Scrap Yard Dog', url: '/games/clscrapyarddog.html', icon: '🎮' },
   { id: 'clscratchoptions', name: 'Scratch Options', url: '/games/clscratchoptions.html', icon: '🎮' },
-  { id: 'clscribblenauts', name: 'Scribblenauts', url: '/games/clscribblenauts.html', icon: '🎮' },
+  { id: 'clscribblenauts', name: 'Scribble Naut S', url: '/games/clscribblenauts.html', icon: '🎮' },
   { id: 'clscubabear', name: 'Scuba Bear', url: '/games/clscubabear.html', icon: '🎮' },
   { id: 'clsd-thewar', name: 'Sd Thewar', url: '/games/clsd-thewar.html', icon: '🪖' },
   { id: 'clsdf', name: 'Sdf', url: '/games/clsdf.html', icon: '🎮' },
@@ -2297,7 +2304,7 @@ const games = [
   { id: 'clspyhunter', name: 'Spy Hunter', url: '/games/clspyhunter.html', icon: '🎮' },
   { id: 'clsquidplayground', name: 'Squid Playground', url: '/games/clsquidplayground.html', icon: '🎮' },
   { id: 'clstackballio', name: 'Stack Ball IO', url: '/games/clstackballio.html', icon: '🎮' },
-  { id: 'clstacktris', name: 'Stacktris', url: '/games/clstacktris.html', icon: '🎮' },
+  { id: 'clstacktris', name: 'Stack Tr Is', url: '/games/clstacktris.html', icon: '🎮' },
   { id: 'clstackydash', name: 'Stacky Dash', url: '/games/clstackydash.html', icon: '🎮' },
   { id: 'clstarfox64', name: 'Star Fox 64', url: '/games/clstarfox64.html', icon: '🌌' },
   { id: 'clstarlike', name: 'Star Like', url: '/games/clstarlike.html', icon: '🌌' },
@@ -2341,7 +2348,7 @@ const games = [
   { id: 'clstrangejournet', name: 'Strange Jour Net', url: '/games/clstrangejournet.html', icon: '🎮' },
   { id: 'clstreangeropepolice', name: 'Stre Ange Rope Police', url: '/games/clstreangeropepolice.html', icon: '🎮' },
   { id: 'clstreetfighter1arcade', name: 'Street Fighter 1 Arcade', url: '/games/clStreetFighter1Arcade.html', icon: '🥊' },
-  { id: 'clstreetfighter2', name: 'Street Fighter 2', url: '/games/clstreetfighter2.html', icon: '👊' },
+  { id: 'clstreetfighter2', name: 'Street Fighter 2', url: '/games/clstreetfighter2.html', icon: '🥊' },
   { id: 'clstreetfighter2arcade', name: 'Street Fighter 2 Arcade', url: '/games/clStreetFighter2Arcade.html', icon: '🥊' },
   { id: 'clstreetfighter2cearcade', name: 'Street Fighter 2 CE Arcade', url: '/games/clStreetFighter2CEArcade.html', icon: '🥊' },
   { id: 'clstreetfighter2turbo', name: 'Street Fighter 2 Turbo', url: '/games/clstreetfighter2turbo.html', icon: '🥊' },
@@ -2427,31 +2434,31 @@ const games = [
   { id: 'clsuperoliverworld', name: 'Super Oliver World', url: '/games/clsuperoliverworld.html', icon: '🎮' },
   { id: 'clsuperonionboy2', name: 'Super Onion Boy 2', url: '/games/clsuperonionboy2.html', icon: '🎮' },
   { id: 'clsuperpickleballadventure', name: 'Super Pickle Ball Adventure', url: '/games/clsuperpickleballadventure.html', icon: '🎮' },
-  { id: 'clsuperpunchout', name: 'Super Punch Out', url: '/games/clsuperpunchout.html', icon: '🥊' },
-  { id: 'clsuperpunchouten', name: 'Super Punch-Out!! (EN)', url: '/games/clSuperPunchOutEN.html', icon: '🥊' },
-  { id: 'clsuperpuzzlefighter2turbo', name: 'Super Puzzle Fighter 2 Turbo', url: '/games/clsuperpuzzlefighter2turbo.html', icon: '🧩' },
-  { id: 'clsuperpuzzlefighter2turboalt', name: 'Super Puzzle Fighter 2 Turbo Alt', url: '/games/clsuperpuzzlefighter2turboalt.html', icon: '🧩' },
+  { id: 'clsuperpunchout', name: 'Super Punch Out', url: '/games/clsuperpunchout.html', icon: '🎮' },
+  { id: 'clsuperpunchouten', name: 'Super Punch-Out!! (EN)', url: '/games/clSuperPunchOutEN.html', icon: '🎮' },
+  { id: 'clsuperpuzzlefighter2turbo', name: 'Super Puzzle Fighter 2 Turbo', url: '/games/clsuperpuzzlefighter2turbo.html', icon: '🥊' },
+  { id: 'clsuperpuzzlefighter2turboalt', name: 'Super Puzzle Fighter 2 Turbo Alt', url: '/games/clsuperpuzzlefighter2turboalt.html', icon: '🥊' },
   { id: 'clsupersantakicker', name: 'Super Santa Kicker', url: '/games/clsupersantakicker.html', icon: '🎮' },
   { id: 'clsupersantakicker2', name: 'Super Santa Kicker 2', url: '/games/clsupersantakicker2.html', icon: '🎮' },
-  { id: 'clsuperscribblenauts', name: 'Super Scribblenauts', url: '/games/clsuperscribblenauts.html', icon: '🎮' },
-  { id: 'clsupersmashbros', name: 'Super Smash Bros', url: '/games/clsupersmashbros.html', icon: '💥' },
-  { id: 'clsupersmashflash', name: 'Super Smash Flash', url: '/games/clsupersmashflash.html', icon: '💥' },
-  { id: 'clsupersmashflash2', name: 'Super Smash Flash 2', url: '/games/clsupersmashflash2.html', icon: '💥' },
-  { id: 'clsupersmashflash2butdifversion', name: 'Super Smash Flash 2 But Dif Version', url: '/games/clsupersmashflash2butdifversion.html', icon: '💥' },
+  { id: 'clsuperscribblenauts', name: 'Super Scribble Naut S', url: '/games/clsuperscribblenauts.html', icon: '🎮' },
+  { id: 'clsupersmashbros', name: 'Super Smash Bros', url: '/games/clsupersmashbros.html', icon: '🥊' },
+  { id: 'clsupersmashflash', name: 'Super Smash Flash', url: '/games/clsupersmashflash.html', icon: '🥊' },
+  { id: 'clsupersmashflash2', name: 'Super Smash Flash 2', url: '/games/clsupersmashflash2.html', icon: '🥊' },
+  { id: 'clsupersmashflash2butdifversion', name: 'Super Smash Flash 2 But Dif Version', url: '/games/clsupersmashflash2butdifversion.html', icon: '🥊' },
   { id: 'clssf2arcade', name: 'Super Street Fighter 2 Arcade', url: '/games/clSSF2Arcade.html', icon: '🥊' },
   { id: 'clsuperstreetfighter2turbojp', name: 'Super Street Fighter 2 Turbo JP', url: '/games/clsuperstreetfighter2turbojp.html', icon: '🥊' },
   { id: 'clsupertiltbros', name: 'Super Tilt Bros', url: '/games/clsupertiltbros.html', icon: '🎮' },
   { id: 'clsuperc', name: 'Superc', url: '/games/clsuperc.html', icon: '🎮' },
   { id: 'clsupercarrush', name: 'Supercar Rush', url: '/games/clsupercarrush.html', icon: '🎮' },
-  { id: 'clsupercastlevaniavi', name: 'Super Castlevania IV', url: '/games/clsupercastlevaniaVI.html', icon: '⚔️' },
-  { id: 'clsupernoahsark3d', name: 'Super Noahs Ark 3D', url: '/games/clsupernoahsark3D.html', icon: '🎮' },
-  { id: 'clsupersmashflash0-8', name: 'Super Smash Flash 0.8', url: '/games/clsupersmashflash0.8.html', icon: '💥' },
+  { id: 'clsupercastlevaniavi', name: 'Supercastlevania VI', url: '/games/clsupercastlevaniaVI.html', icon: '⚔️' },
+  { id: 'clsupernoahsark3d', name: 'Supernoahsark 3 D', url: '/games/clsupernoahsark3D.html', icon: '🎮' },
+  { id: 'clsupersmashflash0-8', name: 'Supersmashflash 0.8', url: '/games/clsupersmashflash0.8.html', icon: '🥊' },
   { id: 'clsupremeduelist', name: 'Supreme Duelist', url: '/games/clsupremeduelist.html', icon: '🎮' },
   { id: 'clsupremeduelist2019', name: 'Supreme Duelist 2019', url: '/games/clSupremeDuelist2019.html', icon: '🎮' },
   { id: 'supremeduelistfix', name: 'Supreme Duelist Fix', url: '/games/supremeduelistfix.html', icon: '🎮' },
-  { id: 'clsurvevio', name: 'Surviv.io', url: '/games/clsurvevio.html', icon: '🎮' },
+  { id: 'clsurvevio', name: 'Sur Ve Vio', url: '/games/clsurvevio.html', icon: '🎮' },
   { id: 'clsurvivalracev2', name: 'Survival Race V2', url: '/games/clsurvivalracev2.html', icon: '🏎️' },
-  { id: 'clsurvivorio', name: 'Survivor IO', url: '/games/clsurvivorio.html', icon: '⚔️' },
+  { id: 'clsurvivorio', name: 'Survivor IO', url: '/games/clsurvivorio.html', icon: '🎮' },
   { id: 'clsushicat', name: 'Sushi Cat', url: '/games/clsushicat.html', icon: '🎮' },
   { id: 'clsushicat2', name: 'Sushi Cat 2', url: '/games/clsushicat2.html', icon: '🎮' },
   { id: 'clsushiunroll', name: 'Sushi Unroll', url: '/games/clsushiunroll.html', icon: '🎮' },
@@ -2464,15 +2471,15 @@ const games = [
   { id: 'clswordsandsandals', name: 'Swords and Sandals', url: '/games/clswordsandsandals.html', icon: '⚔️' },
   { id: 'clswordsandsandals2', name: 'Swords and Sandals 2', url: '/games/clswordsandsandals2.html', icon: '⚔️' },
   { id: 'clswordsandsouls', name: 'Swords and Souls', url: '/games/clswordsandsouls.html', icon: '⚔️' },
-  { id: 'clsydneyshark', name: 'Sydney Shark', url: '/games/clsydneyshark.html', icon: '🦈' },
+  { id: 'clsydneyshark', name: 'Sydney Shark', url: '/games/clsydneyshark.html', icon: '🐟' },
   { id: 'cltabi', name: 'Tabi', url: '/games/cltabi.html', icon: '🎮' },
   { id: 'cltabletanks', name: 'Table Tanks', url: '/games/cltabletanks.html', icon: '🪖' },
   { id: 'cltabletennisworldtour', name: 'Table Tennis World Tour', url: '/games/cltabletennisworldtour.html', icon: '🏐' },
-  { id: 'cltacostand', name: 'Taco Stand', url: '/games/cltacostand.html', icon: '🌮' },
+  { id: 'cltacostand', name: 'Taco Stand', url: '/games/cltacostand.html', icon: '🎮' },
   { id: 'cltag', name: 'Tag', url: '/games/cltag-.html', icon: '🎮' },
-  { id: 'cltagc3', name: 'TAGC 3', url: '/games/cltagc3.html', icon: '🎮' },
-  { id: 'cltagcm', name: 'TAGCM', url: '/games/cltagcm.html', icon: '🎮' },
-  { id: 'cltaikonotatsujin', name: 'Taiko no Tatsujin', url: '/games/clTaikonoTatsujin.html', icon: '🥁' },
+  { id: 'cltagc3', name: 'Tagc 3', url: '/games/cltagc3.html', icon: '🎮' },
+  { id: 'cltagcm', name: 'Tagcm', url: '/games/cltagcm.html', icon: '🎮' },
+  { id: 'cltaikonotatsujin', name: 'Taiko No Tatsujin', url: '/games/clTaikonoTatsujin.html', icon: '🎮' },
   { id: 'cltailofthedragon', name: 'Tail of the Dragon', url: '/games/cltailofthedragon.html', icon: '⚔️' },
   { id: 'cltailsadventure', name: 'Tails Adventure', url: '/games/cltailsadventure.html', icon: '💨' },
   { id: 'cltailsskypatrol', name: 'Tails Sky Patrol', url: '/games/cltailsskypatrol.html', icon: '💨' },
@@ -2484,83 +2491,83 @@ const games = [
   { id: 'cltankpixel', name: 'Tank Pixel', url: '/games/cltankpixel.html', icon: '🪖' },
   { id: 'cltanktrouble', name: 'Tank Trouble', url: '/games/cltanktrouble.html', icon: '🪖' },
   { id: 'cltanukisunset', name: 'Tanuki Sunset', url: '/games/cltanukisunset.html', icon: '🎮' },
-  { id: 'cltanukisunsetuhhhhhhhh', name: 'Tanuki Sunset (Alt)', url: '/games/cltanukisunsetuhhhhhhhh.html', icon: '🎮' },
-  { id: 'cltapper', name: 'Tapper', url: '/games/cltapper.html', icon: '🍺' },
+  { id: 'cltanukisunsetuhhhhhhhh', name: 'Tanuki Sunset Uhh Hh Hh Hh', url: '/games/cltanukisunsetuhhhhhhhh.html', icon: '🎮' },
+  { id: 'cltapper', name: 'Tapper', url: '/games/cltapper.html', icon: '🎮' },
   { id: 'cltaproad', name: 'Taproad', url: '/games/cltaproad.html', icon: '🎮' },
   { id: 'cltastyplanet', name: 'Tasty Planet', url: '/games/cltastyplanet.html', icon: '✈️' },
-  { id: 'cltboidemo', name: 'TBOI Demo', url: '/games/cltboidemo.html', icon: '🎮' },
-  { id: 'cltboilambeternal', name: 'TBOI Lamb Eternal', url: '/games/cltboilambeternal.html', icon: '🎮' },
-  { id: 'cltelocation', name: 'Telocation', url: '/games/cltelocation.html', icon: '🎮' },
-  { id: 'cltecmobowl', name: 'Tecmo Bowl', url: '/games/cltecmobowl.html', icon: '🎮' },
-  { id: 'cltekken2ps1', name: 'Tekken 2 PS1', url: '/games/cltekken2ps1.html', icon: '🥊' },
-  { id: 'cltekken3ps1', name: 'Tekken 3 PS1', url: '/games/cltekken3ps1.html', icon: '🥊' },
+  { id: 'cltboidemo', name: 'Tboi Demo', url: '/games/cltboidemo.html', icon: '🎮' },
+  { id: 'cltboilambeternal', name: 'Tboi Lamb Eternal', url: '/games/cltboilambeternal.html', icon: '🎮' },
+  { id: 'cltelocation', name: 'Te Location', url: '/games/cltelocation.html', icon: '🎮' },
+  { id: 'cltecmobowl', name: 'Tec Mo Bowl', url: '/games/cltecmobowl.html', icon: '🎮' },
+  { id: 'cltekken2ps1', name: 'Tekken 2 Ps 1', url: '/games/cltekken2ps1.html', icon: '🥊' },
+  { id: 'cltekken3ps1', name: 'Tekken 3 Ps 1', url: '/games/cltekken3ps1.html', icon: '🥊' },
   { id: 'cltelephonetrouble', name: 'Telephone Trouble', url: '/games/cltelephonetrouble.html', icon: '🎮' },
-  { id: 'cltempoverdose', name: 'Tempo Overdose', url: '/games/cltempoverdose.html', icon: '🎮' },
+  { id: 'cltempoverdose', name: 'Temp Overdose', url: '/games/cltempoverdose.html', icon: '🎮' },
   { id: 'cltempest2000', name: 'Tempest 2000', url: '/games/cltempest2000.html', icon: '🎮' },
   { id: 'cltempleofboom', name: 'Temple of Boom', url: '/games/cltempleofboom.html', icon: '🎮' },
   { id: 'cltemplerun2', name: 'Temple Run 2', url: '/games/cltemplerun2.html', icon: '🎮' },
   { id: 'cltennisnes', name: 'Tennis NES', url: '/games/cltennisnes.html', icon: '🏐' },
   { id: 'clteod', name: 'Teod', url: '/games/clteod.html', icon: '🎮' },
   { id: 'clterra', name: 'Terra', url: '/games/clterra.html', icon: '🎮' },
-  { id: 'clterritorialio', name: 'Territorial IO', url: '/games/clterritorialio.html', icon: '🗺️' },
-  { id: 'clterritorywar', name: 'Territory War', url: '/games/clterritorywar.html', icon: '🗺️' },
-  { id: 'clterritorywar2', name: 'Territory War 2', url: '/games/clterritorywar2.html', icon: '🗺️' },
-  { id: 'clterritorywar3', name: 'Territory War 3', url: '/games/clterritorywar3.html', icon: '🗺️' },
-  { id: 'cltetris', name: 'Tetris', url: '/games/cltetris.html', icon: '🟦' },
-  { id: 'cltetrisattack', name: 'Tetris Attack', url: '/games/cltetrisattack.html', icon: '🟦' },
-  { id: 'cltetrisgba', name: 'Tetris GBA', url: '/games/cltetrisgba.html', icon: '🟦' },
-  { id: 'cltetrisgrandmaster2', name: 'Tetris Grandmaster 2', url: '/games/cltetrisgrandmaster2.html', icon: '🟦' },
+  { id: 'clterritorialio', name: 'Territorial IO', url: '/games/clterritorialio.html', icon: '🎮' },
+  { id: 'clterritorywar', name: 'Territory War', url: '/games/clterritorywar.html', icon: '🪖' },
+  { id: 'clterritorywar2', name: 'Territory War 2', url: '/games/clterritorywar2.html', icon: '🪖' },
+  { id: 'clterritorywar3', name: 'Territory War 3', url: '/games/clterritorywar3.html', icon: '🪖' },
+  { id: 'cltetris', name: 'Tetris', url: '/games/cltetris.html', icon: '🧩' },
+  { id: 'cltetrisattack', name: 'Tetris Attack', url: '/games/cltetrisattack.html', icon: '🧩' },
+  { id: 'cltetrisgba', name: 'Tetris GBA', url: '/games/cltetrisgba.html', icon: '🧩' },
+  { id: 'cltetrisgrandmaster2', name: 'Tetris Grandmaster 2', url: '/games/cltetrisgrandmaster2.html', icon: '🧩' },
   { id: 'clthanksforremindingmeihadtofixthis', name: 'Thanks for Reminding Mei Had to Fix This', url: '/games/clthanksforremindingmeihadtofixthis.html', icon: '🎮' },
-  { id: 'cltheclassroom', name: 'The Classroom', url: '/games/cltheclassroom.html', icon: '🏫' },
-  { id: 'cltheclassroom2', name: 'The Classroom 2', url: '/games/cltheclassroom2.html', icon: '🏫' },
-  { id: 'cltheclassroom3', name: 'The Classroom 3', url: '/games/cltheclassroom3.html', icon: '🏫' },
+  { id: 'cltheclassroom', name: 'The Classroom', url: '/games/cltheclassroom.html', icon: '🎮' },
+  { id: 'cltheclassroom2', name: 'The Classroom 2', url: '/games/cltheclassroom2.html', icon: '🎮' },
+  { id: 'cltheclassroom3', name: 'The Classroom 3', url: '/games/cltheclassroom3.html', icon: '🎮' },
   { id: 'clthedeadseat', name: 'The Dead Seat', url: '/games/clthedeadseat.html', icon: '🧟' },
-  { id: 'clthedeepestsleep', name: 'The Deepest Sleep', url: '/games/clthedeepestsleep.html', icon: '😴' },
+  { id: 'clthedeepestsleep', name: 'The Deepest Sleep', url: '/games/clthedeepestsleep.html', icon: '🎮' },
   { id: 'cltheenchantedcave2', name: 'The Enchanted Cave 2', url: '/games/cltheenchantedcave2.html', icon: '🎮' },
   { id: 'cltheimpossiblegame', name: 'The Impossible Game', url: '/games/cltheimpossiblegame.html', icon: '🎮' },
   { id: 'cltheincrediblemachine', name: 'The Incredible Machine', url: '/games/cltheincrediblemachine.html', icon: '🎮' },
   { id: 'clthelaststand', name: 'The Last Stand', url: '/games/clthelaststand.html', icon: '🎮' },
   { id: 'clthelaststandunioncity--1', name: 'The Last Stand Union City', url: '/games/clthelaststandunioncity%20(1).html', icon: '🎮' },
   { id: 'cltheloneranger', name: 'The Lone Ranger', url: '/games/clTheLoneRanger.html', icon: '🎮' },
-  { id: 'clthemaninthewindow', name: 'The Man in the Window', url: '/games/clthemaninthewindow.html', icon: '👁️' },
+  { id: 'clthemaninthewindow', name: 'The Man in the Window', url: '/games/clthemaninthewindow.html', icon: '🎮' },
   { id: 'clthesodorrace', name: 'The Sodor Race', url: '/games/clthesodorrace.html', icon: '🏎️' },
-  { id: 'clthedude', name: 'The Dude', url: '/games/clthedude.html', icon: '🎮' },
+  { id: 'clthedude', name: 'Thedude', url: '/games/clthedude.html', icon: '🎮' },
   { id: 'clthemepark', name: 'Theme Park', url: '/games/clthemepark.html', icon: '🎮' },
-  { id: 'clthemeparkpsx', name: 'Theme Park PSX', url: '/games/clthemeparkpsx.html', icon: '🎮' },
-  { id: 'clthepit', name: 'The Pit', url: '/games/clthepit.html', icon: '🎮' },
-  { id: 'clthereisnofile', name: 'There Is No File', url: '/games/clthereisnofile.html', icon: '📁' },
+  { id: 'clthemeparkpsx', name: 'Theme Park Ps X', url: '/games/clthemeparkpsx.html', icon: '🎮' },
+  { id: 'clthepit', name: 'Thepit', url: '/games/clthepit.html', icon: '🎮' },
+  { id: 'clthereisnofile', name: 'There Is No File', url: '/games/clthereisnofile.html', icon: '🎮' },
   { id: 'cltheyarecoming', name: 'They Are Coming', url: '/games/cltheyarecoming.html', icon: '🎮' },
-  { id: 'thiefpuzzle', name: 'Thief Puzzle', url: '/games/thiefpuzzle.html', icon: '🔓' },
-  { id: 'clthisistheonlylevel', name: 'This Is the Only Level', url: '/games/clthisistheonlylevel.html', icon: '🐘' },
-  { id: 'clthisistheonlylevel2', name: 'This Is the Only Level 2', url: '/games/clthisistheonlylevel2.html', icon: '🐘' },
-  { id: 'clthisistheonlyleveltoo', name: 'This Is the Only Level Too', url: '/games/clthisistheonlyleveltoo.html', icon: '🐘' },
+  { id: 'thiefpuzzle', name: 'Thief Puzzle', url: '/games/thiefpuzzle.html', icon: '🧩' },
+  { id: 'clthisistheonlylevel', name: 'This Is the Only Level', url: '/games/clthisistheonlylevel.html', icon: '🎮' },
+  { id: 'clthisistheonlylevel2', name: 'This Is the Only Level 2', url: '/games/clthisistheonlylevel2.html', icon: '🎮' },
+  { id: 'clthisistheonlyleveltoo', name: 'This Is the Only Level Too', url: '/games/clthisistheonlyleveltoo.html', icon: '🎮' },
   { id: 'clthreegoblets', name: 'Three Goblets', url: '/games/clthreegoblets.html', icon: '🎮' },
-  { id: 'clthrowapotato', name: 'Throw a Potato', url: '/games/clthrowapotato.html', icon: '🎮' },
-  { id: 'clthrowapotatoagain', name: 'Throw a Potato Again', url: '/games/clthrowapotatoagain.html', icon: '🎮' },
+  { id: 'clthrowapotato', name: 'Throw Apotato', url: '/games/clthrowapotato.html', icon: '🎮' },
+  { id: 'clthrowapotatoagain', name: 'Throw Apotato Again', url: '/games/clthrowapotatoagain.html', icon: '🎮' },
   { id: 'clthwack', name: 'Thwack', url: '/games/clthwack.html', icon: '🎮' },
   { id: 'cltiberiandawn', name: 'Tiberian Dawn', url: '/games/cltiberiandawn.html', icon: '🎮' },
-  { id: 'cltimeshooter2', name: 'Time Shooter 2', url: '/games/cltimeshooter2.html', icon: '🎯' },
-  { id: 'cltimeshooter3', name: 'Time Shooter 3', url: '/games/cltimeshooter3.html', icon: '🎯' },
-  { id: 'time-shooter-3', name: 'Time Shooter 3 SWAT', url: '/games/Time%20Shooter%203_%20SWAT%20(1).html', icon: '🎯' },
+  { id: 'cltimeshooter2', name: 'Time Shooter 2', url: '/games/cltimeshooter2.html', icon: '🔫' },
+  { id: 'cltimeshooter3', name: 'Time Shooter 3', url: '/games/cltimeshooter3.html', icon: '🔫' },
+  { id: 'time-shooter-3', name: 'Time Shooter 3 SWAT', url: '/games/Time%20Shooter%203_%20SWAT%20(1).html', icon: '🪖' },
   { id: 'cltimewarriors', name: 'Time Warriors', url: '/games/cltimewarriors.html', icon: '🪖' },
-  { id: 'cltinyfishing', name: 'Tiny Fishing', url: '/games/cltinyfishing.html', icon: '🎣' },
+  { id: 'cltinyfishing', name: 'Tiny Fishing', url: '/games/cltinyfishing.html', icon: '🐟' },
   { id: 'cltmnt', name: 'Tmnt', url: '/games/cltmnt.html', icon: '🎮' },
   { id: 'cltmnt2arc', name: 'Tmnt 2 Arc', url: '/games/cltmnt2arc.html', icon: '🎮' },
   { id: 'cltmntturtlesintime', name: 'Tmnt Turtles in Time', url: '/games/cltmntturtlesintime.html', icon: '🎮' },
   { id: 'cltmntarc', name: 'Tmntarc', url: '/games/cltmntarc.html', icon: '🎮' },
-  { id: 'cltoastarling', name: 'Toastarling', url: '/games/cltoastarling.html', icon: '🌟' },
-  { id: 'cltommorowandyesterday', name: 'Tomorrow and Yesterday', url: '/games/cltommorowandyesterday.html', icon: '🎮' },
+  { id: 'cltoastarling', name: 'To Astarling', url: '/games/cltoastarling.html', icon: '🌌' },
+  { id: 'cltommorowandyesterday', name: 'To MMO Row and Yesterday', url: '/games/cltommorowandyesterday.html', icon: '🎮' },
   { id: 'cltoasterball', name: 'Toaster Ball', url: '/games/cltoasterball.html', icon: '🎮' },
-  { id: 'cltoejam-earl', name: 'ToeJam & Earl', url: '/games/cltoejam&earl.html', icon: '🎮' },
-  { id: 'cltoejam-earlpof', name: 'ToeJam & Earl (POF)', url: '/games/cltoejam&earlpof.html', icon: '🎮' },
+  { id: 'cltoejam-earl', name: 'Toejam&earl', url: '/games/cltoejam&earl.html', icon: '🎮' },
+  { id: 'cltoejam-earlpof', name: 'Toejam&earlpof', url: '/games/cltoejam&earlpof.html', icon: '🎮' },
   { id: 'cltombofthemass', name: 'Tomb of the Mass', url: '/games/cltombofthemass.html', icon: '🎮' },
-  { id: 'cltomodachicollection', name: 'Tomodachi Collection', url: '/games/cltomodachicollection.html', icon: '🎮' },
+  { id: 'cltomodachicollection', name: 'Tomo Dachi Collection', url: '/games/cltomodachicollection.html', icon: '🎮' },
   { id: 'cltonyhawkskater2', name: 'Tony Hawk Skater 2', url: '/games/cltonyhawkskater2.html', icon: '🎮' },
   { id: 'cltonyhawkskater4', name: 'Tony Hawk Skater 4', url: '/games/cltonyhawkskater4.html', icon: '🎮' },
   { id: 'cltonyhawksunderground', name: 'Tony Hawks Underground', url: '/games/cltonyhawksunderground.html', icon: '🎮' },
   { id: 'cltoomanytypes', name: 'Too Many Types', url: '/games/cltoomanytypes.html', icon: '🎮' },
   { id: 'cltopspeedracing3d', name: 'Topspeed Racing 3D', url: '/games/cltopspeedracing3d.html', icon: '🏎️' },
-  { id: 'cltosstheturtle', name: 'Toss the Turtle', url: '/games/cltosstheturtle.html', icon: '🐢' },
+  { id: 'cltosstheturtle', name: 'Toss the Turtle', url: '/games/cltosstheturtle.html', icon: '🎮' },
   { id: 'cltotm', name: 'Totm', url: '/games/cltotm.html', icon: '🎮' },
   { id: 'cltouhou', name: 'Touhou', url: '/games/cltouhou.html', icon: '🎮' },
   { id: 'cltouhou2', name: 'Touhou 2', url: '/games/cltouhou2.html', icon: '🎮' },
@@ -2571,14 +2578,14 @@ const games = [
   { id: 'cltowercrash3d', name: 'Tower Crash 3D', url: '/games/cltowercrash3d.html', icon: '🎮' },
   { id: 'cltowerwizard', name: 'Tower Wizard', url: '/games/cltowerwizard.html', icon: '🎮' },
   { id: 'cltownscraper', name: 'Town Scraper', url: '/games/cltownscraper.html', icon: '🎮' },
-  { id: 'cltrechoroustrials', name: 'Treacherous Trials', url: '/games/cltrechoroustrials.html', icon: '🎮' },
-  { id: 'cltrechoroustrialspart2', name: 'Treacherous Trials Part 2', url: '/games/cltrechoroustrialspart2.html', icon: '🎮' },
-  { id: 'cltralalerotralalaescapetungtungtungsahur', name: 'Tralalero Escape', url: '/games/cltralalerotralalaescapetungtungtungsahur.html', icon: '🎮' },
+  { id: 'cltrechoroustrials', name: 'Tr Echo Rous Trials', url: '/games/cltrechoroustrials.html', icon: '🎮' },
+  { id: 'cltrechoroustrialspart2', name: 'Tr Echo Rous Trials Part 2', url: '/games/cltrechoroustrialspart2.html', icon: '🎮' },
+  { id: 'cltralalerotralalaescapetungtungtungsahur', name: 'Tra Lal Ero Tra Lala Escape Tung Tung Tung Sa Hur', url: '/games/cltralalerotralalaescapetungtungtungsahur.html', icon: '🎮' },
   { id: 'cltrace', name: 'Trace', url: '/games/cltrace.html', icon: '🏎️' },
   { id: 'cltrafficjam3d', name: 'Traffic Jam 3D', url: '/games/cltrafficjam3d.html', icon: '🎮' },
-  { id: 'cltrapthecat', name: 'Trap the Cat', url: '/games/cltrapthecat.html', icon: '🐱' },
+  { id: 'cltrapthecat', name: 'Trap the Cat', url: '/games/cltrapthecat.html', icon: '🎮' },
   { id: 'cltrappedwithjester', name: 'Trapped with Jester', url: '/games/cltrappedwithjester.html', icon: '🎮' },
-  { id: 'cltriachnid', name: 'Triachnid', url: '/games/cltriachnid.html', icon: '🎮' },
+  { id: 'cltriachnid', name: 'Tria Ch Nid', url: '/games/cltriachnid.html', icon: '🎮' },
   { id: 'cltripleplay2000', name: 'Triple Play 2000', url: '/games/cltripleplay2000.html', icon: '🎮' },
   { id: 'cltriviacrack', name: 'Trivia Crack', url: '/games/cltriviacrack.html', icon: '🎮' },
   { id: 'cltrollfacequest1', name: 'Troll Face Quest 1', url: '/games/cltrollfacequest1.html', icon: '⚔️' },
@@ -2594,55 +2601,55 @@ const games = [
   { id: 'cltrollfacequest7', name: 'Troll Face Quest 7', url: '/games/cltrollfacequest7.html', icon: '⚔️' },
   { id: 'cltrollfacequest8', name: 'Troll Face Quest 8', url: '/games/cltrollfacequest8.html', icon: '⚔️' },
   { id: 'cltrollfacequest9', name: 'Troll Face Quest 9', url: '/games/cltrollfacequest9.html', icon: '⚔️' },
-  { id: 'cltrucksim', name: 'Truck Sim', url: '/games/cltrucksim.html', icon: '🎮' },
+  { id: 'cltrucksim', name: 'Trucks Im', url: '/games/cltrucksim.html', icon: '🎮' },
   { id: 'cltsuzukimaze', name: 'Tsuzuki Maze', url: '/games/cltsuzukimaze.html', icon: '🎮' },
-  { id: 'cltupertariotros', name: 'Tupertariotros', url: '/games/cltupertariotros.html', icon: '🎮' },
-  { id: 'cltubejumpers', name: 'Tube Jumpers', url: '/games/cltubejumpers.html', icon: '🧍' },
+  { id: 'cltupertariotros', name: 'Tu Pert Ariot Ros', url: '/games/cltupertariotros.html', icon: '🎮' },
+  { id: 'cltubejumpers', name: 'Tube Jumpers', url: '/games/cltubejumpers.html', icon: '🏃' },
   { id: 'cltuff_client_offline_wasm', name: 'Tuff Client (WASM)', url: '/games/clTuff_Client_Offline_WASM.html', icon: '⚔️' },
   { id: 'cltungtunghorror', name: 'Tung Tung Horror', url: '/games/cltungtunghorror.html', icon: '🧟' },
-  { id: 'cltungtungtungsahurobby', name: 'Tung Tung Tung Sahur Obby', url: '/games/cltungtungtungsahurobby.html', icon: '🏃' },
+  { id: 'cltungtungtungsahurobby', name: 'Tung Tung Tung Sahu Robby', url: '/games/cltungtungtungsahurobby.html', icon: '🏃' },
   { id: 'cltunnelrush', name: 'Tunnel Rush', url: '/games/cltunnelrush.html', icon: '🎮' },
   { id: 'cltunnelrushbetter', name: 'Tunnel Rush Better', url: '/games/cltunnelrushbetter.html', icon: '🎮' },
-  { id: 'clturokdinosaurhunter', name: 'Turok Dinosaur Hunter', url: '/games/clturokdinosaurhunter.html', icon: '🎮' },
-  { id: 'clturbostars', name: 'Turbostars', url: '/games/clturbostars.html', icon: '🌌' },
-  { id: 'cltwinshot--1', name: 'Twinshot', url: '/games/cltwinshot%20(1).html', icon: '🎮' },
+  { id: 'clturokdinosaurhunter', name: 'Tur Ok Dinosaur Hunter', url: '/games/clturokdinosaurhunter.html', icon: '🎮' },
+  { id: 'clturbostars', name: 'Turbostar S', url: '/games/clturbostars.html', icon: '🌌' },
+  { id: 'cltwinshot--1', name: 'Twins Hot', url: '/games/cltwinshot%20(1).html', icon: '🎮' },
   { id: 'cltwoball3d', name: 'Two Ball 3D', url: '/games/cltwoball3d.html', icon: '🎮' },
   { id: 'clucds', name: 'Ucds', url: '/games/clucds.html', icon: '🎮' },
-  { id: 'cluckyblockobbyeuophratesriver', name: 'Lucky Block Obby Euphrates River', url: '/games/cluckyblockobbyEUOPHRATESRIVER.html', icon: '🏃' },
-  { id: 'clufoswampoddysey', name: 'UFO Swamp Odyssey', url: '/games/clufoswampoddysey.html', icon: '🌌' },
+  { id: 'cluckyblockobbyeuophratesriver', name: 'Uckyblockobby Euophratesriver', url: '/games/cluckyblockobbyEUOPHRATESRIVER.html', icon: '🏃' },
+  { id: 'clufoswampoddysey', name: 'UFO Swamp Odd Ysey', url: '/games/clufoswampoddysey.html', icon: '🌌' },
   { id: 'clultima', name: 'Ultima', url: '/games/clultima.html', icon: '🎮' },
-  { id: 'clultimateassassian2', name: 'Ultimate Assassin 2', url: '/games/clultimateassassian2.html', icon: '🎮' },
-  { id: 'clultimateassassian3', name: 'Ultimate Assassin 3', url: '/games/clultimateassassian3.html', icon: '🎮' },
+  { id: 'clultimateassassian2', name: 'Ultimate As Sass Ian 2', url: '/games/clultimateassassian2.html', icon: '🎮' },
+  { id: 'clultimateassassian3', name: 'Ultimate As Sass Ian 3', url: '/games/clultimateassassian3.html', icon: '🎮' },
   { id: 'clultimatecardrivingsimulator', name: 'Ultimate Car Driving Simulator', url: '/games/clUltimatecardrivingsimulator.html', icon: '🏎️' },
-  { id: 'clultimatemortalkombat', name: 'Ultimate Mortal Kombat', url: '/games/clultimatemortalkombat.html', icon: '👊' },
-  { id: 'clultimatemortalkombat3', name: 'Ultimate Mortal Kombat 3', url: '/games/clultimatemortalkombat3.html', icon: '👊' },
-  { id: 'clultrakill', name: 'Ultrakill', url: '/games/clultrakill.html', icon: '🎮' },
-  { id: 'clumjammerlammy', name: 'Um Jammer Lammy', url: '/games/clumjammerlammy.html', icon: '🎮' },
-  { id: 'clumstickmangameidkiforgor', name: 'Umstickman Game (I Forgot)', url: '/games/clumstickmangameidkiforgor.html', icon: '🕴️' },
-  { id: 'unownking', name: 'Unown King', url: '/games/unownking.html', icon: '♟️' },
+  { id: 'clultimatemortalkombat', name: 'Ultimate Mortal Kombat', url: '/games/clultimatemortalkombat.html', icon: '🥊' },
+  { id: 'clultimatemortalkombat3', name: 'Ultimate Mortal Kombat 3', url: '/games/clultimatemortalkombat3.html', icon: '🥊' },
+  { id: 'clultrakill', name: 'Ultra Kill', url: '/games/clultrakill.html', icon: '🎮' },
+  { id: 'clumjammerlammy', name: 'Um Jammer Lam My', url: '/games/clumjammerlammy.html', icon: '🎮' },
+  { id: 'clumstickmangameidkiforgor', name: 'Um Stick Manga Mei Dki for Gor', url: '/games/clumstickmangameidkiforgor.html', icon: '🕴️' },
+  { id: 'unownking', name: 'Un Own King', url: '/games/unownking.html', icon: '♟️' },
   { id: 'cluncannycatgolf', name: 'Uncanny Cat Golf', url: '/games/cluncannycatgolf.html', icon: '⛳' },
-  { id: 'clundertalelb', name: 'Undertale LB', url: '/games/clundertalelb.html', icon: '💙' },
-  { id: 'clundertaler', name: 'Undertale R', url: '/games/clundertaler.html', icon: '❤️' },
-  { id: 'clundertaleyellow', name: 'Undertale Yellow', url: '/games/clundertaleyellow.html', icon: '💛' },
+  { id: 'clundertalelb', name: 'Under Tale Lb', url: '/games/clundertalelb.html', icon: '🎮' },
+  { id: 'clundertaler', name: 'Under Tale R', url: '/games/clundertaler.html', icon: '🎮' },
+  { id: 'clundertaleyellow', name: 'Under Tale Yellow', url: '/games/clundertaleyellow.html', icon: '🎮' },
   { id: 'clunderneath', name: 'Underneath', url: '/games/clunderneath.html', icon: '🎮' },
-  { id: 'clundertale-gameboy-1', name: 'Undertale Gameboy', url: '/games/clundertale-gameboy(1).html', icon: '❤️' },
+  { id: 'clundertale-gameboy-1', name: 'Undertale Gameboy', url: '/games/clundertale-gameboy(1).html', icon: '🎮' },
   { id: 'clunfairmario', name: 'Unfair Mario', url: '/games/clunfairmario.html', icon: '🍄' },
   { id: 'clunfairmarioworkquestionmark', name: 'Unfair Mario Work Question Mark', url: '/games/clunfairmarioworkquestionmark.html', icon: '🍄' },
-  { id: 'clunfairundyne', name: 'Unfair Undyne', url: '/games/clunfairundyne.html', icon: '✈️' },
-  { id: 'clunicyclehero', name: 'Unicycle Hero', url: '/games/clunicyclehero.html', icon: '🚲' },
-  { id: 'clunitresdreams', name: 'Unitres Dreams', url: '/games/clunitresdreams.html', icon: '🎮' },
-  { id: 'cluno', name: 'Uno', url: '/games/cluno.html', icon: '🃏' },
-  { id: 'clunonomercy', name: 'Uno No Mercy', url: '/games/clunonomercy.html', icon: '🃏' },
+  { id: 'clunfairundyne', name: 'Unfair Un Dyne', url: '/games/clunfairundyne.html', icon: '✈️' },
+  { id: 'clunicyclehero', name: 'Unicycle Hero', url: '/games/clunicyclehero.html', icon: '🎮' },
+  { id: 'clunitresdreams', name: 'Unit Res Dreams', url: '/games/clunitresdreams.html', icon: '🎮' },
+  { id: 'cluno', name: 'Uno', url: '/games/cluno.html', icon: '♟️' },
+  { id: 'clunonomercy', name: 'Uno No Mercy', url: '/games/clunonomercy.html', icon: '♟️' },
   { id: 'cluntime', name: 'Untime', url: '/games/cluntime.html', icon: '🎮' },
   { id: 'cluntitledgoosegame', name: 'Untitled Goose Game', url: '/games/cluntitledgoosegame.html', icon: '🎮' },
   { id: 'clupgradecomplete', name: 'Upgrade Complete', url: '/games/clupgradecomplete.html', icon: '🎮' },
   { id: 'clupgradecomplete2', name: 'Upgrade Complete 2', url: '/games/clupgradecomplete2.html', icon: '🎮' },
   { id: 'clupslash', name: 'Upslash', url: '/games/clupslash.html', icon: '🎮' },
   { id: 'clurbanchampion', name: 'Urban Champion', url: '/games/clurbanchampion.html', icon: '🎮' },
-  { id: 'clusterrush', name: 'Cluster Rush', url: '/games/clusterrush.html', icon: '🎮' },
+  { id: 'clusterrush', name: 'Uster Rush', url: '/games/clusterrush.html', icon: '🎮' },
   { id: 'cluwuclient', name: 'Uwu Client', url: '/games/cluwuclient.html', icon: '🎮' },
   { id: 'cluzg', name: 'UZG', url: '/games/clUZG.html', icon: '🎮' },
-  { id: 'clvampiresurvivors', name: 'Vampire Survivors', url: '/games/clvampiresurvivors.html', icon: '🧛' },
+  { id: 'clvampiresurvivors', name: 'Vampire Survivors', url: '/games/clvampiresurvivors.html', icon: '🎮' },
   { id: 'clvanguard', name: 'Vanguard', url: '/games/clvanguard.html', icon: '🎮' },
   { id: 'clvaportrails', name: 'Vapor Trails', url: '/games/clvaportrails.html', icon: '🎮' },
   { id: 'clvex', name: 'Vex', url: '/games/clvex.html', icon: '🎮' },
@@ -2657,22 +2664,22 @@ const games = [
   { id: 'clvexchallenges', name: 'Vex Challenges', url: '/games/clvexchallenges.html', icon: '🎮' },
   { id: 'clvexx3m', name: 'Vexx 3 M', url: '/games/clvexx3m.html', icon: '🎮' },
   { id: 'clvexx3m2', name: 'Vexx 3 M 2', url: '/games/clvexx3m2.html', icon: '🎮' },
-  { id: 'clvibribbon', name: 'Vib-Ribbon', url: '/games/clvibribbon.html', icon: '🎮' },
+  { id: 'clvibribbon', name: 'VI Bribbon', url: '/games/clvibribbon.html', icon: '🎮' },
   { id: 'clvillager', name: 'Villager', url: '/games/clvillager.html', icon: '🎮' },
   { id: 'clvincentmansionofthedead', name: 'Vincent Mansion of the Dead', url: '/games/clvincentmansionofthedead.html', icon: '🧟' },
   { id: 'clvisitor', name: 'Visitor', url: '/games/clvisitor.html', icon: '🎮' },
-  { id: 'clvollyballchallenge', name: 'Volleyball Challenge', url: '/games/clvollyballchallenge.html', icon: '🎮' },
+  { id: 'clvollyballchallenge', name: 'Vol Ly Ball Challenge', url: '/games/clvollyballchallenge.html', icon: '🎮' },
   { id: 'clvolleyrandom', name: 'Volley Random', url: '/games/clvolleyrandom.html', icon: '🎮' },
   { id: 'clvolleyball', name: 'Volleyball', url: '/games/clvolleyball.html', icon: '🏐' },
   { id: 'clvortex', name: 'Vortex', url: '/games/clvortex.html', icon: '🎮' },
   { id: 'clvsnonsense', name: 'Vs Nonsense', url: '/games/clvsnonsense.html', icon: '🎮' },
   { id: 'clvssmb', name: 'VS SMB', url: '/games/clVSSMB.html', icon: '🎮' },
-  { id: 'clvsagore', name: 'VS Agore', url: '/games/clvsagore.html', icon: '🎮' },
-  { id: 'clvvvvvv-1', name: 'VVVVVV', url: '/games/clvvvvvv(1).html', icon: '🎮' },
-  { id: 'clwaluigitacostand', name: 'Waluigi Taco Stand', url: '/games/clwaluigitacostand.html', icon: '🌮' },
+  { id: 'clvsagore', name: 'Vsagore', url: '/games/clvsagore.html', icon: '🎮' },
+  { id: 'clvvvvvv-1', name: 'Vvvvvv', url: '/games/clvvvvvv(1).html', icon: '🎮' },
+  { id: 'clwaluigitacostand', name: 'Waluigi Taco Stand', url: '/games/clwaluigitacostand.html', icon: '🍄' },
   { id: 'clwartheknight', name: 'War the Knight', url: '/games/clwartheknight.html', icon: '🪖' },
-  { id: 'clwarfare1917', name: 'Warfare 1917', url: '/games/clwarfare1917.html', icon: '🗺️' },
-  { id: 'clwarfare1944', name: 'Warfare 1944', url: '/games/clwarfare1944.html', icon: '🗺️' },
+  { id: 'clwarfare1917', name: 'Warfare 1917', url: '/games/clwarfare1917.html', icon: '🪖' },
+  { id: 'clwarfare1944', name: 'Warfare 1944', url: '/games/clwarfare1944.html', icon: '🪖' },
   { id: 'clwarioland1', name: 'Wario Land 1', url: '/games/clwarioland1.html', icon: '🍄' },
   { id: 'clwarioland3', name: 'Wario Land 3', url: '/games/clwarioland3.html', icon: '🍄' },
   { id: 'clwarioland4', name: 'Wario Land 4', url: '/games/clwarioland4.html', icon: '🍄' },
@@ -2681,19 +2688,19 @@ const games = [
   { id: 'clwaterpoolio', name: 'Water Pool IO', url: '/games/clwaterpoolio.html', icon: '🎮' },
   { id: 'clwaterworks', name: 'Waterworks', url: '/games/clwaterworks.html', icon: '🎮' },
   { id: 'clwavedash', name: 'Wave Dash', url: '/games/clwavedash.html', icon: '🎮' },
-  { id: 'clwaverace64', name: 'Wave Race 64', url: '/games/clwaverace64.html', icon: '🚤' },
+  { id: 'clwaverace64', name: 'Wave Race 64', url: '/games/clwaverace64.html', icon: '🏎️' },
   { id: 'clwaverun', name: 'Waverun', url: '/games/clwaverun.html', icon: '🎮' },
-  { id: 'clwbml', name: 'WBML', url: '/games/clwbml.html', icon: '🎮' },
+  { id: 'clwbml', name: 'Wbml', url: '/games/clwbml.html', icon: '🎮' },
   { id: 'clwebecomewhatwebehold', name: 'We Become What We Behold', url: '/games/clwebecomewhatwebehold.html', icon: '🎮' },
-  { id: 'clwermhole', name: 'Wormhole', url: '/games/clwermhole.html', icon: '🎮' },
-  { id: 'clwebdashers', name: 'Webdashers', url: '/games/clwebdashers.html', icon: '🎮' },
-  { id: 'clwebfishing', name: 'Web Fishing', url: '/games/clwebfishing.html', icon: '🎣' },
-  { id: 'clweltling', name: 'Weltling', url: '/games/clweltling.html', icon: '🎮' },
-  { id: 'clwhackthetheif', name: 'Whack the Thief', url: '/games/clwhackthetheif.html', icon: '👊' },
-  { id: 'clwhackyourboss', name: 'Whack Your Boss', url: '/games/clwhackyourboss.html', icon: '👊' },
-  { id: 'clwhackyourcomputer', name: 'Whack Your Computer', url: '/games/clwhackyourcomputer.html', icon: '💻' },
-  { id: 'clwhatamarioworld', name: 'What a Mario World', url: '/games/clwhatamarioworld.html', icon: '🍄' },
-  { id: 'clwheeliebike', name: 'Wheelie Bike', url: '/games/clwheeliebike.html', icon: '🏎️' },
+  { id: 'clwermhole', name: 'We Rm Hole', url: '/games/clwermhole.html', icon: '🎮' },
+  { id: 'clwebdashers', name: 'Web Das Her S', url: '/games/clwebdashers.html', icon: '🎮' },
+  { id: 'clwebfishing', name: 'Web Fishing', url: '/games/clwebfishing.html', icon: '🐟' },
+  { id: 'clweltling', name: 'Welt Ling', url: '/games/clweltling.html', icon: '🎮' },
+  { id: 'clwhackthetheif', name: 'Whack the the If', url: '/games/clwhackthetheif.html', icon: '🎮' },
+  { id: 'clwhackyourboss', name: 'Whack Your Boss', url: '/games/clwhackyourboss.html', icon: '🎮' },
+  { id: 'clwhackyourcomputer', name: 'Whack Your Computer', url: '/games/clwhackyourcomputer.html', icon: '🎮' },
+  { id: 'clwhatamarioworld', name: 'What Amario World', url: '/games/clwhatamarioworld.html', icon: '🍄' },
+  { id: 'clwheeliebike', name: 'Wheel Ie Bike', url: '/games/clwheeliebike.html', icon: '🏎️' },
   { id: 'clwheely', name: 'Wheely', url: '/games/clwheely.html', icon: '🎮' },
   { id: 'clwheely2', name: 'Wheely 2', url: '/games/clwheely2.html', icon: '🎮' },
   { id: 'clwheely3', name: 'Wheely 3', url: '/games/clwheely3.html', icon: '🎮' },
@@ -2722,7 +2729,7 @@ const games = [
   { id: 'clworldshardestgame3', name: 'Worlds Hardest Game 3', url: '/games/clworldshardestgame3.html', icon: '🎮' },
   { id: 'clworldshardestgame4', name: 'Worlds Hardest Game 4', url: '/games/clworldshardestgame4.html', icon: '🎮' },
   { id: 'clwpnfire', name: 'Wpnfire', url: '/games/clwpnfire.html', icon: '🎮' },
-  { id: 'clwrassling', name: 'Wrassling', url: '/games/clwrassling.html', icon: '🎮' },
+  { id: 'clwrassling', name: 'Wr As Sling', url: '/games/clwrassling.html', icon: '🎮' },
   { id: 'clwreckingcrew', name: 'Wrecking Crew', url: '/games/clwreckingcrew.html', icon: '🎮' },
   { id: 'clwurstclient', name: 'Wurst Client', url: '/games/clwurstclient.html', icon: '🎮' },
   { id: 'clwwfattitude', name: 'Wwf Attitude', url: '/games/clwwfattitude.html', icon: '🎮' },
@@ -2752,11 +2759,11 @@ const games = [
   { id: 'clzombieexploder', name: 'Zombie Explode R', url: '/games/clzombieexploder.html', icon: '🧟' },
   { id: 'clzombieroad', name: 'Zombie Road', url: '/games/clzombieroad.html', icon: '🧟' },
   { id: 'clzombierush', name: 'Zombie Rush', url: '/games/clzombierush.html', icon: '🧟' },
-  { id: 'clzombiesatemyneighboors', name: 'Zombies Ate My Neighbors', url: '/games/clzombiesatemyneighboors.html', icon: '🧟' },
-  { id: 'clzombopaclypse2', name: 'Zombocalypse 2', url: '/games/clzombopaclypse2.html', icon: '🧟' },
-  { id: 'clzombotron', name: 'Zombotron', url: '/games/clzombotron.html', icon: '🤖' },
-  { id: 'clzombotron2', name: 'Zombotron 2', url: '/games/clzombotron2.html', icon: '🤖' },
-  { id: 'clzombotronreboot', name: 'Zombotron Reboot', url: '/games/clzombotronreboot.html', icon: '🤖' },
+  { id: 'clzombiesatemyneighboors', name: 'Zombies Ate My Neigh Boors', url: '/games/clzombiesatemyneighboors.html', icon: '🧟' },
+  { id: 'clzombopaclypse2', name: 'Zombo Pac Ly Ps E 2', url: '/games/clzombopaclypse2.html', icon: '🎮' },
+  { id: 'clzombotron', name: 'Zombo Tron', url: '/games/clzombotron.html', icon: '🎮' },
+  { id: 'clzombotron2', name: 'Zombo Tron 2', url: '/games/clzombotron2.html', icon: '🎮' },
+  { id: 'clzombotronreboot', name: 'Zombo Tron Reboot', url: '/games/clzombotronreboot.html', icon: '🎮' },
   { id: 'clzrist', name: 'Zrist', url: '/games/clzrist.html', icon: '🎮' },
   { id: 'clzuma', name: 'Zuma', url: '/games/clzuma.html', icon: '🎮' },
   { id: 'clzumashooter', name: 'Zuma Shooter', url: '/games/clzumashooter.html', icon: '🔫' },
@@ -2767,284 +2774,6 @@ const proxies = [
   { id: 'proxy2', name: 'Proxy 2', url: '/proxies/overcloakedproxy.html' },
   { id: 'proxy3', name: 'Proxy 3', url: '/proxies/voidproxy.html' },
 ];
-
-// ── Settings helpers ──────────────────────────────────────────────────────────
-const SETTINGS_KEY = 'geegle_settings_v1';
-
-interface AppSettings {
-  themeColor: string;
-  visualTheme: string;
-  panicKey: string;
-  panicUrl: string;
-}
-
-const DEFAULT_SETTINGS: AppSettings = {
-  themeColor: '#6366f1',
-  visualTheme: 'default',
-  panicKey: '\\',
-  panicUrl: 'https://manhasset.instructure.com/',
-};
-
-function loadSettings(): AppSettings {
-  try {
-    const raw = localStorage.getItem(SETTINGS_KEY);
-    if (raw) return { ...DEFAULT_SETTINGS, ...JSON.parse(raw) };
-  } catch {}
-  return { ...DEFAULT_SETTINGS };
-}
-
-function saveSettings(s: AppSettings) {
-  localStorage.setItem(SETTINGS_KEY, JSON.stringify(s));
-}
-
-// Inject theme CSS into document
-function applyTheme(settings: AppSettings) {
-  const existing = document.getElementById('geegle-theme');
-  if (existing) existing.remove();
-  const style = document.createElement('style');
-  style.id = 'geegle-theme';
-  const c = settings.themeColor;
-  const theme = settings.visualTheme;
-
-  let css = `
-    :root { --accent: ${c}; --accent-soft: ${c}33; }
-    .theme-accent { color: ${c} !important; }
-    .theme-accent-bg { background: ${c} !important; }
-    .theme-accent-border { border-color: ${c} !important; }
-  `;
-
-  if (theme === 'liquidglass') {
-    css += `
-      .games-card {
-        background: rgba(255,255,255,0.04) !important;
-        border: 1px solid rgba(255,255,255,0.18) !important;
-        backdrop-filter: blur(20px) saturate(180%) !important;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 4px 24px rgba(0,0,0,0.3) !important;
-      }
-      .games-card:hover {
-        background: rgba(255,255,255,0.09) !important;
-        backdrop-filter: blur(28px) saturate(220%) !important;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), 0 8px 32px rgba(99,102,241,0.25) !important;
-      }
-    `;
-  } else if (theme === 'claymorphism') {
-    css += `
-      .games-card {
-        background: linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04)) !important;
-        border: 2px solid rgba(255,255,255,0.2) !important;
-        border-radius: 24px !important;
-        box-shadow: 6px 6px 0 rgba(0,0,0,0.25), inset 2px 2px 4px rgba(255,255,255,0.1) !important;
-        backdrop-filter: blur(8px) !important;
-      }
-      .games-card:hover {
-        transform: scale(1.05) translateY(-2px) !important;
-        box-shadow: 8px 8px 0 rgba(0,0,0,0.3), inset 2px 2px 6px rgba(255,255,255,0.15) !important;
-      }
-    `;
-  } else if (theme === 'aurora') {
-    css += `
-      body::before {
-        content: '';
-        position: fixed; inset: 0; z-index: 0; pointer-events: none;
-        background: radial-gradient(ellipse at 20% 50%, rgba(120,40,200,0.15) 0%, transparent 60%),
-                    radial-gradient(ellipse at 80% 20%, rgba(40,160,200,0.12) 0%, transparent 60%),
-                    radial-gradient(ellipse at 60% 80%, rgba(80,200,120,0.1) 0%, transparent 60%);
-        animation: aurora-shift 8s ease-in-out infinite alternate;
-      }
-      @keyframes aurora-shift {
-        0% { opacity: 0.6; transform: scale(1); }
-        100% { opacity: 1; transform: scale(1.05) translateY(-10px); }
-      }
-      .games-card {
-        background: rgba(255,255,255,0.035) !important;
-        border: 1px solid rgba(255,255,255,0.12) !important;
-        backdrop-filter: blur(16px) !important;
-      }
-    `;
-  } else if (theme === 'neubrutalism') {
-    css += `
-      .games-card {
-        background: rgba(20,20,30,0.85) !important;
-        border: 2.5px solid rgba(255,255,255,0.85) !important;
-        border-radius: 8px !important;
-        box-shadow: 4px 4px 0 rgba(255,255,255,0.7) !important;
-        backdrop-filter: none !important;
-      }
-      .games-card:hover {
-        transform: translate(-2px,-2px) scale(1.03) !important;
-        box-shadow: 6px 6px 0 ${c} !important;
-        border-color: ${c} !important;
-      }
-    `;
-  } else if (theme === 'abstract3d') {
-    css += `
-      .games-card {
-        background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(99,102,241,0.06) 100%) !important;
-        border: 1px solid rgba(255,255,255,0.15) !important;
-        backdrop-filter: blur(12px) !important;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.2) !important;
-        transform-style: preserve-3d;
-      }
-      .games-card:hover {
-        background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(99,102,241,0.1) 100%) !important;
-        box-shadow: 0 16px 48px rgba(99,102,241,0.3), inset 0 2px 0 rgba(255,255,255,0.25) !important;
-        transform: scale(1.05) rotateX(2deg) !important;
-      }
-    `;
-  } else if (theme === 'dynamic') {
-    css += `
-      .games-card {
-        background: rgba(255,255,255,0.04) !important;
-        border: 1px solid rgba(255,255,255,0.1) !important;
-        backdrop-filter: blur(8px) !important;
-        transition: all 0.15s cubic-bezier(0.34,1.56,0.64,1) !important;
-      }
-      .games-card:hover {
-        background: rgba(255,255,255,0.09) !important;
-        border-color: ${c}99 !important;
-        transform: scale(1.07) !important;
-        box-shadow: 0 0 30px ${c}44 !important;
-      }
-    `;
-  }
-
-  style.textContent = css;
-  document.head.appendChild(style);
-}
-
-// ── Settings Modal ─────────────────────────────────────────────────────────────
-function SettingsModal({ onClose, settings, onChange }: {
-  onClose: () => void;
-  settings: AppSettings;
-  onChange: (s: AppSettings) => void;
-}) {
-  const [tab, setTab] = useState<'theme' | 'panic'>('theme');
-  const [local, setLocal] = useState<AppSettings>({ ...settings });
-  const [listeningKey, setListeningKey] = useState(false);
-
-  const update = (patch: Partial<AppSettings>) => {
-    const next = { ...local, ...patch };
-    setLocal(next);
-    saveSettings(next);
-    onChange(next);
-  };
-
-  useEffect(() => {
-    if (!listeningKey) return;
-    const handler = (e: KeyboardEvent) => {
-      e.preventDefault();
-      e.stopPropagation();
-      update({ panicKey: e.key });
-      setListeningKey(false);
-    };
-    window.addEventListener('keydown', handler, true);
-    return () => window.removeEventListener('keydown', handler, true);
-  }, [listeningKey, local]);
-
-  const themes = [
-    { id: 'default', label: 'Default', desc: 'Classic dark UI — exactly as designed', preview: '🎮' },
-    { id: 'liquidglass', label: 'Liquid Glass', desc: 'Transparent layered panels with blur & refraction', preview: '💧' },
-    { id: 'claymorphism', label: 'Claymorphism', desc: 'Soft 3D rounded clay shapes with depth', preview: '🫧' },
-    { id: 'aurora', label: 'Aurora', desc: 'Smooth aurora borealis gradient backgrounds', preview: '🌌' },
-    { id: 'neubrutalism', label: 'Neubrutalism', desc: 'Bold outlines, sharp contrast, raw structure', preview: '⬛' },
-    { id: 'abstract3d', label: '3D Abstract', desc: 'Metallic reflective textures, dreamlike depth', preview: '🔮' },
-    { id: 'dynamic', label: 'Dynamic Live', desc: 'UI reacts to mouse — elements shift and glow', preview: '✨' },
-  ];
-
-  return (
-    <div style={{ position: 'fixed', inset: 0, zIndex: 9990, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.75)', backdropFilter: 'blur(6px)' }}
-      onClick={e => { if (e.target === e.currentTarget) onClose(); }}>
-      <div style={{ background: '#0f1117', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 20, width: '90%', maxWidth: 680, maxHeight: '85vh', display: 'flex', flexDirection: 'column', overflow: 'hidden', boxShadow: '0 32px 80px rgba(0,0,0,0.6)' }}>
-        {/* Header */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 24px', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-          <span style={{ color: '#f3f4f6', fontSize: 18, fontWeight: 700, letterSpacing: '-0.02em' }}>Settings</span>
-          <button onClick={onClose} style={{ background: 'none', border: 'none', color: '#9ca3af', cursor: 'pointer', padding: 4, borderRadius: 8, display: 'flex' }}>
-            <X size={20} />
-          </button>
-        </div>
-        {/* Body */}
-        <div style={{ display: 'flex', flex: 1, overflow: 'hidden', minHeight: 0 }}>
-          {/* Sidebar */}
-          <div style={{ width: 160, borderRight: '1px solid rgba(255,255,255,0.08)', padding: '16px 12px', flexShrink: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
-            {(['theme', 'panic'] as const).map(t => (
-              <button key={t} onClick={() => setTab(t)} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '10px 12px', borderRadius: 10, border: 'none', cursor: 'pointer', background: tab === t ? 'rgba(99,102,241,0.2)' : 'transparent', color: tab === t ? '#a5b4fc' : '#9ca3af', fontSize: 14, fontWeight: tab === t ? 600 : 400, transition: 'all 0.15s', textAlign: 'left' }}>
-                {t === 'theme' ? <Palette size={16} /> : <Key size={16} />}
-                {t === 'theme' ? 'Theme' : 'Panic Key'}
-              </button>
-            ))}
-          </div>
-          {/* Content */}
-          <div style={{ flex: 1, padding: '20px 24px', overflowY: 'auto' }}>
-            {tab === 'theme' && (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-                <div>
-                  <label style={{ color: '#d1d5db', fontSize: 13, fontWeight: 600, display: 'block', marginBottom: 10, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Accent Color</label>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                    <input type="color" value={local.themeColor} onChange={e => update({ themeColor: e.target.value })}
-                      style={{ width: 48, height: 48, border: '2px solid rgba(255,255,255,0.15)', borderRadius: 10, cursor: 'pointer', background: 'none', padding: 2 }} />
-                    <input type="text" value={local.themeColor} onChange={e => { if (/^#[0-9a-fA-F]{0,6}$/.test(e.target.value)) update({ themeColor: e.target.value }); }}
-                      style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 8, color: '#f3f4f6', fontSize: 14, padding: '8px 12px', width: 100, outline: 'none' }} />
-                    <div style={{ display: 'flex', gap: 6 }}>
-                      {['#6366f1','#ec4899','#10b981','#f59e0b','#ef4444','#3b82f6','#8b5cf6'].map(col => (
-                        <button key={col} onClick={() => update({ themeColor: col })}
-                          style={{ width: 24, height: 24, borderRadius: '50%', background: col, border: local.themeColor === col ? '2px solid white' : '2px solid transparent', cursor: 'pointer' }} />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <label style={{ color: '#d1d5db', fontSize: 13, fontWeight: 600, display: 'block', marginBottom: 10, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Visual Theme</label>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                    {themes.map(th => (
-                      <button key={th.id} onClick={() => update({ visualTheme: th.id })}
-                        style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 14px', borderRadius: 12, border: `1px solid ${local.visualTheme === th.id ? 'rgba(99,102,241,0.6)' : 'rgba(255,255,255,0.08)'}`, background: local.visualTheme === th.id ? 'rgba(99,102,241,0.12)' : 'rgba(255,255,255,0.02)', cursor: 'pointer', textAlign: 'left', transition: 'all 0.15s' }}>
-                        <span style={{ fontSize: 22 }}>{th.preview}</span>
-                        <div style={{ flex: 1 }}>
-                          <div style={{ color: local.visualTheme === th.id ? '#a5b4fc' : '#e5e7eb', fontSize: 14, fontWeight: 600 }}>{th.label}</div>
-                          <div style={{ color: '#6b7280', fontSize: 12, marginTop: 2 }}>{th.desc}</div>
-                        </div>
-                        {local.visualTheme === th.id && <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#6366f1' }} />}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )}
-            {tab === 'panic' && (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-                <div>
-                  <label style={{ color: '#d1d5db', fontSize: 13, fontWeight: 600, display: 'block', marginBottom: 6, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Panic Key</label>
-                  <p style={{ color: '#6b7280', fontSize: 12, marginBottom: 10 }}>Press this key at any time to instantly redirect to your saved URL.</p>
-                  <button
-                    onClick={() => setListeningKey(true)}
-                    style={{ padding: '12px 20px', borderRadius: 10, border: `2px solid ${listeningKey ? '#6366f1' : 'rgba(255,255,255,0.15)'}`, background: listeningKey ? 'rgba(99,102,241,0.1)' : 'rgba(255,255,255,0.04)', color: listeningKey ? '#a5b4fc' : '#f3f4f6', fontSize: 15, fontWeight: 600, cursor: 'pointer', transition: 'all 0.15s', minWidth: 140 }}>
-                    {listeningKey ? '⌨️ Press any key...' : (local.panicKey === '\\' ? 'Backslash (\\)' : `Key: ${local.panicKey}`)}
-                  </button>
-                  {listeningKey && <p style={{ color: '#9ca3af', fontSize: 12, marginTop: 6 }}>Press the key you want to use as your panic key.</p>}
-                </div>
-                <div>
-                  <label style={{ color: '#d1d5db', fontSize: 13, fontWeight: 600, display: 'block', marginBottom: 6, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Redirect URL</label>
-                  <p style={{ color: '#6b7280', fontSize: 12, marginBottom: 10 }}>Where to go when panic key is pressed.</p>
-                  <input
-                    type="text" value={local.panicUrl}
-                    onChange={e => update({ panicUrl: e.target.value })}
-                    placeholder="https://example.com"
-                    style={{ width: '100%', padding: '10px 14px', borderRadius: 10, border: '1px solid rgba(255,255,255,0.12)', background: 'rgba(255,255,255,0.05)', color: '#f3f4f6', fontSize: 14, outline: 'none', boxSizing: 'border-box' }}
-                  />
-                </div>
-                <div style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)', borderRadius: 10, padding: '12px 16px' }}>
-                  <p style={{ color: '#a5b4fc', fontSize: 13, margin: 0 }}>
-                    ✅ Settings are saved locally on your device and persist across sessions.
-                  </p>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 // ── Star background canvas ────────────────────────────────────────────────────
 function StarBackground() {
@@ -3170,6 +2899,117 @@ function EasterEggPopup({ onClose }: { onClose: () => void }) {
   );
 }
 
+// ── Settings Modal ────────────────────────────────────────────────────────────
+function SettingsModal({ onClose, currentTheme, onThemeChange }: { onClose: () => void; currentTheme: keyof typeof themes; onThemeChange: (theme: keyof typeof themes) => void }) {
+  const theme = themes[currentTheme];
+  return (
+    <div style={{ position: 'fixed', inset: 0, zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.7)' }}>
+      <div style={{ background: theme.popupBg, border: '2px solid ' + theme.accent, borderRadius: 16, padding: 32, maxWidth: 480, width: '90%', boxShadow: '0 25px 50px rgba(0,0,0,0.5)' }}>
+        <h2 style={{ color: theme.text, fontSize: 24, fontWeight: 700, marginBottom: 24 }}>Settings</h2>
+
+        <div style={{ marginBottom: 32 }}>
+          <p style={{ color: theme.text, fontSize: 16, fontWeight: 600, marginBottom: 12 }}>Theme</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 12 }}>
+            {Object.entries(themes).map(([key]) => (
+              <button
+                key={key}
+                onClick={() => onThemeChange(key as keyof typeof themes)}
+                style={{
+                  padding: 12,
+                  borderRadius: 8,
+                  border: currentTheme === key ? '2px solid ' + theme.accent : '1px solid rgba(255,255,255,0.2)',
+                  background: currentTheme === key ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.05)',
+                  color: theme.text,
+                  cursor: 'pointer',
+                  fontSize: 14,
+                  fontWeight: 600,
+                  transition: 'all 0.2s',
+                }}
+                onMouseEnter={e => {
+                  (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.1)';
+                }}
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLButtonElement).style.background = currentTheme === key ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.05)';
+                }}
+              >
+                {key.charAt(0).toUpperCase() + key.slice(1)}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <button onClick={onClose} style={{ width: '100%', padding: '12px 24px', background: theme.accent, color: '#000', border: 'none', borderRadius: 8, fontSize: 15, fontWeight: 600, cursor: 'pointer' }}>
+          Close
+        </button>
+      </div>
+    </div>
+  );
+}
+
+interface Theme {
+  bg: string;
+  card: string;
+  cardBorder: string;
+  text: string;
+  textSecondary: string;
+  accent: string;
+  accentHover: string;
+  popupBg: string;
+}
+
+const themes: { [key: string]: Theme } = {
+  default: {
+    bg: 'linear-gradient(135deg, #050508 0%, #0d0d14 50%, #080810 100%)',
+    card: 'rgba(255,255,255,0.05)',
+    cardBorder: 'rgba(255,255,255,0.1)',
+    text: '#f3f4f6',
+    textSecondary: '#9ca3af',
+    accent: 'rgba(99,102,241,0.7)',
+    accentHover: 'rgba(255,255,255,0.1)',
+    popupBg: '#111827',
+  },
+  cyberpunk: {
+    bg: 'linear-gradient(135deg, #0a0e27 0%, #1a1a3e 50%, #0d0820 100%)',
+    card: 'rgba(139, 92, 246, 0.1)',
+    cardBorder: 'rgba(139, 92, 246, 0.6)',
+    text: '#e0e7ff',
+    textSecondary: '#a5b4fc',
+    accent: 'rgba(139, 92, 246, 0.8)',
+    accentHover: 'rgba(139, 92, 246, 0.15)',
+    popupBg: '#1a1a3e',
+  },
+  neon: {
+    bg: 'linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0d0d0d 100%)',
+    card: 'rgba(0, 255, 136, 0.08)',
+    cardBorder: 'rgba(0, 255, 136, 0.5)',
+    text: '#00ff88',
+    textSecondary: '#00cc66',
+    accent: 'rgba(0, 255, 136, 0.8)',
+    accentHover: 'rgba(0, 255, 136, 0.12)',
+    popupBg: '#1a1a1a',
+  },
+  ocean: {
+    bg: 'linear-gradient(135deg, #0a1628 0%, #0f2b4f 50%, #081420 100%)',
+    card: 'rgba(34, 211, 238, 0.08)',
+    cardBorder: 'rgba(34, 211, 238, 0.5)',
+    text: '#e0f2fe',
+    textSecondary: '#7dd3fc',
+    accent: 'rgba(34, 211, 238, 0.8)',
+    accentHover: 'rgba(34, 211, 238, 0.12)',
+    popupBg: '#0f2b4f',
+  },
+  sunset: {
+    bg: 'linear-gradient(135deg, #2d1810 0%, #3d2817 50%, #2a1808 100%)',
+    card: 'rgba(251, 146, 60, 0.1)',
+    cardBorder: 'rgba(251, 146, 60, 0.5)',
+    text: '#fed7aa',
+    textSecondary: '#fca5a5',
+    accent: 'rgba(251, 146, 60, 0.8)',
+    accentHover: 'rgba(251, 146, 60, 0.12)',
+    popupBg: '#3d2817',
+  },
+};
+
 // ── Main App ──────────────────────────────────────────────────────────────────
 function App() {
   const [page, setPage] = useState<'home' | 'games' | 'game' | 'proxy'>('home');
@@ -3189,10 +3029,7 @@ function App() {
   const [showProxyWarning, setShowProxyWarning] = useState(false);
   const [showEasterEgg, setShowEasterEgg] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-  const [settings, setSettings] = useState<AppSettings>(() => loadSettings());
-
-  // Apply theme on mount and when settings change
-  useEffect(() => { applyTheme(settings); }, [settings]);
+  const [selectedTheme, setSelectedTheme] = useState<keyof typeof themes>('default');
 
   const searchInputRef = useRef<HTMLInputElement>(null);
   const proxyInputRef = useRef<HTMLInputElement>(null);
@@ -3205,16 +3042,16 @@ function App() {
   // Panic key
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if (e.key === settings.panicKey && e.target !== proxyInputRef.current) {
+      if (e.key === '\\' && e.target !== proxyInputRef.current) {
         e.preventDefault(); e.stopPropagation();
-        const url = settings.panicUrl || 'https://manhasset.instructure.com/';
+        const url = 'https://manhasset.instructure.com/';
         if (window.self !== window.top) window.top!.location.href = url;
         else window.location.href = url;
       }
     };
     document.addEventListener('keydown', handler, true);
     return () => document.removeEventListener('keydown', handler, true);
-  }, [settings.panicKey, settings.panicUrl]);
+  }, []);
 
   const goToGames = () => {
     setPage('games');
@@ -3247,6 +3084,9 @@ function App() {
 
   const handleMainSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.value === 'Bart is Awesome') setShowEasterEgg(true);
+    if (normalizeText(e.target.value).includes('cord')) {
+      setShowSettings(true);
+    }
   };
 
   const handleGameSearchChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -3357,80 +3197,43 @@ function App() {
 
   // ── Games grid ──────────────────────────────────────────────────────────────
   if (page === 'games') {
+    const gameTheme = themes[selectedTheme];
     return (
-      <div style={{ position: 'relative', width: '100vw', height: '100vh', overflowY: 'scroll' }}>
-        <StarBackground />
+      <div style={{ position: 'relative', width: '100vw', height: '100vh', overflowY: 'scroll', background: gameTheme.bg }}>
         {showCordPopup && <CordPopup onClose={handleCordPopupClose} />}
         {showEasterEgg && <EasterEggPopup onClose={() => setShowEasterEgg(false)} />}
-        {showSettings && (
-          <SettingsModal
-            onClose={() => setShowSettings(false)}
-            settings={settings}
-            onChange={s => setSettings(s)}
-          />
-        )}
-
-        {/* Settings button — top left */}
-        <button
-          onClick={() => setShowSettings(true)}
-          style={{
-            position: 'fixed', top: 16, left: 16, zIndex: 50,
-            display: 'flex', alignItems: 'center', gap: 6,
-            padding: '8px 14px',
-            background: 'rgba(255,255,255,0.07)',
-            border: '1px solid rgba(255,255,255,0.14)',
-            borderRadius: 10,
-            color: '#d1d5db',
-            fontSize: 13,
-            fontWeight: 500,
-            cursor: 'pointer',
-            backdropFilter: 'blur(8px)',
-            transition: 'background 0.2s, border-color 0.2s',
-          }}
-          onMouseEnter={e => {
-            (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.13)';
-            (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.25)';
-          }}
-          onMouseLeave={e => {
-            (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.07)';
-            (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.14)';
-          }}
-        >
-          <Settings size={15} />
-          Settings
-        </button>
+        {showSettings && <SettingsModal onClose={() => setShowSettings(false)} currentTheme={selectedTheme} onThemeChange={setSelectedTheme} />}
 
         <div style={{ position: 'relative', zIndex: 1, padding: 32 }}>
-          {/* Sticky header — fades out as user scrolls */}
-          <div style={{
-            position: 'sticky', top: 0, zIndex: 10,
-            background: 'linear-gradient(to bottom, rgba(5,5,8,0.97) 0%, rgba(5,5,8,0.85) 40%, rgba(5,5,8,0.5) 75%, transparent 100%)',
-            backdropFilter: 'blur(10px)',
-            WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 55%, transparent 100%)',
-            maskImage: 'linear-gradient(to bottom, black 0%, black 55%, transparent 100%)',
-            textAlign: 'center',
-            paddingTop: 24, paddingBottom: 48,
-            marginBottom: 16,
-          }}>
-            <h1 style={{ fontSize: 44, fontWeight: 700, color: '#fff', marginBottom: 16, letterSpacing: '-0.02em' }}>Choose Your Application</h1>
+          {/* Sticky header with fade effect */}
+          <div style={{ position: 'sticky', top: 0, zIndex: 10, background: `linear-gradient(to bottom, ${gameTheme.popupBg}ee, ${gameTheme.popupBg}aa, transparent)`, backdropFilter: 'blur(12px)', textAlign: 'center', paddingTop: 16, paddingBottom: 32, marginBottom: 32, borderBottom: 'none' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
+              <div style={{ width: 60 }} />
+              <h1 style={{ fontSize: 44, fontWeight: 700, color: gameTheme.text, margin: 0, flex: 1 }}>Choose Your Game</h1>
+              {showSettings && (
+                <button onClick={() => setShowSettings(true)} style={{ background: gameTheme.card, color: gameTheme.text, border: '1px solid ' + gameTheme.cardBorder, borderRadius: 8, padding: '8px 16px', fontSize: 14, cursor: 'pointer' }}>
+                  ⚙️ Settings
+                </button>
+              )}
+            </div>
             <button
               onClick={() => setPage('home')}
-              style={{ background: 'rgba(55,65,81,0.8)', color: '#fff', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 8, padding: '8px 24px', fontSize: 14, cursor: 'pointer', marginBottom: 16, backdropFilter: 'blur(4px)', transition: 'background 0.2s' }}
+              style={{ background: gameTheme.card, color: gameTheme.text, border: '1px solid ' + gameTheme.cardBorder, borderRadius: 8, padding: '8px 24px', fontSize: 14, cursor: 'pointer', marginBottom: 16 }}
             >
               Back to Search
             </button>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 16px', background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 9999, maxWidth: 420, margin: '0 auto' }}>
-              <Search size={16} color="#6b7280" style={{ flexShrink: 0 }} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 16px', background: gameTheme.card, border: '1px solid ' + gameTheme.cardBorder, borderRadius: 9999, maxWidth: 420, margin: '0 auto' }}>
+              <Search size={16} color={gameTheme.textSecondary} style={{ flexShrink: 0 }} />
               <input
                 type="text"
                 value={gameSearchDisplay}
                 onChange={handleGameSearchChange}
                 onKeyDown={e => { if (e.key === 'Backspace') e.stopPropagation(); }}
                 placeholder="Search games..."
-                style={{ flex: 1, outline: 'none', background: 'transparent', color: '#f3f4f6', fontSize: 14, border: 'none' }}
+                style={{ flex: 1, outline: 'none', background: 'transparent', color: gameTheme.text, fontSize: 14, border: 'none', fontFamily: 'inherit' }}
               />
               {gameSearchDisplay && (
-                <button onClick={() => { setGameSearchDisplay(''); setGameSearch(''); }} style={{ background: 'none', border: 'none', color: '#6b7280', fontSize: 18, cursor: 'pointer', lineHeight: 1 }}>×</button>
+                <button onClick={() => { setGameSearchDisplay(''); setGameSearch(''); }} style={{ background: 'none', border: 'none', color: gameTheme.textSecondary, fontSize: 18, cursor: 'pointer', lineHeight: 1 }}>×</button>
               )}
             </div>
           </div>
@@ -3438,19 +3241,18 @@ function App() {
           {filteredGames.length === 0 ? (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', paddingTop: 96, textAlign: 'center' }}>
               <div style={{ fontSize: 48, marginBottom: 16 }}>🔍</div>
-              <p style={{ color: '#9ca3af', fontSize: 20, fontWeight: 500 }}>No results found</p>
-              <p style={{ color: '#4b5563', fontSize: 14, marginTop: 4 }}>Try a different search term</p>
+              <p style={{ color: gameTheme.textSecondary, fontSize: 20, fontWeight: 500 }}>No results found</p>
+              <p style={{ color: gameTheme.textSecondary, fontSize: 14, marginTop: 4, opacity: 0.7 }}>Try a different search term</p>
             </div>
           ) : (
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 24, maxWidth: 1400, margin: '0 auto', paddingBottom: 32 }}>
               {filteredGames.map(game => (
                 <button
                   key={game.id}
-                  className="games-card"
                   onClick={() => playGame(game.id, game.url)}
                   style={{
-                    background: 'rgba(255,255,255,0.03)',
-                    border: '1px solid rgba(255,255,255,0.08)',
+                    background: gameTheme.card,
+                    border: '1px solid ' + gameTheme.cardBorder,
                     borderRadius: 16,
                     padding: 28,
                     cursor: 'pointer',
@@ -3458,32 +3260,28 @@ function App() {
                     flexDirection: 'column',
                     alignItems: 'center',
                     gap: 12,
-                    transition: 'background 0.22s, border-color 0.22s, transform 0.22s, box-shadow 0.22s',
-                    backdropFilter: 'blur(6px)',
+                    transition: 'background 0.2s, border-color 0.2s, transform 0.2s',
+                    backdropFilter: 'blur(4px)',
                   }}
                   onMouseEnter={e => {
-                    const el = e.currentTarget as HTMLButtonElement;
-                    el.style.background = 'rgba(255,255,255,0.08)';
-                    el.style.borderColor = `${settings.themeColor}99`;
-                    el.style.transform = 'scale(1.05)';
-                    el.style.boxShadow = `0 4px 24px ${settings.themeColor}33`;
+                    (e.currentTarget as HTMLButtonElement).style.background = gameTheme.accentHover;
+                    (e.currentTarget as HTMLButtonElement).style.borderColor = gameTheme.accent;
+                    (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1.05)';
                   }}
                   onMouseLeave={e => {
-                    const el = e.currentTarget as HTMLButtonElement;
-                    el.style.background = 'rgba(255,255,255,0.03)';
-                    el.style.borderColor = 'rgba(255,255,255,0.08)';
-                    el.style.transform = 'scale(1)';
-                    el.style.boxShadow = 'none';
+                    (e.currentTarget as HTMLButtonElement).style.background = gameTheme.card;
+                    (e.currentTarget as HTMLButtonElement).style.borderColor = gameTheme.cardBorder;
+                    (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1)';
                   }}
                 >
                   <div style={{ fontSize: 52 }}>{game.icon}</div>
-                  <span style={{ color: '#f3f4f6', fontSize: 15, fontWeight: 600, textAlign: 'center' }}>{formatGameName(game.name)}</span>
+                  <span style={{ color: gameTheme.text, fontSize: 15, fontWeight: 600, textAlign: 'center' }}>{formatGameName(game.name)}</span>
                 </button>
               ))}
             </div>
           )}
 
-          <div style={{ textAlign: 'center', color: '#4b5563', fontSize: 13, paddingBottom: 32 }}>
+          <div style={{ textAlign: 'center', color: gameTheme.textSecondary, fontSize: 13, paddingBottom: 32, opacity: 0.6 }}>
             Bart made this. Thank him. :)
           </div>
         </div>
@@ -3492,53 +3290,26 @@ function App() {
   }
 
   // ── Home page ───────────────────────────────────────────────────────────────
+  const theme = themes[selectedTheme];
   return (
-    <div className="min-h-screen bg-gray-900 flex flex-col">
+    <div style={{ minHeight: '100vh', background: theme.bg, display: 'flex', flexDirection: 'column' }}>
       {showEasterEgg && <EasterEggPopup onClose={() => setShowEasterEgg(false)} />}
-      {showSettings && (
-        <SettingsModal
-          onClose={() => setShowSettings(false)}
-          settings={settings}
-          onChange={s => setSettings(s)}
-        />
-      )}
-      <header className="flex items-center justify-end px-4 py-3 gap-4">
-        <button className="text-sm text-gray-300 hover:underline">Gmail</button>
-        <button className="text-sm text-gray-300 hover:underline">Images</button>
-        <button className="p-2 hover:bg-gray-800 rounded-full transition-colors"><Grid size={20} className="text-gray-400" /></button>
-        <button className="p-2 hover:bg-gray-800 rounded-full transition-colors"><User size={20} className="text-gray-400" /></button>
+      {showSettings && <SettingsModal onClose={() => setShowSettings(false)} currentTheme={selectedTheme} onThemeChange={setSelectedTheme} />}
+      <header style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', padding: '12px 16px', gap: 16 }}>
+        <button style={{ fontSize: 14, color: theme.textSecondary, background: 'none', border: 'none', cursor: 'pointer' }}>Gmail</button>
+        <button style={{ fontSize: 14, color: theme.textSecondary, background: 'none', border: 'none', cursor: 'pointer' }}>Images</button>
+        <button style={{ padding: 8, background: 'none', border: 'none', cursor: 'pointer', borderRadius: '50%' }}><Grid size={20} color={theme.textSecondary} /></button>
+        <button style={{ padding: 8, background: 'none', border: 'none', cursor: 'pointer', borderRadius: '50%' }}><User size={20} color={theme.textSecondary} /></button>
       </header>
-      {/* Settings button top-left on home */}
-      <button
-        onClick={() => setShowSettings(true)}
-        style={{
-          position: 'fixed', top: 12, left: 12, zIndex: 50,
-          display: 'flex', alignItems: 'center', gap: 6,
-          padding: '7px 12px',
-          background: 'rgba(255,255,255,0.05)',
-          border: '1px solid rgba(255,255,255,0.1)',
-          borderRadius: 9,
-          color: '#9ca3af',
-          fontSize: 13,
-          fontWeight: 500,
-          cursor: 'pointer',
-          transition: 'background 0.2s',
-        }}
-        onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.1)'; }}
-        onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.05)'; }}
-      >
-        <Settings size={14} />
-        Settings
-      </button>
-      <main className="flex-1 flex flex-col items-center justify-center px-4 -mt-20">
-        <div className="text-center mb-8">
-          <h1 className="text-7xl font-light mb-2">
-            <span className="text-blue-500">G</span><span className="text-red-500">e</span><span className="text-yellow-500">e</span><span className="text-blue-500">g</span><span className="text-green-500">l</span><span className="text-red-500">e</span>
+      <main style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '16px', marginTop: '-80px' }}>
+        <div style={{ textAlign: 'center', marginBottom: 32 }}>
+          <h1 style={{ fontSize: 84, fontWeight: 300, marginBottom: 8, letterSpacing: '0.02em' }}>
+            <span style={{ color: '#3b82f6' }}>G</span><span style={{ color: '#ef4444' }}>e</span><span style={{ color: '#eab308' }}>e</span><span style={{ color: '#3b82f6' }}>g</span><span style={{ color: '#22c55e' }}>l</span><span style={{ color: '#ef4444' }}>e</span>
           </h1>
         </div>
-        <form onSubmit={handleSearch} className="w-full max-w-2xl">
-          <div className={`flex items-center gap-3 px-5 py-3 border border-gray-700 rounded-full transition-shadow duration-200 bg-gray-800 ${isSearchFocused ? 'shadow-lg shadow-gray-900/50' : 'shadow-md shadow-gray-900/30 hover:shadow-lg hover:shadow-gray-900/50'}`}>
-            <Search size={20} className="text-gray-500 flex-shrink-0" />
+        <form onSubmit={handleSearch} style={{ width: '100%', maxWidth: 800 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 20px', border: '1px solid ' + theme.cardBorder, borderRadius: 9999, background: theme.card, transition: 'shadow 0.2s', boxShadow: isSearchFocused ? '0 0 12px rgba(0,0,0,0.3)' : '0 0 6px rgba(0,0,0,0.2)' }}>
+            <Search size={20} color={theme.textSecondary} style={{ flexShrink: 0 }} />
             <input
               ref={searchInputRef}
               type="text"
@@ -3547,36 +3318,35 @@ function App() {
               onBlur={() => setIsSearchFocused(false)}
               onKeyDown={e => { if (e.key === 'Backspace') e.stopPropagation(); }}
               placeholder="Search Geegle or type a URL"
-              className="flex-1 outline-none text-gray-100 text-base bg-transparent placeholder-gray-500"
+              style={{ flex: 1, outline: 'none', background: 'transparent', color: theme.text, fontSize: 16, border: 'none', fontFamily: 'inherit' }}
             />
-            <button type="button" className="p-1 hover:bg-gray-700 rounded transition-colors" aria-label="Search by voice" onMouseDown={e => e.preventDefault()}><Mic size={20} className="text-blue-500" /></button>
-            <button type="button" className="p-1 hover:bg-gray-700 rounded transition-colors" aria-label="Search by image" onMouseDown={e => e.preventDefault()}><Image size={20} className="text-blue-500" /></button>
+            <button type="button" style={{ padding: 4, background: 'none', border: 'none', cursor: 'pointer' }} aria-label="Search by voice" onMouseDown={e => e.preventDefault()}><Mic size={20} color="#3b82f6" /></button>
+            <button type="button" style={{ padding: 4, background: 'none', border: 'none', cursor: 'pointer' }} aria-label="Search by image" onMouseDown={e => e.preventDefault()}><Image size={20} color="#3b82f6" /></button>
           </div>
-          <div className="flex items-center justify-center gap-3 mt-8">
-            <button type="submit" className="px-6 py-3 bg-gray-800 text-gray-300 text-sm rounded hover:bg-gray-700 hover:shadow-sm border border-gray-700 transition-all">Geegle Search</button>
-            <button type="button" onClick={handleLuckySearch} className="px-6 py-3 bg-gray-800 text-gray-300 text-sm rounded hover:bg-gray-700 hover:shadow-sm border border-gray-700 transition-all">I'm Feeling Lucky</button>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, marginTop: 32 }}>
+            <button type="submit" style={{ padding: '12px 24px', background: theme.card, color: theme.text, fontSize: 14, border: '1px solid ' + theme.cardBorder, borderRadius: 6, cursor: 'pointer' }}>Geegle Search</button>
+            <button type="button" onClick={handleLuckySearch} style={{ padding: '12px 24px', background: theme.card, color: theme.text, fontSize: 14, border: '1px solid ' + theme.cardBorder, borderRadius: 6, cursor: 'pointer' }}>I'm Feeling Lucky</button>
           </div>
         </form>
-        <div className="mt-8 text-sm text-gray-500">
+        <div style={{ marginTop: 32, fontSize: 14, color: theme.textSecondary }}>
           Geegle offered in:
-          <button className="ml-2 text-blue-500 hover:underline">Español</button>
-          <button className="ml-2 text-blue-500 hover:underline">Français</button>
-          <button className="ml-2 text-blue-500 hover:underline">Deutsch</button>
+          <button style={{ marginLeft: 8, color: '#3b82f6', background: 'none', border: 'none', cursor: 'pointer' }}>Español</button>
+          <button style={{ marginLeft: 8, color: '#3b82f6', background: 'none', border: 'none', cursor: 'pointer' }}>Français</button>
+          <button style={{ marginLeft: 8, color: '#3b82f6', background: 'none', border: 'none', cursor: 'pointer' }}>Deutsch</button>
         </div>
       </main>
-      <footer className="bg-gray-800 border-t border-gray-700">
-        <div className="px-8 py-3 border-b border-gray-700"><p className="text-sm text-gray-500">United States</p></div>
-        <div className="px-8 py-3 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex gap-6">
-            <button className="text-sm text-gray-500 hover:underline">About</button>
-            <button className="text-sm text-gray-500 hover:underline">Advertising</button>
-            <button className="text-sm text-gray-500 hover:underline">Business</button>
-            <button className="text-sm text-gray-500 hover:underline">How Search works</button>
+      <footer style={{ background: 'rgba(0,0,0,0.4)', borderTop: '1px solid ' + theme.cardBorder }}>
+        <div style={{ padding: '12px 32px', borderBottom: '1px solid ' + theme.cardBorder }}><p style={{ fontSize: 14, color: theme.textSecondary, margin: 0 }}>United States</p></div>
+        <div style={{ padding: '12px 32px', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: 24 }}>
+            <button style={{ fontSize: 14, color: theme.textSecondary, background: 'none', border: 'none', cursor: 'pointer' }}>About</button>
+            <button style={{ fontSize: 14, color: theme.textSecondary, background: 'none', border: 'none', cursor: 'pointer' }}>Advertising</button>
+            <button style={{ fontSize: 14, color: theme.textSecondary, background: 'none', border: 'none', cursor: 'pointer' }}>Business</button>
+            <button style={{ fontSize: 14, color: theme.textSecondary, background: 'none', border: 'none', cursor: 'pointer' }}>How Search works</button>
           </div>
-          <div className="flex gap-6">
-            <button className="text-sm text-gray-500 hover:underline">Privacy</button>
-            <button className="text-sm text-gray-500 hover:underline">Terms</button>
-            <button className="text-sm text-gray-500 hover:underline">Settings</button>
+          <div style={{ display: 'flex', gap: 24 }}>
+            <button style={{ fontSize: 14, color: theme.textSecondary, background: 'none', border: 'none', cursor: 'pointer' }}>Privacy</button>
+            <button style={{ fontSize: 14, color: theme.textSecondary, background: 'none', border: 'none', cursor: 'pointer' }}>Terms</button>
           </div>
         </div>
       </footer>
