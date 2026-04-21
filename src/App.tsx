@@ -3892,28 +3892,6 @@ function App() {
         <button className="p-2 hover:bg-gray-800 rounded-full transition-colors"><Grid size={20} className="text-gray-400" /></button>
         <button className="p-2 hover:bg-gray-800 rounded-full transition-colors"><User size={20} className="text-gray-400" /></button>
       </header>
-      {/* Settings button top-left on home */}
-      <button
-        onClick={() => setShowSettings(true)}
-        style={{
-          position: 'fixed', top: 12, left: 12, zIndex: 50,
-          display: 'flex', alignItems: 'center', gap: 6,
-          padding: '7px 12px',
-          background: 'rgba(255,255,255,0.05)',
-          border: '1px solid rgba(255,255,255,0.1)',
-          borderRadius: 9,
-          color: '#9ca3af',
-          fontSize: 13,
-          fontWeight: 500,
-          cursor: 'pointer',
-          transition: 'background 0.2s',
-        }}
-        onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.1)'; }}
-        onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.05)'; }}
-      >
-        <Settings size={14} />
-        Settings
-      </button>
       <main className="flex-1 flex flex-col items-center justify-center px-4 -mt-20">
         <div className="text-center mb-8">
           <h1 className="text-7xl font-light mb-2">
