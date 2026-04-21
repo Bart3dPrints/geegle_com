@@ -2797,7 +2797,7 @@ function saveSettings(s: AppSettings) {
   localStorage.setItem(SETTINGS_KEY, JSON.stringify(s));
 }
 
-// Inject theme CSS into document
+// Inject theme CSS into document — applies to ENTIRE app
 function applyTheme(settings: AppSettings) {
   const existing = document.getElementById('geegle-theme');
   if (existing) existing.remove();
@@ -2806,15 +2806,34 @@ function applyTheme(settings: AppSettings) {
   const c = settings.themeColor;
   const theme = settings.visualTheme;
 
+  // Base CSS applied to all themes
   let css = `
-    :root { --accent: ${c}; --accent-soft: ${c}33; }
+    :root { --accent: ${c}; --accent-soft: ${c}33; --accent-glow: ${c}22; }
     .theme-accent { color: ${c} !important; }
     .theme-accent-bg { background: ${c} !important; }
     .theme-accent-border { border-color: ${c} !important; }
   `;
 
+  // Theme-specific full-app styling
   if (theme === 'liquidglass') {
     css += `
+      /* Liquid Glass - Full App Immersion */
+      body {
+        background: linear-gradient(135deg, #0a0a12 0%, #151520 50%, #0d0d15 100%) !important;
+      }
+      body::before {
+        content: '';
+        position: fixed; inset: 0; z-index: 0; pointer-events: none;
+        background:
+          radial-gradient(ellipse at 30% 20%, ${c}15 0%, transparent 50%),
+          radial-gradient(ellipse at 70% 80%, ${c}08 0%, transparent 40%);
+        animation: liquid-pulse 12s ease-in-out infinite;
+      }
+      @keyframes liquid-pulse {
+        0%, 100% { opacity: 0.6; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.02); }
+      }
+      /* Cards */
       .games-card {
         background: rgba(255,255,255,0.04) !important;
         border: 1px solid rgba(255,255,255,0.18) !important;
@@ -2824,11 +2843,54 @@ function applyTheme(settings: AppSettings) {
       .games-card:hover {
         background: rgba(255,255,255,0.09) !important;
         backdrop-filter: blur(28px) saturate(220%) !important;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), 0 8px 32px rgba(99,102,241,0.25) !important;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), 0 8px 32px ${c}40 !important;
+        border-color: ${c}60 !important;
       }
+      /* Settings Modal */
+      .settings-modal-overlay {
+        background: rgba(0,0,0,0.4) !important;
+        backdrop-filter: blur(8px) !important;
+      }
+      .settings-modal {
+        background: rgba(20,20,30,0.7) !important;
+        backdrop-filter: blur(40px) saturate(200%) !important;
+        border: 1px solid rgba(255,255,255,0.15) !important;
+        box-shadow: 0 25px 50px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1) !important;
+      }
+      .settings-tab-active {
+        background: rgba(255,255,255,0.1) !important;
+        border: 1px solid rgba(255,255,255,0.2) !important;
+      }
+      /* Inputs & Buttons */
+      input, button:not(.games-card):not(.theme-option) {
+        background: rgba(255,255,255,0.05) !important;
+        border: 1px solid rgba(255,255,255,0.15) !important;
+        backdrop-filter: blur(8px) !important;
+      }
+      input:focus {
+        border-color: ${c} !important;
+        box-shadow: 0 0 0 3px ${c}30 !important;
+      }
+      /* Scrollbar */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: rgba(255,255,255,0.02); }
+      ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.25); }
     `;
   } else if (theme === 'claymorphism') {
     css += `
+      /* Claymorphism - Soft 3D World */
+      body {
+        background: linear-gradient(145deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%) !important;
+      }
+      body::before {
+        content: '';
+        position: fixed; inset: 0; z-index: 0; pointer-events: none;
+        background:
+          radial-gradient(circle at 20% 80%, ${c}12 0%, transparent 40%),
+          radial-gradient(circle at 80% 20%, ${c}08 0%, transparent 35%);
+      }
+      /* Cards */
       .games-card {
         background: linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04)) !important;
         border: 2px solid rgba(255,255,255,0.2) !important;
@@ -2838,61 +2900,307 @@ function applyTheme(settings: AppSettings) {
       }
       .games-card:hover {
         transform: scale(1.05) translateY(-2px) !important;
-        box-shadow: 8px 8px 0 rgba(0,0,0,0.3), inset 2px 2px 6px rgba(255,255,255,0.15) !important;
+        box-shadow: 8px 8px 0 ${c}60, inset 2px 2px 6px rgba(255,255,255,0.15) !important;
+        border-color: ${c} !important;
+      }
+      /* Settings Modal - Clay Style */
+      .settings-modal-overlay {
+        background: rgba(0,0,0,0.3) !important;
+      }
+      .settings-modal {
+        background: linear-gradient(145deg, rgba(30,30,45,0.95), rgba(20,20,35,0.95)) !important;
+        border: 3px solid rgba(255,255,255,0.25) !important;
+        border-radius: 32px !important;
+        box-shadow: 12px 12px 0 rgba(0,0,0,0.4), inset 2px 2px 6px rgba(255,255,255,0.08) !important;
+      }
+      .settings-tab {
+        border-radius: 16px !important;
+        box-shadow: 3px 3px 0 rgba(0,0,0,0.3) !important;
+      }
+      .settings-tab-active {
+        background: ${c}30 !important;
+        border: 2px solid ${c} !important;
+        box-shadow: 3px 3px 0 ${c}60 !important;
+      }
+      /* Inputs - Clay */
+      input {
+        background: rgba(255,255,255,0.08) !important;
+        border: 2px solid rgba(255,255,255,0.2) !important;
+        border-radius: 16px !important;
+        box-shadow: inset 3px 3px 6px rgba(0,0,0,0.2), inset -2px -2px 4px rgba(255,255,255,0.05) !important;
+      }
+      input:focus {
+        border-color: ${c} !important;
+        box-shadow: inset 3px 3px 6px rgba(0,0,0,0.3), 0 0 0 4px ${c}25 !important;
+      }
+      /* Buttons */
+      button:not(.games-card):not(.theme-option) {
+        border-radius: 16px !important;
+        box-shadow: 4px 4px 0 rgba(0,0,0,0.3) !important;
+        transition: all 0.15s ease !important;
+      }
+      button:not(.games-card):not(.theme-option):hover {
+        transform: translate(-2px, -2px) !important;
+        box-shadow: 6px 6px 0 rgba(0,0,0,0.4) !important;
       }
     `;
   } else if (theme === 'aurora') {
     css += `
+      /* Aurora - Ethereal Flow */
+      body {
+        background: linear-gradient(180deg, #0c0c14 0%, #0a0a12 100%) !important;
+      }
       body::before {
         content: '';
         position: fixed; inset: 0; z-index: 0; pointer-events: none;
-        background: radial-gradient(ellipse at 20% 50%, rgba(120,40,200,0.15) 0%, transparent 60%),
-                    radial-gradient(ellipse at 80% 20%, rgba(40,160,200,0.12) 0%, transparent 60%),
-                    radial-gradient(ellipse at 60% 80%, rgba(80,200,120,0.1) 0%, transparent 60%);
-        animation: aurora-shift 8s ease-in-out infinite alternate;
+        background:
+          radial-gradient(ellipse at 20% 50%, rgba(120,40,200,0.2) 0%, transparent 50%),
+          radial-gradient(ellipse at 80% 20%, rgba(40,160,200,0.15) 0%, transparent 45%),
+          radial-gradient(ellipse at 60% 80%, rgba(80,200,120,0.12) 0%, transparent 45%),
+          radial-gradient(ellipse at 40% 30%, ${c}15 0%, transparent 40%);
+        animation: aurora-shift 12s ease-in-out infinite alternate;
+        filter: blur(60px);
       }
       @keyframes aurora-shift {
-        0% { opacity: 0.6; transform: scale(1); }
-        100% { opacity: 1; transform: scale(1.05) translateY(-10px); }
+        0% { opacity: 0.5; transform: scale(1) rotate(0deg); }
+        33% { opacity: 0.8; transform: scale(1.05) rotate(2deg); }
+        66% { opacity: 0.6; transform: scale(0.98) rotate(-1deg); }
+        100% { opacity: 1; transform: scale(1.02) rotate(0deg); }
       }
+      /* Cards - Aurora Style */
       .games-card {
         background: rgba(255,255,255,0.035) !important;
         border: 1px solid rgba(255,255,255,0.12) !important;
         backdrop-filter: blur(16px) !important;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.2) !important;
+      }
+      .games-card:hover {
+        background: rgba(255,255,255,0.08) !important;
+        border-color: ${c}80 !important;
+        box-shadow: 0 8px 32px ${c}30, 0 0 60px ${c}15 !important;
+        transform: scale(1.05) !important;
+      }
+      /* Settings Modal - Aurora Glow */
+      .settings-modal-overlay {
+        background: rgba(0,0,0,0.35) !important;
+        backdrop-filter: blur(4px) !important;
+      }
+      .settings-modal {
+        background: rgba(15,15,25,0.85) !important;
+        backdrop-filter: blur(24px) !important;
+        border: 1px solid rgba(255,255,255,0.15) !important;
+        box-shadow: 0 0 80px ${c}20, 0 20px 40px rgba(0,0,0,0.4) !important;
+      }
+      .settings-modal::before {
+        content: '';
+        position: absolute; inset: -1px; z-index: -1;
+        background: linear-gradient(135deg, ${c}40, transparent, rgba(120,40,200,0.3));
+        border-radius: inherit;
+        filter: blur(20px);
+        opacity: 0.5;
+      }
+      .settings-tab-active {
+        background: linear-gradient(135deg, ${c}30, rgba(120,40,200,0.2)) !important;
+        border: 1px solid ${c}60 !important;
+        box-shadow: 0 0 20px ${c}30 !important;
+      }
+      /* Inputs with glow */
+      input {
+        background: rgba(0,0,0,0.3) !important;
+        border: 1px solid rgba(255,255,255,0.1) !important;
+      }
+      input:focus {
+        border-color: ${c} !important;
+        box-shadow: 0 0 20px ${c}40, inset 0 0 10px ${c}10 !important;
       }
     `;
   } else if (theme === 'neubrutalism') {
     css += `
+      /* Neubrutalism - Raw Power */
+      body {
+        background: #0a0a0f !important;
+      }
+      body::before {
+        content: '';
+        position: fixed; inset: 0; z-index: 0; pointer-events: none;
+        background: repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 2px,
+          rgba(255,255,255,0.01) 2px,
+          rgba(255,255,255,0.01) 4px
+        );
+      }
+      /* Cards - Bold & Raw */
       .games-card {
-        background: rgba(20,20,30,0.85) !important;
-        border: 2.5px solid rgba(255,255,255,0.85) !important;
-        border-radius: 8px !important;
-        box-shadow: 4px 4px 0 rgba(255,255,255,0.7) !important;
+        background: rgba(20,20,30,0.9) !important;
+        border: 3px solid rgba(255,255,255,0.9) !important;
+        border-radius: 4px !important;
+        box-shadow: 6px 6px 0 rgba(255,255,255,0.7) !important;
         backdrop-filter: none !important;
       }
       .games-card:hover {
-        transform: translate(-2px,-2px) scale(1.03) !important;
+        transform: translate(-3px,-3px) scale(1.03) !important;
+        box-shadow: 9px 9px 0 ${c} !important;
+        border-color: ${c} !important;
+      }
+      /* Settings Modal - Brutalist */
+      .settings-modal-overlay {
+        background: rgba(0,0,0,0.8) !important;
+      }
+      .settings-modal {
+        background: #111118 !important;
+        border: 4px solid rgba(255,255,255,0.9) !important;
+        border-radius: 0 !important;
+        box-shadow: 12px 12px 0 rgba(255,255,255,0.6) !important;
+      }
+      .settings-modal h2 {
+        border-bottom: 3px solid rgba(255,255,255,0.5) !important;
+        padding-bottom: 12px !important;
+      }
+      .settings-tab {
+        border: 2px solid rgba(255,255,255,0.5) !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+      }
+      .settings-tab-active {
+        background: ${c} !important;
+        border: 3px solid rgba(255,255,255,0.9) !important;
+        box-shadow: 4px 4px 0 rgba(0,0,0,0.4) !important;
+        color: #000 !important;
+        font-weight: 700 !important;
+      }
+      /* Inputs - Raw */
+      input {
+        background: #0a0a0f !important;
+        border: 3px solid rgba(255,255,255,0.6) !important;
+        border-radius: 0 !important;
+      }
+      input:focus {
+        border-color: ${c} !important;
+        outline: 3px solid ${c}60 !important;
+        outline-offset: 2px !important;
+      }
+      /* Buttons */
+      button:not(.games-card):not(.theme-option) {
+        border: 2px solid rgba(255,255,255,0.6) !important;
+        border-radius: 0 !important;
+        box-shadow: 4px 4px 0 rgba(255,255,255,0.4) !important;
+        background: transparent !important;
+      }
+      button:not(.games-card):not(.theme-option):hover {
+        transform: translate(-2px, -2px) !important;
         box-shadow: 6px 6px 0 ${c} !important;
         border-color: ${c} !important;
       }
+      /* Scrollbar - Brutalist */
+      ::-webkit-scrollbar { width: 12px; }
+      ::-webkit-scrollbar-track { background: #0a0a0f; border-left: 2px solid rgba(255,255,255,0.2); }
+      ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.6); border: 2px solid #0a0a0f; }
     `;
   } else if (theme === 'abstract3d') {
     css += `
+      /* Abstract 3D - Depth & Dimension */
+      body {
+        background: linear-gradient(135deg, #0d0d15 0%, #121220 50%, #0a0a12 100%) !important;
+        perspective: 1000px;
+      }
+      body::before {
+        content: '';
+        position: fixed; inset: 0; z-index: 0; pointer-events: none;
+        background:
+          radial-gradient(circle at 50% 50%, ${c}08 0%, transparent 60%),
+          conic-gradient(from 0deg at 30% 30%, transparent 0deg, ${c}05 60deg, transparent 120deg),
+          conic-gradient(from 180deg at 70% 70%, transparent 0deg, ${c}05 60deg, transparent 120deg);
+        animation: rotate-3d 20s linear infinite;
+      }
+      @keyframes rotate-3d {
+        0% { transform: rotateZ(0deg); }
+        100% { transform: rotateZ(360deg); }
+      }
+      /* Cards - 3D Transform */
       .games-card {
-        background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(99,102,241,0.06) 100%) !important;
+        background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, ${c}10 100%) !important;
         border: 1px solid rgba(255,255,255,0.15) !important;
         backdrop-filter: blur(12px) !important;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.2) !important;
+        box-shadow:
+          0 8px 32px rgba(0,0,0,0.4),
+          inset 0 1px 0 rgba(255,255,255,0.2),
+          0 0 0 1px rgba(255,255,255,0.05) !important;
         transform-style: preserve-3d;
+        transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
       }
       .games-card:hover {
-        background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(99,102,241,0.1) 100%) !important;
-        box-shadow: 0 16px 48px rgba(99,102,241,0.3), inset 0 2px 0 rgba(255,255,255,0.25) !important;
-        transform: scale(1.05) rotateX(2deg) !important;
+        background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, ${c}18 100%) !important;
+        box-shadow:
+          0 16px 48px ${c}30,
+          inset 0 2px 0 rgba(255,255,255,0.25),
+          0 0 40px ${c}20 !important;
+        transform: scale(1.05) rotateX(5deg) rotateY(-5deg) translateZ(20px) !important;
+        border-color: ${c}60 !important;
+      }
+      /* Settings Modal - Floating 3D */
+      .settings-modal-overlay {
+        background: rgba(0,0,0,0.4) !important;
+        backdrop-filter: blur(8px) !important;
+      }
+      .settings-modal {
+        background: linear-gradient(145deg, rgba(20,20,35,0.95), rgba(10,10,20,0.98)) !important;
+        border: 1px solid rgba(255,255,255,0.2) !important;
+        box-shadow:
+          0 25px 50px rgba(0,0,0,0.5),
+          0 0 0 1px rgba(255,255,255,0.1),
+          0 0 60px ${c}15 !important;
+        transform-style: preserve-3d;
+      }
+      .settings-tab {
+        transform-style: preserve-3d;
+        transition: transform 0.2s ease !important;
+      }
+      .settings-tab:hover {
+        transform: translateZ(10px) !important;
+      }
+      .settings-tab-active {
+        background: linear-gradient(135deg, ${c}25, ${c}10) !important;
+        border: 1px solid ${c} !important;
+        box-shadow: 0 8px 24px ${c}40, inset 0 0 20px ${c}10 !important;
+        transform: translateZ(15px) !important;
+      }
+      /* Inputs - 3D */
+      input {
+        background: rgba(0,0,0,0.3) !important;
+        border: 1px solid rgba(255,255,255,0.15) !important;
+        box-shadow:
+          inset 0 2px 4px rgba(0,0,0,0.3),
+          0 1px 0 rgba(255,255,255,0.1) !important;
+      }
+      input:focus {
+        border-color: ${c} !important;
+        box-shadow:
+          inset 0 2px 4px rgba(0,0,0,0.3),
+          0 0 0 3px ${c}30,
+          0 0 20px ${c}25 !important;
+        transform: translateZ(5px) !important;
       }
     `;
   } else if (theme === 'dynamic') {
     css += `
+      /* Dynamic - Living Energy */
+      body {
+        background: linear-gradient(135deg, #0a0a10 0%, #101018 50%, #080810 100%) !important;
+      }
+      body::before {
+        content: '';
+        position: fixed; inset: 0; z-index: 0; pointer-events: none;
+        background:
+          radial-gradient(circle at 50% 50%, ${c}10 0%, transparent 50%);
+        animation: dynamic-pulse 4s ease-in-out infinite;
+      }
+      @keyframes dynamic-pulse {
+        0%, 100% { opacity: 0.5; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.1); }
+      }
+      /* Cards - Energetic */
       .games-card {
         background: rgba(255,255,255,0.04) !important;
         border: 1px solid rgba(255,255,255,0.1) !important;
@@ -2901,9 +3209,83 @@ function applyTheme(settings: AppSettings) {
       }
       .games-card:hover {
         background: rgba(255,255,255,0.09) !important;
-        border-color: ${c}99 !important;
+        border-color: ${c} !important;
         transform: scale(1.07) !important;
-        box-shadow: 0 0 30px ${c}44 !important;
+        box-shadow:
+          0 0 30px ${c}44,
+          0 0 60px ${c}22,
+          0 10px 40px rgba(0,0,0,0.3) !important;
+      }
+      /* Settings Modal - Dynamic */
+      .settings-modal-overlay {
+        background: rgba(0,0,0,0.5) !important;
+        backdrop-filter: blur(12px) !important;
+      }
+      .settings-modal {
+        background: rgba(15,15,25,0.9) !important;
+        backdrop-filter: blur(20px) !important;
+        border: 1px solid rgba(255,255,255,0.15) !important;
+        box-shadow: 0 0 60px ${c}25, 0 20px 40px rgba(0,0,0,0.4) !important;
+        animation: modal-glow 3s ease-in-out infinite alternate;
+      }
+      @keyframes modal-glow {
+        from { box-shadow: 0 0 40px ${c}15, 0 20px 40px rgba(0,0,0,0.4); }
+        to { box-shadow: 0 0 80px ${c}35, 0 20px 40px rgba(0,0,0,0.4); }
+      }
+      .settings-tab-active {
+        background: ${c}25 !important;
+        border: 1px solid ${c} !important;
+        box-shadow: 0 0 20px ${c}40 !important;
+        animation: tab-pulse 2s ease-in-out infinite;
+      }
+      @keyframes tab-pulse {
+        0%, 100% { box-shadow: 0 0 10px ${c}30; }
+        50% { box-shadow: 0 0 25px ${c}60; }
+      }
+      /* Inputs - Dynamic */
+      input {
+        background: rgba(0,0,0,0.3) !important;
+        border: 1px solid rgba(255,255,255,0.15) !important;
+        transition: all 0.2s ease !important;
+      }
+      input:focus {
+        border-color: ${c} !important;
+        box-shadow: 0 0 30px ${c}50 !important;
+        transform: scale(1.02) !important;
+      }
+      button:not(.games-card):not(.theme-option) {
+        transition: all 0.2s cubic-bezier(0.34,1.56,0.64,1) !important;
+      }
+      button:not(.games-card):not(.theme-option):hover {
+        transform: scale(1.05) !important;
+        box-shadow: 0 0 20px ${c}40 !important;
+      }
+    `;
+  } else {
+    // Default theme - subtle enhancement
+    css += `
+      body {
+        background: #0f0f13 !important;
+      }
+      .games-card:hover {
+        border-color: ${c}60 !important;
+        box-shadow: 0 4px 24px ${c}25 !important;
+      }
+      .settings-modal-overlay {
+        background: rgba(0,0,0,0.5) !important;
+        backdrop-filter: blur(4px) !important;
+      }
+      .settings-modal {
+        background: rgba(20,20,30,0.95) !important;
+        border: 1px solid rgba(255,255,255,0.1) !important;
+      }
+      .settings-tab-active {
+        background: ${c}20 !important;
+        border: 1px solid ${c} !important;
+      }
+      input:focus {
+        border-color: ${c} !important;
+        box-shadow: 0 0 0 3px ${c}25 !important;
       }
     `;
   }
@@ -2952,9 +3334,9 @@ function SettingsModal({ onClose, settings, onChange }: {
   ];
 
   return (
-    <div style={{ position: 'fixed', inset: 0, zIndex: 9990, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.75)', backdropFilter: 'blur(6px)' }}
+    <div className="settings-modal-overlay" style={{ position: 'fixed', inset: 0, zIndex: 9990, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
       onClick={e => { if (e.target === e.currentTarget) onClose(); }}>
-      <div style={{ background: '#0f1117', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 20, width: '90%', maxWidth: 680, maxHeight: '85vh', display: 'flex', flexDirection: 'column', overflow: 'hidden', boxShadow: '0 32px 80px rgba(0,0,0,0.6)' }}>
+      <div className="settings-modal" style={{ width: '90%', maxWidth: 680, maxHeight: '85vh', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
         {/* Header */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 24px', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
           <span style={{ color: '#f3f4f6', fontSize: 18, fontWeight: 700, letterSpacing: '-0.02em' }}>Settings</span>
@@ -2967,7 +3349,7 @@ function SettingsModal({ onClose, settings, onChange }: {
           {/* Sidebar */}
           <div style={{ width: 160, borderRight: '1px solid rgba(255,255,255,0.08)', padding: '16px 12px', flexShrink: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
             {(['theme', 'panic'] as const).map(t => (
-              <button key={t} onClick={() => setTab(t)} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '10px 12px', borderRadius: 10, border: 'none', cursor: 'pointer', background: tab === t ? 'rgba(99,102,241,0.2)' : 'transparent', color: tab === t ? '#a5b4fc' : '#9ca3af', fontSize: 14, fontWeight: tab === t ? 600 : 400, transition: 'all 0.15s', textAlign: 'left' }}>
+              <button key={t} onClick={() => setTab(t)} className={tab === t ? 'settings-tab-active' : 'settings-tab'} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '10px 12px', borderRadius: 10, border: 'none', cursor: 'pointer', background: tab === t ? 'rgba(99,102,241,0.2)' : 'transparent', color: tab === t ? '#a5b4fc' : '#9ca3af', fontSize: 14, fontWeight: tab === t ? 600 : 400, transition: 'all 0.15s', textAlign: 'left' }}>
                 {t === 'theme' ? <Palette size={16} /> : <Key size={16} />}
                 {t === 'theme' ? 'Theme' : 'Panic Key'}
               </button>
@@ -2996,7 +3378,7 @@ function SettingsModal({ onClose, settings, onChange }: {
                   <label style={{ color: '#d1d5db', fontSize: 13, fontWeight: 600, display: 'block', marginBottom: 10, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Visual Theme</label>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                     {themes.map(th => (
-                      <button key={th.id} onClick={() => update({ visualTheme: th.id })}
+                      <button key={th.id} onClick={() => update({ visualTheme: th.id })} className="theme-option"
                         style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 14px', borderRadius: 12, border: `1px solid ${local.visualTheme === th.id ? 'rgba(99,102,241,0.6)' : 'rgba(255,255,255,0.08)'}`, background: local.visualTheme === th.id ? 'rgba(99,102,241,0.12)' : 'rgba(255,255,255,0.02)', cursor: 'pointer', textAlign: 'left', transition: 'all 0.15s' }}>
                         <span style={{ fontSize: 22 }}>{th.preview}</span>
                         <div style={{ flex: 1 }}>
@@ -3370,35 +3752,37 @@ function App() {
           />
         )}
 
-        {/* Settings button — top left */}
-        <button
-          onClick={() => setShowSettings(true)}
-          style={{
-            position: 'fixed', top: 16, left: 16, zIndex: 50,
-            display: 'flex', alignItems: 'center', gap: 6,
-            padding: '8px 14px',
-            background: 'rgba(255,255,255,0.07)',
-            border: '1px solid rgba(255,255,255,0.14)',
-            borderRadius: 10,
-            color: '#d1d5db',
-            fontSize: 13,
-            fontWeight: 500,
-            cursor: 'pointer',
-            backdropFilter: 'blur(8px)',
-            transition: 'background 0.2s, border-color 0.2s',
-          }}
-          onMouseEnter={e => {
-            (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.13)';
-            (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.25)';
-          }}
-          onMouseLeave={e => {
-            (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.07)';
-            (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.14)';
-          }}
-        >
-          <Settings size={15} />
-          Settings
-        </button>
+        {/* Settings button — top left (only shows when searching "cord") */}
+        {isCordKeyword(gameSearch) && (
+          <button
+            onClick={() => setShowSettings(true)}
+            style={{
+              position: 'fixed', top: 16, left: 16, zIndex: 50,
+              display: 'flex', alignItems: 'center', gap: 6,
+              padding: '8px 14px',
+              background: 'rgba(255,255,255,0.07)',
+              border: '1px solid rgba(255,255,255,0.14)',
+              borderRadius: 10,
+              color: '#d1d5db',
+              fontSize: 13,
+              fontWeight: 500,
+              cursor: 'pointer',
+              backdropFilter: 'blur(8px)',
+              transition: 'background 0.2s, border-color 0.2s',
+            }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.13)';
+              (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.25)';
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.07)';
+              (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.14)';
+            }}
+          >
+            <Settings size={15} />
+            Settings
+          </button>
+        )}
 
         <div style={{ position: 'relative', zIndex: 1, padding: 32 }}>
           {/* Sticky header — fades out as user scrolls */}
