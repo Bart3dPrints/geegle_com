@@ -2776,6 +2776,8 @@ interface AppSettings {
   visualTheme: string;
   panicKey: string;
   panicUrl: string;
+  cloakTitle: string;
+  cloakIcon: string; // base64 data URL or empty string
 }
 
 const DEFAULT_SETTINGS: AppSettings = {
@@ -2783,6 +2785,8 @@ const DEFAULT_SETTINGS: AppSettings = {
   visualTheme: 'default',
   panicKey: '\\',
   panicUrl: 'https://manhasset.instructure.com/',
+  cloakTitle: '',
+  cloakIcon: '',
 };
 
 function loadSettings(): AppSettings {
@@ -2806,22 +2810,35 @@ function applyTheme(settings: AppSettings) {
   const c = settings.themeColor;
   const theme = settings.visualTheme;
 
+  // Base accent vars always present
   let css = `
     :root { --accent: ${c}; --accent-soft: ${c}33; }
     .theme-accent { color: ${c} !important; }
     .theme-accent-bg { background: ${c} !important; }
     .theme-accent-border { border-color: ${c} !important; }
-    body { background: #050508 !important; }
   `;
 
-  if (theme === 'liquidglass') {
+  if (theme === 'default' || !theme) {
     css += `
-      body { background: linear-gradient(135deg, #0a0a0f 0%, #12121a 50%, #0a0a0f 100%) !important; }
+      body { background: #050508 !important; }
+    `;
+  } else if (theme === 'liquidglass') {
+    /* Liquid Glass — deep navy with shifting iridescent oil-slick overlays */
+    css += `
+      body {
+        background:
+          radial-gradient(ellipse at 30% 20%, rgba(99,102,241,0.18) 0%, transparent 55%),
+          radial-gradient(ellipse at 75% 70%, rgba(236,72,153,0.14) 0%, transparent 55%),
+          radial-gradient(ellipse at 55% 45%, rgba(16,185,129,0.08) 0%, transparent 50%),
+          linear-gradient(160deg, #050510 0%, #0c0c1e 40%, #08080f 100%) !important;
+        background-attachment: fixed !important;
+      }
       .games-card {
         background: rgba(255,255,255,0.04) !important;
         border: 1px solid rgba(255,255,255,0.18) !important;
         backdrop-filter: blur(20px) saturate(180%) !important;
         box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 4px 24px rgba(0,0,0,0.3) !important;
+        transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s !important;
       }
       .games-card:hover {
         background: rgba(255,255,255,0.09) !important;
@@ -2830,14 +2847,22 @@ function applyTheme(settings: AppSettings) {
       }
     `;
   } else if (theme === 'claymorphism') {
+    /* Claymorphism — warm midnight blue-purple with doughy pastel pop */
     css += `
-      body { background: linear-gradient(145deg, #0f0f14 0%, #1a1a24 50%, #0f0f14 100%) !important; }
+      body {
+        background:
+          radial-gradient(ellipse at 15% 85%, rgba(168,85,247,0.2) 0%, transparent 50%),
+          radial-gradient(ellipse at 85% 15%, rgba(249,168,212,0.15) 0%, transparent 50%),
+          linear-gradient(145deg, #0e0e18 0%, #161628 45%, #100e1c 100%) !important;
+        background-attachment: fixed !important;
+      }
       .games-card {
         background: linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04)) !important;
         border: 2px solid rgba(255,255,255,0.2) !important;
         border-radius: 24px !important;
         box-shadow: 6px 6px 0 rgba(0,0,0,0.25), inset 2px 2px 4px rgba(255,255,255,0.1) !important;
         backdrop-filter: blur(8px) !important;
+        transition: transform 0.2s, box-shadow 0.2s !important;
       }
       .games-card:hover {
         transform: scale(1.05) translateY(-2px) !important;
@@ -2845,35 +2870,51 @@ function applyTheme(settings: AppSettings) {
       }
     `;
   } else if (theme === 'aurora') {
+    /* Aurora — deep arctic black with shimmering curtain of northern lights */
     css += `
+      body {
+        background: linear-gradient(180deg, #020408 0%, #050a10 60%, #020408 100%) !important;
+        background-attachment: fixed !important;
+      }
       body::before {
         content: '';
         position: fixed; inset: 0; z-index: 0; pointer-events: none;
-        background: radial-gradient(ellipse at 20% 50%, rgba(120,40,200,0.15) 0%, transparent 60%),
-                    radial-gradient(ellipse at 80% 20%, rgba(40,160,200,0.12) 0%, transparent 60%),
-                    radial-gradient(ellipse at 60% 80%, rgba(80,200,120,0.1) 0%, transparent 60%);
+        background:
+          radial-gradient(ellipse at 20% 50%, rgba(120,40,200,0.22) 0%, transparent 60%),
+          radial-gradient(ellipse at 80% 20%, rgba(40,160,200,0.18) 0%, transparent 60%),
+          radial-gradient(ellipse at 60% 80%, rgba(80,200,120,0.15) 0%, transparent 60%),
+          radial-gradient(ellipse at 50% 10%, rgba(200,80,120,0.12) 0%, transparent 50%);
         animation: aurora-shift 8s ease-in-out infinite alternate;
       }
       @keyframes aurora-shift {
-        0% { opacity: 0.6; transform: scale(1); }
-        100% { opacity: 1; transform: scale(1.05) translateY(-10px); }
+        0%   { opacity: 0.6; transform: scale(1) translateY(0); }
+        50%  { opacity: 0.9; transform: scale(1.03) translateY(-6px); }
+        100% { opacity: 1;   transform: scale(1.06) translateY(-12px); }
       }
-      body { background: linear-gradient(180deg, #050508 0%, #0a0a10 50%, #050508 100%) !important; }
       .games-card {
         background: rgba(255,255,255,0.035) !important;
         border: 1px solid rgba(255,255,255,0.12) !important;
         backdrop-filter: blur(16px) !important;
+        transition: background 0.2s, border-color 0.2s, transform 0.2s !important;
       }
     `;
   } else if (theme === 'neubrutalism') {
+    /* Neubrutalism — stark ink black with raw newsprint texture feel */
     css += `
-      body { background: #08080c !important; }
+      body {
+        background:
+          repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.025) 39px, rgba(255,255,255,0.025) 40px),
+          repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.015) 39px, rgba(255,255,255,0.015) 40px),
+          #080808 !important;
+        background-attachment: fixed !important;
+      }
       .games-card {
-        background: rgba(20,20,30,0.85) !important;
+        background: rgba(20,20,22,0.92) !important;
         border: 2.5px solid rgba(255,255,255,0.85) !important;
         border-radius: 8px !important;
         box-shadow: 4px 4px 0 rgba(255,255,255,0.7) !important;
         backdrop-filter: none !important;
+        transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s !important;
       }
       .games-card:hover {
         transform: translate(-2px,-2px) scale(1.03) !important;
@@ -2882,14 +2923,22 @@ function applyTheme(settings: AppSettings) {
       }
     `;
   } else if (theme === 'abstract3d') {
+    /* 3D Abstract — midnight with holographic prismatic depth bands */
     css += `
-      body { background: linear-gradient(135deg, #0a0a12 0%, #10101a 50%, #08080f 100%) !important; }
+      body {
+        background:
+          repeating-conic-gradient(from 0deg at 50% 50%, rgba(99,102,241,0.04) 0deg 30deg, transparent 30deg 60deg),
+          radial-gradient(ellipse at 40% 60%, rgba(139,92,246,0.2) 0%, transparent 55%),
+          radial-gradient(ellipse at 70% 30%, rgba(59,130,246,0.15) 0%, transparent 50%),
+          linear-gradient(135deg, #060610 0%, #0c0c1a 50%, #060810 100%) !important;
+        background-attachment: fixed !important;
+      }
       .games-card {
         background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(99,102,241,0.06) 100%) !important;
         border: 1px solid rgba(255,255,255,0.15) !important;
         backdrop-filter: blur(12px) !important;
         box-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.2) !important;
-        transform-style: preserve-3d;
+        transition: background 0.2s, box-shadow 0.2s, transform 0.2s !important;
       }
       .games-card:hover {
         background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(99,102,241,0.1) 100%) !important;
@@ -2898,8 +2947,16 @@ function applyTheme(settings: AppSettings) {
       }
     `;
   } else if (theme === 'dynamic') {
+    /* Dynamic Live — reactive dark gradient with pulsing ember glow core */
     css += `
-      body { background: linear-gradient(90deg, #08080e 0%, #0c0c14 50%, #08080e 100%) !important; }
+      body {
+        background:
+          radial-gradient(ellipse at 50% 50%, rgba(${parseInt(c.slice(1,3),16)},${parseInt(c.slice(3,5),16)},${parseInt(c.slice(5,7),16)},0.12) 0%, transparent 65%),
+          radial-gradient(ellipse at 80% 80%, rgba(239,68,68,0.08) 0%, transparent 50%),
+          radial-gradient(ellipse at 20% 20%, rgba(59,130,246,0.08) 0%, transparent 50%),
+          linear-gradient(135deg, #070708 0%, #0e0e10 50%, #070708 100%) !important;
+        background-attachment: fixed !important;
+      }
       .games-card {
         background: rgba(255,255,255,0.04) !important;
         border: 1px solid rgba(255,255,255,0.1) !important;
@@ -2919,15 +2976,136 @@ function applyTheme(settings: AppSettings) {
   document.head.appendChild(style);
 }
 
+// Apply cloak (tab title + favicon)
+function applyCloak(settings: AppSettings) {
+  // Title
+  const title = settings.cloakTitle.trim();
+  document.title = title || 'Geegle';
+
+  // Favicon
+  let link = document.querySelector<HTMLLinkElement>("link[rel~='icon']");
+  if (!link) {
+    link = document.createElement('link');
+    link.rel = 'icon';
+    document.head.appendChild(link);
+  }
+  if (settings.cloakIcon) {
+    link.href = settings.cloakIcon;
+  } else {
+    link.href = '/favicon.ico';
+  }
+}
+
+// ── Cloak Tab ──────────────────────────────────────────────────────────────────
+function CloakTab({ local, update }: { local: AppSettings; update: (patch: Partial<AppSettings>) => void }) {
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [previewError, setPreviewError] = useState(false);
+
+  const handleIconUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    if (!['image/png', 'image/jpeg', 'image/jpg', 'image/svg+xml', 'image/x-icon'].includes(file.type)) {
+      setPreviewError(true);
+      return;
+    }
+    setPreviewError(false);
+    const reader = new FileReader();
+    reader.onload = () => {
+      update({ cloakIcon: reader.result as string });
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const clearIcon = () => {
+    update({ cloakIcon: '' });
+    if (fileInputRef.current) fileInputRef.current.value = '';
+    setPreviewError(false);
+  };
+
+  const titleValue = local.cloakTitle ?? '';
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+      {/* Tab Name */}
+      <div>
+        <label style={{ color: '#d1d5db', fontSize: 13, fontWeight: 600, display: 'block', marginBottom: 6, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Tab Name</label>
+        <p style={{ color: '#6b7280', fontSize: 12, marginBottom: 10 }}>Disguise the browser tab title. Leave empty for default.</p>
+        <input
+          type="text"
+          value={titleValue}
+          maxLength={80}
+          onChange={e => update({ cloakTitle: e.target.value })}
+          placeholder="e.g. Google Classroom"
+          style={{ width: '100%', padding: '10px 14px', borderRadius: 10, border: '1px solid rgba(255,255,255,0.12)', background: 'rgba(255,255,255,0.05)', color: '#f3f4f6', fontSize: 14, outline: 'none', boxSizing: 'border-box', transition: 'border-color 0.15s' }}
+        />
+        <p style={{ color: '#4b5563', fontSize: 11, marginTop: 4 }}>{titleValue.length}/80 characters</p>
+      </div>
+
+      {/* Tab Icon */}
+      <div>
+        <label style={{ color: '#d1d5db', fontSize: 13, fontWeight: 600, display: 'block', marginBottom: 6, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Tab Icon (Favicon)</label>
+        <p style={{ color: '#6b7280', fontSize: 12, marginBottom: 12 }}>Upload a PNG, JPG, or SVG to replace the favicon.</p>
+
+        {/* Preview */}
+        {local.cloakIcon && !previewError && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12, padding: '10px 14px', background: 'rgba(255,255,255,0.04)', borderRadius: 10, border: '1px solid rgba(255,255,255,0.08)' }}>
+            <img src={local.cloakIcon} alt="icon preview" style={{ width: 32, height: 32, objectFit: 'contain', borderRadius: 4 }} onError={() => setPreviewError(true)} />
+            <span style={{ color: '#9ca3af', fontSize: 13, flex: 1 }}>Custom icon active</span>
+            <button onClick={clearIcon} style={{ background: 'rgba(239,68,68,0.15)', border: '1px solid rgba(239,68,68,0.3)', borderRadius: 6, color: '#f87171', fontSize: 12, padding: '4px 10px', cursor: 'pointer', transition: 'background 0.15s' }}>
+              Remove
+            </button>
+          </div>
+        )}
+        {previewError && (
+          <div style={{ marginBottom: 12, padding: '8px 14px', background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.2)', borderRadius: 8 }}>
+            <p style={{ color: '#f87171', fontSize: 12, margin: 0 }}>❌ Unsupported file format. Please use PNG, JPG, or SVG.</p>
+          </div>
+        )}
+
+        <input ref={fileInputRef} type="file" accept="image/png,image/jpeg,image/jpg,image/svg+xml" onChange={handleIconUpload} style={{ display: 'none' }} />
+        <button
+          onClick={() => fileInputRef.current?.click()}
+          style={{ padding: '10px 18px', borderRadius: 10, border: '1px dashed rgba(255,255,255,0.2)', background: 'rgba(255,255,255,0.03)', color: '#d1d5db', fontSize: 14, cursor: 'pointer', transition: 'all 0.15s', display: 'flex', alignItems: 'center', gap: 8 }}>
+          <span style={{ fontSize: 16 }}>📁</span> Choose Image File
+        </button>
+      </div>
+
+      {/* Live preview bar */}
+      <div style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)', borderRadius: 10, padding: '12px 16px' }}>
+        <p style={{ color: '#a5b4fc', fontSize: 13, margin: '0 0 8px', fontWeight: 600 }}>🥷 Browser Tab Preview</p>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(0,0,0,0.3)', borderRadius: 6, padding: '6px 10px', maxWidth: 240 }}>
+          {local.cloakIcon && !previewError
+            ? <img src={local.cloakIcon} alt="" style={{ width: 14, height: 14, objectFit: 'contain' }} />
+            : <span style={{ fontSize: 12 }}>🎮</span>
+          }
+          <span style={{ color: '#e5e7eb', fontSize: 12, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: 180 }}>
+            {titleValue.trim() || 'Geegle'}
+          </span>
+        </div>
+        <p style={{ color: '#6b7280', fontSize: 11, marginTop: 8, marginBottom: 0 }}>Changes apply immediately. Reload the page if the favicon doesn't update.</p>
+      </div>
+    </div>
+  );
+}
+
 // ── Settings Modal ─────────────────────────────────────────────────────────────
 function SettingsModal({ onClose, settings, onChange }: {
   onClose: () => void;
   settings: AppSettings;
   onChange: (s: AppSettings) => void;
 }) {
-  const [tab, setTab] = useState<'theme' | 'panic'>('theme');
+  const [tab, setTab] = useState<'theme' | 'panic' | 'cloak'>('theme');
   const [local, setLocal] = useState<AppSettings>({ ...settings });
   const [listeningKey, setListeningKey] = useState(false);
+  const [visible, setVisible] = useState(false);
+
+  // Animate in on mount
+  useEffect(() => { requestAnimationFrame(() => setVisible(true)); }, []);
+
+  const handleClose = () => {
+    setVisible(false);
+    setTimeout(onClose, 200);
+  };
 
   const update = (patch: Partial<AppSettings>) => {
     const next = { ...local, ...patch };
@@ -2959,13 +3137,24 @@ function SettingsModal({ onClose, settings, onChange }: {
   ];
 
   return (
-    <div style={{ position: 'fixed', inset: 0, zIndex: 9990, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.75)', backdropFilter: 'blur(6px)' }}
-      onClick={e => { if (e.target === e.currentTarget) onClose(); }}>
-      <div style={{ background: '#0f1117', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 20, width: '90%', maxWidth: 680, maxHeight: '85vh', display: 'flex', flexDirection: 'column', overflow: 'hidden', boxShadow: '0 32px 80px rgba(0,0,0,0.6)' }}>
+    <div
+      style={{ position: 'fixed', inset: 0, zIndex: 9990, display: 'flex', alignItems: 'center', justifyContent: 'center',
+        background: visible ? 'rgba(0,0,0,0.75)' : 'rgba(0,0,0,0)',
+        backdropFilter: visible ? 'blur(6px)' : 'blur(0px)',
+        transition: 'background 0.2s, backdrop-filter 0.2s' }}
+      onClick={e => { if (e.target === e.currentTarget) handleClose(); }}>
+      <div style={{
+        background: '#0f1117', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 20,
+        width: '90%', maxWidth: 680, maxHeight: '85vh', display: 'flex', flexDirection: 'column',
+        overflow: 'hidden', boxShadow: '0 32px 80px rgba(0,0,0,0.6)',
+        transform: visible ? 'scale(1) translateY(0)' : 'scale(0.95) translateY(12px)',
+        opacity: visible ? 1 : 0,
+        transition: 'transform 0.22s cubic-bezier(0.34,1.56,0.64,1), opacity 0.2s ease',
+      }}>
         {/* Header */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 24px', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
           <span style={{ color: '#f3f4f6', fontSize: 18, fontWeight: 700, letterSpacing: '-0.02em' }}>Settings</span>
-          <button onClick={onClose} style={{ background: 'none', border: 'none', color: '#9ca3af', cursor: 'pointer', padding: 4, borderRadius: 8, display: 'flex' }}>
+          <button onClick={handleClose} style={{ background: 'none', border: 'none', color: '#9ca3af', cursor: 'pointer', padding: 4, borderRadius: 8, display: 'flex', transition: 'color 0.15s' }}>
             <X size={20} />
           </button>
         </div>
@@ -2973,10 +3162,10 @@ function SettingsModal({ onClose, settings, onChange }: {
         <div style={{ display: 'flex', flex: 1, overflow: 'hidden', minHeight: 0 }}>
           {/* Sidebar */}
           <div style={{ width: 160, borderRight: '1px solid rgba(255,255,255,0.08)', padding: '16px 12px', flexShrink: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
-            {(['theme', 'panic'] as const).map(t => (
+            {(['theme', 'panic', 'cloak'] as const).map(t => (
               <button key={t} onClick={() => setTab(t)} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '10px 12px', borderRadius: 10, border: 'none', cursor: 'pointer', background: tab === t ? 'rgba(99,102,241,0.2)' : 'transparent', color: tab === t ? '#a5b4fc' : '#9ca3af', fontSize: 14, fontWeight: tab === t ? 600 : 400, transition: 'all 0.15s', textAlign: 'left' }}>
-                {t === 'theme' ? <Palette size={16} /> : <Key size={16} />}
-                {t === 'theme' ? 'Theme' : 'Panic Key'}
+                {t === 'theme' ? <Palette size={16} /> : t === 'panic' ? <Key size={16} /> : <span style={{ fontSize: 14 }}>🥷</span>}
+                {t === 'theme' ? 'Theme' : t === 'panic' ? 'Panic Key' : 'Cloak'}
               </button>
             ))}
           </div>
@@ -2994,7 +3183,7 @@ function SettingsModal({ onClose, settings, onChange }: {
                     <div style={{ display: 'flex', gap: 6 }}>
                       {['#6366f1','#ec4899','#10b981','#f59e0b','#ef4444','#3b82f6','#8b5cf6'].map(col => (
                         <button key={col} onClick={() => update({ themeColor: col })}
-                          style={{ width: 24, height: 24, borderRadius: '50%', background: col, border: local.themeColor === col ? '2px solid white' : '2px solid transparent', cursor: 'pointer' }} />
+                          style={{ width: 24, height: 24, borderRadius: '50%', background: col, border: local.themeColor === col ? '2px solid white' : '2px solid transparent', cursor: 'pointer', transition: 'border-color 0.15s' }} />
                       ))}
                     </div>
                   </div>
@@ -3045,6 +3234,9 @@ function SettingsModal({ onClose, settings, onChange }: {
                   </p>
                 </div>
               </div>
+            )}
+            {tab === 'cloak' && (
+              <CloakTab local={local} update={update} />
             )}
           </div>
         </div>
@@ -3140,9 +3332,12 @@ function StarBackground() {
 // ── Cord popup ────────────────────────────────────────────────────────────────
 function CordPopup({ onClose }: { onClose: (dontRemind: boolean) => void }) {
   const [checked, setChecked] = useState(false);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => { requestAnimationFrame(() => setVisible(true)); }, []);
+  const handleClose = (v: boolean) => { setVisible(false); setTimeout(() => onClose(v), 200); };
   return (
-    <div style={{ position: 'fixed', inset: 0, zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.7)' }}>
-      <div style={{ background: '#111827', border: '2px solid #3b82f6', borderRadius: 16, padding: 32, maxWidth: 380, width: '90%', textAlign: 'center', boxShadow: '0 25px 50px rgba(0,0,0,0.5)' }}>
+    <div style={{ position: 'fixed', inset: 0, zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center', background: visible ? 'rgba(0,0,0,0.7)' : 'rgba(0,0,0,0)', transition: 'background 0.2s' }}>
+      <div style={{ background: '#111827', border: '2px solid #3b82f6', borderRadius: 16, padding: 32, maxWidth: 380, width: '90%', textAlign: 'center', boxShadow: '0 25px 50px rgba(0,0,0,0.5)', transform: visible ? 'scale(1)' : 'scale(0.95)', opacity: visible ? 1 : 0, transition: 'transform 0.22s cubic-bezier(0.34,1.56,0.64,1), opacity 0.2s ease' }}>
         <div style={{ fontSize: 36, marginBottom: 12 }}>ℹ️</div>
         <p style={{ color: '#fff', fontSize: 16, lineHeight: 1.6, margin: '0 0 20px' }}>
           Please wait if you see nothing upon clicking on a Game/Proxy.
@@ -3151,7 +3346,7 @@ function CordPopup({ onClose }: { onClose: (dontRemind: boolean) => void }) {
           <input type="checkbox" checked={checked} onChange={e => setChecked(e.target.checked)} style={{ width: 16, height: 16, accentColor: '#3b82f6' }} />
           Don't remind me again
         </label>
-        <button onClick={() => onClose(checked)} style={{ background: '#3b82f6', color: '#fff', border: 'none', borderRadius: 8, padding: '10px 32px', fontSize: 15, fontWeight: 600, cursor: 'pointer' }}>
+        <button onClick={() => handleClose(checked)} style={{ background: '#3b82f6', color: '#fff', border: 'none', borderRadius: 8, padding: '10px 32px', fontSize: 15, fontWeight: 600, cursor: 'pointer' }}>
           Got it
         </button>
       </div>
@@ -3161,15 +3356,18 @@ function CordPopup({ onClose }: { onClose: (dontRemind: boolean) => void }) {
 
 // ── Easter egg popup ──────────────────────────────────────────────────────────
 function EasterEggPopup({ onClose }: { onClose: () => void }) {
+  const [visible, setVisible] = useState(false);
+  useEffect(() => { requestAnimationFrame(() => setVisible(true)); }, []);
+  const handleClose = () => { setVisible(false); setTimeout(onClose, 200); };
   return (
-    <div style={{ position: 'fixed', inset: 0, zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.7)' }}>
-      <div style={{ background: '#111827', border: '2px solid #facc15', borderRadius: 16, padding: 32, maxWidth: 420, width: '90%', textAlign: 'center', boxShadow: '0 25px 50px rgba(0,0,0,0.5)' }}>
+    <div style={{ position: 'fixed', inset: 0, zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center', background: visible ? 'rgba(0,0,0,0.7)' : 'rgba(0,0,0,0)', transition: 'background 0.2s' }}>
+      <div style={{ background: '#111827', border: '2px solid #facc15', borderRadius: 16, padding: 32, maxWidth: 420, width: '90%', textAlign: 'center', boxShadow: '0 25px 50px rgba(0,0,0,0.5)', transform: visible ? 'scale(1)' : 'scale(0.95)', opacity: visible ? 1 : 0, transition: 'transform 0.22s cubic-bezier(0.34,1.56,0.64,1), opacity 0.2s ease' }}>
         <div style={{ fontSize: 40, marginBottom: 12 }}>🎉</div>
         <h2 style={{ color: '#facc15', fontSize: 24, fontWeight: 700, marginBottom: 16 }}>CONGRATS!!!</h2>
         <p style={{ color: '#fff', fontSize: 14, lineHeight: 1.7, margin: '0 0 24px' }}>
           Email <a href="mailto:hongbowang0821@gmail.com" style={{ color: '#60a5fa' }}>hongbowang0821@gmail.com</a> for his special method of making fries.. make sure to talk about how delicious potato fries are in the email or he wont believe you...
         </p>
-        <button onClick={onClose} style={{ background: '#facc15', color: '#000', border: 'none', borderRadius: 8, padding: '10px 32px', fontSize: 15, fontWeight: 600, cursor: 'pointer' }}>
+        <button onClick={handleClose} style={{ background: '#facc15', color: '#000', border: 'none', borderRadius: 8, padding: '10px 32px', fontSize: 15, fontWeight: 600, cursor: 'pointer' }}>
           Close
         </button>
       </div>
@@ -3199,7 +3397,7 @@ function App() {
   const [settings, setSettings] = useState<AppSettings>(() => loadSettings());
 
   // Apply theme on mount and when settings change
-  useEffect(() => { applyTheme(settings); }, [settings]);
+  useEffect(() => { applyTheme(settings); applyCloak(settings); }, [settings]);
 
   const searchInputRef = useRef<HTMLInputElement>(null);
   const proxyInputRef = useRef<HTMLInputElement>(null);
@@ -3378,6 +3576,7 @@ function App() {
         )}
 
         {/* Settings button — top left */}
+
         <button
           onClick={() => setShowSettings(true)}
           style={{
