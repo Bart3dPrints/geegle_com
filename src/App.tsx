@@ -2959,7 +2959,7 @@ function SettingsModal({ onClose, settings, onChange }: {
   ];
 
   return (
-    <div style={{...({ position: 'fixed', inset: 0, zIndex: 9990, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.75)', backdropFilter: 'blur(6px)' ), ...(themeBackgrounds[theme] || {})}}}
+    <div style={{ position: 'fixed', inset: 0, zIndex: 9990, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.75)', backdropFilter: 'blur(6px)' }}
       onClick={e => { if (e.target === e.currentTarget) onClose(); }}>
       <div style={{ background: '#0f1117', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 20, width: '90%', maxWidth: 680, maxHeight: '85vh', display: 'flex', flexDirection: 'column', overflow: 'hidden', boxShadow: '0 32px 80px rgba(0,0,0,0.6)' }}>
         {/* Header */}
@@ -3179,22 +3179,6 @@ function EasterEggPopup({ onClose }: { onClose: () => void }) {
 
 // ── Main App ──────────────────────────────────────────────────────────────────
 function App() {
-
-  const themeBackgrounds: Record<string, React.CSSProperties> = {
-    dark: {
-      background: 'radial-gradient(1200px 800px at 80% -10%, rgba(0,200,255,0.15), transparent 60%), radial-gradient(1000px 700px at -10% 110%, rgba(140,0,255,0.18), transparent 60%), linear-gradient(180deg, #0b0f17 0%, #0a0d14 100%)',
-    },
-    neon: {
-      background: 'radial-gradient(900px 600px at 20% 10%, rgba(0,255,170,0.2), transparent 60%), radial-gradient(900px 600px at 80% 90%, rgba(0,140,255,0.2), transparent 60%), linear-gradient(180deg, #05070c 0%, #060a12 100%)',
-    },
-    grid: {
-      backgroundImage: 'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px), radial-gradient(1200px 800px at 50% -10%, rgba(0,170,255,0.12), transparent 60%)',
-      backgroundSize: '40px 40px, 40px 40px, auto',
-      backgroundColor: '#0a0e16',
-    }
-  };
-
-  const isGamesPage = (typeof search === 'string') && search.toLowerCase().includes('cord');
   const [page, setPage] = useState<'home' | 'games' | 'game' | 'proxy'>('home');
   const [currentGame, setCurrentGame] = useState<string | null>(null);
   const [currentGameId, setCurrentGameId] = useState<string | null>(null);
@@ -3577,7 +3561,7 @@ function App() {
           <div className="flex gap-6">
             <button className="text-sm text-gray-500 hover:underline">Privacy</button>
             <button className="text-sm text-gray-500 hover:underline">Terms</button>
-            {isGamesPage && (<button className="text-sm text-gray-500 hover:underline">Settings</button>)}
+            <button className="text-sm text-gray-500 hover:underline">Settings</button>
           </div>
         </div>
       </footer>
