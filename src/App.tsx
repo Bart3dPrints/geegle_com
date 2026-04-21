@@ -2778,6 +2778,8 @@ interface AppSettings {
   panicUrl: string;
   cloakTitle: string;
   cloakIcon: string; // base64 data URL or empty string
+  bgThemeColor: string; // background color for interactive backgrounds
+  specialBackground: string; // special background id or ''
 }
 
 const DEFAULT_SETTINGS: AppSettings = {
@@ -2787,6 +2789,8 @@ const DEFAULT_SETTINGS: AppSettings = {
   panicUrl: 'https://manhasset.instructure.com/',
   cloakTitle: '',
   cloakIcon: '',
+  bgThemeColor: '#0a0a12',
+  specialBackground: '',
 };
 
 function loadSettings(): AppSettings {
@@ -2809,6 +2813,12 @@ function applyTheme(settings: AppSettings) {
   style.id = 'geegle-theme';
   const c = settings.themeColor;
   const theme = settings.visualTheme;
+  const bg = settings.bgThemeColor || '#0a0a12';
+
+  // Parse bg hex to rgba components
+  const br = parseInt(bg.slice(1,3)||'0a',16);
+  const bgG = parseInt(bg.slice(3,5)||'0a',16);
+  const bb = parseInt(bg.slice(5,7)||'12',16);
 
   // Base accent vars always present
   let css = `
@@ -2818,72 +2828,65 @@ function applyTheme(settings: AppSettings) {
     .theme-accent-border { border-color: ${c} !important; }
   `;
 
+  // Game cards have a fixed neutral dark style — independent of background theme
+  css += `
+    .games-card {
+      background: rgba(255,255,255,0.035) !important;
+      border: 1px solid rgba(255,255,255,0.09) !important;
+      border-radius: 14px !important;
+      backdrop-filter: blur(8px) !important;
+      transition: background 0.22s, border-color 0.22s, transform 0.22s, box-shadow 0.22s !important;
+    }
+    .games-card:hover {
+      background: rgba(255,255,255,0.08) !important;
+      border-color: ${c}88 !important;
+      transform: scale(1.04) !important;
+      box-shadow: 0 4px 24px ${c}30 !important;
+    }
+  `;
+
+  // NOTE: Background themes affect ONLY the body/canvas background.
+  // Game card styling stays neutral above.
+
   if (theme === 'default' || !theme) {
     css += `
-      body { background: #050508 !important; }
+      body { background: rgb(${br},${bgG},${bb}) !important; }
     `;
   } else if (theme === 'liquidglass') {
-    /* Liquid Glass — deep navy with shifting iridescent oil-slick overlays */
     css += `
       body {
         background:
           radial-gradient(ellipse at 30% 20%, rgba(99,102,241,0.18) 0%, transparent 55%),
           radial-gradient(ellipse at 75% 70%, rgba(236,72,153,0.14) 0%, transparent 55%),
           radial-gradient(ellipse at 55% 45%, rgba(16,185,129,0.08) 0%, transparent 50%),
-          linear-gradient(160deg, #050510 0%, #0c0c1e 40%, #08080f 100%) !important;
+          linear-gradient(160deg, rgb(${br},${bgG},${bb}) 0%, rgba(${br+12},${bgG+12},${bb+30},1) 40%, rgb(${br+4},${bgG+4},${bb+10}) 100%) !important;
         background-attachment: fixed !important;
-      }
-      .games-card {
-        background: rgba(255,255,255,0.04) !important;
-        border: 1px solid rgba(255,255,255,0.18) !important;
-        backdrop-filter: blur(20px) saturate(180%) !important;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 4px 24px rgba(0,0,0,0.3) !important;
-        transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s !important;
-      }
-      .games-card:hover {
-        background: rgba(255,255,255,0.09) !important;
-        backdrop-filter: blur(28px) saturate(220%) !important;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), 0 8px 32px rgba(99,102,241,0.25) !important;
       }
     `;
   } else if (theme === 'claymorphism') {
-    /* Claymorphism — warm midnight blue-purple with doughy pastel pop */
     css += `
       body {
         background:
           radial-gradient(ellipse at 15% 85%, rgba(168,85,247,0.2) 0%, transparent 50%),
           radial-gradient(ellipse at 85% 15%, rgba(249,168,212,0.15) 0%, transparent 50%),
-          linear-gradient(145deg, #0e0e18 0%, #161628 45%, #100e1c 100%) !important;
+          linear-gradient(145deg, rgb(${br},${bgG},${bb}) 0%, rgba(${br+12},${bgG+12},${bb+28},1) 45%, rgb(${br+4},${bgG+4},${bb+12}) 100%) !important;
         background-attachment: fixed !important;
-      }
-      .games-card {
-        background: linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04)) !important;
-        border: 2px solid rgba(255,255,255,0.2) !important;
-        border-radius: 24px !important;
-        box-shadow: 6px 6px 0 rgba(0,0,0,0.25), inset 2px 2px 4px rgba(255,255,255,0.1) !important;
-        backdrop-filter: blur(8px) !important;
-        transition: transform 0.2s, box-shadow 0.2s !important;
-      }
-      .games-card:hover {
-        transform: scale(1.05) translateY(-2px) !important;
-        box-shadow: 8px 8px 0 rgba(0,0,0,0.3), inset 2px 2px 6px rgba(255,255,255,0.15) !important;
       }
     `;
   } else if (theme === 'aurora') {
-    /* Aurora — deep arctic black with shimmering curtain of northern lights */
     css += `
       body {
-        background: linear-gradient(180deg, #020408 0%, #050a10 60%, #020408 100%) !important;
+        background: linear-gradient(180deg, rgb(${br},${bgG},${bb}) 0%, rgba(${br+6},${bgG+10},${bb+18},1) 60%, rgb(${br},${bgG},${bb}) 100%) !important;
         background-attachment: fixed !important;
       }
       body::before {
         content: '';
         position: fixed; inset: 0; z-index: 0; pointer-events: none;
         background:
-          radial-gradient(ellipse at 20% 50%, rgba(120,40,200,0.22) 0%, transparent 60%),
-          radial-gradient(ellipse at 80% 20%, rgba(40,160,200,0.18) 0%, transparent 60%),
-          radial-gradient(ellipse at 60% 80%, rgba(80,200,120,0.15) 0%, transparent 60%),
-          radial-gradient(ellipse at 50% 10%, rgba(200,80,120,0.12) 0%, transparent 50%);
+          radial-gradient(ellipse at 20% 50%, rgba(120,40,200,0.28) 0%, transparent 60%),
+          radial-gradient(ellipse at 80% 20%, rgba(40,160,200,0.22) 0%, transparent 60%),
+          radial-gradient(ellipse at 60% 80%, rgba(80,200,120,0.18) 0%, transparent 60%),
+          radial-gradient(ellipse at 50% 10%, rgba(200,80,120,0.15) 0%, transparent 50%);
         animation: aurora-shift 8s ease-in-out infinite alternate;
       }
       @keyframes aurora-shift {
@@ -2891,83 +2894,37 @@ function applyTheme(settings: AppSettings) {
         50%  { opacity: 0.9; transform: scale(1.03) translateY(-6px); }
         100% { opacity: 1;   transform: scale(1.06) translateY(-12px); }
       }
-      .games-card {
-        background: rgba(255,255,255,0.035) !important;
-        border: 1px solid rgba(255,255,255,0.12) !important;
-        backdrop-filter: blur(16px) !important;
-        transition: background 0.2s, border-color 0.2s, transform 0.2s !important;
-      }
     `;
   } else if (theme === 'neubrutalism') {
-    /* Neubrutalism — stark ink black with raw newsprint texture feel */
     css += `
       body {
         background:
           repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.025) 39px, rgba(255,255,255,0.025) 40px),
           repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.015) 39px, rgba(255,255,255,0.015) 40px),
-          #080808 !important;
+          rgb(${br},${bgG},${bb}) !important;
         background-attachment: fixed !important;
-      }
-      .games-card {
-        background: rgba(20,20,22,0.92) !important;
-        border: 2.5px solid rgba(255,255,255,0.85) !important;
-        border-radius: 8px !important;
-        box-shadow: 4px 4px 0 rgba(255,255,255,0.7) !important;
-        backdrop-filter: none !important;
-        transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s !important;
-      }
-      .games-card:hover {
-        transform: translate(-2px,-2px) scale(1.03) !important;
-        box-shadow: 6px 6px 0 ${c} !important;
-        border-color: ${c} !important;
       }
     `;
   } else if (theme === 'abstract3d') {
-    /* 3D Abstract — midnight with holographic prismatic depth bands */
     css += `
       body {
         background:
           repeating-conic-gradient(from 0deg at 50% 50%, rgba(99,102,241,0.04) 0deg 30deg, transparent 30deg 60deg),
           radial-gradient(ellipse at 40% 60%, rgba(139,92,246,0.2) 0%, transparent 55%),
           radial-gradient(ellipse at 70% 30%, rgba(59,130,246,0.15) 0%, transparent 50%),
-          linear-gradient(135deg, #060610 0%, #0c0c1a 50%, #060810 100%) !important;
+          linear-gradient(135deg, rgb(${br},${bgG},${bb}) 0%, rgba(${br+12},${bgG+12},${bb+26},1) 50%, rgb(${br+2},${bgG+4},${bb+10}) 100%) !important;
         background-attachment: fixed !important;
-      }
-      .games-card {
-        background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(99,102,241,0.06) 100%) !important;
-        border: 1px solid rgba(255,255,255,0.15) !important;
-        backdrop-filter: blur(12px) !important;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.2) !important;
-        transition: background 0.2s, box-shadow 0.2s, transform 0.2s !important;
-      }
-      .games-card:hover {
-        background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(99,102,241,0.1) 100%) !important;
-        box-shadow: 0 16px 48px rgba(99,102,241,0.3), inset 0 2px 0 rgba(255,255,255,0.25) !important;
-        transform: scale(1.05) rotateX(2deg) !important;
       }
     `;
   } else if (theme === 'dynamic') {
-    /* Dynamic Live — reactive dark gradient with pulsing ember glow core */
     css += `
       body {
         background:
-          radial-gradient(ellipse at 50% 50%, rgba(${parseInt(c.slice(1,3),16)},${parseInt(c.slice(3,5),16)},${parseInt(c.slice(5,7),16)},0.12) 0%, transparent 65%),
-          radial-gradient(ellipse at 80% 80%, rgba(239,68,68,0.08) 0%, transparent 50%),
-          radial-gradient(ellipse at 20% 20%, rgba(59,130,246,0.08) 0%, transparent 50%),
-          linear-gradient(135deg, #070708 0%, #0e0e10 50%, #070708 100%) !important;
+          radial-gradient(ellipse at 50% 50%, rgba(${br+40},${bgG+40},${bb+80},0.2) 0%, transparent 65%),
+          radial-gradient(ellipse at 80% 80%, rgba(${br+60},${bgG+20},${bb+20},0.12) 0%, transparent 50%),
+          radial-gradient(ellipse at 20% 20%, rgba(${br+20},${bgG+50},${bb+80},0.12) 0%, transparent 50%),
+          linear-gradient(135deg, rgb(${br},${bgG},${bb}) 0%, rgba(${br+10},${bgG+10},${bb+16},1) 50%, rgb(${br},${bgG},${bb}) 100%) !important;
         background-attachment: fixed !important;
-      }
-      .games-card {
-        background: rgba(255,255,255,0.04) !important;
-        border: 1px solid rgba(255,255,255,0.1) !important;
-        backdrop-filter: blur(8px) !important;
-        transition: all 0.15s cubic-bezier(0.34,1.56,0.64,1) !important;
-      }
-      .games-card:hover {
-        background: rgba(255,255,255,0.09) !important;
-        border-color: ${c}99 !important;
-        transform: scale(1.07) !important;
-        box-shadow: 0 0 30px ${c}44 !important;
       }
     `;
   }
@@ -3094,7 +3051,7 @@ function SettingsModal({ onClose, settings, onChange }: {
   settings: AppSettings;
   onChange: (s: AppSettings) => void;
 }) {
-  const [tab, setTab] = useState<'theme' | 'panic' | 'cloak'>('theme');
+  const [tab, setTab] = useState<'theme' | 'background' | 'panic' | 'cloak'>('theme');
   const [local, setLocal] = useState<AppSettings>({ ...settings });
   const [listeningKey, setListeningKey] = useState(false);
   const [visible, setVisible] = useState(false);
@@ -3161,11 +3118,11 @@ function SettingsModal({ onClose, settings, onChange }: {
         {/* Body */}
         <div style={{ display: 'flex', flex: 1, overflow: 'hidden', minHeight: 0 }}>
           {/* Sidebar */}
-          <div style={{ width: 160, borderRight: '1px solid rgba(255,255,255,0.08)', padding: '16px 12px', flexShrink: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
-            {(['theme', 'panic', 'cloak'] as const).map(t => (
-              <button key={t} onClick={() => setTab(t)} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '10px 12px', borderRadius: 10, border: 'none', cursor: 'pointer', background: tab === t ? 'rgba(99,102,241,0.2)' : 'transparent', color: tab === t ? '#a5b4fc' : '#9ca3af', fontSize: 14, fontWeight: tab === t ? 600 : 400, transition: 'all 0.15s', textAlign: 'left' }}>
-                {t === 'theme' ? <Palette size={16} /> : t === 'panic' ? <Key size={16} /> : <span style={{ fontSize: 14 }}>🥷</span>}
-                {t === 'theme' ? 'Theme' : t === 'panic' ? 'Panic Key' : 'Cloak'}
+          <div style={{ width: 148, borderRight: '1px solid rgba(255,255,255,0.08)', padding: '16px 10px', flexShrink: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
+            {(['theme', 'background', 'panic', 'cloak'] as const).map(t => (
+              <button key={t} onClick={() => setTab(t)} style={{ display: 'flex', alignItems: 'center', gap: 7, padding: '9px 10px', borderRadius: 10, border: 'none', cursor: 'pointer', background: tab === t ? 'rgba(99,102,241,0.2)' : 'transparent', color: tab === t ? '#a5b4fc' : '#9ca3af', fontSize: 13, fontWeight: tab === t ? 600 : 400, transition: 'all 0.15s', textAlign: 'left' }}>
+                {t === 'theme' ? <Palette size={15} /> : t === 'background' ? <span style={{ fontSize: 13 }}>🌌</span> : t === 'panic' ? <Key size={15} /> : <span style={{ fontSize: 13 }}>🥷</span>}
+                {t === 'theme' ? 'Theme' : t === 'background' ? 'Background' : t === 'panic' ? 'Panic Key' : 'Cloak'}
               </button>
             ))}
           </div>
@@ -3200,6 +3157,91 @@ function SettingsModal({ onClose, settings, onChange }: {
                           <div style={{ color: '#6b7280', fontSize: 12, marginTop: 2 }}>{th.desc}</div>
                         </div>
                         {local.visualTheme === th.id && <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#6366f1' }} />}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+            {tab === 'background' && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+                {/* Note */}
+                <div style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)', borderRadius: 10, padding: '10px 14px' }}>
+                  <p style={{ color: '#a5b4fc', fontSize: 12, margin: 0 }}>ℹ️ <strong>Theme changes the background only, not the game cards.</strong> Game card style is always neutral and independent.</p>
+                </div>
+
+                {/* Section 1: Background Theme Color */}
+                <div>
+                  <label style={{ color: '#d1d5db', fontSize: 13, fontWeight: 600, display: 'block', marginBottom: 4, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Interactive Background Theme</label>
+                  <p style={{ color: '#6b7280', fontSize: 12, marginBottom: 12 }}>Controls the base color/mood of the interactive background. Does not affect game cards.</p>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                    <select
+                      value={local.bgThemeColor || '#0a0a12'}
+                      onChange={e => update({ bgThemeColor: e.target.value })}
+                      style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.14)', borderRadius: 9, color: '#f3f4f6', fontSize: 13, padding: '9px 12px', outline: 'none', cursor: 'pointer' }}
+                    >
+                      <option value="#0a0a12">Carbon Black</option>
+                      <option value="#111418">Graphite</option>
+                      <option value="#0d1220">Slate Blue</option>
+                      <option value="#060c1a">Deep Navy</option>
+                      <option value="#081414">Muted Teal</option>
+                      <option value="#0a0818">Dark Indigo</option>
+                      <option value="#0e1014">Steel Gray</option>
+                      <option value="#100812">Charcoal Purple</option>
+                      <option value="#060e08">Forest Green</option>
+                      <option value="#040e12">Midnight Cyan</option>
+                      <option value="#100608">Ember Dark</option>
+                      <option value="#0c1008">Moss Black</option>
+                    </select>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                      <input type="color" value={local.bgThemeColor || '#0a0a12'}
+                        onChange={e => update({ bgThemeColor: e.target.value })}
+                        style={{ width: 40, height: 36, border: '2px solid rgba(255,255,255,0.15)', borderRadius: 8, cursor: 'pointer', background: 'none', padding: 2 }} />
+                      <input type="text" value={local.bgThemeColor || '#0a0a12'}
+                        onChange={e => { if (/^#[0-9a-fA-F]{0,6}$/.test(e.target.value)) update({ bgThemeColor: e.target.value }); }}
+                        placeholder="#0a0a12"
+                        style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 8, color: '#f3f4f6', fontSize: 13, padding: '7px 10px', width: 90, outline: 'none' }} />
+                      <span style={{ color: '#6b7280', fontSize: 11 }}>Custom hex</span>
+                    </div>
+                    <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                      {['#0a0a12','#111418','#0d1220','#060c1a','#081414','#0a0818','#0e1014','#100812','#060e08','#040e12','#100608','#0c1008'].map(col => (
+                        <button key={col} onClick={() => update({ bgThemeColor: col })}
+                          style={{ width: 22, height: 22, borderRadius: '50%', background: col, border: (local.bgThemeColor||'#0a0a12')===col?'2px solid white':'2px solid rgba(255,255,255,0.2)', cursor: 'pointer' }} />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Section 2: Special Backgrounds */}
+                <div>
+                  <label style={{ color: '#d1d5db', fontSize: 13, fontWeight: 600, display: 'block', marginBottom: 4, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Special Backgrounds</label>
+                  <p style={{ color: '#6b7280', fontSize: 12, marginBottom: 12 }}>Each option is a full interactive background that reacts to your cursor. Only one can be active at a time.</p>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                    {[
+                      { id: '', icon: '⭐', label: 'Star Field (Default)', desc: 'Stars gently attracted to your cursor' },
+                      { id: 'neural', icon: '🧠', label: 'Neural Mesh Interface', desc: 'Glowing network nodes pulse and connect to your cursor' },
+                      { id: 'circuit', icon: '⚡', label: 'Circuit Board Live', desc: 'Electricity flows through glowing traces on activation' },
+                      { id: 'packets', icon: '📡', label: 'Packet Flow Network', desc: 'Data packets travel between nodes; cursor attracts traffic' },
+                      { id: 'matrix', icon: '🔢', label: 'Matrix Rain Reactive', desc: 'Code streams bend toward cursor; characters brighten nearby' },
+                      { id: 'hologrid', icon: '🔷', label: 'Holographic Data Grid', desc: 'Perspective grid warps around cursor like a VR surface' },
+                      { id: 'smoke', icon: '💨', label: 'Digital Smoke Field', desc: 'Vapor-like particles swirl and displace around cursor motion' },
+                      { id: 'flow', icon: '🌊', label: 'Neon Vector Flow Field', desc: 'Energy lines bend and spiral around cursor force' },
+                      { id: 'radar', icon: '📻', label: 'Security Scan Radar', desc: 'Scan lines sweep; cursor becomes origin of pulse waves' },
+                      { id: 'glitch', icon: '⚠️', label: 'Glitch System Overlay', desc: 'Controlled distortion and scanline jitter ripples from cursor' },
+                      { id: 'codefrag', icon: '</>', label: 'Code Fragment Swarm', desc: 'Floating syntax symbols drift and cluster toward cursor' },
+                      { id: 'terminal', icon: '🖥️', label: 'Terminal Fog Interface', desc: 'Secret command logs appear and fade around cursor movement' },
+                      { id: 'aicore', icon: '🤖', label: 'AI Command Core', desc: 'Orbital ring system and data panels track cursor focus' },
+                      { id: 'gravity', icon: '🌌', label: 'Digital Gravity Field', desc: 'Particles orbit cursor with curved trails like information mass' },
+                      { id: 'hud', icon: '🎯', label: 'Reactive HUD Layer', desc: 'Parallax dashboard panels lock onto and track cursor' },
+                    ].map(opt => (
+                      <button key={opt.id} onClick={() => update({ specialBackground: opt.id })}
+                        style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 12px', borderRadius: 10, border: `1px solid ${(local.specialBackground??'')=== opt.id ? 'rgba(99,102,241,0.6)' : 'rgba(255,255,255,0.08)'}`, background: (local.specialBackground??'')=== opt.id ? 'rgba(99,102,241,0.12)' : 'rgba(255,255,255,0.02)', cursor: 'pointer', textAlign: 'left', transition: 'all 0.15s' }}>
+                        <span style={{ fontSize: 18, minWidth: 24 }}>{opt.icon}</span>
+                        <div style={{ flex: 1 }}>
+                          <div style={{ color: (local.specialBackground??'')=== opt.id ? '#a5b4fc' : '#e5e7eb', fontSize: 13, fontWeight: 600 }}>{opt.label}</div>
+                          <div style={{ color: '#6b7280', fontSize: 11, marginTop: 2 }}>{opt.desc}</div>
+                        </div>
+                        {(local.specialBackground??'')=== opt.id && <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#6366f1' }} />}
                       </button>
                     ))}
                   </div>
@@ -3245,88 +3287,709 @@ function SettingsModal({ onClose, settings, onChange }: {
   );
 }
 
-// ── Star background canvas ────────────────────────────────────────────────────
-function StarBackground() {
+// ── Interactive Background System ─────────────────────────────────────────────
+// Each background is a self-contained canvas effect. Only one is active at a time.
+
+function useCanvasSetup(draw: (ctx: CanvasRenderingContext2D, w: number, h: number, mx: number, my: number, t: number) => void, init?: (w: number, h: number) => void) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const mouseRef = useRef({ x: -9999, y: -9999 });
-  const starsRef = useRef<Array<{ x: number; y: number; ox: number; oy: number; r: number; alpha: number }>>([]);
   const rafRef = useRef<number>(0);
+  const tRef = useRef<number>(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d')!;
-
     const resize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      // Regenerate stars on resize
-      starsRef.current = Array.from({ length: 180 }, () => {
-        const x = Math.random() * canvas.width;
-        const y = Math.random() * canvas.height;
-        return { x, y, ox: x, oy: y, r: Math.random() * 1.8 + 0.4, alpha: Math.random() * 0.6 + 0.4 };
-      });
+      if (init) init(canvas.width, canvas.height);
     };
     resize();
     window.addEventListener('resize', resize);
-
-    const onMouseMove = (e: MouseEvent) => {
-      mouseRef.current = { x: e.clientX, y: e.clientY };
+    const onMove = (e: MouseEvent) => { mouseRef.current = { x: e.clientX, y: e.clientY }; };
+    window.addEventListener('mousemove', onMove);
+    const loop = () => {
+      tRef.current += 0.016;
+      draw(ctx, canvas.width, canvas.height, mouseRef.current.x, mouseRef.current.y, tRef.current);
+      rafRef.current = requestAnimationFrame(loop);
     };
-    window.addEventListener('mousemove', onMouseMove);
-
-    const ATTRACT_RADIUS = 130;
-    const ATTRACT_STRENGTH = 0.28; // how far stars move toward cursor (0–1)
-    const LERP = 0.07;             // smoothness of movement
-
-    const draw = () => {
-      const { width, height } = canvas;
-      ctx.clearRect(0, 0, width, height);
-
-      const mx = mouseRef.current.x;
-      const my = mouseRef.current.y;
-
-      for (const s of starsRef.current) {
-        const dx = mx - s.ox;
-        const dy = my - s.oy;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-
-        let tx = s.ox;
-        let ty = s.oy;
-
-        if (dist < ATTRACT_RADIUS && dist > 0) {
-          const pull = (1 - dist / ATTRACT_RADIUS) * ATTRACT_STRENGTH;
-          tx = s.ox + dx * pull;
-          ty = s.oy + dy * pull;
-        }
-
-        // Smooth rubber-band lerp toward target
-        s.x += (tx - s.x) * LERP;
-        s.y += (ty - s.y) * LERP;
-
-        ctx.beginPath();
-        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255,255,255,${s.alpha})`;
-        ctx.fill();
-      }
-
-      rafRef.current = requestAnimationFrame(draw);
-    };
-    draw();
-
+    loop();
     return () => {
       window.removeEventListener('resize', resize);
-      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('mousemove', onMove);
       cancelAnimationFrame(rafRef.current);
     };
   }, []);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      style={{ position: 'fixed', inset: 0, zIndex: 0, pointerEvents: 'none', background: 'linear-gradient(135deg, #050508 0%, #0d0d14 50%, #080810 100%)' }}
-    />
+  return canvasRef;
+}
+
+// Default: Star field (original)
+function StarBackground({ bgColor = '#050508' }: { bgColor?: string }) {
+  type Star = { x: number; y: number; ox: number; oy: number; r: number; alpha: number };
+  const starsRef = useRef<Star[]>([]);
+  const canvasRef = useCanvasSetup(
+    (ctx, w, h, mx, my) => {
+      ctx.clearRect(0, 0, w, h);
+      for (const s of starsRef.current) {
+        const dx = mx - s.ox, dy = my - s.oy;
+        const dist = Math.sqrt(dx*dx+dy*dy);
+        let tx = s.ox, ty = s.oy;
+        if (dist < 130 && dist > 0) { const pull = (1-dist/130)*0.28; tx=s.ox+dx*pull; ty=s.oy+dy*pull; }
+        s.x += (tx-s.x)*0.07; s.y += (ty-s.y)*0.07;
+        ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+        ctx.fillStyle = `rgba(255,255,255,${s.alpha})`; ctx.fill();
+      }
+    },
+    (w, h) => { starsRef.current = Array.from({length:180},()=>{ const x=Math.random()*w,y=Math.random()*h; return {x,y,ox:x,oy:y,r:Math.random()*1.8+0.4,alpha:Math.random()*0.6+0.4}; }); }
   );
+  return <canvas ref={canvasRef} style={{position:'fixed',inset:0,zIndex:0,pointerEvents:'none',background:`linear-gradient(135deg, ${bgColor} 0%, ${bgColor}ee 50%, ${bgColor} 100%)`}} />;
+}
+
+// Neural Mesh Interface
+function NeuralMeshBackground({ bgColor = '#060610' }: { bgColor?: string }) {
+  type Node = { x:number; y:number; vx:number; vy:number; brightness:number };
+  const nodesRef = useRef<Node[]>([]);
+  const canvasRef = useCanvasSetup(
+    (ctx, w, h, mx, my, t) => {
+      ctx.clearRect(0,0,w,h);
+      const nodes = nodesRef.current;
+      // Update nodes
+      for (const n of nodes) {
+        n.x+=n.vx; n.y+=n.vy;
+        if(n.x<0||n.x>w) n.vx*=-1;
+        if(n.y<0||n.y>h) n.vy*=-1;
+        const d=Math.hypot(mx-n.x,my-n.y);
+        n.brightness = d<150 ? 0.5+0.5*(1-d/150) : 0.15+Math.sin(t*1.5+n.x*0.01)*0.08;
+      }
+      // Draw connections
+      for(let i=0;i<nodes.length;i++) {
+        for(let j=i+1;j<nodes.length;j++) {
+          const d=Math.hypot(nodes[i].x-nodes[j].x,nodes[i].y-nodes[j].y);
+          if(d<160) {
+            const pulse=(Math.sin(t*2+i*0.5)+1)/2;
+            const alpha=(1-d/160)*0.35*pulse;
+            ctx.beginPath(); ctx.moveTo(nodes[i].x,nodes[i].y); ctx.lineTo(nodes[j].x,nodes[j].y);
+            ctx.strokeStyle=`rgba(100,180,255,${alpha})`; ctx.lineWidth=0.8; ctx.stroke();
+          }
+        }
+      }
+      // Check if cursor is near a node to draw connection to cursor
+      for(const n of nodes) {
+        const d=Math.hypot(mx-n.x,my-n.y);
+        if(d<180&&mx>0) {
+          ctx.beginPath(); ctx.moveTo(n.x,n.y); ctx.lineTo(mx,my);
+          ctx.strokeStyle=`rgba(140,220,255,${(1-d/180)*0.5})`; ctx.lineWidth=1; ctx.stroke();
+        }
+      }
+      // Draw nodes
+      for(const n of nodes) {
+        ctx.beginPath(); ctx.arc(n.x,n.y,3,0,Math.PI*2);
+        ctx.fillStyle=`rgba(120,200,255,${n.brightness})`; ctx.fill();
+        if(n.brightness>0.4) {
+          ctx.beginPath(); ctx.arc(n.x,n.y,7,0,Math.PI*2);
+          ctx.fillStyle=`rgba(100,180,255,${(n.brightness-0.4)*0.4})`; ctx.fill();
+        }
+      }
+      // Signal wave from cursor
+      if(mx>0) {
+        const waveR=(t%3)*200;
+        ctx.beginPath(); ctx.arc(mx,my,waveR,0,Math.PI*2);
+        ctx.strokeStyle=`rgba(100,200,255,${Math.max(0,0.3-waveR/600)})`; ctx.lineWidth=1.5; ctx.stroke();
+      }
+    },
+    (w, h) => { nodesRef.current=Array.from({length:60},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-0.5)*0.6,vy:(Math.random()-0.5)*0.6,brightness:0.2})); }
+  );
+  return <canvas ref={canvasRef} style={{position:'fixed',inset:0,zIndex:0,pointerEvents:'none',background:bgColor}} />;
+}
+
+// Circuit Board Live System
+function CircuitBoardBackground({ bgColor = '#030a05' }: { bgColor?: string }) {
+  type Trace = { x1:number; y1:number; x2:number; y2:number; lit:number; dir:number };
+  const tracesRef = useRef<Trace[]>([]);
+  const canvasRef = useCanvasSetup(
+    (ctx, w, h, mx, my, t) => {
+      ctx.clearRect(0,0,w,h);
+      const traces = tracesRef.current;
+      for(const tr of traces) {
+        const d=Math.min(Math.hypot(mx-(tr.x1+tr.x2)/2,my-(tr.y1+tr.y2)/2),300);
+        const pulse=Math.sin(t*3+tr.x1*0.02)*0.5+0.5;
+        tr.lit+=(0.3-tr.lit+pulse*(1-d/300)*0.7)*0.04;
+        const alpha=tr.lit*0.8;
+        ctx.beginPath(); ctx.moveTo(tr.x1,tr.y1); ctx.lineTo(tr.x2,tr.y2);
+        ctx.strokeStyle=`rgba(50,255,120,${alpha})`; ctx.lineWidth=tr.lit>0.5?1.5:0.8; ctx.stroke();
+        // Junction dots
+        ctx.beginPath(); ctx.arc(tr.x2,tr.y2,2.5,0,Math.PI*2);
+        ctx.fillStyle=`rgba(80,255,150,${alpha*1.2})`; ctx.fill();
+      }
+      // Cursor glow
+      if(mx>0) {
+        const g=ctx.createRadialGradient(mx,my,0,mx,my,120);
+        g.addColorStop(0,'rgba(50,255,100,0.12)'); g.addColorStop(1,'rgba(0,0,0,0)');
+        ctx.fillStyle=g; ctx.fillRect(0,0,w,h);
+      }
+    },
+    (w, h) => {
+      tracesRef.current=[];
+      const gx=Math.floor(w/60), gy=Math.floor(h/50);
+      for(let i=0;i<200;i++) {
+        const x=Math.floor(Math.random()*gx)*60+30, y=Math.floor(Math.random()*gy)*50+25;
+        const horiz=Math.random()>0.4;
+        tracesRef.current.push({x1:x,y1:y,x2:horiz?x+60:x,y2:horiz?y:y+50,lit:Math.random()*0.2,dir:1});
+      }
+    }
+  );
+  return <canvas ref={canvasRef} style={{position:'fixed',inset:0,zIndex:0,pointerEvents:'none',background:bgColor}} />;
+}
+
+// Matrix Rain Reactive
+function MatrixRainBackground({ bgColor = '#000a00' }: { bgColor?: string }) {
+  type Col = { x:number; y:number; speed:number; chars:string[]; len:number };
+  const colsRef = useRef<Col[]>([]);
+  const canvasRef = useCanvasSetup(
+    (ctx, w, h, mx, my, t) => {
+      ctx.fillStyle='rgba(0,8,0,0.08)'; ctx.fillRect(0,0,w,h);
+      const cols=colsRef.current;
+      for(const c of cols) {
+        const dxM=(mx-c.x);
+        const bend=mx>0?dxM*0.015:0;
+        for(let i=0;i<c.chars.length;i++) {
+          const cy=c.y-i*16;
+          if(cy<-20||cy>h+20) continue;
+          const dx=mx-c.x, dy=my-(cy);
+          const d=Math.hypot(dx,dy);
+          const bright=d<120?0.3+0.7*(1-d/120):i===0?0.95:Math.max(0,0.6-i*0.08);
+          ctx.fillStyle=i===0?`rgba(200,255,200,${bright})`:`rgba(0,${Math.floor(200*bright)},${Math.floor(50*bright)},${bright})`;
+          ctx.font=`${12+Math.round(bright*2)}px monospace`;
+          if(Math.random()<0.01) c.chars[i]='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*'[Math.floor(Math.random()*72)];
+          ctx.fillText(c.chars[i],c.x+bend*(0.5-i/c.len*0.5),cy);
+        }
+        c.y+=c.speed;
+        if(c.y>h+c.len*16) c.y=-c.len*16*Math.random();
+      }
+    },
+    (w, h) => {
+      const chars='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';
+      colsRef.current=Array.from({length:Math.floor(w/18)},(_,i)=>{
+        const len=Math.floor(Math.random()*20+8);
+        return {x:i*18+9,y:Math.random()*h,speed:Math.random()*1.5+0.8,chars:Array.from({length:len},()=>chars[Math.floor(Math.random()*chars.length)]),len};
+      });
+    }
+  );
+  return <canvas ref={canvasRef} style={{position:'fixed',inset:0,zIndex:0,pointerEvents:'none',background:bgColor}} />;
+}
+
+// Holographic Data Grid
+function HolographicGridBackground({ bgColor = '#040410' }: { bgColor?: string }) {
+  const canvasRef = useCanvasSetup(
+    (ctx, w, h, mx, my, t) => {
+      ctx.clearRect(0,0,w,h);
+      const cx=w/2, cy=h*0.6;
+      const mxN=(mx-cx)/(w/2), myN=(my-cy)/(h/2);
+      const tiltX=mxN*0.12, tiltY=myN*0.08;
+      const spacing=60;
+      // Perspective grid
+      for(let col=-20;col<=20;col++) {
+        for(let row=0;row<=30;row++) {
+          const x0=(cx+col*spacing)*1; const y0=(cy+row*spacing)*1;
+          const px=(x0-cx)*(1+row*tiltX*0.02)+cx; const py=(y0-cy)*(1+col*tiltY*0.02)+cy;
+          const alpha=(1-row/30)*0.4*(Math.sin(t*0.8+col*0.3+row*0.2)*0.3+0.7);
+          const d=Math.hypot(mx-px,my-py);
+          const glow=d<120?1-d/120:0;
+          ctx.beginPath(); ctx.arc(px,py,glow>0.3?3:1.5,0,Math.PI*2);
+          ctx.fillStyle=`rgba(80,${160+Math.floor(glow*95)},255,${alpha+glow*0.4})`; ctx.fill();
+        }
+      }
+      // Floating fragments
+      for(let i=0;i<30;i++) {
+        const fx=cx+Math.sin(t*0.3+i*2)*w*0.45;
+        const fy=cy-100-i*15+Math.cos(t*0.2+i)*50;
+        const d=Math.hypot(mx-fx,my-fy);
+        const pull=d<200?(1-d/200)*0.4:0;
+        ctx.fillStyle=`rgba(100,200,255,${0.15+pull})`;
+        ctx.font='11px monospace';
+        ctx.fillText(['0x1F4A','DATA','◈','▸','⬡','⟨⟩','//'][i%7],fx+pull*d*0.3,fy-pull*d*0.3);
+      }
+      // Cursor warp ring
+      if(mx>0){
+        ctx.beginPath(); ctx.arc(mx,my,60+Math.sin(t*3)*10,0,Math.PI*2);
+        ctx.strokeStyle='rgba(100,200,255,0.25)'; ctx.lineWidth=1; ctx.stroke();
+      }
+    },
+    () => {}
+  );
+  return <canvas ref={canvasRef} style={{position:'fixed',inset:0,zIndex:0,pointerEvents:'none',background:`radial-gradient(ellipse at 50% 80%, rgba(10,20,60,0.8) 0%, ${bgColor} 70%)`}} />;
+}
+
+// Digital Smoke Field
+function DigitalSmokeBackground({ bgColor = '#080810' }: { bgColor?: string }) {
+  type Particle = {x:number;y:number;vx:number;vy:number;life:number;maxLife:number;r:number;hue:number};
+  const pRef=useRef<Particle[]>([]);
+  const pmx=useRef({x:-9999,y:-9999,px:-9999,py:-9999});
+  const canvasRef=useCanvasSetup(
+    (ctx,w,h,mx,my,t)=>{
+      ctx.fillStyle='rgba(8,8,16,0.06)'; ctx.fillRect(0,0,w,h);
+      const vx=(mx-pmx.current.x)*0.1, vy=(my-pmx.current.y)*0.1;
+      pmx.current={x:mx,y:my,px:pmx.current.x,py:pmx.current.y};
+      // Spawn
+      if(mx>0&&pRef.current.length<400) {
+        for(let i=0;i<3;i++) {
+          pRef.current.push({x:mx+(Math.random()-0.5)*30,y:my+(Math.random()-0.5)*30,vx:(Math.random()-0.5)*1.5-vx*0.3,vy:(Math.random()-0.5)*1.5-vy*0.3-0.5,life:0,maxLife:120+Math.random()*80,r:Math.random()*20+8,hue:200+Math.random()*60});
+        }
+      }
+      // Update & draw
+      pRef.current=pRef.current.filter(p=>p.life<p.maxLife);
+      for(const p of pRef.current) {
+        p.life++;
+        const progress=p.life/p.maxLife;
+        p.x+=p.vx; p.y+=p.vy; p.vy-=0.005; p.r+=0.2; p.vx*=0.98; p.vy*=0.98;
+        const alpha=progress<0.2?progress/0.2:(1-progress)*0.5;
+        const g=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);
+        g.addColorStop(0,`hsla(${p.hue},80%,70%,${alpha*0.7})`);
+        g.addColorStop(1,`hsla(${p.hue},60%,40%,0)`);
+        ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fillStyle=g; ctx.fill();
+      }
+    },
+    ()=>{ pRef.current=[]; }
+  );
+  return <canvas ref={canvasRef} style={{position:'fixed',inset:0,zIndex:0,pointerEvents:'none',background:bgColor}} />;
+}
+
+// Neon Vector Flow Field
+function NeonFlowFieldBackground({ bgColor = '#060008' }: { bgColor?: string }) {
+  type Line = {x:number;y:number;angle:number;speed:number;life:number;maxLife:number;hue:number};
+  const linesRef=useRef<Line[]>([]);
+  const canvasRef=useCanvasSetup(
+    (ctx,w,h,mx,my,t)=>{
+      ctx.fillStyle='rgba(6,0,8,0.12)'; ctx.fillRect(0,0,w,h);
+      // Flow field angle function
+      const field=(x:number,y:number)=>{
+        let angle=Math.sin(x*0.005+t*0.3)*Math.cos(y*0.005+t*0.2)*Math.PI*2;
+        if(mx>0) {
+          const dx=mx-x,dy=my-y,d=Math.hypot(dx,dy);
+          if(d<200) { const push=(1-d/200)*2; angle+=Math.atan2(dy,dx)*push; }
+        }
+        return angle;
+      };
+      // Spawn
+      while(linesRef.current.length<300) {
+        linesRef.current.push({x:Math.random()*w,y:Math.random()*h,angle:Math.random()*Math.PI*2,speed:1.5+Math.random(),life:0,maxLife:60+Math.random()*100,hue:280+Math.random()*80});
+      }
+      linesRef.current=linesRef.current.filter(l=>l.life<l.maxLife);
+      for(const l of linesRef.current) {
+        l.life++;
+        const a=field(l.x,l.y);
+        const nx=l.x+Math.cos(a)*l.speed,ny=l.y+Math.sin(a)*l.speed;
+        const progress=l.life/l.maxLife;
+        const alpha=(progress<0.2?progress/0.2:(1-progress))*0.8;
+        ctx.beginPath(); ctx.moveTo(l.x,l.y); ctx.lineTo(nx,ny);
+        const d=mx>0?Math.hypot(mx-l.x,my-l.y):999;
+        const glow=d<150?(1-d/150):0;
+        ctx.strokeStyle=`hsla(${l.hue+glow*40},90%,${60+glow*30}%,${alpha+glow*0.3})`;
+        ctx.lineWidth=0.8+glow*2; ctx.stroke();
+        l.x=nx; l.y=ny;
+        if(l.x<0||l.x>w||l.y<0||l.y>h) l.life=l.maxLife;
+      }
+    },
+    ()=>{ linesRef.current=[]; }
+  );
+  return <canvas ref={canvasRef} style={{position:'fixed',inset:0,zIndex:0,pointerEvents:'none',background:bgColor}} />;
+}
+
+// Security Scan Radar
+function SecurityScanBackground({ bgColor = '#000a06' }: { bgColor?: string }) {
+  const canvasRef=useCanvasSetup(
+    (ctx,w,h,mx,my,t)=>{
+      ctx.clearRect(0,0,w,h);
+      // Scan lines
+      const scanY=((t*80)%h);
+      const grad=ctx.createLinearGradient(0,scanY-60,0,scanY+20);
+      grad.addColorStop(0,'rgba(0,255,100,0)'); grad.addColorStop(0.7,'rgba(0,255,100,0.06)'); grad.addColorStop(1,'rgba(0,255,100,0.18)');
+      ctx.fillStyle=grad; ctx.fillRect(0,scanY-60,w,80);
+      ctx.beginPath(); ctx.moveTo(0,scanY); ctx.lineTo(w,scanY);
+      ctx.strokeStyle='rgba(0,255,100,0.5)'; ctx.lineWidth=1; ctx.stroke();
+      // Grid overlay
+      ctx.strokeStyle='rgba(0,255,100,0.05)'; ctx.lineWidth=0.5;
+      for(let x=0;x<w;x+=40) { ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,h); ctx.stroke(); }
+      for(let y=0;y<h;y+=40) { ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(w,y); ctx.stroke(); }
+      // Cursor pulse waves
+      if(mx>0) {
+        for(let i=0;i<4;i++) {
+          const r=((t*120+i*80)%500);
+          ctx.beginPath(); ctx.arc(mx,my,r,0,Math.PI*2);
+          ctx.strokeStyle=`rgba(0,255,100,${Math.max(0,0.4-r/500)})`; ctx.lineWidth=1.5; ctx.stroke();
+        }
+        // Cursor highlight dot
+        ctx.beginPath(); ctx.arc(mx,my,6,0,Math.PI*2);
+        ctx.fillStyle='rgba(0,255,150,0.8)'; ctx.fill();
+        ctx.beginPath(); ctx.arc(mx,my,20,0,Math.PI*2);
+        ctx.strokeStyle='rgba(0,255,100,0.3)'; ctx.stroke();
+      }
+      // Corner brackets
+      const brk=30;
+      const corners:Array<[number,number,number,number]>=[[0,0,1,1],[w,0,-1,1],[0,h,1,-1],[w,h,-1,-1]];
+      for(const [cx2,cy2,sdx,sdy] of corners){
+        ctx.beginPath(); ctx.moveTo(cx2+sdx*brk,cy2); ctx.lineTo(cx2,cy2); ctx.lineTo(cx2,cy2+sdy*brk);
+        ctx.strokeStyle='rgba(0,255,100,0.6)'; ctx.lineWidth=2; ctx.stroke();
+      }
+    },
+    ()=>{}
+  );
+  return <canvas ref={canvasRef} style={{position:'fixed',inset:0,zIndex:0,pointerEvents:'none',background:bgColor}} />;
+}
+
+// Glitch System Overlay
+function GlitchOverlayBackground({ bgColor = '#080508' }: { bgColor?: string }) {
+  const canvasRef=useCanvasSetup(
+    (ctx,w,h,mx,my,t)=>{
+      ctx.clearRect(0,0,w,h);
+      // Scanlines
+      for(let y=0;y<h;y+=4) {
+        ctx.fillStyle='rgba(0,0,0,0.15)'; ctx.fillRect(0,y,w,2);
+      }
+      // Glitch bands near cursor
+      if(mx>0) {
+        const numBands=Math.floor(Math.sin(t*5)*2+3);
+        for(let i=0;i<numBands;i++) {
+          const by=my-100+i*60+Math.sin(t*8+i)*30;
+          const bh=4+Math.sin(t*12+i*2)*6;
+          const shift=(Math.sin(t*15+i*3))*30;
+          ctx.fillStyle=`rgba(180,0,255,${0.08+Math.random()*0.06})`;
+          ctx.fillRect(shift,by,w,bh);
+          // RGB split
+          ctx.fillStyle='rgba(255,0,0,0.04)'; ctx.fillRect(shift+3,by,w,bh);
+          ctx.fillStyle='rgba(0,255,255,0.04)'; ctx.fillRect(shift-3,by,w,bh);
+        }
+        // Cursor ripple
+        const r=(t%2)*200;
+        ctx.beginPath(); ctx.arc(mx,my,r,0,Math.PI*2);
+        ctx.strokeStyle=`rgba(180,0,255,${Math.max(0,0.3-r/200)})`; ctx.lineWidth=1; ctx.stroke();
+        // Fragment distortion around cursor
+        for(let i=0;i<6;i++) {
+          const angle=t*2+i*(Math.PI/3);
+          const d=40+Math.sin(t*4+i)*20;
+          const fx=mx+Math.cos(angle)*d, fy=my+Math.sin(angle)*d;
+          ctx.fillStyle='rgba(200,100,255,0.15)';
+          ctx.fillRect(fx,fy,Math.sin(t*3+i)*20+10,3);
+        }
+      }
+      // Corner HUD elements
+      ctx.strokeStyle='rgba(180,100,255,0.3)'; ctx.lineWidth=1;
+      ctx.strokeRect(10,10,80,24); ctx.strokeRect(w-90,10,80,24);
+      ctx.fillStyle='rgba(180,100,255,0.5)'; ctx.font='10px monospace';
+      ctx.fillText(`SYS:${Math.floor(t*10)%100}%`,16,26);
+      ctx.fillText(`MEM:${Math.floor(t*7)%100}%`,w-84,26);
+    },
+    ()=>{}
+  );
+  return <canvas ref={canvasRef} style={{position:'fixed',inset:0,zIndex:0,pointerEvents:'none',background:bgColor}} />;
+}
+
+// Code Fragment Swarm
+function CodeFragmentSwarmBackground({ bgColor = '#040408' }: { bgColor?: string }) {
+  type Frag = {x:number;y:number;vx:number;vy:number;text:string;alpha:number;size:number};
+  const fragsRef=useRef<Frag[]>([]);
+  const canvasRef=useCanvasSetup(
+    (ctx,w,h,mx,my,t)=>{
+      ctx.clearRect(0,0,w,h);
+      const frags=fragsRef.current;
+      const syms=['const','let','{}','=>','()','[];','0x','&&','||','<<','>>','fn(','//','null','void','true','async','#!','.map','.io'];
+      while(frags.length<150) {
+        frags.push({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-0.5)*0.3,vy:(Math.random()-0.5)*0.3,text:syms[Math.floor(Math.random()*syms.length)],alpha:Math.random()*0.4+0.1,size:9+Math.random()*8});
+      }
+      for(const f of frags) {
+        const dx=mx-f.x,dy=my-f.y,d=Math.hypot(dx,dy);
+        if(d<200&&mx>0) { f.vx+=dx/d*0.08; f.vy+=dy/d*0.08; }
+        f.vx*=0.98; f.vy*=0.98; f.x+=f.vx; f.y+=f.vy;
+        if(f.x<-50) f.x=w+50; if(f.x>w+50) f.x=-50;
+        if(f.y<-20) f.y=h+20; if(f.y>h+20) f.y=-20;
+        const bright=d<200&&mx>0?(1-d/200)*0.6:0;
+        ctx.fillStyle=`rgba(${100+Math.floor(bright*100)},${180+Math.floor(bright*60)},${100+Math.floor(bright*80)},${f.alpha+bright})`;
+        ctx.font=`${f.size}px monospace`; ctx.fillText(f.text,f.x,f.y);
+      }
+    },
+    (w,h)=>{ fragsRef.current=[]; }
+  );
+  return <canvas ref={canvasRef} style={{position:'fixed',inset:0,zIndex:0,pointerEvents:'none',background:bgColor}} />;
+}
+
+// Terminal Fog Interface
+function TerminalFogBackground({ bgColor = '#010805' }: { bgColor?: string }) {
+  type Log = {x:number;y:number;text:string;alpha:number;maxAlpha:number;life:number;maxLife:number};
+  const logsRef=useRef<Log[]>([]);
+  const canvasRef=useCanvasSetup(
+    (ctx,w,h,mx,my,t)=>{
+      ctx.clearRect(0,0,w,h);
+      const cmds=['> ls -la','$ chmod 777','auth: GRANTED','route: /etc/shadow','TRACE: 0xF3A2','kernel: init','sudo !!','[REDACTED]','signal: SIGTERM','EOF','crypt: AES256','ACCESS LOG','>> /dev/null','ping 127.0.0.1'];
+      if(mx>0&&Math.random()<0.08&&logsRef.current.length<80) {
+        logsRef.current.push({x:mx+(Math.random()-0.5)*200,y:my+(Math.random()-0.5)*120,text:cmds[Math.floor(Math.random()*cmds.length)],alpha:0,maxAlpha:0.5+Math.random()*0.4,life:0,maxLife:120+Math.random()*100});
+      }
+      logsRef.current=logsRef.current.filter(l=>l.life<l.maxLife);
+      for(const l of logsRef.current) {
+        l.life++;
+        const p=l.life/l.maxLife;
+        l.alpha=p<0.2?l.maxAlpha*(p/0.2):l.maxAlpha*(1-p)*1.25;
+        ctx.fillStyle=`rgba(0,255,80,${l.alpha})`; ctx.font='11px monospace';
+        ctx.fillText(l.text,l.x,l.y);
+        // Cursor-reveal effect
+        const d=Math.hypot(mx-l.x,my-l.y);
+        if(d<100) {
+          ctx.fillStyle=`rgba(0,255,80,${(1-d/100)*0.5})`; ctx.fillText(l.text,l.x,l.y);
+        }
+      }
+      // Fog overlay
+      if(mx>0) {
+        const g=ctx.createRadialGradient(mx,my,0,mx,my,250);
+        g.addColorStop(0,'rgba(0,30,10,0)'); g.addColorStop(1,'rgba(0,20,8,0.6)');
+        ctx.fillStyle=g; ctx.fillRect(0,0,w,h);
+      }
+      // Blinking cursor
+      if(Math.floor(t*2)%2===0) {
+        ctx.fillStyle='rgba(0,255,80,0.7)'; ctx.font='14px monospace'; ctx.fillText('_',mx+2,my);
+      }
+    },
+    ()=>{ logsRef.current=[]; }
+  );
+  return <canvas ref={canvasRef} style={{position:'fixed',inset:0,zIndex:0,pointerEvents:'none',background:bgColor}} />;
+}
+
+// AI Command Core
+function AICommandCoreBackground({ bgColor = '#020610' }: { bgColor?: string }) {
+  const canvasRef=useCanvasSetup(
+    (ctx,w,h,mx,my,t)=>{
+      ctx.clearRect(0,0,w,h);
+      const cx=w/2,cy=h/2;
+      // Central ring system
+      for(let i=0;i<5;i++) {
+        const r=80+i*70+Math.sin(t*0.5+i)*10;
+        const segments=8+i*4;
+        for(let s=0;s<segments;s++) {
+          const a1=s/segments*Math.PI*2+t*(0.1-i*0.03);
+          const a2=(s+0.7)/segments*Math.PI*2+t*(0.1-i*0.03);
+          const d=Math.hypot(mx-cx,my-cy);
+          const focus=d<300?(1-d/300):0;
+          const alpha=0.15+focus*0.4+Math.sin(t*2+s*0.5)*0.1;
+          ctx.beginPath(); ctx.arc(cx,cy,r,a1,a2);
+          ctx.strokeStyle=`rgba(60,${140+i*20},255,${alpha})`; ctx.lineWidth=1.5+focus; ctx.stroke();
+        }
+      }
+      // Signal lines to cursor
+      if(mx>0&&my>0) {
+        for(let i=0;i<6;i++) {
+          const angle=i/6*Math.PI*2+t*0.2;
+          const sx=cx+Math.cos(angle)*80, sy=cy+Math.sin(angle)*80;
+          const alpha=0.3+Math.sin(t*3+i)*0.2;
+          ctx.beginPath(); ctx.moveTo(sx,sy);
+          const cx2=(sx+mx)/2+(my-sy)*0.2, cy2=(sy+my)/2+(mx-sx)*0.2;
+          ctx.quadraticCurveTo(cx2,cy2,mx,my);
+          ctx.strokeStyle=`rgba(100,180,255,${alpha})`; ctx.lineWidth=0.8; ctx.stroke();
+        }
+        // Data panels near cursor
+        ctx.strokeStyle='rgba(60,140,255,0.35)'; ctx.lineWidth=1;
+        ctx.strokeRect(mx+20,my-15,80,30); ctx.strokeRect(mx+20,my+20,60,20);
+        ctx.fillStyle='rgba(100,180,255,0.5)'; ctx.font='9px monospace';
+        ctx.fillText(`LOCK: ${Math.floor(t*100)%100}%`,mx+24,my+1);
+        ctx.fillText(`SYNC: OK`,mx+24,my+33);
+      }
+      // Center core
+      const coreGlow=ctx.createRadialGradient(cx,cy,0,cx,cy,60);
+      coreGlow.addColorStop(0,'rgba(80,160,255,0.4)'); coreGlow.addColorStop(1,'rgba(0,0,0,0)');
+      ctx.fillStyle=coreGlow; ctx.fillRect(0,0,w,h);
+      ctx.beginPath(); ctx.arc(cx,cy,8,0,Math.PI*2);
+      ctx.fillStyle='rgba(100,200,255,0.9)'; ctx.fill();
+    },
+    ()=>{}
+  );
+  return <canvas ref={canvasRef} style={{position:'fixed',inset:0,zIndex:0,pointerEvents:'none',background:`radial-gradient(ellipse at 50% 50%, rgba(5,15,40,1) 0%, ${bgColor} 100%)`}} />;
+}
+
+// Digital Gravity Field
+function DigitalGravityBackground({ bgColor = '#060408' }: { bgColor?: string }) {
+  type Particle={x:number;y:number;vx:number;vy:number;trail:{x:number;y:number}[];hue:number};
+  const pRef=useRef<Particle[]>([]);
+  const canvasRef=useCanvasSetup(
+    (ctx,w,h,mx,my,t)=>{
+      ctx.clearRect(0,0,w,h);
+      // Spawn
+      while(pRef.current.length<200) {
+        pRef.current.push({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-0.5)*1,vy:(Math.random()-0.5)*1,trail:[],hue:200+Math.random()*80});
+      }
+      for(const p of pRef.current) {
+        if(mx>0) {
+          const dx=mx-p.x,dy=my-p.y,d=Math.hypot(dx,dy)+10;
+          const force=Math.min(2000/(d*d),1.5);
+          p.vx+=dx/d*force; p.vy+=dy/d*force;
+        }
+        p.vx*=0.97; p.vy*=0.97;
+        p.trail.push({x:p.x,y:p.y});
+        if(p.trail.length>12) p.trail.shift();
+        p.x+=p.vx; p.y+=p.vy;
+        if(p.x<0||p.x>w||p.y<0||p.y>h) { p.x=Math.random()*w; p.y=Math.random()*h; p.vx=0; p.vy=0; p.trail=[]; }
+        // Draw trail
+        for(let i=1;i<p.trail.length;i++) {
+          const alpha=(i/p.trail.length)*0.5;
+          ctx.beginPath(); ctx.moveTo(p.trail[i-1].x,p.trail[i-1].y); ctx.lineTo(p.trail[i].x,p.trail[i].y);
+          ctx.strokeStyle=`hsla(${p.hue},80%,60%,${alpha})`; ctx.lineWidth=1; ctx.stroke();
+        }
+        ctx.beginPath(); ctx.arc(p.x,p.y,1.5,0,Math.PI*2);
+        ctx.fillStyle=`hsla(${p.hue},90%,70%,0.8)`; ctx.fill();
+      }
+    },
+    (w,h)=>{ pRef.current=[]; }
+  );
+  return <canvas ref={canvasRef} style={{position:'fixed',inset:0,zIndex:0,pointerEvents:'none',background:bgColor}} />;
+}
+
+// Reactive HUD Layer
+function ReactiveHUDBackground({ bgColor = '#030510' }: { bgColor?: string }) {
+  const canvasRef=useCanvasSetup(
+    (ctx,w,h,mx,my,t)=>{
+      ctx.clearRect(0,0,w,h);
+      const mxN=mx/w,myN=my/h;
+      // Parallax layers
+      for(let layer=0;layer<3;layer++) {
+        const shift=layer*20*(mxN-0.5);
+        const vshift=layer*15*(myN-0.5);
+        ctx.strokeStyle=`rgba(60,140,255,${0.1-layer*0.02})`; ctx.lineWidth=0.5;
+        // Grid
+        for(let x=0;x<w;x+=80) { ctx.beginPath(); ctx.moveTo(x+shift,0); ctx.lineTo(x+shift,h); ctx.stroke(); }
+        for(let y=0;y<h;y+=60) { ctx.beginPath(); ctx.moveTo(0,y+vshift); ctx.lineTo(w,y+vshift); ctx.stroke(); }
+      }
+      // HUD panels
+      const panels=[{x:40,y:40,w:200,h:80},{x:w-240,y:40,w:200,h:80},{x:40,y:h-120,w:180,h:70},{x:w-220,y:h-120,w:180,h:70}];
+      for(const p of panels) {
+        const cx2=p.x+p.w/2,cy2=p.y+p.h/2;
+        const d=mx>0?Math.hypot(mx-cx2,my-cy2):999;
+        const focus=d<300?(1-d/300)*0.8:0;
+        ctx.strokeStyle=`rgba(60,140,255,${0.25+focus})`; ctx.lineWidth=1+focus;
+        ctx.strokeRect(p.x,p.y,p.w,p.h);
+        // Corner marks
+        const cm=8;
+        const cmarks:Array<[number,number,number,number]>=[[p.x,p.y,1,1],[p.x+p.w,p.y,-1,1],[p.x,p.y+p.h,1,-1],[p.x+p.w,p.y+p.h,-1,-1]];
+        for(const [cmx,cmy,cdx,cdy] of cmarks){
+          ctx.beginPath(); ctx.moveTo(cmx+cdx*cm,cmy); ctx.lineTo(cmx,cmy); ctx.lineTo(cmx,cmy+cdy*cm);
+          ctx.strokeStyle=`rgba(100,200,255,${0.5+focus})`; ctx.lineWidth=1.5; ctx.stroke();
+        }
+        ctx.fillStyle=`rgba(60,140,255,${0.04+focus*0.06})`; ctx.fillRect(p.x,p.y,p.w,p.h);
+        ctx.fillStyle=`rgba(100,180,255,${0.4+focus*0.4})`; ctx.font='9px monospace';
+        ctx.fillText(`${Math.floor(t*50+p.x)%1000}/${Math.floor(t*30+p.y)%100}%`,p.x+8,p.y+18);
+      }
+      // Cursor lock indicator
+      if(mx>0) {
+        ctx.strokeStyle='rgba(100,200,255,0.6)'; ctx.lineWidth=1;
+        ctx.beginPath(); ctx.moveTo(mx-20,my); ctx.lineTo(mx-8,my); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(mx+8,my); ctx.lineTo(mx+20,my); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(mx,my-20); ctx.lineTo(mx,my-8); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(mx,my+8); ctx.lineTo(mx,my+20); ctx.stroke();
+        ctx.beginPath(); ctx.arc(mx,my,5,0,Math.PI*2); ctx.strokeStyle='rgba(100,200,255,0.8)'; ctx.stroke();
+        // Track line to panels
+        for(const p of panels) {
+          const pcx=p.x+p.w/2,pcy=p.y+p.h/2;
+          const d=Math.hypot(mx-pcx,my-pcy);
+          if(d<250) {
+            ctx.beginPath(); ctx.moveTo(mx,my); ctx.lineTo(pcx,pcy);
+            ctx.strokeStyle=`rgba(60,140,255,${(1-d/250)*0.3})`; ctx.lineWidth=0.5; ctx.stroke();
+          }
+        }
+      }
+    },
+    ()=>{}
+  );
+  return <canvas ref={canvasRef} style={{position:'fixed',inset:0,zIndex:0,pointerEvents:'none',background:`linear-gradient(160deg, ${bgColor} 0%, rgba(5,10,30,1) 100%)`}} />;
+}
+
+// Packet Flow Network
+function PacketFlowBackground({ bgColor = '#030810' }: { bgColor?: string }) {
+  type Node={x:number;y:number;connections:number[];busy:number};
+  type Packet={nodeIdx:number;nextNodeIdx:number;progress:number;speed:number;diverted:boolean};
+  const nodesRef=useRef<Node[]>([]);
+  const packetsRef=useRef<Packet[]>([]);
+  const canvasRef=useCanvasSetup(
+    (ctx,w,h,mx,my,t)=>{
+      ctx.clearRect(0,0,w,h);
+      const nodes=nodesRef.current;
+      const packets=packetsRef.current;
+      // Spawn packets
+      if(packets.length<60&&Math.random()<0.08) {
+        const from=Math.floor(Math.random()*nodes.length);
+        if(nodes[from].connections.length>0) {
+          const to=nodes[from].connections[Math.floor(Math.random()*nodes[from].connections.length)];
+          packets.push({nodeIdx:from,nextNodeIdx:to,progress:0,speed:0.008+Math.random()*0.012,diverted:false});
+        }
+      }
+      // Draw connections
+      for(let i=0;i<nodes.length;i++) {
+        for(const j of nodes[i].connections) {
+          if(j>i) {
+            ctx.beginPath(); ctx.moveTo(nodes[i].x,nodes[i].y); ctx.lineTo(nodes[j].x,nodes[j].y);
+            ctx.strokeStyle='rgba(40,120,200,0.2)'; ctx.lineWidth=0.8; ctx.stroke();
+          }
+        }
+      }
+      // Update & draw packets
+      for(let pi=packets.length-1;pi>=0;pi--) {
+        const p=packets[pi]; p.progress+=p.speed;
+        if(p.progress>=1) {
+          const n=nodes[p.nextNodeIdx]; n.busy=Math.min(n.busy+0.3,1);
+          const next=n.connections.length>0?n.connections[Math.floor(Math.random()*n.connections.length)]:p.nodeIdx;
+          packets[pi]={nodeIdx:p.nextNodeIdx,nextNodeIdx:next,progress:0,speed:p.speed,diverted:false};
+        }
+        const from=nodes[p.nodeIdx],to=nodes[p.nextNodeIdx];
+        // Cursor attraction
+        let px=from.x+(to.x-from.x)*p.progress;
+        let py=from.y+(to.y-from.y)*p.progress;
+        if(mx>0) { const d=Math.hypot(mx-px,my-py); if(d<100) { px+=(mx-px)*0.15; py+=(my-py)*0.15; } }
+        ctx.beginPath(); ctx.arc(px,py,3,0,Math.PI*2);
+        ctx.fillStyle='rgba(100,200,255,0.9)'; ctx.fill();
+        ctx.beginPath(); ctx.arc(px,py,6,0,Math.PI*2);
+        ctx.fillStyle='rgba(60,160,255,0.3)'; ctx.fill();
+      }
+      // Draw nodes
+      for(const n of nodes) {
+        n.busy*=0.97;
+        const d=mx>0?Math.hypot(mx-n.x,my-n.y):999;
+        const highlight=d<150?(1-d/150):0;
+        const size=4+highlight*4+n.busy*3;
+        ctx.beginPath(); ctx.arc(n.x,n.y,size,0,Math.PI*2);
+        ctx.fillStyle=`rgba(60,${140+Math.floor(highlight*80)},255,${0.4+highlight*0.5+n.busy*0.3})`; ctx.fill();
+      }
+    },
+    (w,h)=>{
+      nodesRef.current=Array.from({length:30},()=>({x:Math.random()*w,y:Math.random()*h,connections:[],busy:0}));
+      packetsRef.current=[];
+      for(let i=0;i<nodesRef.current.length;i++) {
+        for(let j=i+1;j<nodesRef.current.length;j++) {
+          if(Math.hypot(nodesRef.current[i].x-nodesRef.current[j].x,nodesRef.current[i].y-nodesRef.current[j].y)<200) {
+            nodesRef.current[i].connections.push(j); nodesRef.current[j].connections.push(i);
+          }
+        }
+      }
+    }
+  );
+  return <canvas ref={canvasRef} style={{position:'fixed',inset:0,zIndex:0,pointerEvents:'none',background:bgColor}} />;
+}
+
+// ── Background Selector ───────────────────────────────────────────────────────
+function ActiveBackground({ settings }: { settings: AppSettings }) {
+  const bg = settings.specialBackground || '';
+  const bgColor = settings.bgThemeColor || '#050508';
+
+  if (bg === 'neural') return <NeuralMeshBackground bgColor={bgColor} />;
+  if (bg === 'circuit') return <CircuitBoardBackground bgColor={bgColor} />;
+  if (bg === 'matrix') return <MatrixRainBackground bgColor={bgColor} />;
+  if (bg === 'hologrid') return <HolographicGridBackground bgColor={bgColor} />;
+  if (bg === 'smoke') return <DigitalSmokeBackground bgColor={bgColor} />;
+  if (bg === 'flow') return <NeonFlowFieldBackground bgColor={bgColor} />;
+  if (bg === 'radar') return <SecurityScanBackground bgColor={bgColor} />;
+  if (bg === 'glitch') return <GlitchOverlayBackground bgColor={bgColor} />;
+  if (bg === 'codefrag') return <CodeFragmentSwarmBackground bgColor={bgColor} />;
+  if (bg === 'terminal') return <TerminalFogBackground bgColor={bgColor} />;
+  if (bg === 'aicore') return <AICommandCoreBackground bgColor={bgColor} />;
+  if (bg === 'gravity') return <DigitalGravityBackground bgColor={bgColor} />;
+  if (bg === 'hud') return <ReactiveHUDBackground bgColor={bgColor} />;
+  if (bg === 'packets') return <PacketFlowBackground bgColor={bgColor} />;
+  return <StarBackground bgColor={bgColor} />;
 }
 
 // ── Cord popup ────────────────────────────────────────────────────────────────
@@ -3564,7 +4227,7 @@ function App() {
   if (page === 'games') {
     return (
       <div style={{ position: 'relative', width: '100vw', height: '100vh', overflowY: 'scroll' }}>
-        <StarBackground />
+        <ActiveBackground settings={settings} />
         {showCordPopup && <CordPopup onClose={handleCordPopupClose} />}
         {showEasterEgg && <EasterEggPopup onClose={() => setShowEasterEgg(false)} />}
         {showSettings && (
@@ -3580,14 +4243,14 @@ function App() {
         <button
           onClick={() => setShowSettings(true)}
           style={{
-            position: 'fixed', top: 16, left: 16, zIndex: 50,
-            display: 'flex', alignItems: 'center', gap: 6,
-            padding: '8px 14px',
+            position: 'fixed', top: 12, left: 12, zIndex: 50,
+            display: 'flex', alignItems: 'center', gap: 5,
+            padding: '6px 11px',
             background: 'rgba(255,255,255,0.07)',
             border: '1px solid rgba(255,255,255,0.14)',
-            borderRadius: 10,
+            borderRadius: 9,
             color: '#d1d5db',
-            fontSize: 13,
+            fontSize: 12,
             fontWeight: 500,
             cursor: 'pointer',
             backdropFilter: 'blur(8px)',
@@ -3602,11 +4265,11 @@ function App() {
             (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.14)';
           }}
         >
-          <Settings size={15} />
+          <Settings size={13} />
           Settings
         </button>
 
-        <div style={{ position: 'relative', zIndex: 1, padding: 32 }}>
+        <div style={{ position: 'relative', zIndex: 1, padding: '24px 20px 24px 20px' }}>
           {/* Sticky header — fades out as user scrolls */}
           <div style={{
             position: 'sticky', top: 0, zIndex: 10,
@@ -3615,40 +4278,40 @@ function App() {
             WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 55%, transparent 100%)',
             maskImage: 'linear-gradient(to bottom, black 0%, black 55%, transparent 100%)',
             textAlign: 'center',
-            paddingTop: 24, paddingBottom: 48,
-            marginBottom: 16,
+            paddingTop: 18, paddingBottom: 40,
+            marginBottom: 12,
           }}>
-            <h1 style={{ fontSize: 44, fontWeight: 700, color: '#fff', marginBottom: 16, letterSpacing: '-0.02em' }}>Choose Your Application</h1>
+            <h1 style={{ fontSize: 34, fontWeight: 700, color: '#fff', marginBottom: 12, letterSpacing: '-0.02em' }}>Choose Your Application</h1>
             <button
               onClick={() => setPage('home')}
-              style={{ background: 'rgba(55,65,81,0.8)', color: '#fff', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 8, padding: '8px 24px', fontSize: 14, cursor: 'pointer', marginBottom: 16, backdropFilter: 'blur(4px)', transition: 'background 0.2s' }}
+              style={{ background: 'rgba(55,65,81,0.8)', color: '#fff', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 8, padding: '6px 18px', fontSize: 13, cursor: 'pointer', marginBottom: 12, backdropFilter: 'blur(4px)', transition: 'background 0.2s' }}
             >
               Back to Search
             </button>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 16px', background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 9999, maxWidth: 420, margin: '0 auto' }}>
-              <Search size={16} color="#6b7280" style={{ flexShrink: 0 }} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '7px 14px', background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 9999, maxWidth: 360, margin: '0 auto' }}>
+              <Search size={14} color="#6b7280" style={{ flexShrink: 0 }} />
               <input
                 type="text"
                 value={gameSearchDisplay}
                 onChange={handleGameSearchChange}
                 onKeyDown={e => { if (e.key === 'Backspace') e.stopPropagation(); }}
                 placeholder="Search games..."
-                style={{ flex: 1, outline: 'none', background: 'transparent', color: '#f3f4f6', fontSize: 14, border: 'none' }}
+                style={{ flex: 1, outline: 'none', background: 'transparent', color: '#f3f4f6', fontSize: 13, border: 'none' }}
               />
               {gameSearchDisplay && (
-                <button onClick={() => { setGameSearchDisplay(''); setGameSearch(''); }} style={{ background: 'none', border: 'none', color: '#6b7280', fontSize: 18, cursor: 'pointer', lineHeight: 1 }}>×</button>
+                <button onClick={() => { setGameSearchDisplay(''); setGameSearch(''); }} style={{ background: 'none', border: 'none', color: '#6b7280', fontSize: 16, cursor: 'pointer', lineHeight: 1 }}>×</button>
               )}
             </div>
           </div>
 
           {filteredGames.length === 0 ? (
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', paddingTop: 96, textAlign: 'center' }}>
-              <div style={{ fontSize: 48, marginBottom: 16 }}>🔍</div>
-              <p style={{ color: '#9ca3af', fontSize: 20, fontWeight: 500 }}>No results found</p>
-              <p style={{ color: '#4b5563', fontSize: 14, marginTop: 4 }}>Try a different search term</p>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', paddingTop: 80, textAlign: 'center' }}>
+              <div style={{ fontSize: 40, marginBottom: 14 }}>🔍</div>
+              <p style={{ color: '#9ca3af', fontSize: 18, fontWeight: 500 }}>No results found</p>
+              <p style={{ color: '#4b5563', fontSize: 13, marginTop: 4 }}>Try a different search term</p>
             </div>
           ) : (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 24, maxWidth: 1400, margin: '0 auto', paddingBottom: 32 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 14, maxWidth: 1400, margin: '0 auto', paddingBottom: 28 }}>
               {filteredGames.map(game => (
                 <button
                   key={game.id}
@@ -3657,13 +4320,13 @@ function App() {
                   style={{
                     background: 'rgba(255,255,255,0.03)',
                     border: '1px solid rgba(255,255,255,0.08)',
-                    borderRadius: 16,
-                    padding: 28,
+                    borderRadius: 12,
+                    padding: '18px 12px',
                     cursor: 'pointer',
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
-                    gap: 12,
+                    gap: 8,
                     transition: 'background 0.22s, border-color 0.22s, transform 0.22s, box-shadow 0.22s',
                     backdropFilter: 'blur(6px)',
                   }}
@@ -3671,8 +4334,8 @@ function App() {
                     const el = e.currentTarget as HTMLButtonElement;
                     el.style.background = 'rgba(255,255,255,0.08)';
                     el.style.borderColor = `${settings.themeColor}99`;
-                    el.style.transform = 'scale(1.05)';
-                    el.style.boxShadow = `0 4px 24px ${settings.themeColor}33`;
+                    el.style.transform = 'scale(1.04)';
+                    el.style.boxShadow = `0 4px 20px ${settings.themeColor}33`;
                   }}
                   onMouseLeave={e => {
                     const el = e.currentTarget as HTMLButtonElement;
@@ -3682,14 +4345,14 @@ function App() {
                     el.style.boxShadow = 'none';
                   }}
                 >
-                  <div style={{ fontSize: 52 }}>{game.icon}</div>
-                  <span style={{ color: '#f3f4f6', fontSize: 15, fontWeight: 600, textAlign: 'center' }}>{formatGameName(game.name)}</span>
+                  <div style={{ fontSize: 38 }}>{game.icon}</div>
+                  <span style={{ color: '#f3f4f6', fontSize: 12, fontWeight: 600, textAlign: 'center', lineHeight: 1.3 }}>{formatGameName(game.name)}</span>
                 </button>
               ))}
             </div>
           )}
 
-          <div style={{ textAlign: 'center', color: '#4b5563', fontSize: 13, paddingBottom: 32 }}>
+          <div style={{ textAlign: 'center', color: '#4b5563', fontSize: 12, paddingBottom: 28 }}>
             Bart made this. Thank him. :)
           </div>
         </div>
