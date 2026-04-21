@@ -2815,6 +2815,21 @@ function applyTheme(settings: AppSettings) {
 
   if (theme === 'liquidglass') {
     css += `
+      body {
+        background: linear-gradient(135deg, #0a0a12 0%, #151520 50%, #0d0d15 100%) !important;
+      }
+      body::before {
+        content: '';
+        position: fixed; inset: 0; z-index: 0; pointer-events: none;
+        background:
+          radial-gradient(ellipse at 30% 20%, ${c}12 0%, transparent 50%),
+          radial-gradient(ellipse at 70% 80%, ${c}06 0%, transparent 40%);
+        animation: liquid-pulse 10s ease-in-out infinite;
+      }
+      @keyframes liquid-pulse {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 0.9; }
+      }
       .games-card {
         background: rgba(255,255,255,0.04) !important;
         border: 1px solid rgba(255,255,255,0.18) !important;
@@ -2829,6 +2844,16 @@ function applyTheme(settings: AppSettings) {
     `;
   } else if (theme === 'claymorphism') {
     css += `
+      body {
+        background: linear-gradient(145deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%) !important;
+      }
+      body::before {
+        content: '';
+        position: fixed; inset: 0; z-index: 0; pointer-events: none;
+        background:
+          radial-gradient(circle at 20% 80%, ${c}10 0%, transparent 40%),
+          radial-gradient(circle at 80% 20%, ${c}06 0%, transparent 35%);
+      }
       .games-card {
         background: linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04)) !important;
         border: 2px solid rgba(255,255,255,0.2) !important;
@@ -2843,17 +2868,23 @@ function applyTheme(settings: AppSettings) {
     `;
   } else if (theme === 'aurora') {
     css += `
+      body {
+        background: linear-gradient(180deg, #0c0c14 0%, #0a0a12 100%) !important;
+      }
       body::before {
         content: '';
         position: fixed; inset: 0; z-index: 0; pointer-events: none;
-        background: radial-gradient(ellipse at 20% 50%, rgba(120,40,200,0.15) 0%, transparent 60%),
-                    radial-gradient(ellipse at 80% 20%, rgba(40,160,200,0.12) 0%, transparent 60%),
-                    radial-gradient(ellipse at 60% 80%, rgba(80,200,120,0.1) 0%, transparent 60%);
-        animation: aurora-shift 8s ease-in-out infinite alternate;
+        background:
+          radial-gradient(ellipse at 20% 50%, rgba(120,40,200,0.2) 0%, transparent 50%),
+          radial-gradient(ellipse at 80% 20%, rgba(40,160,200,0.15) 0%, transparent 45%),
+          radial-gradient(ellipse at 60% 80%, rgba(80,200,120,0.12) 0%, transparent 45%),
+          radial-gradient(ellipse at 40% 30%, ${c}12 0%, transparent 40%);
+        animation: aurora-shift 10s ease-in-out infinite alternate;
+        filter: blur(40px);
       }
       @keyframes aurora-shift {
-        0% { opacity: 0.6; transform: scale(1); }
-        100% { opacity: 1; transform: scale(1.05) translateY(-10px); }
+        0% { opacity: 0.5; transform: scale(1); }
+        100% { opacity: 0.9; transform: scale(1.05); }
       }
       .games-card {
         background: rgba(255,255,255,0.035) !important;
@@ -2863,6 +2894,14 @@ function applyTheme(settings: AppSettings) {
     `;
   } else if (theme === 'neubrutalism') {
     css += `
+      body {
+        background: #0a0a0f !important;
+      }
+      body::before {
+        content: '';
+        position: fixed; inset: 0; z-index: 0; pointer-events: none;
+        background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.015) 2px, rgba(255,255,255,0.015) 4px);
+      }
       .games-card {
         background: rgba(20,20,30,0.85) !important;
         border: 2.5px solid rgba(255,255,255,0.85) !important;
@@ -2878,6 +2917,22 @@ function applyTheme(settings: AppSettings) {
     `;
   } else if (theme === 'abstract3d') {
     css += `
+      body {
+        background: linear-gradient(135deg, #0d0d15 0%, #121220 50%, #0a0a12 100%) !important;
+      }
+      body::before {
+        content: '';
+        position: fixed; inset: 0; z-index: 0; pointer-events: none;
+        background:
+          radial-gradient(circle at 50% 50%, ${c}06 0%, transparent 60%),
+          conic-gradient(from 0deg at 30% 30%, transparent 0deg, ${c}04 60deg, transparent 120deg),
+          conic-gradient(from 180deg at 70% 70%, transparent 0deg, ${c}04 60deg, transparent 120deg);
+        animation: rotate-3d 30s linear infinite;
+      }
+      @keyframes rotate-3d {
+        0% { transform: rotateZ(0deg); }
+        100% { transform: rotateZ(360deg); }
+      }
       .games-card {
         background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(99,102,241,0.06) 100%) !important;
         border: 1px solid rgba(255,255,255,0.15) !important;
@@ -2893,6 +2948,19 @@ function applyTheme(settings: AppSettings) {
     `;
   } else if (theme === 'dynamic') {
     css += `
+      body {
+        background: linear-gradient(135deg, #0a0a10 0%, #101018 50%, #080810 100%) !important;
+      }
+      body::before {
+        content: '';
+        position: fixed; inset: 0; z-index: 0; pointer-events: none;
+        background: radial-gradient(circle at 50% 50%, ${c}08 0%, transparent 50%);
+        animation: dynamic-pulse 5s ease-in-out infinite;
+      }
+      @keyframes dynamic-pulse {
+        0%, 100% { opacity: 0.4; transform: scale(1); }
+        50% { opacity: 0.8; transform: scale(1.1); }
+      }
       .games-card {
         background: rgba(255,255,255,0.04) !important;
         border: 1px solid rgba(255,255,255,0.1) !important;
@@ -3370,35 +3438,37 @@ function App() {
           />
         )}
 
-        {/* Settings button — top left */}
-        <button
-          onClick={() => setShowSettings(true)}
-          style={{
-            position: 'fixed', top: 16, left: 16, zIndex: 50,
-            display: 'flex', alignItems: 'center', gap: 6,
-            padding: '8px 14px',
-            background: 'rgba(255,255,255,0.07)',
-            border: '1px solid rgba(255,255,255,0.14)',
-            borderRadius: 10,
-            color: '#d1d5db',
-            fontSize: 13,
-            fontWeight: 500,
-            cursor: 'pointer',
-            backdropFilter: 'blur(8px)',
-            transition: 'background 0.2s, border-color 0.2s',
-          }}
-          onMouseEnter={e => {
-            (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.13)';
-            (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.25)';
-          }}
-          onMouseLeave={e => {
-            (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.07)';
-            (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.14)';
-          }}
-        >
-          <Settings size={15} />
-          Settings
-        </button>
+        {/* Settings button — top left (only shows when searching "cord") */}
+        {isCordKeyword(gameSearch) && (
+          <button
+            onClick={() => setShowSettings(true)}
+            style={{
+              position: 'fixed', top: 16, left: 16, zIndex: 50,
+              display: 'flex', alignItems: 'center', gap: 6,
+              padding: '8px 14px',
+              background: 'rgba(255,255,255,0.07)',
+              border: '1px solid rgba(255,255,255,0.14)',
+              borderRadius: 10,
+              color: '#d1d5db',
+              fontSize: 13,
+              fontWeight: 500,
+              cursor: 'pointer',
+              backdropFilter: 'blur(8px)',
+              transition: 'background 0.2s, border-color 0.2s',
+            }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.13)';
+              (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.25)';
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.07)';
+              (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.14)';
+            }}
+          >
+            <Settings size={15} />
+            Settings
+          </button>
+        )}
 
         <div style={{ position: 'relative', zIndex: 1, padding: 32 }}>
           {/* Sticky header — fades out as user scrolls */}
@@ -3508,28 +3578,6 @@ function App() {
         <button className="p-2 hover:bg-gray-800 rounded-full transition-colors"><Grid size={20} className="text-gray-400" /></button>
         <button className="p-2 hover:bg-gray-800 rounded-full transition-colors"><User size={20} className="text-gray-400" /></button>
       </header>
-      {/* Settings button top-left on home */}
-      <button
-        onClick={() => setShowSettings(true)}
-        style={{
-          position: 'fixed', top: 12, left: 12, zIndex: 50,
-          display: 'flex', alignItems: 'center', gap: 6,
-          padding: '7px 12px',
-          background: 'rgba(255,255,255,0.05)',
-          border: '1px solid rgba(255,255,255,0.1)',
-          borderRadius: 9,
-          color: '#9ca3af',
-          fontSize: 13,
-          fontWeight: 500,
-          cursor: 'pointer',
-          transition: 'background 0.2s',
-        }}
-        onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.1)'; }}
-        onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.05)'; }}
-      >
-        <Settings size={14} />
-        Settings
-      </button>
       <main className="flex-1 flex flex-col items-center justify-center px-4 -mt-20">
         <div className="text-center mb-8">
           <h1 className="text-7xl font-light mb-2">
