@@ -2780,6 +2780,7 @@ interface AppSettings {
   cloakIcon: string; // base64 data URL or empty string
   bgThemeColor: string; // background color for interactive backgrounds
   specialBackground: string; // special background id or ''
+  backgroundMode: 'interactive' | 'solid'; // whether to use interactive background or solid color
 }
 
 const DEFAULT_SETTINGS: AppSettings = {
@@ -2791,6 +2792,7 @@ const DEFAULT_SETTINGS: AppSettings = {
   cloakIcon: '',
   bgThemeColor: '#0a0a12',
   specialBackground: '',
+  backgroundMode: 'interactive',
 };
 
 function loadSettings(): AppSettings {
@@ -2828,25 +2830,160 @@ function applyTheme(settings: AppSettings) {
     .theme-accent-border { border-color: ${c} !important; }
   `;
 
-  // Game cards have a fixed neutral dark style — independent of background theme
-  css += `
-    .games-card {
-      background: rgba(255,255,255,0.035) !important;
-      border: 1px solid rgba(255,255,255,0.09) !important;
-      border-radius: 14px !important;
-      backdrop-filter: blur(8px) !important;
-      transition: background 0.22s, border-color 0.22s, transform 0.22s, box-shadow 0.22s !important;
-    }
-    .games-card:hover {
-      background: rgba(255,255,255,0.08) !important;
-      border-color: ${c}88 !important;
-      transform: scale(1.04) !important;
-      box-shadow: 0 4px 24px ${c}30 !important;
-    }
-  `;
+  // ── Per-theme card styles ─────────────────────────────────────────────────
+  if (!theme || theme === 'default') {
+    css += `
+      .games-card {
+        background: rgba(255,255,255,0.035) !important;
+        border: 1px solid rgba(255,255,255,0.09) !important;
+        border-radius: 14px !important;
+        backdrop-filter: blur(8px) !important;
+        transition: background 0.22s, border-color 0.22s, transform 0.22s, box-shadow 0.22s !important;
+      }
+      .games-card:hover {
+        background: rgba(255,255,255,0.08) !important;
+        border-color: ${c}88 !important;
+        transform: scale(1.04) !important;
+        box-shadow: 0 4px 24px ${c}30 !important;
+      }
+    `;
+  } else if (theme === 'liquidglass') {
+    css += `
+      .games-card {
+        background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 60%, rgba(120,180,255,0.08) 100%) !important;
+        border: 1px solid rgba(255,255,255,0.22) !important;
+        border-radius: 18px !important;
+        backdrop-filter: blur(20px) saturate(1.8) !important;
+        box-shadow: 0 2px 16px rgba(120,180,255,0.10), inset 0 1px 0 rgba(255,255,255,0.18) !important;
+        transition: all 0.28s cubic-bezier(0.4,0,0.2,1) !important;
+        position: relative !important;
+      }
+      .games-card::after {
+        content: '' !important;
+        position: absolute !important;
+        inset: 0 !important;
+        border-radius: 18px !important;
+        background: linear-gradient(120deg, rgba(255,255,255,0.15) 0%, transparent 50%) !important;
+        pointer-events: none !important;
+      }
+      .games-card:hover {
+        background: linear-gradient(135deg, rgba(255,255,255,0.20) 0%, rgba(180,220,255,0.12) 60%, rgba(120,180,255,0.16) 100%) !important;
+        border-color: rgba(255,255,255,0.45) !important;
+        transform: scale(1.05) translateY(-3px) !important;
+        box-shadow: 0 8px 32px rgba(120,180,255,0.25), 0 2px 8px rgba(255,255,255,0.12), inset 0 1px 0 rgba(255,255,255,0.3) !important;
+      }
+    `;
+  } else if (theme === 'claymorphism') {
+    css += `
+      .games-card {
+        background: linear-gradient(145deg, rgba(200,180,255,0.13) 0%, rgba(160,200,255,0.10) 50%, rgba(255,200,200,0.08) 100%) !important;
+        border: none !important;
+        border-radius: 22px !important;
+        backdrop-filter: blur(4px) !important;
+        box-shadow: 6px 6px 18px rgba(0,0,0,0.35), -3px -3px 10px rgba(255,255,255,0.06), inset 0 1px 2px rgba(255,255,255,0.10) !important;
+        transition: all 0.25s ease !important;
+      }
+      .games-card:hover {
+        background: linear-gradient(145deg, rgba(200,180,255,0.20) 0%, rgba(160,200,255,0.16) 50%, rgba(255,200,200,0.14) 100%) !important;
+        transform: scale(0.97) translateY(2px) !important;
+        box-shadow: 3px 3px 10px rgba(0,0,0,0.40), -2px -2px 6px rgba(255,255,255,0.05), inset 0 1px 2px rgba(255,255,255,0.08) !important;
+      }
+    `;
+  } else if (theme === 'aurora') {
+    css += `
+      @keyframes aurora-card-glow {
+        0%   { box-shadow: 0 0 12px rgba(120,40,200,0.35), 0 2px 20px rgba(40,160,200,0.20); border-color: rgba(120,40,200,0.4); }
+        50%  { box-shadow: 0 0 18px rgba(40,200,160,0.40), 0 2px 24px rgba(80,40,220,0.25); border-color: rgba(40,200,160,0.5); }
+        100% { box-shadow: 0 0 12px rgba(120,40,200,0.35), 0 2px 20px rgba(40,160,200,0.20); border-color: rgba(120,40,200,0.4); }
+      }
+      .games-card {
+        background: linear-gradient(135deg, rgba(40,10,60,0.7) 0%, rgba(10,30,60,0.65) 50%, rgba(10,50,40,0.6) 100%) !important;
+        border: 1px solid rgba(120,40,200,0.4) !important;
+        border-radius: 16px !important;
+        backdrop-filter: blur(12px) !important;
+        animation: aurora-card-glow 4s ease-in-out infinite !important;
+        transition: transform 0.25s ease, background 0.25s ease !important;
+      }
+      .games-card:hover {
+        background: linear-gradient(135deg, rgba(80,20,120,0.8) 0%, rgba(20,60,120,0.75) 50%, rgba(20,100,80,0.7) 100%) !important;
+        transform: scale(1.05) translateY(-4px) !important;
+        box-shadow: 0 0 28px rgba(80,200,160,0.5), 0 4px 28px rgba(120,40,220,0.4) !important;
+        border-color: rgba(80,220,160,0.7) !important;
+        animation: none !important;
+      }
+    `;
+  } else if (theme === 'neubrutalism') {
+    css += `
+      .games-card {
+        background: rgba(20,20,20,0.92) !important;
+        border: 2.5px solid #e5e7eb !important;
+        border-radius: 6px !important;
+        backdrop-filter: none !important;
+        box-shadow: 4px 4px 0px #e5e7eb !important;
+        transition: all 0.12s ease !important;
+      }
+      .games-card:hover {
+        background: ${c}22 !important;
+        border-color: ${c} !important;
+        transform: translate(-3px, -3px) !important;
+        box-shadow: 7px 7px 0px ${c} !important;
+      }
+    `;
+  } else if (theme === 'abstract3d') {
+    css += `
+      @keyframes float3d {
+        0%,100% { transform: translateY(0px) rotateX(0deg); }
+        50%      { transform: translateY(-4px) rotateX(2deg); }
+      }
+      .games-card {
+        background: linear-gradient(160deg, rgba(99,102,241,0.18) 0%, rgba(59,130,246,0.10) 40%, rgba(139,92,246,0.14) 100%) !important;
+        border: 1px solid rgba(139,92,246,0.35) !important;
+        border-radius: 16px !important;
+        backdrop-filter: blur(10px) !important;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.45), 0 2px 6px rgba(139,92,246,0.20), inset 0 1px 0 rgba(255,255,255,0.08) !important;
+        animation: float3d 5s ease-in-out infinite !important;
+        transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+        perspective: 600px !important;
+      }
+      .games-card:hover {
+        background: linear-gradient(160deg, rgba(99,102,241,0.30) 0%, rgba(59,130,246,0.20) 40%, rgba(139,92,246,0.26) 100%) !important;
+        border-color: rgba(139,92,246,0.65) !important;
+        transform: scale(1.06) rotateX(4deg) rotateY(-4deg) translateY(-6px) !important;
+        box-shadow: 0 18px 40px rgba(0,0,0,0.55), 0 4px 16px rgba(139,92,246,0.40), inset 0 1px 0 rgba(255,255,255,0.14) !important;
+        animation: none !important;
+      }
+    `;
+  } else if (theme === 'dynamic') {
+    css += `
+      @keyframes dynamic-pulse {
+        0%,100% { box-shadow: 0 0 8px ${c}40, 0 2px 14px rgba(0,0,0,0.4); border-color: ${c}50; }
+        50%      { box-shadow: 0 0 16px ${c}60, 0 2px 18px rgba(0,0,0,0.4); border-color: ${c}80; }
+      }
+      @keyframes dynamic-shimmer {
+        0%   { background-position: 200% center; }
+        100% { background-position: -200% center; }
+      }
+      .games-card {
+        background: linear-gradient(270deg, rgba(255,255,255,0.04), rgba(255,255,255,0.08), rgba(255,255,255,0.04)) !important;
+        background-size: 400% 400% !important;
+        animation: dynamic-shimmer 4s linear infinite, dynamic-pulse 3s ease-in-out infinite !important;
+        border: 1px solid ${c}50 !important;
+        border-radius: 14px !important;
+        backdrop-filter: blur(8px) !important;
+        transition: transform 0.2s ease !important;
+      }
+      .games-card:hover {
+        background: linear-gradient(270deg, ${c}18, ${c}28, ${c}18) !important;
+        background-size: 400% 400% !important;
+        border-color: ${c}cc !important;
+        transform: scale(1.04) !important;
+        box-shadow: 0 0 24px ${c}50, 0 4px 20px rgba(0,0,0,0.5) !important;
+        animation: dynamic-shimmer 1.5s linear infinite !important;
+      }
+    `;
+  }
 
-  // NOTE: Background themes affect ONLY the body/canvas background.
-  // Game card styling stays neutral above.
+  // NOTE: Background themes affect ONLY the body/canvas background (when using interactive mode).
 
   if (theme === 'default' || !theme) {
     css += `
@@ -3165,15 +3302,124 @@ function SettingsModal({ onClose, settings, onChange }: {
             )}
             {tab === 'background' && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-                {/* Note */}
-                <div style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)', borderRadius: 10, padding: '10px 14px' }}>
-                  <p style={{ color: '#a5b4fc', fontSize: 12, margin: 0 }}>ℹ️ <strong>Theme changes the background only, not the game cards.</strong> Game card style is always neutral and independent.</p>
+
+                {/* Background Mode Selection */}
+                <div>
+                  <label style={{ color: '#d1d5db', fontSize: 13, fontWeight: 600, display: 'block', marginBottom: 10, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Background Mode</label>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                    {[
+                      { id: 'interactive' as const, label: 'Use Interactive Background', desc: 'Enables special animated background system. Uses cursor-reactive visuals.', icon: '✨' },
+                      { id: 'solid' as const, label: 'Use Solid Color', desc: 'Disables all animations. Uses a single flat background color.', icon: '🎨' },
+                    ].map(opt => (
+                      <button key={opt.id} onClick={() => update({ backgroundMode: opt.id })}
+                        style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 14px', borderRadius: 12, border: `1px solid ${local.backgroundMode === opt.id ? 'rgba(99,102,241,0.6)' : 'rgba(255,255,255,0.08)'}`, background: local.backgroundMode === opt.id ? 'rgba(99,102,241,0.12)' : 'rgba(255,255,255,0.02)', cursor: 'pointer', textAlign: 'left', transition: 'all 0.15s' }}>
+                        <span style={{ fontSize: 20 }}>{opt.icon}</span>
+                        <div style={{ flex: 1 }}>
+                          <div style={{ color: local.backgroundMode === opt.id ? '#a5b4fc' : '#e5e7eb', fontSize: 13, fontWeight: 600 }}>{opt.label}</div>
+                          <div style={{ color: '#6b7280', fontSize: 11, marginTop: 2 }}>{opt.desc}</div>
+                        </div>
+                        {local.backgroundMode === opt.id && <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#6366f1', flexShrink: 0 }} />}
+                      </button>
+                    ))}
+                  </div>
                 </div>
 
-                {/* Section 1: Background Theme Color */}
-                <div>
-                  <label style={{ color: '#d1d5db', fontSize: 13, fontWeight: 600, display: 'block', marginBottom: 4, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Interactive Background Theme</label>
-                  <p style={{ color: '#6b7280', fontSize: 12, marginBottom: 12 }}>Controls the base color/mood of the interactive background. Does not affect game cards.</p>
+                {/* Interactive background options — fade in/out */}
+                <div style={{
+                  overflow: 'hidden',
+                  maxHeight: local.backgroundMode === 'interactive' ? '2000px' : '0px',
+                  opacity: local.backgroundMode === 'interactive' ? 1 : 0,
+                  transition: 'max-height 0.3s ease, opacity 0.3s ease',
+                  display: 'flex', flexDirection: 'column', gap: 24,
+                }}>
+                  {/* Section 1: Background Theme Color */}
+                  <div>
+                    <label style={{ color: '#d1d5db', fontSize: 13, fontWeight: 600, display: 'block', marginBottom: 4, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Interactive Background Theme</label>
+                    <p style={{ color: '#6b7280', fontSize: 12, marginBottom: 12 }}>Controls the base color/mood of the interactive background.</p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                      <select
+                        value={local.bgThemeColor || '#0a0a12'}
+                        onChange={e => update({ bgThemeColor: e.target.value })}
+                        style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.14)', borderRadius: 9, color: '#f3f4f6', fontSize: 13, padding: '9px 12px', outline: 'none', cursor: 'pointer' }}
+                      >
+                        <option value="#0a0a12">Carbon Black</option>
+                        <option value="#111418">Graphite</option>
+                        <option value="#0d1220">Slate Blue</option>
+                        <option value="#060c1a">Deep Navy</option>
+                        <option value="#081414">Muted Teal</option>
+                        <option value="#0a0818">Dark Indigo</option>
+                        <option value="#0e1014">Steel Gray</option>
+                        <option value="#100812">Charcoal Purple</option>
+                        <option value="#060e08">Forest Green</option>
+                        <option value="#040e12">Midnight Cyan</option>
+                        <option value="#100608">Ember Dark</option>
+                        <option value="#0c1008">Moss Black</option>
+                      </select>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                        <input type="color" value={local.bgThemeColor || '#0a0a12'}
+                          onChange={e => update({ bgThemeColor: e.target.value })}
+                          style={{ width: 40, height: 36, border: '2px solid rgba(255,255,255,0.15)', borderRadius: 8, cursor: 'pointer', background: 'none', padding: 2 }} />
+                        <input type="text" value={local.bgThemeColor || '#0a0a12'}
+                          onChange={e => { if (/^#[0-9a-fA-F]{0,6}$/.test(e.target.value)) update({ bgThemeColor: e.target.value }); }}
+                          placeholder="#0a0a12"
+                          style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 8, color: '#f3f4f6', fontSize: 13, padding: '7px 10px', width: 90, outline: 'none' }} />
+                        <span style={{ color: '#6b7280', fontSize: 11 }}>Custom hex</span>
+                      </div>
+                      <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                        {['#0a0a12','#111418','#0d1220','#060c1a','#081414','#0a0818','#0e1014','#100812','#060e08','#040e12','#100608','#0c1008'].map(col => (
+                          <button key={col} onClick={() => update({ bgThemeColor: col })}
+                            style={{ width: 22, height: 22, borderRadius: '50%', background: col, border: (local.bgThemeColor||'#0a0a12')===col?'2px solid white':'2px solid rgba(255,255,255,0.2)', cursor: 'pointer' }} />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Section 2: Special Backgrounds */}
+                  <div>
+                    <label style={{ color: '#d1d5db', fontSize: 13, fontWeight: 600, display: 'block', marginBottom: 4, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Special Backgrounds</label>
+                    <p style={{ color: '#6b7280', fontSize: 12, marginBottom: 12 }}>Each option is a full interactive background that reacts to your cursor. Only one can be active at a time.</p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                      {[
+                        { id: '', icon: '⭐', label: 'Star Field (Default)', desc: 'Stars gently attracted to your cursor' },
+                        { id: 'neural', icon: '🧠', label: 'Neural Mesh Interface', desc: 'Glowing network nodes pulse and connect to your cursor' },
+                        { id: 'circuit', icon: '⚡', label: 'Circuit Board Live', desc: 'Electricity flows through glowing traces on activation' },
+                        { id: 'packets', icon: '📡', label: 'Packet Flow Network', desc: 'Data packets travel between nodes; cursor attracts traffic' },
+                        { id: 'matrix', icon: '🔢', label: 'Matrix Rain Reactive', desc: 'Code streams bend toward cursor; characters brighten nearby' },
+                        { id: 'hologrid', icon: '🔷', label: 'Holographic Data Grid', desc: 'Perspective grid warps around cursor like a VR surface' },
+                        { id: 'smoke', icon: '💨', label: 'Digital Smoke Field', desc: 'Vapor-like particles swirl and displace around cursor motion' },
+                        { id: 'flow', icon: '🌊', label: 'Neon Vector Flow Field', desc: 'Energy lines bend and spiral around cursor force' },
+                        { id: 'radar', icon: '📻', label: 'Security Scan Radar', desc: 'Scan lines sweep; cursor becomes origin of pulse waves' },
+                        { id: 'glitch', icon: '⚠️', label: 'Glitch System Overlay', desc: 'Controlled distortion and scanline jitter ripples from cursor' },
+                        { id: 'codefrag', icon: '</>', label: 'Code Fragment Swarm', desc: 'Floating syntax symbols drift and cluster toward cursor' },
+                        { id: 'terminal', icon: '🖥️', label: 'Terminal Fog Interface', desc: 'Secret command logs appear and fade around cursor movement' },
+                        { id: 'aicore', icon: '🤖', label: 'AI Command Core', desc: 'Orbital ring system and data panels track cursor focus' },
+                        { id: 'gravity', icon: '🌌', label: 'Digital Gravity Field', desc: 'Particles orbit cursor with curved trails like information mass' },
+                        { id: 'hud', icon: '🎯', label: 'Reactive HUD Layer', desc: 'Parallax dashboard panels lock onto and track cursor' },
+                      ].map(opt => (
+                        <button key={opt.id} onClick={() => update({ specialBackground: opt.id })}
+                          style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 12px', borderRadius: 10, border: `1px solid ${(local.specialBackground??'')=== opt.id ? 'rgba(99,102,241,0.6)' : 'rgba(255,255,255,0.08)'}`, background: (local.specialBackground??'')=== opt.id ? 'rgba(99,102,241,0.12)' : 'rgba(255,255,255,0.02)', cursor: 'pointer', textAlign: 'left', transition: 'all 0.15s' }}>
+                          <span style={{ fontSize: 18, minWidth: 24 }}>{opt.icon}</span>
+                          <div style={{ flex: 1 }}>
+                            <div style={{ color: (local.specialBackground??'')=== opt.id ? '#a5b4fc' : '#e5e7eb', fontSize: 13, fontWeight: 600 }}>{opt.label}</div>
+                            <div style={{ color: '#6b7280', fontSize: 11, marginTop: 2 }}>{opt.desc}</div>
+                          </div>
+                          {(local.specialBackground??'')=== opt.id && <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#6366f1' }} />}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Solid color options — fade in/out */}
+                <div style={{
+                  overflow: 'hidden',
+                  maxHeight: local.backgroundMode === 'solid' ? '400px' : '0px',
+                  opacity: local.backgroundMode === 'solid' ? 1 : 0,
+                  transition: 'max-height 0.3s ease, opacity 0.3s ease',
+                  display: 'flex', flexDirection: 'column', gap: 12,
+                }}>
+                  <label style={{ color: '#d1d5db', fontSize: 13, fontWeight: 600, display: 'block', marginBottom: 4, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Background Color</label>
+                  <p style={{ color: '#6b7280', fontSize: 12, marginBottom: 4 }}>Choose a flat background color. No animations will be used.</p>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                     <select
                       value={local.bgThemeColor || '#0a0a12'}
@@ -3212,40 +3458,6 @@ function SettingsModal({ onClose, settings, onChange }: {
                   </div>
                 </div>
 
-                {/* Section 2: Special Backgrounds */}
-                <div>
-                  <label style={{ color: '#d1d5db', fontSize: 13, fontWeight: 600, display: 'block', marginBottom: 4, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Special Backgrounds</label>
-                  <p style={{ color: '#6b7280', fontSize: 12, marginBottom: 12 }}>Each option is a full interactive background that reacts to your cursor. Only one can be active at a time.</p>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                    {[
-                      { id: '', icon: '⭐', label: 'Star Field (Default)', desc: 'Stars gently attracted to your cursor' },
-                      { id: 'neural', icon: '🧠', label: 'Neural Mesh Interface', desc: 'Glowing network nodes pulse and connect to your cursor' },
-                      { id: 'circuit', icon: '⚡', label: 'Circuit Board Live', desc: 'Electricity flows through glowing traces on activation' },
-                      { id: 'packets', icon: '📡', label: 'Packet Flow Network', desc: 'Data packets travel between nodes; cursor attracts traffic' },
-                      { id: 'matrix', icon: '🔢', label: 'Matrix Rain Reactive', desc: 'Code streams bend toward cursor; characters brighten nearby' },
-                      { id: 'hologrid', icon: '🔷', label: 'Holographic Data Grid', desc: 'Perspective grid warps around cursor like a VR surface' },
-                      { id: 'smoke', icon: '💨', label: 'Digital Smoke Field', desc: 'Vapor-like particles swirl and displace around cursor motion' },
-                      { id: 'flow', icon: '🌊', label: 'Neon Vector Flow Field', desc: 'Energy lines bend and spiral around cursor force' },
-                      { id: 'radar', icon: '📻', label: 'Security Scan Radar', desc: 'Scan lines sweep; cursor becomes origin of pulse waves' },
-                      { id: 'glitch', icon: '⚠️', label: 'Glitch System Overlay', desc: 'Controlled distortion and scanline jitter ripples from cursor' },
-                      { id: 'codefrag', icon: '</>', label: 'Code Fragment Swarm', desc: 'Floating syntax symbols drift and cluster toward cursor' },
-                      { id: 'terminal', icon: '🖥️', label: 'Terminal Fog Interface', desc: 'Secret command logs appear and fade around cursor movement' },
-                      { id: 'aicore', icon: '🤖', label: 'AI Command Core', desc: 'Orbital ring system and data panels track cursor focus' },
-                      { id: 'gravity', icon: '🌌', label: 'Digital Gravity Field', desc: 'Particles orbit cursor with curved trails like information mass' },
-                      { id: 'hud', icon: '🎯', label: 'Reactive HUD Layer', desc: 'Parallax dashboard panels lock onto and track cursor' },
-                    ].map(opt => (
-                      <button key={opt.id} onClick={() => update({ specialBackground: opt.id })}
-                        style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 12px', borderRadius: 10, border: `1px solid ${(local.specialBackground??'')=== opt.id ? 'rgba(99,102,241,0.6)' : 'rgba(255,255,255,0.08)'}`, background: (local.specialBackground??'')=== opt.id ? 'rgba(99,102,241,0.12)' : 'rgba(255,255,255,0.02)', cursor: 'pointer', textAlign: 'left', transition: 'all 0.15s' }}>
-                        <span style={{ fontSize: 18, minWidth: 24 }}>{opt.icon}</span>
-                        <div style={{ flex: 1 }}>
-                          <div style={{ color: (local.specialBackground??'')=== opt.id ? '#a5b4fc' : '#e5e7eb', fontSize: 13, fontWeight: 600 }}>{opt.label}</div>
-                          <div style={{ color: '#6b7280', fontSize: 11, marginTop: 2 }}>{opt.desc}</div>
-                        </div>
-                        {(local.specialBackground??'')=== opt.id && <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#6366f1' }} />}
-                      </button>
-                    ))}
-                  </div>
-                </div>
               </div>
             )}
             {tab === 'panic' && (
@@ -3273,6 +3485,11 @@ function SettingsModal({ onClose, settings, onChange }: {
                 <div style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)', borderRadius: 10, padding: '12px 16px' }}>
                   <p style={{ color: '#a5b4fc', fontSize: 13, margin: 0 }}>
                     ✅ Settings are saved locally on your device and persist across sessions.
+                  </p>
+                </div>
+                <div style={{ background: 'rgba(251,191,36,0.08)', border: '1px solid rgba(251,191,36,0.25)', borderRadius: 10, padding: '12px 16px' }}>
+                  <p style={{ color: '#fbbf24', fontSize: 13, margin: 0 }}>
+                    ⚠️ Make sure to add the https:// in front of your url, or else it wont work.
                   </p>
                 </div>
               </div>
@@ -3975,6 +4192,11 @@ function ActiveBackground({ settings }: { settings: AppSettings }) {
   const bg = settings.specialBackground || '';
   const bgColor = settings.bgThemeColor || '#050508';
 
+  // Solid color mode — no animated canvas at all
+  if (settings.backgroundMode === 'solid') {
+    return <div style={{ position: 'fixed', inset: 0, zIndex: 0, background: bgColor }} />;
+  }
+
   if (bg === 'neural') return <NeuralMeshBackground bgColor={bgColor} />;
   if (bg === 'circuit') return <CircuitBoardBackground bgColor={bgColor} />;
   if (bg === 'matrix') return <MatrixRainBackground bgColor={bgColor} />;
@@ -4058,6 +4280,9 @@ function App() {
   const [showEasterEgg, setShowEasterEgg] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [settings, setSettings] = useState<AppSettings>(() => loadSettings());
+  const [activeSideSection, setActiveSideSection] = useState<'apps'|'games'|null>(null);
+  const appsRef = useRef<HTMLDivElement>(null);
+  const gamesRef = useRef<HTMLDivElement>(null);
 
   // Apply theme on mount and when settings change
   useEffect(() => { applyTheme(settings); applyCloak(settings); }, [settings]);
@@ -4225,6 +4450,33 @@ function App() {
 
   // ── Games grid ──────────────────────────────────────────────────────────────
   if (page === 'games') {
+
+    // Split apps vs games
+    const APP_IDS = new Set(['suggestions','chat-bot','code-editor','doge','heilos','lucide','overcloaked','soundboard','vapor','voidproxy1']);
+    const appItems = games.filter(g => APP_IDS.has(g.id));
+
+    // Sort key: strip leading articles for alphabetical sort
+    const sortKey = (name: string) => name.toLowerCase().replace(/^(the |a |an )/i,'').replace(/[^a-z0-9]/g,'');
+
+    const gameItems = games
+      .filter(g => !APP_IDS.has(g.id))
+      .sort((a, b) => sortKey(a.name).localeCompare(sortKey(b.name)));
+
+    const filteredApps = gameSearch.trim()
+      ? appItems.filter(g => normalizeText(g.name).includes(normalizeText(gameSearch)))
+      : appItems;
+
+    const filteredGameItems = gameSearch.trim()
+      ? gameItems.filter(g => normalizeText(g.name).includes(normalizeText(gameSearch)))
+      : gameItems;
+
+    const scrollToSection = (ref: React.RefObject<HTMLDivElement>, section: 'apps'|'games') => {
+      if (!ref.current) return;
+      setActiveSideSection(section);
+      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => setActiveSideSection(null), 1100);
+    };
+
     return (
       <div style={{ position: 'relative', width: '100vw', height: '100vh', overflowY: 'scroll' }}>
         <ActiveBackground settings={settings} />
@@ -4239,11 +4491,10 @@ function App() {
         )}
 
         {/* Settings button — top left */}
-
         <button
           onClick={() => setShowSettings(true)}
           style={{
-            position: 'fixed', top: 12, left: 12, zIndex: 50,
+            position: 'fixed', top: 12, left: 56, zIndex: 50,
             display: 'flex', alignItems: 'center', gap: 5,
             padding: '6px 11px',
             background: 'rgba(255,255,255,0.07)',
@@ -4269,7 +4520,50 @@ function App() {
           Settings
         </button>
 
-        <div style={{ position: 'relative', zIndex: 1, padding: '24px 20px 24px 20px' }}>
+        {/* Left sidebar navigation */}
+        <div style={{
+          position: 'fixed',
+          left: 0,
+          top: '50%',
+          transform: 'translateY(-50%)',
+          zIndex: 50,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 4,
+          padding: '10px 6px',
+          background: 'rgba(0,0,0,0.35)',
+          backdropFilter: 'blur(10px)',
+          borderRight: '1px solid rgba(255,255,255,0.07)',
+          borderRadius: '0 10px 10px 0',
+        }}>
+          {([{ label: 'Apps', section: 'apps' as const, ref: appsRef }, { label: 'Games', section: 'games' as const, ref: gamesRef }]).map(item => (
+            <button
+              key={item.section}
+              onClick={() => scrollToSection(item.ref, item.section)}
+              style={{
+                background: activeSideSection === item.section ? 'rgba(99,102,241,0.25)' : 'transparent',
+                border: 'none',
+                borderRadius: 7,
+                color: activeSideSection === item.section ? '#a5b4fc' : '#9ca3af',
+                cursor: 'pointer',
+                fontSize: 10,
+                fontWeight: 600,
+                letterSpacing: '0.08em',
+                padding: '8px 6px',
+                textTransform: 'uppercase' as const,
+                transition: 'all 0.2s',
+                writingMode: 'vertical-rl' as const,
+                textOrientation: 'mixed' as const,
+              }}
+              onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.color = '#e5e7eb'; (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.08)'; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.color = activeSideSection === item.section ? '#a5b4fc' : '#9ca3af'; (e.currentTarget as HTMLButtonElement).style.background = activeSideSection === item.section ? 'rgba(99,102,241,0.25)' : 'transparent'; }}
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
+
+        <div style={{ position: 'relative', zIndex: 1, padding: '24px 20px 24px 44px' }}>
           {/* Sticky header — fades out as user scrolls */}
           <div style={{
             position: 'sticky', top: 0, zIndex: 10,
@@ -4304,52 +4598,162 @@ function App() {
             </div>
           </div>
 
-          {filteredGames.length === 0 ? (
+          {filteredApps.length === 0 && filteredGameItems.length === 0 ? (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', paddingTop: 80, textAlign: 'center' }}>
               <div style={{ fontSize: 40, marginBottom: 14 }}>🔍</div>
               <p style={{ color: '#9ca3af', fontSize: 18, fontWeight: 500 }}>No results found</p>
               <p style={{ color: '#4b5563', fontSize: 13, marginTop: 4 }}>Try a different search term</p>
             </div>
           ) : (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 14, maxWidth: 1400, margin: '0 auto', paddingBottom: 28 }}>
-              {filteredGames.map(game => (
-                <button
-                  key={game.id}
-                  className="games-card"
-                  onClick={() => playGame(game.id, game.url)}
-                  style={{
-                    background: 'rgba(255,255,255,0.03)',
-                    border: '1px solid rgba(255,255,255,0.08)',
-                    borderRadius: 12,
-                    padding: '18px 12px',
-                    cursor: 'pointer',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    gap: 8,
-                    transition: 'background 0.22s, border-color 0.22s, transform 0.22s, box-shadow 0.22s',
-                    backdropFilter: 'blur(6px)',
-                  }}
-                  onMouseEnter={e => {
-                    const el = e.currentTarget as HTMLButtonElement;
-                    el.style.background = 'rgba(255,255,255,0.08)';
-                    el.style.borderColor = `${settings.themeColor}99`;
-                    el.style.transform = 'scale(1.04)';
-                    el.style.boxShadow = `0 4px 20px ${settings.themeColor}33`;
-                  }}
-                  onMouseLeave={e => {
-                    const el = e.currentTarget as HTMLButtonElement;
-                    el.style.background = 'rgba(255,255,255,0.03)';
-                    el.style.borderColor = 'rgba(255,255,255,0.08)';
-                    el.style.transform = 'scale(1)';
-                    el.style.boxShadow = 'none';
-                  }}
-                >
-                  <div style={{ fontSize: 38 }}>{game.icon}</div>
-                  <span style={{ color: '#f3f4f6', fontSize: 12, fontWeight: 600, textAlign: 'center', lineHeight: 1.3 }}>{formatGameName(game.name)}</span>
-                </button>
-              ))}
-            </div>
+            <>
+              {/* ── APPS SECTION ── */}
+              {filteredApps.length > 0 && (
+                <div ref={appsRef} style={{ maxWidth: 1400, margin: '0 auto', marginBottom: 36 }}>
+                  {/* Section header with blur fade effect */}
+                  <div style={{
+                    position: 'relative',
+                    marginBottom: 18,
+                    paddingBottom: 8,
+                  }}>
+                    <div style={{
+                      position: 'absolute',
+                      inset: 0,
+                      pointerEvents: 'none',
+                      background: 'radial-gradient(ellipse at 50% 50%, transparent 40%, rgba(5,5,8,0.55) 100%)',
+                      filter: 'blur(6px)',
+                      zIndex: 0,
+                    }} />
+                    <span style={{
+                      display: 'inline-block',
+                      fontSize: 11,
+                      fontWeight: 700,
+                      letterSpacing: '0.2em',
+                      color: '#6b7280',
+                      textTransform: 'uppercase' as const,
+                      position: 'relative',
+                      zIndex: 1,
+                      padding: '3px 10px',
+                      borderLeft: '2px solid rgba(99,102,241,0.5)',
+                    }}>APPS</span>
+                  </div>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 14, paddingBottom: 8 }}>
+                    {filteredApps.map(game => (
+                      <button
+                        key={game.id}
+                        className="games-card"
+                        onClick={() => playGame(game.id, game.url)}
+                        style={{
+                          background: 'rgba(255,255,255,0.03)',
+                          border: '1px solid rgba(255,255,255,0.08)',
+                          borderRadius: 12,
+                          padding: '18px 12px',
+                          cursor: 'pointer',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          alignItems: 'center',
+                          gap: 8,
+                          transition: 'background 0.22s, border-color 0.22s, transform 0.22s, box-shadow 0.22s',
+                          backdropFilter: 'blur(6px)',
+                        }}
+                        onMouseEnter={e => {
+                          const el = e.currentTarget as HTMLButtonElement;
+                          el.style.background = 'rgba(255,255,255,0.08)';
+                          el.style.borderColor = `${settings.themeColor}99`;
+                          el.style.transform = 'scale(1.04)';
+                          el.style.boxShadow = `0 4px 20px ${settings.themeColor}33`;
+                        }}
+                        onMouseLeave={e => {
+                          const el = e.currentTarget as HTMLButtonElement;
+                          el.style.background = 'rgba(255,255,255,0.03)';
+                          el.style.borderColor = 'rgba(255,255,255,0.08)';
+                          el.style.transform = 'scale(1)';
+                          el.style.boxShadow = 'none';
+                        }}
+                      >
+                        <div style={{ fontSize: 38 }}>{game.icon}</div>
+                        <span style={{ color: '#f3f4f6', fontSize: 12, fontWeight: 600, textAlign: 'center', lineHeight: 1.3 }}>{formatGameName(game.name)}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* ── GAMES SECTION ── */}
+              {filteredGameItems.length > 0 && (
+                <div ref={gamesRef} style={{ maxWidth: 1400, margin: '0 auto' }}>
+                  {/* Section header with blur fade effect */}
+                  <div style={{
+                    position: 'relative',
+                    marginBottom: 18,
+                    paddingBottom: 8,
+                  }}>
+                    <div style={{
+                      position: 'absolute',
+                      inset: 0,
+                      pointerEvents: 'none',
+                      background: 'radial-gradient(ellipse at 50% 50%, transparent 40%, rgba(5,5,8,0.55) 100%)',
+                      filter: 'blur(6px)',
+                      zIndex: 0,
+                    }} />
+                    <span style={{
+                      display: 'inline-block',
+                      fontSize: 11,
+                      fontWeight: 700,
+                      letterSpacing: '0.2em',
+                      color: '#6b7280',
+                      textTransform: 'uppercase' as const,
+                      position: 'relative',
+                      zIndex: 1,
+                      padding: '3px 10px',
+                      borderLeft: '2px solid rgba(99,102,241,0.5)',
+                    }}>GAMES</span>
+                  </div>
+
+                  {/* A-Z vertical list */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 6, paddingBottom: 28 }}>
+                    {filteredGameItems.map(game => (
+                      <button
+                        key={game.id}
+                        className="games-card"
+                        onClick={() => playGame(game.id, game.url)}
+                        style={{
+                          background: 'rgba(255,255,255,0.03)',
+                          border: '1px solid rgba(255,255,255,0.08)',
+                          borderRadius: 10,
+                          padding: '12px 18px',
+                          cursor: 'pointer',
+                          display: 'flex',
+                          flexDirection: 'row',
+                          alignItems: 'center',
+                          gap: 14,
+                          transition: 'background 0.22s, border-color 0.22s, transform 0.18s, box-shadow 0.22s',
+                          backdropFilter: 'blur(6px)',
+                          textAlign: 'left',
+                          width: '100%',
+                        }}
+                        onMouseEnter={e => {
+                          const el = e.currentTarget as HTMLButtonElement;
+                          el.style.background = 'rgba(255,255,255,0.07)';
+                          el.style.borderColor = `${settings.themeColor}88`;
+                          el.style.transform = 'translateX(4px)';
+                          el.style.boxShadow = `0 2px 16px ${settings.themeColor}25`;
+                        }}
+                        onMouseLeave={e => {
+                          const el = e.currentTarget as HTMLButtonElement;
+                          el.style.background = 'rgba(255,255,255,0.03)';
+                          el.style.borderColor = 'rgba(255,255,255,0.08)';
+                          el.style.transform = 'translateX(0)';
+                          el.style.boxShadow = 'none';
+                        }}
+                      >
+                        <div style={{ fontSize: 22, flexShrink: 0, width: 28, textAlign: 'center' }}>{game.icon}</div>
+                        <span style={{ color: '#f3f4f6', fontSize: 13, fontWeight: 600, lineHeight: 1.3 }}>{formatGameName(game.name)}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </>
           )}
 
           <div style={{ textAlign: 'center', color: '#4b5563', fontSize: 12, paddingBottom: 28 }}>
