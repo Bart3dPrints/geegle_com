@@ -2817,6 +2817,12 @@ function applyTheme(settings: AppSettings) {
   const theme = settings.visualTheme;
   const bg = settings.bgThemeColor || '#0a0a12';
 
+  // Parse accent hex to rgb components for reliable rgba() usage
+  const cr = parseInt(c.slice(1,3)||'63',16);
+  const cg = parseInt(c.slice(3,5)||'66',16);
+  const cb = parseInt(c.slice(5,7)||'f1',16);
+  const ca = (a: number) => `rgba(${cr},${cg},${cb},${a})`;
+
   // Parse bg hex to rgba components
   const br = parseInt(bg.slice(1,3)||'0a',16);
   const bgG = parseInt(bg.slice(3,5)||'0a',16);
@@ -2824,7 +2830,7 @@ function applyTheme(settings: AppSettings) {
 
   // Base accent vars always present
   let css = `
-    :root { --accent: ${c}; --accent-soft: ${c}33; }
+    :root { --accent: ${c}; --accent-soft: ${ca(0.2)}; }
     .theme-accent { color: ${c} !important; }
     .theme-accent-bg { background: ${c} !important; }
     .theme-accent-border { border-color: ${c} !important; }
@@ -2842,19 +2848,19 @@ function applyTheme(settings: AppSettings) {
       }
       .games-card:hover {
         background: rgba(255,255,255,0.08) !important;
-        border-color: ${c}88 !important;
+        border-color: ${ca(0.55)} !important;
         transform: scale(1.04) !important;
-        box-shadow: 0 4px 24px ${c}30 !important;
+        box-shadow: 0 4px 24px ${ca(0.22)} !important;
       }
     `;
   } else if (theme === 'liquidglass') {
     css += `
       .games-card {
-        background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 60%, rgba(120,180,255,0.08) 100%) !important;
-        border: 1px solid rgba(255,255,255,0.22) !important;
+        background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 60%, ${ca(0.08)} 100%) !important;
+        border: 1px solid ${ca(0.35)} !important;
         border-radius: 18px !important;
         backdrop-filter: blur(20px) saturate(1.8) !important;
-        box-shadow: 0 2px 16px rgba(120,180,255,0.10), inset 0 1px 0 rgba(255,255,255,0.18) !important;
+        box-shadow: 0 2px 16px ${ca(0.15)}, inset 0 1px 0 rgba(255,255,255,0.18) !important;
         transition: all 0.28s cubic-bezier(0.4,0,0.2,1) !important;
         position: relative !important;
       }
@@ -2867,16 +2873,16 @@ function applyTheme(settings: AppSettings) {
         pointer-events: none !important;
       }
       .games-card:hover {
-        background: linear-gradient(135deg, rgba(255,255,255,0.20) 0%, rgba(180,220,255,0.12) 60%, rgba(120,180,255,0.16) 100%) !important;
-        border-color: rgba(255,255,255,0.45) !important;
+        background: linear-gradient(135deg, rgba(255,255,255,0.20) 0%, ${ca(0.18)} 60%, ${ca(0.25)} 100%) !important;
+        border-color: ${ca(0.7)} !important;
         transform: scale(1.05) translateY(-3px) !important;
-        box-shadow: 0 8px 32px rgba(120,180,255,0.25), 0 2px 8px rgba(255,255,255,0.12), inset 0 1px 0 rgba(255,255,255,0.3) !important;
+        box-shadow: 0 8px 32px ${ca(0.35)}, 0 2px 8px rgba(255,255,255,0.12), inset 0 1px 0 rgba(255,255,255,0.3) !important;
       }
     `;
   } else if (theme === 'claymorphism') {
     css += `
       .games-card {
-        background: linear-gradient(145deg, rgba(200,180,255,0.13) 0%, rgba(160,200,255,0.10) 50%, rgba(255,200,200,0.08) 100%) !important;
+        background: linear-gradient(145deg, ${ca(0.18)} 0%, ${ca(0.12)} 50%, ${ca(0.08)} 100%) !important;
         border: none !important;
         border-radius: 22px !important;
         backdrop-filter: blur(4px) !important;
@@ -2884,7 +2890,7 @@ function applyTheme(settings: AppSettings) {
         transition: all 0.25s ease !important;
       }
       .games-card:hover {
-        background: linear-gradient(145deg, rgba(200,180,255,0.20) 0%, rgba(160,200,255,0.16) 50%, rgba(255,200,200,0.14) 100%) !important;
+        background: linear-gradient(145deg, ${ca(0.35)} 0%, ${ca(0.28)} 50%, ${ca(0.20)} 100%) !important;
         transform: scale(0.97) translateY(2px) !important;
         box-shadow: 3px 3px 10px rgba(0,0,0,0.40), -2px -2px 6px rgba(255,255,255,0.05), inset 0 1px 2px rgba(255,255,255,0.08) !important;
       }
@@ -2923,7 +2929,7 @@ function applyTheme(settings: AppSettings) {
         transition: all 0.12s ease !important;
       }
       .games-card:hover {
-        background: ${c}22 !important;
+        background: ${ca(0.14)} !important;
         border-color: ${c} !important;
         transform: translate(-3px, -3px) !important;
         box-shadow: 7px 7px 0px ${c} !important;
@@ -2936,28 +2942,28 @@ function applyTheme(settings: AppSettings) {
         50%      { transform: translateY(-4px) rotateX(2deg); }
       }
       .games-card {
-        background: linear-gradient(160deg, rgba(99,102,241,0.18) 0%, rgba(59,130,246,0.10) 40%, rgba(139,92,246,0.14) 100%) !important;
-        border: 1px solid rgba(139,92,246,0.35) !important;
+        background: linear-gradient(160deg, ${ca(0.22)} 0%, ${ca(0.12)} 40%, ${ca(0.18)} 100%) !important;
+        border: 1px solid ${ca(0.45)} !important;
         border-radius: 16px !important;
         backdrop-filter: blur(10px) !important;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.45), 0 2px 6px rgba(139,92,246,0.20), inset 0 1px 0 rgba(255,255,255,0.08) !important;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.45), 0 2px 6px ${ca(0.25)}, inset 0 1px 0 rgba(255,255,255,0.08) !important;
         animation: float3d 5s ease-in-out infinite !important;
         transition: transform 0.25s ease, box-shadow 0.25s ease !important;
         perspective: 600px !important;
       }
       .games-card:hover {
-        background: linear-gradient(160deg, rgba(99,102,241,0.30) 0%, rgba(59,130,246,0.20) 40%, rgba(139,92,246,0.26) 100%) !important;
-        border-color: rgba(139,92,246,0.65) !important;
+        background: linear-gradient(160deg, ${ca(0.40)} 0%, ${ca(0.28)} 40%, ${ca(0.34)} 100%) !important;
+        border-color: ${ca(0.75)} !important;
         transform: scale(1.06) rotateX(4deg) rotateY(-4deg) translateY(-6px) !important;
-        box-shadow: 0 18px 40px rgba(0,0,0,0.55), 0 4px 16px rgba(139,92,246,0.40), inset 0 1px 0 rgba(255,255,255,0.14) !important;
+        box-shadow: 0 18px 40px rgba(0,0,0,0.55), 0 4px 16px ${ca(0.50)}, inset 0 1px 0 rgba(255,255,255,0.14) !important;
         animation: none !important;
       }
     `;
   } else if (theme === 'dynamic') {
     css += `
       @keyframes dynamic-pulse {
-        0%,100% { box-shadow: 0 0 8px ${c}40, 0 2px 14px rgba(0,0,0,0.4); border-color: ${c}50; }
-        50%      { box-shadow: 0 0 16px ${c}60, 0 2px 18px rgba(0,0,0,0.4); border-color: ${c}80; }
+        0%,100% { box-shadow: 0 0 8px ${ca(0.25)}, 0 2px 14px rgba(0,0,0,0.4); border-color: ${ca(0.35)}; }
+        50%      { box-shadow: 0 0 16px ${ca(0.45)}, 0 2px 18px rgba(0,0,0,0.4); border-color: ${ca(0.6)}; }
       }
       @keyframes dynamic-shimmer {
         0%   { background-position: 200% center; }
@@ -2967,17 +2973,17 @@ function applyTheme(settings: AppSettings) {
         background: linear-gradient(270deg, rgba(255,255,255,0.04), rgba(255,255,255,0.08), rgba(255,255,255,0.04)) !important;
         background-size: 400% 400% !important;
         animation: dynamic-shimmer 4s linear infinite, dynamic-pulse 3s ease-in-out infinite !important;
-        border: 1px solid ${c}50 !important;
+        border: 1px solid ${ca(0.35)} !important;
         border-radius: 14px !important;
         backdrop-filter: blur(8px) !important;
         transition: transform 0.2s ease !important;
       }
       .games-card:hover {
-        background: linear-gradient(270deg, ${c}18, ${c}28, ${c}18) !important;
+        background: linear-gradient(270deg, ${ca(0.12)}, ${ca(0.22)}, ${ca(0.12)}) !important;
         background-size: 400% 400% !important;
-        border-color: ${c}cc !important;
+        border-color: ${ca(0.85)} !important;
         transform: scale(1.04) !important;
-        box-shadow: 0 0 24px ${c}50, 0 4px 20px rgba(0,0,0,0.5) !important;
+        box-shadow: 0 0 24px ${ca(0.40)}, 0 4px 20px rgba(0,0,0,0.5) !important;
         animation: dynamic-shimmer 1.5s linear infinite !important;
       }
     `;
@@ -3247,7 +3253,7 @@ function SettingsModal({ onClose, settings, onChange }: {
     { id: 'default', label: 'Default', desc: 'Classic dark UI — exactly as designed', preview: '🎮' },
     { id: 'liquidglass', label: 'Liquid Glass', desc: 'Transparent layered panels with blur & refraction', preview: '💧' },
     { id: 'claymorphism', label: 'Claymorphism', desc: 'Soft 3D rounded clay shapes with depth', preview: '🫧' },
-    { id: 'aurora', label: 'Aurora', desc: 'Smooth aurora borealis gradient backgrounds', preview: '🌌' },
+    { id: 'aurora', label: 'Aurora', desc: 'Note: You cannot choose color for this selection', preview: '🌌' },
     { id: 'neubrutalism', label: 'Neubrutalism', desc: 'Bold outlines, sharp contrast, raw structure', preview: '⬛' },
     { id: 'abstract3d', label: '3D Abstract', desc: 'Metallic reflective textures, dreamlike depth', preview: '🔮' },
     { id: 'dynamic', label: 'Dynamic Live', desc: 'UI reacts to mouse — elements shift and glow', preview: '✨' },
@@ -3290,6 +3296,12 @@ function SettingsModal({ onClose, settings, onChange }: {
           <div style={{ flex: 1, padding: '20px 24px', overflowY: 'auto' }}>
             {tab === 'theme' && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+                {local.visualTheme === 'aurora' ? (
+                  <div style={{ background: 'rgba(80,20,120,0.15)', border: '1px solid rgba(120,40,200,0.35)', borderRadius: 12, padding: '14px 18px', display: 'flex', alignItems: 'center', gap: 10 }}>
+                    <span style={{ fontSize: 20 }}>🌌</span>
+                    <p style={{ color: '#c084fc', fontSize: 13, margin: 0 }}>Color selection is not available for Aurora — the theme uses its own built-in gradient colors.</p>
+                  </div>
+                ) : (
                 <div>
                   <label style={{ color: '#d1d5db', fontSize: 13, fontWeight: 600, display: 'block', marginBottom: 10, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Accent Color</label>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
@@ -3362,6 +3374,7 @@ function SettingsModal({ onClose, settings, onChange }: {
                     </div>
                   </div>
                 </div>
+                )}
                 <div>
                   <label style={{ color: '#d1d5db', fontSize: 13, fontWeight: 600, display: 'block', marginBottom: 10, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Visual Theme</label>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
