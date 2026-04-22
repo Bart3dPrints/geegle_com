@@ -2834,14 +2834,14 @@ function applyTheme(settings: AppSettings) {
   if (!theme || theme === 'default') {
     css += `
       .games-card {
-        background: rgba(255,255,255,0.035) !important;
+        background: rgba(255,255,255,0.055) !important;
         border: 1px solid rgba(255,255,255,0.09) !important;
         border-radius: 14px !important;
         backdrop-filter: blur(5px) !important;
         transition: background 0.22s, border-color 0.22s, transform 0.22s, box-shadow 0.22s !important;
       }
       .games-card:hover {
-        background: rgba(255,255,255,0.08) !important;
+        background: rgba(255,255,255,0.10) !important;
         border-color: ${c}88 !important;
         transform: scale(1.04) !important;
         box-shadow: 0 4px 24px ${c}30 !important;
@@ -2850,11 +2850,11 @@ function applyTheme(settings: AppSettings) {
   } else if (theme === 'liquidglass') {
     css += `
       .games-card {
-        background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 60%, rgba(120,180,255,0.08) 100%) !important;
-        border: 1px solid rgba(255,255,255,0.22) !important;
+        background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, ${c}0d 60%, ${c}15 100%) !important;
+        border: 1px solid ${c}55 !important;
         border-radius: 18px !important;
         backdrop-filter: blur(16px) saturate(1.8) !important;
-        box-shadow: 0 2px 16px rgba(120,180,255,0.10), inset 0 1px 0 rgba(255,255,255,0.18) !important;
+        box-shadow: 0 2px 16px ${c}22, inset 0 1px 0 rgba(255,255,255,0.15) !important;
         transition: all 0.28s cubic-bezier(0.4,0,0.2,1) !important;
         position: relative !important;
       }
@@ -2863,52 +2863,52 @@ function applyTheme(settings: AppSettings) {
         position: absolute !important;
         inset: 0 !important;
         border-radius: 18px !important;
-        background: linear-gradient(120deg, rgba(255,255,255,0.15) 0%, transparent 50%) !important;
+        background: linear-gradient(120deg, ${c}20 0%, transparent 50%) !important;
         pointer-events: none !important;
       }
       .games-card:hover {
-        background: linear-gradient(135deg, rgba(255,255,255,0.20) 0%, rgba(180,220,255,0.12) 60%, rgba(120,180,255,0.16) 100%) !important;
-        border-color: rgba(255,255,255,0.45) !important;
+        background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, ${c}22 60%, ${c}33 100%) !important;
+        border-color: ${c}99 !important;
         transform: scale(1.05) translateY(-3px) !important;
-        box-shadow: 0 8px 32px rgba(120,180,255,0.25), 0 2px 8px rgba(255,255,255,0.12), inset 0 1px 0 rgba(255,255,255,0.3) !important;
+        box-shadow: 0 8px 32px ${c}44, 0 2px 8px rgba(255,255,255,0.10), inset 0 1px 0 ${c}55 !important;
       }
     `;
   } else if (theme === 'claymorphism') {
     css += `
       .games-card {
-        background: linear-gradient(145deg, rgba(200,180,255,0.13) 0%, rgba(160,200,255,0.10) 50%, rgba(255,200,200,0.08) 100%) !important;
+        background: linear-gradient(145deg, ${c}22 0%, ${c}15 50%, rgba(255,255,255,0.05) 100%) !important;
         border: none !important;
         border-radius: 22px !important;
         backdrop-filter: blur(4px) !important;
-        box-shadow: 6px 6px 18px rgba(0,0,0,0.35), -3px -3px 10px rgba(255,255,255,0.06), inset 0 1px 2px rgba(255,255,255,0.10) !important;
+        box-shadow: 6px 6px 18px rgba(0,0,0,0.35), -2px -2px 8px ${c}15, inset 0 1px 2px rgba(255,255,255,0.10) !important;
         transition: all 0.25s ease !important;
       }
       .games-card:hover {
-        background: linear-gradient(145deg, rgba(200,180,255,0.20) 0%, rgba(160,200,255,0.16) 50%, rgba(255,200,200,0.14) 100%) !important;
+        background: linear-gradient(145deg, ${c}33 0%, ${c}22 50%, rgba(255,255,255,0.08) 100%) !important;
         transform: scale(0.97) translateY(2px) !important;
-        box-shadow: 3px 3px 10px rgba(0,0,0,0.40), -2px -2px 6px rgba(255,255,255,0.05), inset 0 1px 2px rgba(255,255,255,0.08) !important;
+        box-shadow: 3px 3px 10px rgba(0,0,0,0.40), -1px -1px 5px ${c}25, inset 0 1px 2px rgba(255,255,255,0.08) !important;
       }
     `;
   } else if (theme === 'aurora') {
     css += `
       @keyframes aurora-card-glow {
-        0%   { box-shadow: 0 0 12px rgba(120,40,200,0.35), 0 2px 20px rgba(40,160,200,0.20); border-color: rgba(120,40,200,0.4); }
-        50%  { box-shadow: 0 0 18px rgba(40,200,160,0.40), 0 2px 24px rgba(80,40,220,0.25); border-color: rgba(40,200,160,0.5); }
-        100% { box-shadow: 0 0 12px rgba(120,40,200,0.35), 0 2px 20px rgba(40,160,200,0.20); border-color: rgba(120,40,200,0.4); }
+        0%   { box-shadow: 0 0 12px ${c}55, 0 2px 20px ${c}30; border-color: ${c}66; }
+        50%  { box-shadow: 0 0 20px ${c}77, 0 2px 28px ${c}44; border-color: ${c}99; }
+        100% { box-shadow: 0 0 12px ${c}55, 0 2px 20px ${c}30; border-color: ${c}66; }
       }
       .games-card {
-        background: linear-gradient(135deg, rgba(40,10,60,0.7) 0%, rgba(10,30,60,0.65) 50%, rgba(10,50,40,0.6) 100%) !important;
-        border: 1px solid rgba(120,40,200,0.4) !important;
+        background: linear-gradient(135deg, ${c}18 0%, ${c}10 50%, rgba(10,40,50,0.55) 100%) !important;
+        border: 1px solid ${c}66 !important;
         border-radius: 16px !important;
         backdrop-filter: blur(10px) !important;
         animation: aurora-card-glow 4s ease-in-out infinite !important;
         transition: transform 0.25s ease, background 0.25s ease !important;
       }
       .games-card:hover {
-        background: linear-gradient(135deg, rgba(80,20,120,0.8) 0%, rgba(20,60,120,0.75) 50%, rgba(20,100,80,0.7) 100%) !important;
+        background: linear-gradient(135deg, ${c}33 0%, ${c}22 50%, rgba(10,40,50,0.65) 100%) !important;
         transform: scale(1.05) translateY(-4px) !important;
-        box-shadow: 0 0 28px rgba(80,200,160,0.5), 0 4px 28px rgba(120,40,220,0.4) !important;
-        border-color: rgba(80,220,160,0.7) !important;
+        box-shadow: 0 0 32px ${c}77, 0 4px 28px ${c}55 !important;
+        border-color: ${c}cc !important;
         animation: none !important;
       }
     `;
@@ -2936,20 +2936,20 @@ function applyTheme(settings: AppSettings) {
         50%      { transform: translateY(-4px) rotateX(2deg); }
       }
       .games-card {
-        background: linear-gradient(160deg, rgba(99,102,241,0.18) 0%, rgba(59,130,246,0.10) 40%, rgba(139,92,246,0.14) 100%) !important;
-        border: 1px solid rgba(139,92,246,0.35) !important;
+        background: linear-gradient(160deg, ${c}2e 0%, ${c}1a 40%, ${c}22 100%) !important;
+        border: 1px solid ${c}55 !important;
         border-radius: 16px !important;
         backdrop-filter: blur(10px) !important;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.45), 0 2px 6px rgba(139,92,246,0.20), inset 0 1px 0 rgba(255,255,255,0.08) !important;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.45), 0 2px 6px ${c}33, inset 0 1px 0 ${c}22 !important;
         animation: float3d 5s ease-in-out infinite !important;
         transition: transform 0.25s ease, box-shadow 0.25s ease !important;
         perspective: 600px !important;
       }
       .games-card:hover {
-        background: linear-gradient(160deg, rgba(99,102,241,0.30) 0%, rgba(59,130,246,0.20) 40%, rgba(139,92,246,0.26) 100%) !important;
-        border-color: rgba(139,92,246,0.65) !important;
+        background: linear-gradient(160deg, ${c}44 0%, ${c}33 40%, ${c}3a 100%) !important;
+        border-color: ${c}99 !important;
         transform: scale(1.06) rotateX(4deg) rotateY(-4deg) translateY(-6px) !important;
-        box-shadow: 0 18px 40px rgba(0,0,0,0.55), 0 4px 16px rgba(139,92,246,0.40), inset 0 1px 0 rgba(255,255,255,0.14) !important;
+        box-shadow: 0 18px 40px rgba(0,0,0,0.55), 0 4px 16px ${c}55, inset 0 1px 0 ${c}33 !important;
         animation: none !important;
       }
     `;
@@ -3239,8 +3239,10 @@ function SettingsModal({ onClose, settings, onChange }: {
       onClick={e => { if (e.target === e.currentTarget) handleClose(); }}>
       <div style={{
         background: '#0f1117', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 20,
-        width: '90%', maxWidth: 680, maxHeight: '85vh', display: 'flex', flexDirection: 'column',
+        width: 680, height: 560,
+        display: 'flex', flexDirection: 'column',
         overflow: 'hidden', boxShadow: '0 32px 80px rgba(0,0,0,0.6)',
+        flexShrink: 0,
         transform: visible ? 'scale(1) translateY(0)' : 'scale(0.95) translateY(12px)',
         opacity: visible ? 1 : 0,
         transition: 'transform 0.22s cubic-bezier(0.34,1.56,0.64,1), opacity 0.2s ease',
@@ -3253,7 +3255,7 @@ function SettingsModal({ onClose, settings, onChange }: {
           </button>
         </div>
         {/* Body */}
-        <div style={{ display: 'flex', flex: 1, overflow: 'hidden', minHeight: 0 }}>
+        <div style={{ display: 'flex', flex: '1 1 0', overflow: 'hidden', minHeight: 0 }}>
           {/* Sidebar */}
           <div style={{ width: 148, borderRight: '1px solid rgba(255,255,255,0.08)', padding: '16px 10px', flexShrink: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
             {(['theme', 'background', 'panic', 'cloak'] as const).map(t => (
@@ -3264,7 +3266,7 @@ function SettingsModal({ onClose, settings, onChange }: {
             ))}
           </div>
           {/* Content */}
-          <div style={{ flex: 1, padding: '20px 24px', overflowY: 'auto' }}>
+          <div style={{ flex: '1 1 0', padding: '20px 24px', overflowY: 'auto', minHeight: 0 }}>
             {tab === 'theme' && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                 <div>
@@ -4508,7 +4510,9 @@ function App() {
       if (!container) return;
       const containerTop = container.getBoundingClientRect().top;
       const refTop = ref.getBoundingClientRect().top;
-      const scrollOffset = container.scrollTop + (refTop - containerTop) - 60; // 60px for sticky header
+      // Header is sticky at top:0, occupies ~152px (paddingTop:20 + h1:~38 + button:~32 + search:~40 + paddingBottom:44 - fadeout), add 16px breathing room
+      const HEADER_OFFSET = 168;
+      const scrollOffset = container.scrollTop + (refTop - containerTop) - HEADER_OFFSET;
       smoothScrollTo(scrollOffset, 1000);
       setTimeout(() => setActiveSideSection(null), 1200);
     };
@@ -4519,7 +4523,7 @@ function App() {
         className="games-card"
         onClick={() => playGame(game.id, game.url)}
         style={{
-          background: 'rgba(255,255,255,0.035)',
+          background: 'rgba(255,255,255,0.055)',
           border: '1px solid rgba(255,255,255,0.09)',
           borderRadius: 14,
           padding: '18px 12px',
@@ -4535,14 +4539,14 @@ function App() {
         }}
         onMouseEnter={e => {
           const el = e.currentTarget as HTMLButtonElement;
-          el.style.background = 'rgba(255,255,255,0.08)';
+          el.style.background = 'rgba(255,255,255,0.10)';
           el.style.borderColor = `${settings.themeColor}99`;
           el.style.transform = 'scale(1.04) translateY(-2px)';
           el.style.boxShadow = `0 6px 24px ${settings.themeColor}33`;
         }}
         onMouseLeave={e => {
           const el = e.currentTarget as HTMLButtonElement;
-          el.style.background = 'rgba(255,255,255,0.035)';
+          el.style.background = 'rgba(255,255,255,0.055)';
           el.style.borderColor = 'rgba(255,255,255,0.09)';
           el.style.transform = 'scale(1) translateY(0)';
           el.style.boxShadow = 'none';
@@ -4758,19 +4762,50 @@ function App() {
             >
               Back to Search
             </button>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '7px 14px', background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 9999, maxWidth: 360, margin: '0 auto' }}>
-              <Search size={14} color="#6b7280" style={{ flexShrink: 0 }} />
-              <input
-                type="text"
-                value={gameSearchDisplay}
-                onChange={handleGameSearchChange}
-                onKeyDown={e => { if (e.key === 'Backspace') e.stopPropagation(); }}
-                placeholder="Search games..."
-                style={{ flex: 1, outline: 'none', background: 'transparent', color: '#f3f4f6', fontSize: 13, border: 'none' }}
-              />
-              {gameSearchDisplay && (
-                <button onClick={() => { setGameSearchDisplay(''); setGameSearch(''); }} style={{ background: 'none', border: 'none', color: '#6b7280', fontSize: 16, cursor: 'pointer', lineHeight: 1 }}>×</button>
-              )}
+            <div style={{ display: 'flex', alignItems: 'center', background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 9999, maxWidth: 360, margin: '0 auto', overflow: 'hidden', height: 36 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '0 14px', flex: 1 }}>
+                <Search size={14} color="#6b7280" style={{ flexShrink: 0 }} />
+                <input
+                  type="text"
+                  value={gameSearchDisplay}
+                  onChange={handleGameSearchChange}
+                  onKeyDown={e => { if (e.key === 'Backspace') e.stopPropagation(); }}
+                  placeholder="Search games..."
+                  style={{ flex: 1, outline: 'none', background: 'transparent', color: '#f3f4f6', fontSize: 13, border: 'none' }}
+                />
+              </div>
+              <div style={{
+                width: gameSearchDisplay ? 48 : 0,
+                overflow: 'hidden',
+                transition: 'width 0.5s cubic-bezier(0.4,0,0.2,1)',
+                flexShrink: 0,
+                height: '100%',
+              }}>
+                <button
+                  onClick={() => { setGameSearchDisplay(''); setGameSearch(''); }}
+                  style={{
+                    width: 48,
+                    height: '100%',
+                    background: 'rgba(239,68,68,0.18)',
+                    border: 'none',
+                    borderLeft: '1px solid rgba(239,68,68,0.25)',
+                    color: '#f87171',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: 16,
+                    fontWeight: 700,
+                    transition: 'background 0.15s',
+                    flexShrink: 0,
+                  }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(239,68,68,0.35)'; }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(239,68,68,0.18)'; }}
+                  aria-label="Clear search"
+                >
+                  <X size={15} strokeWidth={2.5} />
+                </button>
+              </div>
             </div>
           </div>
 
@@ -4789,7 +4824,7 @@ function App() {
                 {filteredApps.length > 0 && (
                   <div
                     ref={appsRef}
-                    style={{ marginBottom: 36, scrollMarginTop: 60 }}
+                    style={{ marginBottom: 36, scrollMarginTop: 168 }}
                   >
                     <SectionHeader label="Apps" />
                     <div style={{
@@ -4807,7 +4842,7 @@ function App() {
                   <div
                     key={letter}
                     ref={el => { letterRefs.current[letter] = el; }}
-                    style={{ marginBottom: 32, scrollMarginTop: 60 }}
+                    style={{ marginBottom: 32, scrollMarginTop: 168 }}
                   >
                     <SectionHeader label={letter} />
                     <div style={{
