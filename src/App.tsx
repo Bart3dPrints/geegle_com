@@ -2984,87 +2984,9 @@ function applyTheme(settings: AppSettings) {
   }
 
   // NOTE: Background themes affect ONLY the body/canvas background (when using interactive mode).
-
-  if (theme === 'default' || !theme) {
-    css += `
-      body { background: rgb(${br},${bgG},${bb}) !important; }
-    `;
-  } else if (theme === 'liquidglass') {
-    css += `
-      body {
-        background:
-          radial-gradient(ellipse at 30% 20%, rgba(99,102,241,0.18) 0%, transparent 55%),
-          radial-gradient(ellipse at 75% 70%, rgba(236,72,153,0.14) 0%, transparent 55%),
-          radial-gradient(ellipse at 55% 45%, rgba(16,185,129,0.08) 0%, transparent 50%),
-          linear-gradient(160deg, rgb(${br},${bgG},${bb}) 0%, rgba(${br+12},${bgG+12},${bb+30},1) 40%, rgb(${br+4},${bgG+4},${bb+10}) 100%) !important;
-        background-attachment: fixed !important;
-      }
-    `;
-  } else if (theme === 'claymorphism') {
-    css += `
-      body {
-        background:
-          radial-gradient(ellipse at 15% 85%, rgba(168,85,247,0.2) 0%, transparent 50%),
-          radial-gradient(ellipse at 85% 15%, rgba(249,168,212,0.15) 0%, transparent 50%),
-          linear-gradient(145deg, rgb(${br},${bgG},${bb}) 0%, rgba(${br+12},${bgG+12},${bb+28},1) 45%, rgb(${br+4},${bgG+4},${bb+12}) 100%) !important;
-        background-attachment: fixed !important;
-      }
-    `;
-  } else if (theme === 'aurora') {
-    css += `
-      body {
-        background: linear-gradient(180deg, rgb(${br},${bgG},${bb}) 0%, rgba(${br+6},${bgG+10},${bb+18},1) 60%, rgb(${br},${bgG},${bb}) 100%) !important;
-        background-attachment: fixed !important;
-      }
-      body::before {
-        content: '';
-        position: fixed; inset: 0; z-index: 0; pointer-events: none;
-        background:
-          radial-gradient(ellipse at 20% 50%, rgba(120,40,200,0.28) 0%, transparent 60%),
-          radial-gradient(ellipse at 80% 20%, rgba(40,160,200,0.22) 0%, transparent 60%),
-          radial-gradient(ellipse at 60% 80%, rgba(80,200,120,0.18) 0%, transparent 60%),
-          radial-gradient(ellipse at 50% 10%, rgba(200,80,120,0.15) 0%, transparent 50%);
-        animation: aurora-shift 8s ease-in-out infinite alternate;
-      }
-      @keyframes aurora-shift {
-        0%   { opacity: 0.6; transform: scale(1) translateY(0); }
-        50%  { opacity: 0.9; transform: scale(1.03) translateY(-6px); }
-        100% { opacity: 1;   transform: scale(1.06) translateY(-12px); }
-      }
-    `;
-  } else if (theme === 'neubrutalism') {
-    css += `
-      body {
-        background:
-          repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.025) 39px, rgba(255,255,255,0.025) 40px),
-          repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.015) 39px, rgba(255,255,255,0.015) 40px),
-          rgb(${br},${bgG},${bb}) !important;
-        background-attachment: fixed !important;
-      }
-    `;
-  } else if (theme === 'abstract3d') {
-    css += `
-      body {
-        background:
-          repeating-conic-gradient(from 0deg at 50% 50%, rgba(99,102,241,0.04) 0deg 30deg, transparent 30deg 60deg),
-          radial-gradient(ellipse at 40% 60%, rgba(139,92,246,0.2) 0%, transparent 55%),
-          radial-gradient(ellipse at 70% 30%, rgba(59,130,246,0.15) 0%, transparent 50%),
-          linear-gradient(135deg, rgb(${br},${bgG},${bb}) 0%, rgba(${br+12},${bgG+12},${bb+26},1) 50%, rgb(${br+2},${bgG+4},${bb+10}) 100%) !important;
-        background-attachment: fixed !important;
-      }
-    `;
-  } else if (theme === 'dynamic') {
-    css += `
-      body {
-        background:
-          radial-gradient(ellipse at 50% 50%, rgba(${br+40},${bgG+40},${bb+80},0.2) 0%, transparent 65%),
-          radial-gradient(ellipse at 80% 80%, rgba(${br+60},${bgG+20},${bb+20},0.12) 0%, transparent 50%),
-          radial-gradient(ellipse at 20% 20%, rgba(${br+20},${bgG+50},${bb+80},0.12) 0%, transparent 50%),
-          linear-gradient(135deg, rgb(${br},${bgG},${bb}) 0%, rgba(${br+10},${bgG+10},${bb+16},1) 50%, rgb(${br},${bgG},${bb}) 100%) !important;
-        background-attachment: fixed !important;
-      }
-    `;
-  }
+  // Body background is NOT set here — the home page uses its own bg-gray-900 class,
+  // and the games page uses the ActiveBackground canvas component.
+  // Removing body rules entirely prevents the visual theme from bleeding into the home page.
 
   style.textContent = css;
   document.head.appendChild(style);
@@ -3269,6 +3191,29 @@ function SettingsModal({ onClose, settings, onChange }: {
     const l = sliderToLightness(v);
     const hex = hslToHex(h, s, l);
     update({ themeColor: hex });
+  };
+
+  // ── Background color shade slider ────────────────────────────────────────────
+  const [bgShadeSlider, setBgShadeSlider] = useState(() => lightnessToSlider(getLightness(settings.bgThemeColor || '#0a0a12')));
+  const [bgBaseHueSat, setBgBaseHueSat] = useState<[number, number]>(() => {
+    const [h, s] = hexToHsl(settings.bgThemeColor || '#0a0a12');
+    return [h, Math.max(s, 5)]; // bg colors are very dark/desaturated, keep low sat
+  });
+
+  const pickBgColor = (hex: string) => {
+    if (!/^#[0-9a-fA-F]{6}$/.test(hex)) { update({ bgThemeColor: hex }); return; }
+    const [h, s, l] = hexToHsl(hex);
+    setBgBaseHueSat([h, Math.max(s, 5)]);
+    setBgShadeSlider(lightnessToSlider(l));
+    update({ bgThemeColor: hex });
+  };
+
+  const onBgShadeSlider = (v: number) => {
+    setBgShadeSlider(v);
+    const [h, s] = bgBaseHueSat;
+    const l = sliderToLightness(v);
+    const hex = hslToHex(h, s, l);
+    update({ bgThemeColor: hex });
   };
 
   // Animate in on mount
@@ -3492,19 +3437,54 @@ function SettingsModal({ onClose, settings, onChange }: {
                       </select>
                       <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                         <input type="color" value={local.bgThemeColor || '#0a0a12'}
-                          onChange={e => update({ bgThemeColor: e.target.value })}
+                          onChange={e => pickBgColor(e.target.value)}
                           style={{ width: 40, height: 36, border: '2px solid rgba(255,255,255,0.15)', borderRadius: 8, cursor: 'pointer', background: 'none', padding: 2 }} />
                         <input type="text" value={local.bgThemeColor || '#0a0a12'}
-                          onChange={e => { if (/^#[0-9a-fA-F]{0,6}$/.test(e.target.value)) update({ bgThemeColor: e.target.value }); }}
+                          onChange={e => { if (/^#[0-9a-fA-F]{0,6}$/.test(e.target.value)) pickBgColor(e.target.value); }}
                           placeholder="#0a0a12"
                           style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 8, color: '#f3f4f6', fontSize: 13, padding: '7px 10px', width: 90, outline: 'none' }} />
                         <span style={{ color: '#6b7280', fontSize: 11 }}>Custom hex</span>
                       </div>
                       <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
                         {['#0a0a12','#111418','#0d1220','#060c1a','#081414','#0a0818','#0e1014','#100812','#060e08','#040e12','#100608','#0c1008'].map(col => (
-                          <button key={col} onClick={() => update({ bgThemeColor: col })}
+                          <button key={col} onClick={() => pickBgColor(col)}
                             style={{ width: 22, height: 22, borderRadius: '50%', background: col, border: (local.bgThemeColor||'#0a0a12')===col?'2px solid white':'2px solid rgba(255,255,255,0.2)', cursor: 'pointer' }} />
                         ))}
+                      </div>
+                      {/* ── Background shade slider ── */}
+                      <div style={{ marginTop: 4 }}>
+                        <label style={{ color: '#9ca3af', fontSize: 11, fontWeight: 600, display: 'block', marginBottom: 7, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Color Shade</label>
+                        <div style={{ position: 'relative' }}>
+                          <div style={{
+                            height: 18, borderRadius: 9,
+                            border: '1.5px solid rgba(160,160,160,0.45)',
+                            background: (() => {
+                              const [h, s] = bgBaseHueSat;
+                              const midColor = hslToHex(h, s, 50);
+                              return `linear-gradient(to right, #000000, ${midColor}, #ffffff)`;
+                            })(),
+                            cursor: 'pointer', boxSizing: 'border-box' as const,
+                          }} />
+                          <input
+                            type="range" min={0} max={100} value={bgShadeSlider}
+                            onChange={e => onBgShadeSlider(Number(e.target.value))}
+                            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0, cursor: 'pointer', margin: 0, padding: 0 }}
+                          />
+                          <div style={{
+                            position: 'absolute', top: '50%',
+                            left: `calc(${bgShadeSlider}% - 9px)`,
+                            transform: 'translateY(-50%)',
+                            width: 18, height: 18, borderRadius: '50%',
+                            background: local.bgThemeColor || '#0a0a12',
+                            border: '2.5px solid rgba(255,255,255,0.9)',
+                            boxShadow: '0 1px 6px rgba(0,0,0,0.55)',
+                            pointerEvents: 'none', transition: 'left 0.04s',
+                          }} />
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 4 }}>
+                          <span style={{ color: '#6b7280', fontSize: 10 }}>Dark</span>
+                          <span style={{ color: '#6b7280', fontSize: 10 }}>Light</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -3548,7 +3528,7 @@ function SettingsModal({ onClose, settings, onChange }: {
                 {/* Solid color options — fade in/out */}
                 <div style={{
                   overflow: 'hidden',
-                  maxHeight: local.backgroundMode === 'solid' ? '400px' : '0px',
+                  maxHeight: local.backgroundMode === 'solid' ? '600px' : '0px',
                   opacity: local.backgroundMode === 'solid' ? 1 : 0,
                   transition: 'max-height 0.3s ease, opacity 0.3s ease',
                   display: 'flex', flexDirection: 'column', gap: 12,
@@ -3576,19 +3556,54 @@ function SettingsModal({ onClose, settings, onChange }: {
                     </select>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                       <input type="color" value={local.bgThemeColor || '#0a0a12'}
-                        onChange={e => update({ bgThemeColor: e.target.value })}
+                        onChange={e => pickBgColor(e.target.value)}
                         style={{ width: 40, height: 36, border: '2px solid rgba(255,255,255,0.15)', borderRadius: 8, cursor: 'pointer', background: 'none', padding: 2 }} />
                       <input type="text" value={local.bgThemeColor || '#0a0a12'}
-                        onChange={e => { if (/^#[0-9a-fA-F]{0,6}$/.test(e.target.value)) update({ bgThemeColor: e.target.value }); }}
+                        onChange={e => { if (/^#[0-9a-fA-F]{0,6}$/.test(e.target.value)) pickBgColor(e.target.value); }}
                         placeholder="#0a0a12"
                         style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 8, color: '#f3f4f6', fontSize: 13, padding: '7px 10px', width: 90, outline: 'none' }} />
                       <span style={{ color: '#6b7280', fontSize: 11 }}>Custom hex</span>
                     </div>
                     <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
                       {['#0a0a12','#111418','#0d1220','#060c1a','#081414','#0a0818','#0e1014','#100812','#060e08','#040e12','#100608','#0c1008'].map(col => (
-                        <button key={col} onClick={() => update({ bgThemeColor: col })}
+                        <button key={col} onClick={() => pickBgColor(col)}
                           style={{ width: 22, height: 22, borderRadius: '50%', background: col, border: (local.bgThemeColor||'#0a0a12')===col?'2px solid white':'2px solid rgba(255,255,255,0.2)', cursor: 'pointer' }} />
                       ))}
+                    </div>
+                    {/* ── Background shade slider ── */}
+                    <div style={{ marginTop: 4 }}>
+                      <label style={{ color: '#9ca3af', fontSize: 11, fontWeight: 600, display: 'block', marginBottom: 7, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Color Shade</label>
+                      <div style={{ position: 'relative' }}>
+                        <div style={{
+                          height: 18, borderRadius: 9,
+                          border: '1.5px solid rgba(160,160,160,0.45)',
+                          background: (() => {
+                            const [h, s] = bgBaseHueSat;
+                            const midColor = hslToHex(h, s, 50);
+                            return `linear-gradient(to right, #000000, ${midColor}, #ffffff)`;
+                          })(),
+                          cursor: 'pointer', boxSizing: 'border-box' as const,
+                        }} />
+                        <input
+                          type="range" min={0} max={100} value={bgShadeSlider}
+                          onChange={e => onBgShadeSlider(Number(e.target.value))}
+                          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0, cursor: 'pointer', margin: 0, padding: 0 }}
+                        />
+                        <div style={{
+                          position: 'absolute', top: '50%',
+                          left: `calc(${bgShadeSlider}% - 9px)`,
+                          transform: 'translateY(-50%)',
+                          width: 18, height: 18, borderRadius: '50%',
+                          background: local.bgThemeColor || '#0a0a12',
+                          border: '2.5px solid rgba(255,255,255,0.9)',
+                          boxShadow: '0 1px 6px rgba(0,0,0,0.55)',
+                          pointerEvents: 'none', transition: 'left 0.04s',
+                        }} />
+                      </div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 4 }}>
+                        <span style={{ color: '#6b7280', fontSize: 10 }}>Dark</span>
+                        <span style={{ color: '#6b7280', fontSize: 10 }}>Light</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4862,7 +4877,7 @@ function App() {
           </div>
 
           {/* Content */}
-          <div style={{ padding: '0 20px 40px 20px', maxWidth: 1400, margin: '0 auto' }}>
+          <div style={{ padding: '0 20px 40px 20px' }}>
 
             {filteredApps.length === 0 && filteredGameItems.length === 0 ? (
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', paddingTop: 80, textAlign: 'center' }}>
