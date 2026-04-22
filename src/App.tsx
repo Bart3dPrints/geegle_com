@@ -4260,6 +4260,24 @@ function EasterEggPopup({ onClose }: { onClose: () => void }) {
   );
 }
 
+// ── Smooth scroll helper (1s eased) ──────────────────────────────────────────
+function smoothScrollTo(targetY: number, duration = 1000) {
+  const container = document.getElementById('games-scroll-container');
+  if (!container) return;
+  const startY = container.scrollTop;
+  const diff = targetY - startY;
+  let startTime: number | null = null;
+  const easeInOutCubic = (t: number) => t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2,3)/2;
+  const step = (ts: number) => {
+    if (!startTime) startTime = ts;
+    const elapsed = ts - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    container.scrollTop = startY + diff * easeInOutCubic(progress);
+    if (progress < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
 // ── Main App ──────────────────────────────────────────────────────────────────
 function App() {
   const [page, setPage] = useState<'home' | 'games' | 'game' | 'proxy'>('home');
@@ -4280,9 +4298,12 @@ function App() {
   const [showEasterEgg, setShowEasterEgg] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [settings, setSettings] = useState<AppSettings>(() => loadSettings());
-  const [activeSideSection, setActiveSideSection] = useState<'apps'|'games'|null>(null);
+  const [activeSideSection, setActiveSideSection] = useState<string | null>(null);
+
+  // 27 refs: appsRef + A–Z
   const appsRef = useRef<HTMLDivElement>(null);
-  const gamesRef = useRef<HTMLDivElement>(null);
+  const letterRefs = useRef<Record<string, HTMLDivElement | null>>({});
+  const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
   // Apply theme on mount and when settings change
   useEffect(() => { applyTheme(settings); applyCloak(settings); }, [settings]);
@@ -4451,12 +4472,10 @@ function App() {
   // ── Games grid ──────────────────────────────────────────────────────────────
   if (page === 'games') {
 
-    // Split apps vs games
     const APP_IDS = new Set(['suggestions','chat-bot','code-editor','doge','heilos','lucide','overcloaked','soundboard','vapor','voidproxy1']);
-    const appItems = games.filter(g => APP_IDS.has(g.id));
-
-    // Sort key: strip leading articles for alphabetical sort
     const sortKey = (name: string) => name.toLowerCase().replace(/^(the |a |an )/i,'').replace(/[^a-z0-9]/g,'');
+
+    const appItems = games.filter(g => APP_IDS.has(g.id));
 
     const gameItems = games
       .filter(g => !APP_IDS.has(g.id))
@@ -4470,15 +4489,118 @@ function App() {
       ? gameItems.filter(g => normalizeText(g.name).includes(normalizeText(gameSearch)))
       : gameItems;
 
-    const scrollToSection = (ref: React.RefObject<HTMLDivElement>, section: 'apps'|'games') => {
-      if (!ref.current) return;
+    // Group games by first letter (after stripping articles)
+    const letterGroups: Record<string, typeof gameItems> = {};
+    LETTERS.forEach(l => { letterGroups[l] = []; });
+    filteredGameItems.forEach(g => {
+      const sk = sortKey(g.name);
+      const firstChar = sk[0]?.toUpperCase() || '#';
+      const letter = LETTERS.includes(firstChar) ? firstChar : '#';
+      if (!letterGroups[letter]) letterGroups[letter] = [];
+      letterGroups[letter].push(g);
+    });
+    const activeLetters = LETTERS.filter(l => letterGroups[l]?.length > 0);
+
+    const scrollToRef = (ref: HTMLDivElement | null, section: string) => {
+      if (!ref) return;
       setActiveSideSection(section);
-      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setTimeout(() => setActiveSideSection(null), 1100);
+      const container = document.getElementById('games-scroll-container');
+      if (!container) return;
+      const containerTop = container.getBoundingClientRect().top;
+      const refTop = ref.getBoundingClientRect().top;
+      const scrollOffset = container.scrollTop + (refTop - containerTop) - 60; // 60px for sticky header
+      smoothScrollTo(scrollOffset, 1000);
+      setTimeout(() => setActiveSideSection(null), 1200);
     };
 
+    // Card component for both apps and games
+    const GameCard = ({ game }: { game: typeof games[0] }) => (
+      <button
+        className="games-card"
+        onClick={() => playGame(game.id, game.url)}
+        style={{
+          background: 'rgba(255,255,255,0.035)',
+          border: '1px solid rgba(255,255,255,0.09)',
+          borderRadius: 14,
+          padding: '18px 12px',
+          cursor: 'pointer',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 8,
+          transition: 'all 0.22s cubic-bezier(0.4,0,0.2,1)',
+          backdropFilter: 'blur(6px)',
+          minHeight: 100,
+          width: '100%',
+        }}
+        onMouseEnter={e => {
+          const el = e.currentTarget as HTMLButtonElement;
+          el.style.background = 'rgba(255,255,255,0.08)';
+          el.style.borderColor = `${settings.themeColor}99`;
+          el.style.transform = 'scale(1.04) translateY(-2px)';
+          el.style.boxShadow = `0 6px 24px ${settings.themeColor}33`;
+        }}
+        onMouseLeave={e => {
+          const el = e.currentTarget as HTMLButtonElement;
+          el.style.background = 'rgba(255,255,255,0.035)';
+          el.style.borderColor = 'rgba(255,255,255,0.09)';
+          el.style.transform = 'scale(1) translateY(0)';
+          el.style.boxShadow = 'none';
+        }}
+      >
+        <div style={{ fontSize: 32 }}>{game.icon}</div>
+        <span style={{ color: '#f3f4f6', fontSize: 11, fontWeight: 600, textAlign: 'center', lineHeight: 1.3 }}>{formatGameName(game.name)}</span>
+      </button>
+    );
+
+    // Section header with full 4-side blur fade
+    const SectionHeader = ({ label }: { label: string }) => (
+      <div style={{
+        position: 'relative',
+        marginBottom: 14,
+        marginTop: 4,
+        paddingBottom: 6,
+      }}>
+        {/* Blur halo — all 4 sides */}
+        <div style={{
+          position: 'absolute',
+          inset: '-6px -20px',
+          pointerEvents: 'none',
+          zIndex: 0,
+          background: 'transparent',
+          filter: 'blur(10px)',
+          boxShadow: 'inset 20px 0 18px rgba(5,5,8,0.8), inset -20px 0 18px rgba(5,5,8,0.8), inset 0 12px 14px rgba(5,5,8,0.7), inset 0 -12px 14px rgba(5,5,8,0.7)',
+        }} />
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 10,
+          position: 'relative',
+          zIndex: 1,
+        }}>
+          <span style={{
+            fontSize: 22,
+            fontWeight: 800,
+            letterSpacing: '-0.02em',
+            color: '#e5e7eb',
+            lineHeight: 1,
+          }}>{label}</span>
+          <div style={{
+            flex: 1,
+            height: 1,
+            background: 'linear-gradient(to right, rgba(255,255,255,0.12) 0%, transparent 100%)',
+          }} />
+        </div>
+      </div>
+    );
+
+    const SIDEBAR_ITEMS = [
+      { label: 'Apps', key: 'apps' },
+      ...LETTERS.map(l => ({ label: l, key: l })),
+    ];
+
     return (
-      <div style={{ position: 'relative', width: '100vw', height: '100vh', overflowY: 'scroll' }}>
+      <div style={{ position: 'relative', width: '100vw', height: '100vh', display: 'flex', overflow: 'hidden' }}>
         <ActiveBackground settings={settings} />
         {showCordPopup && <CordPopup onClose={handleCordPopupClose} />}
         {showEasterEgg && <EasterEggPopup onClose={() => setShowEasterEgg(false)} />}
@@ -4490,95 +4612,149 @@ function App() {
           />
         )}
 
-        {/* Settings button — top left */}
-        <button
-          onClick={() => setShowSettings(true)}
-          style={{
-            position: 'fixed', top: 12, left: 56, zIndex: 50,
-            display: 'flex', alignItems: 'center', gap: 5,
-            padding: '6px 11px',
-            background: 'rgba(255,255,255,0.07)',
-            border: '1px solid rgba(255,255,255,0.14)',
-            borderRadius: 9,
-            color: '#d1d5db',
-            fontSize: 12,
-            fontWeight: 500,
-            cursor: 'pointer',
-            backdropFilter: 'blur(8px)',
-            transition: 'background 0.2s, border-color 0.2s',
-          }}
-          onMouseEnter={e => {
-            (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.13)';
-            (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.25)';
-          }}
-          onMouseLeave={e => {
-            (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.07)';
-            (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.14)';
-          }}
-        >
-          <Settings size={13} />
-          Settings
-        </button>
-
-        {/* Left sidebar navigation */}
+        {/* ── Left Sidebar: 27 buttons ── */}
         <div style={{
           position: 'fixed',
           left: 0,
-          top: '50%',
-          transform: 'translateY(-50%)',
+          top: 0,
+          bottom: 0,
+          width: 36,
           zIndex: 50,
           display: 'flex',
           flexDirection: 'column',
-          gap: 4,
-          padding: '10px 6px',
-          background: 'rgba(0,0,0,0.35)',
-          backdropFilter: 'blur(10px)',
+          background: 'rgba(0,0,0,0.5)',
+          backdropFilter: 'blur(12px)',
           borderRight: '1px solid rgba(255,255,255,0.07)',
-          borderRadius: '0 10px 10px 0',
+          overflowY: 'auto',
+          overflowX: 'hidden',
+          scrollbarWidth: 'none',
         }}>
-          {([{ label: 'Apps', section: 'apps' as const, ref: appsRef }, { label: 'Games', section: 'games' as const, ref: gamesRef }]).map(item => (
-            <button
-              key={item.section}
-              onClick={() => scrollToSection(item.ref, item.section)}
-              style={{
-                background: activeSideSection === item.section ? 'rgba(99,102,241,0.25)' : 'transparent',
-                border: 'none',
-                borderRadius: 7,
-                color: activeSideSection === item.section ? '#a5b4fc' : '#9ca3af',
-                cursor: 'pointer',
-                fontSize: 10,
-                fontWeight: 600,
-                letterSpacing: '0.08em',
-                padding: '8px 6px',
-                textTransform: 'uppercase' as const,
-                transition: 'all 0.2s',
-                writingMode: 'vertical-rl' as const,
-                textOrientation: 'mixed' as const,
-              }}
-              onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.color = '#e5e7eb'; (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.08)'; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.color = activeSideSection === item.section ? '#a5b4fc' : '#9ca3af'; (e.currentTarget as HTMLButtonElement).style.background = activeSideSection === item.section ? 'rgba(99,102,241,0.25)' : 'transparent'; }}
-            >
-              {item.label}
-            </button>
-          ))}
+          <style>{`
+            #games-sidebar::-webkit-scrollbar { display: none; }
+            #games-scroll-container { scroll-behavior: auto; }
+          `}</style>
+          <div id="games-sidebar" style={{ display: 'flex', flexDirection: 'column', gap: 1, padding: '8px 3px', flex: 1 }}>
+            {SIDEBAR_ITEMS.map(item => {
+              const isActive = activeSideSection === item.key;
+              const hasContent = item.key === 'apps'
+                ? filteredApps.length > 0
+                : (letterGroups[item.key]?.length ?? 0) > 0;
+              return (
+                <button
+                  key={item.key}
+                  onClick={() => {
+                    if (item.key === 'apps') {
+                      scrollToRef(appsRef.current, 'apps');
+                    } else {
+                      scrollToRef(letterRefs.current[item.key] ?? null, item.key);
+                    }
+                  }}
+                  title={item.key === 'apps' ? 'Apps' : `Games starting with ${item.key}`}
+                  style={{
+                    background: isActive ? 'rgba(99,102,241,0.35)' : 'transparent',
+                    border: 'none',
+                    borderRadius: 5,
+                    color: isActive ? '#a5b4fc' : hasContent ? '#9ca3af' : '#3f4451',
+                    cursor: hasContent ? 'pointer' : 'default',
+                    fontSize: item.key === 'apps' ? 8 : 10,
+                    fontWeight: 700,
+                    letterSpacing: item.key === 'apps' ? '0.04em' : '0',
+                    padding: '4px 2px',
+                    textTransform: 'uppercase' as const,
+                    transition: 'all 0.15s',
+                    lineHeight: 1,
+                    minHeight: item.key === 'apps' ? 26 : 20,
+                    width: '100%',
+                    textAlign: 'center' as const,
+                  }}
+                  onMouseEnter={e => {
+                    if (!hasContent) return;
+                    const el = e.currentTarget as HTMLButtonElement;
+                    el.style.color = '#e5e7eb';
+                    el.style.background = 'rgba(255,255,255,0.1)';
+                  }}
+                  onMouseLeave={e => {
+                    const el = e.currentTarget as HTMLButtonElement;
+                    el.style.color = isActive ? '#a5b4fc' : hasContent ? '#9ca3af' : '#3f4451';
+                    el.style.background = isActive ? 'rgba(99,102,241,0.35)' : 'transparent';
+                  }}
+                >
+                  {item.label}
+                </button>
+              );
+            })}
+          </div>
         </div>
 
-        <div style={{ position: 'relative', zIndex: 1, padding: '24px 20px 24px 44px' }}>
-          {/* Sticky header — fades out as user scrolls */}
+        {/* ── Main scrollable content ── */}
+        <div
+          id="games-scroll-container"
+          style={{
+            position: 'relative',
+            zIndex: 1,
+            flex: 1,
+            marginLeft: 36,
+            height: '100vh',
+            overflowY: 'scroll',
+            overflowX: 'hidden',
+          }}
+        >
+          {/* Settings button */}
+          <button
+            onClick={() => setShowSettings(true)}
+            style={{
+              position: 'fixed', top: 12, left: 48, zIndex: 50,
+              display: 'flex', alignItems: 'center', gap: 5,
+              padding: '6px 11px',
+              background: 'rgba(255,255,255,0.07)',
+              border: '1px solid rgba(255,255,255,0.14)',
+              borderRadius: 9,
+              color: '#d1d5db',
+              fontSize: 12,
+              fontWeight: 500,
+              cursor: 'pointer',
+              backdropFilter: 'blur(8px)',
+              transition: 'background 0.2s, border-color 0.2s',
+            }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.13)';
+              (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.25)';
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.07)';
+              (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.14)';
+            }}
+          >
+            <Settings size={13} />
+            Settings
+          </button>
+
+          {/* Sticky full-width header — edge-to-edge blur */}
           <div style={{
-            position: 'sticky', top: 0, zIndex: 10,
-            background: 'linear-gradient(to bottom, rgba(5,5,8,0.97) 0%, rgba(5,5,8,0.85) 40%, rgba(5,5,8,0.5) 75%, transparent 100%)',
-            backdropFilter: 'blur(10px)',
-            WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 55%, transparent 100%)',
-            maskImage: 'linear-gradient(to bottom, black 0%, black 55%, transparent 100%)',
+            position: 'sticky',
+            top: 0,
+            zIndex: 20,
+            left: 0,
+            right: 0,
+            width: '100%',
+            background: 'linear-gradient(to bottom, rgba(5,5,8,0.98) 0%, rgba(5,5,8,0.90) 50%, rgba(5,5,8,0.55) 80%, transparent 100%)',
+            backdropFilter: 'blur(14px)',
+            WebkitBackdropFilter: 'blur(14px)',
+            // Full edge-to-edge — no mask clipping on top/left/right
+            WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 60%, transparent 100%)',
+            maskImage: 'linear-gradient(to bottom, black 0%, black 60%, transparent 100%)',
             textAlign: 'center',
-            paddingTop: 18, paddingBottom: 40,
-            marginBottom: 12,
+            paddingTop: 20,
+            paddingBottom: 44,
+            marginBottom: 8,
+            // Extend to cover full width including sidebar gap
+            marginLeft: -36,
+            paddingLeft: 36,
           }}>
-            <h1 style={{ fontSize: 34, fontWeight: 700, color: '#fff', marginBottom: 12, letterSpacing: '-0.02em' }}>Choose Your Application</h1>
+            <h1 style={{ fontSize: 32, fontWeight: 700, color: '#fff', marginBottom: 10, letterSpacing: '-0.02em' }}>Choose Your Application</h1>
             <button
               onClick={() => setPage('home')}
-              style={{ background: 'rgba(55,65,81,0.8)', color: '#fff', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 8, padding: '6px 18px', fontSize: 13, cursor: 'pointer', marginBottom: 12, backdropFilter: 'blur(4px)', transition: 'background 0.2s' }}
+              style={{ background: 'rgba(55,65,81,0.8)', color: '#fff', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 8, padding: '6px 18px', fontSize: 13, cursor: 'pointer', marginBottom: 10, backdropFilter: 'blur(4px)', transition: 'background 0.2s' }}
             >
               Back to Search
             </button>
@@ -4598,166 +4774,57 @@ function App() {
             </div>
           </div>
 
-          {filteredApps.length === 0 && filteredGameItems.length === 0 ? (
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', paddingTop: 80, textAlign: 'center' }}>
-              <div style={{ fontSize: 40, marginBottom: 14 }}>🔍</div>
-              <p style={{ color: '#9ca3af', fontSize: 18, fontWeight: 500 }}>No results found</p>
-              <p style={{ color: '#4b5563', fontSize: 13, marginTop: 4 }}>Try a different search term</p>
+          {/* Content area */}
+          <div style={{ padding: '0 20px 40px 20px', maxWidth: 1400, margin: '0 auto' }}>
+
+            {filteredApps.length === 0 && filteredGameItems.length === 0 ? (
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', paddingTop: 80, textAlign: 'center' }}>
+                <div style={{ fontSize: 40, marginBottom: 14 }}>🔍</div>
+                <p style={{ color: '#9ca3af', fontSize: 18, fontWeight: 500 }}>No results found</p>
+                <p style={{ color: '#4b5563', fontSize: 13, marginTop: 4 }}>Try a different search term</p>
+              </div>
+            ) : (
+              <>
+                {/* ── APPS SECTION ── */}
+                {filteredApps.length > 0 && (
+                  <div
+                    ref={appsRef}
+                    style={{ marginBottom: 36, scrollMarginTop: 60 }}
+                  >
+                    <SectionHeader label="Apps" />
+                    <div style={{
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))',
+                      gap: 12,
+                    }}>
+                      {filteredApps.map(game => <GameCard key={game.id} game={game} />)}
+                    </div>
+                  </div>
+                )}
+
+                {/* ── A–Z LETTER SECTIONS ── */}
+                {activeLetters.map(letter => (
+                  <div
+                    key={letter}
+                    ref={el => { letterRefs.current[letter] = el; }}
+                    style={{ marginBottom: 32, scrollMarginTop: 60 }}
+                  >
+                    <SectionHeader label={letter} />
+                    <div style={{
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))',
+                      gap: 12,
+                    }}>
+                      {letterGroups[letter].map(game => <GameCard key={game.id} game={game} />)}
+                    </div>
+                  </div>
+                ))}
+              </>
+            )}
+
+            <div style={{ textAlign: 'center', color: '#4b5563', fontSize: 12, paddingBottom: 16 }}>
+              Bart made this. Thank him. :)
             </div>
-          ) : (
-            <>
-              {/* ── APPS SECTION ── */}
-              {filteredApps.length > 0 && (
-                <div ref={appsRef} style={{ maxWidth: 1400, margin: '0 auto', marginBottom: 36 }}>
-                  {/* Section header with blur fade effect */}
-                  <div style={{
-                    position: 'relative',
-                    marginBottom: 18,
-                    paddingBottom: 8,
-                  }}>
-                    <div style={{
-                      position: 'absolute',
-                      inset: 0,
-                      pointerEvents: 'none',
-                      background: 'radial-gradient(ellipse at 50% 50%, transparent 40%, rgba(5,5,8,0.55) 100%)',
-                      filter: 'blur(6px)',
-                      zIndex: 0,
-                    }} />
-                    <span style={{
-                      display: 'inline-block',
-                      fontSize: 11,
-                      fontWeight: 700,
-                      letterSpacing: '0.2em',
-                      color: '#6b7280',
-                      textTransform: 'uppercase' as const,
-                      position: 'relative',
-                      zIndex: 1,
-                      padding: '3px 10px',
-                      borderLeft: '2px solid rgba(99,102,241,0.5)',
-                    }}>APPS</span>
-                  </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 14, paddingBottom: 8 }}>
-                    {filteredApps.map(game => (
-                      <button
-                        key={game.id}
-                        className="games-card"
-                        onClick={() => playGame(game.id, game.url)}
-                        style={{
-                          background: 'rgba(255,255,255,0.03)',
-                          border: '1px solid rgba(255,255,255,0.08)',
-                          borderRadius: 12,
-                          padding: '18px 12px',
-                          cursor: 'pointer',
-                          display: 'flex',
-                          flexDirection: 'column',
-                          alignItems: 'center',
-                          gap: 8,
-                          transition: 'background 0.22s, border-color 0.22s, transform 0.22s, box-shadow 0.22s',
-                          backdropFilter: 'blur(6px)',
-                        }}
-                        onMouseEnter={e => {
-                          const el = e.currentTarget as HTMLButtonElement;
-                          el.style.background = 'rgba(255,255,255,0.08)';
-                          el.style.borderColor = `${settings.themeColor}99`;
-                          el.style.transform = 'scale(1.04)';
-                          el.style.boxShadow = `0 4px 20px ${settings.themeColor}33`;
-                        }}
-                        onMouseLeave={e => {
-                          const el = e.currentTarget as HTMLButtonElement;
-                          el.style.background = 'rgba(255,255,255,0.03)';
-                          el.style.borderColor = 'rgba(255,255,255,0.08)';
-                          el.style.transform = 'scale(1)';
-                          el.style.boxShadow = 'none';
-                        }}
-                      >
-                        <div style={{ fontSize: 38 }}>{game.icon}</div>
-                        <span style={{ color: '#f3f4f6', fontSize: 12, fontWeight: 600, textAlign: 'center', lineHeight: 1.3 }}>{formatGameName(game.name)}</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* ── GAMES SECTION ── */}
-              {filteredGameItems.length > 0 && (
-                <div ref={gamesRef} style={{ maxWidth: 1400, margin: '0 auto' }}>
-                  {/* Section header with blur fade effect */}
-                  <div style={{
-                    position: 'relative',
-                    marginBottom: 18,
-                    paddingBottom: 8,
-                  }}>
-                    <div style={{
-                      position: 'absolute',
-                      inset: 0,
-                      pointerEvents: 'none',
-                      background: 'radial-gradient(ellipse at 50% 50%, transparent 40%, rgba(5,5,8,0.55) 100%)',
-                      filter: 'blur(6px)',
-                      zIndex: 0,
-                    }} />
-                    <span style={{
-                      display: 'inline-block',
-                      fontSize: 11,
-                      fontWeight: 700,
-                      letterSpacing: '0.2em',
-                      color: '#6b7280',
-                      textTransform: 'uppercase' as const,
-                      position: 'relative',
-                      zIndex: 1,
-                      padding: '3px 10px',
-                      borderLeft: '2px solid rgba(99,102,241,0.5)',
-                    }}>GAMES</span>
-                  </div>
-
-                  {/* A-Z vertical list */}
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 6, paddingBottom: 28 }}>
-                    {filteredGameItems.map(game => (
-                      <button
-                        key={game.id}
-                        className="games-card"
-                        onClick={() => playGame(game.id, game.url)}
-                        style={{
-                          background: 'rgba(255,255,255,0.03)',
-                          border: '1px solid rgba(255,255,255,0.08)',
-                          borderRadius: 10,
-                          padding: '12px 18px',
-                          cursor: 'pointer',
-                          display: 'flex',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                          gap: 14,
-                          transition: 'background 0.22s, border-color 0.22s, transform 0.18s, box-shadow 0.22s',
-                          backdropFilter: 'blur(6px)',
-                          textAlign: 'left',
-                          width: '100%',
-                        }}
-                        onMouseEnter={e => {
-                          const el = e.currentTarget as HTMLButtonElement;
-                          el.style.background = 'rgba(255,255,255,0.07)';
-                          el.style.borderColor = `${settings.themeColor}88`;
-                          el.style.transform = 'translateX(4px)';
-                          el.style.boxShadow = `0 2px 16px ${settings.themeColor}25`;
-                        }}
-                        onMouseLeave={e => {
-                          const el = e.currentTarget as HTMLButtonElement;
-                          el.style.background = 'rgba(255,255,255,0.03)';
-                          el.style.borderColor = 'rgba(255,255,255,0.08)';
-                          el.style.transform = 'translateX(0)';
-                          el.style.boxShadow = 'none';
-                        }}
-                      >
-                        <div style={{ fontSize: 22, flexShrink: 0, width: 28, textAlign: 'center' }}>{game.icon}</div>
-                        <span style={{ color: '#f3f4f6', fontSize: 13, fontWeight: 600, lineHeight: 1.3 }}>{formatGameName(game.name)}</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </>
-          )}
-
-          <div style={{ textAlign: 'center', color: '#4b5563', fontSize: 12, paddingBottom: 28 }}>
-            Bart made this. Thank him. :)
           </div>
         </div>
       </div>
