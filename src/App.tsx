@@ -2834,14 +2834,14 @@ function applyTheme(settings: AppSettings) {
   if (!theme || theme === 'default') {
     css += `
       .games-card {
-        background: rgba(255,255,255,0.055) !important;
+        background: rgba(255,255,255,0.035) !important;
         border: 1px solid rgba(255,255,255,0.09) !important;
         border-radius: 14px !important;
-        backdrop-filter: blur(5px) !important;
+        backdrop-filter: blur(8px) !important;
         transition: background 0.22s, border-color 0.22s, transform 0.22s, box-shadow 0.22s !important;
       }
       .games-card:hover {
-        background: rgba(255,255,255,0.10) !important;
+        background: rgba(255,255,255,0.08) !important;
         border-color: ${c}88 !important;
         transform: scale(1.04) !important;
         box-shadow: 0 4px 24px ${c}30 !important;
@@ -2850,11 +2850,11 @@ function applyTheme(settings: AppSettings) {
   } else if (theme === 'liquidglass') {
     css += `
       .games-card {
-        background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, ${c}0d 60%, ${c}15 100%) !important;
-        border: 1px solid ${c}55 !important;
+        background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 60%, rgba(120,180,255,0.08) 100%) !important;
+        border: 1px solid rgba(255,255,255,0.22) !important;
         border-radius: 18px !important;
-        backdrop-filter: blur(16px) saturate(1.8) !important;
-        box-shadow: 0 2px 16px ${c}22, inset 0 1px 0 rgba(255,255,255,0.15) !important;
+        backdrop-filter: blur(20px) saturate(1.8) !important;
+        box-shadow: 0 2px 16px rgba(120,180,255,0.10), inset 0 1px 0 rgba(255,255,255,0.18) !important;
         transition: all 0.28s cubic-bezier(0.4,0,0.2,1) !important;
         position: relative !important;
       }
@@ -2863,52 +2863,52 @@ function applyTheme(settings: AppSettings) {
         position: absolute !important;
         inset: 0 !important;
         border-radius: 18px !important;
-        background: linear-gradient(120deg, ${c}20 0%, transparent 50%) !important;
+        background: linear-gradient(120deg, rgba(255,255,255,0.15) 0%, transparent 50%) !important;
         pointer-events: none !important;
       }
       .games-card:hover {
-        background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, ${c}22 60%, ${c}33 100%) !important;
-        border-color: ${c}99 !important;
+        background: linear-gradient(135deg, rgba(255,255,255,0.20) 0%, rgba(180,220,255,0.12) 60%, rgba(120,180,255,0.16) 100%) !important;
+        border-color: rgba(255,255,255,0.45) !important;
         transform: scale(1.05) translateY(-3px) !important;
-        box-shadow: 0 8px 32px ${c}44, 0 2px 8px rgba(255,255,255,0.10), inset 0 1px 0 ${c}55 !important;
+        box-shadow: 0 8px 32px rgba(120,180,255,0.25), 0 2px 8px rgba(255,255,255,0.12), inset 0 1px 0 rgba(255,255,255,0.3) !important;
       }
     `;
   } else if (theme === 'claymorphism') {
     css += `
       .games-card {
-        background: linear-gradient(145deg, ${c}22 0%, ${c}15 50%, rgba(255,255,255,0.05) 100%) !important;
+        background: linear-gradient(145deg, rgba(200,180,255,0.13) 0%, rgba(160,200,255,0.10) 50%, rgba(255,200,200,0.08) 100%) !important;
         border: none !important;
         border-radius: 22px !important;
         backdrop-filter: blur(4px) !important;
-        box-shadow: 6px 6px 18px rgba(0,0,0,0.35), -2px -2px 8px ${c}15, inset 0 1px 2px rgba(255,255,255,0.10) !important;
+        box-shadow: 6px 6px 18px rgba(0,0,0,0.35), -3px -3px 10px rgba(255,255,255,0.06), inset 0 1px 2px rgba(255,255,255,0.10) !important;
         transition: all 0.25s ease !important;
       }
       .games-card:hover {
-        background: linear-gradient(145deg, ${c}33 0%, ${c}22 50%, rgba(255,255,255,0.08) 100%) !important;
+        background: linear-gradient(145deg, rgba(200,180,255,0.20) 0%, rgba(160,200,255,0.16) 50%, rgba(255,200,200,0.14) 100%) !important;
         transform: scale(0.97) translateY(2px) !important;
-        box-shadow: 3px 3px 10px rgba(0,0,0,0.40), -1px -1px 5px ${c}25, inset 0 1px 2px rgba(255,255,255,0.08) !important;
+        box-shadow: 3px 3px 10px rgba(0,0,0,0.40), -2px -2px 6px rgba(255,255,255,0.05), inset 0 1px 2px rgba(255,255,255,0.08) !important;
       }
     `;
   } else if (theme === 'aurora') {
     css += `
       @keyframes aurora-card-glow {
-        0%   { box-shadow: 0 0 12px ${c}55, 0 2px 20px ${c}30; border-color: ${c}66; }
-        50%  { box-shadow: 0 0 20px ${c}77, 0 2px 28px ${c}44; border-color: ${c}99; }
-        100% { box-shadow: 0 0 12px ${c}55, 0 2px 20px ${c}30; border-color: ${c}66; }
+        0%   { box-shadow: 0 0 12px rgba(120,40,200,0.35), 0 2px 20px rgba(40,160,200,0.20); border-color: rgba(120,40,200,0.4); }
+        50%  { box-shadow: 0 0 18px rgba(40,200,160,0.40), 0 2px 24px rgba(80,40,220,0.25); border-color: rgba(40,200,160,0.5); }
+        100% { box-shadow: 0 0 12px rgba(120,40,200,0.35), 0 2px 20px rgba(40,160,200,0.20); border-color: rgba(120,40,200,0.4); }
       }
       .games-card {
-        background: linear-gradient(135deg, ${c}18 0%, ${c}10 50%, rgba(10,40,50,0.55) 100%) !important;
-        border: 1px solid ${c}66 !important;
+        background: linear-gradient(135deg, rgba(40,10,60,0.7) 0%, rgba(10,30,60,0.65) 50%, rgba(10,50,40,0.6) 100%) !important;
+        border: 1px solid rgba(120,40,200,0.4) !important;
         border-radius: 16px !important;
-        backdrop-filter: blur(10px) !important;
+        backdrop-filter: blur(12px) !important;
         animation: aurora-card-glow 4s ease-in-out infinite !important;
         transition: transform 0.25s ease, background 0.25s ease !important;
       }
       .games-card:hover {
-        background: linear-gradient(135deg, ${c}33 0%, ${c}22 50%, rgba(10,40,50,0.65) 100%) !important;
+        background: linear-gradient(135deg, rgba(80,20,120,0.8) 0%, rgba(20,60,120,0.75) 50%, rgba(20,100,80,0.7) 100%) !important;
         transform: scale(1.05) translateY(-4px) !important;
-        box-shadow: 0 0 32px ${c}77, 0 4px 28px ${c}55 !important;
-        border-color: ${c}cc !important;
+        box-shadow: 0 0 28px rgba(80,200,160,0.5), 0 4px 28px rgba(120,40,220,0.4) !important;
+        border-color: rgba(80,220,160,0.7) !important;
         animation: none !important;
       }
     `;
@@ -2936,20 +2936,20 @@ function applyTheme(settings: AppSettings) {
         50%      { transform: translateY(-4px) rotateX(2deg); }
       }
       .games-card {
-        background: linear-gradient(160deg, ${c}2e 0%, ${c}1a 40%, ${c}22 100%) !important;
-        border: 1px solid ${c}55 !important;
+        background: linear-gradient(160deg, rgba(99,102,241,0.18) 0%, rgba(59,130,246,0.10) 40%, rgba(139,92,246,0.14) 100%) !important;
+        border: 1px solid rgba(139,92,246,0.35) !important;
         border-radius: 16px !important;
         backdrop-filter: blur(10px) !important;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.45), 0 2px 6px ${c}33, inset 0 1px 0 ${c}22 !important;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.45), 0 2px 6px rgba(139,92,246,0.20), inset 0 1px 0 rgba(255,255,255,0.08) !important;
         animation: float3d 5s ease-in-out infinite !important;
         transition: transform 0.25s ease, box-shadow 0.25s ease !important;
         perspective: 600px !important;
       }
       .games-card:hover {
-        background: linear-gradient(160deg, ${c}44 0%, ${c}33 40%, ${c}3a 100%) !important;
-        border-color: ${c}99 !important;
+        background: linear-gradient(160deg, rgba(99,102,241,0.30) 0%, rgba(59,130,246,0.20) 40%, rgba(139,92,246,0.26) 100%) !important;
+        border-color: rgba(139,92,246,0.65) !important;
         transform: scale(1.06) rotateX(4deg) rotateY(-4deg) translateY(-6px) !important;
-        box-shadow: 0 18px 40px rgba(0,0,0,0.55), 0 4px 16px ${c}55, inset 0 1px 0 ${c}33 !important;
+        box-shadow: 0 18px 40px rgba(0,0,0,0.55), 0 4px 16px rgba(139,92,246,0.40), inset 0 1px 0 rgba(255,255,255,0.14) !important;
         animation: none !important;
       }
     `;
@@ -3188,10 +3188,88 @@ function SettingsModal({ onClose, settings, onChange }: {
   settings: AppSettings;
   onChange: (s: AppSettings) => void;
 }) {
-  const [tab, setTab] = useState<'theme' | 'background' | 'panic' | 'cloak'>('theme');
+  // Persist last-active tab in localStorage
+  const LAST_TAB_KEY = 'geegle_settings_last_tab';
+  const savedTab = localStorage.getItem(LAST_TAB_KEY) as 'theme'|'background'|'panic'|'cloak' | null;
+  const [tab, setTab] = useState<'theme' | 'background' | 'panic' | 'cloak'>(
+    (savedTab && ['theme','background','panic','cloak'].includes(savedTab)) ? savedTab : 'theme'
+  );
+  const changeTab = (t: 'theme'|'background'|'panic'|'cloak') => {
+    setTab(t);
+    localStorage.setItem(LAST_TAB_KEY, t);
+  };
+
   const [local, setLocal] = useState<AppSettings>({ ...settings });
   const [listeningKey, setListeningKey] = useState(false);
   const [visible, setVisible] = useState(false);
+
+  // Shade slider: 0 = black, 50 = pure color, 100 = white
+  // Derive initial shade from current themeColor
+  const hexToHsl = (hex: string): [number, number, number] => {
+    let r = parseInt(hex.slice(1,3),16)/255;
+    let g = parseInt(hex.slice(3,5),16)/255;
+    let b = parseInt(hex.slice(5,7),16)/255;
+    const max = Math.max(r,g,b), min = Math.min(r,g,b);
+    let h = 0, s = 0, l = (max+min)/2;
+    if (max !== min) {
+      const d = max - min;
+      s = l > 0.5 ? d/(2-max-min) : d/(max+min);
+      switch(max) {
+        case r: h = ((g-b)/d + (g<b?6:0))/6; break;
+        case g: h = ((b-r)/d + 2)/6; break;
+        case b: h = ((r-g)/d + 4)/6; break;
+      }
+    }
+    return [Math.round(h*360), Math.round(s*100), Math.round(l*100)];
+  };
+  const hslToHex = (h: number, s: number, l: number): string => {
+    s /= 100; l /= 100;
+    const a = s * Math.min(l, 1-l);
+    const f = (n: number) => {
+      const k = (n + h/30) % 12;
+      const color = l - a*Math.max(Math.min(k-3,9-k,1),-1);
+      return Math.round(255*color).toString(16).padStart(2,'0');
+    };
+    return `#${f(0)}${f(8)}${f(4)}`;
+  };
+
+  // Parse current hue from themeColor; slider maps 0→100 to L 5%→95%
+  const getHue = (hex: string) => {
+    if (!/^#[0-9a-fA-F]{6}$/.test(hex)) return 0;
+    return hexToHsl(hex)[0];
+  };
+  const getLightness = (hex: string): number => {
+    if (!/^#[0-9a-fA-F]{6}$/.test(hex)) return 50;
+    return hexToHsl(hex)[2];
+  };
+  // Slider value: map L (5..95) to slider (0..100)
+  const lightnessToSlider = (l: number) => Math.round(((l - 5) / 90) * 100);
+  const sliderToLightness = (v: number) => 5 + (v / 100) * 90;
+
+  const [shadeSlider, setShadeSlider] = useState(() => lightnessToSlider(getLightness(settings.themeColor)));
+  // Base hue+sat for the current selected preset/color — stored so slider adjusts shade without shifting hue
+  const [baseHueSat, setBaseHueSat] = useState<[number, number]>(() => {
+    const [h, s] = hexToHsl(settings.themeColor);
+    return [h, s];
+  });
+
+  // When a color swatch or color picker is chosen, update baseHueSat and reset slider to match
+  const pickColor = (hex: string) => {
+    if (!/^#[0-9a-fA-F]{6}$/.test(hex)) { update({ themeColor: hex }); return; }
+    const [h, s, l] = hexToHsl(hex);
+    setBaseHueSat([h, Math.max(s, 60)]); // keep saturation at least 60 so shades are vivid
+    setShadeSlider(lightnessToSlider(l));
+    update({ themeColor: hex });
+  };
+
+  // When slider moves, keep hue/sat, only change lightness
+  const onShadeSlider = (v: number) => {
+    setShadeSlider(v);
+    const [h, s] = baseHueSat;
+    const l = sliderToLightness(v);
+    const hex = hslToHex(h, s, l);
+    update({ themeColor: hex });
+  };
 
   // Animate in on mount
   useEffect(() => { requestAnimationFrame(() => setVisible(true)); }, []);
@@ -3239,10 +3317,8 @@ function SettingsModal({ onClose, settings, onChange }: {
       onClick={e => { if (e.target === e.currentTarget) handleClose(); }}>
       <div style={{
         background: '#0f1117', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 20,
-        width: 680, height: 560,
-        display: 'flex', flexDirection: 'column',
+        width: '90%', maxWidth: 680, maxHeight: '85vh', display: 'flex', flexDirection: 'column',
         overflow: 'hidden', boxShadow: '0 32px 80px rgba(0,0,0,0.6)',
-        flexShrink: 0,
         transform: visible ? 'scale(1) translateY(0)' : 'scale(0.95) translateY(12px)',
         opacity: visible ? 1 : 0,
         transition: 'transform 0.22s cubic-bezier(0.34,1.56,0.64,1), opacity 0.2s ease',
@@ -3255,32 +3331,89 @@ function SettingsModal({ onClose, settings, onChange }: {
           </button>
         </div>
         {/* Body */}
-        <div style={{ display: 'flex', flex: '1 1 0', overflow: 'hidden', minHeight: 0 }}>
+        <div style={{ display: 'flex', flex: 1, overflow: 'hidden', minHeight: 0 }}>
           {/* Sidebar */}
           <div style={{ width: 148, borderRight: '1px solid rgba(255,255,255,0.08)', padding: '16px 10px', flexShrink: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
             {(['theme', 'background', 'panic', 'cloak'] as const).map(t => (
-              <button key={t} onClick={() => setTab(t)} style={{ display: 'flex', alignItems: 'center', gap: 7, padding: '9px 10px', borderRadius: 10, border: 'none', cursor: 'pointer', background: tab === t ? 'rgba(99,102,241,0.2)' : 'transparent', color: tab === t ? '#a5b4fc' : '#9ca3af', fontSize: 13, fontWeight: tab === t ? 600 : 400, transition: 'all 0.15s', textAlign: 'left' }}>
+              <button key={t} onClick={() => changeTab(t)} style={{ display: 'flex', alignItems: 'center', gap: 7, padding: '9px 10px', borderRadius: 10, border: 'none', cursor: 'pointer', background: tab === t ? 'rgba(99,102,241,0.2)' : 'transparent', color: tab === t ? '#a5b4fc' : '#9ca3af', fontSize: 13, fontWeight: tab === t ? 600 : 400, transition: 'all 0.15s', textAlign: 'left' }}>
                 {t === 'theme' ? <Palette size={15} /> : t === 'background' ? <span style={{ fontSize: 13 }}>🌌</span> : t === 'panic' ? <Key size={15} /> : <span style={{ fontSize: 13 }}>🥷</span>}
                 {t === 'theme' ? 'Theme' : t === 'background' ? 'Background' : t === 'panic' ? 'Panic Key' : 'Cloak'}
               </button>
             ))}
           </div>
           {/* Content */}
-          <div style={{ flex: '1 1 0', padding: '20px 24px', overflowY: 'auto', minHeight: 0 }}>
+          <div style={{ flex: 1, padding: '20px 24px', overflowY: 'auto' }}>
             {tab === 'theme' && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                 <div>
                   <label style={{ color: '#d1d5db', fontSize: 13, fontWeight: 600, display: 'block', marginBottom: 10, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Accent Color</label>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                    <input type="color" value={local.themeColor} onChange={e => update({ themeColor: e.target.value })}
+                    <input type="color" value={local.themeColor} onChange={e => pickColor(e.target.value)}
                       style={{ width: 48, height: 48, border: '2px solid rgba(255,255,255,0.15)', borderRadius: 10, cursor: 'pointer', background: 'none', padding: 2 }} />
-                    <input type="text" value={local.themeColor} onChange={e => { if (/^#[0-9a-fA-F]{0,6}$/.test(e.target.value)) update({ themeColor: e.target.value }); }}
+                    <input type="text" value={local.themeColor} onChange={e => { if (/^#[0-9a-fA-F]{0,6}$/.test(e.target.value)) pickColor(e.target.value); }}
                       style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 8, color: '#f3f4f6', fontSize: 14, padding: '8px 12px', width: 100, outline: 'none' }} />
                     <div style={{ display: 'flex', gap: 6 }}>
                       {['#6366f1','#ec4899','#10b981','#f59e0b','#ef4444','#3b82f6','#8b5cf6'].map(col => (
-                        <button key={col} onClick={() => update({ themeColor: col })}
+                        <button key={col} onClick={() => pickColor(col)}
                           style={{ width: 24, height: 24, borderRadius: '50%', background: col, border: local.themeColor === col ? '2px solid white' : '2px solid transparent', cursor: 'pointer', transition: 'border-color 0.15s' }} />
                       ))}
+                    </div>
+                  </div>
+
+                  {/* ── Shade slider: black → color → white ── */}
+                  <div style={{ marginTop: 14 }}>
+                    <label style={{ color: '#9ca3af', fontSize: 11, fontWeight: 600, display: 'block', marginBottom: 7, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Color Shade</label>
+                    <div style={{ position: 'relative' }}>
+                      {/* Gradient track */}
+                      <div style={{
+                        height: 18,
+                        borderRadius: 9,
+                        border: '1.5px solid rgba(160,160,160,0.45)',
+                        background: (() => {
+                          const [h, s] = baseHueSat;
+                          const midColor = hslToHex(h, s, 50);
+                          return `linear-gradient(to right, #000000, ${midColor}, #ffffff)`;
+                        })(),
+                        cursor: 'pointer',
+                        boxSizing: 'border-box' as const,
+                      }} />
+                      {/* Range input overlaid, fully transparent except thumb */}
+                      <input
+                        type="range"
+                        min={0}
+                        max={100}
+                        value={shadeSlider}
+                        onChange={e => onShadeSlider(Number(e.target.value))}
+                        style={{
+                          position: 'absolute',
+                          inset: 0,
+                          width: '100%',
+                          height: '100%',
+                          opacity: 0,
+                          cursor: 'pointer',
+                          margin: 0,
+                          padding: 0,
+                        }}
+                      />
+                      {/* Visible thumb */}
+                      <div style={{
+                        position: 'absolute',
+                        top: '50%',
+                        left: `calc(${shadeSlider}% - 9px)`,
+                        transform: 'translateY(-50%)',
+                        width: 18,
+                        height: 18,
+                        borderRadius: '50%',
+                        background: local.themeColor,
+                        border: '2.5px solid rgba(255,255,255,0.9)',
+                        boxShadow: '0 1px 6px rgba(0,0,0,0.55)',
+                        pointerEvents: 'none',
+                        transition: 'left 0.04s',
+                      }} />
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 4 }}>
+                      <span style={{ color: '#6b7280', fontSize: 10 }}>Dark</span>
+                      <span style={{ color: '#6b7280', fontSize: 10 }}>Light</span>
                     </div>
                   </div>
                 </div>
@@ -4262,24 +4395,6 @@ function EasterEggPopup({ onClose }: { onClose: () => void }) {
   );
 }
 
-// ── Smooth scroll helper (1s eased) ──────────────────────────────────────────
-function smoothScrollTo(targetY: number, duration = 1000) {
-  const container = document.getElementById('games-scroll-container');
-  if (!container) return;
-  const startY = container.scrollTop;
-  const diff = targetY - startY;
-  let startTime: number | null = null;
-  const easeInOutCubic = (t: number) => t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2,3)/2;
-  const step = (ts: number) => {
-    if (!startTime) startTime = ts;
-    const elapsed = ts - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-    container.scrollTop = startY + diff * easeInOutCubic(progress);
-    if (progress < 1) requestAnimationFrame(step);
-  };
-  requestAnimationFrame(step);
-}
-
 // ── Main App ──────────────────────────────────────────────────────────────────
 function App() {
   const [page, setPage] = useState<'home' | 'games' | 'game' | 'proxy'>('home');
@@ -4300,12 +4415,9 @@ function App() {
   const [showEasterEgg, setShowEasterEgg] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [settings, setSettings] = useState<AppSettings>(() => loadSettings());
-  const [activeSideSection, setActiveSideSection] = useState<string | null>(null);
-
-  // 27 refs: appsRef + A–Z
+  const [activeSideSection, setActiveSideSection] = useState<'apps'|'games'|null>(null);
   const appsRef = useRef<HTMLDivElement>(null);
-  const letterRefs = useRef<Record<string, HTMLDivElement | null>>({});
-  const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  const gamesRef = useRef<HTMLDivElement>(null);
 
   // Apply theme on mount and when settings change
   useEffect(() => { applyTheme(settings); applyCloak(settings); }, [settings]);
@@ -4474,10 +4586,12 @@ function App() {
   // ── Games grid ──────────────────────────────────────────────────────────────
   if (page === 'games') {
 
+    // Split apps vs games
     const APP_IDS = new Set(['suggestions','chat-bot','code-editor','doge','heilos','lucide','overcloaked','soundboard','vapor','voidproxy1']);
-    const sortKey = (name: string) => name.toLowerCase().replace(/^(the |a |an )/i,'').replace(/[^a-z0-9]/g,'');
-
     const appItems = games.filter(g => APP_IDS.has(g.id));
+
+    // Sort key: strip leading articles for alphabetical sort
+    const sortKey = (name: string) => name.toLowerCase().replace(/^(the |a |an )/i,'').replace(/[^a-z0-9]/g,'');
 
     const gameItems = games
       .filter(g => !APP_IDS.has(g.id))
@@ -4491,63 +4605,96 @@ function App() {
       ? gameItems.filter(g => normalizeText(g.name).includes(normalizeText(gameSearch)))
       : gameItems;
 
-    // Group games by first letter (after stripping articles)
+    // ── Group games by first letter of their sort key.
+    // '#' bucket catches anything whose sort key starts with a digit (0–9).
+    const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+    // Order: '#' first (between Apps and A), then A–Z
+    const ALL_SECTIONS = ['#', ...LETTERS] as const;
+
     const letterGroups: Record<string, typeof gameItems> = {};
-    LETTERS.forEach(l => { letterGroups[l] = []; });
+    ALL_SECTIONS.forEach(s => { letterGroups[s] = []; });
+
     filteredGameItems.forEach(g => {
       const sk = sortKey(g.name);
-      const firstChar = sk[0]?.toUpperCase() || '#';
-      const letter = LETTERS.includes(firstChar) ? firstChar : '#';
-      if (!letterGroups[letter]) letterGroups[letter] = [];
-      letterGroups[letter].push(g);
+      const firstChar = sk[0] ?? '';
+      // If the first char of the sort key is a digit → '#' bucket
+      if (/^[0-9]$/.test(firstChar)) {
+        letterGroups['#'].push(g);
+      } else {
+        const letter = firstChar.toUpperCase();
+        if (LETTERS.includes(letter)) {
+          letterGroups[letter].push(g);
+        } else {
+          letterGroups['#'].push(g); // fallback for any other non-alpha
+        }
+      }
     });
-    const activeLetters = LETTERS.filter(l => letterGroups[l]?.length > 0);
 
-    const scrollToRef = (ref: HTMLDivElement | null, section: string) => {
-      if (!ref) return;
-      setActiveSideSection(section);
+    const activeSections = ALL_SECTIONS.filter(s => letterGroups[s]?.length > 0);
+
+    // Per-section refs stored in a plain object (stable across renders inside this block)
+    const sectionRefs: Record<string, HTMLDivElement | null> = {};
+
+    const scrollToKey = (key: string) => {
+      const el = key === 'apps' ? appsRef.current : sectionRefs[key];
+      if (!el) return;
+      setActiveSideSection(key);
       const container = document.getElementById('games-scroll-container');
-      if (!container) return;
-      const containerTop = container.getBoundingClientRect().top;
-      const refTop = ref.getBoundingClientRect().top;
-      // Header is sticky at top:0, occupies ~152px (paddingTop:20 + h1:~38 + button:~32 + search:~40 + paddingBottom:44 - fadeout), add 16px breathing room
-      const HEADER_OFFSET = 168;
-      const scrollOffset = container.scrollTop + (refTop - containerTop) - HEADER_OFFSET;
-      smoothScrollTo(scrollOffset, 1000);
+      if (!container) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
+      const scrollOffset = container.scrollTop + el.getBoundingClientRect().top - container.getBoundingClientRect().top - 8;
+      // Custom 1-second eased scroll
+      const startY = container.scrollTop;
+      const diff = scrollOffset - startY;
+      let startTime: number | null = null;
+      const ease = (t: number) => t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2,3)/2;
+      const step = (ts: number) => {
+        if (!startTime) startTime = ts;
+        const p = Math.min((ts - startTime) / 1000, 1);
+        container.scrollTop = startY + diff * ease(p);
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
       setTimeout(() => setActiveSideSection(null), 1200);
     };
 
-    // Card component for both apps and games
-    const GameCard = ({ game }: { game: typeof games[0] }) => (
+    // Sidebar items: Apps, #, A–Z
+    const sidebarItems = [
+      { key: 'apps', label: 'Apps', hasContent: filteredApps.length > 0 },
+      { key: '#',    label: '#',    hasContent: (letterGroups['#']?.length ?? 0) > 0 },
+      ...LETTERS.map(l => ({ key: l, label: l, hasContent: (letterGroups[l]?.length ?? 0) > 0 })),
+    ];
+
+    // Shared card renderer — proper grid card (column layout)
+    const renderCard = (game: typeof games[0]) => (
       <button
+        key={game.id}
         className="games-card"
         onClick={() => playGame(game.id, game.url)}
         style={{
-          background: 'rgba(255,255,255,0.055)',
-          border: '1px solid rgba(255,255,255,0.09)',
-          borderRadius: 14,
+          background: 'rgba(255,255,255,0.03)',
+          border: '1px solid rgba(255,255,255,0.08)',
+          borderRadius: 12,
           padding: '18px 12px',
           cursor: 'pointer',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           gap: 8,
-          transition: 'all 0.22s cubic-bezier(0.4,0,0.2,1)',
+          transition: 'background 0.22s, border-color 0.22s, transform 0.22s, box-shadow 0.22s',
           backdropFilter: 'blur(6px)',
           minHeight: 100,
-          width: '100%',
         }}
         onMouseEnter={e => {
           const el = e.currentTarget as HTMLButtonElement;
-          el.style.background = 'rgba(255,255,255,0.10)';
+          el.style.background = 'rgba(255,255,255,0.08)';
           el.style.borderColor = `${settings.themeColor}99`;
           el.style.transform = 'scale(1.04) translateY(-2px)';
           el.style.boxShadow = `0 6px 24px ${settings.themeColor}33`;
         }}
         onMouseLeave={e => {
           const el = e.currentTarget as HTMLButtonElement;
-          el.style.background = 'rgba(255,255,255,0.055)';
-          el.style.borderColor = 'rgba(255,255,255,0.09)';
+          el.style.background = 'rgba(255,255,255,0.03)';
+          el.style.borderColor = 'rgba(255,255,255,0.08)';
           el.style.transform = 'scale(1) translateY(0)';
           el.style.boxShadow = 'none';
         }}
@@ -4557,51 +4704,24 @@ function App() {
       </button>
     );
 
-    // Section header with full 4-side blur fade
-    const SectionHeader = ({ label }: { label: string }) => (
-      <div style={{
-        position: 'relative',
-        marginBottom: 14,
-        marginTop: 4,
-        paddingBottom: 6,
-      }}>
-        {/* Blur halo — all 4 sides */}
+    // Shared section header renderer — blur fade on all 4 sides
+    const renderSectionHeader = (label: string) => (
+      <div style={{ position: 'relative', marginBottom: 14, paddingBottom: 6 }}>
         <div style={{
-          position: 'absolute',
-          inset: '-6px -20px',
-          pointerEvents: 'none',
-          zIndex: 0,
-          background: 'transparent',
-          filter: 'blur(10px)',
-          boxShadow: 'inset 20px 0 18px rgba(5,5,8,0.8), inset -20px 0 18px rgba(5,5,8,0.8), inset 0 12px 14px rgba(5,5,8,0.7), inset 0 -12px 14px rgba(5,5,8,0.7)',
+          position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0,
+          background: 'radial-gradient(ellipse at 50% 50%, transparent 40%, rgba(5,5,8,0.55) 100%)',
+          filter: 'blur(6px)',
         }} />
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: 10,
-          position: 'relative',
-          zIndex: 1,
-        }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, position: 'relative', zIndex: 1 }}>
           <span style={{
-            fontSize: 22,
-            fontWeight: 800,
-            letterSpacing: '-0.02em',
-            color: '#e5e7eb',
-            lineHeight: 1,
+            fontSize: 11, fontWeight: 700, letterSpacing: '0.2em',
+            color: '#6b7280', textTransform: 'uppercase' as const,
+            padding: '3px 10px', borderLeft: '2px solid rgba(99,102,241,0.5)',
           }}>{label}</span>
-          <div style={{
-            flex: 1,
-            height: 1,
-            background: 'linear-gradient(to right, rgba(255,255,255,0.12) 0%, transparent 100%)',
-          }} />
+          <div style={{ flex: 1, height: 1, background: 'linear-gradient(to right, rgba(255,255,255,0.08) 0%, transparent 100%)' }} />
         </div>
       </div>
     );
-
-    const SIDEBAR_ITEMS = [
-      { label: 'Apps', key: 'apps' },
-      ...LETTERS.map(l => ({ label: l, key: l })),
-    ];
 
     return (
       <div style={{ position: 'relative', width: '100vw', height: '100vh', display: 'flex', overflow: 'hidden' }}>
@@ -4616,70 +4736,50 @@ function App() {
           />
         )}
 
-        {/* ── Left Sidebar: 27 buttons ── */}
+        {/* ── Left Sidebar: Apps, #, A–Z (28 buttons total) ── */}
         <div style={{
-          position: 'fixed',
-          left: 0,
-          top: 0,
-          bottom: 0,
-          width: 36,
-          zIndex: 50,
-          display: 'flex',
-          flexDirection: 'column',
+          position: 'fixed', left: 0, top: 0, bottom: 0, width: 36, zIndex: 50,
+          display: 'flex', flexDirection: 'column',
           background: 'rgba(0,0,0,0.5)',
           backdropFilter: 'blur(12px)',
           borderRight: '1px solid rgba(255,255,255,0.07)',
-          overflowY: 'auto',
-          overflowX: 'hidden',
-          scrollbarWidth: 'none',
+          overflowY: 'auto', overflowX: 'hidden',
         }}>
           <style>{`
-            #games-sidebar::-webkit-scrollbar { display: none; }
-            #games-scroll-container { scroll-behavior: auto; }
+            #gm-sidebar::-webkit-scrollbar { display: none; }
+            #gm-sidebar { scrollbar-width: none; }
           `}</style>
-          <div id="games-sidebar" style={{ display: 'flex', flexDirection: 'column', gap: 1, padding: '8px 3px', flex: 1 }}>
-            {SIDEBAR_ITEMS.map(item => {
+          <div id="gm-sidebar" style={{ display: 'flex', flexDirection: 'column', gap: 1, padding: '8px 3px' }}>
+            {sidebarItems.map(item => {
               const isActive = activeSideSection === item.key;
-              const hasContent = item.key === 'apps'
-                ? filteredApps.length > 0
-                : (letterGroups[item.key]?.length ?? 0) > 0;
               return (
                 <button
                   key={item.key}
-                  onClick={() => {
-                    if (item.key === 'apps') {
-                      scrollToRef(appsRef.current, 'apps');
-                    } else {
-                      scrollToRef(letterRefs.current[item.key] ?? null, item.key);
-                    }
-                  }}
-                  title={item.key === 'apps' ? 'Apps' : `Games starting with ${item.key}`}
+                  onClick={() => scrollToKey(item.key)}
+                  title={item.key === 'apps' ? 'Apps' : item.key === '#' ? 'Numbers (#)' : `Games: ${item.key}`}
                   style={{
                     background: isActive ? 'rgba(99,102,241,0.35)' : 'transparent',
-                    border: 'none',
-                    borderRadius: 5,
-                    color: isActive ? '#a5b4fc' : hasContent ? '#9ca3af' : '#3f4451',
-                    cursor: hasContent ? 'pointer' : 'default',
+                    border: 'none', borderRadius: 5,
+                    color: isActive ? '#a5b4fc' : item.hasContent ? '#9ca3af' : '#3f4451',
+                    cursor: item.hasContent ? 'pointer' : 'default',
                     fontSize: item.key === 'apps' ? 8 : 10,
                     fontWeight: 700,
                     letterSpacing: item.key === 'apps' ? '0.04em' : '0',
                     padding: '4px 2px',
                     textTransform: 'uppercase' as const,
-                    transition: 'all 0.15s',
-                    lineHeight: 1,
+                    transition: 'all 0.15s', lineHeight: 1,
                     minHeight: item.key === 'apps' ? 26 : 20,
-                    width: '100%',
-                    textAlign: 'center' as const,
+                    width: '100%', textAlign: 'center' as const,
                   }}
                   onMouseEnter={e => {
-                    if (!hasContent) return;
+                    if (!item.hasContent) return;
                     const el = e.currentTarget as HTMLButtonElement;
                     el.style.color = '#e5e7eb';
                     el.style.background = 'rgba(255,255,255,0.1)';
                   }}
                   onMouseLeave={e => {
                     const el = e.currentTarget as HTMLButtonElement;
-                    el.style.color = isActive ? '#a5b4fc' : hasContent ? '#9ca3af' : '#3f4451';
+                    el.style.color = isActive ? '#a5b4fc' : item.hasContent ? '#9ca3af' : '#3f4451';
                     el.style.background = isActive ? 'rgba(99,102,241,0.35)' : 'transparent';
                   }}
                 >
@@ -4694,13 +4794,9 @@ function App() {
         <div
           id="games-scroll-container"
           style={{
-            position: 'relative',
-            zIndex: 1,
-            flex: 1,
-            marginLeft: 36,
-            height: '100vh',
-            overflowY: 'scroll',
-            overflowX: 'hidden',
+            position: 'relative', zIndex: 1,
+            marginLeft: 36, height: '100vh',
+            overflowY: 'scroll', overflowX: 'hidden',
           }}
         >
           {/* Settings button */}
@@ -4712,12 +4808,8 @@ function App() {
               padding: '6px 11px',
               background: 'rgba(255,255,255,0.07)',
               border: '1px solid rgba(255,255,255,0.14)',
-              borderRadius: 9,
-              color: '#d1d5db',
-              fontSize: 12,
-              fontWeight: 500,
-              cursor: 'pointer',
-              backdropFilter: 'blur(8px)',
+              borderRadius: 9, color: '#d1d5db', fontSize: 12, fontWeight: 500,
+              cursor: 'pointer', backdropFilter: 'blur(8px)',
               transition: 'background 0.2s, border-color 0.2s',
             }}
             onMouseEnter={e => {
@@ -4733,27 +4825,18 @@ function App() {
             Settings
           </button>
 
-          {/* Sticky full-width header — edge-to-edge blur */}
+          {/* Sticky full-width header — edge-to-edge blur, no cutoff on top/sides */}
           <div style={{
-            position: 'sticky',
-            top: 0,
-            zIndex: 20,
-            left: 0,
-            right: 0,
+            position: 'sticky', top: 0, zIndex: 20,
             width: '100%',
             background: 'linear-gradient(to bottom, rgba(5,5,8,0.98) 0%, rgba(5,5,8,0.90) 50%, rgba(5,5,8,0.55) 80%, transparent 100%)',
             backdropFilter: 'blur(14px)',
             WebkitBackdropFilter: 'blur(14px)',
-            // Full edge-to-edge — no mask clipping on top/left/right
             WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 60%, transparent 100%)',
             maskImage: 'linear-gradient(to bottom, black 0%, black 60%, transparent 100%)',
             textAlign: 'center',
-            paddingTop: 20,
-            paddingBottom: 44,
-            marginBottom: 8,
-            // Extend to cover full width including sidebar gap
-            marginLeft: -36,
-            paddingLeft: 36,
+            paddingTop: 20, paddingBottom: 44, marginBottom: 8,
+            marginLeft: -36, paddingLeft: 36,
           }}>
             <h1 style={{ fontSize: 32, fontWeight: 700, color: '#fff', marginBottom: 10, letterSpacing: '-0.02em' }}>Choose Your Application</h1>
             <button
@@ -4762,54 +4845,23 @@ function App() {
             >
               Back to Search
             </button>
-            <div style={{ display: 'flex', alignItems: 'center', background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 9999, maxWidth: 360, margin: '0 auto', overflow: 'hidden', height: 36 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '0 14px', flex: 1 }}>
-                <Search size={14} color="#6b7280" style={{ flexShrink: 0 }} />
-                <input
-                  type="text"
-                  value={gameSearchDisplay}
-                  onChange={handleGameSearchChange}
-                  onKeyDown={e => { if (e.key === 'Backspace') e.stopPropagation(); }}
-                  placeholder="Search games..."
-                  style={{ flex: 1, outline: 'none', background: 'transparent', color: '#f3f4f6', fontSize: 13, border: 'none' }}
-                />
-              </div>
-              <div style={{
-                width: gameSearchDisplay ? 48 : 0,
-                overflow: 'hidden',
-                transition: 'width 0.5s cubic-bezier(0.4,0,0.2,1)',
-                flexShrink: 0,
-                height: '100%',
-              }}>
-                <button
-                  onClick={() => { setGameSearchDisplay(''); setGameSearch(''); }}
-                  style={{
-                    width: 48,
-                    height: '100%',
-                    background: 'rgba(239,68,68,0.18)',
-                    border: 'none',
-                    borderLeft: '1px solid rgba(239,68,68,0.25)',
-                    color: '#f87171',
-                    cursor: 'pointer',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: 16,
-                    fontWeight: 700,
-                    transition: 'background 0.15s',
-                    flexShrink: 0,
-                  }}
-                  onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(239,68,68,0.35)'; }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(239,68,68,0.18)'; }}
-                  aria-label="Clear search"
-                >
-                  <X size={15} strokeWidth={2.5} />
-                </button>
-              </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '7px 14px', background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 9999, maxWidth: 360, margin: '0 auto' }}>
+              <Search size={14} color="#6b7280" style={{ flexShrink: 0 }} />
+              <input
+                type="text"
+                value={gameSearchDisplay}
+                onChange={handleGameSearchChange}
+                onKeyDown={e => { if (e.key === 'Backspace') e.stopPropagation(); }}
+                placeholder="Search games..."
+                style={{ flex: 1, outline: 'none', background: 'transparent', color: '#f3f4f6', fontSize: 13, border: 'none' }}
+              />
+              {gameSearchDisplay && (
+                <button onClick={() => { setGameSearchDisplay(''); setGameSearch(''); }} style={{ background: 'none', border: 'none', color: '#6b7280', fontSize: 16, cursor: 'pointer', lineHeight: 1 }}>×</button>
+              )}
             </div>
           </div>
 
-          {/* Content area */}
+          {/* Content */}
           <div style={{ padding: '0 20px 40px 20px', maxWidth: 1400, margin: '0 auto' }}>
 
             {filteredApps.length === 0 && filteredGameItems.length === 0 ? (
@@ -4822,35 +4874,37 @@ function App() {
               <>
                 {/* ── APPS SECTION ── */}
                 {filteredApps.length > 0 && (
+                  <div ref={appsRef} style={{ marginBottom: 32, scrollMarginTop: 60 }}>
+                    {renderSectionHeader('APPS')}
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 14 }}>
+                      {filteredApps.map(game => renderCard(game))}
+                    </div>
+                  </div>
+                )}
+
+                {/* ── # SECTION (numeric titles) — between Apps and A ── */}
+                {activeSections.includes('#') && (
                   <div
-                    ref={appsRef}
-                    style={{ marginBottom: 36, scrollMarginTop: 168 }}
+                    ref={el => { sectionRefs['#'] = el; }}
+                    style={{ marginBottom: 32, scrollMarginTop: 60 }}
                   >
-                    <SectionHeader label="Apps" />
-                    <div style={{
-                      display: 'grid',
-                      gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))',
-                      gap: 12,
-                    }}>
-                      {filteredApps.map(game => <GameCard key={game.id} game={game} />)}
+                    {renderSectionHeader('#')}
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 14 }}>
+                      {letterGroups['#'].map(game => renderCard(game))}
                     </div>
                   </div>
                 )}
 
                 {/* ── A–Z LETTER SECTIONS ── */}
-                {activeLetters.map(letter => (
+                {LETTERS.filter(l => (letterGroups[l]?.length ?? 0) > 0).map(letter => (
                   <div
                     key={letter}
-                    ref={el => { letterRefs.current[letter] = el; }}
-                    style={{ marginBottom: 32, scrollMarginTop: 168 }}
+                    ref={el => { sectionRefs[letter] = el; }}
+                    style={{ marginBottom: 32, scrollMarginTop: 60 }}
                   >
-                    <SectionHeader label={letter} />
-                    <div style={{
-                      display: 'grid',
-                      gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))',
-                      gap: 12,
-                    }}>
-                      {letterGroups[letter].map(game => <GameCard key={game.id} game={game} />)}
+                    {renderSectionHeader(letter)}
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 14 }}>
+                      {letterGroups[letter].map(game => renderCard(game))}
                     </div>
                   </div>
                 ))}
