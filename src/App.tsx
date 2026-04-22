@@ -3262,7 +3262,7 @@ function SettingsModal({ onClose, settings, onChange }: {
       onClick={e => { if (e.target === e.currentTarget) handleClose(); }}>
       <div style={{
         background: '#0f1117', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 20,
-        width: '90%', maxWidth: 680, maxHeight: '85vh', display: 'flex', flexDirection: 'column',
+        width: '90%', maxWidth: 680, height: 600, display: 'flex', flexDirection: 'column',
         overflow: 'hidden', boxShadow: '0 32px 80px rgba(0,0,0,0.6)',
         transform: visible ? 'scale(1) translateY(0)' : 'scale(0.95) translateY(12px)',
         opacity: visible ? 1 : 0,
@@ -4810,7 +4810,7 @@ function App() {
           id="games-scroll-container"
           style={{
             position: 'relative', zIndex: 1,
-            marginLeft: 36, height: '100vh',
+            flex: 1, minWidth: 0, height: '100vh',
             overflowY: 'scroll', overflowX: 'hidden',
           }}
         >
@@ -4851,7 +4851,6 @@ function App() {
             maskImage: 'linear-gradient(to bottom, black 0%, black 60%, transparent 100%)',
             textAlign: 'center',
             paddingTop: 20, paddingBottom: 44, marginBottom: 8,
-            marginLeft: -36, paddingLeft: 36,
           }}>
             <h1 style={{ fontSize: 32, fontWeight: 700, color: '#fff', marginBottom: 10, letterSpacing: '-0.02em' }}>Choose Your Application</h1>
             <button
