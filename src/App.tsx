@@ -4876,7 +4876,7 @@ function App() {
           </div>
 
           {/* Content */}
-          <div style={{ padding: '0 20px 40px 20px' }}>
+          <div style={{ padding: '0 20px 40px 56px' }}>
 
             {filteredApps.length === 0 && filteredGameItems.length === 0 ? (
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', paddingTop: 80, textAlign: 'center' }}>
