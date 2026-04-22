@@ -2837,7 +2837,7 @@ function applyTheme(settings: AppSettings) {
         background: rgba(255,255,255,0.035) !important;
         border: 1px solid rgba(255,255,255,0.09) !important;
         border-radius: 14px !important;
-        backdrop-filter: blur(8px) !important;
+        backdrop-filter: blur(5px) !important;
         transition: background 0.22s, border-color 0.22s, transform 0.22s, box-shadow 0.22s !important;
       }
       .games-card:hover {
@@ -2853,7 +2853,7 @@ function applyTheme(settings: AppSettings) {
         background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 60%, rgba(120,180,255,0.08) 100%) !important;
         border: 1px solid rgba(255,255,255,0.22) !important;
         border-radius: 18px !important;
-        backdrop-filter: blur(20px) saturate(1.8) !important;
+        backdrop-filter: blur(16px) saturate(1.8) !important;
         box-shadow: 0 2px 16px rgba(120,180,255,0.10), inset 0 1px 0 rgba(255,255,255,0.18) !important;
         transition: all 0.28s cubic-bezier(0.4,0,0.2,1) !important;
         position: relative !important;
@@ -2900,7 +2900,7 @@ function applyTheme(settings: AppSettings) {
         background: linear-gradient(135deg, rgba(40,10,60,0.7) 0%, rgba(10,30,60,0.65) 50%, rgba(10,50,40,0.6) 100%) !important;
         border: 1px solid rgba(120,40,200,0.4) !important;
         border-radius: 16px !important;
-        backdrop-filter: blur(12px) !important;
+        backdrop-filter: blur(10px) !important;
         animation: aurora-card-glow 4s ease-in-out infinite !important;
         transition: transform 0.25s ease, background 0.25s ease !important;
       }
