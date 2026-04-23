@@ -4669,7 +4669,20 @@ function App() {
       setActiveSideSection(key);
       const container = document.getElementById('games-scroll-container');
       if (!container) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
-      const scrollOffset = container.scrollTop + el.getBoundingClientRect().top - container.getBoundingClientRect().top - 8;
+
+      // Measure the sticky header height dynamically so the section title
+      // lands comfortably below it with an extra 16 px breathing room.
+      const stickyHeader = container.querySelector('[data-games-header]') as HTMLElement | null;
+      const headerHeight = stickyHeader ? stickyHeader.offsetHeight : 130;
+      const MARGIN = 16; // extra gap below header
+
+      const scrollOffset =
+        container.scrollTop +
+        el.getBoundingClientRect().top -
+        container.getBoundingClientRect().top -
+        headerHeight -
+        MARGIN;
+
       // Custom 1-second eased scroll
       const startY = container.scrollTop;
       const diff = scrollOffset - startY;
@@ -4854,7 +4867,7 @@ function App() {
           </button>
 
           {/* Sticky full-width header — edge-to-edge blur, no cutoff on top/sides */}
-          <div style={{
+          <div data-games-header style={{
             position: 'sticky', top: 0, zIndex: 20,
             width: '100%',
             background: 'linear-gradient(to bottom, rgba(5,5,8,0.98) 0%, rgba(5,5,8,0.90) 50%, rgba(5,5,8,0.55) 80%, transparent 100%)',
@@ -4872,18 +4885,70 @@ function App() {
             >
               Back to Search
             </button>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '7px 14px', background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 9999, maxWidth: 360, margin: '0 auto' }}>
-              <Search size={14} color="#6b7280" style={{ flexShrink: 0 }} />
-              <input
-                type="text"
-                value={gameSearchDisplay}
-                onChange={handleGameSearchChange}
-                onKeyDown={e => { if (e.key === 'Backspace') e.stopPropagation(); }}
-                placeholder="Search games..."
-                style={{ flex: 1, outline: 'none', background: 'transparent', color: '#f3f4f6', fontSize: 13, border: 'none' }}
-              />
+            <div style={{ position: 'relative', display: 'flex', alignItems: 'center', maxWidth: 360, margin: '0 auto' }}>
+              <style>{`
+                @keyframes clearBtnSlideIn {
+                  from { opacity: 0; transform: translateX(8px) scaleX(0.85); }
+                  to   { opacity: 1; transform: translateX(0) scaleX(1); }
+                }
+                @keyframes clearBtnSlideOut {
+                  from { opacity: 1; transform: translateX(0) scaleX(1); }
+                  to   { opacity: 0; transform: translateX(8px) scaleX(0.85); }
+                }
+                .search-clear-btn {
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  bottom: 0;
+                  width: 42px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  background: rgba(220, 38, 38, 0.75);
+                  border: none;
+                  border-radius: 0 9999px 9999px 0;
+                  color: #fff;
+                  font-size: 15px;
+                  font-weight: 700;
+                  cursor: pointer;
+                  transition: background 0.18s;
+                  transform-origin: right center;
+                  animation: clearBtnSlideIn 0.22s cubic-bezier(0.34,1.56,0.64,1) both;
+                  outline: none;
+                  line-height: 1;
+                  padding: 0;
+                }
+                .search-clear-btn:hover { background: rgba(220, 38, 38, 1); }
+                .search-clear-btn:focus-visible { box-shadow: 0 0 0 2px #f87171; }
+              `}</style>
+              <div style={{
+                display: 'flex', alignItems: 'center', gap: 8,
+                padding: '7px 14px', paddingRight: gameSearchDisplay ? '50px' : '14px',
+                background: 'rgba(255,255,255,0.07)',
+                border: '1px solid rgba(255,255,255,0.15)',
+                borderRadius: 9999,
+                width: '100%',
+                transition: 'padding-right 0.22s',
+              }}>
+                <Search size={14} color="#6b7280" style={{ flexShrink: 0 }} />
+                <input
+                  type="text"
+                  value={gameSearchDisplay}
+                  onChange={handleGameSearchChange}
+                  onKeyDown={e => { if (e.key === 'Backspace') e.stopPropagation(); }}
+                  placeholder="Search games..."
+                  style={{ flex: 1, outline: 'none', background: 'transparent', color: '#f3f4f6', fontSize: 13, border: 'none' }}
+                />
+              </div>
               {gameSearchDisplay && (
-                <button onClick={() => { setGameSearchDisplay(''); setGameSearch(''); }} style={{ background: 'none', border: 'none', color: '#6b7280', fontSize: 16, cursor: 'pointer', lineHeight: 1 }}>×</button>
+                <button
+                  className="search-clear-btn"
+                  onClick={() => { setGameSearchDisplay(''); setGameSearch(''); }}
+                  aria-label="Clear search"
+                  tabIndex={0}
+                >
+                  ✕
+                </button>
               )}
             </div>
           </div>
@@ -4901,7 +4966,7 @@ function App() {
               <>
                 {/* ── APPS SECTION ── */}
                 {filteredApps.length > 0 && (
-                  <div ref={appsRef} style={{ marginBottom: 32, scrollMarginTop: 60 }}>
+                  <div ref={appsRef} style={{ marginBottom: 32, scrollMarginTop: 150 }}>
                     {renderSectionHeader('APPS')}
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 14 }}>
                       {filteredApps.map(game => renderCard(game))}
@@ -4913,7 +4978,7 @@ function App() {
                 {activeSections.includes('#') && (
                   <div
                     ref={el => { sectionRefs['#'] = el; }}
-                    style={{ marginBottom: 32, scrollMarginTop: 60 }}
+                    style={{ marginBottom: 32, scrollMarginTop: 150 }}
                   >
                     {renderSectionHeader('#')}
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 14 }}>
@@ -4927,7 +4992,7 @@ function App() {
                   <div
                     key={letter}
                     ref={el => { sectionRefs[letter] = el; }}
-                    style={{ marginBottom: 32, scrollMarginTop: 60 }}
+                    style={{ marginBottom: 32, scrollMarginTop: 150 }}
                   >
                     {renderSectionHeader(letter)}
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 14 }}>
