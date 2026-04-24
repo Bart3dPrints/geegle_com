@@ -52,6 +52,7 @@ const games = [
   // Apps (proxies + tools) — keep in current positions
   { id: 'chat-bot', name: 'Chat Bot (A.I)', url: '/games/Chat%20Bot%20(A._.I)%20(1).html', icon: '🤖' },
   { id: 'code-editor', name: 'Code Editor', url: '/games/Code%20Editor%20(1).html', icon: '💻' },
+  { id: 'boredom', name: 'Boredom V2 Proxy', url: '/games/boredom.html', icon: '🌐' },
   { id: 'doge', name: 'Dogeub Proxy', url: '/games/doge.html', icon: '🌐' },
   { id: 'heilos', name: 'Heilos Proxy', url: '/games/heilos.html', icon: '🌐' },
   { id: 'lucide', name: 'Lucide Proxy', url: '/games/lucide.html', icon: '🌐' },
