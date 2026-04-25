@@ -4616,7 +4616,7 @@ function App() {
   if (page === 'games') {
 
     // Split apps vs games
-    const APP_IDS = new Set(['suggestions','chat-bot','code-editor','doge','heilos','lucide','overcloaked','soundboard','vapor','voidproxy1']);
+    const APP_IDS = new Set(['suggestions','chat-bot','code-editor','boredom','doge','heilos','lucide','overcloaked','soundboard','vapor','voidproxy1']);
     const appItems = games.filter(g => APP_IDS.has(g.id));
 
     // Sort key: strip leading articles for alphabetical sort
