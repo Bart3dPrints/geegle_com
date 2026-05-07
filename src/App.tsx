@@ -4414,7 +4414,7 @@ function EasterEggPopup({ onClose }: { onClose: () => void }) {
         <div style={{ fontSize: 40, marginBottom: 12 }}>🎉</div>
         <h2 style={{ color: '#facc15', fontSize: 24, fontWeight: 700, marginBottom: 16 }}>CONGRATS!!!</h2>
         <p style={{ color: '#fff', fontSize: 14, lineHeight: 1.7, margin: '0 0 24px' }}>
-          Email <a href="mailto:hongbowang0821@gmail.com" style={{ color: '#60a5fa' }}>hongbowang0821@gmail.com</a> for his special method of making fries.. make sure to talk about how delicious potato fries are in the email or he wont believe you...
+          I know I'm awesome, but you're too late. If you came here on 2/28/26 - 4/28/26 you would've gotten my way of blocking Goguardian. Check back soon, I might do this again, with another key word!
         </p>
         <button onClick={handleClose} style={{ background: '#facc15', color: '#000', border: 'none', borderRadius: 8, padding: '10px 32px', fontSize: 15, fontWeight: 600, cursor: 'pointer' }}>
           Close
@@ -4503,13 +4503,12 @@ function App() {
   };
 
   const handleMainSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.value === 'Bart is Awesome') setShowEasterEgg(true);
+    // easter egg only triggers on Enter (form submit), not on change
   };
 
   const handleGameSearchChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const raw = e.target.value;
     setGameSearchDisplay(raw);
-    if (raw === 'Bart is Awesome') setShowEasterEgg(true);
     if (debounceRef.current) clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => setGameSearch(raw), 200);
   }, []);
