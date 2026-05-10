@@ -4447,6 +4447,25 @@ function App() {
   const [activeSideSection, setActiveSideSection] = useState<'apps'|'games'|null>(null);
   const appsRef = useRef<HTMLDivElement>(null);
   const gamesRef = useRef<HTMLDivElement>(null);
+  const favoritesRef = useRef<HTMLDivElement>(null);
+
+  const [favorites, setFavorites] = useState<Set<string>>(() => {
+    try {
+      const stored = localStorage.getItem('geegle_favorites');
+      return new Set(stored ? JSON.parse(stored) : []);
+    } catch { return new Set(); }
+  });
+
+  const toggleFavorite = (id: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    setFavorites(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      localStorage.setItem('geegle_favorites', JSON.stringify([...next]));
+      return next;
+    });
+  };
 
   // Apply theme on mount and when settings change
   useEffect(() => { applyTheme(settings); applyCloak(settings); }, [settings]);
@@ -4664,7 +4683,7 @@ function App() {
     const sectionRefs: Record<string, HTMLDivElement | null> = {};
 
     const scrollToKey = (key: string) => {
-      const el = key === 'apps' ? appsRef.current : sectionRefs[key];
+      const el = key === 'favs' ? favoritesRef.current : key === 'apps' ? appsRef.current : sectionRefs[key];
       if (!el) return;
       setActiveSideSection(key);
       const container = document.getElementById('games-scroll-container');
@@ -4698,52 +4717,74 @@ function App() {
       setTimeout(() => setActiveSideSection(null), 1200);
     };
 
-    // Sidebar items: Apps, #, A–Z
+    const favItems = games.filter(g => favorites.has(g.id));
+    const hasFavs = favItems.length > 0;
+
+    // Sidebar items: Fav (if any), Apps, #, A–Z
     const sidebarItems = [
+      ...(hasFavs ? [{ key: 'favs', label: 'Fav', hasContent: true }] : []),
       { key: 'apps', label: 'Apps', hasContent: filteredApps.length > 0 },
       { key: '#',    label: '#',    hasContent: (letterGroups['#']?.length ?? 0) > 0 },
       ...LETTERS.map(l => ({ key: l, label: l, hasContent: (letterGroups[l]?.length ?? 0) > 0 })),
     ];
 
     // Shared card renderer — proper grid card (column layout)
-    const renderCard = (game: typeof games[0]) => (
-      <button
-        key={game.id}
-        className="games-card"
-        onClick={() => playGame(game.id, game.url)}
-        style={{
-          background: 'rgba(255,255,255,0.03)',
-          border: '1px solid rgba(255,255,255,0.08)',
-          borderRadius: 12,
-          padding: '18px 12px',
-          cursor: 'pointer',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: 8,
-          transition: 'background 0.22s, border-color 0.22s, transform 0.22s, box-shadow 0.22s',
-          backdropFilter: 'blur(6px)',
-          minHeight: 100,
-        }}
-        onMouseEnter={e => {
-          const el = e.currentTarget as HTMLButtonElement;
-          el.style.background = 'rgba(255,255,255,0.08)';
-          el.style.borderColor = `${settings.themeColor}99`;
-          el.style.transform = 'scale(1.04) translateY(-2px)';
-          el.style.boxShadow = `0 6px 24px ${settings.themeColor}33`;
-        }}
-        onMouseLeave={e => {
-          const el = e.currentTarget as HTMLButtonElement;
-          el.style.background = 'rgba(255,255,255,0.03)';
-          el.style.borderColor = 'rgba(255,255,255,0.08)';
-          el.style.transform = 'scale(1) translateY(0)';
-          el.style.boxShadow = 'none';
-        }}
-      >
-        <div style={{ fontSize: 32 }}>{game.icon}</div>
-        <span style={{ color: '#f3f4f6', fontSize: 11, fontWeight: 600, textAlign: 'center', lineHeight: 1.3 }}>{formatGameName(game.name)}</span>
-      </button>
-    );
+    const renderCard = (game: typeof games[0]) => {
+      const isFav = favorites.has(game.id);
+      return (
+        <div key={game.id} style={{ position: 'relative' }}>
+          <button
+            className={`fav-star${isFav ? ' active' : ''}`}
+            onClick={e => {
+              const el = e.currentTarget as HTMLButtonElement;
+              el.classList.add('animating');
+              setTimeout(() => el.classList.remove('animating'), 250);
+              toggleFavorite(game.id, e);
+            }}
+            title={isFav ? 'Remove from favorites' : 'Add to favorites'}
+            aria-label={isFav ? 'Remove from favorites' : 'Add to favorites'}
+          >
+            ★
+          </button>
+          <button
+            className="games-card"
+            onClick={() => playGame(game.id, game.url)}
+            style={{
+              background: 'rgba(255,255,255,0.03)',
+              border: '1px solid rgba(255,255,255,0.08)',
+              borderRadius: 12,
+              padding: '18px 12px',
+              cursor: 'pointer',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: 8,
+              transition: 'background 0.22s, border-color 0.22s, transform 0.22s, box-shadow 0.22s',
+              backdropFilter: 'blur(6px)',
+              minHeight: 100,
+              width: '100%',
+            }}
+            onMouseEnter={e => {
+              const el = e.currentTarget as HTMLButtonElement;
+              el.style.background = 'rgba(255,255,255,0.08)';
+              el.style.borderColor = `${settings.themeColor}99`;
+              el.style.transform = 'scale(1.04) translateY(-2px)';
+              el.style.boxShadow = `0 6px 24px ${settings.themeColor}33`;
+            }}
+            onMouseLeave={e => {
+              const el = e.currentTarget as HTMLButtonElement;
+              el.style.background = 'rgba(255,255,255,0.03)';
+              el.style.borderColor = 'rgba(255,255,255,0.08)';
+              el.style.transform = 'scale(1) translateY(0)';
+              el.style.boxShadow = 'none';
+            }}
+          >
+            <div style={{ fontSize: 32 }}>{game.icon}</div>
+            <span style={{ color: '#f3f4f6', fontSize: 11, fontWeight: 600, textAlign: 'center', lineHeight: 1.3 }}>{formatGameName(game.name)}</span>
+          </button>
+        </div>
+      );
+    };
 
     // Shared section header renderer — blur fade on all 4 sides
     const renderSectionHeader = (label: string) => (
@@ -4895,6 +4936,43 @@ function App() {
                   from { opacity: 1; transform: translateX(0) scaleX(1); }
                   to   { opacity: 0; transform: translateX(8px) scaleX(0.85); }
                 }
+                @keyframes starPop {
+                  0%   { transform: scale(1); }
+                  50%  { transform: scale(1.5); }
+                  100% { transform: scale(1); }
+                }
+                .fav-star {
+                  position: absolute;
+                  top: 7px;
+                  left: 7px;
+                  width: 22px;
+                  height: 22px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  background: rgba(0,0,0,0.5);
+                  border: 1.5px solid rgba(255,255,255,0.25);
+                  border-radius: 50%;
+                  cursor: pointer;
+                  z-index: 10;
+                  font-size: 12px;
+                  line-height: 1;
+                  transition: color 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+                  color: rgba(255,255,255,0.4);
+                }
+                .fav-star:hover {
+                  background: rgba(0,0,0,0.7);
+                  border-color: rgba(255,215,0,0.6);
+                  color: rgba(255,215,0,0.8);
+                }
+                .fav-star.active {
+                  color: #facc15;
+                  border-color: rgba(250,204,21,0.7);
+                  background: rgba(0,0,0,0.6);
+                }
+                .fav-star.animating {
+                  animation: starPop 0.25s cubic-bezier(0.34,1.56,0.64,1) both;
+                }
                 .search-clear-btn {
                   position: absolute;
                   right: 0;
@@ -4964,6 +5042,16 @@ function App() {
               </div>
             ) : (
               <>
+                {/* ── FAVORITES SECTION ── */}
+                {hasFavs && !gameSearch.trim() && (
+                  <div ref={favoritesRef} style={{ marginBottom: 32, scrollMarginTop: 150 }}>
+                    {renderSectionHeader('Favorites')}
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 14 }}>
+                      {favItems.map(game => renderCard(game))}
+                    </div>
+                  </div>
+                )}
+
                 {/* ── APPS SECTION ── */}
                 {filteredApps.length > 0 && (
                   <div ref={appsRef} style={{ marginBottom: 32, scrollMarginTop: 150 }}>
