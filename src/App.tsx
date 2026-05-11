@@ -39,7 +39,7 @@ function formatGameName(name: string): string {
   }).join(' ');
 }
 
-const PROXY_GAME_IDS = new Set(['heilos', 'doge', 'vapor', 'lucide', 'overcloaked', 'voidproxy1', 'celestial']);
+const PROXY_GAME_IDS = new Set(['heilos', 'doge', 'vapor', 'lucide', '', 'voidproxy1', 'celestial']);
 const DONT_SHOW_POPUP = 'geegle_popup_dismissed';
 
 // ── Game list ─────────────────────────────────────────────────────────────────
@@ -56,7 +56,7 @@ const games = [
   { id: 'doge', name: 'Dogeub Proxy', url: '/games/doge.html', icon: '🌐' },
   { id: 'heilos', name: 'Heilos Proxy', url: '/games/heilos.html', icon: '🌐' },
   { id: 'lucide', name: 'Lucide Proxy', url: '/games/lucide.html', icon: '🌐' },
-  { id: 'overcloaked', name: 'Xylora Proxy', url: '/games/overcloaked.html', icon: '🌐' },
+  { id: 'xylora', name: 'Xylora Proxy', url: '/games/xylora.html', icon: '🌐' },
   { id: 'soundboard', name: 'Soundboard', url: '/games/Soundboard.html', icon: '🔊' },
   { id: 'vapor', name: 'Vapor V4 Proxy', url: '/games/vapor.html', icon: '🌐' },
   { id: 'voidproxy1', name: 'Void Proxy', url: '/games/voidproxy1.html', icon: '🌐' },
@@ -2765,7 +2765,7 @@ const games = [
 
 const proxies = [
   { id: 'proxy1', name: 'Proxy 1', url: '/proxies/fernproxy.html' },
-  { id: 'proxy2', name: 'Proxy 2', url: '/proxies/overcloakedproxy.html' },
+  { id: 'proxy2', name: 'Proxy 2', url: '/proxies/xyloraproxy.html' },
   { id: 'proxy3', name: 'Proxy 3', url: '/proxies/voidproxy.html' },
 ];
 
@@ -4634,7 +4634,7 @@ function App() {
   if (page === 'games') {
 
     // Split apps vs games
-    const APP_IDS = new Set(['suggestions','chat-bot','code-editor','celestial','doge','heilos','lucide','overcloaked','soundboard','vapor','voidproxy1']);
+    const APP_IDS = new Set(['suggestions','chat-bot','code-editor','celestial','doge','heilos','lucide','xylora','soundboard','vapor','voidproxy1']);
     const appItems = games.filter(g => APP_IDS.has(g.id));
 
     // Sort key: strip leading articles for alphabetical sort
