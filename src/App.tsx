@@ -39,7 +39,7 @@ function formatGameName(name: string): string {
   }).join(' ');
 }
 
-const PROXY_GAME_IDS = new Set(['heilos', 'doge', 'vapor', 'lucide', 'overcloaked', 'voidproxy1', 'boredom']);
+const PROXY_GAME_IDS = new Set(['heilos', 'doge', 'vapor', 'lucide', 'overcloaked', 'voidproxy1', 'celestial']);
 const DONT_SHOW_POPUP = 'geegle_popup_dismissed';
 
 // ── Game list ─────────────────────────────────────────────────────────────────
@@ -52,7 +52,7 @@ const games = [
   // Apps (proxies + tools) — keep in current positions
   { id: 'chat-bot', name: 'Chat Bot (A.I)', url: '/games/Chat%20Bot%20(A._.I)%20(1).html', icon: '🤖' },
   { id: 'code-editor', name: 'Code Editor', url: '/games/Code%20Editor%20(1).html', icon: '💻' },
-  { id: 'boredom', name: 'Celestial Proxy', url: '/games/boredom.html', icon: '🌐' },
+  { id: 'celestial', name: 'Celestial Proxy', url: '/games/celestial.html', icon: '🌐' },
   { id: 'doge', name: 'Dogeub Proxy', url: '/games/doge.html', icon: '🌐' },
   { id: 'heilos', name: 'Heilos Proxy', url: '/games/heilos.html', icon: '🌐' },
   { id: 'lucide', name: 'Lucide Proxy', url: '/games/lucide.html', icon: '🌐' },
@@ -4634,7 +4634,7 @@ function App() {
   if (page === 'games') {
 
     // Split apps vs games
-    const APP_IDS = new Set(['suggestions','chat-bot','code-editor','boredom','doge','heilos','lucide','overcloaked','soundboard','vapor','voidproxy1']);
+    const APP_IDS = new Set(['suggestions','chat-bot','code-editor','celestial','doge','heilos','lucide','overcloaked','soundboard','vapor','voidproxy1']);
     const appItems = games.filter(g => APP_IDS.has(g.id));
 
     // Sort key: strip leading articles for alphabetical sort
