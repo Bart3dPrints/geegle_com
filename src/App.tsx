@@ -5,7 +5,7 @@ function normalizeText(input: string): string {
   return input.toLowerCase().replace(/[^a-z0-9]/g, '');
 }
 function isCordKeyword(input: string): boolean {
-  return normalizeText(input) === 'cord';
+  return normalizeText(input) === 'pirate';
 }
 
 function formatGameName(name: string): string {
