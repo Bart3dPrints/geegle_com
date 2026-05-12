@@ -39,7 +39,7 @@ function formatGameName(name: string): string {
   }).join(' ');
 }
 
-const PROXY_GAME_IDS = new Set(['heilos', 'doge', 'vapor', 'lucide', '', 'voidproxy1', 'celestial']);
+const PROXY_GAME_IDS = new Set(['heilos', 'doge', 'vapor', 'lucide', '', 'voidproxy1', 'celestial', 'xylora']);
 const DONT_SHOW_POPUP = 'geegle_popup_dismissed';
 
 // ── Game list ─────────────────────────────────────────────────────────────────
