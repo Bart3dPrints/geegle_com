@@ -1,13 +1,15 @@
 {
-  "name": "vite-react-typescript-starter",
+  "name": "geegle",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/generate-catalog.mjs",
     "build": "vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
+    "generate:catalog": "node scripts/generate-catalog.mjs",
+    "lint": "eslint .",
     "typecheck": "tsc --noEmit -p tsconfig.app.json"
   },
   "dependencies": {
