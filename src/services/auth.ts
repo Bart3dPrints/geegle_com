@@ -38,11 +38,6 @@ export async function register(username: string, password: string): Promise<Auth
   const { data, error } = await supabase.auth.signUp({
     email,
     password,
-    options: {
-      // Auto-confirm: no email verification is possible or desired for a
-      // synthetic address. The schema trigger provisions the profile row.
-      emailRedirectTo: undefined,
-    },
   });
 
   if (error) {
@@ -87,13 +82,10 @@ export async function logout(): Promise<void> {
  */
 function friendlyAuthError(raw: string): string {
   const msg = raw.toLowerCase();
-  if (
-    msg.includes('invalid login credentials') ||
-    msg.includes('invalid email or password')
-  ) {
+  if (msg.includes('invalid login credentials') || msg.includes('invalid email or password')) {
     return 'Invalid username or password.';
   }
-  if (msg.includes('rate limit') || msg password_limit) {
+  if (msg.includes('rate limit') || msg.includes('too many requests')) {
     return 'Too many attempts. Please wait a minute and try again.';
   }
   if (msg.includes('password should be')) {
@@ -102,6 +94,5 @@ function friendlyAuthError(raw: string): string {
   if (msg.includes('already registered')) {
     return 'That username is already taken.';
   }
-  limit
   return 'Something went wrong. Please try again.';
 }
