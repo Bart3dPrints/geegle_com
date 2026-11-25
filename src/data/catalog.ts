@@ -3,13 +3,11 @@
  * search index, category filters, and launch actions.
  *
  * The legacy library is stored as compact pipe-delimited data in
- * src/data/raw/*.txt (format: id|title|primaryCategory). Launch paths follow
+ * src/data/raw/*.txt (format: id|title|categories). Launch paths follow
  * /games/{id}.html except where overridden in path-exceptions.txt.
  *
  * Data files are discovered with import.meta.glob and bundled at build time —
- * no runtime fetch, zero extra network requests. Adding a new letter file
- * requires no code change here. Missing letter files simply contribute no
- * games, so the branch always builds.
+ * no runtime fetch, zero extra network requests.
  */
 import type { Category, GameEntry } from './types';
 import { CATEGORIES } from './types';
@@ -20,7 +18,6 @@ const rawModules = import.meta.glob('./raw/*.txt', {
   eager: true,
 }) as Record<string, string>;
 
-/** Legacy file names that differ from the /games/{id}.html pattern. */
 const pathExceptions: Record<string, string> = {};
 {
   const exceptionsRaw = rawModules['./raw/path-exceptions.txt'] ?? '';
@@ -42,17 +39,15 @@ const TITLE_FIXES: Record<string, string> = {
   clbearbarians: 'Bearbarians',
   clbejeweledtwistflash: 'Bejeweled Twist (Flash)',
   clfuschiax: 'Fuchsia X',
-  clmist: 'MiST',
 };
 
 /** Extra search terms for well-known games and series. */
 const ALIASES: Record<string, string[]> = {
   cl1v1lol: ['1v1 lol', 'build fight', 'one vs one'],
   cl2048: ['numbers', 'merge tiles'],
-  clbadicecream: ['bad ice cream 1'],
   clbaldisbasics: ['baldi'],
   clbloonstd5: ['btd5', 'bloons tower defense 5'],
-  clhobo: ['hobo 1'],
+  clhobo: ['hobo 1', 'hobo brawl', 'seethingswarm'],
   clhobo2: ['hobo 2'],
   clhobo3: ['hobo 3'],
   clhobo4: ['hobo 4'],
@@ -60,16 +55,70 @@ const ALIASES: Record<string, string[]> = {
   clhobo6: ['hobo 6'],
   clhobo7: ['hobo 7'],
   clhobovszombies: ['hobo vs zombies'],
-  clstickminbreakingbank: ['henry stickmin', 'breaking the bank', 'stickmin'],
-  clstickminescapingprison: ['henry stickmin', 'escaping the prison', 'stickmin'],
-  clstickminstealingdiamond: ['henry stickmin', 'stealing the diamond', 'stickmin'],
-  clstickminfleecomplex: ['henry stickmin', 'fleeing the complex', 'stickmin'],
-  clstickminairship: ['henry stickmin', 'infiltrating the airship', 'stickmin'],
+  clstickminbreakingbank: ['henry stickmin', 'breaking the bank', 'stickman'],
+  clstickminescapingprison: ['henry stickmin', 'escaping the prison', 'stickman'],
+  clstickmanstealingdiamond: ['henry stickmin', 'stealing the diamond', 'stickman'],
+  clstickminfleecomplex: ['henry stickmin', 'fleeing the complex', 'stickman'],
+  clstickminairship: ['henry stickmin', 'infiltrating the airship', 'stickman'],
   clvampiresurvivors: ['vampire survivors'],
   clfnfsonicexe: ['sonic exe', 'fnf sonic'],
   clgeometrydashwave: ['geometry dash'],
   clslope: ['slope game'],
-  cltunnelrush: [' tunnel rush'],
+  cltunnelrush: ['tunnel rush'],
+};
+
+/** Derived secondary categories for accurate classification. */
+const CATEGORY_ADDITIONS: Record<string, Category[]> = {
+  clhobo: ['fighting'],
+  clhobo2: ['fighting'],
+  clhobo3: ['fighting'],
+  clhobo4: ['fighting'],
+  clhobo5: ['fighting'],
+  clhobo6: ['fighting'],
+  clhobo7: ['fighting'],
+  clhobovszombies: ['fighting'],
+  clmortalkombat: ['fighting'],
+  clmortalkombat2: ['fighting'],
+  clmortalkombat3: ['fighting'],
+  clmortalkombat4: ['fighting'],
+  clultimatemortalkombat: ['fighting'],
+  clultimatemortalkombat3: ['fighting'],
+  clstreetfighter2: ['fighting'],
+  clstreetfighteralpha3: ['fighting'],
+  clsupersmashbros: ['fighting'],
+  clsupersmashflash: ['fighting'],
+  clsupersmashflash2: ['fighting'],
+  cltekken2ps1: ['fighting'],
+  cltekken3ps1: ['fighting'],
+  clpunchout: ['fighting', 'sports'],
+  clsuperpunchout: ['fighting', 'sports'],
+  clbulletforce: ['shooting'],
+  clbuildnowgg: ['shooting'],
+  clpixelshooter: ['shooting'],
+  clmineshooter: ['shooting'],
+  clpixelgun: ['shooting'],
+  clpixelcombat2: ['shooting'],
+  clsnipershot: ['shooting'],
+  cljohnnytrigger: ['shooting'],
+  clfunnyshooter2: ['shooting'],
+  clcounterstrike16: ['shooting'],
+  clidlebreakout: ['idle', 'casual'],
+  clidleidlegamedev: ['idle'],
+  clidledice: ['idle'],
+  clantimatterdimensions: ['idle'],
+  clnguidle: ['idle'],
+  clmagetoweridle: ['idle'],
+  clcookieclicker: ['idle', 'casual'],
+  clrevolutionidle: ['idle'],
+  clprestigetree: ['idle'],
+  clomegalayers: ['idle'],
+  clspacebarclicker: ['idle'],
+  clquantumclicker: ['idle'],
+  clcsgoclicker: ['idle'],
+  clcapybaraclicker: ['idle'],
+  clomeganuggetclicker: ['idle'],
+  clhardwaretycoon: ['idle', 'simulation'],
+  clprocessor: ['idle', 'simulation'],
 };
 
 const legacyGames: GameEntry[] = [];
@@ -80,11 +129,16 @@ for (const [fileName, raw] of Object.entries(rawModules)) {
     if (!trimmed || trimmed.startsWith('#')) continue;
     const [id, title, cats] = trimmed.split('|');
     if (!id || !title || !cats) continue;
-    const categories = cats
+
+    const base = cats
       .split(',')
       .filter((c): c is Category => VALID_CATEGORIES.has(c as Category));
+    const extra = CATEGORY_ADDITIONS[id] ?? [];
+    const categories = [...new Set([...base, ...extra])];
+
     const fix = TITLE_FIXES[id];
     const alias = ALIASES[id];
+
     legacyGames.push({
       id,
       title: fix ?? title,

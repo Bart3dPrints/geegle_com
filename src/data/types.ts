@@ -1,7 +1,5 @@
-/**
- * Central catalog types. Single source of truth shared by every card grid,
- * the fuzzy-search index, and the category filter.
- */
+// Central catalog types. Single source of truth shared by every card grid,
+// the fuzzy-search index, and the category filter.
 
 export type Category =
   | 'action'
@@ -18,7 +16,10 @@ export type Category =
   | 'retro'
   | 'horror'
   | 'casual'
-  | 'rhythm';
+  | 'rhythm'
+  | 'shooting'
+  | 'fighting'
+  | 'idle';
 
 export type EntryKind = 'game' | 'app' | 'proxy' | 'stream';
 
@@ -33,11 +34,13 @@ export interface GameEntry {
   kind: EntryKind;
   /** Extra search terms: misspellings, series names, keywords. */
   aliases?: string[];
-  /** Artwork URL (16:9 preferred). */
+  /** Artwork URL (16:9 preferred). Overrides the automatic asset mapping. */
   thumb?: string;
   /** Provenance note for the audit trail. */
   source?: string;
   description?: string;
+  /** YouTube video id when kind === 'stream'. */
+  videoId?: string;
 }
 
 export interface CategoryDef {
@@ -62,4 +65,7 @@ export const CATEGORIES: CategoryDef[] = [
   { key: 'horror', label: 'Horror' },
   { key: 'casual', label: 'Casual' },
   { key: 'rhythm', label: 'Rhythm' },
+  { key: 'shooting', label: 'Shooting' },
+  { key: 'fighting', label: 'Fighting' },
+  { key: 'idle', label: 'Idle' },
 ];
