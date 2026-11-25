@@ -1,7 +1,6 @@
 // Geegle application shell — the redesigned main interface.
 // Sections: entry gate → header (brand, nav, search, theme, account) →
 // browse tabs (games by category, apps, proxies) → game player overlay.
-// Replaces the legacy 406KB monolith with composed modules.
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
@@ -35,9 +34,21 @@ import { GameCard, EmptyState } from './components/GameCard';
 import { SearchOverlay } from './components/SearchOverlay';
 import { GamePlayer } from './components/GamePlayer';
 import { ProxyCard } from './components/ProxyCard';
+import { YouTubeApp } from './components/YouTubeApp';
 
-// Apps are curated separately from the legacy game catalog.
+// Apps curated separately from the legacy game catalog.
 const APPS: GameEntry[] = [
+  {
+    id: 'youtube',
+    title: 'YouTube',
+    path: '',
+    categories: [],
+    kind: 'stream',
+    videoId: undefined,
+    aliases: ['yt', 'videos', 'streaming', 'stream'],
+    source: 'Official YouTube privacy-enhanced embed (youtube-nocookie.com)',
+    description: 'Play any YouTube video via the official embed.',
+  },
   {
     id: 'suggestions',
     title: 'Suggestions',
@@ -61,16 +72,6 @@ const APPS: GameEntry[] = [
     categories: [],
     kind: 'app',
     aliases: ['sounds', 'sfx'],
-  },
-  {
-    id: 'youtube',
-    title: 'YouTube',
-    path: 'https://www.youtube.com/',
-    categories: [],
-    kind: 'stream',
-    aliases: ['yt', 'videos', 'streaming', 'stream'],
-    source: 'YouTube official site',
-    description: 'YouTube search and playback via the official website.',
   },
 ];
 
@@ -112,7 +113,7 @@ export default function App() {
   const [gateBusy, setGateBusy] = useState(false);
 
   const auth = useAuth();
-  const signedIn = Boolean(auth.user);
+  const userId = auth.user?.id ?? null;
   const [authOpen, setAuthOpen] = useState(false);
   const [authMode, setAuthMode] = useState<'login' | 'register'>('login');
   const [authError, setAuthError] = useState<string | null>(null);
@@ -124,11 +125,13 @@ export default function App() {
   const [favorites, setFavorites] = useState<string[]>([]);
   const [recent, setRecent] = useState<string[]>([]);
   const [serverDefaults, setServerDefaults] = useState<Record<string, number>>({});
+  const [syncError, setSyncError] = useState<string | null>(null);
 
   const [tab, setTab] = useState<Tab>('games');
   const [category, setCategory] = useState('all');
   const [searchOpen, setSearchOpen] = useState(false);
   const [active, setActive] = useState<GameEntry | null>(null);
+  const [youtubeOpen, setYoutubeOpen] = useState(false);
   const [activeProxy, setActiveProxy] = useState<{
     url: string;
     title: string;
@@ -138,18 +141,23 @@ export default function App() {
     if (auth.loading) return;
     (async () => {
       const [f, r, servers, savedTheme] = await Promise.all([
-        loadFavorites(signedIn),
-        loadRecent(signedIn),
-        loadServerDefaults(signedIn),
-        loadTheme(signedIn),
+        loadFavorites(userId),
+        loadRecent(userId),
+        loadServerDefaults(userId),
+        loadTheme(userId),
       ]);
-      setFavorites(f);
-      setRecent(r);
-      setServerDefaults(servers);
-      if (savedTheme === 'dark' || savedTheme === 'light') setTheme(savedTheme);
+      if (f.ok && f.data) setFavorites(f.data);
+      else if (f.error) setSyncError(f.error);
+      if (r.ok && r.data) setRecent(r.data);
+      else if (r.error) setSyncError(r.error);
+      if (servers.ok && servers.data) setServerDefaults(servers.data);
+      else if (servers.error) setSyncError(servers.error);
+      const t = savedTheme.data;
+      if (savedTheme.ok && (t === 'dark' || t === 'light')) setTheme(t);
+      else if (savedTheme.error) setSyncError(savedTheme.error);
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [auth.loading, signedIn]);
+  }, [auth.loading, userId]);
 
   const handleAuth = async (mode: 'login' | 'register') => {
     setAuthBusy(true);
@@ -159,9 +167,8 @@ export default function App() {
         mode === 'login'
           ? await auth.signIn(authUsername, authPassword)
           : await auth.signUp(authUsername, authPassword);
-      if (error) {
-        setAuthError(error);
-      } else {
+      if (error) setAuthError(error);
+      else {
         setAuthOpen(false);
         setAuthPassword('');
       }
@@ -172,12 +179,17 @@ export default function App() {
 
   const launch = useCallback(
     async (g: GameEntry) => {
+      if (g.kind === 'stream' && g.id === 'youtube') {
+        setYoutubeOpen(true);
+        return;
+      }
       setActiveProxy(null);
       setActive(g);
-      const nextRecent = await trackPlay(g.id, signedIn);
-      setRecent(nextRecent);
+      const res = await trackPlay(g.id, userId);
+      if (res.ok && res.data) setRecent(res.data);
+      else if (res.error) setSyncError(res.error);
     },
-    [signedIn]
+    [userId]
   );
 
   const launchProxy = (serviceId: string, index: number) => {
@@ -188,15 +200,27 @@ export default function App() {
   };
 
   const toggleFav = async (gameId: string) => {
-    const next = await toggleFavorite(gameId, signedIn);
-    setFavorites(next);
+    const res = await toggleFavorite(gameId, userId);
+    if (res.ok && res.data) {
+      setFavorites(res.data);
+      setSyncError(null);
+    } else if (res.error) {
+      setSyncError(`Could not save favorite: ${res.error}`);
+    }
+  };
+
+  const handleTheme = (mode: ThemePreference) => {
+    setTheme(mode);
+    void saveTheme(mode, userId).then((res) => {
+      if (!res.ok && res.error) setSyncError(`Theme not synced: ${res.error}`);
+    });
   };
 
   const visibleGames = useMemo(
     () =>
       category === 'all'
         ? legacyCatalog
-        : legacyCatalog.filter((g) => g.categories.includes(category)),
+        : legacyCatalog.filter((g) => g.categories.includes(category as never)),
     [category]
   );
 
@@ -228,6 +252,12 @@ export default function App() {
             if (res.ok) setGateOpen(false);
             else if (res.reason === 'rate_limited')
               setGateError('Too many attempts. Try again in a few minutes.');
+            else if (res.reason === 'not_configured')
+              setGateError(
+                'The entry gate is not configured. Set up the Supabase edge function (see PR instructions).'
+              );
+            else if (res.reason === 'network')
+              setGateError('Could not reach the verification service. Try again.');
             else setGateError('Incorrect password.');
           }}
         >
@@ -273,6 +303,7 @@ export default function App() {
             onClick={() => {
               setActive(null);
               setActiveProxy(null);
+              setYoutubeOpen(false);
               setTab('games');
             }}
             aria-label="Geegle home"
@@ -305,6 +336,15 @@ export default function App() {
 
           <div className="flex-1" />
 
+          {syncError && (
+            <span
+              className="mr-2 hidden max-w-48 truncate text-xs text-amber-600 dark:text-amber-400 md:inline"
+              title={syncError}
+            >
+              {syncError}
+            </span>
+          )}
+
           <button
             className="btn-secondary gap-2 text-slate-500"
             onClick={() => setSearchOpen(true)}
@@ -332,10 +372,7 @@ export default function App() {
                     ? 'bg-blue-600 text-white'
                     : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800'
                 }`}
-                onClick={() => {
-                  setTheme(mode);
-                  void saveTheme(mode, signedIn);
-                }}
+                onClick={() => handleTheme(mode)}
                 aria-label={`${mode} theme`}
                 aria-pressed={theme === mode}
               >
@@ -346,8 +383,8 @@ export default function App() {
 
           {auth.user ? (
             <div className="flex items-center gap-2">
-              <span className="hidden text-sm text-slate-600 dark:text-slate-300 md:inline">
-                {auth.user.email?.split('@')[0] ?? 'user'}
+n              <span className="hidden text-sm text-slate-600 dark:text-slate-300 md:inline">
+                {auth.username}
               </span>
               <button className="btn-secondary" onClick={auth.signOut} aria-label="Log out">
                 <LogOut size={16} />
@@ -371,22 +408,8 @@ export default function App() {
           className="flex border-t border-slate-200 dark:border-slate-800 sm:hidden"
           aria-label="Sections"
         >
-          {(['games', 'apps', 'proxies'] as Tab[]).map((t) => (
-            <button
-              key={t}
-              className={`flex-1 px-3 py-2 text-sm font-medium capitalize ${
-                tab === t
-                  ? 'border-b-2 border-blue-600 text-blue-600 dark:text-blue-400'
-                  : 'text-slate-600 dark:text-slate-400'
-              }`}
-              onClick={() => {
-                setTab(t);
-                setActive(null);
-                setActiveProxy(null);
-              }}
-            >
-              {t}
-            </button>
+          {(['games', 'apps', 'proxies'] as Tab[]). 
+            ... [truncated for size] ...
           ))}
         </nav>
       </header>
@@ -445,7 +468,7 @@ export default function App() {
                 </p>
               )}
               <button className="btn-primary w-full" disabled={authBusy} type="submit">
-                {authBusy && <Loader2 className="animate-spin" size={16} />}
+                {authBusy && <Loader2 className="animate-sync" size={16} />}
                 {authMode === 'login' ? 'Sign in' : 'Create account'}
               </button>
             </form>
@@ -471,6 +494,8 @@ export default function App() {
           onLaunch={launch}
         />
       )}
+
+      {youtubeOpen && <YouTubeApp onExit={() => setYoutubeOpen(false)} />}
 
       {(active || activeProxy) && (
         <GamePlayer
@@ -524,7 +549,7 @@ export default function App() {
                   <button
                     key={c.key}
                     role="tab"
-                    aria-selected={category === c.key}
+                    aria-selected={cascade === c.key}
                     className={category === c.key ? 'chip-active' : 'chip'}
                     onClick={() => setCategory(c.key)}
                   >
@@ -547,7 +572,7 @@ export default function App() {
                       isFavorite={favorites.includes(g.id)}
                       onToggleFavorite={() => toggleFav(g.id)}
                     />
-                  ))}
+                  ))
                 </div>
               )}
             </section>
@@ -580,7 +605,12 @@ export default function App() {
                   selected={serverDefaults[service.id] ?? 0}
                   onSelect={async (index) => {
                     setServerDefaults((prev) => ({ ...prev, [service.id]: index }));
-                    await saveServerDefault(service.id, index, signedIn);
+                    const res = await saveServerDefault(service.id, index, userId);
+                    if (!res.ok && res.error) {
+                      setSyncError(`Server default not synced: ${res.error}`);
+                    } else {
+                      setSyncError(null);
+                    }
                   }}
                   onLaunch={(index) => launchProxy(service.id, index)}
                 />
@@ -591,7 +621,7 @@ export default function App() {
       </main>
 
       <footer className="border-t border-slate-200 py-8 text-center text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400">
-        Geegle — free web games. Build: overhaul-2026-11-25
+        Geegle — free web games. Build: overhaul-2026-11-25.2
       </footer>
     </div>
   );
