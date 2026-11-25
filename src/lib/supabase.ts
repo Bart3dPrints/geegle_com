@@ -7,6 +7,12 @@
 // them separate from other applications sharing this project.
 
 import { createClient } from '@supabase/supabase-js';
+import { installStorageGuard, platformStorage } from './storageGuard';
+
+// The session must be written to the real Storage, not the guarded facade that
+// hides it from same-origin game frames. Install the guard first, then keep
+// this private reference for our own client.
+installStorageGuard();
 
 const url = import.meta.env.VITE_SUPABASE_URL as string | undefined;
 const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
@@ -28,6 +34,8 @@ export const supabase = createClient(
       persistSession: true,
       autoRefreshToken: true,
       storageKey: 'geegle-auth-session',
+      // Never the guarded window.localStorage: it redacts this very key.
+      ...(platformStorage ? { storage: platformStorage } : {}),
     },
   }
 );
