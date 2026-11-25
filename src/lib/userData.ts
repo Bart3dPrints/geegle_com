@@ -2,6 +2,7 @@
 // indefinitely per the owner's cancellation of the inactivity-deletion feature.
 import { supabase, isSupabaseConfigured, T } from './supabase';
 import type { OpResult, ThemePreference } from '../types';
+import { parseAppearance, type LandingAppearance } from '../landing/appearance';
 
 function readJson(key: string): unknown { try { const raw = localStorage.getItem(key); return raw ? JSON.parse(raw) : null; } catch { return null; } }
 function writeJson(key: string, value: unknown): void { try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* Storage may be disabled. */ } }
@@ -38,6 +39,63 @@ export function writeThemeLocal(theme: ThemePreference) { try { localStorage.set
 export async function saveTheme(theme: ThemePreference, userId: string | null): Promise<OpResult<null>> { if (!userId || !isSupabaseConfigured) { writeThemeLocal(theme); return { ok: true }; } const { error } = await supabase.from(T.settings).upsert({ id: userId, theme }); return error ? { ok: false, error: error.message } : { ok: true }; }
 export async function loadTheme(userId: string | null): Promise<OpResult<string | null>> { if (!userId || !isSupabaseConfigured) { try { return { ok: true, data: localStorage.getItem(THEME_KEY) }; } catch { return { ok: true, data: null }; } } const { data, error } = await supabase.from(T.settings).select('theme').eq('id', userId).maybeSingle(); return error ? { ok: false, error: error.message } : { ok: true, data: data?.theme ?? null }; }
 export type ServerDefaults = Record<string, number>;
-export function readLocalServerDefaults(): ServerDefaults { const v = readJson(SERVERS_KEY); return v && typeof v === 'object' && !Array.isArray(v) ? v as ServerDefaults : {}; }
-export async function saveServerDefault(serviceId: string, index: number, userId: string | null): Promise<OpResult<null>> { if (!userId || !isSupabaseConfigured) { const current = readLocalServerDefaults(); current[serviceId] = index; writeJson(SERVERS_KEY, current); return { ok: true }; } const row = await supabase.from(T.settings).select('settings').eq('id', userId).maybeSingle(); if (row.error) return { ok: false, error: row.error.message }; const settings = (row.data?.settings ?? {}) as Record<string, unknown>; const servers = (settings.defaultServers ?? {}) as ServerDefaults; servers[serviceId] = index; settings.defaultServers = servers; const up = await supabase.from(T.settings).upsert({ id: userId, settings }); return up.error ? { ok: false, error: up.error.message } : { ok: true }; }
-export async function loadServerDefaults(userId: string | null): Promise<OpResult<ServerDefaults>> { if (!userId || !isSupabaseConfigured) return { ok: true, data: readLocalServerDefaults() }; const { data, error } = await supabase.from(T.settings).select('settings').eq('id', userId).maybeSingle(); if (error) return { ok: false, error: error.message }; const s = (data?.settings as Record<string, unknown> | undefined)?.defaultServers; return { ok: true, data: s && typeof s === 'object' && !Array.isArray(s) ? s as ServerDefaults : {} }; }
+
+function settingsObject(value: unknown): Record<string, unknown> {
+  return value && typeof value === 'object' && !Array.isArray(value) ? value as Record<string, unknown> : {};
+}
+
+function serverDefaults(value: unknown): ServerDefaults {
+  return Object.fromEntries(Object.entries(settingsObject(value)).filter((entry): entry is [string, number] => Number.isInteger(entry[1])));
+}
+
+async function updateSettings(
+  userId: string,
+  update: (settings: Record<string, unknown>) => Record<string, unknown>,
+): Promise<OpResult<null>> {
+  // The settings trigger advances updated_at on every update. Retrying a
+  // lost comparison preserves sibling preferences written by another tab.
+  for (let attempt = 0; attempt < 4; attempt += 1) {
+    const row = await supabase.from(T.settings).select('settings,updated_at').eq('id', userId).maybeSingle();
+    if (row.error) return { ok: false, error: row.error.message };
+    const settings = update(settingsObject(row.data?.settings));
+    const write = row.data
+      ? supabase.from(T.settings).update({ settings }).eq('id', userId).eq('updated_at', row.data.updated_at)
+      : supabase.from(T.settings).upsert({ id: userId, settings }, { onConflict: 'id', ignoreDuplicates: true });
+    const applied = await write.select('id').maybeSingle();
+    if (applied.error) return { ok: false, error: applied.error.message };
+    if (applied.data) return { ok: true };
+  }
+  return { ok: false, error: 'Your settings changed on another device. Try saving again.' };
+}
+
+export function readLocalServerDefaults(): ServerDefaults {
+  return serverDefaults(readJson(SERVERS_KEY));
+}
+
+export async function saveServerDefault(serviceId: string, index: number, userId: string | null): Promise<OpResult<null>> {
+  if (!userId || !isSupabaseConfigured) {
+    writeJson(SERVERS_KEY, { ...readLocalServerDefaults(), [serviceId]: index });
+    return { ok: true };
+  }
+  return updateSettings(userId, (settings) => ({
+    ...settings,
+    defaultServers: { ...serverDefaults(settings.defaultServers), [serviceId]: index },
+  }));
+}
+
+export async function loadServerDefaults(userId: string | null): Promise<OpResult<ServerDefaults>> {
+  if (!userId || !isSupabaseConfigured) return { ok: true, data: readLocalServerDefaults() };
+  const { data, error } = await supabase.from(T.settings).select('defaults:settings->defaultServers').eq('id', userId).maybeSingle();
+  return error ? { ok: false, error: error.message } : { ok: true, data: serverDefaults(data?.defaults) };
+}
+
+export async function loadLandingAppearance(userId: string): Promise<OpResult<LandingAppearance | null>> {
+  const { data, error } = await supabase.from(T.settings).select('appearance:settings->landingAppearance').eq('id', userId).maybeSingle();
+  return error ? { ok: false, error: error.message } : { ok: true, data: parseAppearance(data?.appearance) };
+}
+
+export async function saveLandingAppearance(userId: string, value: LandingAppearance): Promise<OpResult<null>> {
+  const appearance = parseAppearance(value);
+  if (!appearance) return { ok: false, error: 'Invalid landing appearance.' };
+  return updateSettings(userId, (settings) => ({ ...settings, landingAppearance: appearance }));
+}

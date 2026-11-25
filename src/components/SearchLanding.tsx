@@ -1,13 +1,13 @@
 import { useEffect, useId, useRef, useState, type CSSProperties } from 'react';
 import { ArrowUpRight, Check, Gamepad2, Globe2, Palette, Search, X } from 'lucide-react';
 import { AppearanceEditor } from '../landing/AppearanceEditor';
-import { DEFAULT_APPEARANCE, parseAppearance, readCachedAppearance, writeAppearance, darkInk, type LandingAppearance } from '../landing/appearance';
+import { DEFAULT_APPEARANCE, parseAppearance, readAppearanceCache, writeAppearance, darkInk, type LandingAppearance } from '../landing/appearance';
 import { externalSearch, searchAction, type LandingSearch, type SearchMode } from '../landing/search';
 import '../landing/landing.css';
 
 export interface LandingAccount {
   id: string;
-  /** Supply only after this identity's settings have loaded. */
+  /** Settings for this identity, once loaded. */
   appearance: unknown;
   /** Update only the landing field; reject on failure. Called only on explicit opt-in. */
   saveAppearance?: (value: LandingAppearance) => Promise<void>;
@@ -29,7 +29,7 @@ export function SearchLanding(props: SearchLandingProps) {
 }
 
 function LandingSession({ account, onSearch, onOpenLibrary, suggestions = EXAMPLES }: SearchLandingProps) {
-  const [saved, setSaved] = useState(() => readCachedAppearance(account?.id) ?? parseAppearance(account?.appearance) ?? DEFAULT_APPEARANCE);
+  const [cached, setCached] = useState(() => readAppearanceCache(account?.id));
   const [draft, setDraft] = useState<LandingAppearance | null>(null);
   const [query, setQuery] = useState('');
   const [focused, setFocused] = useState(false);
@@ -37,6 +37,7 @@ function LandingSession({ account, onSearch, onOpenLibrary, suggestions = EXAMPL
   const [message, setMessage] = useState('');
   const input = useRef<HTMLInputElement>(null);
   const listId = useId();
+  const saved = cached?.localOnly ? cached.value : parseAppearance(account?.appearance) ?? cached?.value ?? DEFAULT_APPEARANCE;
   const appearance = draft ?? saved;
   const [systemDark, setSystemDark] = useState(() => window.matchMedia('(prefers-color-scheme: dark)').matches);
   useEffect(() => {
@@ -67,10 +68,13 @@ function LandingSession({ account, onSearch, onOpenLibrary, suggestions = EXAMPL
   async function save(value: LandingAppearance, sync: boolean) {
     try { writeAppearance(value, account?.id); }
     catch { throw new Error('Could not save on this device. Check browser storage or try a smaller background.'); }
-    setSaved(value);
+    setCached({ value, localOnly: true });
     if (sync && account?.saveAppearance) {
       try { await account.saveAppearance(value); }
       catch { throw new Error('Saved on this device, but account sync failed. Retry Save to sync.'); }
+      try { writeAppearance(value, account.id, false); }
+      catch { throw new Error('Saved to your account, but could not update this device’s appearance cache.'); }
+      setCached({ value, localOnly: false });
     }
     setMessage(sync ? 'Appearance saved on this device and to your account.' : 'Appearance saved on this device.');
   }

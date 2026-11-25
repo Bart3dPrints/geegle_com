@@ -62,14 +62,10 @@ async function pbkdf2Hash(password: string, salt: string): Promise<string> {
 
 /** Constant-time comparison of two strings. */
 function timingSafeEqual(a: string, b: string): boolean {
-  if (a.length !== b.length) {
-    // Still burn comparable time by comparing against b repeatedly.
-    let diff = 1;
-    for (let i = 0; i < b.length; i++) diff |= a.charCodeAt(i % a.length) ^ b.charCodeAt(i);
-    return false;
+  let diff = a.length ^ b.length;
+  for (let i = 0; i < Math.max(a.length, b.length); i++) {
+    diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
   }
-  let diff = 0;
-  for (let i = 0; i < a.length; i++) diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
   return diff === 0;
 }
 

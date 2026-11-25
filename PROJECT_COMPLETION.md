@@ -1,5 +1,7 @@
 # Geegle project completion queue
 
+Track: project development.
+
 Specification: Geegle-final-prompt-7-percent-stop.md, supplied 2026-11-25. Continue PR #2 on `feature/platform-overhaul`; never merge without approval, purchase credits, or modify unrelated production data. Statuses: NOT STARTED, IN PROGRESS, IMPLEMENTED BUT UNVERIFIED, IMPLEMENTED AND VERIFIED, TEMPORARILY BLOCKED, EXTERNALLY BLOCKED. The checklist records work remaining, not claims of overall completion.
 
 ## Work queue
@@ -7,9 +9,9 @@ Specification: Geegle-final-prompt-7-percent-stop.md, supplied 2026-11-25. Conti
 | Requirement / task | Status | Files / evidence | Next action |
 | --- | --- | --- | --- |
 | Restore corrupted artwork and save adapter source and JSON, fix imports/types | IMPLEMENTED AND VERIFIED | `src/data/artwork.ts`, `scripts/artwork-map.json`, `src/lib/saveAdapters.ts`, `src/components/GamePlayer.tsx`, `src/types.ts`: `npm ci`, `npm run typecheck`, `npm run build` passed locally | Review diff and runtime; retest as changes land |
-| Lint errors and warnings; maintainable checks | IN PROGRESS | Recovery run: 1 remaining lint error after the Hoplite patches | Fix the remaining Edge Function diagnostic and rerun |
+| Lint errors and warnings; maintainable checks | IMPLEMENTED AND VERIFIED | Baseline `d45a6dd`: 9 errors and 0 warnings. After landing integration and the scoped legacy Edge Function fix, `npm run lint` passed | Rerun against the final combined changes |
 | Full design-report point-by-point audit and platform responsive/accessibility improvements | IN PROGRESS | Linked Vibe Coded Websites Report accessible; design audit underway | Review every applicable point, record checklist and implement fixes |
-| Restore independent search landing, navigation and customization; account sync | IN PROGRESS | Recovered `eee8a36` as `70f7075`; local appearance and search tests pass | Wire the component into the existing gate and account settings, then verify actual browser flows |
+| Restore independent search landing, navigation and customization; account sync | IMPLEMENTED AND VERIFIED | Recovered `eee8a36` as `70f7075`. Chrome with isolated Supabase verified the existing gate, browser Back, web/lucky search dispatch, appearance preview, upload compression and rejection, device persistence, account sync, ownership isolation, and concurrent server-default writes. Desktop, Chromebook-sized, and mobile viewports were exercised | Verify hosted Render behavior only after approved rollout |
 | Per-game/app artwork research, source/verification manifest and image display | IN PROGRESS | `scripts/artwork-map.json`: 25 reviewed records retained as evidence but no display rights established; none marked reuse-cleared | Research licensed/authorized images in batches, verify identity, decoding and display; use neutral fallback until cleared |
 | Everythingle, 61 proxy endpoints, settings and authorized compatibility | NOT STARTED | `src/components/EverythingleApp.tsx`, `src/data/proxies.ts` | Audit endpoint counts, features and actual supported integrations; test failures, persistence and fallbacks |
 | Cloud saves: restore-before-launch, change sync, exit/logout, offline, conflicts, empty-save protection and isolation | IN PROGRESS | Recovered `69a39b5` as `d3ba148`; automated save tests pass with three game-specific adapters | Run isolated SQL and browser verification. IndexedDB compatibility remains open |
@@ -25,6 +27,7 @@ Specification: Geegle-final-prompt-7-percent-stop.md, supplied 2026-11-25. Conti
 ## Blocker log and checkpoints
 
 - **Usage telemetry:** no remaining-allowance or usage tool is exposed in the available runtime. The 7% stop cannot be monitored automatically. Checkpoint frequently; do not invent a percentage. If telemetry becomes available, stop new work below 7%, safely stop workers, preserve progress, update PR and hand off without automatic resumption.
+- **Optional conversation reference:** the Codex conversation read exceeded 70 seconds before being terminated. The recovered Git commits, existing branch, and supplied specification provided the baseline for independent work.
 - **Deployment:** GitHub reports Cloudflare Pages and Workers Builds failed; GitHub exposes dashboard links but not their logs. At b8bfb08 Vercel passed while both Cloudflare checks failed after the local build succeeded. No provider token/CLI was found; diagnose with authorized dashboard access and revisit on new heads. No production configuration changes or purchases.
 - **Live account/cloud verification:** Supabase MCP read access exists; Geegle tables and own-row policies were inspected without modifying data. No local app Supabase environment was configured. Use safe isolated testing and do not assume read access proves end-to-end behavior.
 - **Specification and design:** full specification is attached; linked design report is accessible. The requested exhaustive audit and application verification remain unfinished.

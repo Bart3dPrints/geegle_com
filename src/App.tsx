@@ -1,5 +1,5 @@
 // Geegle application shell.
-// Entry gate → header → browse tabs → game player with active cloud saves.
+// Web search → entry gate → library → game player with active cloud saves.
 // Logout awaits the running game's real final save before ending the session.
 // External entries: Krillion backup opens in the Geegle player; Everythingle
 // launches its dedicated app with connection-method and server selection.
@@ -16,6 +16,7 @@ import {
   KeyRound,
   Loader2,
   AlertTriangle,
+  ArrowLeft,
   Settings as SettingsIcon,
   ExternalLink,
 } from 'lucide-react';
@@ -35,6 +36,8 @@ import {
   loadTheme,
   saveServerDefault,
   loadServerDefaults,
+  loadLandingAppearance,
+  saveLandingAppearance,
 } from './lib/userData';
 import { GameCard, EmptyState } from './components/GameCard';
 import { SearchOverlay } from './components/SearchOverlay';
@@ -43,6 +46,8 @@ import { ProxyCard } from './components/ProxyCard';
 import { YouTubeApp } from './components/YouTubeApp';
 import { EverythingleApp } from './components/EverythingleApp';
 import { AccountSettings } from './components/AccountSettings';
+import { SearchLanding } from './components/SearchLanding';
+import type { LandingAppearance } from './landing/appearance';
 import type { CloudSaveHandle } from './lib/cloudSaves';
 
 const APPS: GameEntry[] = [
@@ -118,6 +123,7 @@ function useTheme() {
 }
 
 export default function App() {
+  const [showLanding, setShowLanding] = useState(() => location.hash !== '#games');
   const [gateOpen, setGateOpen] = useState(!isEntryUnlocked());
   const [gateInput, setGateInput] = useState('');
   const [gateError, setGateError] = useState<string | null>(null);
@@ -138,6 +144,7 @@ export default function App() {
   const [recent, setRecent] = useState<string[]>([]);
   const [serverDefaults, setServerDefaults] = useState<Record<string, number>>({});
   const [syncError, setSyncError] = useState<string | null>(null);
+  const [landingAppearance, setLandingAppearance] = useState<{ owner: string; value: LandingAppearance | null } | null>(null);
 
   const [tab, setTab] = useState<Tab>('games');
   const [category, setCategory] = useState('all');
@@ -188,6 +195,47 @@ export default function App() {
       transitionRef.current = false;
     }
   }, []);
+
+  useEffect(() => {
+    if (!showLanding || auth.loading || !userId) return;
+    let current = true;
+    void loadLandingAppearance(userId).then((result) => {
+      if (current && result.ok) setLandingAppearance({ owner: userId, value: result.data ?? null });
+    });
+    return () => { current = false; };
+  }, [showLanding, auth.loading, userId]);
+
+  const openLibrary = () => {
+    if (location.hash !== '#games') history.pushState(null, '', '#games');
+    setTab('games');
+    setShowLanding(false);
+  };
+
+  const openLanding = useCallback(async (historyTraversal = false) => {
+    if (!await closeGame()) {
+      if (historyTraversal && location.hash !== '#games') history.pushState(null, '', '#games');
+      return;
+    }
+    setActive(null);
+    setActiveProxy(null);
+    setYoutubeOpen(false);
+    setEverythingleOpen(false);
+    setSearchOpen(false);
+    setGateInput('');
+    setGateError(null);
+    if (!historyTraversal && location.hash) history.pushState(null, '', location.pathname + location.search);
+    setShowLanding(true);
+    window.scrollTo(0, 0);
+  }, [closeGame]);
+
+  useEffect(() => {
+    const navigate = () => {
+      if (location.hash === '#games') setShowLanding(false);
+      else if (!showLanding) void openLanding(true);
+    };
+    window.addEventListener('popstate', navigate);
+    return () => window.removeEventListener('popstate', navigate);
+  }, [showLanding, openLanding]);
 
   const handleAuth = async (mode: 'login' | 'register') => {
     if (!await closeGame()) return;
@@ -298,6 +346,24 @@ export default function App() {
     [favorites, byId]
   );
 
+  if (showLanding) {
+    return (
+      <SearchLanding
+        onOpenLibrary={openLibrary}
+        account={userId ? {
+          id: userId,
+          appearance: landingAppearance?.owner === userId ? landingAppearance.value : null,
+          saveAppearance: async (value) => {
+            if (ownerRef.current !== userId) throw new Error('Your account changed. Sign in again before syncing.');
+            const result = await saveLandingAppearance(userId, value);
+            if (!result.ok) throw new Error(result.error);
+            if (ownerRef.current === userId) setLandingAppearance({ owner: userId, value });
+          },
+        } : undefined}
+      />
+    );
+  }
+
   if (gateOpen) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-slate-50 p-4 dark:bg-slate-950">
@@ -309,7 +375,10 @@ export default function App() {
             setGateError(null);
             const res = await verifyEntryPassword(gateInput);
             setGateBusy(false);
-            if (res.ok) setGateOpen(false);
+            if (res.ok) {
+              setGateInput('');
+              setGateOpen(false);
+            }
             else if (res.reason === 'rate_limited')
               setGateError('Too many attempts. Try again in a few minutes.');
             else if (res.reason === 'not_configured')
@@ -349,6 +418,9 @@ export default function App() {
           <button className="btn-primary w-full" disabled={gateBusy} type="submit">
             {gateBusy ? <Loader2 className="animate-spin" size={16} /> : 'Enter'}
           </button>
+          <button className="btn-secondary mt-3 w-full gap-2" type="button" disabled={gateBusy} onClick={() => void openLanding()}>
+            <ArrowLeft size={16} /> Back to web search
+          </button>
         </form>
       </div>
     );
@@ -386,14 +458,7 @@ export default function App() {
         <div className="mx-auto flex h-16 max-w-7xl items-center gap-3 px-4 sm:gap-4 sm:px-6">
           <button
             className="flex items-center gap-2 text-lg font-semibold"
-            onClick={async () => {
-              if (!await closeGame()) return;
-              setActive(null);
-              setActiveProxy(null);
-              setYoutubeOpen(false);
-              setEverythingleOpen(false);
-              setTab('games');
-            }}
+            onClick={() => void openLanding()}
             aria-label="Geegle home"
           >
             <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-sm font-bold text-white">
@@ -437,6 +502,7 @@ export default function App() {
           <button
             className="btn-secondary gap-2 text-slate-500"
             onClick={() => setSearchOpen(true)}
+            aria-label="Search games and apps"
           >
             <Search size={16} />
             <span className="hidden md:inline">Search</span>
@@ -469,6 +535,7 @@ export default function App() {
           ) : (
             <button
               className="btn-secondary"
+              aria-label="Sign in"
               onClick={() => {
                 setAuthOpen(true);
                 setAuthMode('login');

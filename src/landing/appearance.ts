@@ -54,26 +54,32 @@ function storageKey(accountId?: string): string {
   return `${STORAGE_PREFIX}account:${encodeURIComponent(accountId)}`;
 }
 
-export function readCachedAppearance(accountId?: string): LandingAppearance | null {
+export function readAppearanceCache(accountId?: string): { value: LandingAppearance; localOnly: boolean } | null {
   try {
     const raw = globalThis.localStorage?.getItem(storageKey(accountId));
     if (!raw) return null;
-    return parseAppearance(JSON.parse(raw));
+    const cached = JSON.parse(raw);
+    const value = parseAppearance(cached);
+    return value ? { value, localOnly: cached.localOnly !== false } : null;
   } catch {
     return null;
   }
+}
+
+export function readCachedAppearance(accountId?: string): LandingAppearance | null {
+  return readAppearanceCache(accountId)?.value ?? null;
 }
 
 export function readAppearance(accountId?: string): LandingAppearance {
   return readCachedAppearance(accountId) ?? { ...DEFAULT_APPEARANCE };
 }
 
-export function writeAppearance(value: LandingAppearance, accountId?: string): void {
+export function writeAppearance(value: LandingAppearance, accountId?: string, localOnly = true): void {
   const parsed = parseAppearance(value);
   if (!parsed) throw new TypeError('Invalid landing appearance');
   try {
     if (!globalThis.localStorage) throw new Error('localStorage is unavailable');
-    globalThis.localStorage.setItem(storageKey(accountId), JSON.stringify(parsed));
+    globalThis.localStorage.setItem(storageKey(accountId), JSON.stringify({ ...parsed, localOnly }));
   } catch {
     throw new Error('Unable to save landing appearance');
   }
