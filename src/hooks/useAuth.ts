@@ -14,7 +14,7 @@ export interface AuthState {
   signOut: () => Promise<string | null>;
 }
 
-export function useAuth(): AuthState {
+export function useAuth(onIdentityChange: () => void): AuthState {
   const [user, setUser] = useState<User | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
@@ -25,16 +25,20 @@ export function useAuth(): AuthState {
       return;
     }
 
+    let previous: string | null | undefined;
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, next) => {
+      const id = next?.user.id ?? null;
+      if (previous !== undefined && previous !== id) onIdentityChange();
+      previous = id;
       setSession(next);
       setUser(next?.user ?? null);
       setLoading(false);
     });
 
     return () => subscription.unsubscribe();
-  }, []);
+  }, [onIdentityChange]);
 
   return {
     user,

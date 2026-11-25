@@ -123,8 +123,6 @@ export default function App({ leaveRef }: { leaveRef?: React.MutableRefObject<((
   const [gateError, setGateError] = useState<string | null>(null);
   const [gateBusy, setGateBusy] = useState(false);
 
-  const auth = useAuth();
-  const userId = auth.user?.id ?? null;
   const [authOpen, setAuthOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [authMode, setAuthMode] = useState<'login' | 'register'>('login');
@@ -153,6 +151,23 @@ export default function App({ leaveRef }: { leaveRef?: React.MutableRefObject<((
   // The running game's save handle — logout awaits its real final save.
   const saveHandleRef = useRef<CloudSaveHandle | null>(null);
 
+  const [retiredSaveNotice, setRetiredSaveNotice] = useState<string | null>(null);
+  const handleIdentityChange = useCallback(() => {
+    // Queue the final save with the outgoing handle before changing the player.
+    const handle = saveHandleRef.current;
+    saveHandleRef.current = null;
+    if (handle?.supported) {
+      void handle.retire().then((result) => {
+        if (!result.ok) setRetiredSaveNotice('The account changed before cloud sync finished. Game progress is still on this device for the previous account.');
+      });
+    }
+    setActive(null);
+    setActiveProxy(null);
+    setEverythingleOpen(false);
+    setSettingsOpen(false);
+  }, []);
+  const auth = useAuth(handleIdentityChange);
+  const userId = auth.user?.id ?? null;
   const ownerRef = useRef(userId);
   const transitionRef = useRef(false);
   useEffect(() => {
@@ -447,6 +462,10 @@ export default function App({ leaveRef }: { leaveRef?: React.MutableRefObject<((
           </nav>
 
           <div className="flex-1" />
+
+          {retiredSaveNotice && (
+            <span role="status" className="text-xs text-amber-600 dark:text-amber-300">{retiredSaveNotice}</span>
+          )}
 
           {syncError && (
             <span

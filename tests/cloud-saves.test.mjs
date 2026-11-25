@@ -18,7 +18,7 @@ const { outputFiles: [{ text }] } = await build({
     setup(builder) {
       builder.onResolve({ filter: /^\.\/supabase$/ }, () => ({ path: 'supabase', namespace: 'stub' }));
       builder.onLoad({ filter: /.*/, namespace: 'stub' }, () => ({
-        contents: "export const T = { saves: 'geegle_game_saves' }; export const supabase = { from: (...args) => globalThis.fakeSupabase.from(...args) }; export const isSupabaseConfigured = false;",
+        contents: "export const T = { saves: 'geegle_game_saves' }; export const supabase = { from: (...args) => globalThis.fakeSupabase.from(...args), auth: { getSession: async () => ({ data: { session: globalThis.fakeSession }, error: null }) } }; export const isSupabaseConfigured = false;",
       }));
     },
   }],
@@ -44,6 +44,7 @@ function storage() {
 let network;
 beforeEach(() => {
   globalThis.localStorage = storage();
+  globalThis.fakeSession = { user: { id: user }, access_token: 'original-account-token' };
   network = { onLine: true };
   Object.defineProperty(globalThis, 'navigator', { configurable: true, value: network });
 });
@@ -269,7 +270,7 @@ test('legacy copying refuses a newly created cloud save', async (t) => {
   assert.deepEqual((await cloud.read()).save_data, snapshot('remote'));
 });
 
-function mockSaveApi({ migrated = false, initial = null, readError } = {}) {
+function mockSaveApi({ migrated = false, initial = null, readError, writeError } = {}) {
   let row = initial;
   let beforeUpdate;
   const calls = [];
@@ -280,15 +281,18 @@ function mockSaveApi({ migrated = false, initial = null, readError } = {}) {
       let op = 'read';
       let values;
       let filters = {};
+      let authorization;
       const q = {
         select: (args) => { columns = args; return q; },
         match: (args) => { filters = args; return q; },
         update: (args) => { op = 'update'; values = args; return q; },
         insert: (args) => { op = 'insert'; values = args; return q; },
+        setHeader: (key, value) => { assert.equal(key, 'Authorization'); authorization = value; return q; },
         abortSignal: () => q,
         async maybeSingle() {
-          calls.push({ columns, op, filters });
+          calls.push({ columns, op, filters, authorization });
           if (readError) return { error: readError };
+          if (writeError && op !== 'read') return { error: writeError };
           if (columns.includes('revision') && !migrated) return { error: { code: '42703', message: 'column geegle_game_saves.revision does not exist' } };
           if (op === 'update') {
             beforeUpdate?.();
@@ -413,4 +417,40 @@ test('a legacy writer between preflight and update cannot lose same-timestamp pr
   assert.deepEqual(api.get().save_data, concurrent.save_data);
   assert.match(result ?? '', /requires a cloud save upgrade/i);
   assert.equal(api.calls.some((call) => call.op === 'update'), false);
+});
+
+for (const event of ['sign-out', 'account-switch']) {
+  test(`external ${event} finishes the outgoing save even if the player unmounts immediately`, async (t) => {
+    const backend = mockSaveApi({ migrated: true, initial: { ...legacyRow('before'), revision: 'r1' } });
+    localStorage.setItem(key(other), 'progress in different account');
+    const active = session(t, saveRemote(user, game));
+    await active.restored;
+    localStorage.setItem(key(), 'last change in the original account');
+    globalThis.fakeSession = event === 'sign-out' ? null : { user: { id: other }, access_token: 'different-account-token' };
+    const closing = active.retire();
+    const disposing = active.dispose();
+    assert.equal((await closing).ok, true);
+    await disposing;
+    const writes = backend.calls.filter((call) => call.op === 'update');
+    assert.equal(writes.length, 1);
+    assert.equal(writes[0].authorization, 'Bearer original-account-token');
+    assert.equal(writes[0].filters.user_id, user);
+    assert.deepEqual(backend.get().save_data, snapshot('last change in the original account'));
+    assert.equal(localStorage.getItem(key(other)), 'progress in different account');
+  });
+}
+
+test('revoked outgoing token leaves progress on the device without retrying as the new user', async (t) => {
+  const api = mockSaveApi({ migrated: true, initial: { ...legacyRow('before'), revision: 'r1' }, writeError: { message: 'Session revoked' } });
+  const handle = session(t, saveRemote(user, game));
+  await handle.restored;
+  localStorage.setItem(key(), 'saved locally');
+  globalThis.fakeSession = { user: { id: other }, access_token: 'different-account-token' };
+  const closing = handle.retire();
+  await handle.dispose();
+  assert.deepEqual(await closing, { ok: false, error: 'Session revoked' });
+  assert.equal(localStorage.getItem(key()), 'saved locally');
+  assert.equal(localStorage.getItem(key(other)), null);
+  assert.deepEqual(api.get().save_data, snapshot('before'));
+  assert.ok(api.calls.every((call) => call.authorization === 'Bearer original-account-token'));
 });
