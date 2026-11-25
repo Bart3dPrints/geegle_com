@@ -103,13 +103,9 @@ export function SearchOverlay({
 
         <div className="flex flex-wrap gap-2 border-b border-slate-200 px-4 py-3 dark:border-slate-800">
           {CATEGORIES.slice(0, 10).map((c) => (
-            <button
-              key={c.key}
-              className="chip"
-              onClick={() => setQuery(c.label.toLowerCase())}
-            >
+            <button key={c.key} className="chip" onClick={() => setQuery(c.label.toLowerCase())}>
               {c.label}
-n            </button>
+            </button>
           ))}
         </div>
 
