@@ -298,7 +298,7 @@ function mockSaveApi({ migrated = false, initial = null, readError } = {}) {
           }
           if (op === 'insert') {
             if (row) return { error: { code: '23505' } };
-            row = values;
+            row = { updated_at: '2026-01-01T00:00:00.000+00:00', ...values };
           }
           return { data: row };
         },
@@ -311,34 +311,40 @@ function mockSaveApi({ migrated = false, initial = null, readError } = {}) {
 const legacyRow = (progress, updated_at = '2026-01-01T00:00:00.000+00:00') =>
   ({ updated_at, save_data: snapshot(progress) });
 
-test('pre-migration transport reads and writes with timestamp compare-and-set', async () => {
+test('pre-migration transport restores and deduplicates existing saves; edits stay on device', async (t) => {
   const api = mockSaveApi({ initial: legacyRow('existing') });
-  const remote = saveRemote(user, game);
-  const old = await remote.read();
-  const next = await remote.write(snapshot('new'), old.revision);
-  assert.ok(next.startsWith('legacy:'));
-  assert.notEqual(next, old.revision);
-  assert.deepEqual(api.get().save_data, snapshot('new'));
-  assert.deepEqual(api.calls.find((call) => call.op === 'update').filters,
-    { user_id: user, game_id: game, save_key: 'default', updated_at: '2026-01-01T00:00:00.000+00:00' });
+  const handle = session(t, saveRemote(user, game));
+  await handle.restored;
+  assert.equal(localStorage.getItem(key()), 'existing');
+  assert.equal((await handle.saveNow()).ok, true);
+  localStorage.setItem(key(), 'device edits');
+  const result = await handle.close();
+  assert.equal(result.ok, false);
+  assert.match(result.error, /requires a cloud save upgrade/i);
+  assert.equal(localStorage.getItem(key()), 'device edits');
+  assert.deepEqual(api.get().save_data, snapshot('existing'));
+  assert.ok(api.calls.every((call) => call.op === 'read'));
 });
 
-test('fallback refuses a same-timestamp legacy payload change seen in preflight', async () => {
-  const api = mockSaveApi({ initial: legacyRow('existing') });
-  const remote = saveRemote(user, game);
-  const old = await remote.read();
-  api.set(legacyRow('old client edited'));
-  assert.equal(await remote.write(snapshot('stale attempt'), old.revision), null);
-  assert.equal(api.calls.some((call) => call.op === 'update'), false);
+test('pre-migration first insert works and concurrent first inserts cannot overwrite it', async () => {
+  const api = mockSaveApi();
+  const first = saveRemote(user, game);
+  const second = saveRemote(user, game);
+  assert.equal(await first.read(), null);
+  assert.equal(await second.read(), null);
+  assert.ok((await first.write(snapshot('first'), null)).startsWith('legacy:'));
+  assert.equal(await second.write(snapshot('second'), null), null);
+  assert.deepEqual(api.get().save_data, snapshot('first'));
 });
 
-test('fallback refuses a concurrent timestamp bump after preflight', async () => {
-  const api = mockSaveApi({ initial: legacyRow('existing') });
+test('migrated transport updates only the observed revision', async () => {
+  const api = mockSaveApi({ migrated: true, initial: { ...legacyRow('existing'), revision: 'r1' } });
   const remote = saveRemote(user, game);
-  const old = await remote.read();
-  api.beforeUpdate(() => api.set(legacyRow('concurrent device', '2026-01-02T00:00:00.000+00:00')));
-  assert.equal(await remote.write(snapshot('stale attempt'), old.revision), null);
+  const original = await remote.read();
+  api.beforeUpdate(() => api.set({ ...legacyRow('concurrent device'), revision: 'r2' }));
+  assert.equal(await remote.write(snapshot('stale replacement'), original.revision), null);
   assert.deepEqual(api.get().save_data, snapshot('concurrent device'));
+  assert.equal(api.calls.find((call) => call.op === 'update').filters.revision, 'r1');
 });
 
 test('missing-column fallback never hides unrelated backend errors', async () => {
@@ -387,4 +393,24 @@ test('device save archive includes only known keys and the selected account', ()
   assert.deepEqual(readKnownDeviceSaves(user), [{
     gameId: game, unassigned: snapshot('unassigned'), account: snapshot('ours'),
   }]);
+});
+
+test('a legacy writer between preflight and update cannot lose same-timestamp progress', async () => {
+  const api = mockSaveApi({ initial: legacyRow('original') });
+  const remote = saveRemote(user, game);
+  const original = await remote.read();
+  const concurrent = legacyRow('legacy writer kept its timestamp');
+  let concurrentWriteRan = false;
+  const legacyWrite = () => {
+    concurrentWriteRan = true;
+    api.set(concurrent);
+  };
+  api.beforeUpdate(legacyWrite);
+
+  const result = await remote.write(snapshot('stale replacement'), original.revision)
+    .catch((error) => error.message);
+  if (!concurrentWriteRan) legacyWrite();
+  assert.deepEqual(api.get().save_data, concurrent.save_data);
+  assert.match(result ?? '', /requires a cloud save upgrade/i);
+  assert.equal(api.calls.some((call) => call.op === 'update'), false);
 });

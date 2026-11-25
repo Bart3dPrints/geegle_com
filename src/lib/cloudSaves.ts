@@ -65,14 +65,13 @@ export function saveRemote(userId: string, gameId: string): SaveRemote {
     async write(save_data, revision) {
       const table = supabase.from(T.saves);
       if (legacy) {
-        const oldTimestamp = revision?.slice(legacyPrefix.length).split('|')[0];
-        const updated_at = new Date(Math.max(Date.now(), oldTimestamp ? Date.parse(oldTimestamp) + 1 : 0)).toISOString();
-        if (revision !== null && (await readLegacy())?.revision !== revision) return null;
-        const query = revision === null
-          ? table.insert({ ...identity, save_data, updated_at })
-          : table.update({ save_data, updated_at }).match({ ...identity, updated_at: oldTimestamp });
-        const { data, error } = await query.select('updated_at,save_data').abortSignal(AbortSignal.timeout(10_000)).maybeSingle();
-        if (error?.code === '23505' && revision === null) return null;
+        // Old clients may change the payload without changing updated_at.
+        if (revision !== null) {
+          throw new Error('Updating existing cloud progress requires a cloud save upgrade. Your device progress is unchanged.');
+        }
+        const { data, error } = await table.insert({ ...identity, save_data }).select('updated_at,save_data')
+          .abortSignal(AbortSignal.timeout(10_000)).maybeSingle();
+        if (error?.code === '23505') return null;
         if (error) throw new Error(error.message);
         return (await fromLegacy(data))?.revision ?? null;
       }
