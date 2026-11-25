@@ -43,6 +43,29 @@ function storage() {
   };
 }
 
+// Minimal shim harness: loads the real shim file with a fake location and
+// localStorage, then returns the installed localStorage view plus the
+// underlying store, so isolation defects are tested against the shipping code.
+async function loadShim(gameId, profileId) {
+  const source = await readFile(new URL('../public/games/geegle-storage-shim.js', import.meta.url), 'utf8');
+  const backing = storage();
+  const context = {
+    URLSearchParams,
+    location: { search: profileId ? `?geegle_profile=${profileId}` : '', pathname: `/games/${gameId}.html` },
+    document: { currentScript: { getAttribute: () => gameId } },
+    localStorage: backing,
+    Proxy,
+    Object,
+    String,
+    window: {},
+  };
+  context.window.localStorage = backing;
+  context.window.Proxy = Proxy;
+  context.window.Object = Object;
+  runInNewContext(source, context);
+  return { view: context.window.localStorage, backing };
+}
+
 let network;
 beforeEach(() => {
   globalThis.localStorage = storage();
@@ -112,7 +135,7 @@ test('every local game gets generic storage-based cloud saves', async () => {
   await spec.restore(user, { format: 'geegle-storage-v2', localStorage: { slot1: 'level 9' }, indexedDB: [] });
   assert.equal(localStorage.getItem(`geegle-game:clsomeadventure:${user}:slot1`), 'level 9');
   assert.equal(localStorage.getItem(`geegle-game:clsomeadventure:${other}:slot1`), 'level 2');
-  assert.equal(localStorage.getItem(`geegle-game:clothergame:${user}:x`), 'other game');
+  assert.equal(localStorage.getItem('geegle-game:clothergame:' + user + ':x'), 'other game');
 
   // A stored save can never overwrite platform state.
   assert.throws(() => spec.validate({ format: 'geegle-storage-v2', localStorage: { 'geegle-favorites': '[]' } }), /reserved/);
@@ -121,7 +144,128 @@ test('every local game gets generic storage-based cloud saves', async () => {
   assert.deepEqual(spec.validate({ format: 'geegle-storage-v2', localStorage: {}, indexedDB: [] }), { format: 'geegle-storage-v2', localStorage: {}, indexedDB: [] });
 });
 
-test('restore from cloud before a game opens with empty browser storage', async (t) => {
+// ─── Storage shim isolation (audited defect regressions) ───────────────────
+
+test('legacy pre-shim progress is claimed once and never leaks to a second account', async () => {
+  // Account A opens the game first: legacy key migrates into A's namespace.
+  const a = await loadShim('cllegacy', user);
+  a.backing.setItem('saveSlot', 'original progress');
+  assert.equal(a.view.getItem('saveSlot'), 'original progress');
+  assert.equal(a.backing.getItem(`geegle-game:cllegacy:${user}:saveSlot`), 'original progress');
+
+  // Account B later opens the same game: the same legacy key must NOT be
+  // copied into B's namespace (the earlier defect migrated progress into
+  // every account that ever read it).
+  const b = await loadShim('cllegacy', other);
+  assert.equal(b.view.getItem('saveSlot'), null);
+  assert.equal(b.backing.getItem(`geegle-game:cllegacy:${other}:saveSlot`), null);
+  // The legacy value itself is preserved for A.
+  assert.equal(a.backing.getItem('saveSlot'), 'original progress');
+});
+
+test('shim removeItem and clear only touch the current game+account keys', async () => {
+  const s = await loadShim('clescoped', user);
+  s.backing.setItem(`geegle-game:clescoped:${user}:mine`, 'mine');
+  s.backing.setItem(`geegle-game:clescoped:${other}:theirs`, 'theirs');
+  s.backing.setItem('geegle-favorites', 'platform state');
+  s.backing.setItem('unscoped-key', 'guest progress');
+
+  s.view.removeItem('mine');
+  // The old implementation ALSO removed the unscoped key 'mine'; it must be
+  // untouched when absent, and platform/foreign keys must never be removed.
+  assert.equal(s.backing.getItem(`geegle-game:clescoped:${other}:theirs`), 'theirs');
+  assert.equal(s.backing.getItem('geegle-favorites'), 'platform state');
+
+  s.view.clear();
+  assert.equal(s.backing.getItem(`geegle-game:clescoped:${user}:mine`), null);
+  assert.equal(s.backing.getItem(`geegle-game:clescoped:${other}:theirs`), 'theirs');
+  assert.equal(s.backing.getItem('geegle-favorites'), 'platform state');
+  assert.equal(s.backing.getItem('unscoped-key'), 'guest progress');
+});
+
+test('shim supports property-style access like real Storage', async () => {
+  const s = await loadShim('clpropaccess', user);
+  s.view.score = '42';
+  assert.equal(s.view.score, '42');
+  assert.equal(s.view.getItem('score'), '42');
+  assert.equal(s.backing.getItem(`geegle-game:clpropaccess:${user}:score`), '42');
+
+  // Another account's property writes are isolated.
+  const b = await loadShim('clpropaccess', other);
+  b.view.score = '99';
+  assert.equal(s.view.score, '42');
+  assert.equal(b.view.score, '99');
+
+  assert.ok('score' in b.view);
+  delete b.view.score;
+  assert.equal(b.view.score, undefined);
+  assert.equal(s.view.score, '42');
+});
+
+test('shim key() and length enumerate only this account’s keys', async () => {
+  const s = await loadShim('clenum', user);
+  s.view.setItem('alpha', '1');
+  s.view.setItem('beta', '2');
+  s.backing.setItem(`geegle-game:clenum:${other}:gamma`, '3');
+  s.backing.setItem('unrelated', '4');
+  assert.equal(s.view.length, 2);
+  const keys = [s.view.key(0), s.view.key(1)];
+  assert.ok(keys.includes('alpha') && keys.includes('beta'));
+  assert.equal(s.view.key(2), null);
+});
+
+test('guests are untouched by the shim', async () => {
+  const guest = await loadShim('clguestgame', null);
+  guest.backing.setItem('saveSlot', 'guest progress');
+  // No profile parameter: the shim returns early and localStorage stays native.
+  assert.equal(guest.view, guest.backing);
+});
+
+// ─── Adapter isolation failures are never silent (audited defect #5) ──────
+
+test('isolate reports database deletion failures instead of silently succeeding', async () => {
+  const spec = adapterFor('clisolation', '/games/clisolation.html');
+  // Simulate a previously recorded owner plus a claimed database.
+  localStorage.setItem('geegle-idb-owner:clisolation', other);
+  localStorage.setItem('geegle-idb:clisolation', JSON.stringify(['/idbfs/clisolation']));
+
+  // Fake indexedDB whose deleteDatabase never succeeds (blocked).
+  let blockedRequest;
+  const fakeIdb = {
+    databases: async () => [{ name: '/idbfs/clisolation' }],
+    deleteDatabase: (name) => {
+      blockedRequest = {
+        onsuccess: null, onerror: null, onblocked: null,
+        error: new Error(`blocked: ${name}`),
+      };
+      setTimeout(() => blockedRequest.onblocked?.(), 0);
+      return blockedRequest;
+    },
+  };
+  Object.defineProperty(globalThis, 'indexedDB', { configurable: true, value: fakeIdb });
+
+  try {
+    await assert.rejects(() => spec.isolate(user), /Close other tabs|blocked|Could not/i);
+  } finally {
+    Object.defineProperty(globalThis, 'indexedDB', { configurable: true, value: undefined });
+  }
+});
+
+test('restore refuses to overwrite a database owned by another game', async () => {
+  const spec = adapterFor('clownercheck', '/games/clownercheck.html');
+  // The ledger says another game owns this database.
+  localStorage.setItem('geegle-idb-owners', JSON.stringify({ '/idbfs/other-game': 'clothergame' }));
+  await assert.rejects(
+    () => spec.restore(user, {
+      format: 'geegle-storage-v2',
+      localStorage: {},
+      indexedDB: [{ name: '/idbfs/other-game', version: 1, stores: [{ name: 's', keyPath: 'id', autoIncrement: false, indexes: [], records: [] }] }],
+    }),
+    /owned by another game/,
+  );
+});
+
+test('restore before a game opens with empty browser storage', async (t) => {
   const cloud = backend(snapshot('known progress'));
   const handle = session(t, cloud);
   await handle.restored;
