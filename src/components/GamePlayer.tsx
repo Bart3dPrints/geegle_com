@@ -1,6 +1,6 @@
-// Fullscreen game player with cloud saves ACTIVE: restores cloud progress
-// before the game iframe mounts, syncs every 15s, saves on exit, and exposes
-// manual Save to Cloud / Restore from Cloud buttons plus a status indicator.
+// Game player with ACTIVE cloud saves: awaits the real restore-before-launch
+// promise (no timers), syncs every 15s, saves on exit, and exposes manual
+// Save to Cloud / Restore from Cloud with accurate status indicators.
 
 import { useEffect, useRef, useState } from 'react';
 import {
@@ -25,6 +25,12 @@ import {
 
 function StatusPill({ status }: { status: SyncStatus }) {
   switch (status) {
+    case 'restoring':
+      return (
+        <span className="flex items-center gap-1 text-xs text-slate-400">
+          <Loader2 size={12} className="animate-spin" /> Restoring…
+        </span>
+      );
     case 'saving':
       return (
         <span className="flex items-center gap-1 text-xs text-slate-400">
@@ -32,6 +38,7 @@ function StatusPill({ status }: { status: SyncStatus }) {
         </span>
       );
     case 'saved':
+    case 'restored':
       return (
         <span className="flex items-center gap-1 text-xs text-emerald-400">
           <Check size={12} /> Saved to Cloud
@@ -85,30 +92,50 @@ export function GamePlayer({
   const url = entry ? entry.path : proxy?.url;
   const title = entry ? entry.title : proxy?.title;
   const gameId = entry?.id ?? null;
+  const launchPath = entry?.path ?? '';
 
-  // Start cloud sync when a game opens; restore happens BEFORE the iframe
-  // mounts (see the `restored` gate below) so progress is in place first.
+  // The iframe mounts only when restoreReady is true — restore-before-launch
+  // is awaited for real (no arbitrary delay).
   const [restoreReady, setRestoreReady] = useState(!gameId);
+  const [restoreError, setRestoreError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!gameId) return;
+    let cancelled = false;
+
     setRestoreReady(false);
+    setRestoreError(null);
     setSyncStatus('idle');
 
     const handle = startCloudSync(
       gameId,
-      entry?.path ?? '',
+      launchPath,
       userId,
-      setSyncStatus
+      (s) => {
+        if (!cancelled) setSyncStatus(s);
+      }
     );
     saveHandleRef.current = handle;
 
-    // Give the restore query a moment; games that support saves wait for it,
-    // unsupported/offline games proceed immediately.
-    const t = setTimeout(() => setRestoreReady(true), 800);
+    void (async () => {
+      try {
+        await handle.restored; // real restore, not a timer
+      } catch {
+        /* restore already reports its own failures via status */
+      }
+      if (!cancelled) {
+        if (handle.getStatus() === 'error') {
+          setRestoreError(
+            'Cloud restore failed for this game. Local progress is being used.'
+          );
+        }
+        setRestoreReady(true);
+      }
+    })();
+
     return () => {
-      clearTimeout(t);
-      // Save on exit so the final moments of play are captured.
+      cancelled = true;
+      // close() performs the final save BEFORE disposing — reliable save-on-exit.
       void handle.close();
       saveHandleRef.current = null;
     };
@@ -127,13 +154,17 @@ export function GamePlayer({
 
   const manualSave = async () => {
     setManualMsg(null);
-    await saveHandleRef.current?.saveNow('manual');
-    const s = saveHandleRef.current?.getStatus();
-    if (s === 'saved') setManualMsg('Progress saved to cloud.');
-    else if (s === 'unsupported')
-      setManualMsg('This game does not support cloud saves.');
-    else if (s === 'offline') setManualMsg('Offline — will retry when online.');
-    else setManualMsg('Save failed. Check your connection.');
+    const result = await saveHandleRef.current?.saveNow();
+    if (!result) return;
+    if (result.ok) {
+      const s = saveHandleRef.current?.getStatus();
+      if (s === 'saved' || s === 'restored')
+        setManualMsg('Progress saved to cloud.');
+      else if (s === 'idle')
+        setManualMsg('No changes to save — already in sync.');
+    } else {
+      setManualMsg(result.error ?? 'Save failed.');
+    }
   };
 
   const manualRestore = async () => {
@@ -146,7 +177,7 @@ export function GamePlayer({
     } else if (result.error) {
       setManualMsg(result.error);
     } else {
-      setManualMsg('No cloud save found for this game.');
+      setManualMsg('No cloud save found for this game yet.');
     }
   };
 
@@ -168,7 +199,6 @@ export function GamePlayer({
 
         <div className="flex-1" />
 
-        {/* Manual cloud save controls — only for real games (not proxies) */}
         {entry && (
           <>
             <button
@@ -210,16 +240,15 @@ export function GamePlayer({
         </button>
       </div>
 
-      {manualMsg && (
+      {(manualMsg || restoreError) && (
         <div
           className="border-b border-slate-800 bg-slate-900 px-4 py-2 text-center text-xs text-slate-300"
           role="status"
         >
-          {manualMsg}
+          {manualMsg ?? restoreError}
         </div>
       )}
 
-      {/* Mobile sync indicator */}
       <div className="flex items-center justify-center bg-slate-900 py-1 md:hidden">
         <StatusPill status={syncStatus} />
       </div>
