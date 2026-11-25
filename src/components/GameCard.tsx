@@ -2,17 +2,7 @@
 
 import { Star } from 'lucide-react';
 import type { GameEntry } from '../types';
-
-const PALETTE = [
-  'bg-slate-600', 'bg-blue-600', 'bg-emerald-600', 'bg-amber-600',
-  'bg-violet-600', 'bg-rose-600', 'bg-cyan-600', 'bg-orange-600',
-];
-
-function tileColor(id: string): string {
-  let h = 0;
-  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) >>> 0;
-  return PALETTE[h % PALETTE.length];
-}
+import { TileThumb } from './TileThumb';
 
 export function GameCard({
   game,
@@ -33,20 +23,7 @@ export function GameCard({
         aria-label={`Play ${game.title}`}
       >
         <div className="flex aspect-video items-center justify-center bg-slate-200 dark:bg-slate-800">
-          {game.thumb ? (
-            <img
-              src={game.thumb}
-              alt={game.title}
-              loading="lazy"
-              className="h-full w-full object-cover"
-            />
-          ) : (
-            <span
-              className={`flex h-full w-full items-center justify-center text-2xl font-bold text-white ${tileColor(game.id)}`}
-            >
-              {game.title.charAt(0).toUpperCase()}
-            </span>
-          )}
+          <TileThumb game={game} className="h-full w-full text-3xl font-bold" />
         </div>
         <div className="p-3">
           <p className="truncate text-sm font-medium">{game.title}</p>

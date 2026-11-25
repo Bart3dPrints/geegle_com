@@ -1,11 +1,17 @@
-// Shared letter-tile thumbnail used by game cards and search results.
-// Real artwork replaces tiles incrementally via game.thumb.
+// Letter-tile thumbnail used until per-game artwork is available. Deterministic
+// hue per game id; artwork entries in the catalog (game.thumb) take priority.
 
 import type { GameEntry } from '../types';
 
 const PALETTE = [
-  'bg-slate-600', 'bg-blue-600', 'bg-emerald-600', 'bg-amber-600',
-  'bg-violet-600', 'bg-rose-600', 'bg-cyan-600', 'bg-orange-600',
+  'bg-slate-600',
+  'bg-blue-600',
+  'bg-emerald-600',
+  'bg-amber-600',
+  'bg-violet-600',
+  'bg-rose-600',
+  'bg-cyan-600',
+  'bg-orange-600',
 ];
 
 export function tileColor(id: string): string {
