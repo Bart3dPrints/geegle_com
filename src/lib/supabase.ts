@@ -1,10 +1,10 @@
 // Central Supabase client. Configuration comes from Vite env vars at build
-// time:
-//   VITE_SUPABASE_URL, VITE_SUPABASE_ANON_KEY
-// These are public anon credentials — safe to ship in a static build. All
-// data protection comes from Row Level Security, which is enabled on every
-// Geegle table in the dedicated `geegle` schema (see
-// supabase/migrations/0001_init.sql).
+// time: VITE_SUPABASE_URL, VITE_SUPABASE_ANON_KEY (public credentials; all
+// data protection comes from Row Level Security).
+//
+// All Geegle tables live in the `public` schema with a `geegle_` prefix —
+// public is always exposed through Supabase's Data API, and the prefix keeps
+// them separate from other applications sharing this project.
 
 import { createClient } from '@supabase/supabase-js';
 
@@ -12,8 +12,8 @@ const url = import.meta.env.VITE_SUPABASE_URL as string | undefined;
 const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
 
 if (!url || !anonKey) {
-  // The app still works fully offline/anonymously (local-only mode) when
-  // Supabase is not configured. Components check isSupabaseConfigured.
+  // The app still works fully anonymously (local-only mode) when Supabase
+  // is not configured. Components check isSupabaseConfigured.
   console.warn(
     '[geegle] Supabase is not configured. Accounts and cloud sync are disabled; the site runs in local-only mode.'
   );
@@ -33,14 +33,15 @@ export const supabase = createClient(
   }
 );
 
-/**
- * Geegle's tables live in a dedicated Postgres schema, isolated from other
- * applications sharing the Supabase project. Every data call in this app
- * MUST go through this accessor so RLS policies apply consistently.
- */
-export function db() {
-  return supabase.schema('geegle');
-}
+// Geegle table names (public schema, geegle_ prefix).
+export const T = {
+  profiles: 'geegle_profiles',
+  settings: 'geegle_user_settings',
+  favorites: 'geegle_favorites',
+  recent: 'geegle_recently_played',
+  saves: 'geegle_game_saves',
+  entryAttempts: 'geegle_entry_attempts',
+} as const;
 
 /**
  * Username-only authentication: Supabase Auth requires an email field, so we

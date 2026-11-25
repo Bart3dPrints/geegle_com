@@ -1,10 +1,10 @@
 // Site entry gate. Verification happens EXCLUSIVELY server-side via the
-// Supabase Edge Function `verify-entry-password`: the PBKDF2 hash of the
-// password exists only as an Edge Function secret, never in this codebase.
+// `geegle_verify_entry_password` Postgres function (bcrypt against a hash the
+// client can never read, with built-in per-IP rate limiting). The function is
+// callable without authentication, so the gate works before sign-in.
 //
 // When Supabase is not configured the gate shows a clear configuration error
-// instead of falling back to client-side checking — a client-side check
-// would expose the gate to anyone reading the bundle.
+// instead of falling back to client-side checking.
 
 import { isSupabaseConfigured, supabase } from './supabase';
 
@@ -38,6 +38,23 @@ export function lockEntry(): void {
   }
 }
 
+/** Best-effort client IP for the server-side rate limiter. */
+function clientIp(): string {
+  // The server sees the real client IP from its connection; the value we pass
+  // is a per-device salt for distinguishing users behind shared connections.
+  // A stable per-browser id keeps rate limiting per-device on the same IP.
+  try {
+    let id = localStorage.getItem('geegle-device-id');
+    if (!id) {
+      id = crypto.randomUUID();
+      localStorage.setItem('geegle-device-id', id);
+    }
+    return id;
+  } catch {
+    return 'unknown';
+  }
+}
+
 export async function verifyEntryPassword(
   password: string
 ): Promise<GateResult> {
@@ -49,25 +66,26 @@ export async function verifyEntryPassword(
   }
 
   try {
-    const { data, error } = await supabase.functions.invoke(
-      'verify-entry-password',
-      { body: { password: trimmed } }
-    );
+    const { data, error } = await supabase.rpc('geegle_verify_entry_password', {
+      p_password: trimmed,
+      p_ip: clientIp(),
+    });
+
+    if (error) {
+      console.error('[geegle] entry gate error:', error.message);
+      return { ok: false, reason: 'network' };
+    }
 
     if (data && data.valid === true) {
       markUnlocked();
       return { ok: true };
     }
-
-    const status = (error as { context?: { status?: number } } | null)?.context
-      ?.status;
-    if (status === 429 || data?.reason === 'rate_limited') {
+    if (data && data.reason === 'rate_limited') {
       return { ok: false, reason: 'rate_limited' };
     }
-    if (data?.valid === false) {
+    if (data && data.valid === false) {
       return { ok: false, reason: 'invalid' };
     }
-    // Edge function not deployed or returned an unexpected error.
     return { ok: false, reason: 'network' };
   } catch {
     return { ok: false, reason: 'network' };
