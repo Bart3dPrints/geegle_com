@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import type { Session, User } from '@supabase/supabase-js';
-import { supabase, isSupabaseConfigured } from '../lib/supabase';
+import { supabase, isSupabaseConfigured, usernameFromEmail } from '../lib/supabase';
 import { register, login, logout } from '../services/auth';
 import { migrateLocalToAccount } from '../lib/migrateSaves';
 
 export interface AuthState {
   user: User | null;
+  username: string;
   session: Session | null;
   loading: boolean;
   enabled: boolean;
@@ -24,6 +25,8 @@ export function useAuth(): AuthState {
       setLoading(false);
       return;
     }
+
+    // Restore any persisted session (login survives reload/reopen).
     supabase.auth
       .getSession()
       .then(({ data }) => {
@@ -38,6 +41,7 @@ export function useAuth(): AuthState {
       setSession(next);
       setUser(next?.user ?? null);
       const uid = next?.user?.id;
+      // First successful sign-in: merge anonymous local data into the account.
       if (uid) void migrateLocalToAccount(uid);
     });
 
@@ -46,6 +50,7 @@ export function useAuth(): AuthState {
 
   return {
     user,
+    username: usernameFromEmail(user?.email),
     session,
     loading,
     enabled: isSupabaseConfigured,
@@ -57,6 +62,6 @@ export function useAuth(): AuthState {
       const r = await register(u, p);
       return r.ok ? null : (r.error ?? 'Registration failed.');
     },
-    signOut: () => logout(),
+    signOut: logout,
   };
 }
