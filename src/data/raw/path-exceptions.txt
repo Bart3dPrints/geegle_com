@@ -3,7 +3,11 @@ clbig_time_butter_baron|/games/clBig_Time_Butter_Baron.html
 bank-robbery|/games/Bank%20Robbery.html
 bowmasters|/games/Bowmasters.html
 cheeserolling|/games/cheeserolling.html
-colorbox-mustard|/games/Colorbox%20Mustard.html
+colorbox-mustard|https://slapbread.itch.io/colorbox-mustard
+clcolorboxmustard|https://slapbread.itch.io/colorbox-mustard
+clcartoonnetworktabletennis|/games/clCartoonNetworkTableTennisUltimateTournament.html
+clgranny|/games/clgrannyy.html
+clbridgerace|https://www.crazygames.com/game/bridge-race
 codeorg|/games/codeorg.html
 drive-mad|/games/Drive%20Mad%20(1).html
 dta6|/games/dta6.html
@@ -19,7 +23,8 @@ peach|/games/peach.html
 repo|/games/R.E.P.O%20copy%20copy%20copy.html
 riddleuneversityfix|/games/riddleuneversityfix.html
 redvbluefix|/games/redvbluefix.html
-snow-rider|/games/snow-rider.html
+snow-rider|https://gamebiz.com/game/snow-rider-3d
+clsnowrider|https://gamebiz.com/game/snow-rider-3d-nostalgia
 snowwhite|/games/snowwhite.html
 supremeduelistfix|/games/supremeduelistfix.html
 smash-hit-ripoff|/games/Smash%20Hit%20Ripoff.html
@@ -178,7 +183,6 @@ clpokemonemeraldrouge|/games/clPokemonemeraldrouge.html
 clpokemonperfectemerald5-5|/games/clpokemonperfectemerald5.5.html
 clpokemonrocketedition|/games/clPokemonrocketedition.html
 clpokethetaemeraldex|/games/clPokeThetaEmeraldEX.html
-clpolytrackbutnotflagged-1|/games/clpolytrackbutnotflagged(1).html
 clportaldefenderstd|/games/clportaldefendersTD.html
 clpou|/games/clPou.html
 clpou-1|/games/clpou(1).html

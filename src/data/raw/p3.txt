@@ -1,7 +1,6 @@
 clpolicepursuit2|Police Pursuit 2|racing
 clpolishedcrystal|Pokemon Polished Crystal|pokemon
-clpolytrackbutnotflagged-1|PolyTrack|racing
-clpolytrackworksnow|PolyTrack Works Now|racing
+clpolytrackworksnow|Polytrack (working)|racing
 clpomgetsinternet|Pom Gets Internet|adventure
 clpoorbunny|Poor Bunny|action
 clpopeyepapi|Popeye Papi|action

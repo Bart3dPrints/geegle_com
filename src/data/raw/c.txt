@@ -56,7 +56,7 @@ clciviballs|Civiballs|puzzle
 clciviballs2|Civiballs 2|puzzle
 cla-walk-in-the-forest--v1-0|A Walk in the Forest|adventure
 clacko_s-mach-bike-challenge--v1-0|Acko's Mach Bike Challenge|racing
-clcartoonnetworktabletennis|Cartoon Network Table Tennis|sports
+clcartoonnetworktabletennis|Cartoon Network: Table Tennis Ultimate Tournament|sports
 clceliasstupidromhack|Celia's Stupid Rom Hack|platformer
 clcelltosingularity|Cell to Singularity|casual
 clchickencs|Chicken CS|action
@@ -210,7 +210,7 @@ clcrankitbang|Crankit!|puzzle
 clcrash2|Crash 2|platformer
 clcrash3|Crash 3|platformer
 clcrashbandicoot--1|Crash Bandicoot|platformer
-clcrashbandicoot2|Crash Bandicoot 2|platformer
+clcrashbandicoot2|Crash Bandicoot: The Huge Adventure|platformer
 clcrashteamracing|Crash Team Racing|racing
 clcrazycars|Crazy Cars|racing
 clcrazycattle3d|Crazy Cattle 3D|arcade

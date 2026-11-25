@@ -52,7 +52,7 @@ export const KRILLION: GameEntry = {
 
 /** Fan-made backup site. NOT presented as the official game. */
 export const KRILLION_BACKUP: GameEntry = {
-  id: 'krillion-backup',
+  id: 'clkrillion-backup',
   title: 'Krillion (Backup)',
   path: 'https://krillionunlimited.org/',
   categories: ['puzzle', 'casual'],

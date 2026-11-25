@@ -6,4 +6,29 @@ export const CLEARED_ARTWORK: Partial<Record<string, {
   type: string;
   identityEvidence: string;
   reuseEvidence: string;
-}>> = {};
+}>> = {
+  "cl2048": {
+    "title": "2048",
+    "url": "/artwork/cl2048.webp",
+    "source": "https://github.com/ovolve/2048-AI/blob/226be513371ce2493843b2485c280e2389ef7dad/meta/og_image.png",
+    "type": "official-og",
+    "identityEvidence": "The current 2048 wrapper points to the ovolve 2048-AI repository and names this original 2048 image in its OG metadata.",
+    "reuseEvidence": "MIT; pinned repository license https://github.com/ovolve/2048-AI/blob/226be513371ce2493843b2485c280e2389ef7dad/LICENSE.txt. License notice bundled at /artwork/licenses/cl2048-LICENSE.txt."
+  },
+  "clADarkRoom": {
+    "title": "A Dark Room",
+    "url": "/artwork/cladarkroom.webp",
+    "source": "https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/img/Logo1.jpg",
+    "type": "game-asset",
+    "identityEvidence": "The A Dark Room wrapper identifies Doublespeak Games and links its source repository. Its logo matches the title visually.",
+    "reuseEvidence": "MPL-2.0; pinned repository license https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/LICENSE.md. License notice bundled at /artwork/licenses/cladarkroom-LICENSE.txt."
+  },
+  "clhextris": {
+    "title": "Hextris",
+    "url": "/artwork/clhextris.webp",
+    "source": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/images/icons/transparent-512.png",
+    "type": "official-icon",
+    "identityEvidence": "Hextris project icon from the official Hextris source tree. The catalog wrapper runs Hextris.",
+    "reuseEvidence": "GPL-3.0; pinned repository license https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/LICENSE.md. License notice bundled at /artwork/licenses/clhextris-LICENSE.txt."
+  }
+};

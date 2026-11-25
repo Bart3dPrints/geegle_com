@@ -47,6 +47,8 @@ const ALIASES: Record<string, string[]> = {
   cl2048: ['numbers', 'merge tiles'],
   clbaldisbasics: ['baldi'],
   clbloonstd5: ['btd5', 'bloons tower defense 5'],
+  clcrashbandicoot2: ['crash bandicoot 2', 'the huge adventure'],
+  clpolytrackworksnow: ['polytrack', 'polytrack works now'],
   clhobo: ['hobo 1', 'hobo brawl', 'seethingswarm'],
   clhobo2: ['hobo 2'],
   clhobo3: ['hobo 3'],

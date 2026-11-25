@@ -115,8 +115,8 @@ clbloons2|Bloons 2|strategy
 clbloonspp1|Bloons PP 1|strategy
 clbloonspp2|Bloons PP 2|strategy
 clbloonspp3|Bloons PP 3|strategy
-clbloonspp4|Bloons PP 4|strategy
-clbloonspp5|Bloons PP 5|strategy
+clbloonspp4|Bloons Player Pack 4|puzzle
+clbloonspp5|Bloons Player Pack 5|puzzle
 clbloonstd1|Bloons TD 1|strategy
 clbloonstd2|Bloons TD 2|strategy
 clbloonstd3|Bloons TD 3|strategy

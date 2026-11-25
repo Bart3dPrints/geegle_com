@@ -1,27 +1,12 @@
 #!/usr/bin/env node
 // Compare local launch paths with the pre-overhaul catalog. Prints candidates; never rewrites data.
 import { execFileSync } from 'node:child_process';
-import { readdirSync, readFileSync } from 'node:fs';
+import { readdirSync } from 'node:fs';
+import { catalogRoot as root, localFilename, readCatalogRows } from './catalog-data.mjs';
 
-const root = new URL('../', import.meta.url);
-const raw = new URL('src/data/raw/', root);
-const readRows = (file) => readFileSync(new URL(file, raw), 'utf8').split('\n')
-  .map((line) => line.trim())
-  .filter((line) => line && !line.startsWith('#'))
-  .map((line) => line.split('|'));
-
-const exceptionsFile = 'path-exceptions.txt';
-const exceptions = new Map(readRows(exceptionsFile));
-const ids = new Set();
-let rows = 0;
-for (const file of readdirSync(raw).sort()) {
-  if (!file.endsWith('.txt') || file === exceptionsFile) continue;
-  for (const [id, title, categories] of readRows(file)) {
-    if (!id || !title || !categories) continue;
-    ids.add(id);
-    rows++;
-  }
-}
+const rows = readCatalogRows();
+const entries = new Map();
+for (const row of rows) if (!entries.has(row.id)) entries.set(row.id, row);
 
 const originals = new Map();
 const ref = process.argv[2];
@@ -45,21 +30,15 @@ for (const file of files) {
   canonicalFiles.get(normalized).push(file);
 }
 
-function localFilename(path) {
-  if (!path.startsWith('/games/')) return null;
-  const name = decodeURIComponent(new URL(path, 'https://geegle.invalid').pathname.slice('/games/'.length));
-  return name.includes('/') ? null : name;
-}
-
 const missing = [];
 const restore = [];
 let external = 0;
 const referenced = new Set();
-for (const id of ids) {
-  const path = exceptions.get(id) ?? `/games/${encodeURIComponent(id)}.html`;
+for (const { id, path } of entries.values()) {
   const file = localFilename(path);
   if (file === null) {
-    external++;
+    if (path.startsWith('https://')) external++;
+    else missing.push({ id, path });
     continue;
   }
   if (files.has(file)) {
@@ -80,13 +59,15 @@ for (const id of ids) {
 }
 
 console.log(JSON.stringify({
-  rows, games: ids.size, duplicateIdRows: rows - ids.size,
+  rows: rows.length, games: entries.size, duplicateIdRows: rows.length - entries.size,
   ...(ref ? {
     originalCatalogIds: originals.size,
-    addedIds: [...ids].filter((id) => !originals.has(id)).sort(),
-    originalIdsNotInGames: [...originals.keys()].filter((id) => !ids.has(id)).sort(),
+    addedIds: [...entries.keys()].filter((id) => !originals.has(id)).sort(),
+    originalIdsNotInGames: [...originals.keys()].filter((id) => !entries.has(id)).sort(),
   } : {}),
-  localExisting: ids.size - external - missing.length, external,
+  localExisting: entries.size - external - missing.length,
+  distinctLocalPaths: referenced.size,
+  external,
   unreferencedHtml: [...files].filter((file) => file.endsWith('.html') && !referenced.has(file)).length,
   missing, restore,
 }, null, 2));
