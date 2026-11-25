@@ -2,7 +2,7 @@ import { supabase, T } from './supabase';
 import { loadFavorites, loadRecent, loadServerDefaults, loadTheme } from './userData';
 
 export async function readCloudSaveArchive(userId: string) {
-  const rows: unknown[] = [];
+  const rows: { id: string; game_id: string; save_key: string; save_data: unknown; updated_at: string }[] = [];
   let after = '';
   for (;;) {
     let query = supabase.from(T.saves).select('id,game_id,save_key,save_data,updated_at')

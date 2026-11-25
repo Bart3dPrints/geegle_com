@@ -11,6 +11,7 @@
  */
 import type { Category, GameEntry } from './types';
 import { CATEGORIES } from './types';
+import { KRILLION_BACKUP } from './external';
 
 const rawModules = import.meta.glob('./raw/*.txt', {
   query: '?raw',
@@ -138,6 +139,11 @@ for (const [fileName, raw] of Object.entries(rawModules)) {
 
     const fix = TITLE_FIXES[id];
     const alias = ALIASES[id];
+
+    if (id === KRILLION_BACKUP.id) {
+      legacyGames.push(KRILLION_BACKUP);
+      continue;
+    }
 
     legacyGames.push({
       id,

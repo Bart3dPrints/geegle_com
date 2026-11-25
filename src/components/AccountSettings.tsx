@@ -1,23 +1,80 @@
 // Account settings: password change and sign-out. Accounts persist
 // indefinitely per the owner's cancellation of the inactivity-deletion feature.
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { X, KeyRound, LogOut, Loader2, Check } from 'lucide-react';
 import { supabase } from '../lib/supabase';
+import { databaseLabel, legacyDatabases, recoverLegacyDatabase } from '../lib/legacyRecovery';
 import { readKnownDeviceSaves } from '../lib/saveAdapters';
 import { downloadArchive, readCloudSaveArchive, readDevicePreferences } from '../lib/saveTransfer';
 
 export function AccountSettings({
   username,
+  ownerId,
   onClose,
   onSignedOut,
 }: {
   username: string;
+  ownerId: string;
   onClose: () => void;
   onSignedOut: () => Promise<void>;
 }) {
   const [newPassword, setNewPassword] = useState('');
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState<{ kind: 'ok' | 'err'; text: string } | null>(null);
+
+  const [copies, setCopies] = useState<{ gameId: string; slot: string; database: unknown }[]>([]);
+  const [selection, setSelection] = useState('');
+  const operation = useRef<AbortController | null>(null);
+
+  useEffect(() => {
+    const { data } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (session?.user.id !== ownerId) operation.current?.abort();
+    });
+    return () => {
+      operation.current?.abort();
+      data.subscription.unsubscribe();
+    };
+  }, [ownerId]);
+
+  const assertOwner = async () => {
+    const { data, error } = await supabase.auth.getSession();
+    if (error || data.session?.user.id !== ownerId) throw new Error('The account changed. No recovery was performed.');
+  };
+
+  const recover = async (mode: 'list' | 'copy') => {
+    const controller = new AbortController();
+    operation.current = controller;
+    setBusy(true);
+    setMessage(null);
+    try {
+      await assertOwner();
+      if (mode === 'list') {
+        const saves = await readCloudSaveArchive(ownerId);
+        await assertOwner();
+        controller.signal.throwIfAborted();
+        const entries = saves.flatMap(row => legacyDatabases(row.save_data).map(database => ({
+          gameId: row.game_id, slot: row.save_key, database,
+        })));
+        setSelection('');
+        setCopies(entries);
+        if (!entries.length) setMessage({ kind: 'ok', text: 'No older IndexedDB saves found.' });
+      } else {
+        const selected = selection === '' ? undefined : copies[Number(selection)];
+        if (!selected) throw new Error('Select a database first.');
+        const name = await recoverLegacyDatabase(ownerId, selected.gameId, selected.database, controller.signal, assertOwner);
+        setMessage({ kind: 'ok', text: `Created a separate browser database: ${name}. The game and cloud save were not changed.` });
+      }
+    } catch (error) {
+      if (!controller.signal.aborted) {
+        setMessage({ kind: 'err', text: error instanceof Error ? error.message : 'Could not recover the archive.' });
+      }
+    } finally {
+      if (operation.current === controller) {
+        operation.current = null;
+        setBusy(false);
+      }
+    }
+  };
 
   const changePassword = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -93,7 +150,7 @@ export function AccountSettings({
             required
           />
           {message && (
-            <p className={`mb-2 text-sm ${message.kind === 'ok' ? 'text-emerald-600' : 'text-red-600'}`} role="alert">
+            <p className={`mb-2 break-words text-sm ${message.kind === 'ok' ? 'text-emerald-600' : 'text-red-600'}`} role="alert">
               {message.text}
             </p>
           )}
@@ -104,6 +161,18 @@ export function AccountSettings({
         <div className="mb-4 space-y-2">
           <button className="btn-secondary w-full" disabled={busy} onClick={() => void exportData('cloud')}>Export cloud saves (including older formats)</button>
           <button className="btn-secondary w-full" disabled={busy} onClick={() => void exportData('device')}>Export device preferences and supported saves</button>
+          <button className="btn-secondary w-full" disabled={busy} onClick={() => void recover('list')}>Find older IndexedDB saves</button>
+          {copies.length > 0 && (
+            <>
+              <label className="block text-sm" htmlFor="legacy-recovery">Saved database</label>
+              <select id="legacy-recovery" className="input w-full" value={selection} disabled={busy} onChange={(event) => setSelection(event.target.value)}>
+                <option value="">Choose a database</option>
+                {copies.map(({ gameId, slot, database }, index) => <option key={index} value={index}>{gameId} · {slot} · {databaseLabel(database)}</option>)}
+              </select>
+              <button className="btn-secondary w-full" disabled={busy || selection === ''} onClick={() => void recover('copy')}>Create separate recovery copy</button>
+            </>
+          )}
+          <p className="text-xs text-slate-500">A recovery copy is for manual inspection in browser developer tools. It does not restore the save into the game.</p>
           <p className="text-xs text-slate-500">Exports do not change any data. Older formats may require manual recovery. Unassigned preferences are still available when signed out.</p>
           <p className="text-xs text-slate-500">Local games share this site’s browser storage. Only run games you trust while signed in.</p>
         </div>
