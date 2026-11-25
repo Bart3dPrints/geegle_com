@@ -38,6 +38,8 @@ function storage() {
     getItem: (k) => data.get(k) ?? null,
     setItem: (k, v) => data.set(k, String(v)),
     removeItem: (k) => data.delete(k),
+    key: (index) => [...data.keys()][index] ?? null,
+    get length() { return data.size; },
   };
 }
 
@@ -84,12 +86,39 @@ test('each supported HTML game uses exactly the keys used by its adapter', async
         const scoped = runInNewContext(`${helper}; geegleSaveKey(key)`, { URLSearchParams, location: { search }, key: k });
         localStorage.setItem(scoped, id ?? 'guest');
       }
-      if (id) assert.deepEqual(spec.capture(id)?.localStorage, Object.fromEntries(keys.map((k) => [k, id])));
+      if (id) assert.deepEqual((await spec.capture(id))?.localStorage, Object.fromEntries(keys.map((k) => [k, id])));
     }
     for (const k of keys) assert.equal(localStorage.getItem(k), 'guest');
   }
-  assert.equal(adapterFor(game, '/games/clohflip.html'), null);
-  assert.equal(adapterFor('untested', '/games/untested.html'), null);
+  // A game with no stored progress yet captures nothing (empty-save protection).
+  assert.equal(await adapterFor('cluntouchedgame', '/games/cluntouchedgame.html').capture(user), null);
+  assert.equal(adapterFor('untested', 'https://example.com/game.html'), null);
+});
+
+test('every local game gets generic storage-based cloud saves', async () => {
+  const spec = adapterFor('clsomeadventure', '/games/clsomeadventure.html');
+  assert.ok(spec);
+  assert.match(spec.launchPath(user), /geegle_profile=/);
+  // The shim namespaces game keys per account; capture reads only this account.
+  localStorage.setItem(`geegle-game:clsomeadventure:${user}:slot1`, 'level 7');
+  localStorage.setItem(`geegle-game:clsomeadventure:${other}:slot1`, 'level 2');
+  localStorage.setItem('geegle-game:clothergame:' + user + ':x', 'other game');
+  const snapshot = await spec.capture(user);
+  assert.deepEqual(snapshot, { format: 'geegle-storage-v2', localStorage: { slot1: 'level 7' }, indexedDB: [] });
+  assert.equal(await spec.capture(other).then((s) => s.localStorage.slot1), 'level 2');
+  assert.equal(await adapterFor('clsomeadventure', '/games/clsomeadventure.html').capture('cccccccc-cccc-cccc-cccc-cccccccccccc'), null);
+
+  // Restore is authoritative for this account and never touches others.
+  await spec.restore(user, { format: 'geegle-storage-v2', localStorage: { slot1: 'level 9' }, indexedDB: [] });
+  assert.equal(localStorage.getItem(`geegle-game:clsomeadventure:${user}:slot1`), 'level 9');
+  assert.equal(localStorage.getItem(`geegle-game:clsomeadventure:${other}:slot1`), 'level 2');
+  assert.equal(localStorage.getItem(`geegle-game:clothergame:${user}:x`), 'other game');
+
+  // A stored save can never overwrite platform state.
+  assert.throws(() => spec.validate({ format: 'geegle-storage-v2', localStorage: { 'geegle-favorites': '[]' } }), /reserved/);
+  assert.throws(() => spec.validate({ format: 'geegle-storage-v2', localStorage: { slot1: 5 } }), /Invalid/);
+  assert.throws(() => spec.validate({ format: 'v3', localStorage: { slot1: 'x' } }), /Unrecognized/);
+  assert.deepEqual(spec.validate({ format: 'geegle-storage-v2', localStorage: {}, indexedDB: [] }), { format: 'geegle-storage-v2', localStorage: {}, indexedDB: [] });
 });
 
 test('restore from cloud before a game opens with empty browser storage', async (t) => {

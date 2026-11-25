@@ -11,6 +11,10 @@ export interface CloudSaveHandle {
   saveNow(): Promise<SaveResult>;
   restore(): Promise<RestoreResult>;
   keepLocal(): Promise<SaveResult>;
+  /** Download this account's save as a JSON file; null when nothing is stored. */
+  exportSave(): Promise<SaveResult & { json?: string }>;
+  /** Import a previously exported save file and sync it to the cloud. */
+  importSave(json: string): Promise<SaveResult>;
   getStatus(): SyncStatus;
   launchPath: string;
   supported: boolean;
@@ -23,7 +27,9 @@ interface SaveRemote {
   write(snapshot: SaveSnapshot, revision: string | null): Promise<string | null>;
 }
 
-const MAX_SNAPSHOT_BYTES = 512 * 1024;
+// IndexedDB dumps (Unity IDBFS, Ruffle shared objects) are larger than plain
+// key/value saves, so the limit accounts for base64-encoded binary data.
+const MAX_SNAPSHOT_BYTES = 4 * 1024 * 1024;
 const SYNC_INTERVAL_MS = 15_000;
 const conflictMessage = 'Cloud progress changed on another device. Choose Restore from Cloud or Keep This Device.';
 const success = { ok: true };
@@ -113,7 +119,11 @@ export function createSaveSession(
     try {
       const cloud = await read();
       if (disposed) return;
-      const local = serialize(adapter.capture(userId));
+      // No cloud save yet: clear shared database data left by another account
+      // before its progress can be shown or uploaded under this account.
+      if (beforeLaunch && !cloud.snapshot) await adapter.isolate(userId);
+      if (disposed) return;
+      const local = serialize(await adapter.capture(userId));
       const cloudData = serialize(cloud.snapshot);
       const previous = checkpoint();
       if (!cloud.snapshot && previous && local) {
@@ -132,14 +142,14 @@ export function createSaveSession(
             conflict(cloud.revision);
             return;
           }
-          adapter.restore(userId, cloud.snapshot);
+          await adapter.restore(userId, cloud.snapshot);
         }
       } else if (cloud.snapshot && !local) {
         if (!beforeLaunch) {
           conflict(cloud.revision);
           return;
         }
-        adapter.restore(userId, cloud.snapshot);
+        await adapter.restore(userId, cloud.snapshot);
       }
       await remember(cloud.revision, cloudData);
       setStatus(cloud.snapshot && (cloudData === local || !local || localUnchanged) ? 'restored' : 'idle');
@@ -157,7 +167,7 @@ export function createSaveSession(
       return { ok: false, error: status === 'conflict' ? conflictMessage : 'Cloud restore has not succeeded. Retry Restore from Cloud before saving.' };
     }
     try {
-      const snapshot = adapter.capture(userId);
+      const snapshot = await adapter.capture(userId);
       if (!snapshot) return success;
       const body = JSON.stringify(snapshot);
       if (body === base) {
@@ -166,7 +176,7 @@ export function createSaveSession(
       }
       if (!navigator.onLine) return fail(new Error('Offline. Your device still has its progress; sync will retry.'));
       if (new TextEncoder().encode(body).byteLength > MAX_SNAPSHOT_BYTES) {
-        return fail(new Error('Save data exceeds the 512 KB limit.'));
+        return fail(new Error('Save data exceeds the 4 MB limit.'));
       }
       setStatus('saving');
       const next = await remote.write(snapshot, revision);
@@ -214,7 +224,7 @@ export function createSaveSession(
     try {
       const cloud = await read();
       retryRead = false;
-      if (cloud.snapshot) adapter.restore(userId, cloud.snapshot);
+      if (cloud.snapshot) await adapter.restore(userId, cloud.snapshot);
       await remember(cloud.revision, serialize(cloud.snapshot));
       setStatus(cloud.snapshot ? 'restored' : 'idle');
       return { ok: true, restored: Boolean(cloud.snapshot) };
@@ -228,7 +238,7 @@ export function createSaveSession(
     try {
       const cloud = await read();
       if (cloud.revision !== conflictingRevision) return conflict(cloud.revision);
-      if (!adapter.capture(userId)) return { ok: false, error: 'No saved progress on this device.' };
+      if (!(await adapter.capture(userId))) return { ok: false, error: 'No saved progress on this device.' };
       revision = cloud.revision;
       base = serialize(cloud.snapshot);
       canUpload = true;
@@ -240,13 +250,39 @@ export function createSaveSession(
     }
   });
 
+  const exportSave = (): Promise<SaveResult & { json?: string }> => schedule(async () => {
+    try {
+      const snapshot = await adapter.capture(userId);
+      if (!snapshot) return { ok: false, error: 'No saved progress on this device yet.' };
+      return { ok: true, json: JSON.stringify(snapshot, null, 2) };
+    } catch (error) {
+      return { ok: false, error: describe(error) };
+    }
+  });
+
+  const importSave = (json: string): Promise<SaveResult> => schedule(async () => {
+    try {
+      const snapshot = adapter.validate(JSON.parse(json));
+      if (!canUpload) {
+        return { ok: false, error: 'Restore from the cloud (or resolve the conflict) before importing a save.' };
+      }
+      await adapter.restore(userId, snapshot);
+      return upload();
+    } catch (error) {
+      return { ok: false, error: describe(error) };
+    }
+  });
+
   const dispose = () => {
     disposed = true;
     clearInterval(timer);
     return queue.then(() => undefined);
   };
 
-  return { restored, close, saveNow, restore, keepLocal, getStatus: () => status, launchPath: adapter.launchPath(userId), supported: true, dispose };
+  return {
+    restored, close, saveNow, restore, keepLocal, exportSave, importSave,
+    getStatus: () => status, launchPath: adapter.launchPath(userId), supported: true, dispose,
+  };
 }
 
 export function startCloudSync(gameId: string, launchPath: string, userId: string | null, onStatus?: (s: SyncStatus) => void): CloudSaveHandle {
@@ -258,6 +294,7 @@ export function startCloudSync(gameId: string, launchPath: string, userId: strin
   return {
     restored: Promise.resolve(), close: async () => success, saveNow: async () => result,
     restore: async () => ({ ...result, restored: false }), keepLocal: async () => result,
+    exportSave: async () => result, importSave: async () => result,
     getStatus: () => userId ? 'unsupported' : 'idle', launchPath, supported: false, dispose: async () => {},
   };
 }

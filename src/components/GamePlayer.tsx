@@ -12,6 +12,8 @@ import {
   Loader2,
   UploadCloud,
   DownloadCloud,
+  FileDown,
+  FileUp,
   AlertTriangle,
   Check,
   WifiOff,
@@ -97,6 +99,7 @@ export function GamePlayer({
   const [syncStatus, setSyncStatus] = useState<SyncStatus>('idle');
   const [manualMsg, setManualMsg] = useState<string | null>(null);
   const saveHandleRef = useRef<CloudSaveHandle | null>(null);
+  const importInputRef = useRef<HTMLInputElement>(null);
 
   const url = entry ? entry.path : proxy?.url;
   const title = entry ? entry.title : proxy?.title;
@@ -229,6 +232,39 @@ export function GamePlayer({
     }
   };
 
+  const manualExport = async () => {
+    const result = await saveHandleRef.current?.exportSave();
+    if (!result) return;
+    if (!result.ok || !result.json) {
+      setManualMsg(result.error ?? 'Nothing to export yet.');
+      return;
+    }
+    const blob = new Blob([result.json], { type: 'application/json' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `${gameId ?? 'game'}-save.json`;
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(link.href), 10_000);
+    setManualMsg('Save file downloaded.');
+  };
+
+  const manualImport = async (file: File | undefined) => {
+    if (!file) return;
+    const handle = saveHandleRef.current;
+    if (!handle) return;
+    setBusy(true);
+    try {
+      const result = await handle.importSave(await file.text());
+      setManualMsg(result.ok ? 'Save file imported and synced to the cloud.' : result.error ?? 'Import failed.');
+      if (result.ok) {
+        setLoaded(false);
+        setLoadFailed(false);
+      }
+    } finally {
+      setBusy(false);
+    }
+  };
+
   const keepLocal = async () => {
     if (busy || !window.confirm('Replace the conflicting cloud version with this device’s progress?')) return;
     setBusy(true);
@@ -292,8 +328,7 @@ export function GamePlayer({
           <>
             <button
               className={btn}
-              onClick={manualSave}
-              disabled={busy}
+              onClick={() => void manualSave()}
               aria-label="Save progress to cloud"
               title="Save to Cloud"
             >
@@ -301,13 +336,42 @@ export function GamePlayer({
             </button>
             <button
               className={btn}
-              onClick={manualRestore}
+              onClick={() => void manualRestore()}
               disabled={busy}
               aria-label="Restore progress from cloud"
               title="Restore from Cloud"
             >
               <DownloadCloud size={16} />
             </button>
+            <button
+              className={btn}
+              onClick={() => void manualExport()}
+              disabled={busy}
+              aria-label="Export this save as a file"
+              title="Export save file"
+            >
+              <FileDown size={16} />
+            </button>
+            <button
+              className={btn}
+              onClick={() => importInputRef.current?.click()}
+              disabled={busy}
+              aria-label="Import a save file"
+              title="Import save file"
+            >
+              <FileUp size={16} />
+            </button>
+            <input
+              ref={importInputRef}
+              type="file"
+              accept="application/json,.json"
+              className="hidden"
+              onChange={(event) => {
+                const file = event.target.files?.[0];
+                event.target.value = '';
+                void manualImport(file);
+              }}
+            />
             {syncStatus === 'conflict' && <button className={btn} disabled={busy} onClick={() => void keepLocal()}>Keep This Device</button>}
           </>
         )}
