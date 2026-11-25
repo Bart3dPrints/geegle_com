@@ -1,0 +1,210 @@
+clsaihatestation|Saihate Station|horror
+clsandtris|Sandtris|puzzle
+clsandboxcity|Sandbox City|simulation
+clsandboxels|Sandboxels|simulation
+clsandsofthecoliseum|Sands of the Coliseum|action
+clsandstone-1|Sandstone|puzzle
+clsantarun|Santa Run|platformer
+clsanty|Santy|puzzle
+clsaszombieassault2|SAS Zombie Assault 2|action
+clsatryn|Satryn|action
+clsaulgoodmanrun|Saul Goodman Run|platformer
+clsausageflip|Sausage Flip|arcade
+clsayorisnotebook|Sayori's Notebook|horror
+clscalethedepths|Scale the Depths|adventure
+clscarletandviolet|Pokemon Scarlet and Violet|pokemon
+clscarletshift|Scarlet Shift|action
+clscarymazegame|Scary Maze Game|horror
+clscaryshawarma|Scary Shawarma|horror
+clscaryteacher3d|Scary Teacher 3D|horror
+clschoolboyrunaway|Schoolboy Runaway|adventure
+clscrapmetal3|Scrap Metal 3|racing
+clscrapyarddog|Scrap Yard Dog|action
+clscratchoptions|Scratch Options|simulation
+clscribblenauts|Scribblenauts|puzzle
+clscubabear|Scuba Bear|adventure
+clsd-thewar|SD: The War|action
+clsdf|SDF|action
+clseamongrel|Sea Mongrel|action
+clsecretofmana|Secret of Mana|adventure
+clsega2gg|Sega 2 GG|platformer
+clsegasonicthehedgehog|SegaSonic the Hedgehog|platformer
+clself|Self|puzzle
+clsentryfortress|Sentry Fortress|action
+clserenitrove|Sere Nitro Ve|racing
+clserioussamadvance|Serious Sam Advance|action
+clservingupmadness|Serving Up Madness|action
+clsevendays|Seven Days|horror
+clsfk|SFK|sports
+clsfk2|SFK 2|sports
+clsfklaststand|SFK Last Stand|sports
+clsfkleague|SFK League|sports
+clshwultimatem|SH Ultimate M|action
+clshadowcourier|Shadow Courier|adventure
+clshadowdancer|Shadow Dancer|action
+clshadowdancersecret|Shadow Dancer Secret|action
+clshaggy--1|Shaggy|rhythm
+clshantaegb|Shantae (GB)|platformer
+clshapetransform|Shape Transform|puzzle
+clshc1|SHC 1|action
+clshc2|SHC 2|action
+clshc3|SHC 3|action
+clshift|Shift|puzzle
+clshift2|Shift 2|puzzle
+clshift3|Shift 3|puzzle
+clshiftatmidnight|Shift at Midnight|horror
+clshinmegamitenseidevilsurvivor|Shin Megami Tensei: Devil Survivor|adventure
+clshinobi|Shinobi|action
+clshinobi3|Shinobi 3|action
+clshinobirevenge|Shinobi Revenge|action
+clshoppingcarthero|Shopping Cart Hero|sports
+clshortlife|Short Life|simulation
+clshotout4|Shot Out 4|action
+clshredmill|Shred Mill|action
+clshrek-2|Shrek 2|platformer
+clshrubnaut|Shrub Naut|platformer
+clsideeffects|Side Effects|puzzle
+clsidepocket|Side Pocket|sports
+clsierra7|Sierra 7|action
+clsilenthill|Silent Hill|horror
+clsilenthillalt|Silent Hill (Alt)|horror
+clsilk|Silk|puzzle
+clsilkmelody|Silk Melody|puzzle
+clsiloshowdow|Silo Showdown|action
+clsilver|Silver|puzzle
+clsimcity64|SimCity 64|simulation
+clsimpsonsarcade|Simpsons Arcade|action
+clsinglefile|Single File|puzzle
+clsixwaystodie|Six Ways to Die|action
+clskateordie|Skate or Die|sports
+clskateit|Skate It|sports
+clskibidiinthebackrooms|Skibidi in the Backrooms|arcade
+clskibidishooter|Skibidi Shooter|action
+clskinwalker|Skinwalker|horror
+clskong|Skong|action
+clskyfactory|Sky Factory|simulation
+clskywire2|Skywire 2|puzzle
+clskyrace-3d|Skyrace 3D|racing
+clskywire|Skywire|puzzle
+clslalomnes|Slalom (NES)|sports
+clslendytubbies|Slendytubbies|horror
+clslenderman|Slender Man|horror
+clsliceitall|Slice It All|action
+clslideinthewoods|Slide in the Woods|horror
+clslimelabratory|Slime Laboratory|platformer
+clslipways|Slipways|strategy
+clslitherio|Slither.io|multiplayer
+clslope|Slope|arcade
+clslope2player|Slope 2 Player|multiplayer
+clslope3|Slope 3|arcade
+clslopeplus|Slope Plus|arcade
+clslotornot|Slot or Not|casual
+clslowroads|Slow Roads|simulation
+clsm63redux|Super Mario 63 Redux|platformer
+clsmadvance2|Super Mario Advance 2|platformer
+clsmadvance3|Super Mario Advance 3|platformer
+clsm64greenstars|SM64: Green Stars|platformer
+clsm64hiddenstars|SM64: Hidden Stars|platformer
+clsm64lastimpact|SM64: Last Impact|platformer
+clsm64liminaldream|SM64: Liminal Dream|platformer
+clsm64oot|SM64: OOT|platformer
+clsm64sapphire|SM64: Sapphire|platformer
+smash-hit-ripoff|Smash Hit Ripoff|action
+clsmashkarts|Smash Karts|multiplayer
+clsmashkartsworking|Smash Karts (Working)|multiplayer
+clsmashremix|Smash Remix|action
+clsmashremix2-0-1|Smash Remix 2.0.1|action
+clsmb12|SMB 12|platformer
+clsmbcrossover|SMB Crossover|platformer
+clsmbgameover|SMB Game Over|platformer
+clsmbremastered|SMB Remastered|platformer
+clsmbc|SMBC|platformer
+clsmc|SMC|platformer
+clsmgds|Super Mario Galaxy DS|platformer
+clsnailbob|Snail Bob|puzzle
+clsnailbob2|Snail Bob 2|puzzle
+clsnailbob3|Snail Bob 3|puzzle
+clsnailbob4space|Snail Bob 4: Space|puzzle
+clsnailbob5lovestory|Snail Bob 5: Love Story|puzzle
+clsnakelike|Snake Like|arcade
+clsnakeis|Snake.is|arcade
+clsnipershot|Sniper Shot|action
+clsniperv2|Sniper V2|action
+clsnowbros--1|Snow Bros|arcade
+clsnowbrosgenesis|Snow Bros: Genesis|arcade
+clsnowbrothers|Snow Brothers|arcade
+clsnowrideee|Snow Rider|sports
+clsnowrider|Snow Rider|sports
+snow-rider|Snow Rider 3D|sports
+clsnowridergoodygumdrops|Snow Rider: Goody Gumdrops|sports
+clsnowriderrrr|Snow Rider (Alt)|sports
+clsnowroad|Snow Road|sports
+snowwhite|Snow White|puzzle
+clsnowballio|Snowball.io|multiplayer
+clsnowboardobby|Snowboard Obby|platformer
+clsnowdrift|Snowdrift|sports
+clsnowrid|Snowrid|sports
+clsoccerbros|Soccer Bros|sports
+clsoccernes|Soccer (NES)|sports
+clsoccerrandom|Soccer Random|sports
+clsoccerrandomgood|Soccer Random Good|sports
+clsodasimulator|Soda Simulator|simulation
+clsolatrobo|Solataire Bo|puzzle
+clsolarclient|Solar Client|simulation
+clsolarsandbox|Solar Sandbox|simulation
+clsolarsmash|Solar Smash|simulation
+clsolitaire|Solitaire|puzzle
+clsolstice|Solstice|puzzle
+clsomari64|Somari 64|platformer
+clsoniceexeog|Sonic.exe OG|platformer
+clsonicerazor|Sonic Razor|platformer
+clsonic1contemporary|Sonic 1 Contemporary|platformer
+clsonic1mobile|Sonic 1 Mobile|platformer
+clsonic2mobile|Sonic 2 Mobile|platformer
+clsonic2pinkedition|Sonic 2: Pink Edition|platformer
+clsonic2timeandplace|Sonic 2: Time and Place|platformer
+clsonic3andknuckles|Sonic 3 & Knuckles|platformer
+clsonic3andsally|Sonic 3 & Sally|platformer
+clsonic3complete|Sonic 3 Complete|platformer
+clsonic3dblast|Sonic 3D Blast|platformer
+clsonic3dblastdx|Sonic 3D Blast DX|platformer
+clsonicadvance|Sonic Advance|platformer
+clsonicadvance2|Sonic Advance 2|platformer
+clsonicadvance2sp|Sonic Advance 2 (SP)|platformer
+clsonicadvance3|Sonic Advance 3|platformer
+clsonicandashuro|Sonic and Ashuro|platformer
+clsonicandfallingstar|Sonic and Falling Star|platformer
+clsonicandknuckles|Sonic & Knuckles|platformer
+clsonicbattle|Sonic Battle|action
+clsonicblast|Sonic Blast|platformer
+clsoniccdmobile|Sonic CD Mobile|platformer
+clsonicchaos|Sonic Chaos|platformer
+clsonicclassiccollection|Sonic Classic Collection|platformer
+clsonicclassicheroes-1|Sonic Classic Heroes|platformer
+clsonicclassics|Sonic Classics|platformer
+clsoniccolors|Sonic Colors|platformer
+clsonicdeltaorigins|Sonic Delta Origins|platformer
+clsonicdrift|Sonic Drift|racing
+clsonicdrift2|Sonic Drift 2|racing
+clsonichellfiresaga|Sonic: Hellfire Saga|platformer
+clsonicinsmw|Sonic in SMW|platformer
+clsonicjam|Sonic Jam|platformer
+clsoniclabyrinth|Sonic Labyrinth|platformer
+clsonicmania|Sonic Mania|platformer
+clsonicmaniaplus|Sonic Mania Plus|platformer
+clsonicmegamix|Sonic Mega Mix|platformer
+clsonicmon|Sonic Mon|platformer
+clsonicmushroomblast|Sonic Mushroom Blast|platformer
+clsonicpocketadventure|Sonic Pocket Adventure|platformer
+clsonicralt|Sonic R (Alt)|racing
+clsonicrevert|Sonic Revert|racing
+clsonicrush|Sonic Rush|platformer
+clsonicrushadventure|Sonic Rush Adventure|platformer
+clsonicscorchedquest|Sonic Scorched Quest|platformer
+clsonicthehedgehog|Sonic the Hedgehog|platformer
+clsonicthehedgehog2|Sonic the Hedgehog 2|platformer
+clsonicthehedgehog3|Sonic the Hedgehog 3|platformer
+clsoniccd|Sonic CD|platformer
+clsonicgg|Sonic GG|platformer
+clsonicr|Sonic R|racing
+clsonicspinball|Sonic Spinball|arcade
