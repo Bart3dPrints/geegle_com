@@ -1,0 +1,9 @@
+clyanderesimulator|Yandere Simulator|simulation
+clyarsrevenge|Yar's Revenge|arcade
+clyellow|Yellow|puzzle
+clyohohoio|Yohoho.io|multiplayer
+clyoshisstrangequest|Yoshi's Strange Quest|platformer
+clyouarelucky|You Are Lucky|action
+clyouvs100skibidi-1|You vs 100 Skibidi|action
+clyourturntodie|Your Turn to Die|adventure
+clyumenikki|Yume Nikki|horror
