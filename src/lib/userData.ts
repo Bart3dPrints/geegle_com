@@ -1,13 +1,9 @@
 // User data layer: favorites, recently played, theme, settings, and default
-// proxy servers — all in the dedicated `geegle` schema.
-// Every server operation includes the caller's user id explicitly (RLS also
-// enforces ownership server-side) and every error is surfaced to the caller
-// as an OpResult; nothing is silently ignored. Anonymous users keep working
-// via localStorage, preserving pre-account behavior.
+// proxy servers — all in geegle_* tables with explicit user ids and RLS
+// owner-only policies. Errors surface to callers as OpResult.
 
-import { db, isSupabaseConfigured } from './supabase';
+import { supabase, isSupabaseConfigured, T } from './supabase';
 import type { OpResult, ThemePreference } from '../types';
-import { FAVORITES_KEY, RECENT_KEY, THEME_KEY, SERVERS_KEY } from './migrateSaves';
 
 function readJson(key: string): unknown {
   try {
@@ -22,7 +18,7 @@ function writeJson(key: string, value: unknown): void {
   try {
     localStorage.setItem(key, JSON.stringify(value));
   } catch {
-    /* storage unavailable — localStorage state is best-effort by design */
+    /* storage unavailable */
   }
 }
 
@@ -31,7 +27,12 @@ function readStringArray(key: string): string[] {
   return Array.isArray(v) ? (v as string[]) : [];
 }
 
-// ── Favorites ──────────────────────────────────────────────────────────────
+export const FAVORITES_KEY = 'geegle-favorites';
+export const RECENT_KEY = 'geegle-recently-played';
+export const THEME_KEY = 'geegle-theme';
+export const SERVERS_KEY = 'geegle-default-servers';
+
+// ── Favorites ───────────────────────────────────────────────────────────────
 
 export function toggleFavoriteLocal(gameId: string): string[] {
   const favorites = readStringArray(FAVORITES_KEY);
@@ -50,32 +51,30 @@ export async function toggleFavorite(
     return { ok: true, data: toggleFavoriteLocal(gameId) };
   }
 
-  const existing = await db()
-    .from('favorites')
+  const existing = await supabase
+    .from(T.favorites)
     .select('game_id')
     .eq('user_id', userId)
     .eq('game_id', gameId)
     .maybeSingle();
-  if (existing.error) {
-    return { ok: false, error: existing.error.message };
-  }
+  if (existing.error) return { ok: false, error: existing.error.message };
 
   if (existing.data) {
-    const removed = await db()
-      .from('favorites')
+    const removed = await supabase
+      .from(T.favorites)
       .delete()
       .eq('user_id', userId)
       .eq('game_id', gameId);
     if (removed.error) return { ok: false, error: removed.error.message };
   } else {
-    const added = await db()
-      .from('favorites')
+    const added = await supabase
+      .from(T.favorites)
       .insert({ user_id: userId, game_id: gameId });
     if (added.error) return { ok: false, error: added.error.message };
   }
 
-  const all = await db()
-    .from('favorites')
+  const all = await supabase
+    .from(T.favorites)
     .select('game_id')
     .eq('user_id', userId);
   if (all.error) return { ok: false, error: all.error.message };
@@ -88,15 +87,15 @@ export async function loadFavorites(
   if (!userId || !isSupabaseConfigured) {
     return { ok: true, data: readStringArray(FAVORITES_KEY) };
   }
-  const { data, error } = await db()
-    .from('favorites')
+  const { data, error } = await supabase
+    .from(T.favorites)
     .select('game_id')
     .eq('user_id', userId);
   if (error) return { ok: false, error: error.message };
   return { ok: true, data: (data ?? []).map((r) => r.game_id) };
 }
 
-// ── Recently played ──────────────────────────────────────────────────────────
+// ── Recently played ──────────────────────────────────────────────────────
 
 export function pushRecentLocal(gameId: string): string[] {
   let recent = readStringArray(RECENT_KEY);
@@ -113,20 +112,18 @@ export async function trackPlay(
     return { ok: true, data: pushRecentLocal(gameId) };
   }
 
-  const upsert = await db()
-    .from('recently_played')
+  const upsert = await supabase
+       .from(T.recent)
     .upsert(
       { user_id: userId, game_id: gameId, played_at: new Date().toISOString() },
       { onConflict: 'user_id,game_id' }
-    )
-    .eq('user_id', userId);
+    );
   if (upsert.error) {
-    // Degrade to local so play history is never lost, but report the error.
     return { ok: false, error: upsert.error.message, data: pushRecentLocal(gameId) };
   }
 
-  const { data, error } = await db()
-    .from('recently_played')
+  const { data, error } = await supabase
+    .from(T.recent)
     .select('game_id')
     .eq('user_id', userId)
     .order('played_at', { ascending: false })
@@ -141,8 +138,8 @@ export async function loadRecent(
   if (!userId || !isSupabaseConfigured) {
     return { ok: true, data: readStringArray(RECENT_KEY) };
   }
-  const { data, error } = await db()
-    .from('recently_played')
+  const { data, error } = await supabase
+    .from(T.recent)
     .select('game_id')
     .eq('user_id', userId)
     .order('played_at', { ascending: false })
@@ -151,55 +148,7 @@ export async function loadRecent(
   return { ok: true, data: (data ?? []).map((r) => r.game_id) };
 }
 
-// ── Game saves (compatible games) ───────────────────────────────────────────
-
-export async function saveGameSave(
-  gameId: string,
-  saveKey: string,
-  saveData: unknown,
-  userId: string | null
-): Promise<OpResult<null>> {
-  if (!userId || !isSupabaseConfigured) {
-    // Mirror to localStorage so saves survive even without an account.
-    writeJson(`geegle-save-${gameId}-${saveKey}`, saveData);
-    return { ok: true };
-  }
-  const { error } = await db()
-    .from('game_saves')
-    .upsert(
-      {
-        user_id: userId,
-        game_id: gameId,
-        save_key: saveKey,
-        save_data: saveData as object,
-      },
-      { onConflict: 'user_id,game_id,save_key' }
-    )
-    .eq('user_id', userId);
-  if (error) return { ok: false, error: error.message };
-  return { ok: true };
-}
-
-export async function loadGameSave(
-  gameId: string,
-  saveKey: string,
-  userId: string | null
-): Promise<OpResult<unknown>> {
-  if (!userId || !isSupabaseConfigured) {
-    return { ok: true, data: readJson(`geegle-save-${gameId}-${saveKey}`) };
-  }
-  const { data, error } = await db()
-    .from('game_saves')
-    .select('save_data')
-    .eq('user_id', userId)
-    .eq('game_id', gameId)
-    .eq('save_key', saveKey)
-    .maybeSingle();
-  if (error) return { ok: false, error: error.message };
-  return { ok: true, data: data?.save_data ?? null };
-}
-
-// ── Theme ─────────────────────────────────────────────────────────────────────
+// ── Theme ─────────────────────────────────────────────────────────────────
 
 export function writeThemeLocal(theme: ThemePreference): void {
   try {
@@ -215,8 +164,8 @@ export async function saveTheme(
 ): Promise<OpResult<null>> {
   writeThemeLocal(theme);
   if (!userId || !isSupabaseConfigured) return { ok: true };
-  const { error } = await db()
-    .from('user_settings')
+  const { error } = await supabase
+    .from(T.settings)
     .upsert({ id: userId, theme })
     .eq('id', userId);
   if (error) return { ok: false, error: error.message };
@@ -233,8 +182,8 @@ export async function loadTheme(
       return { ok: true, data: null };
     }
   }
-  const { data, error } = await db()
-    .from('user_settings')
+  const { data, error } = await supabase
+    .from(T.settings)
     .select('theme')
     .eq('id', userId)
     .maybeSingle();
@@ -242,7 +191,7 @@ export async function loadTheme(
   return { ok: true, data: data?.theme ?? null };
 }
 
-// ── Default proxy servers ─────────────────────────────────────────────────────
+// ── Default proxy servers ────────────────────────────────────────────────
 
 export type ServerDefaults = Record<string, number>;
 
@@ -264,8 +213,8 @@ export async function saveServerDefault(
 
   if (!userId || !isSupabaseConfigured) return { ok: true };
 
-  const row = await db()
-    .from('user_settings')
+  const row = await supabase
+    .from(T.settings)
     .select('settings')
     .eq('id', userId)
     .maybeSingle();
@@ -276,8 +225,8 @@ export async function saveServerDefault(
   servers[serviceId] = index;
   settings.defaultServers = servers;
 
-  const upsert = await db()
-    .from('user_settings')
+  const upsert = await supabase
+n    .from(T.settings)
     .upsert({ id: userId, settings })
     .eq('id', userId);
   if (upsert.error) return { ok: false, error: upsert.error.message };
@@ -290,8 +239,8 @@ export async function loadServerDefaults(
   if (!userId || !isSupabaseConfigured) {
     return { ok: true, data: readLocalServerDefaults() };
   }
-  const { data, error } = await db()
-    .from('user_settings')
+  const { data, error } = await supabase
+    .from(T.settings)
     .select('settings')
     .eq('id', userId)
     .maybeSingle();
