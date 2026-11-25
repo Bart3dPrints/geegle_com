@@ -1,0 +1,117 @@
+clpokeblack|Pokemon Black|pokemon
+clpokeblack2alt|Pokemon Black 2 (Alt)|pokemon
+clpokeblackalt|Pokemon Black (Alt)|pokemon
+clpokeblazeblack2redux|Pokemon Blaze Black 2 Redux|pokemon
+clpokeblue|Pokemon Blue|pokemon
+clpokeclassic|Pokemon Classic|pokemon
+clpokecrown|Pokemon Crown|pokemon
+clpokecrystaladvanceredux|Pokemon Crystal Advance Redux|pokemon
+clpokecrystalclear|Pokemon Crystal Clear|pokemon
+clpokediamond|Pokemon Diamond|pokemon
+clpokedreamstone|Pokemon Dream Stone|pokemon
+clpokeeliteredux|Pokemon Elite Redux|pokemon
+clpokeelysiuma|Pokemon Elysium A|pokemon
+clpokeelysiumb|Pokemon Elysium B|pokemon
+clpokeemeraldenhanced|Pokemon Emerald Enhanced|pokemon
+clpokeemeraldexceeded|Pokemon Emerald Exceeded|pokemon
+clpokeemeraldhorizons|Pokemon Emerald Horizons|pokemon
+clpokeemeraldimperium|Pokemon Emerald Imperium|pokemon
+clpokeemeraldrandom|Pokemon Emerald Random|pokemon
+clpokeemeraldrogue|Pokemon Emerald Rogue|pokemon
+clpokeemeraldz|Pokemon Emerald Z|pokemon
+clpokefiregold|Pokemon FireGold|pokemon
+clpokeflora|Pokemon Flora|pokemon
+clpokefrlgplus|Pokemon FRLG Plus|pokemon
+clpokefuseddimension|Pokemon Fused Dimension|pokemon
+clpokegaia|Pokemon Gaia|pokemon
+clpokegoldenshield|Pokemon Golden Shield|pokemon
+clpokeheartgold|Pokemon HeartGold|pokemon
+clpokelightplatinum|Pokemon Light Platinum|pokemon
+clpokeliquidcrysta|Pokemon Liquid Crystal|pokemon
+clpokemegamoemon|Pokemon Mega Moemon|pokemon
+clpokemoonemerald|Pokemon Moon Emerald|pokemon
+clpokemoongalaxy|Pokemon Moon Galaxy|pokemon
+clpokemysteryexplorersofsky|Pokemon Mystery Dungeon: Explorers of Sky|pokemon
+clpokenameless|Pokemon Nameless|pokemon
+clpokeodyssey|Pokemon Odyssey|pokemon
+clpokepasta|Pokemon Pasta|pokemon
+clpokepath|Pokemon Path|pokemon
+clpokepearl|Pokemon Pearl|pokemon
+clpokeperfectfirered|Pokemon Perfect FireRed|pokemon
+clpokepicross|Pokemon Picross|puzzle
+clpokepisces|Pokemon Pisces|pokemon
+clpokeplatinum|Pokemon Platinum|pokemon
+clpokeplatinumrandomized|Pokemon Platinum Randomized|pokemon
+clpokepureblue|Pokemon Pure Blue|pokemon
+clpokepuregreen|Pokemon Pure Green|pokemon
+clpokepurered|Pokemon Pure Red|pokemon
+clpokerechargedpink|Pokemon Recharged Pink|pokemon
+clpokerechargedyellow|Pokemon Recharged Yellow|pokemon
+clpokerecordkeepers|Pokemon Record Keepers|pokemon
+clpokerenegadeplat|Pokemon Renegade Platinum|pokemon
+clpokerocketedition|Pokemon Rocket Edition|pokemon
+clpokeruby|Pokemon Ruby|pokemon
+clpokerunandbun|Pokemon Run and Bun|pokemon
+clpokescorchedsilver|Pokemon Scorched Silver|pokemon
+clpokescrambledscarlet|Pokemon Scrambled Scarlet|pokemon
+clpokesunsky|Pokemon Sun Sky|pokemon
+clpoketcg1|Pokemon TCG 1|pokemon
+clpoketcg2|Pokemon TCG 2|pokemon
+clpokethepit|Pokemon the Pit|pokemon
+clpoketoomanytypes2|Pokemon Too Many Types 2|pokemon
+clpoketourmaline|Pokemon Tourmaline|pokemon
+clpokeultraviolet|Pokemon Ultraviolet|pokemon
+clpokeunovaemerald|Pokemon Unova Emerald|pokemon
+clpokevega|Pokemon Vega|pokemon
+clpokevoltwhite2redux|Pokemon Volt White 2 Redux|pokemon
+clpokevoyager|Pokemon Voyager|pokemon
+clpokewhite|Pokemon White|pokemon
+clpokewhite2|Pokemon White 2|pokemon
+clpokewhite2alt|Pokemon White 2 (Alt)|pokemon
+clpokeyellow|Pokemon Yellow|pokemon
+clpokeblack2|Pokemon Black 2|pokemon
+clpokeambrosia|Pokemon Ambrosia|pokemon
+clpokemonamnesia|Pokemon Amnesia|pokemon
+clpokemonclover|Pokemon Clover|pokemon
+clpokemoncrystal|Pokemon Crystal|pokemon
+clpokemonemerald|Pokemon Emerald|pokemon
+clpokemonemeraldcrest|Pokemon Emerald Crest|pokemon
+clpokemonemeraldkaizo|Pokemon Emerald Kaizo|pokemon
+clpokemonemeraldmini|Pokemon Emerald Mini|pokemon
+clpokeemeraldrogueex|Pokemon Emerald Rogue EX|pokemon
+clpokemonemeraldseaglass|Pokemon Emerald Seaglass|pokemon
+clpokemonenergizedemerald|Pokemon Energized Emerald|pokemon
+clpokemonfirered|Pokemon FireRed|pokemon
+clpokemonfireredrandomized|Pokemon FireRed Randomized|pokemon
+clpokefusion3|Pokemon Fusion 3|pokemon
+clpokemongold|Pokemon Gold|pokemon
+clpokemonkaizoironfirered|Pokemon Kaizo Iron FireRed|pokemon
+clpokemonlazarus|Pokemon Lazarus|pokemon
+clpokemonleafgreen|Pokemon LeafGreen|pokemon
+clpokemonmodernemerald|Pokemon Modern Emerald|pokemon
+clpokemonmysterydungeon|Pokemon Mystery Dungeon|pokemon
+clpokemonquetzal|Pokemon Quetzal|pokemon
+clpokemonroaringred|Pokemon Roaring Red|pokemon
+clpokemonruby|Pokemon Ruby|pokemon
+clpokemonsapphire|Pokemon Sapphire|pokemon
+clpokemonshinsigma|Pokemon Shin Sigma|pokemon
+clpokemonsilver|Pokemon Silver|pokemon
+clpokemonsnap|Pokemon Snap|pokemon
+clpokemonstadium|Pokemon Stadium|pokemon
+clpokemonstadium2|Pokemon Stadium 2|pokemon
+clpokemontowerdefense|Pokemon Tower Defense|pokemon
+clpokemonultimatefusion|Pokemon Ultimate Fusion|pokemon
+clpokemonunbound|Pokemon Unbound|pokemon
+clpokemonvolume1|Pokemon Volume 1|pokemon
+clpokemonvolume2|Pokemon Volume 2|pokemon
+clpokemonvolume3|Pokemon Volume 3|pokemon
+clpokemonvolume4|Pokemon Volume 4|pokemon
+clpokemonperfectemerald5-5|Pokemon Perfect Emerald 5.5|pokemon
+clpokemonsaiph|Pokemon Saiph|pokemon
+clpokemonsaiph2|Pokemon Saiph 2|pokemon
+clpokemonslgreen|Pokemon Leaf Green (S)|pokemon
+clpokemonsmred|Pokemon Mystery Red|pokemon
+clpokemonsors|Pokemon Sors|pokemon
+clpokemonsors2|Pokemon Sors 2|pokemon
+clpokerowe|Pokerowe|pokemon
+clpokered|PokeRed|pokemon
