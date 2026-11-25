@@ -1,12 +1,12 @@
 // Focused search overlay: blurred backdrop, category chips under the input,
-// live fuzzy results with thumbnails, full keyboard navigation.
+// live fuzzy results with real game artwork, full keyboard navigation.
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Search, X } from 'lucide-react';
 import type { GameEntry } from '../types';
 import { CATEGORIES } from '../data/types';
 import { buildSearchIndex, searchIndex } from '../lib/search';
-import { TileThumb } from './TileThumb';
+import { GameArt } from './GameArt';
 
 export function SearchOverlay({
   entries,
@@ -21,6 +21,7 @@ export function SearchOverlay({
   const [activeIndex, setActiveIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
 
+  // Build the fuzzy index once per overlay open, not per keystroke.
   const index = useMemo(() => buildSearchIndex(entries), [entries]);
   const results = useMemo(
     () => (query.trim() ? searchIndex(index, query) : []),
@@ -103,7 +104,11 @@ export function SearchOverlay({
 
         <div className="flex flex-wrap gap-2 border-b border-slate-200 px-4 py-3 dark:border-slate-800">
           {CATEGORIES.slice(0, 10).map((c) => (
-            <button key={c.key} className="chip" onClick={() => setQuery(c.label.toLowerCase())}>
+            <button
+              key={c.key}
+              className="chip"
+              onClick={() => setQuery(c.label.toLowerCase())}
+            >
               {c.label}
             </button>
           ))}
@@ -135,7 +140,7 @@ export function SearchOverlay({
                 onClose();
               }}
             >
-              <TileThumb
+              <GameArt
                 game={g}
                 className="h-10 w-16 shrink-0 rounded-md text-sm font-bold"
               />
