@@ -7,7 +7,7 @@ import { build } from 'esbuild';
 const { outputFiles: [{ text }] } = await build({
   stdin: {
     resolveDir: process.cwd(),
-    contents: "export { createSaveSession } from './src/lib/cloudSaves.ts'; export { adapterFor } from './src/lib/saveAdapters.ts';",
+    contents: "export { createSaveSession, saveRemote } from './src/lib/cloudSaves.ts'; export { adapterFor, readKnownDeviceSaves } from './src/lib/saveAdapters.ts'; export { readCloudSaveArchive, readDevicePreferences } from './src/lib/saveTransfer.ts';",
   },
   bundle: true,
   write: false,
@@ -18,12 +18,12 @@ const { outputFiles: [{ text }] } = await build({
     setup(builder) {
       builder.onResolve({ filter: /^\.\/supabase$/ }, () => ({ path: 'supabase', namespace: 'stub' }));
       builder.onLoad({ filter: /.*/, namespace: 'stub' }, () => ({
-        contents: "export const T = {}; export const supabase = null; export const isSupabaseConfigured = false;",
+        contents: "export const T = { saves: 'geegle_game_saves' }; export const supabase = { from: (...args) => globalThis.fakeSupabase.from(...args) }; export const isSupabaseConfigured = false;",
       }));
     },
   }],
 });
-const { adapterFor, createSaveSession } = await import(`data:text/javascript;base64,${Buffer.from(text).toString('base64')}`);
+const { adapterFor, readKnownDeviceSaves, createSaveSession, saveRemote, readCloudSaveArchive, readDevicePreferences } = await import(`data:text/javascript;base64,${Buffer.from(text).toString('base64')}`);
 const user = 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa';
 const other = 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb';
 const game = 'clspacebarclicker';
@@ -217,7 +217,7 @@ test('exit captures newer progress after waiting for an in-flight upload', async
   assert.deepEqual((await cloud.read()).save_data, snapshot('last update'));
 });
 
-test('missing migration fails closed with local data intact', async (t) => {
+test('when both schemas are unavailable local data stays intact', async (t) => {
   const cloud = backend();
   cloud.read = async () => { throw new Error('column geegle_game_saves.revision does not exist'); };
   const handle = session(t, cloud);
@@ -241,4 +241,150 @@ test('an offline initial launch can resume without overwriting a remote save', a
   assert.equal((await handle.saveNow()).ok, false);
   assert.equal(handle.getStatus(), 'conflict');
   assert.deepEqual((await cloud.read()).save_data, snapshot('remote progress'));
+});
+
+test('an explicit legacy copy leaves the original and other accounts untouched', async (t) => {
+  const handle = session(t, backend());
+  localStorage.setItem('spacebar_clicker_game', 'original');
+  localStorage.setItem(key(other), 'other');
+  await handle.restored;
+  assert.equal(handle.canImportLegacy(), true);
+  assert.equal(localStorage.getItem(key()), null);
+  assert.equal((await handle.importLegacy()).ok, true);
+  assert.equal(localStorage.getItem(key()), 'original');
+  assert.equal(localStorage.getItem('spacebar_clicker_game'), 'original');
+  assert.equal(localStorage.getItem(key(other)), 'other');
+  assert.equal((await handle.importLegacy()).ok, false);
+});
+
+test('legacy copying refuses a newly created cloud save', async (t) => {
+  const cloud = backend();
+  const handle = session(t, cloud);
+  localStorage.setItem('spacebar_clicker_game', 'unassigned');
+  await handle.restored;
+  cloud.replace(snapshot('remote'));
+  assert.equal((await handle.importLegacy()).ok, false);
+  assert.equal(handle.getStatus(), 'conflict');
+  assert.equal(localStorage.getItem(key()), null);
+  assert.deepEqual((await cloud.read()).save_data, snapshot('remote'));
+});
+
+function mockSaveApi({ migrated = false, initial = null, readError } = {}) {
+  let row = initial;
+  let beforeUpdate;
+  const calls = [];
+  globalThis.fakeSupabase = {
+    from(table) {
+      assert.equal(table, 'geegle_game_saves');
+      let columns;
+      let op = 'read';
+      let values;
+      let filters = {};
+      const q = {
+        select: (args) => { columns = args; return q; },
+        match: (args) => { filters = args; return q; },
+        update: (args) => { op = 'update'; values = args; return q; },
+        insert: (args) => { op = 'insert'; values = args; return q; },
+        abortSignal: () => q,
+        async maybeSingle() {
+          calls.push({ columns, op, filters });
+          if (readError) return { error: readError };
+          if (columns.includes('revision') && !migrated) return { error: { code: '42703', message: 'column geegle_game_saves.revision does not exist' } };
+          if (op === 'update') {
+            beforeUpdate?.();
+            if (!row || (filters.updated_at && filters.updated_at !== row.updated_at)
+              || (filters.revision && filters.revision !== row.revision)) return { data: null };
+            row = { ...row, ...values };
+          }
+          if (op === 'insert') {
+            if (row) return { error: { code: '23505' } };
+            row = values;
+          }
+          return { data: row };
+        },
+      };
+      return q;
+    },
+  };
+  return { calls, beforeUpdate(fn) { beforeUpdate = fn; }, get: () => row, set: (value) => { row = value; } };
+}
+const legacyRow = (progress, updated_at = '2026-01-01T00:00:00.000+00:00') =>
+  ({ updated_at, save_data: snapshot(progress) });
+
+test('pre-migration transport reads and writes with timestamp compare-and-set', async () => {
+  const api = mockSaveApi({ initial: legacyRow('existing') });
+  const remote = saveRemote(user, game);
+  const old = await remote.read();
+  const next = await remote.write(snapshot('new'), old.revision);
+  assert.ok(next.startsWith('legacy:'));
+  assert.notEqual(next, old.revision);
+  assert.deepEqual(api.get().save_data, snapshot('new'));
+  assert.deepEqual(api.calls.find((call) => call.op === 'update').filters,
+    { user_id: user, game_id: game, save_key: 'default', updated_at: '2026-01-01T00:00:00.000+00:00' });
+});
+
+test('fallback refuses a same-timestamp legacy payload change seen in preflight', async () => {
+  const api = mockSaveApi({ initial: legacyRow('existing') });
+  const remote = saveRemote(user, game);
+  const old = await remote.read();
+  api.set(legacyRow('old client edited'));
+  assert.equal(await remote.write(snapshot('stale attempt'), old.revision), null);
+  assert.equal(api.calls.some((call) => call.op === 'update'), false);
+});
+
+test('fallback refuses a concurrent timestamp bump after preflight', async () => {
+  const api = mockSaveApi({ initial: legacyRow('existing') });
+  const remote = saveRemote(user, game);
+  const old = await remote.read();
+  api.beforeUpdate(() => api.set(legacyRow('concurrent device', '2026-01-02T00:00:00.000+00:00')));
+  assert.equal(await remote.write(snapshot('stale attempt'), old.revision), null);
+  assert.deepEqual(api.get().save_data, snapshot('concurrent device'));
+});
+
+test('missing-column fallback never hides unrelated backend errors', async () => {
+  const api = mockSaveApi({ readError: { code: '42501', message: 'not authorized' } });
+  await assert.rejects(saveRemote(user, game).read(), /not authorized/);
+  assert.equal(api.calls.length, 1);
+});
+
+test('cloud archive reads unsupported v3 rows verbatim under the active account', async () => {
+  const v3 = { format: 'v3', indexedDB: [{ name: 'legacy' }], localStorage: {} };
+  let last;
+  const row = { id: 'row-1', game_id: 'other-game', save_key: 'default', save_data: v3 };
+  globalThis.fakeSupabase = {
+    from(table) {
+      assert.equal(table, 'geegle_game_saves');
+      const q = {
+        select: () => q,
+        eq: (name, id) => { assert.equal(name, 'user_id'); assert.equal(id, user); return q; },
+        order: () => q,
+        limit: () => q,
+        gt: (name, id) => { assert.equal(name, 'id'); last = id; return q; },
+        abortSignal: async () => ({ data: last ? [] : [row] }),
+      };
+      return q;
+    },
+  };
+  assert.deepEqual(await readCloudSaveArchive(user), [row]);
+  assert.equal(last, 'row-1');
+});
+
+test('device preference export does not consume or attribute guest values', async () => {
+  localStorage.setItem('geegle-favorites', '["guest-favorite"]');
+  localStorage.setItem('geegle-recently-played', '["guest-recent"]');
+  localStorage.setItem('geegle-theme', 'dark');
+  localStorage.setItem('geegle-default-servers', '{"cherry":2}');
+  const device = await readDevicePreferences();
+  assert.deepEqual(device, { favorites: ['guest-favorite'], recentlyPlayed: ['guest-recent'], theme: 'dark', serverDefaults: { cherry: 2 } });
+  assert.deepEqual(await readDevicePreferences(), device);
+});
+
+test('device save archive includes only known keys and the selected account', () => {
+  localStorage.setItem('spacebar_clicker_game', 'unassigned');
+  localStorage.setItem('geegle-auth-session', 'not a game save');
+  localStorage.setItem(key(user), 'ours');
+  localStorage.setItem(key(other), 'someone else');
+  assert.deepEqual(readKnownDeviceSaves(user), [{
+    gameId: game, unassigned: snapshot('unassigned'), account: snapshot('ours'),
+  }]);
 });
