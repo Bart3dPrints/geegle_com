@@ -1,0 +1,119 @@
+cljacksmith|Jacksmith|simulation
+cljailbreakobbbobob|Jailbreak Obby|platformer
+cljamesbondjr|James Bond Jr|action
+cljazzjackrabbit|Jazz Jackrabbit|platformer
+cljazzjackrabbit2|Jazz Jackrabbit 2|platformer
+cljefflings|Jefflings|adventure
+cljellydadhero|Jelly Dad Hero|puzzle
+cljellydrift|Jelly Drift|racing
+cljellymario|Jelly Mario|platformer
+cljellytruck|Jelly Truck|racing
+cljellytruckgood|Jelly Truck Good|racing
+cljetforcegemini|Jet Force Gemini|action
+cljetskiracing|Jet Ski Racing|racing
+cljetpackjoyride|Jetpack Joyride|arcade
+cljetrush|Jetrush|action
+cljmocraft|JMO Craft|simulation
+cljohnnytrigger|Johnny Trigger|action
+cljohnnyupgrade|Johnny Upgrade|platformer
+cljojobaps1|JoJo Baps 1|action
+cljourneyarcade|Journey Arcade|arcade
+cljourneydownhill|Journey Downhill|racing
+cljoustarcade|Joust Arcade|arcade
+cljsvecx|JSVecx|simulation
+cljumbomario|Jumbo Mario|platformer
+cljumpingshell|Jumping Shell|platformer
+cljunglebooksnes|Jungle Book (NES)|platformer
+cljungledeerhunting|Jungle Deer Hunting|action
+cljurassicpark|Jurassic Park|adventure
+cljustaplatformer|Just a Platformer|platformer
+cljustfalllol|Just Fall LOL|multiplayer
+cljusthitthebutton|Just Hit the Button|puzzle
+cljustinclient|Justin Client|simulation
+cljustoneboss|Just One Boss|action
+cljustaplatformere|Just a Platformer E|platformer
+cljustaplatformere2|Just a Platformer E2|platformer
+clkaizomarioworld|Kaizo Mario World|platformer
+clkalikan|Kalikan|action
+clkanyezone|Kanye Zone|action
+clkapi|Kapi|rhythm
+clkaratebros|Karate Bros|action
+clkarlson|Karlson|action
+clkartbros|Kart Bros|racing
+clkeroseneclient|Kerosene Client|simulation
+clkillover|Kill Over|action
+clkillerinstinct|Killer Instinct|action
+clkimjonguntilepuzzle|Kim Jong-Un Tile Puzzle|puzzle
+clkingdomheartsdays|Kingdom Hearts 358/2 Days|action
+clkingdomheartsrecoded|Kingdom Hearts Re:coded|action
+clkingdomheartsrecodedalt|Kingdom Hearts Re:coded (Alt)|action
+clkirby64|Kirby 64|platformer
+clkirby64crystalshards|Kirby 64: Crystal Shards|platformer
+clkirbyandtheamzingmirror|Kirby & the Amazing Mirror|platformer
+clkirbycanvascurse|Kirby: Canvas Curse|platformer
+clkirbysadventure|Kirby's Adventure|platformer
+clkirbysdreamland|Kirby's Dream Land|platformer
+clkirbysdreamland3|Kirby's Dream Land 3|platformer
+clkirbysoftandwet|Kirby's Soft and Wet|platformer
+clkirbysqueaksquad|Kirby: Squeak Squad|platformer
+clkirbysuperstar|Kirby Super Star|platformer
+clkirbysuperstarultra|Kirby Super Star Ultra|platformer
+clkirbytiltandtumble|Kirby Tilt 'n' Tumble|platformer
+clkittencannon|Kitten Cannon|action
+clklifur|Klifur|platformer
+clknifehit|Knife Hit|arcade
+clknightmaretower|Knightmare Tower|arcade
+clknockknock|Knock Knock|adventure
+clkonkrio|Konkrio|simulation
+clkoopasrevenge|Koopa's Revenge|platformer
+clkourio|Kour.io|multiplayer
+clks2teams|KS 2 Teams|action
+cllaceysflashgames|Lacey's Flash Games|casual
+cllambdaclient|Lambda Client|simulation
+cllastfirered|Last FireRed|pokemon
+cllasthorizon|Last Horizon|simulation
+cllaststand|Last Stand|action
+cllaststand2|Last Stand 2|action
+clleaderstrike|Leader Strike|action
+clleapandavoid2|Leap and Avoid 2|platformer
+cllearntofly|Learn to Fly|sports
+cllearntofly2|Learn to Fly 2|sports
+cllearntofly2hacked|Learn to Fly 2 Hacked|sports
+cllearntofly3|Learn to Fly 3|sports
+cllearntoflyidle|Learn to Fly Idle|casual
+cllearntoflyidlehack|Learn to Fly Idle Hack|casual
+cllegobatman|LEGO Batman|action
+cllegobatman2superheroes|LEGO Batman 2: Superheroes|action
+cllegoindianajones|LEGO Indiana Jones|action
+cllegoindianajones2|LEGO Indiana Jones 2|action
+cllegoninjago|LEGO Ninjago|action
+cllegostarwars|LEGO Star Wars|action
+cllegostarwars2gba|LEGO Star Wars 2 (GBA)|action
+cllegostarwarsgba|LEGO Star Wars (GBA)|action
+cllemmings|Lemmings|puzzle
+clletitconsume|Let It Consume|horror
+clletsgoeevee|Let's Go Eevee|pokemon
+clletsgopikachu|Let's Go Pikachu|pokemon
+clleveldevil|Level Devil|platformer
+clleverwarriors|Lever Warriors|action
+cllightitup|Light It Up|arcade
+cllilrunmo|Lil Runmo|platformer
+lime|Lime|casual
+cllinerider|Line Rider|simulation
+cllinktothepast|The Legend of Zelda: A Link to the Past|adventure
+cllinksawakeningdx|The Legend of Zelda: Link's Awakening DX|adventure
+cllittlealchemy2|Little Alchemy 2|puzzle
+cllittlerunmo|Little Runmo|platformer
+cllockthedoor|Lock the Door|puzzle
+clloderunner|Lode Runner|platformer
+cllonewolf|Lone Wolf|action
+cllosangelesshark|Los Angeles Shark|action
+clloz1|The Legend of Zelda|adventure
+cllozlinkawakening|The Legend of Zelda: Link's Awakening|adventure
+cllozminishcap|The Legend of Zelda: The Minish Cap|adventure
+cllozoracleofseasons|The Legend of Zelda: Oracle of Seasons|adventure
+cllozphantomhourglass|The Legend of Zelda: Phantom Hourglass|adventure
+lucid|Lucid|puzzle
+clluckyblocks|Lucky Blocks|simulation
+cllumberobby|Lumber Obby|platformer
+cllummm|Lummm|puzzle
