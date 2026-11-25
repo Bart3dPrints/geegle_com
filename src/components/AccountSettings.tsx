@@ -1,13 +1,84 @@
-// Account settings: password, retention disclosure, and authenticated activity.
-import { useEffect, useState } from 'react';
-import { X, KeyRound, LogOut, Loader2, Check, Clock } from 'lucide-react';
-import { supabase, isSupabaseConfigured, T } from '../lib/supabase';
-import { ACCOUNT_INACTIVITY_NOTICE } from '../lib/userData';
+// Account settings: password change and sign-out. Accounts persist
+// indefinitely per the owner's cancellation of the inactivity-deletion feature.
+import { useState } from 'react';
+import { X, KeyRound, LogOut, Loader2, Check } from 'lucide-react';
+import { supabase } from '../lib/supabase';
 
-export function AccountSettings({ username, userId, onClose, onSignedOut }: { username: string; userId?: string; onClose: () => void; onSignedOut: () => Promise<void> }) {
-  const [newPassword, setNewPassword] = useState(''); const [busy, setBusy] = useState(false); const [message, setMessage] = useState<{ kind: 'ok' | 'err'; text: string } | null>(null); const [activity, setActivity] = useState<string | null>(null);
-  useEffect(() => { if (!userId || !isSupabaseConfigured) return; supabase.from(T.profiles).select('last_active_at').eq('id', userId).maybeSingle().then(({ data }) => setActivity(data?.last_active_at ?? null)); }, [userId]);
-  const changePassword = async (e: React.FormEvent) => { e.preventDefault(); if (newPassword.length < 8) { setMessage({ kind: 'err', text: 'New password must be at least 8 characters.' }); return; } setBusy(true); const { error } = await supabase.auth.updateUser({ password: newPassword }); setBusy(false); setMessage(error ? { kind: 'err', text: `Could not change password: ${error.message}` } : { kind: 'ok', text: 'Password updated.' }); if (!error) setNewPassword(''); };
-  const expiration = activity ? new Date(new Date(activity).setMonth(new Date(activity).getMonth() + 8)) : null;
-  return <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 p-4" onClick={onClose} role="dialog" aria-modal="true"><div className="card w-full max-w-md p-6" onClick={(e) => e.stopPropagation()}><div className="mb-4 flex items-center justify-between"><h2>Account</h2><button onClick={onClose} aria-label="Close settings"><X size={18} /></button></div><p className="mb-4 text-sm text-slate-500 dark:text-slate-400">Signed in as <b>{username}</b>. Your account data is synced across devices.</p><div className="mb-5 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800 dark:border-amber-900 dark:bg-amber-950/40 dark:text-amber-200"><p>{ACCOUNT_INACTIVITY_NOTICE}</p><p className="mt-2">Logging in or actively using Geegle resets the inactivity timer.</p>{activity && <p className="mt-2 flex items-center gap-1"><Clock size={14} /> Last activity: {new Date(activity).toLocaleString()}<br />Estimated expiration: {expiration?.toLocaleDateString()}</p>}</div><form onSubmit={changePassword} className="mb-6"><div className="mb-3 flex items-center gap-2 text-sm font-medium"><KeyRound size={14} /> Change password</div><input className="input mb-2" type="password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} placeholder="At least 8 characters" autoComplete="new-password" required />{message && <p className={`mb-2 text-sm ${message.kind === 'ok' ? 'text-emerald-600' : 'text-red-600'}`}>{message.text}</p>}<button className="btn-primary w-full" disabled={busy}>{busy ? <Loader2 className="animate-spin" size={16} /> : <Check size={16} />} Update password</button></form><button className="btn-secondary w-full" onClick={onSignedOut}><LogOut size={16} /> Log out</button></div></div>;
+export function AccountSettings({
+  username,
+  onClose,
+  onSignedOut,
+}: {
+  username: string;
+  onClose: () => void;
+  onSignedOut: () => Promise<void>;
+}) {
+  const [newPassword, setNewPassword] = useState('');
+  const [busy, setBusy] = useState(false);
+  const [message, setMessage] = useState<{ kind: 'ok' | 'err'; text: string } | null>(null);
+
+  const changePassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (newPassword.length < 8) {
+      setMessage({ kind: 'err', text: 'New password must be at least 8 characters.' });
+      return;
+    }
+    setBusy(true);
+    const { error } = await supabase.auth.updateUser({ password: newPassword });
+    setBusy(false);
+    setMessage(
+      error
+        ? { kind: 'err', text: `Could not change password: ${error.message}` }
+        : { kind: 'ok', text: 'Password updated.' }
+    );
+    if (!error) setNewPassword('');
+  };
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 p-4"
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Account settings"
+    >
+      <div className="card w-full max-w-md p-6" onClick={(e) => e.stopPropagation()}>
+        <div className="mb-4 flex items-center justify-between">
+          <h2>Account</h2>
+          <button onClick={onClose} aria-label="Close settings">
+            <X size={18} />
+          </button>
+        </div>
+        <p className="mb-6 text-sm text-slate-500 dark:text-slate-400">
+          Signed in as <b>{username}</b>. Your saves, favorites, and preferences
+          are synced to this account and follow you to any device.
+        </p>
+        <form onSubmit={changePassword} className="mb-6">
+          <div className="mb-3 flex items-center gap-2 text-sm font-medium">
+            <KeyRound size={14} /> Change password
+          </div>
+          <input
+            className="input mb-2"
+            type="password"
+            value={newPassword}
+            onChange={(e) => setNewPassword(e.target.value)}
+            placeholder="At least 8 characters"
+            autoComplete="new-password"
+            required
+          />
+          {message && (
+            <p className={`mb-2 text-sm ${message.kind === 'ok' ? 'text-emerald-600' : 'text-red-600'}`} role="alert">
+              {message.text}
+            </p>
+          )}
+          <button className="btn-primary w-full" disabled={busy}>
+            {busy ? <Loader2 className="animate-spin" size={16} /> : <Check size={16} />} Update password
+          </button>
+        </form>
+        <button className="btn-secondary w-full" onClick={onSignedOut}>
+          <LogOut size={16} /> Log out
+        </button>
+      </div>
+    </div>
+  );
 }
