@@ -1,0 +1,100 @@
+clmegaman2|Mega Man 2|platformer
+clmegaman2gba|Mega Man 2 (GBA)|platformer
+clmegaman3|Mega Man 3|platformer
+clmegaman4|Mega Man 4|platformer
+clmegaman5|Mega Man 5|platformer
+clmegaman5gb|Mega Man 5 (GB)|platformer
+clmegaman6|Mega Man 6|platformer
+clmegaman7|Mega Man 7|platformer
+clmegaman8|Mega Man 8|platformer
+clmegamanbasscftf|Mega Man & Bass CFTF|platformer
+clmegamanbattlechipchallenge|Mega Man Battle Chip Challenge|strategy
+clmegamanbn5tc|Mega Man BN 5 TC|strategy
+clmegamanbn5tp|Mega Man BN 5 TP|strategy
+clmegamanbn6cf|Mega Man BN 6 CF|strategy
+clmegamanbn6cg|Mega Man BN 6 CG|strategy
+clmegamanlegends|Mega Man Legends|action
+clmegamanlegends2|Mega Man Legends 2|action
+clmegamanzero|Mega Man Zero|platformer
+clmegamanzx|Mega Man ZX|platformer
+clmegamanx|Mega Man X|platformer
+clmegamanx2|Mega Man X2|platformer
+clmegamanx3|Mega Man X3|platformer
+clmegamanx4|Mega Man X4|platformer
+clmegamanx5|Mega Man X5|platformer
+clmegamanx6|Mega Man X6|platformer
+clmegaminer|Mega Miner|arcade
+clmegaman|Mega Man|platformer
+clmelonplayground|Melon Playground|simulation
+clmeowuwu|Meowuwu|casual
+clmergeroundracers|Merge Round Racers|racing
+clmetalgear|Metal Gear|action
+clmetalgearsolid|Metal Gear Solid|action
+clmetalslug|Metal Slug|action
+clmetalslug2|Metal Slug 2|action
+clmetalslugadvance|Metal Slug Advance|action
+clmetalslugmission1|Metal Slug Mission 1|action
+clmetalslugmission2|Metal Slug Mission 2|action
+clmetroid|Metroid|action
+clmetroid2|Metroid 2|action
+clmetroidfusion|Metroid Fusion|action
+clmetroidprimehunters|Metroid Prime Hunters|action
+clmetroidzeromission|Metroid: Zero Mission|action
+clmiamishark|Miami Shark|action
+clmicrolife|Micro Life|simulation
+clmicromages|Micro Mages|platformer
+clmightyknight|Mighty Knight|action
+clmightyknight2|Mighty Knight 2|action
+clmimic|Mimic|horror
+clmindwave|Mind Wave|puzzle
+clmindscape|Mindscape|puzzle
+clminecaves|Mine Caves|platformer
+clmineshooter|Mine Shooter|action
+clminesweeperplus|Minesweeper Plus|puzzle
+clminhero|Minhero|adventure
+clminicrossword|Mini Crossword|puzzle
+clminiflips|Mini Flips|platformer
+clminishooters|Mini Shooters|action
+clminitooth|Mini Tooth|platformer
+clminimart|Mini Mart|simulation
+clmiraginewar|Mira Gin Ewar|action
+clmisslecommand|Missile Command|arcade
+clmomimsleeping|Mom I'm Sleeping|casual
+clmomoscrushers|Momo Crushers|action
+clmoneyrush|Money Rush|arcade
+clmonkeymart|Monkey Mart|simulation
+clmonkeymartenc|Monkey Mart Enc|simulation
+clmonsterderby|Monster Derby|racing
+clmonstertracks|Monster Tracks|racing
+clmonstertruckcurfew|Monster Truck Curfew|racing
+clmonstertruckportstunt|Monster Truck Port Stunt|racing
+clmoonemeraldextremerandomizer|Moon Emerald Extreme Randomizer|pokemon
+clmortalkombat|Mortal Kombat|action
+clmortalkombat2|Mortal Kombat 2|action
+clmortalkombat2a|Mortal Kombat 2 (Alt)|action
+clmortalkombat3|Mortal Kombat 3|action
+clmortalkombat3a|Mortal Kombat 3 (Alt)|action
+clmortalkombat4|Mortal Kombat 4|action
+clmortalkombata|Mortal Kombat (Alt)|action
+clmortalkombatadvance|Mortal Kombat Advance|action
+clmotherload|Motherload|simulation
+clmotoroadrash|Moto Road Rash|racing
+clmotox3m2|Moto X3M 2|racing
+clmotox3m3|Moto X3M 3|racing
+clmotox3mm|Moto X3M|racing
+clmotox3mpoolparty|Moto X3M Pool Party|racing
+clmotox3mspookyland|Moto X3M Spooky Land|racing
+clmotox3mwinter|Moto X3M Winter|racing
+clmountainbikeracer|Mountain Bike Racer|racing
+clmrdriller|Mr. Driller|arcade
+clmrdriller2|Mr. Driller 2|arcade
+clmrmine|Mr. Mine|simulation
+clmrracer|Mr. Racer|racing
+clmspacman--1|Ms. Pac-Man|arcade
+clmultitask|Multitask|arcade
+clmutilate-a-doll|Mutilate a Doll|simulation
+clmvpbaseball|MVP Baseball|sports
+clmxoffroadmaster|MX Off Road Master|racing
+clmyfriendpedro|My Friend Pedro|action
+clmyfriendpedroarena|My Friend Pedro Arena|action
+clmyteardrop|My Teardrop|arcade
