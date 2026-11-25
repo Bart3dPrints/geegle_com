@@ -1,0 +1,27 @@
+// Official Krillion embed launcher. The embed guide documents the loader,
+// resize protocol, and message contract; this page validates every message.
+const root = document.querySelector('[data-krillion]');
+const status = document.querySelector('#status');
+const origin = 'https://krillion.cc';
+function load(mode) {
+  root.dataset.mode = mode;
+  root.replaceChildren();
+  const frame = document.createElement('iframe');
+  frame.title = `Krillion ${mode}`;
+  frame.src = `${origin}/embed/?mode=${encodeURIComponent(mode)}`;
+  frame.style.cssText = 'display:block;width:100%;height:640px;max-width:680px;margin:auto;border:0';
+  frame.allow = 'fullscreen';
+  root.append(frame);
+  status.textContent = `Loading ${mode}…`;
+}
+window.addEventListener('message', (event) => {
+  if (event.origin !== origin || event.source !== root.querySelector('iframe')?.contentWindow) return;
+  const data = event.data;
+  if (!data || data.source !== 'krillion' || typeof data.type !== 'string') return;
+  if (data.type === 'ready') status.textContent = 'Ready';
+  if (data.type === 'resize' && Number.isFinite(data.height)) root.querySelector('iframe').style.height = `${Math.max(320, Math.min(1200, data.height))}px`;
+  if (data.type === 'start') status.textContent = `Started ${data.mode ?? ''}`;
+  if (data.type === 'complete') status.textContent = `Complete — ${Number(data.points) || 0} points`;
+});
+document.querySelectorAll('[data-mode]').forEach((button) => button.addEventListener('click', () => load(button.dataset.mode)));
+load('daily');
