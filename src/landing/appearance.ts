@@ -54,28 +54,61 @@ function storageKey(accountId?: string): string {
   return `${STORAGE_PREFIX}account:${encodeURIComponent(accountId)}`;
 }
 
-export function readCachedAppearance(accountId?: string): LandingAppearance | null {
+interface CacheEntry {
+  value: LandingAppearance;
+  synced: boolean;
+  edit: string | null;
+}
+
+function readEntry(accountId?: string): CacheEntry | null {
   try {
     const raw = globalThis.localStorage?.getItem(storageKey(accountId));
     if (!raw) return null;
-    return parseAppearance(JSON.parse(raw));
+    const data = JSON.parse(raw);
+    if (data?.format === 2) {
+      const value = parseAppearance(data.value);
+      return value && typeof data.edit === 'string' && typeof data.synced === 'boolean'
+        ? { value, edit: data.edit, synced: data.synced } : null;
+    }
+    // Old entries have no proof of upload: protect them like local-only edits.
+    const value = parseAppearance(data);
+    return value ? { value, synced: false, edit: null } : null;
   } catch {
     return null;
   }
 }
 
-export function readAppearance(accountId?: string): LandingAppearance {
-  return readCachedAppearance(accountId) ?? { ...DEFAULT_APPEARANCE };
+export function readCachedAppearance(accountId?: string): LandingAppearance | null {
+  return readEntry(accountId)?.value ?? null;
 }
 
-export function writeAppearance(value: LandingAppearance, accountId?: string): void {
+export function readAppearance(accountId?: string, remote?: unknown): LandingAppearance {
+  const cached = readEntry(accountId);
+  if (accountId && (!cached || cached.synced)) {
+    if (remote === null) return { ...DEFAULT_APPEARANCE };
+    const server = parseAppearance(remote);
+    if (server) return server;
+  }
+  return cached?.value ?? { ...DEFAULT_APPEARANCE };
+}
+
+export function writeAppearance(value: LandingAppearance, accountId?: string): string {
   const parsed = parseAppearance(value);
   if (!parsed) throw new TypeError('Invalid landing appearance');
   try {
-    if (!globalThis.localStorage) throw new Error('localStorage is unavailable');
-    globalThis.localStorage.setItem(storageKey(accountId), JSON.stringify(parsed));
+    const edit = crypto.randomUUID();
+    globalThis.localStorage.setItem(storageKey(accountId), JSON.stringify({ format: 2, value: parsed, synced: false, edit }));
+    return edit;
   } catch {
     throw new Error('Unable to save landing appearance');
+  }
+}
+
+export function confirmAppearanceSync(accountId: string, edit: string): void {
+  const entry = readEntry(accountId);
+  // A late acknowledgement must not mark a subsequent local edit as uploaded.
+  if (entry?.edit === edit) {
+    globalThis.localStorage.setItem(storageKey(accountId), JSON.stringify({ format: 2, ...entry, synced: true }));
   }
 }
 
