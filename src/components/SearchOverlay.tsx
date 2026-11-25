@@ -5,11 +5,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { Search, X } from 'lucide-react';
 import type { GameEntry } from '../types';
 import { CATEGORIES } from '../data/types';
-import {
-  buildSearchIndex,
-  searchIndex,
-  type IndexedEntry,
-} from '../lib/search';
+import { buildSearchIndex, searchIndex } from '../lib/search';
 import { TileThumb } from './TileThumb';
 
 export function SearchOverlay({
@@ -25,14 +21,11 @@ export function SearchOverlay({
   const [activeIndex, setActiveIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Index once per overlay open, not per keystroke.
   const index = useMemo(() => buildSearchIndex(entries), [entries]);
   const results = useMemo(
     () => (query.trim() ? searchIndex(index, query) : []),
     [index, query]
   );
-
-  // No query: suggest a few popular titles.
   const suggestions = useMemo(() => entries.slice(0, 6), [entries]);
   const items = results.length > 0 ? results.map((r) => r.entry) : suggestions;
 
@@ -111,12 +104,12 @@ export function SearchOverlay({
         <div className="flex flex-wrap gap-2 border-b border-slate-200 px-4 py-3 dark:border-slate-800">
           {CATEGORIES.slice(0, 10).map((c) => (
             <button
-n              key={c.key}
+              key={c.key}
               className="chip"
               onClick={() => setQuery(c.label.toLowerCase())}
             >
               {c.label}
-            </button>
+n            </button>
           ))}
         </div>
 
@@ -163,5 +156,3 @@ n              key={c.key}
     </div>
   );
 }
-
-export type { IndexedEntry };

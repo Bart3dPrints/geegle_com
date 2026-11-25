@@ -1,6 +1,6 @@
 // Proxy card: service name, server dropdown, launch button, verified badge.
 
-import { Globe } from 'lucide-react';
+import { Globe, Star } from 'lucide-react';
 import type { ProxyService } from '../data/proxies';
 
 export function ProxyCard({
@@ -14,12 +14,13 @@ export function ProxyCard({
   onSelect: (index: number) => void;
   onLaunch: (index: number) => void;
 }) {
+  const endpoint = service.endpoints[selected] ?? service.endpoints[0];
   return (
     <div className="card p-4">
       <div className="mb-3 flex items-center gap-2">
         <Globe size={16} className="text-slate-400" />
         <h3 className="text-sm font-semibold">{service.name}</h3>
-        {service.endpoints[selected] && !service.endpoints[selected].verified && (
+        {endpoint && !endpoint.verified && (
           <span className="badge bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">
             Unverified
           </span>
@@ -46,6 +47,14 @@ export function ProxyCard({
           Open
         </button>
       </div>
+      <button
+        className="mt-2 flex items-center gap-1 text-xs text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
+        onClick={() => onSelect(selected)}
+        aria-label={`${service.name} is the selected default`}
+      >
+        <Star size={12} className="fill-current" />
+        Default server — saved automatically
+      </button>
     </div>
   );
 }

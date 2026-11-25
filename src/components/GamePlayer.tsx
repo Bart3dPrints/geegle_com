@@ -1,4 +1,6 @@
-// Fullscreen game/proxy player: header controls, loading state, iframe.
+// Fullscreen game player: header controls, loading state, lazy iframe. The
+// iframe is only mounted when the user launches a game — game assets are
+// never loaded before that point.
 
 import { useEffect, useRef, useState } from 'react';
 import { Star, ArrowLeft, RotateCcw, Maximize2, Loader2 } from 'lucide-react';
@@ -19,7 +21,7 @@ export function GamePlayer({
 }) {
   const frameRef = useRef<HTMLIFrameElement>(null);
   const [loaded, setLoaded] = useState(false);
-  const url = entry ? entry.url : proxy?.url;
+  const url = entry ? entry.path : proxy?.url;
   const title = entry ? entry.title : proxy?.title;
 
   useEffect(() => {
@@ -34,42 +36,30 @@ export function GamePlayer({
     if (frameRef.current) frameRef.current.src = frameRef.current.src;
   };
 
+  const btn =
+    'btn-secondary border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800';
+
   return (
     <div className="fixed inset-0 z-50 bg-slate-950">
       <div className="flex h-14 items-center gap-2 border-b border-slate-800 bg-slate-900 px-4">
-        <button
-          className="btn-secondary border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800"
-          onClick={onExit}
-        >
+        <button className={btn} onClick={onExit}>
           <ArrowLeft size={16} />
           Back
         </button>
         <h2 className="truncate text-sm font-medium text-slate-200">{title}</h2>
         <div className="flex-1" />
         {entry && (
-          <button
-            className="btn-secondary border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800"
-            onClick={onToggleFavorite}
-            aria-label="Toggle favorite"
-          >
+          <button className={btn} onClick={onToggleFavorite} aria-label="Toggle favorite">
             <Star
               size={16}
               className={isFavorite ? 'fill-amber-400 text-amber-400' : ''}
             />
           </button>
         )}
-        <button
-          className="btn-secondary border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800"
-          onClick={reload}
-          aria-label="Reload game"
-        >
+        <button className={btn} onClick={reload} aria-label="Reload game">
           <RotateCcw size={16} />
         </button>
-        <button
-          className="btn-secondary border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800"
-          onClick={goFullscreen}
-          aria-label="Fullscreen"
-        >
+        <button className={btn} onClick={goFullscreen} aria-label="Fullscreen">
           <Maximize2 size={16} />
         </button>
       </div>
