@@ -1,0 +1,139 @@
+cldadish|Dadish|platformer
+cldadnme|Dad N Me|action
+cldaggerfall|Daggerfall|rpg
+cldandysworldclicker|Dandy's World Clicker|casual
+cldanktomb|Dank Tomb|adventure
+cldasharena|Dash Arena|action
+cldashio|Dashio|arcade
+cldatewithiraq|Date with Iraq|action
+cldborigins|DB Origins|action
+cldborigins2|DB Origins 2|action
+cldbsniper|DB Sniper|action
+cldbzattacksaiyans|DBZ Attack Saiyans|action
+cldbzdevolution|DBZ Devolution|action
+cldbzsuperwarriorssonic|DBZ Super Warriors|action
+cldbzwarriors2|DBZ Warriors 2|action
+clddlc64|DDLC 64|adventure
+cldementium|Dementium|horror
+cldeadestate|Dead Estate|horror
+cldeadfrontieroutbreak|Dead Frontier Outbreak|action
+cldeadfrontieroutbreak2|Dead Frontier Outbreak 2|action
+cldeadplate|Dead Plate|horror
+cldeadseat|Dead Seat|horror
+cldeadzed2|Dead Zed 2|action
+cldeadair|Deadair|horror
+cldeadlydescent|Deadly Descent|racing
+cldeadzed|Dead Zed|action
+cldeathchase|Death Chase|arcade
+cldeathrun|Death Run|platformer
+cldeblob2|de Blob 2|platformer
+cldecision|Decision|action
+cldecision2|Decision 2|action
+cldecision3|Decision 3|action
+cldecisionmedieval|Decision Medieval|action
+cldeepersleep|Deeper Sleep|horror
+cldeepestsword|Deepest Sword|platformer
+cldefendyourcastle|Defend Your Castle|strategy
+cldefendyournuts|Defend Your Nuts|action
+cldefendyournuts2|Defend Your Nuts 2|action
+cldefenderarcade|Defender Arcade|arcade
+cldeltarune|Deltarune|rpg
+cldeltatraveler|Deltatraveler|rpg
+cldemolitionderbycrashracing|Demolition Derby Crash Racing|racing
+cldemonblade|Demon Blade|action
+cldemonbluff|Demon Bluff|action
+cldiablo|Diablo|rpg
+cldiamondhollow|Diamond Hollow|platformer
+cldiamondhollow2|Diamond Hollow 2|platformer
+cldiddykong-racing|Diddy Kong Racing|racing
+cldieinthedungeon|Die in the Dungeon|puzzle
+cldigdug26|Dig Dug 26|arcade
+cldigtochina|Dig to China|arcade
+cldigdeep|Dig Deep|simulation
+cldigdug|Dig Dug|arcade
+cldigdug2|Dig Dug 2|arcade
+cldimensionalincident|Dimensional Incident|adventure
+cldinodudes|Dino Dudes|puzzle
+cldinorunenterplanetd|Dino Run: Enter Planet D|arcade
+cldinorunmarathonofdoom|Dino Run: Marathon of Doom|arcade
+cldinorun|Dino Run|arcade
+cldiredecks|Dire Decks|strategy
+cldkccompetitioncart|DK Competition Cart|racing
+cldodecadragons|Dodeca Dragons|strategy
+cldoblox|Doblox|simulation
+cldogeminer|Doge Miner|casual
+cldokidokiliteratureclub|Doki Doki Literature Club|adventure
+cldomeromantik|Dome Romantik|simulation
+cldonkeykong|Donkey Kong|arcade
+cldonkeykong64|Donkey Kong 64|platformer
+cldonkeykong94|Donkey Kong 94|arcade
+cldonkeykongcountry|Donkey Kong Country|platformer
+cldonkeykongcountry2|Donkey Kong Country 2|platformer
+cldonkeykongcountry3|Donkey Kong Country 3|platformer
+cldonkeykongnes|Donkey Kong (NES)|arcade
+cldontescape|Don't Escape|puzzle
+cldontescape2|Don't Escape 2|puzzle
+cldontescape3|Don't Escape 3|puzzle
+cldontyoulectureme|Don't You Lecture Me|rhythm
+cldoodlejump|Doodle Jump|platformer
+cldoodlejumpgoober|Doodle Jump Goober|platformer
+cldoom|Doom|action
+cldoom2|Doom 2|action
+cldoom2dos|Doom 2 (DOS)|action
+cldoom2d|Doom 2D|action
+cldoom2ddos|Doom 2D (DOS)|action
+cldoom3pack|Doom 3 Pack|action
+cldoom64|Doom 64|action
+cldoomemscripten|Doom (Emscripten)|action
+cldoomps|Doom PS|action
+cldoomzio|Doomzio|action
+cldoorscastle|Doors Castle|adventure
+cldoswasmx|DOSWasmx|simulation
+cldoubledribble|Double Dribble|sports
+cldouchebaglife|Douchebag Life|simulation
+cldouchebagworkout2|Douchebag Workout 2|simulation
+cldownthemountain|Down the Mountain|arcade
+cldrweedgaster|Dr. Weedgaster|adventure
+cldragonquest5ds|Dragon Quest 5 DS|rpg
+cldragonwarriormonsters|Dragon Warrior Monsters|rpg
+cldragonballadvance|Dragonball Advance|action
+cldrawclimber|Draw Climber|arcade
+cldrawtheline|Draw the Line|puzzle
+cldrawntolife|Drawn to Life|platformer
+cldrawntolife2|Drawn to Life 2|platformer
+cldreadheadparkour|Dreadhead Parkour|platformer
+cldreader|Dreader|horror
+cldriftboss|Drift Boss|arcade
+cldriftsimulator|Drift Simulator|racing
+drive-mad|Drive Mad|puzzle
+cldrivemady|Drive Mad Y|puzzle
+cldriverussia|Drive Russia|racing
+cldrivenwild|Driven Wild|racing
+cldrmario|Dr. Mario|puzzle
+dta6|DTA 6|action
+cldubstep|Dubstep|rhythm
+clduckhunt|Duck Hunt|arcade
+clducklife|Duck Life|sports
+clducklife2|Duck Life 2|sports
+clducklife3|Duck Life 3|sports
+clducklife4|Duck Life 4|sports
+clducklfe5|Duck Life 5|sports
+clducklifebattle|Duck Life Battle|sports
+clducklifespace|Duck Life Space|sports
+clducklingsio|Ducklings.io|multiplayer
+clducktales|DuckTales|platformer
+clducktales2|DuckTales 2|platformer
+cldud|Dud|action
+cldukenukem2|Duke Nukem 2|action
+cldukenukem3d|Duke Nukem 3D|action
+cldumbwaystodie|Dumb Ways to Die|arcade
+cldumpling|Dumpling|casual
+cldunebuggy|Dune Buggy|racing
+cldunedash|Dune Dash|arcade
+cldungeondeck|Dungeon Deck|strategy
+cldungeonraid|Dungeon Raid|rpg
+cldungeonsanddegenerategamblers|Dungeons and Degenerate Gamblers|strategy
+cldunkshot|Dunk Shot|sports
+clduskchild|Dusk Child|adventure
+cldyingdreams|Dying Dreams|horror
+cldynamiteheaddy|Dynamite Headdy|platformer
