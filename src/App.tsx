@@ -179,16 +179,13 @@ export default function App() {
     }
   };
 
-  // Save-before-logout: the open game's final progress is captured before
-  // the session ends (GamePlayer also saves on exit; this covers the header
-  // sign-out path while a game is running).
+  // Save-before-logout: closing the running game triggers GamePlayer's
+  // unmount save; then the session ends.
   const handleSignOut = async () => {
-    await setActive((current) => {
-      // Closing the active game triggers GamePlayer's unmount save.
-      return current; // no-op; actual save happens in GamePlayer cleanup
-    });
     setActive(null);
     setActiveProxy(null);
+    // Give the player's save-on-exit a moment to complete before sign-out.
+    await new Promise((resolve) => setTimeout(resolve, 300));
     await auth.signOut();
   };
 
@@ -309,6 +306,32 @@ export default function App() {
     );
   }
 
+  const themeButtons = (
+    <>
+      {(
+        [
+          ['light', Sun],
+          ['system', Monitor],
+          ['dark', Moon],
+        ] as const
+      ).map(([mode, Icon]) => (
+        <button
+          key={mode}
+          className={`rounded-md p-1.5 ${
+            theme === mode
+              ? 'bg-blue-600 text-white'
+              : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800'
+          }`}
+          onClick={() => handleTheme(mode)}
+          aria-label={`${mode} theme`}
+          aria-pressed={theme === mode}
+        >
+          <Icon size={16} />
+        </button>
+      ))}
+    </>
+  );
+
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
       <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur dark:border-slate-800 dark:bg-slate-900/95">
@@ -373,27 +396,7 @@ export default function App() {
             role="group"
             aria-label="Theme"
           >
-            {(
-              [
-                ['light', Sun],
-                ['system', Monitor],
-                ['dark', Moon],
-              ] as const
-            ).map(([mode, Icon]) => (
-              <button
-                key={mode}
-                className={`rounded-md p-1.5 ${
-                  theme === mode
-                    ? 'bg-blue-600 text-white'
-                    : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800'
-                }`}
-                onClick={() => handleTheme(mode)}
-                aria-label={`${mode} theme`}
-                aria-pressed={theme === mode}
-              >
-                <Icon size={16} />
-              </button>
-            ))}
+            {themeButtons}
           </div>
 
           {auth.user ? (
@@ -426,52 +429,22 @@ export default function App() {
           )}
         </div>
 
-        {/* Mobile theme + account row */}
-        <div className="flex items-center justify-end gap-2 border-t border-slate-200 px-4 py-1.5 dark:border-slate-800 sm:hidden">
+        {/* Mobile row: theme toggle is always reachable (incl. Chromebooks) */}
+        <div className="flex items-center justify-between border-t border-slate-200 px-4 py-1.5 dark:border-slate-800 sm:hidden">
           <div
             className="flex items-center gap-1 rounded-lg border border-slate-200 p-1 dark:border-slate-700"
             role="group"
             aria-label="Theme"
           >
-            {(
-              [
-                ['light', Sun],
-                ['system', Monitor],
-                ['dark', Moon],
-              ] as const
-            ).map(([mode, Icon]) => (
-              <button
-                key={mode}
-                className={`rounded-md p-1 ${
-                  theme === mode
-                    ? 'bg-blue-600 text-white'
-                    : 'text-slate-500'
-                }`}
-                onClick={() => handleTheme(mode)}
-                aria-label={`${mode} theme`}
-                aria-pressed={theme === mode}
-              >
-                <Icon size={14} />
-              </button>
-            ))}
+            {themeButtons}
           </div>
-          {auth.user ? (
+          {auth.user && (
             <button
               className="btn-secondary py-1"
-              onClick={handleSignOut}
-              aria-label="Log out"
+              onClick={() => setSettingsOpen(true)}
+              aria-label="Account settings"
             >
-              <LogOut size={14} />
-            </button>
-          ) : (
-            <button
-              className="btn-secondary py-1"
-              onClick={() => {
-                setAuthOpen(true);
-                setAuthMode('login');
-              }}
-            >
-              <UserIcon size={14} />
+              <SettingsIcon size={14} />
             </button>
           )}
         </div>
@@ -540,7 +513,7 @@ export default function App() {
                 id="auth-password"
                 className="input mb-2"
                 type="password"
-                value={authAuthPasswordValue(authPassword)}
+                value={authPassword}
                 onChange={(e) => setAuthPassword(e.target.value)}
                 placeholder="At least 8 characters"
                 autoComplete={
@@ -724,9 +697,4 @@ export default function App() {
       </footer>
     </div>
   );
-}
-
-/** Inline helper so the auth form stays controlled but unreadable to shoulder surfers. */
-function authAuthPasswordValue(v: string): string {
-  return v;
 }
