@@ -14,27 +14,62 @@ export const SERVERS_KEY = 'geegle-default-servers';
 // Storage optimization retained after deletion-feature cancellation: recently
 // played history is capped at 50 games per account.
 const RECENT_CAP = 50;
+const KRILLION_BACKUP = 'clkrillion-backup';
+const OLD_KRILLION_BACKUP = 'krillion-backup';
 
-export function toggleFavoriteLocal(id: string): string[] { const f = readStringArray(FAVORITES_KEY); const n = f.includes(id) ? f.filter((x) => x !== id) : [...f, id]; writeJson(FAVORITES_KEY, n); return n; }
+function stableGameId(id: string): string {
+  return id === OLD_KRILLION_BACKUP ? KRILLION_BACKUP : id;
+}
+
+function libraryIds(ids: string[]): string[] {
+  return [...new Set(ids.map(stableGameId))];
+}
+
+export function toggleFavoriteLocal(id: string): string[] {
+  const stableId = stableGameId(id);
+  const favorites = libraryIds(readStringArray(FAVORITES_KEY));
+  const next = favorites.includes(stableId) ? favorites.filter((saved) => saved !== stableId) : [...favorites, stableId];
+  writeJson(FAVORITES_KEY, next);
+  return next;
+}
+
 export async function toggleFavorite(gameId: string, userId: string | null): Promise<OpResult<string[]>> {
   if (!userId || !isSupabaseConfigured) return { ok: true, data: toggleFavoriteLocal(gameId) };
-  const existing = await supabase.from(T.favorites).select('game_id').eq('user_id', userId).eq('game_id', gameId).maybeSingle();
+  const id = stableGameId(gameId);
+  const ids = id === KRILLION_BACKUP ? [id, OLD_KRILLION_BACKUP] : [id];
+  const existing = await supabase.from(T.favorites).select('game_id').eq('user_id', userId).in('game_id', ids).limit(1);
   if (existing.error) return { ok: false, error: existing.error.message };
-  const result = existing.data ? await supabase.from(T.favorites).delete().eq('user_id', userId).eq('game_id', gameId) : await supabase.from(T.favorites).insert({ user_id: userId, game_id: gameId });
+  const result = existing.data?.length
+    ? await supabase.from(T.favorites).delete().eq('user_id', userId).in('game_id', ids)
+    : await supabase.from(T.favorites).insert({ user_id: userId, game_id: id });
   if (result.error) return { ok: false, error: result.error.message };
-  const all = await supabase.from(T.favorites).select('game_id').eq('user_id', userId);
-  return all.error ? { ok: false, error: all.error.message } : { ok: true, data: (all.data ?? []).map((r) => r.game_id) };
+  return loadFavorites(userId);
 }
-export async function loadFavorites(userId: string | null): Promise<OpResult<string[]>> { if (!userId || !isSupabaseConfigured) return { ok: true, data: readStringArray(FAVORITES_KEY) }; const { data, error } = await supabase.from(T.favorites).select('game_id').eq('user_id', userId); return error ? { ok: false, error: error.message } : { ok: true, data: (data ?? []).map((r) => r.game_id) }; }
-export function pushRecentLocal(id: string): string[] { const n = [id, ...readStringArray(RECENT_KEY).filter((x) => x !== id)].slice(0, RECENT_CAP); writeJson(RECENT_KEY, n); return n; }
+
+export async function loadFavorites(userId: string | null): Promise<OpResult<string[]>> {
+  if (!userId || !isSupabaseConfigured) return { ok: true, data: libraryIds(readStringArray(FAVORITES_KEY)) };
+  const { data, error } = await supabase.from(T.favorites).select('game_id').eq('user_id', userId);
+  return error ? { ok: false, error: error.message } : { ok: true, data: libraryIds((data ?? []).map((row) => row.game_id)) };
+}
+
+export function pushRecentLocal(id: string): string[] {
+  const next = libraryIds([id, ...readStringArray(RECENT_KEY)]).slice(0, RECENT_CAP);
+  writeJson(RECENT_KEY, next);
+  return next;
+}
+
 export async function trackPlay(gameId: string, userId: string | null): Promise<OpResult<string[]>> {
   if (!userId || !isSupabaseConfigured) return { ok: true, data: pushRecentLocal(gameId) };
-  const up = await supabase.from(T.recent).upsert({ user_id: userId, game_id: gameId, played_at: new Date().toISOString() }, { onConflict: 'user_id,game_id' });
+  const up = await supabase.from(T.recent).upsert({ user_id: userId, game_id: stableGameId(gameId), played_at: new Date().toISOString() }, { onConflict: 'user_id,game_id' });
   if (up.error) return { ok: false, error: up.error.message };
-  const { data, error } = await supabase.from(T.recent).select('game_id').eq('user_id', userId).order('played_at', { ascending: false }).limit(RECENT_CAP);
-  return error ? { ok: false, error: error.message } : { ok: true, data: (data ?? []).map((r) => r.game_id) };
+  return loadRecent(userId);
 }
-export async function loadRecent(userId: string | null): Promise<OpResult<string[]>> { if (!userId || !isSupabaseConfigured) return { ok: true, data: readStringArray(RECENT_KEY) }; const { data, error } = await supabase.from(T.recent).select('game_id').eq('user_id', userId).order('played_at', { ascending: false }).limit(RECENT_CAP); return error ? { ok: false, error: error.message } : { ok: true, data: (data ?? []).map((r) => r.game_id) }; }
+
+export async function loadRecent(userId: string | null): Promise<OpResult<string[]>> {
+  if (!userId || !isSupabaseConfigured) return { ok: true, data: libraryIds(readStringArray(RECENT_KEY)).slice(0, RECENT_CAP) };
+  const { data, error } = await supabase.from(T.recent).select('game_id').eq('user_id', userId).order('played_at', { ascending: false }).limit(RECENT_CAP + 1);
+  return error ? { ok: false, error: error.message } : { ok: true, data: libraryIds((data ?? []).map((row) => row.game_id)).slice(0, RECENT_CAP) };
+}
 export function writeThemeLocal(theme: ThemePreference) { try { localStorage.setItem(THEME_KEY, theme); } catch { /* Storage may be disabled. */ } }
 export async function saveTheme(theme: ThemePreference, userId: string | null): Promise<OpResult<null>> { if (!userId || !isSupabaseConfigured) { writeThemeLocal(theme); return { ok: true }; } const { error } = await supabase.from(T.settings).upsert({ id: userId, theme }); return error ? { ok: false, error: error.message } : { ok: true }; }
 export async function loadTheme(userId: string | null): Promise<OpResult<string | null>> { if (!userId || !isSupabaseConfigured) { try { return { ok: true, data: localStorage.getItem(THEME_KEY) }; } catch { return { ok: true, data: null }; } } const { data, error } = await supabase.from(T.settings).select('theme').eq('id', userId).maybeSingle(); return error ? { ok: false, error: error.message } : { ok: true, data: data?.theme ?? null }; }

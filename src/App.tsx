@@ -91,7 +91,7 @@ const APPS: GameEntry[] = [
 // Apps grid shows APPS plus dual-section entries (Krillion backup appears in
 // BOTH Games and Apps from one stable ID, so favorites/history stay unified).
 const APPS_GRID = [...APPS, ...DUAL_SECTION_ENTRIES];
-const SEARCHABLE = [...legacyCatalog, ...APPS_GRID];
+const SEARCHABLE = [...new Map([...legacyCatalog, ...APPS_GRID].map((entry) => [entry.id, entry])).values()];
 
 type Tab = 'games' | 'apps' | 'proxies';
 

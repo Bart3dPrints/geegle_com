@@ -3,6 +3,10 @@
 Browser gaming platform. Vite + React + TypeScript + Tailwind frontend with a
 Supabase (free tier) backend for accounts and data sync.
 
+The home page provides web search and independent appearance settings. Use
+Games or the existing library search alias to reach the entry gate. Appearance
+changes stay on this browser unless you opt in to syncing with your Geegle account.
+
 ## Local development
 
 ```bash
@@ -20,9 +24,9 @@ VITE_SUPABASE_ANON_KEY=<anon key>
 
 ## Backend setup (Supabase)
 
-1. In an isolated development project, apply `supabase/migrations/0001_init.sql`.
-   The migration creates `public.geegle_*` tables, owner-only RLS policies,
-   and the `geegle_verify_entry_password` database function used by the app.
+1. Apply `supabase/migrations/` in order in an isolated Supabase project. The
+   migrations install the `public.geegle_*` tables, owner-only RLS policies,
+   the entry RPC, and the cloud-save revision column and trigger.
 2. Configure Supabase Auth to disable email confirmation: accounts use
    synthetic `@users.geegle.internal` addresses that cannot receive mail.
 3. Set the frontend environment variables above. Without them the entry gate
@@ -41,6 +45,8 @@ RPC without updating and testing the client and schema together.
 - Build command: `npm ci && npm run build`
 - Publish directory: `dist`
 - Environment: `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`
+- Confirm the required Geegle migrations are applied before publishing a build
+  that uses cloud-save revisions. Production migration and rollout require approval.
 
 ## Layout
 
