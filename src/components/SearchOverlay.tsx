@@ -1,5 +1,6 @@
 // Focused search overlay: blurred backdrop, category chips under the input,
 // live fuzzy results with real game artwork, full keyboard navigation.
+// Sharp foreground over blurred background per the design principles.
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Search, X } from 'lucide-react';
@@ -21,13 +22,18 @@ export function SearchOverlay({
   const [activeIndex, setActiveIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Build the fuzzy index once per overlay open, not per keystroke.
   const index = useMemo(() => buildSearchIndex(entries), [entries]);
   const results = useMemo(
     () => (query.trim() ? searchIndex(index, query) : []),
     [index, query]
   );
-  const suggestions = useMemo(() => entries.slice(0, 6), [entries]);
+  const suggestions = useMemo(
+    () =>
+      [...entries]
+        .sort((a, b) => a.title.localeCompare(b.title))
+        .slice(0, 6),
+    [entries]
+  );
   const items = results.length > 0 ? results.map((r) => r.entry) : suggestions;
 
   useEffect(() => {
@@ -103,7 +109,7 @@ export function SearchOverlay({
         </div>
 
         <div className="flex flex-wrap gap-2 border-b border-slate-200 px-4 py-3 dark:border-slate-800">
-          {CATEGORIES.slice(0, 10).map((c) => (
+          {CATEGORIES.slice(0, 12).map((c) => (
             <button
               key={c.key}
               className="chip"
@@ -117,8 +123,8 @@ export function SearchOverlay({
         <div className="max-h-80 overflow-y-auto p-2">
           {query && results.length === 0 && (
             <div className="p-6 text-center text-sm text-slate-500 dark:text-slate-400">
-              No results for &quot;{query}&quot;. Try a category name, or check
-              the spelling.
+              No results for &quot;{query}&quot;. Try a category name (e.g.
+              &quot;horror&quot;) or check the spelling.
             </div>
           )}
           {!query && (
