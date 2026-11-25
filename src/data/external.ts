@@ -3,6 +3,39 @@
 // truth, so favorites/history/settings cannot diverge between sections.
 
 import type { GameEntry } from '../types';
+import type { ProxyService } from './proxies';
+
+/**
+ * Providers with EVIDENCE-BASED support for launching a supplied destination.
+ *
+ * Cherry: verified by direct fetch of all 5 mirror wrappers (they forward
+ * `location.hash` to the loader: `iframe.src = "index.svg" + location.hash`)
+ * and the loader parses a URL from the hash with fetch/status checks. Using
+ * the hash form `#<encoded destination>` is the provider's own mechanism.
+ *
+ * Providers NOT listed have no evidence of a destination interface and are
+ * excluded rather than guessed:
+ * - Arctic: hardcoded app loader chain (no URL input path).
+ * - Soluos: React dashboard with no destination parameter.
+ * - Helios: user-input search launcher.
+ * - Achroma/Astra/Backup: static landing pages, no documented interface.
+ */
+export const DESTINATION_PROVIDERS: ProxyService[] = [
+  {
+    id: 'everythingle-direct',
+    name: 'Direct',
+    description: 'Open Everythingle framed inside the Geegle player.',
+    endpoints: [{ label: 'Direct framing', url: '/games/everythingle.html', verified: true }],
+  },
+];
+
+/** Build a Cherry-proxy URL that auto-supplies the Everythingle destination. */
+export function cherryDestinationUrl(baseUrl: string, destination: string): string {
+  // The wrapper forwards location.hash verbatim to its loader. Only the hash
+  // fragment is used; no query parameters are invented.
+  const clean = baseUrl.split('#')[0];
+  return `${clean}#${encodeURIComponent(destination)}`;
+}
 
 /** Official Krillion embed (documented at krillion.cc/embed-guide/). */
 export const KRILLION: GameEntry = {
@@ -31,20 +64,17 @@ export const KRILLION_BACKUP: GameEntry = {
     'Independent fan-made Krillion-style trivia site. Not the official game.',
 };
 
-/** Everythingle puzzle collection: in-Geegle launcher with auto destination. */
+/** Everythingle puzzle collection. Launched through the EverythingleApp
+ * component, which offers direct framing or a compatible proxy server. */
 export const EVERYTHINGLE: GameEntry = {
   id: 'everythingle',
   title: 'Everythingle',
-  // Same-origin launcher page: frames everythingle.com with the destination
-  // pre-supplied (no manual URL entry), keeps the Geegle player interface
-  // (Back / Reload / Fullscreen), and falls back to open-in-new-tab if the
-  // site refuses framing. No Geegle credentials are passed to the site.
   path: '/games/everythingle.html',
   categories: [],
   kind: 'app',
   aliases: ['wordle unlimited', 'globle', 'worldle', 'puzzle collection', 'chess'],
   thumb: 'https://everythingle.com/icon-512.png',
-  source: 'External site (everythingle.com) framed via Geegle launcher',
+  source: 'External site (everythingle.com); direct framing or authorized proxy',
   description: 'Free unlimited Wordle, Globle, Worldle, chess and more.',
 };
 
