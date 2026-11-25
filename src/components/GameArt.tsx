@@ -1,8 +1,8 @@
 // Game artwork: REAL images from each game's own asset folder on UGS-Assets
 // (the same origin the game itself loads from — no new licensing surface).
-// Candidate list covers Construct-style images/ folders and Unity-style
-// root/template images; falls back to a neutral tile only when a game
-// genuinely has no usable image.
+// Candidate list covers Construct-style images/ folders, Unity-style
+// template/root images, and favicons; falls back to a neutral tile only when
+// a game genuinely has no usable image.
 
 import { useState } from 'react';
 import type { GameEntry } from '../types';
@@ -17,10 +17,11 @@ function folderUrl(folder: string, file: string): string {
     .join('/')}/${encodeURIComponent(file)}`;
 }
 
-// Candidate image paths, priority ordered: title/menu screens first (best
-// 16:9 sources), then backgrounds, then icons. Construct projects keep
-// images in images/; Unity WebGL builds put icons at the root or in
-// TemplateData/. The onError chain walks the list until one loads.
+// Priority order: title/menu screens first (best 16:9 sources), then
+// backgrounds, then Unity template images, then icons/favicons. Construct
+// projects keep images in images/; Unity WebGL builds use TemplateData/ or
+// the folder root; simpler HTML games often only ship a favicon. The onError
+// chain walks the list until one image loads.
 const CANDIDATES = [
   'images/menu_bg-sheet0.png',
   'images/main_bg-sheet0.png',
@@ -35,8 +36,9 @@ const CANDIDATES = [
   'TemplateData/img.jpg',
   'TemplateData/vin.jpg',
   'logo.png',
-  'Icon_512x512.png',
   'icon.png',
+  'Icon_512x512.png',
+  'favicon.ico',
 ];
 
 const PALETTE = [
