@@ -6,4 +6,29 @@ export const CLEARED_ARTWORK: Partial<Record<string, {
   type: string;
   identityEvidence: string;
   reuseEvidence: string;
-}>> = {};
+}>> = {
+  "cl2048": {
+    "title": "2048",
+    "url": "/artwork/2048.png",
+    "source": "https://github.com/gabrielecirulli/2048/blob/478b6ec346e3787f589e4af751378d06ded4cbbc/meta/apple-touch-icon.png",
+    "type": "official-icon",
+    "identityEvidence": "The original game index advertises this Apple touch icon; the catalog launcher public/games/cl2048.html credits Gabriele Cirulli and identifies itself as the ovolve 2048 AI variant, not 2048 Cupcakes.",
+    "reuseEvidence": "MIT, Copyright (c) 2014 Gabriele Cirulli. The original README applies MIT to 2048; the icon ships in the upstream tree and is linked from its index. License: https://github.com/gabrielecirulli/2048/blob/478b6ec346e3787f589e4af751378d06ded4cbbc/LICENSE.txt"
+  },
+  "clgoogledino": {
+    "title": "Google Dino",
+    "url": "/artwork/google-dino.png",
+    "source": "https://github.com/chromium/chromium/blob/131.0.6778.85/components/neterror/resources/images/default_100_percent/offline/100-offline-sprite.png",
+    "type": "game-asset",
+    "identityEvidence": "The launcher public/games/clgoogledino.html titles itself Dinosaur Game Chrome, contains Chromium Authors notices and 1x-trex/2x-trex resources. The card uses the same T. rex character from the official Chromium release sprite sheet, not the mirror.",
+    "reuseEvidence": "Chromium BSD-style license permits redistribution and modification with its notice, which ships beside this cropped and scaled T. rex frame. The modified card excludes the sheet’s browser logos and does not imply Google endorsement. License: https://github.com/chromium/chromium/blob/131.0.6778.85/LICENSE"
+  },
+  "clsandboxels": {
+    "title": "Sandboxels",
+    "url": "/artwork/sandboxels.png",
+    "source": "https://github.com/R74nCom/sandboxels/blob/e0e986b5299062a02b96d7c63b988f9c2e8f9ece/icons/promo1.png",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "R74n lists this exact file under Screenshots at https://sandboxels.r74n.com/presskit.html. The catalog launcher public/games/clsandboxels.html links R74nCom/sandboxels.",
+    "reuseEvidence": "R74n explicitly releases the press kit and its contents, including this listed screenshot, under CC0 1.0: https://github.com/R74nCom/sandboxels/blob/e0e986b5299062a02b96d7c63b988f9c2e8f9ece/presskit.html. The R74n Content License v1.1 §§2a and 3 separately allow screenshots anywhere with credit. The card is resized and adds a visible R74n credit strip."
+  }
+};
