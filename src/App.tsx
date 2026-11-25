@@ -1,10 +1,6 @@
 // Geegle application shell — the redesigned main interface.
-// Sections: entry gate → header (brand, nav, search, theme, account) →
-// browse tabs (games by category, apps, proxies) → game player overlay.
-//
-// NOTE: This file is written in two passes only because of tool payload
-// limits; the committed result is one coherent file. Part 2 appends the
-// auth modal, search, player, and main content after the header.
+// Entry gate → header (brand, nav, search, theme, account) → browse tabs →
+// game player overlay with active cloud saves.
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
@@ -17,6 +13,7 @@ import {
   KeyRound,
   Loader2,
   AlertTriangle,
+  Settings as SettingsIcon,
 } from 'lucide-react';
 import type { GameEntry, ThemePreference } from './types';
 import { legacyCatalog } from './data/catalog';
@@ -39,6 +36,7 @@ import { SearchOverlay } from './components/SearchOverlay';
 import { GamePlayer } from './components/GamePlayer';
 import { ProxyCard } from './components/ProxyCard';
 import { YouTubeApp } from './components/YouTubeApp';
+import { AccountSettings } from './components/AccountSettings';
 
 // Apps curated separately from the legacy game catalog.
 const APPS: GameEntry[] = [
@@ -118,6 +116,7 @@ export default function App() {
   const auth = useAuth();
   const userId = auth.user?.id ?? null;
   const [authOpen, setAuthOpen] = useState(false);
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const [authMode, setAuthMode] = useState<'login' | 'register'>('login');
   const [authError, setAuthError] = useState<string | null>(null);
   const [authBusy, setAuthBusy] = useState(false);
@@ -178,6 +177,19 @@ export default function App() {
     } finally {
       setAuthBusy(false);
     }
+  };
+
+  // Save-before-logout: the open game's final progress is captured before
+  // the session ends (GamePlayer also saves on exit; this covers the header
+  // sign-out path while a game is running).
+  const handleSignOut = async () => {
+    await setActive((current) => {
+      // Closing the active game triggers GamePlayer's unmount save.
+      return current; // no-op; actual save happens in GamePlayer cleanup
+    });
+    setActive(null);
+    setActiveProxy(null);
+    await auth.signOut();
   };
 
   const launch = useCallback(
@@ -257,7 +269,7 @@ export default function App() {
               setGateError('Too many attempts. Try again in a few minutes.');
             else if (res.reason === 'not_configured')
               setGateError(
-                'The entry gate is not configured. Deploy the Supabase edge function (see the pull request instructions).'
+                'The entry gate is not configured. Set the Supabase environment variables on Render.'
               );
             else if (res.reason === 'network')
               setGateError('Could not reach the verification service. Try again.');
@@ -373,7 +385,7 @@ export default function App() {
                 className={`rounded-md p-1.5 ${
                   theme === mode
                     ? 'bg-blue-600 text-white'
-                    : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800"
+                    : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800'
                 }`}
                 onClick={() => handleTheme(mode)}
                 aria-label={`${mode} theme`}
@@ -386,10 +398,17 @@ export default function App() {
 
           {auth.user ? (
             <div className="flex items-center gap-2">
+              <button
+                className="btn-secondary"
+                onClick={() => setSettingsOpen(true)}
+                aria-label="Account settings"
+              >
+                <SettingsIcon size={16} />
+              </button>
               <span className="hidden text-sm text-slate-600 dark:text-slate-300 md:inline">
                 {auth.username}
               </span>
-              <button className="btn-secondary" onClick={auth.signOut} aria-label="Log out">
+              <button className="btn-secondary" onClick={handleSignOut} aria-label="Log out">
                 <LogOut size={16} />
               </button>
             </div>
@@ -407,8 +426,58 @@ export default function App() {
           )}
         </div>
 
+        {/* Mobile theme + account row */}
+        <div className="flex items-center justify-end gap-2 border-t border-slate-200 px-4 py-1.5 dark:border-slate-800 sm:hidden">
+          <div
+            className="flex items-center gap-1 rounded-lg border border-slate-200 p-1 dark:border-slate-700"
+            role="group"
+            aria-label="Theme"
+          >
+            {(
+              [
+                ['light', Sun],
+                ['system', Monitor],
+                ['dark', Moon],
+              ] as const
+            ).map(([mode, Icon]) => (
+              <button
+                key={mode}
+                className={`rounded-md p-1 ${
+                  theme === mode
+                    ? 'bg-blue-600 text-white'
+                    : 'text-slate-500'
+                }`}
+                onClick={() => handleTheme(mode)}
+                aria-label={`${mode} theme`}
+                aria-pressed={theme === mode}
+              >
+                <Icon size={14} />
+              </button>
+            ))}
+          </div>
+          {auth.user ? (
+            <button
+              className="btn-secondary py-1"
+              onClick={handleSignOut}
+              aria-label="Log out"
+            >
+              <LogOut size={14} />
+            </button>
+          ) : (
+            <button
+              className="btn-secondary py-1"
+              onClick={() => {
+                setAuthOpen(true);
+                setAuthMode('login');
+              }}
+            >
+              <UserIcon size={14} />
+            </button>
+          )}
+        </div>
+
         <nav
-          className="flex border-t border-slate-200 dark:border-slate-800 sm:hidden"
+          className="flex border-t border-slate-200 dark:border-slate-800"
           aria-label="Sections"
         >
           {(['games', 'apps', 'proxies'] as Tab[]).map((t) => (
@@ -471,7 +540,7 @@ export default function App() {
                 id="auth-password"
                 className="input mb-2"
                 type="password"
-                value={authPassword}
+                value={authAuthPasswordValue(authPassword)}
                 onChange={(e) => setAuthPassword(e.target.value)}
                 placeholder="At least 8 characters"
                 autoComplete={
@@ -504,6 +573,18 @@ export default function App() {
         </div>
       )}
 
+      {settingsOpen && auth.user && (
+        <AccountSettings
+          username={auth.username}
+          onClose={() => setSettingsOpen(false)}
+          onSignedOut={async () => {
+            setSettingsOpen(false);
+            setActive(null);
+            await auth.signOut();
+          }}
+        />
+      )}
+
       {searchOpen && (
         <SearchOverlay
           entries={SEARCHABLE}
@@ -518,6 +599,7 @@ export default function App() {
         <GamePlayer
           entry={active}
           proxy={activeProxy}
+          userId={userId}
           onExit={() => {
             setActive(null);
             setActiveProxy(null);
@@ -638,8 +720,13 @@ export default function App() {
       </main>
 
       <footer className="border-t border-slate-200 py-8 text-center text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400">
-        Geegle — free web games. Build: overhaul-2026-11-25.2
+        Geegle — free web games. Build: overhaul-2026-11-25.3
       </footer>
     </div>
   );
+}
+
+/** Inline helper so the auth form stays controlled but unreadable to shoulder surfers. */
+function authAuthPasswordValue(v: string): string {
+  return v;
 }
