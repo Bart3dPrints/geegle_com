@@ -1,27 +1,11 @@
 import { lazy, Suspense, useEffect, useRef, useState } from 'react';
-import { SearchLanding } from './components/SearchLanding';
-import { isSupabaseConfigured, supabase } from './lib/supabase';
+import { AccountSearchRoute } from './landing/AccountSearchRoute';
 
 import { platformNavigation, type PrepareLeave } from './landing/platformNavigation';
 
 const Platform = lazy(() => import('./App'));
 
 const wantsGames = () => window.location.hash === '#games';
-
-function LandingRoute() {
-  const [identity, setIdentity] = useState<string | null | undefined>(isSupabaseConfigured ? undefined : null);
-  useEffect(() => {
-    if (!isSupabaseConfigured) return;
-    // Observe INITIAL_SESSION and later identity changes without triggering account migrations.
-    const { data } = supabase.auth.onAuthStateChange((_event, session) => setIdentity(session?.user.id ?? null));
-    return () => data.subscription.unsubscribe();
-  }, []);
-  if (identity === undefined) return <main className="p-6" role="status">Loading search…</main>;
-  return <SearchLanding
-    onOpenLibrary={() => { window.location.hash = 'games'; }}
-    account={identity ? { id: identity, appearance: undefined } : undefined}
-  />;
-}
 
 export function GeegleRoot() {
   const [games, showGames] = useState(wantsGames);
@@ -41,7 +25,7 @@ export function GeegleRoot() {
   useEffect(() => {
     document.title = games ? 'Geegle — Free Web Games' : 'Geegle — Search';
   }, [games]);
-  if (!games) return <LandingRoute/>;
+  if (!games) return <AccountSearchRoute onOpenLibrary={() => { window.location.hash = 'games'; }}/>;
   return <div className="flex h-[100dvh] flex-col">
     <nav aria-label="Geegle navigation" className="bg-slate-50 px-4 py-2 text-sm text-slate-700 dark:bg-slate-950 dark:text-slate-200">
       <a href="#search" className="underline underline-offset-2">Back to search</a>
