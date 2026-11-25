@@ -14,6 +14,45 @@ function array(value: unknown): unknown[] {
   return value;
 }
 
+const maxPayload = 512 * 1024;
+const maxNodes = 50_000;
+const maxRecords = 5_000;
+
+function enforceRecoveryLimits(dump: Record<string, unknown>) {
+  let units = 0;
+  let nodes = 0;
+  let records = 0;
+  const charge = (size: number) => {
+    units += size;
+    if (units > maxPayload) throw new Error('Recovery payload exceeds the 512 KiB budget.');
+  };
+  const visit = (value: unknown, depth: number) => {
+    if (++nodes > maxNodes || depth > 128) throw new Error('Recovery payload is too complex.');
+    charge(1);
+    if (typeof value === 'string') {
+      // Use an upper bound for UTF-8 without creating a second copy.
+      charge(value.length * 3);
+    } else if (Array.isArray(value)) {
+      if (value.length > maxNodes - nodes) throw new Error('Recovery payload is too complex.');
+      for (const entry of value) visit(entry, depth + 1);
+    } else if (value && typeof value === 'object') {
+      const fields = value as Record<string, unknown>;
+      for (const key in fields) {
+        if (!Object.prototype.hasOwnProperty.call(fields, key)) continue;
+        charge(key.length * 3 + 1);
+        visit(fields[key], depth + 1);
+      }
+    }
+  };
+  const stores = array(dump.stores);
+  if (stores.length > maxNodes) throw new Error('Recovery payload is too complex.');
+  for (const entry of stores) {
+    records += array(object(entry).records).length;
+    if (records > maxRecords) throw new Error('Recovery payload exceeds the 5,000 record limit.');
+  }
+  visit(dump, 0);
+}
+
 function string(value: unknown): string {
   if (typeof value !== 'string') throw new Error('Invalid v3 archive string.');
   return value;
@@ -86,7 +125,9 @@ export async function recoverLegacyDatabase(
   signal: AbortSignal,
   assertOwner: () => Promise<void>,
 ): Promise<string> {
+  signal.throwIfAborted();
   const dump = object(input);
+  enforceRecoveryLimits(dump);
   string(dump.name);
   const version = dump.version;
   if (typeof version !== 'number' || !Number.isSafeInteger(version) || version <= 0) throw new Error('Invalid v3 database version.');
@@ -160,8 +201,12 @@ export async function recoverLegacyDatabase(
       request.result.close();
       cleanup();
       if (!created) reject(new Error('Recovery never updates an existing database.'));
-      else if (signal.aborted) reject(signal.reason);
-      else resolve(name);
+      else if (signal.aborted) {
+        // Only oldVersion === 0 can set created; never delete a pre-existing database.
+        const removal = indexedDB.deleteDatabase(name);
+        removal.onsuccess = () => reject(signal.reason);
+        removal.onerror = () => reject(removal.error ?? new Error('Could not remove the cancelled recovery copy.'));
+      } else resolve(name);
     };
   });
 }

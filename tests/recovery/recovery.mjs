@@ -92,11 +92,71 @@ async function run() {
   } finally {
     IDBFactory.prototype.open = nativeOpen;
   }
+  owner = 'account-a';
+  controller = new AbortController();
+  let lateAbort = false;
+  IDBFactory.prototype.open = function (...args) {
+    const pending = nativeOpen.apply(this, args);
+    pending.addEventListener('upgradeneeded', () => {
+      pending.transaction.addEventListener('complete', () => {
+        lateAbort = true;
+        controller.abort();
+      }, { once: true });
+    }, { once: true });
+    return pending;
+  };
+  try {
+    await reject(copy(fixture, controller));
+  } finally {
+    IDBFactory.prototype.open = nativeOpen;
+  }
+  assert(lateAbort, 'Did not abort after transaction commit');
+  assert((await indexedDB.databases()).length === before, 'Late abort left a committed recovery copy');
+  const collisionId = '11111111-1111-4111-8111-111111111111';
+  const collisionName = `geegle-recovery:account-a:fixture-game:${collisionId}`;
+  const existing = indexedDB.open(collisionName, 1);
+  existing.onupgradeneeded = () => existing.result.createObjectStore('sentinel').add('unchanged', 1);
+  (await eventResult(existing)).close();
+  const nativeUuid = Crypto.prototype.randomUUID;
+  Crypto.prototype.randomUUID = () => collisionId;
+  try {
+    await reject(copy(fixture));
+  } finally {
+    Crypto.prototype.randomUUID = nativeUuid;
+  }
+  const sameDb = await eventResult(indexedDB.open(collisionName));
+  assert(sameDb.version === 1 && await eventResult(sameDb.transaction('sentinel').objectStore('sentinel').get(1)) === 'unchanged',
+    'Name collision changed an existing database');
+  sameDb.close();
+  await eventResult(indexedDB.deleteDatabase(collisionName));
+
+  const overRecords = structuredClone(fixture);
+  overRecords.stores[0].records = Array(2501).fill(fixture.stores[0].records[0]);
+  overRecords.stores[1].records = Array(2500).fill(fixture.stores[1].records[0]);
+  const overPayload = structuredClone(fixture);
+  const binary = { ...tag('typedarray', 'AAAA'.repeat(28_000)), c: 'Uint8Array' };
+  overPayload.stores[0].records[0].value.v.typed = binary;
+  overPayload.stores[0].records[0].value.v.view = binary;
+  let decodeOrOpenCalls = 0;
+  const nativeAtob = window.atob;
+  const nativeCmp = IDBFactory.prototype.cmp;
+  window.atob = (...args) => { decodeOrOpenCalls++; return nativeAtob(...args); };
+  IDBFactory.prototype.cmp = function (...args) { decodeOrOpenCalls++; return nativeCmp.apply(this, args); };
+  IDBFactory.prototype.open = function (...args) { decodeOrOpenCalls++; return nativeOpen.apply(this, args); };
+  try {
+    await reject(copy(overRecords));
+    await reject(copy(overPayload));
+    assert(decodeOrOpenCalls === 0, 'Oversized input reached record decoding or IndexedDB.open');
+  } finally {
+    window.atob = nativeAtob;
+    IDBFactory.prototype.cmp = nativeCmp;
+    IDBFactory.prototype.open = nativeOpen;
+  }
   assert((await indexedDB.databases()).length === before, 'An invalid recovery created a database');
   assert(await eventResult(live.transaction('live').objectStore('live').get('save')) === 'untouched', 'Original game save changed');
   live.close();
   await Promise.all([first, second, originName].map((name) => eventResult(indexedDB.deleteDatabase(name))));
 }
 
-run().then(() => { result.textContent = 'PASS: recovery schema, binary values, rollback, account changes, existing storage'; },
+run().then(() => { result.textContent = 'PASS: schema, binary values, rollback, late abort cleanup, name collision, aggregate limits, account changes'; },
   (error) => { result.textContent = `FAIL: ${error.message}`; });
