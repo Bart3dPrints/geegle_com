@@ -1,7 +1,8 @@
-// Game artwork: uses REAL images from each game's own asset folder on
-// UGS-Assets (the same origin the game itself loads from — no new licensing
-// surface). Falls back to a neutral tile only when a game genuinely has no
-// usable image.
+// Game artwork: REAL images from each game's own asset folder on UGS-Assets
+// (the same origin the game itself loads from — no new licensing surface).
+// Candidate list covers Construct-style images/ folders and Unity-style
+// root/template images; falls back to a neutral tile only when a game
+// genuinely has no usable image.
 
 import { useState } from 'react';
 import type { GameEntry } from '../types';
@@ -9,8 +10,17 @@ import { ARTWORK_FOLDERS } from '../data/artwork';
 
 const CDN = 'https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main';
 
-// Candidate image names inside each asset folder, in priority order:
-// background/title screens first (best 16:9 sources), then menu images.
+function folderUrl(folder: string, file: string): string {
+  return `${CDN}/${folder
+    .split('/')
+    .map(encodeURIComponent)
+    .join('/')}/${encodeURIComponent(file)}`;
+}
+
+// Candidate image paths, priority ordered: title/menu screens first (best
+// 16:9 sources), then backgrounds, then icons. Construct projects keep
+// images in images/; Unity WebGL builds put icons at the root or in
+// TemplateData/. The onError chain walks the list until one loads.
 const CANDIDATES = [
   'images/menu_bg-sheet0.png',
   'images/main_bg-sheet0.png',
@@ -18,12 +28,15 @@ const CANDIDATES = [
   'images/bg-sheet0.png',
   'images/background-sheet0.png',
   'images/title-sheet0.png',
-  'images/title_screen-sheet0.png',
   'images/level_select-sheet0.png',
   'images/map1_bg-sheet0.png',
   'images/menu-sheet0.png',
-  'images/sprite-sheet0.png',
   'images/sheet0.png',
+  'TemplateData/img.jpg',
+  'TemplateData/vin.jpg',
+  'logo.png',
+  'Icon_512x512.png',
+  'icon.png',
 ];
 
 const PALETTE = [
@@ -43,11 +56,6 @@ export function tileColor(id: string): string {
   return PALETTE[h % PALETTE.length];
 }
 
-/**
- * Tries real image candidates from the game's asset folder in priority
- * order. Remembers which candidate index worked per game in sessionStorage
- * so repeat views load the known-good URL directly.
- */
 export function GameArt({
   game,
   className = '',
@@ -55,7 +63,7 @@ export function GameArt({
   game: GameEntry;
   className?: string;
 }) {
-  const folder = ARTWORK_FOLDERS[game.id];
+  const folder = game.thumb ? undefined : ARTWORK_FOLDERS[game.id];
 
   const startIdx = (() => {
     if (!folder) return -1;
@@ -70,7 +78,20 @@ export function GameArt({
 
   const [idx, setIdx] = useState(startIdx);
 
-  // Explicit artwork (curated per-game URL) always wins.
+  const handleError = () => {
+    if (!folder) return;
+    const next = idx + 1;
+    setIdx(next);
+    if (next < CANDIDATES.length) {
+      try {
+        sessionStorage.setItem(`geegle-art-${game.id}`, String(next));
+      } catch {
+        /* ignore */
+      }
+    }
+  };
+
+  // Explicit per-game artwork (curated URL) takes priority.
   if (game.thumb) {
     return (
       <img
@@ -78,15 +99,12 @@ export function GameArt({
         alt={game.title}
         loading="lazy"
         className={`object-cover ${className}`}
-        onError={(e) => {
-          e.currentTarget.style.display = 'none';
-        }}
+        onError={handleError}
       />
     );
   }
 
   if (!folder || idx < 0 || idx >= CANDIDATES.length) {
-    // Neutral fallback — only for games with no usable artwork.
     return (
       <span
         className={`flex items-center justify-center text-white ${tileColor(game.id)} ${className}`}
@@ -97,25 +115,13 @@ export function GameArt({
     );
   }
 
-  const src = `${CDN}/${folder}/${CANDIDATES[idx]}`;
-
   return (
     <img
-      src={src}
+      src={folderUrl(folder, CANDIDATES[idx])}
       alt={game.title}
       loading="lazy"
       className={`object-cover ${className}`}
-      onError={() => {
-        const next = idx + 1;
-        setIdx(next);
-        if (next < CANDIDATES.length) {
-          try {
-            sessionStorage.setItem(`geegle-art-${game.id}`, String(next));
-          } catch {
-            /* ignore */
-          }
-        }
-      }}
+      onError={handleError}
     />
   );
 }
