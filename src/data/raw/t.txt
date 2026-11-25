@@ -1,0 +1,140 @@
+cltabi|Tabi|rhythm
+cltabletanks|Table Tanks|action
+cltabletennisworldtour|Table Tennis World Tour|sports
+cltacostand|Taco Stand|simulation
+cltag|Tag|multiplayer
+cltagc3|Tag C3|multiplayer
+cltagcm|Tag CM|multiplayer
+cltaikonotatsujin|Taiko no Tatsujin|rhythm
+cltailofthedragon|Tail of the Dragon|action
+cltailsadventure|Tails Adventure|platformer
+cltailsskypatrol|Tails Sky Patrol|platformer
+cltaisei|Taisei|puzzle
+cltakeover|Takeover|strategy
+cltallmanrun|Tall Man Run|action
+cltallio|Tall.io|multiplayer
+cltankmayhem|Tank Mayhem|action
+cltankpixel|Tank Pixel|action
+cltanktrouble|Tank Trouble|multiplayer
+cltanukisunset|Tanuki Sunset|racing
+cltanukisunsetuhhhhhhhh|Tanuki Sunset (Alt)|racing
+cltapper|Tapper|arcade
+cltaproad|Tap Road|arcade
+cltastyplanet|Tasty Planet|action
+cltboidemo|The Binding of Isaac Demo|action
+cltboilambeternal|The Binding of Isaac: Lamb Eternal|action
+cltelocation|Telocation|puzzle
+cltecmobowl|Tecmo Bowl|sports
+cltekken2ps1|Tekken 2 (PS1)|action
+cltekken3ps1|Tekken 3 (PS1)|action
+cltelephonetrouble|Telephone Trouble|puzzle
+cltempoverdose|Tempo Overdose|rhythm
+cltempest2000|Tempest 2000|arcade
+cltempleofboom|Temple of Boom|action
+cltemplerun2|Temple Run 2|action
+cltennisnes|Tennis (NES)|sports
+clteod|Teod|simulation
+clterra|Terra|strategy
+clterritorialio|Territorial.io|multiplayer
+clterritorywar|Territory War|action
+clterritorywar2|Territory War 2|action
+clterritorywar3|Territory War 3|action
+cltetris|Tetris|puzzle
+cltetrisattack|Tetris Attack|puzzle
+cltetrisgba|Tetris (GBA)|puzzle
+cltetrisgrandmaster2|Tetris: The Grand Master 2|puzzle
+cltheclassroom|The Classroom|puzzle
+cltheclassroom2|The Classroom 2|puzzle
+cltheclassroom3|The Classroom 3|puzzle
+clthedeadseat|The Dead Seat|horror
+clthedeepestsleep|The Deepest Sleep|horror
+cltheenchantedcave2|The Enchanted Cave 2|adventure
+cltheimpossiblegame|The Impossible Game|platformer
+cltheincrediblemachine|The Incredible Machine|puzzle
+clthelaststand|The Last Stand|action
+clthelaststandunioncity--1|The Last Stand: Union City|action
+cltheloneranger|The Lone Ranger|action
+clthemaninthewindow|The Man in the Window|horror
+clthesodorrace|The Sodor Race|racing
+clthedude|The Dude|action
+clthemepark|Theme Park|simulation
+clthemeparkpsx|Theme Park (PSX)|simulation
+clthepit|The Pit|action
+clthereisnofile|There Is No File|puzzle
+cltheyarecoming|They Are Coming|horror
+thiefpuzzle|Thief Puzzle|puzzle
+clthisistheonlylevel|This Is the Only Level|platformer
+clthisistheonlylevel2|This Is the Only Level 2|platformer
+clthisistheonlyleveltoo|This Is the Only Level Too|platformer
+clthreegoblets|Three Goblets|action
+clthrowapotato|Throw a Potato|action
+clthrowapotatoagain|Throw a Potato Again|action
+clthwack|Thwack|action
+cltiberiandawn|Tiberian Dawn|strategy
+cltimeshooter2|Time Shooter 2|action
+cltimeshooter3|Time Shooter 3|action
+time-shooter-3|Time Shooter 3: SWAT|action
+cltimewarriors|Time Warriors|action
+cltinyfishing|Tiny Fishing|casual
+cltmnt|TMNT|action
+cltmnt2arc|TMNT 2 Arcade|action
+cltmntturtlesintime|TMNT: Turtles in Time|action
+cltmntarc|TMNT Arcade|action
+cltoastarling|Toastarling|action
+cltommorowandyesterday|Tomorrow and Yesterday|puzzle
+cltoasterball|Toaster Ball|sports
+cltoejam-earl|ToeJam & Earl|adventure
+cltoejam-earlpof|ToeJam & Earl (POF)|adventure
+cltombofthemass|Tomb of the Mass|action
+cltomodachicollection|Tomodachi Collection|simulation
+cltonyhawkskater2|Tony Hawk's Pro Skater 2|sports
+cltonyhawkskater4|Tony Hawk's Pro Skater 4|sports
+cltonyhawksunderground|Tony Hawk's Underground|sports
+cltoomanytypes|Pokemon Too Many Types|pokemon
+cltopspeedracing3d|Top Speed Racing 3D|racing
+cltosstheturtle|Toss the Turtle|action
+cltotm|Tomb of the Mask|arcade
+cltouhou|Touhou|action
+cltouhou2|Touhou 2|action
+cltouhou3|Touhou 3|action
+cltouhou4|Touhou 4|action
+cltouhou5|Touhou 5|action
+cltowerblocks|Tower Blocks|arcade
+cltowercrash3d|Tower Crash 3D|puzzle
+cltowerwizard|Tower Wizard|strategy
+cltownscraper|Townscaper|simulation
+cltrechoroustrials|Treacherous Trials|adventure
+cltrechoroustrialspart2|Treacherous Trials Part 2|adventure
+cltrace|Trace|puzzle
+cltrafficjam3d|Traffic Jam 3D|racing
+cltrapthecat|Trap the Cat|puzzle
+cltrappedwithjester|Trapped with Jester|adventure
+cltriachnid|Triachnid|action
+cltripleplay2000|Triple Play 2000|sports
+cltriviacrack|Trivia Crack|puzzle
+cltrollfacequest1|Troll Face Quest 1|puzzle
+cltrollfacequest2|Troll Face Quest 2|puzzle
+cltrollfacequest3|Troll Face Quest 3|puzzle
+cltrollfacequest4|Troll Face Quest 4|puzzle
+cltrollfacequest5|Troll Face Quest 5|puzzle
+cltrollfacequest6|Troll Face Quest 6|puzzle
+cltrollfacequest7|Troll Face Quest 7|puzzle
+cltrollfacequest8|Troll Face Quest 8|puzzle
+cltrollfacequest9|Troll Face Quest 9|puzzle
+cltrollfacequest10|Troll Face Quest 10|puzzle
+cltrollfacequest11|Troll Face Quest 11|puzzle
+cltrollfacequest12|Troll Face Quest 12|puzzle
+cltrollfacequest13|Troll Face Quest 13|puzzle
+cltrucksim|Truck Sim|simulation
+cltsuzukimaze|Tsuzuki Maze|puzzle
+cltupertariotros|Tupertariotros|puzzle
+cltubejumpers|Tube Jumpers|multiplayer
+cltuff_client_offline_wasm|Tuff Client (WASM)|simulation
+cltungtunghorror|Tung Tung Horror|horror
+cltungtungtungsahurobby|Tung Tung Tung Sahur Obby|platformer
+cltunnelrush|Tunnel Rush|arcade
+cltunnelrushbetter|Tunnel Rush (Better)|arcade
+clturokdinosaurhunter|Turok: Dinosaur Hunter|action
+clturbostars|Turbostars|racing
+cltwinshot--1|Twin Shot|action
+cltwoball3d|Two Ball 3D|racing
