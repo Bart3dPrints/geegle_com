@@ -3,7 +3,7 @@
 // browse tabs (games by category, apps, proxies) → game player overlay.
 // Replaces the legacy 406KB monolith with composed modules.
 
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   Search,
   User as UserIcon,
@@ -70,8 +70,7 @@ const APPS: GameEntry[] = [
     kind: 'stream',
     aliases: ['yt', 'videos', 'streaming', 'stream'],
     source: 'YouTube official site',
-    description:
-      'YouTube search and playback via the official website.',
+    description: 'YouTube search and playback via the official website.',
   },
 ];
 
@@ -135,7 +134,6 @@ export default function App() {
     title: string;
   } | null>(null);
 
-  // Load theme + user data on mount and after sign-in changes.
   useEffect(() => {
     if (auth.loading) return;
     (async () => {
@@ -172,12 +170,15 @@ export default function App() {
     }
   };
 
-  const launch = async (g: GameEntry) => {
-    setActiveProxy(null);
-    setActive(g);
-    const nextRecent = await trackPlay(g.id, signedIn);
-    setRecent(nextRecent);
-  };
+  const launch = useCallback(
+    async (g: GameEntry) => {
+      setActiveProxy(null);
+      setActive(g);
+      const nextRecent = await trackPlay(g.id, signedIn);
+      setRecent(nextRecent);
+    },
+    [signedIn]
+  );
 
   const launchProxy = (serviceId: string, index: number) => {
     const service = PROXY_SERVICES.find((s) => s.id === serviceId);
@@ -199,7 +200,10 @@ export default function App() {
     [category]
   );
 
-  const byId = useCallback((id: string) => SEARCHABLE.find((g) => g.id === id), []);
+  const byId = useCallback(
+    (id: string) => SEARCHABLE.find((g) => g.id === id),
+    []
+  );
 
   const recentEntries = useMemo(
     () => recent.map(byId).filter((g): g is GameEntry => Boolean(g)),
@@ -210,7 +214,6 @@ export default function App() {
     [favorites, byId]
   );
 
-  // ── Entry gate ────────────────────────────────────────────────────────
   if (gateOpen) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-slate-50 p-4 dark:bg-slate-950">
@@ -263,7 +266,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
-      {/* Header */}
       <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur dark:border-slate-800 dark:bg-slate-900/95">
         <div className="mx-auto flex h-16 max-w-7xl items-center gap-3 px-4 sm:gap-4 sm:px-6">
           <button
@@ -289,7 +291,7 @@ export default function App() {
                   tab === t
                     ? 'bg-blue-600 text-white'
                     : 'text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800'
-                }}`
+                }`}
                 onClick={() => {
                   setTab(t);
                   setActive(null);
@@ -311,7 +313,6 @@ export default function App() {
             <span className="hidden md:inline">Search</span>
           </button>
 
-          {/* Theme toggle: system / light / dark */}
           <div
             className="hidden items-center gap-1 rounded-lg border border-slate-200 p-1 dark:border-slate-700 sm:flex"
             role="group"
@@ -366,7 +367,6 @@ export default function App() {
           )}
         </div>
 
-        {/* Mobile tabs */}
         <nav
           className="flex border-t border-slate-200 dark:border-slate-800 sm:hidden"
           aria-label="Sections"
@@ -391,7 +391,6 @@ export default function App() {
         </nav>
       </header>
 
-      {/* Auth modal */}
       {authOpen && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 p-4"
@@ -465,7 +464,6 @@ export default function App() {
         </div>
       )}
 
-      {/* Search overlay */}
       {searchOpen && (
         <SearchOverlay
           entries={SEARCHABLE}
@@ -474,7 +472,6 @@ export default function App() {
         />
       )}
 
-      {/* Game player */}
       {(active || activeProxy) && (
         <GamePlayer
           entry={active}
@@ -488,7 +485,6 @@ export default function App() {
         />
       )}
 
-      {/* Main content */}
       <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
         {tab === 'games' && (
           <>
