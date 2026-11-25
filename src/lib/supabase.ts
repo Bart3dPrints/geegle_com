@@ -12,10 +12,9 @@ const url = import.meta.env.VITE_SUPABASE_URL as string | undefined;
 const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
 
 if (!url || !anonKey) {
-  // The app still works fully anonymously (local-only mode) when Supabase
-  // is not configured. Components check isSupabaseConfigured.
+  // The entry gate remains locked without a configured backend.
   console.warn(
-    '[geegle] Supabase is not configured. Accounts and cloud sync are disabled; the site runs in local-only mode.'
+    '[geegle] Supabase is not configured. The entry gate, accounts and cloud sync are unavailable.'
   );
 }
 

@@ -1,6 +1,6 @@
 // Site entry gate. Verification happens EXCLUSIVELY server-side via the
 // `geegle_verify_entry_password` Postgres function (bcrypt against a hash the
-// client can never read, with built-in per-IP rate limiting). The function is
+// client can never read, with a best-effort per-device attempt limit). The function is
 // callable without authentication, so the gate works before sign-in.
 //
 // When Supabase is not configured the gate shows a clear configuration error
@@ -38,11 +38,10 @@ export function lockEntry(): void {
   }
 }
 
-/** Best-effort client IP for the server-side rate limiter. */
+/** Best-effort device identifier for the server-side attempt limit. */
 function clientIp(): string {
-  // The server sees the real client IP from its connection; the value we pass
-  // is a per-device salt for distinguishing users behind shared connections.
-  // A stable per-browser id keeps rate limiting per-device on the same IP.
+  // This identifier is client-supplied and can be changed; it is not an IP
+  // address or a security boundary.
   try {
     let id = localStorage.getItem('geegle-device-id');
     if (!id) {
@@ -82,6 +81,9 @@ export async function verifyEntryPassword(
     }
     if (data && data.reason === 'rate_limited') {
       return { ok: false, reason: 'rate_limited' };
+    }
+    if (data && data.reason === 'gate_not_configured') {
+      return { ok: false, reason: 'not_configured' };
     }
     if (data && data.valid === false) {
       return { ok: false, reason: 'invalid' };
