@@ -69,3 +69,146 @@ no databases; account `1111…` read `acct-A` again afterwards.
 
 Checks: `npm run typecheck` 0, `npm run lint` 0, `npm run build` ok,
 `npm test` (`bun test tests`) 49 pass / 0 fail across 9 files.
+
+## Recovery and remaining-work evidence (2026-11-25, second session)
+
+### 1. Unpushed work recovered and published
+`f1d61ad` was intact locally with no remote configured. `origin` was added,
+`feature/platform-overhaul` fetched (4 commits ahead of the merge base), and the
+local rewrite merged over it: the remote shim/adapters used an ownership ledger,
+the local rewrite uses explicit `geegle-game:<gameId>:<userId>:` namespacing, so
+the newer implementation won the four conflicting files. Every regression the
+remote commits added is covered by `tests/storage-shim.test.mjs` and
+`tests/save-isolation.test.mjs` (the older copies of those tests target the
+removed ledger API and were not kept). Pushed fast-forward:
+
+- `4c56a5c..d6ae571` merge commit, then `1dae5f3`, then `7a929eb`.
+- GitHub PR #2 head confirmed as `d6ae57190902840df3b00523a0e6af3cb48baf89`
+  (`GITHUB_GET_A_PULL_REQUEST`), base `main`, still open and unmerged.
+
+Recovery artefacts: branch `backup/f1d61ad`, patch
+`/tmp/geegle-recovery/0001-Make-cloud-saves-account-safe-and-evidence-based.patch`.
+
+### 2. Save-support claims now match the evidence
+`saveSupportFor` no longer returns `automatic` for every injectable wrapper.
+Tiers (`src/lib/saveManifest.ts`), computed over the shipped wrappers:
+
+| Tier | Count | Meaning |
+|------|-------|---------|
+| verified | 1 (`cl2048`) | played, progress captured, browser storage cleared, restored |
+| engine-compatible | 1174 | wrapper's storage mechanism (Unity/Emscripten IndexedDB, Ruffle/localStorage, IndexedDB) is covered by the save tests; this game was not played |
+| injectable (experimental) | 1592 | shim injectable, no storage mechanism detected, no claim |
+| external-service | 63 | cross-origin frame or proxy/stream |
+| unsupported | 26 | single-file build above the 24 MB inject limit |
+
+`ENGINE_BY_GAME` is generated per game (1175 entries; 535 Unity, 575 Ruffle,
+64 Emscripten, 8 IndexedDB, 28 localStorage markers). Capture is still attempted
+for experimental games — that is real functionality — but their label reads
+"Experimental cloud save", never "Automatic".
+New coverage: `tests/save-manifest.test.mjs` (6 tests), including "no injectable
+game outside the evidence list is reported as verified".
+
+### 3. Same-origin session exposure (defect 9) narrowed
+`src/lib/storageGuard.ts` captures the real `Storage` for the Supabase client and
+replaces `window.localStorage` / `window.sessionStorage` with a view that hides
+`geegle-auth-session`, `sb-*-auth-token` and `geegle-auth-*`: reads return null,
+writes and deletes are ignored, enumeration and `clear()` skip them. Tested in
+`tests/storage-guard.test.mjs` (4 tests). Verified in the production build served
+by `vite preview` on 127.0.0.1:4173: the page rendered, the getter was the guard's,
+`setItem('geegle-auth-session', …)` left no value, and no auth key was enumerable.
+
+**Residual risk (not fixed):** games still run on the same origin, so untrusted
+code can call platform APIs through `window.parent`, and can frame other platform
+pages. A complete boundary needs games served from a separate origin; that is a
+deployment change, not something a storage shim can provide.
+
+### 4. Supabase — real database verification
+Production project `oizdbkxnzwatytxcrvoo` inspected read-only:
+- `geegle_*` tables exist with RLS enabled and per-user policies; `anon`,
+  `authenticated`, `service_role` have full DML grants (production was granted
+  by hand); `pgcrypto` lives in `extensions`.
+- **`0002_game_save_revision.sql` is missing**: `geegle_game_saves` has no
+  `revision` column and no `geegle_game_saves_revision` trigger.
+- **`0003_entry_gate_pgcrypto.sql` is missing**:
+  `geegle_verify_entry_password` still has `search_path=public` while `pgcrypto`
+  is in `extensions`.
+- Migration history shows only three unrelated `*_preview` migrations.
+- **No automatic inactivity deletion**: `cron.job` does not exist (no pg_cron),
+  the only trigger on Geegle tables is `geegle_settings_touch`, and no function
+  performs date-based deletion. The 8-month deletion stays disabled.
+
+Isolated project `wkdlsaydqyymynoipmhl` ("geegle", separate from production):
+- Applied `0001`, `0002`, `0003` — clean; `revision` column and trigger present,
+  gate function now `search_path=pg_catalog, extensions`.
+- **New defect found and fixed:** `0001` never grants table privileges, so a
+  fresh project returns "permission denied for table …" before RLS runs. Added
+  `supabase/migrations/0004_api_grants.sql` (own-row DML for `authenticated`,
+  no client grants on the two gate tables) and applied it there.
+- Verified on that database: `geegle_verify_entry_password` returns
+  `{"valid":true}` for `pirate`, `{"valid":false}` for a wrong password, and
+  writes an attempt row; as role `authenticated` with a JWT `sub`, a user can
+  insert/update their own save, cannot see another user's rows, and an insert
+  carrying another user's `user_id` fails with `42501` (RLS). An update wrote
+  `revision=eb2db41b-…` and `save_data.score=99`, so the trigger works.
+- `tests/` cannot exercise this: the client-side suite is stubbed.
+
+**Blocker for end-to-end account testing:** the isolated project has email
+confirmations enabled and rejects/limits the synthetic addresses
+(`users.geegle.internal`): signup returns no session and would need mail the
+domain can never receive. Testing registration, password change, cross-device
+restore and account switching in the browser needs either "Confirm email"
+disabled in that project's Auth settings or admin-provisioned users. Not done
+here because it is a dashboard setting, not a code change.
+
+### 5. Catalog reconciliation (deterministic scripts)
+`node scripts/audit-catalog-paths.mjs` and `node scripts/audit-duplicates.mjs`:
+- HTML wrappers in `public/games`: **2856**.
+- Catalog rows / unique ids: **2621 / 2621** (no duplicate id rows).
+- Distinct launch paths: **2619**; existing local paths: **2610** (2609 distinct);
+  external: **6**.
+- Missing launch paths: **5** (`clkengriffeyjr`, `clu-can-t-believe`,
+  `clgdwaveover100mb`, `clprecisionclient`, `clundertale-gameboy-1`).
+- Unreferenced HTML wrappers: **248**.
+- Identical wrapper files by SHA-256: **9 groups**; same-path groups: **2**
+  (`clgranny`/`clgrannyy`, `clcolorboxmustard`/`colorbox-mustard`).
+  These were left in place: identical bytes do not prove the catalog entries are
+  meant to be one game, and the instruction is to remove only confirmed
+  duplicates.
+- Coverage table vs catalog: 2830 + 26 oversize + 63 cross-origin only describes
+  wrapper files, not catalog entries, which is why its totals differ from 2621.
+
+### 6. Artwork
+`scripts/artwork/captured.json` holds **73 authentic assets + 30 screenshots =
+103 records**, and every referenced file exists with non-zero size (110 files in
+`public/artwork`, 11 of them under 1 KB — small but valid 40–500 px thumbnails).
+Coverage is therefore 103/2621 catalog entries (~3.9%). The screenshot sweep was
+**not** resumed in this session: the browser used for capture wedged on a game
+loop and no further captures were taken. No artwork is claimed beyond these 103.
+
+### 7. Design report
+The published report was read in full. Code-level audit:
+- No purple/violet/indigo/fuchsia utilities, no sparkle icons or emoji in UI,
+  no gradient surfaces (`index.css` documents "no gradients, no neon glows";
+  the only gradients are the landing page's background-image scrims), only
+  `rounded-md`/`rounded-lg` plus intentional `rounded-full` pills, two
+  `backdrop-blur` uses.
+- Loading states exist in the player, account settings, YouTube, Everythingle and
+  the shell (`animate-spin`/`animate-pulse`).
+- Missing OG image fixed: added `public/og-image.jpg` and `og:image`,
+  `twitter:card`, `twitter:title`, `twitter:description`, `twitter:image` to
+  `index.html` (description, og:title/description and favicon already existed).
+- Not verified: visual layout at desktop/Chromebook/mobile widths, grid alignment
+  and hover behaviour, because the preview browser could not be driven.
+
+### 8. Integrations
+`src/data/external.ts` records Everythingle as a direct frame with the official
+destination and Krillion from the official embed guide
+(`https://krillion.cc/embed-guide/`); Krillion Backup keeps one stable id
+(`clkrillion-backup`) across Games and Apps, covered by
+`tests/catalog-audit.test.mjs`. Fullscreen controls exist in
+`EverythingleApp.tsx`. Browser-level verification of framing, retries and
+external fallback was **not** performed this session.
+
+### Checks run (this session, fresh)
+`npm run typecheck` 0 · `npm run lint` 0 · `npm run build` 0 (`dist/geegle-sw.js`
+present) · `bun test tests` 59 pass / 0 fail across 11 files.
