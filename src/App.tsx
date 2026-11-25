@@ -639,8 +639,10 @@ export default function App({ leaveRef }: { leaveRef?: React.MutableRefObject<((
         </div>
       )}
 
-      {settingsOpen && auth.user && (
+      {settingsOpen && auth.user && userId && (
         <AccountSettings
+          key={userId}
+          ownerId={userId}
           username={auth.username}
           onClose={() => setSettingsOpen(false)}
           onSignedOut={handleSignOut}
