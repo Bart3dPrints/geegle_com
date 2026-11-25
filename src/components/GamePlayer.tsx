@@ -21,7 +21,7 @@ import {
   ExternalLink,
 } from 'lucide-react';
 import type { GameEntry } from '../types';
-import { saveSupportFor } from '../lib/saveManifest';
+import { attemptsAutomaticSave, saveSupportFor, supportLabel } from '../lib/saveManifest';
 import {
   startCloudSync,
   type CloudSaveHandle,
@@ -137,7 +137,7 @@ export function GamePlayer({
       saveHandleRef.current = sync;
       // Buttons and status only appear when this game really is captured by
       // the shim; the session can exist for any /games/* path.
-      setSupported(sync.supported && (!entry || saveSupportFor(entry) === 'automatic'));
+      setSupported(sync.supported && (!entry || attemptsAutomaticSave(saveSupportFor(entry))));
       setIframePath(sync.launchPath);
       setSyncStatus(sync.getStatus());
       registerSaveHandle?.(sync);
@@ -152,7 +152,7 @@ export function GamePlayer({
       setRestoreReady(true);
     };
 
-    if (userId && navigator.locks && entry && saveSupportFor(entry) === 'automatic') {
+    if (userId && navigator.locks && entry && attemptsAutomaticSave(saveSupportFor(entry))) {
       void navigator.locks.request(
         `geegle-game:${gameId}:${userId}`,
         { signal: lockController.signal },
@@ -313,6 +313,21 @@ export function GamePlayer({
           Back
         </button>
         <h2 className="truncate text-sm font-medium text-slate-200">{title}</h2>
+
+        {/* Save support is stated at the strength the evidence supports: only
+            individually played games claim verification. */}
+        {entry && supported && (
+          <span
+            className="hidden shrink-0 rounded-full border border-slate-700 px-2 py-0.5 text-[11px] text-slate-400 lg:inline"
+            title={supportLabel(saveSupportFor(entry), entry)}
+          >
+            {saveSupportFor(entry) === 'verified'
+              ? 'Verified save'
+              : saveSupportFor(entry) === 'engine-compatible'
+                ? 'Engine save'
+                : 'Experimental save'}
+          </span>
+        )}
 
         <div className="hidden md:block">
           <StatusPill status={syncStatus} />
