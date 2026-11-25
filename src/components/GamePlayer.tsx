@@ -110,6 +110,7 @@ export function GamePlayer({
   const [restoreReady, setRestoreReady] = useState(!gameId);
   const [iframePath, setIframePath] = useState<string | null>(null);
   const [supported, setSupported] = useState(false);
+  const [offerImport, setOfferImport] = useState(false);
   const [busy, setBusy] = useState(false);
 
   useEffect(() => {
@@ -120,6 +121,7 @@ export function GamePlayer({
     let handle: CloudSaveHandle | undefined;
 
     setRestoreReady(false);
+    setOfferImport(false);
     setManualMsg(null);
     setSyncStatus('idle');
     setFrameBlocked(false);
@@ -137,7 +139,11 @@ export function GamePlayer({
       setSyncStatus(sync.getStatus());
       registerSaveHandle?.(sync);
       await sync.restored;
-      if (!cancelled) setRestoreReady(true);
+      if (!cancelled) {
+        const canImport = sync.canImportLegacy();
+        setOfferImport(canImport);
+        setRestoreReady(!canImport);
+      }
     };
 
     if (userId && navigator.locks && entry && saveSupportFor(entry) === 'automatic') {
@@ -240,6 +246,22 @@ export function GamePlayer({
     }
   };
 
+  const copyDeviceProgress = async () => {
+    const handle = saveHandleRef.current;
+    if (!handle || busy || !window.confirm('Copy this browser’s unassigned progress to this account? Only continue if it is your progress. The original device save will stay unchanged.')) return;
+    setBusy(true);
+    try {
+      const result = await handle.importLegacy();
+      setManualMsg(result.ok ? 'Device progress copied. The original is unchanged.' : result.error ?? 'Nothing was copied.');
+      if (result.ok) {
+        setOfferImport(false);
+        setRestoreReady(true);
+      }
+    } finally {
+      setBusy(false);
+    }
+  };
+
   const exit = async () => {
     if (busy) return;
     const handle = saveHandleRef.current;
@@ -288,7 +310,7 @@ export function GamePlayer({
           </button>
         )}
 
-        {supported && (
+        {supported && !offerImport && (
           <>
             <button
               className={btn}
@@ -331,6 +353,14 @@ export function GamePlayer({
           <Maximize2 size={16} />
         </button>
       </div>
+
+      {offerImport && (
+        <div className="p-4 text-white">
+          <p>This browser has older progress that is not linked to an account.</p>
+          <button className={btn} disabled={busy} onClick={() => void copyDeviceProgress()}>Copy progress to this account</button>
+          <button className={btn} disabled={busy} onClick={() => { setOfferImport(false); setRestoreReady(true); }}>Play without copying</button>
+        </div>
+      )}
 
       {(manualMsg || restoreError) && (
         <div

@@ -11,6 +11,8 @@ export interface CloudSaveHandle {
   saveNow(): Promise<SaveResult>;
   restore(): Promise<RestoreResult>;
   keepLocal(): Promise<SaveResult>;
+  importLegacy(): Promise<SaveResult>;
+  canImportLegacy(): boolean;
   getStatus(): SyncStatus;
   launchPath: string;
   supported: boolean;
@@ -29,17 +31,51 @@ const conflictMessage = 'Cloud progress changed on another device. Choose Restor
 const success = { ok: true };
 const describe = (error: unknown) => error instanceof Error ? error.message : 'Cloud sync failed.';
 
-function saveRemote(userId: string, gameId: string): SaveRemote {
+const missingRevision = (error: { code?: string; message: string }) =>
+  (error.code === '42703' || error.code === 'PGRST204') && /\brevision\b/i.test(error.message);
+const legacyPrefix = 'legacy:';
+
+export function saveRemote(userId: string, gameId: string): SaveRemote {
   const identity = { user_id: userId, game_id: gameId, save_key: 'default' };
+  let legacy = false;
+  const fromLegacy = async (row: { updated_at: string; save_data: unknown } | null) => {
+    if (!row) return null;
+    const bytes = new TextEncoder().encode(JSON.stringify(row.save_data));
+    const digest = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes)))
+      .map((byte) => byte.toString(16).padStart(2, '0')).join('');
+    return { revision: `${legacyPrefix}${row.updated_at}|${digest}`, save_data: row.save_data };
+  };
+  const readLegacy = async () => {
+    const { data, error } = await supabase.from(T.saves).select('updated_at,save_data').match(identity)
+      .abortSignal(AbortSignal.timeout(10_000)).maybeSingle();
+    if (error) throw new Error(error.message);
+    return fromLegacy(data);
+  };
   return {
     async read() {
-      const { data, error } = await supabase.from(T.saves).select('revision,save_data').match(identity)
-        .abortSignal(AbortSignal.timeout(10_000)).maybeSingle();
-      if (error) throw new Error(error.message);
-      return data;
+      if (!legacy) {
+        const { data, error } = await supabase.from(T.saves).select('revision,save_data').match(identity)
+          .abortSignal(AbortSignal.timeout(10_000)).maybeSingle();
+        if (!error) return data;
+        if (!missingRevision(error)) throw new Error(error.message);
+        legacy = true;
+      }
+      return readLegacy();
     },
     async write(save_data, revision) {
       const table = supabase.from(T.saves);
+      if (legacy) {
+        const oldTimestamp = revision?.slice(legacyPrefix.length).split('|')[0];
+        const updated_at = new Date(Math.max(Date.now(), oldTimestamp ? Date.parse(oldTimestamp) + 1 : 0)).toISOString();
+        if (revision !== null && (await readLegacy())?.revision !== revision) return null;
+        const query = revision === null
+          ? table.insert({ ...identity, save_data, updated_at })
+          : table.update({ save_data, updated_at }).match({ ...identity, updated_at: oldTimestamp });
+        const { data, error } = await query.select('updated_at,save_data').abortSignal(AbortSignal.timeout(10_000)).maybeSingle();
+        if (error?.code === '23505' && revision === null) return null;
+        if (error) throw new Error(error.message);
+        return (await fromLegacy(data))?.revision ?? null;
+      }
       const query = revision === null
         ? table.insert({ ...identity, save_data })
         : table.update({ save_data }).match({ ...identity, revision });
@@ -240,13 +276,32 @@ export function createSaveSession(
     }
   });
 
+  const importLegacy = (): Promise<SaveResult> => schedule(async () => {
+    if (disposed || !canUpload || revision !== null || base !== null) {
+      return { ok: false, error: 'Device progress can only be copied to an account with no cloud save.' };
+    }
+    try {
+      const latest = await read();
+      if (latest.revision !== null) return conflict(latest.revision);
+      const legacy = adapter.captureLegacy();
+      if (!legacy) return { ok: false, error: 'No older device progress found.' };
+      if (adapter.capture(userId)) return { ok: false, error: 'This account already has progress on this device. Nothing was copied.' };
+      adapter.restore(userId, legacy);
+      return success;
+    } catch (error) {
+      return fail(error);
+    }
+  });
+
   const dispose = () => {
     disposed = true;
     clearInterval(timer);
     return queue.then(() => undefined);
   };
 
-  return { restored, close, saveNow, restore, keepLocal, getStatus: () => status, launchPath: adapter.launchPath(userId), supported: true, dispose };
+  return { restored, close, saveNow, restore, keepLocal, importLegacy, canImportLegacy: () => {
+    try { return canUpload && revision === null && base === null && !adapter.capture(userId) && !!adapter.captureLegacy(); } catch { return false; }
+  }, getStatus: () => status, launchPath: adapter.launchPath(userId), supported: true, dispose };
 }
 
 export function startCloudSync(gameId: string, launchPath: string, userId: string | null, onStatus?: (s: SyncStatus) => void): CloudSaveHandle {
@@ -258,6 +313,7 @@ export function startCloudSync(gameId: string, launchPath: string, userId: strin
   return {
     restored: Promise.resolve(), close: async () => success, saveNow: async () => result,
     restore: async () => ({ ...result, restored: false }), keepLocal: async () => result,
+    importLegacy: async () => result, canImportLegacy: () => false,
     getStatus: () => userId ? 'unsupported' : 'idle', launchPath, supported: false, dispose: async () => {},
   };
 }

@@ -25,6 +25,13 @@ export function adapterFor(gameId: string, path: string) {
       }
       return Object.keys(values).length ? { format: 'geegle-local-v1', localStorage: values } : null;
     },
+    captureLegacy(): SaveSnapshot | null {
+      const values = Object.fromEntries(game.keys.flatMap((key) => {
+        const value = localStorage.getItem(key);
+        return value === null ? [] : [[key, value]];
+      }));
+      return Object.keys(values).length ? { format: 'geegle-local-v1', localStorage: values } : null;
+    },
     validate(snapshot: unknown): SaveSnapshot {
       if (!snapshot || typeof snapshot !== 'object') throw new Error('Invalid cloud save.');
       const { format, localStorage: values } = snapshot as { format: unknown; localStorage: unknown };
@@ -58,4 +65,14 @@ export function adapterFor(gameId: string, path: string) {
       }
     },
   };
+}
+
+export function readKnownDeviceSaves(userId: string) {
+  return games.flatMap(({ id, path }) => {
+    const adapter = adapterFor(id, path);
+    if (!adapter) return [];
+    const unassigned = adapter.captureLegacy();
+    const account = adapter.capture(userId);
+    return unassigned || account ? [{ gameId: id, unassigned, account }] : [];
+  });
 }
