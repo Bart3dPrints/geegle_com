@@ -113,7 +113,7 @@ export async function trackPlay(
   }
 
   const upsert = await supabase
-       .from(T.recent)
+    .from(T.recent)
     .upsert(
       { user_id: userId, game_id: gameId, played_at: new Date().toISOString() },
       { onConflict: 'user_id,game_id' }
@@ -226,7 +226,7 @@ export async function saveServerDefault(
   settings.defaultServers = servers;
 
   const upsert = await supabase
-n    .from(T.settings)
+    .from(T.settings)
     .upsert({ id: userId, settings })
     .eq('id', userId);
   if (upsert.error) return { ok: false, error: upsert.error.message };
