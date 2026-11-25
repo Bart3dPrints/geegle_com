@@ -9,8 +9,8 @@ import {
   RotateCcw,
   Maximize2,
   Loader2,
-  CloudUpload,
-  CloudDownload,
+  UploadCloud,
+  DownloadCloud,
   AlertTriangle,
   Check,
   WifiOff,
@@ -246,7 +246,7 @@ export function GamePlayer({
               aria-label="Save progress to cloud"
               title="Save to Cloud"
             >
-              <CloudUpload size={16} />
+              <UploadCloud size={16} />
             </button>
             <button
               className={btn}
@@ -254,7 +254,7 @@ export function GamePlayer({
               aria-label="Restore progress from cloud"
               title="Restore from Cloud"
             >
-              <CloudDownload size={16} />
+              <DownloadCloud size={16} />
             </button>
           </>
         )}

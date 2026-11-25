@@ -20,3 +20,8 @@ export interface OpResult<T> {
   data?: T;
   error?: string;
 }
+
+export interface SessionUser {
+  id: string;
+  username: string;
+}
