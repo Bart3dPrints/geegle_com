@@ -74,6 +74,7 @@ export function GamePlayer({
   onExit,
   onToggleFavorite,
   isFavorite,
+  registerSaveHandle,
 }: {
   entry: GameEntry | null;
   proxy: { url: string; title: string } | null;
@@ -81,6 +82,8 @@ export function GamePlayer({
   onExit: () => void;
   onToggleFavorite: () => void;
   isFavorite: boolean;
+  /** Lets the app await the final save before logout (no timing guesses). */
+  registerSaveHandle?: (handle: CloudSaveHandle | null) => void;
 }) {
   const frameRef = useRef<HTMLIFrameElement>(null);
   const [loaded, setLoaded] = useState(false);
@@ -116,6 +119,7 @@ export function GamePlayer({
       }
     );
     saveHandleRef.current = handle;
+    registerSaveHandle?.(handle);
 
     void (async () => {
       try {
@@ -138,6 +142,7 @@ export function GamePlayer({
       // close() performs the final save BEFORE disposing — reliable save-on-exit.
       void handle.close();
       saveHandleRef.current = null;
+      registerSaveHandle?.(null);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gameId, userId]);
