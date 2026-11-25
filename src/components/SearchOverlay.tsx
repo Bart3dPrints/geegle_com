@@ -1,17 +1,23 @@
-// Focused search overlay: blurred backdrop, category chips, live fuzzy
-// results with thumbnails, full keyboard navigation.
+// Focused search overlay: blurred backdrop, category chips under the input,
+// live fuzzy results with thumbnails, full keyboard navigation.
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Search, X } from 'lucide-react';
 import type { GameEntry } from '../types';
-import { CATEGORIES } from '../data/catalog';
-import { searchCatalog, noResultsSuggestions } from '../lib/search';
+import { CATEGORIES } from '../data/types';
+import {
+  buildSearchIndex,
+  searchIndex,
+  type IndexedEntry,
+} from '../lib/search';
 import { TileThumb } from './TileThumb';
 
 export function SearchOverlay({
+  entries,
   onClose,
   onLaunch,
 }: {
+  entries: GameEntry[];
   onClose: () => void;
   onLaunch: (game: GameEntry) => void;
 }) {
@@ -19,8 +25,15 @@ export function SearchOverlay({
   const [activeIndex, setActiveIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const results = searchCatalog(query);
-  const suggestions = query ? [] : noResultsSuggestions();
+  // Index once per overlay open, not per keystroke.
+  const index = useMemo(() => buildSearchIndex(entries), [entries]);
+  const results = useMemo(
+    () => (query.trim() ? searchIndex(index, query) : []),
+    [index, query]
+  );
+
+  // No query: suggest a few popular titles.
+  const suggestions = useMemo(() => entries.slice(0, 6), [entries]);
   const items = results.length > 0 ? results.map((r) => r.entry) : suggestions;
 
   useEffect(() => {
@@ -77,6 +90,15 @@ export function SearchOverlay({
             onKeyDown={handleKeydown}
             aria-label="Search query"
           />
+          {query && (
+            <button
+              className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
+              onClick={() => setQuery('')}
+              aria-label="Clear search"
+            >
+              <X size={16} />
+            </button>
+          )}
           <button
             className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
             onClick={onClose}
@@ -87,19 +109,22 @@ export function SearchOverlay({
         </div>
 
         <div className="flex flex-wrap gap-2 border-b border-slate-200 px-4 py-3 dark:border-slate-800">
-          {CATEGORIES.filter((c) => c.key !== 'all')
-            .slice(0, 10)
-            .map((c) => (
-              <button key={c.key} className="chip" onClick={() => setQuery(c.label)}>
-                {c.label}
-              </button>
-            ))}
+          {CATEGORIES.slice(0, 10).map((c) => (
+            <button
+n              key={c.key}
+              className="chip"
+              onClick={() => setQuery(c.label.toLowerCase())}
+            >
+              {c.label}
+            </button>
+          ))}
         </div>
 
         <div className="max-h-80 overflow-y-auto p-2">
           {query && results.length === 0 && (
             <div className="p-6 text-center text-sm text-slate-500 dark:text-slate-400">
-              No results for &quot;{query}&quot;. Try a category name, or check the spelling.
+              No results for &quot;{query}&quot;. Try a category name, or check
+              the spelling.
             </div>
           )}
           {!query && (
@@ -121,11 +146,14 @@ export function SearchOverlay({
                 onClose();
               }}
             >
-              <TileThumb game={g} />
+              <TileThumb
+                game={g}
+                className="h-10 w-16 shrink-0 rounded-md text-sm font-bold"
+              />
               <span className="min-w-0 flex-1">
                 <span className="block truncate text-sm font-medium">{g.title}</span>
                 <span className="block truncate text-xs text-slate-500 dark:text-slate-400">
-                  {g.categories.filter((c) => c !== 'all').join(', ') || 'App'}
+                  {g.categories.join(', ') || 'App'}
                 </span>
               </span>
             </button>
@@ -135,3 +163,5 @@ export function SearchOverlay({
     </div>
   );
 }
+
+export type { IndexedEntry };
