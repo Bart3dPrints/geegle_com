@@ -1,0 +1,34 @@
+clucds|UCDS|action
+cluckyblockobbyeuophratesriver|Lucky Block Obby: Euphrates River|platformer
+clufoswampoddysey|UFO Swamp Odyssey|adventure
+clultima|Ultima|adventure
+clultimateassassian2|Ultimate Assassin 2|action
+clultimateassassian3|Ultimate Assassin 3|action
+clultimatecardrivingsimulator|Ultimate Car Driving Simulator|racing
+clultimatemortalkombat|Ultimate Mortal Kombat|action
+clultimatemortalkombat3|Ultimate Mortal Kombat 3|action
+clultrakill|ULTRAKILL|action
+clumjammerlammy|Um Jammer Lammy|rhythm
+unownking|Unown King|puzzle
+cluncannycatgolf|Uncanny Cat Golf|sports
+clundertalelb|Undertale LB|adventure
+clundertaler|Undertale R|adventure
+clundertaleyellow|Undertale Yellow|adventure
+clunderneath|Underneath|adventure
+clundertale-gameboy-1|Undertale (Gameboy)|adventure
+clunfairmario|Unfair Mario|platformer
+clunfairmarioworkquestionmark|Unfair Mario Work|platformer
+clunfairundyne|Unfair Undyne|action
+clunicyclehero|Unicycle Hero|sports
+clunitresdreams|Unitres Dreams|action
+cluno|UNO|casual
+clunonomercy|UNO No Mercy|casual
+cluntime|Untime|puzzle
+cluntitledgoosegame|Untitled Goose Game|simulation
+clupgradecomplete|Upgrade Complete|simulation
+clupgradecomplete2|Upgrade Complete 2|simulation
+clupslash|Upslash|platformer
+clurbanchampion|Urban Champion|action
+clusterrush|Cluster Rush|platformer
+cluwuclient|Uwu Client|simulation
+cluzg|UZG|puzzle
