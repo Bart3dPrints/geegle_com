@@ -20,13 +20,14 @@ import {
 } from 'lucide-react';
 import type { GameEntry, ThemePreference } from './types';
 import { legacyCatalog } from './data/catalog';
+import { canonicalGameId, distinctGameEntries, KRILLION_BACKUP_ID } from './data/gameIds';
 import { CATEGORIES } from './data/types';
 import { PROXY_SERVICES, proxyUrl } from './data/proxies';
 import { DUAL_SECTION_ENTRIES, EVERYTHINGLE } from './data/external';
 import { isEntryUnlocked, verifyEntryPassword } from './lib/entryGate';
 import { useAuth } from './hooks/useAuth';
 import {
-  toggleFavorite,
+  setFavorite,
   loadFavorites,
   trackPlay,
   loadRecent,
@@ -85,7 +86,7 @@ const APPS: GameEntry[] = [
 // Apps grid shows APPS plus dual-section entries (Krillion backup appears in
 // BOTH Games and Apps from one stable ID, so favorites/history stay unified).
 const APPS_GRID = [...APPS, ...DUAL_SECTION_ENTRIES];
-const SEARCHABLE = [...legacyCatalog, ...APPS_GRID];
+const SEARCHABLE = distinctGameEntries([...legacyCatalog, ...APPS_GRID]);
 
 type Tab = 'games' | 'apps' | 'proxies';
 
@@ -233,7 +234,8 @@ export default function App() {
   };
 
   const toggleFav = async (gameId: string) => {
-    const res = await toggleFavorite(gameId, userId);
+    const id = canonicalGameId(gameId);
+    const res = await setFavorite(id, userId, !favorites.includes(id));
     if (res.ok && res.data) {
       setFavorites(res.data);
       setSyncError(null);
@@ -258,7 +260,7 @@ export default function App() {
   );
 
   const byId = useCallback(
-    (id: string) => SEARCHABLE.find((g) => g.id === id),
+    (id: string) => SEARCHABLE.find((g) => g.id === canonicalGameId(id)),
     []
   );
 
@@ -680,7 +682,13 @@ export default function App() {
             <h2 className="mb-4">Apps</h2>
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
               {APPS_GRID.map((g) => (
-                <GameCard key={g.id} game={g} onLaunch={() => launch(g)} />
+                <GameCard
+                  key={g.id}
+                  game={g}
+                  onLaunch={() => launch(g)}
+                  isFavorite={favorites.includes(g.id)}
+                  onToggleFavorite={g.id === KRILLION_BACKUP_ID ? () => toggleFav(g.id) : undefined}
+                />
               ))}
             </div>
             {active && active.path.startsWith('http') && (
