@@ -1,8 +1,8 @@
-// Geegle application shell — the redesigned main interface.
-// Entry gate → header (brand, nav, search, theme, account) → browse tabs →
-// game player overlay with active cloud saves.
+// Geegle application shell.
+// Entry gate → header → browse tabs → game player with active cloud saves.
+// Logout awaits the running game's real final save before ending the session.
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   Search,
   User as UserIcon,
@@ -37,8 +37,8 @@ import { GamePlayer } from './components/GamePlayer';
 import { ProxyCard } from './components/ProxyCard';
 import { YouTubeApp } from './components/YouTubeApp';
 import { AccountSettings } from './components/AccountSettings';
+import type { CloudSaveHandle } from './lib/cloudSaves';
 
-// Apps curated separately from the legacy game catalog.
 const APPS: GameEntry[] = [
   {
     id: 'youtube',
@@ -139,6 +139,9 @@ export default function App() {
     title: string;
   } | null>(null);
 
+  // The running game's save handle — logout awaits its real final save.
+  const saveHandleRef = useRef<CloudSaveHandle | null>(null);
+
   useEffect(() => {
     if (auth.loading) return;
     (async () => {
@@ -179,13 +182,17 @@ export default function App() {
     }
   };
 
-  // Save-before-logout: closing the running game triggers GamePlayer's
-  // unmount save; then the session ends.
+  // Save-before-logout: unmounting the player calls close() which performs
+  // the final save; then we AWAIT the same handle to guarantee the upload
+  // completed before the session actually ends. No timing guesses.
   const handleSignOut = async () => {
     setActive(null);
     setActiveProxy(null);
-    // Give the player's save-on-exit a moment to complete before sign-out.
-    await new Promise((resolve) => setTimeout(resolve, 300));
+    const handle = saveHandleRef.current;
+    if (handle) {
+      await handle.close(); // real final save, awaited
+      saveHandleRef.current = null;
+    }
     await auth.signOut();
   };
 
@@ -429,7 +436,6 @@ export default function App() {
           )}
         </div>
 
-        {/* Mobile row: theme toggle is always reachable (incl. Chromebooks) */}
         <div className="flex items-center justify-between border-t border-slate-200 px-4 py-1.5 dark:border-slate-800 sm:hidden">
           <div
             className="flex items-center gap-1 rounded-lg border border-slate-200 p-1 dark:border-slate-700"
@@ -550,11 +556,7 @@ export default function App() {
         <AccountSettings
           username={auth.username}
           onClose={() => setSettingsOpen(false)}
-          onSignedOut={async () => {
-            setSettingsOpen(false);
-            setActive(null);
-            await auth.signOut();
-          }}
+          onSignedOut={handleSignOut}
         />
       )}
 
@@ -579,6 +581,9 @@ export default function App() {
           }}
           onToggleFavorite={() => active && toggleFav(active.id)}
           isFavorite={active ? favorites.includes(active.id) : false}
+          registerSaveHandle={(handle) => {
+            saveHandleRef.current = handle;
+          }}
         />
       )}
 
@@ -602,7 +607,7 @@ export default function App() {
             )}
 
             <section>
-              <div className="mb-4 flex items-center justify-between">
+                           <div className="mb-4 flex items-center justify-between">
                 <h2>All Games</h2>
                 <span className="text-sm text-slate-500">
                   {visibleGames.length} games
@@ -693,7 +698,7 @@ export default function App() {
       </main>
 
       <footer className="border-t border-slate-200 py-8 text-center text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400">
-        Geegle — free web games. Build: overhaul-2026-11-25.3
+        Geegle — free web games. Build: overhaul-2026-11-25.4
       </footer>
     </div>
   );
