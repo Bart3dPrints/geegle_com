@@ -5,7 +5,7 @@
 // launches its dedicated app with connection-method and server selection.
 
 import { flushSync } from 'react-dom';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import {
   Search,
   User as UserIcon,
@@ -117,7 +117,7 @@ function useTheme() {
   return { theme, setTheme };
 }
 
-export default function App() {
+export default function App({ leaveRef }: { leaveRef?: React.MutableRefObject<(() => Promise<boolean>) | null> }) {
   const [gateOpen, setGateOpen] = useState(!isEntryUnlocked());
   const [gateInput, setGateInput] = useState('');
   const [gateError, setGateError] = useState<string | null>(null);
@@ -188,6 +188,18 @@ export default function App() {
       transitionRef.current = false;
     }
   }, []);
+
+  useLayoutEffect(() => {
+    if (!leaveRef) return;
+    leaveRef.current = async () => {
+      if (!await closeGame()) return false;
+      // A history reversal may keep this app mounted after the handle is closed.
+      setActive(null);
+      setActiveProxy(null);
+      return true;
+    };
+    return () => { leaveRef.current = null; };
+  }, [closeGame, leaveRef]);
 
   const handleAuth = async (mode: 'login' | 'register') => {
     if (!await closeGame()) return;
