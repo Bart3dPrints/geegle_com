@@ -1,5 +1,7 @@
-// Central catalog types. Single source of truth shared by every card grid,
-// the fuzzy-search index, and the category filter.
+/**
+ * Central catalog types. Single source of truth shared by every card grid,
+ * the fuzzy-search index, and the category filter.
+ */
 
 export type Category =
   | 'action'
@@ -19,7 +21,9 @@ export type Category =
   | 'rhythm'
   | 'shooting'
   | 'fighting'
-  | 'idle';
+  | 'idle'
+  | 'rpg'
+  | 'party';
 
 export type EntryKind = 'game' | 'app' | 'proxy' | 'stream';
 
@@ -68,4 +72,5 @@ export const CATEGORIES: CategoryDef[] = [
   { key: 'shooting', label: 'Shooting' },
   { key: 'fighting', label: 'Fighting' },
   { key: 'idle', label: 'Idle' },
+  { key: 'rpg', label: 'RPG' },
 ];
