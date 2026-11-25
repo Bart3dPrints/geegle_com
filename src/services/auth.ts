@@ -1,3 +1,7 @@
+// Username/password account service backed by Supabase Auth.
+// Usernames are unique (synthetic email collision = rejection at the server).
+// Sessions persist across reloads via Supabase's localStorage session store.
+
 import { supabase, isSupabaseConfigured, usernameToEmail } from '../lib/supabase';
 import type { Session, User } from '@supabase/supabase-js';
 
@@ -8,12 +12,11 @@ export interface AuthResult {
   session?: Session;
 }
 
-/**
- * Client-side validation (mirrors server constraints):
- * username: 3-32 chars, letters/digits/underscore/hyphen only.
- * password: minimum 8 characters.
- */
-export function validateCredentials(username: string, password: string): string | null {
+/** Client-side validation mirroring the server constraints. */
+export function validateCredentials(
+  username: string,
+  password: string
+): string | null {
   if (!/^[a-z0-9_-]{3,32}$/i.test(username.trim())) {
     return 'Username must be 3-32 characters (letters, numbers, underscore, hyphen).';
   }
@@ -26,19 +29,48 @@ export function validateCredentials(username: string, password: string): string 
   return null;
 }
 
-export async function register(username: string, password: string): Promise<AuthResult> {
+/**
+ * Friendly, non-revealing error messages. Login failures never say whether
+ * a username exists (anti-enumeration).
+ */
+function friendlyAuthError(raw: string): string {
+  const msg = raw.toLowerCase();
+  if (
+    msg.includes('invalid login credentials') ||
+    msg.includes('invalid email or password')
+  ) {
+    return 'Invalid username or password.';
+  }
+  if (msg.includes('rate limit') || msg.includes('too many requests')) {
+    return 'Too many attempts. Please wait a minute and try again.';
+  }
+  if (msg.includes('password should be')) {
+    return 'Password must be at least 8 characters.';
+  }
+  if (msg.includes('already registered') || msg.includes('already exists')) {
+    return 'That username is already taken.';
+  }
+  if (msg.includes('failed to fetch') || msg.includes('network')) {
+    return 'Could not reach the account service. Check your connection.';
+  }
+  return 'Something went wrong. Please try again.';
+}
+
+export async function register(
+  username: string,
+  password: string
+): Promise<AuthResult> {
   const problem = validateCredentials(username, password);
   if (problem) return { ok: false, error: problem };
-
   if (!isSupabaseConfigured) {
-    return { ok: false, error: 'Account system is not configured on this deployment.' };
+    return {
+      ok: false,
+      error: 'Accounts are not configured on this deployment.',
+    };
   }
 
   const email = usernameToEmail(username);
-  const { data, error } = await supabase.auth.signUp({
-    email,
-    password,
-  });
+  const { data, error } = await supabase.auth.signUp({ email, password });
 
   if (error) {
     if (
@@ -50,15 +82,27 @@ export async function register(username: string, password: string): Promise<Auth
     return { ok: false, error: friendlyAuthError(error.message) };
   }
 
-  return { ok: true, user: data.user ?? undefined, session: data.session ?? undefined };
+  return {
+    ok: true,
+    user: data.user ?? undefined,
+    session: data.session ?? undefined,
+  };
 }
 
-export async function login(username: string, password: string): Promise<AuthResult> {
+export async function login(
+  username: string,
+  password: string
+): Promise<AuthResult> {
+  const problem = validateCredentials(username, password);
+  if (problem) return { ok: false, error: problem };
   if (!isSupabaseConfigured) {
-    return { ok: false, error: 'Account system is not configured on this deployment.' };
+    return {
+      ok: false,
+      error: 'Accounts are not configured on this deployment.',
+    };
   }
 
-  const email = usernameToEmail(username.trim().toLowerCase());
+  const email = usernameToEmail(username);
   const { data, error } = await supabase.auth.signInWithPassword({
     email,
     password,
@@ -68,31 +112,17 @@ export async function login(username: string, password: string): Promise<AuthRes
     return { ok: false, error: friendlyAuthError(error.message) };
   }
 
-  return { ok: true, user: data.user ?? undefined, session: data.session ?? undefined };
+  return {
+    ok: true,
+    user: data.user ?? undefined,
+    session: data.session ?? undefined,
+  };
 }
 
 export async function logout(): Promise<void> {
   if (!isSupabaseConfigured) return;
-  await supabase.auth.signOut();
-}
-
-/**
- * Friendly, non-revealing error messages. We never say whether a username
- * exists (anti-enumeration) — login failures are always "invalid credentials".
- */
-function friendlyAuthError(raw: string): string {
-  const msg = raw.toLowerCase();
-  if (msg.includes('invalid login credentials') || msg.includes('invalid email or password')) {
-    return 'Invalid username or password.';
+  const { error } = await supabase.auth.signOut();
+  if (error) {
+    console.error('[geegle] sign-out failed:', error.message);
   }
-  if (msg.includes('rate limit') || msg.includes('too many requests')) {
-    return 'Too many attempts. Please wait a minute and try again.';
-  }
-  if (msg.includes('password should be')) {
-    return 'Password must be at least 8 characters.';
-  }
-  if (msg.includes('already registered')) {
-    return 'That username is already taken.';
-  }
-  return 'Something went wrong. Please try again.';
 }
