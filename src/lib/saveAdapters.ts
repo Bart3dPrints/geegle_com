@@ -2,12 +2,19 @@
 //
 // Two families exist:
 //  1. Explicit adapters for games that already write account-namespaced keys.
-//  2. A generic adapter for every other local HTML5 game. game wrappers load
-//     /games/geegle-storage-shim.js, which namespaces localStorage per account,
-//     so a generic capture is simply every key under this game/account prefix.
-// IndexedDB cannot be namespaced per account, so generic saves also carry
-// full-fidelity database dumps and swap them on restore.
+//  2. A generic adapter for every shimmed local HTML5 game. The wrapper loads
+//     /games/geegle-storage-shim.js, which namespaces localStorage,
+//     sessionStorage and IndexedDB per (game, account). Capture therefore reads
+//     exactly one account's data and nothing else.
+//
+// IndexedDB identity is explicit, not inferred: the shim prefixes every
+// database name with `geegle-game:<gameId>:<userId>:`, so ownership is a name
+// check. Nothing is guessed from "databases created while the game ran", which
+// broke down with concurrent games and shared database names. Because the
+// prefix contains the account, two accounts can never see each other's
+// databases and isolation never depends on a delete succeeding.
 import {
+  deleteDatabase,
   dumpDatabase,
   isSerializedDatabase,
   listDatabases,
@@ -16,24 +23,27 @@ import {
 } from './storageSnapshot';
 
 export interface SaveSnapshot {
-  format: 'geegle-local-v1' | 'geegle-storage-v2';
+  format: 'geegle-local-v1' | 'geegle-storage-v3';
+  gameId: string;
   localStorage: Record<string, string>;
-  indexedDB?: SerializedDatabase[];
+  indexedDB: SerializedDatabase[];
 }
 
 export interface SaveAdapter {
   launchPath(userId: string | null): string;
   capture(userId: string): Promise<SaveSnapshot | null>;
-  validate(snapshot: unknown): SaveSnapshot;
+  /** Validate a stored save against this game and account. Throws on mismatch. */
+  validate(snapshot: unknown, userId: string): SaveSnapshot;
   restore(userId: string, snapshot: SaveSnapshot): Promise<void>;
   /**
-   * Called before launch when this account has no cloud save yet. Shared
-   * IndexedDB data left by a different account is cleared so progress is
-   * never shown to, or uploaded by, the wrong account.
+   * Called before launch. With per-account database names there is nothing to
+   * delete to keep accounts apart, so isolation is structural; this hook only
+   * verifies the namespace contract and reports a failure instead of swallowing
+   * it.
    */
   isolate(userId: string): Promise<void>;
-  /** IndexedDB databases this game has been observed writing. */
-  databases(): string[];
+  /** IndexedDB databases this account has stored for this game. */
+  databases(userId: string): Promise<string[]>;
 }
 
 const games = [
@@ -43,52 +53,32 @@ const games = [
 ] as const;
 
 const MAX_KEY_LENGTH = 400;
-const DB_INDEX = (gameId: string) => `geegle-idb:${gameId}`;
-const DB_OWNER = (gameId: string) => `geegle-idb-owner:${gameId}`;
-const DB_OWNERS = 'geegle-idb-owners';
+const MAX_VALUE_BYTES = 512 * 1024;
+const MAX_DATABASES = 24;
+const MAX_STORES = 64;
+const MAX_RECORDS = 50_000;
 
-function readJson(raw: string | null): unknown {
-  try { return raw ? JSON.parse(raw) : null; } catch { return null; }
-}
+/** Thrown when account storage cannot be isolated; the game must not open. */
+export class IsolationError extends Error {}
 
-function readDbNames(gameId: string): string[] {
-  const value = readJson(localStorage.getItem(DB_INDEX(gameId)));
-  return Array.isArray(value) ? value.filter((name): name is string => typeof name === 'string') : [];
-}
-
-function writeDbNames(gameId: string, names: string[]): void {
-  try { localStorage.setItem(DB_INDEX(gameId), JSON.stringify([...new Set(names)])); } catch { /* quota */ }
-}
-
-function readOwners(): Record<string, string> {
-  const value = readJson(localStorage.getItem(DB_OWNERS));
-  return value && typeof value === 'object' && !Array.isArray(value) ? value as Record<string, string> : {};
-}
-
-function claimDatabases(gameId: string, names: string[]): string[] {
-  const owners = readOwners();
-  const claimed = readDbNames(gameId);
-  for (const name of names) {
-    const owner = owners[name];
-    if (owner && owner !== gameId) continue;
-    owners[name] = gameId;
-    if (!claimed.includes(name)) claimed.push(name);
-  }
-  writeDbNames(gameId, claimed);
-  try { localStorage.setItem(DB_OWNERS, JSON.stringify(owners)); } catch { /* quota */ }
-  return claimed;
-}
-
-function scopedPrefix(gameId: string, userId: string): string {
+export function storagePrefix(gameId: string, userId: string): string {
   return `geegle-game:${gameId}:${userId}:`;
 }
 
-function readScoped(gameId: string, userId: string): Record<string, string> {
-  const prefix = scopedPrefix(gameId, userId);
-  const values: Record<string, string> = {};
+function scopedKeys(gameId: string, userId: string): string[] {
+  const prefix = storagePrefix(gameId, userId);
+  const keys: string[] = [];
   for (let index = 0; index < localStorage.length; index += 1) {
     const key = localStorage.key(index);
-    if (!key || !key.startsWith(prefix)) continue;
+    if (key && key.startsWith(prefix)) keys.push(key);
+  }
+  return keys;
+}
+
+function readScoped(gameId: string, userId: string): Record<string, string> {
+  const prefix = storagePrefix(gameId, userId);
+  const values: Record<string, string> = {};
+  for (const key of scopedKeys(gameId, userId)) {
     const value = localStorage.getItem(key);
     if (value !== null) values[key.slice(prefix.length)] = value;
   }
@@ -96,71 +86,97 @@ function readScoped(gameId: string, userId: string): Record<string, string> {
 }
 
 function writeScoped(gameId: string, userId: string, values: Record<string, string>): void {
-  const prefix = scopedPrefix(gameId, userId);
+  const prefix = storagePrefix(gameId, userId);
   for (const [key, value] of Object.entries(values)) localStorage.setItem(prefix + key, value);
 }
 
 function removeScopedExcept(gameId: string, userId: string, keep: Record<string, string>): void {
-  const prefix = scopedPrefix(gameId, userId);
-  const stale: string[] = [];
-  for (let index = 0; index < localStorage.length; index += 1) {
-    const key = localStorage.key(index);
-    if (!key || !key.startsWith(prefix)) continue;
-    if (!Object.prototype.hasOwnProperty.call(keep, key.slice(prefix.length))) stale.push(key);
+  const prefix = storagePrefix(gameId, userId);
+  for (const key of scopedKeys(gameId, userId)) {
+    if (!Object.prototype.hasOwnProperty.call(keep, key.slice(prefix.length))) localStorage.removeItem(key);
   }
-  for (const key of stale) localStorage.removeItem(key);
 }
 
 export function validSavePayload(values: unknown): values is Record<string, string> {
   if (!values || typeof values !== 'object' || Array.isArray(values)) return false;
   return Object.entries(values as Record<string, unknown>).every(([key, value]) =>
-    typeof value === 'string' && key.length > 0 && key.length <= MAX_KEY_LENGTH);
+    typeof value === 'string' && key.length > 0 && key.length <= MAX_KEY_LENGTH
+    && value.length <= MAX_VALUE_BYTES
+    && key !== '__proto__' && key !== 'constructor' && key !== 'prototype');
 }
 
-function validIndexedDB(value: unknown): SerializedDatabase[] {
+/**
+ * Reject a database that is not inside this game/account's namespace, is
+ * oversized, or carries a malformed schema. A malicious save file therefore
+ * cannot target the platform's databases or destroy unrelated progress.
+ */
+function checkedDatabase(entry: unknown, prefix: string): SerializedDatabase {
+  if (!isSerializedDatabase(entry)) throw new Error('Invalid cloud save database entry.');
+  const database = entry as SerializedDatabase;
+  if (!database.name.startsWith(prefix) || database.name.length === prefix.length) {
+    throw new Error('Cloud save references a database that does not belong to this game.');
+  }
+  if (!Number.isInteger(database.version) || database.version < 1 || database.version > 1000) {
+    throw new Error('Cloud save database version is not supported.');
+  }
+  if (database.stores.length > MAX_STORES) throw new Error('Cloud save database has too many stores.');
+  let records = 0;
+  for (const store of database.stores) {
+    if (!store.name || store.name.length > MAX_KEY_LENGTH) throw new Error('Invalid cloud save store.');
+    records += Array.isArray(store.records) ? store.records.length : 0;
+  }
+  if (records > MAX_RECORDS) throw new Error('Cloud save database has too many records.');
+  return database;
+}
+
+function validIndexedDB(value: unknown, prefix: string): SerializedDatabase[] {
   if (value === undefined) return [];
   if (!Array.isArray(value)) throw new Error('Invalid cloud save database list.');
-  return value.map((entry) => {
-    if (!isSerializedDatabase(entry)) throw new Error('Invalid cloud save database entry.');
-    return entry;
-  });
+  if (value.length > MAX_DATABASES) throw new Error('Cloud save contains too many databases.');
+  return value.map((entry) => checkedDatabase(entry, prefix));
 }
 
 function explicitAdapter(game: typeof games[number]) {
   const { id: gameId, path, keys } = game;
   return {
     launchPath(userId: string | null) {
-      return userId ? `${path}?geegle_profile=${encodeURIComponent(userId)}` : path;
+      return userId ? `${path}?geegle_profile=${encodeURIComponent(userId)}&geegle_game=${encodeURIComponent(gameId)}` : path;
     },
-    async capture(userId: string) {
+    async capture(userId: string): Promise<SaveSnapshot | null> {
       const values: Record<string, string> = {};
       for (const key of keys) {
         const value = localStorage.getItem(`geegle-game:${gameId}:${userId}:${key}`);
         if (value !== null) values[key] = value;
       }
-      return Object.keys(values).length ? { format: 'geegle-local-v1' as const, localStorage: values } : null;
+      if (!Object.keys(values).length) return null;
+      return { format: 'geegle-storage-v3', gameId, localStorage: values, indexedDB: [] };
     },
-    validate(snapshot: unknown): SaveSnapshot {
-      if (!snapshot || typeof snapshot !== 'object') throw new Error('Invalid cloud save.');
-      const { format, localStorage: values } = snapshot as { format: unknown; localStorage: unknown };
-      // Older saves may carry a pre-2026 IndexedDB list; those cannot be
-      // restored safely and are rejected rather than silently dropped.
-      if ('indexedDB' in snapshot && (!Array.isArray((snapshot as { indexedDB: unknown }).indexedDB)
-        || ((snapshot as { indexedDB: unknown[] }).indexedDB).length)) {
+    validate(snapshot: unknown, userId: string): SaveSnapshot {
+      if (!snapshot || typeof snapshot !== 'object' || Array.isArray(snapshot)) throw new Error('Invalid cloud save.');
+      const record = snapshot as { format?: unknown; gameId?: unknown; localStorage?: unknown; indexedDB?: unknown };
+      // Saves written before the game identity was recorded carry no gameId;
+      // the key allowlist below is then the identity check.
+      if (record.gameId !== undefined && record.gameId !== gameId) {
+        throw new Error('This save file belongs to a different game.');
+      }
+      if ('indexedDB' in record && (!Array.isArray(record.indexedDB) || record.indexedDB.length)) {
         throw new Error('This older save contains IndexedDB data. It was kept in the cloud but cannot be restored safely.');
       }
-      if (format !== 'geegle-local-v1' && format !== 'v3') throw new Error('Unrecognized cloud save format.');
-      if (!validSavePayload(values)) throw new Error('Invalid cloud save.');
-      const clean = Object.fromEntries(keys.flatMap((key) => {
-        const value = (values as Record<string, unknown>)[key];
-        if (value === undefined) return [];
-        if (typeof value !== 'string') throw new Error('Invalid cloud save value.');
-        return [[key, value]];
-      }));
+      if (record.format !== 'geegle-local-v1' && record.format !== 'geegle-storage-v3' && record.format !== 'v3') {
+        throw new Error('Unrecognized cloud save format.');
+      }
+      if (!validSavePayload(record.localStorage)) throw new Error('Invalid cloud save.');
+      const values = record.localStorage;
+      const clean: Record<string, string> = {};
+      for (const key of keys) {
+        const value = values[key];
+        if (value !== undefined) clean[key] = value;
+      }
       if (!Object.keys(clean).length || Object.keys(values).length !== Object.keys(clean).length) {
         throw new Error('Cloud save contains unexpected game keys.');
       }
-      return { format: 'geegle-local-v1', localStorage: clean };
+      void userId;
+      return { format: 'geegle-storage-v3', gameId, localStorage: clean, indexedDB: [] };
     },
     async restore(userId: string, snapshot: SaveSnapshot) {
       const backup = await this.capture(userId);
@@ -176,102 +192,97 @@ function explicitAdapter(game: typeof games[number]) {
       }
     },
     async isolate() { /* Explicit adapters only touch account-scoped keys. */ },
-    databases: () => [] as string[],
+    async databases() { return [] as string[]; },
   };
 }
 
 function genericAdapter(gameId: string, path: string): SaveAdapter {
-  // Baselines let us claim databases this game creates during its session
-  // without touching data that belongs to anything else on the origin.
-  const baseline = listDatabases();
+  const prefixFor = (userId: string) => storagePrefix(gameId, userId);
+
+  async function ownedDatabases(userId: string): Promise<string[]> {
+    const prefix = prefixFor(userId);
+    return (await listDatabases()).filter((name) => name.startsWith(prefix) && name.length > prefix.length);
+  }
 
   return {
     launchPath(userId) {
-      return userId ? `${path}?geegle_profile=${encodeURIComponent(userId)}` : path;
+      return userId ? `${path}?geegle_profile=${encodeURIComponent(userId)}&geegle_game=${encodeURIComponent(gameId)}` : path;
     },
     async capture(userId) {
       if (!userId) return null;
       const values = readScoped(gameId, userId);
-      const initial = await baseline;
-      const current = await listDatabases();
-      const owned = readDbNames(gameId);
-      const fresh = current.filter((name) => !initial.includes(name) && !owned.includes(name));
-      const candidates = new Set([...owned.filter((name) => current.includes(name)), ...fresh]);
-      const claimed = claimDatabases(gameId, [...candidates]);
       const databases: SerializedDatabase[] = [];
-      for (const name of claimed) {
-        if (!current.includes(name)) continue;
+      for (const name of await ownedDatabases(userId)) {
         const dump = await dumpDatabase(name);
+        // Empty stores mean the game had not written anything yet; uploading
+        // them would replace a real save with an empty schema.
         if (dump && dump.stores.length) databases.push(dump);
       }
       if (!Object.keys(values).length && !databases.length) return null;
-      return { format: 'geegle-storage-v2', localStorage: values, indexedDB: databases };
+      return { format: 'geegle-storage-v3', gameId, localStorage: values, indexedDB: databases };
     },
-    validate(snapshot): SaveSnapshot {
+    validate(snapshot, userId): SaveSnapshot {
       if (!snapshot || typeof snapshot !== 'object' || Array.isArray(snapshot)) throw new Error('Invalid cloud save.');
-      const record = snapshot as { format?: unknown; localStorage?: unknown; indexedDB?: unknown };
-      if (record.format !== 'geegle-storage-v2' && record.format !== 'geegle-local-v1') {
-        throw new Error('Unrecognized cloud save format.');
-      }
+      const record = snapshot as { format?: unknown; gameId?: unknown; localStorage?: unknown; indexedDB?: unknown };
+      if (record.format !== 'geegle-storage-v3') throw new Error('Unrecognized cloud save format.');
+      if (record.gameId !== gameId) throw new Error('This save file belongs to a different game.');
       if (!validSavePayload(record.localStorage)) throw new Error('Invalid cloud save.');
       for (const key of Object.keys(record.localStorage)) {
-        // Never let a stored save overwrite platform state.
-        if (key.startsWith('geegle-') && !key.startsWith(`geegle-game:${gameId}:`)) {
-          throw new Error('Cloud save contains reserved keys.');
-        }
+        // Game keys are stored unscoped; a key that looks like platform state
+        // is rejected rather than allowed to overwrite it on restore.
+        if (key.startsWith('geegle-')) throw new Error('Cloud save contains reserved keys.');
       }
       return {
-        format: 'geegle-storage-v2',
-        localStorage: { ...(record.localStorage as Record<string, string>) },
-        indexedDB: validIndexedDB(record.indexedDB),
+        format: 'geegle-storage-v3',
+        gameId,
+        localStorage: { ...record.localStorage },
+        indexedDB: validIndexedDB(record.indexedDB, prefixFor(userId)),
       };
     },
     async restore(userId, snapshot) {
+      const prefix = prefixFor(userId);
       const values = snapshot.localStorage;
       const backup = readScoped(gameId, userId);
       if (Object.keys(backup).length) {
         localStorage.setItem(`geegle-game-backup:${gameId}:${userId}:${crypto.randomUUID()}`, JSON.stringify({
-          format: 'geegle-storage-v2',
+          format: 'geegle-storage-v3',
+          gameId,
           localStorage: backup,
+          indexedDB: [],
         }));
+      }
+      const databases = snapshot.indexedDB ?? [];
+      const restored: string[] = [];
+      for (const database of databases) {
+        // Re-checked here as well: validate() is the boundary, but restore is
+        // the code that deletes, so it re-asserts the namespace itself.
+        const checked = checkedDatabase(database, prefix);
+        await restoreDatabase(checked);
+        restored.push(checked.name);
       }
       writeScoped(gameId, userId, values);
       removeScopedExcept(gameId, userId, values);
-      const databases = snapshot.indexedDB ?? [];
-      // A restore is authoritative: databases saved with this account replace
-      // the local copies, and databases that are no longer part of the save are
-      // removed so stale progress cannot leak back in.
-      const restored: string[] = [];
-      for (const database of databases) {
-        await restoreDatabase(database);
-        restored.push(database.name);
+      // A snapshot that declares databases is authoritative for this account:
+      // databases saved with it replace the local copies, and stale ones go.
+      // An empty list never deletes anything (empty-save protection).
+      if (databases.length) {
+        for (const name of await ownedDatabases(userId)) {
+          if (restored.includes(name)) continue;
+          await deleteDatabase(name);
+        }
       }
-      const owned = readDbNames(gameId);
-      for (const name of owned) {
-        if (restored.includes(name)) continue;
-        if (databases.length && name) await deleteDatabase(name);
-      }
-      claimDatabases(gameId, [...restored, ...(databases.length ? owned : [])]);
-      try { localStorage.setItem(DB_OWNER(gameId), userId); } catch { /* quota */ }
     },
     async isolate(userId) {
-      let previous: string | null = null;
-      try { previous = localStorage.getItem(DB_OWNER(gameId)); } catch { previous = null; }
-      try { localStorage.setItem(DB_OWNER(gameId), userId); } catch { /* quota */ }
-      if (!previous || previous === userId) return;
-      for (const name of readDbNames(gameId)) await deleteDatabase(name);
+      // Every database this game writes carries the account in its name, so
+      // another account's data is unreachable rather than merely deleted.
+      // Verify the contract instead of pretending a delete happened.
+      const prefix = prefixFor(userId);
+      if (!prefix.startsWith(`geegle-game:${gameId}:`) || !prefix.endsWith(':')) {
+        throw new IsolationError('Game storage namespace is invalid.');
+      }
     },
-    databases: () => readDbNames(gameId),
+    databases: ownedDatabases,
   };
-}
-
-function deleteDatabase(name: string): Promise<void> {
-  return new Promise((resolve) => {
-    const request = indexedDB.deleteDatabase(name);
-    request.onsuccess = () => resolve();
-    request.onerror = () => resolve();
-    request.onblocked = () => resolve();
-  });
 }
 
 /** The adapter for a catalog entry, or null when no save support is possible. */

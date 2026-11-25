@@ -1,7 +1,12 @@
 #!/usr/bin/env node
-// Inject the per-account storage shim into same-origin game wrappers that use
-// localStorage directly. Deterministic and idempotent: rerunning it never adds
-// a second copy, and files that already implement scoped keys are skipped.
+// Inject the per-account storage shim into every local game wrapper.
+//
+// The shim scopes localStorage, sessionStorage and IndexedDB, so it must be
+// present in any wrapper whose engine might persist progress (HTML5, Unity
+// WebGL, Ruffle, Emscripten, Construct). Injecting into all of them keeps the
+// coverage table honest: a wrapper either carries the shim or is reported as
+// unsupported. Deterministic and idempotent: rerunning never adds a second
+// copy, and wrappers that already scope keys themselves are skipped.
 //
 // Usage: node scripts/inject-storage-shim.mjs [--dry-run]
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
@@ -20,7 +25,7 @@ for (const row of readCatalogRows()) {
   if (file && !idsByFile.has(file)) idsByFile.set(file, row.id);
 }
 
-const report = { scanned: 0, injected: 0, alreadyScoped: 0, noStorage: 0, skippedNoMarker: 0 };
+const report = { scanned: 0, injected: 0, alreadyScoped: 0, skippedNoMarker: 0 };
 
 for (const dirent of readdirSync(gamesDir, { withFileTypes: true })) {
   if (!dirent.isFile() || !dirent.name.toLowerCase().endsWith('.html')) continue;
@@ -28,7 +33,6 @@ for (const dirent of readdirSync(gamesDir, { withFileTypes: true })) {
   const file = new URL(dirent.name, gamesDir);
   const html = readFileSync(file, 'utf8');
   if (html.includes(TAG)) { report.alreadyScoped += 1; continue; }
-  if (!/\blocalStorage\b/.test(html)) { report.noStorage += 1; continue; }
   // These wrappers already namespace every key themselves via geegleSaveKey.
   if (html.includes('geegleSaveKey')) { report.alreadyScoped += 1; continue; }
 

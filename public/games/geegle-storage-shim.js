@@ -1,91 +1,251 @@
 // Per-account storage isolation for same-origin HTML5 games.
 //
-// Geegle serves every game from one origin, so all games share one
-// localStorage. This shim gives each (game, signed-in account) pair its own
-// namespaced view of localStorage, which is what makes cloud saves and
-// account isolation possible without editing each game's logic.
+// Geegle serves every game from one origin, so without this shim all games and
+// all accounts share one localStorage, one sessionStorage and one IndexedDB
+// namespace. The shim gives each (game, signed-in account) pair its own view:
 //
-// - Guests (no geegle_profile query parameter) are left untouched.
-// - Existing progress written before the shim existed is migrated on first
-//   read, so no player loses a save.
-// - clear() only removes the current game's keys for the current account.
+//   localStorage / sessionStorage -> geegle-game:<gameId>:<account>:
+//   IndexedDB databases          -> geegle-game:<gameId>:<account>:<name>
+//
+// Rules that keep accounts and platform data safe:
+//  - Guests (no geegle_profile) are not shimmed at all.
+//  - Legacy unscoped progress is adopted exactly once per game (a marker key
+//    records the adoption), so two accounts can never inherit the same save.
+//  - removeItem only ever deletes this account's scoped key. It never removes
+//    an unscoped key, which could belong to another game or to the platform.
+//  - clear() only removes this game's keys for this account.
+//  - Only databases under this account's prefix are visible or deletable.
+//  - Property-style access (localStorage.score = 1), dynamic enumeration and
+//    same-origin nested frames are supported.
 (function () {
   'use strict';
-  var profile = null;
-  try {
-    profile = new URLSearchParams(window.location.search).get('geegle_profile');
-  } catch (error) {
-    profile = null;
-  }
-  if (!profile) return;
 
-  var script = document.currentScript;
-  var gameId = (script && script.getAttribute('data-game')) || '';
-  if (!gameId) {
+  var MARK = '__geegleStorageShim';
+
+  function query(win, key) {
     try {
-      gameId = decodeURIComponent(window.location.pathname.replace(/^.*\/games\//, '').replace(/\.html$/i, ''));
+      return new URLSearchParams(win.location.search).get(key);
     } catch (error) {
-      gameId = '';
+      return null;
     }
   }
-  if (!gameId) return;
 
-  var prefix = 'geegle-game:' + gameId + ':' + profile + ':';
-  var original = window.localStorage;
-  if (!original) return;
-  var proto = Object.getPrototypeOf(original) || window.Storage.prototype;
-  var nativeGet = proto.getItem;
-  var nativeSet = proto.setItem;
-  var nativeRemove = proto.removeItem;
-  var nativeKey = proto.key;
-
-  function ownKeys() {
-    var keys = [];
-    for (var i = 0; i < original.length; i += 1) {
-      var key = nativeKey.call(original, i);
-      if (typeof key === 'string' && key.indexOf(prefix) === 0) keys.push(key.slice(prefix.length));
+  function gameIdFrom(win) {
+    // The platform puts the catalog id in the launch URL, so a game's namespace
+    // matches the id its saves are stored under even when the file name differs
+    // from the catalog slug.
+    var fromQuery = query(win, 'geegle_game');
+    if (fromQuery) return fromQuery;
+    var script = win.document && win.document.currentScript;
+    var declared = script && script.getAttribute && script.getAttribute('data-game');
+    if (declared) return declared;
+    try {
+      return decodeURIComponent(win.location.pathname.replace(/^.*\/games\//, '').replace(/\.html$/i, ''));
+    } catch (error) {
+      return '';
     }
-    return keys;
   }
 
-  var view = {
-    getItem: function (key) {
-      var scoped = nativeGet.call(original, prefix + String(key));
-      if (scoped !== null) return scoped;
-      // One-time migration of progress saved before per-account scoping.
-      var legacy = nativeGet.call(original, String(key));
-      if (legacy !== null) {
-        try { nativeSet.call(original, prefix + String(key), legacy); } catch (error) { /* quota */ }
+  /**
+   * Build a Storage-shaped view backed by `storage`, limited to `prefix`.
+   * A Proxy makes both method calls and property access behave like Storage.
+   */
+  function storageView(storage, prefix) {
+    var proto = Object.getPrototypeOf(storage) || window.Storage.prototype;
+    var nativeGet = proto.getItem;
+    var nativeSet = proto.setItem;
+    var nativeRemove = proto.removeItem;
+    var nativeKey = proto.key;
+
+    function scopedKeys() {
+      var keys = [];
+      var total = storage.length;
+      for (var i = 0; i < total; i += 1) {
+        var key = nativeKey.call(storage, i);
+        if (typeof key === 'string' && key.indexOf(prefix) === 0) keys.push(key.slice(prefix.length));
       }
-      return legacy;
-    },
-    setItem: function (key, value) {
-      nativeSet.call(original, prefix + String(key), String(value));
-    },
-    removeItem: function (key) {
-      nativeRemove.call(original, String(key));
-      nativeRemove.call(original, prefix + String(key));
-    },
-    clear: function () {
-      var keys = ownKeys();
-      for (var i = 0; i < keys.length; i += 1) nativeRemove.call(original, prefix + keys[i]);
-    },
-    key: function (index) {
-      var keys = ownKeys();
-      return index >= 0 && index < keys.length ? keys[index] : null;
-    },
-    get length() {
-      return ownKeys().length;
-    },
-  };
+      return keys;
+    }
 
-  try {
-    Object.defineProperty(window, 'localStorage', {
-      configurable: true,
-      enumerable: true,
-      get: function () { return view; },
+    var api = {
+      getItem: function (key) {
+        var value = nativeGet.call(storage, prefix + String(key));
+        return value === null ? null : value;
+      },
+      setItem: function (key, value) {
+        nativeSet.call(storage, prefix + String(key), String(value));
+      },
+      removeItem: function (key) {
+        // Scoped only: an unscoped delete could destroy another game's data
+        // or platform state that happens to share this key name.
+        nativeRemove.call(storage, prefix + String(key));
+      },
+      clear: function () {
+        var keys = scopedKeys();
+        for (var i = 0; i < keys.length; i += 1) nativeRemove.call(storage, prefix + keys[i]);
+      },
+      key: function (index) {
+        var keys = scopedKeys();
+        return index >= 0 && index < keys.length ? keys[index] : null;
+      },
+    };
+
+    return new Proxy(api, {
+      get: function (target, prop) {
+        if (prop === 'length') return scopedKeys().length;
+        if (prop in target) return target[prop];
+        if (typeof prop !== 'string') return undefined;
+        var value = target.getItem(prop);
+        return value === null ? undefined : value;
+      },
+      set: function (target, prop, value) {
+        if (typeof prop !== 'string') return false;
+        target.setItem(prop, value);
+        return true;
+      },
+      deleteProperty: function (target, prop) {
+        if (typeof prop === 'string') target.removeItem(prop);
+        return true;
+      },
+      has: function (target, prop) {
+        if (prop in target) return true;
+        return typeof prop === 'string' && target.getItem(prop) !== null;
+      },
+      ownKeys: function () {
+        return scopedKeys().concat(Object.keys(api));
+      },
+      getOwnPropertyDescriptor: function (target, prop) {
+        if (typeof prop !== 'string') return undefined;
+        if (prop in api) return { configurable: true, enumerable: false, value: api[prop], writable: false };
+        var value = api.getItem(prop);
+        if (value === null) return undefined;
+        return { configurable: true, enumerable: true, value: value, writable: true };
+      },
+      defineProperty: function (target, prop, descriptor) {
+        if (typeof prop === 'string' && 'value' in descriptor) api.setItem(prop, descriptor.value);
+        return true;
+      },
     });
-  } catch (error) {
-    try { window.localStorage = view; } catch (ignored) { /* older engines */ }
   }
+
+  /** IndexedDB facade that prefixes every database name with `prefix`. */
+  function indexedDbView(nativeIdb, prefix) {
+    function strip(name) {
+      var value = String(name);
+      return value.indexOf(prefix) === 0 ? value.slice(prefix.length) : value;
+    }
+    return {
+      open: function (name, version) {
+        return version === undefined
+          ? nativeIdb.open(prefix + String(name))
+          : nativeIdb.open(prefix + String(name), version);
+      },
+      deleteDatabase: function (name) {
+        return nativeIdb.deleteDatabase(prefix + String(name));
+      },
+      databases: nativeIdb.databases
+        ? function () {
+          return nativeIdb.databases().then(function (list) {
+            return list
+              .filter(function (entry) { return entry.name && entry.name.indexOf(prefix) === 0; })
+              .map(function (entry) { return { name: strip(entry.name), version: entry.version }; });
+          });
+        }
+        : undefined,
+      cmp: nativeIdb.cmp ? nativeIdb.cmp.bind(nativeIdb) : undefined,
+    };
+  }
+
+  function defineView(win, name, value) {
+    try {
+      Object.defineProperty(win, name, { configurable: true, enumerable: true, get: function () { return value; } });
+      return true;
+    } catch (error) {
+      try { win[name] = value; return true; } catch (ignored) { return false; }
+    }
+  }
+
+  /**
+   * Install the shim in `win`. When called for a nested frame, the parent
+   * passes its own profile/gameId so a frame served from a helper page still
+   * writes into the same game's namespace.
+   */
+  function install(win, inherited) {
+    try {
+      if (!win || win[MARK]) return;
+      var profile = (inherited && inherited.profile) || query(win, 'geegle_profile');
+      if (!profile) { win[MARK] = { guest: true }; return; }
+      var gameId = (inherited && inherited.gameId) || gameIdFrom(win);
+      if (!gameId) { win[MARK] = { guest: true }; return; }
+      var prefix = 'geegle-game:' + gameId + ':' + profile + ':';
+      win[MARK] = { profile: profile, gameId: gameId, prefix: prefix };
+
+      var local = win.localStorage;
+      if (local) {
+        var proto = Object.getPrototypeOf(local);
+        var nativeGet = proto.getItem;
+        // One-time adoption of pre-shim progress. The marker is unscoped and
+        // per game, so only the first signed-in account ever inherits it.
+        var adoption = 'geegle-legacy-adopted:' + gameId;
+        var seen = null;
+        try { seen = nativeGet.call(local, adoption); } catch (error) { seen = null; }
+        if (seen === null) {
+          try {
+            proto.setItem.call(local, adoption, '1');
+            // Enumerate through Storage.key rather than Object.keys: engines
+            // expose stored keys inconsistently as own properties.
+            var legacyKeys = [];
+            for (var index = 0; index < local.length; index += 1) {
+              var key = proto.key.call(local, index);
+              if (typeof key === 'string') legacyKeys.push(key);
+            }
+            legacyKeys.forEach(function (key) {
+              if (key.indexOf('geegle-') === 0) return;
+              var value = nativeGet.call(local, key);
+              if (value !== null) proto.setItem.call(local, prefix + key, value);
+            });
+          } catch (error) { /* storage disabled; nothing to adopt */ }
+        }
+        defineView(win, 'localStorage', storageView(local, prefix));
+      }
+
+      var session = win.sessionStorage;
+      if (session) defineView(win, 'sessionStorage', storageView(session, prefix));
+
+      if (win.indexedDB) defineView(win, 'indexedDB', indexedDbView(win.indexedDB, prefix));
+
+      installFrames(win, { profile: profile, gameId: gameId });
+    } catch (error) {
+      // A game must still load if the shim cannot install; guests are the
+      // fallback, and the platform then reports saves as unavailable.
+      try { win[MARK] = { guest: true }; } catch (ignored) { /* locked window */ }
+    }
+  }
+
+  /** Apply the shim to same-origin nested frames, including future ones. */
+  function installFrames(win, inherited) {
+    function frame(slot) {
+      try {
+        install(slot.contentWindow, inherited);
+      } catch (error) {
+        // Cross-origin frame: it has its own origin and its own storage.
+      }
+    }
+    function all() {
+      for (var i = 0; i < win.frames.length; i += 1) frame(win.frames[i]);
+    }
+    try {
+      all();
+      win.document.addEventListener('load', function (event) {
+        if (event.target && event.target.tagName === 'IFRAME') frame(event.target);
+      }, true);
+      if (typeof win.MutationObserver === 'function') {
+        new win.MutationObserver(all).observe(win.document.documentElement, { childList: true, subtree: true });
+      }
+    } catch (error) {
+      // Older engines: top-level isolation still applies.
+    }
+  }
+
+  install(window, null);
 })();

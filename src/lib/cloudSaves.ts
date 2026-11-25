@@ -1,5 +1,5 @@
 import { supabase, isSupabaseConfigured, T } from './supabase';
-import { adapterFor, type SaveSnapshot } from './saveAdapters';
+import { adapterFor, IsolationError, type SaveSnapshot } from './saveAdapters';
 
 export type SyncStatus = 'idle' | 'saving' | 'saved' | 'restoring' | 'restored' | 'offline' | 'error' | 'conflict' | 'unsupported';
 export interface SaveResult { ok: boolean; error?: string }
@@ -16,6 +16,8 @@ export interface CloudSaveHandle {
   /** Import a previously exported save file and sync it to the cloud. */
   importSave(json: string): Promise<SaveResult>;
   getStatus(): SyncStatus;
+  /** False when account isolation could not be established; launch must wait. */
+  canLaunch(): boolean;
   launchPath: string;
   supported: boolean;
 }
@@ -32,6 +34,8 @@ interface SaveRemote {
 const MAX_SNAPSHOT_BYTES = 4 * 1024 * 1024;
 const SYNC_INTERVAL_MS = 15_000;
 const conflictMessage = 'Cloud progress changed on another device. Choose Restore from Cloud or Keep This Device.';
+// Isolation failures are the one condition that must stop a game from opening.
+const isIsolationError = (error: unknown) => error instanceof IsolationError;
 const success = { ok: true };
 const describe = (error: unknown) => error instanceof Error ? error.message : 'Cloud sync failed.';
 
@@ -109,19 +113,20 @@ export function createSaveSession(
 
   const read = async () => {
     const row = await remote.read();
-    return { revision: row?.revision ?? null, snapshot: row ? adapter.validate(row.save_data) : null };
+    return { revision: row?.revision ?? null, snapshot: row ? adapter.validate(row.save_data, userId) : null };
   };
 
   let retryRead = false;
+  let launchBlocked = false;
   const initialize = async (beforeLaunch: boolean) => {
     if (disposed) return;
     setStatus('restoring');
     try {
-      const cloud = await read();
+      // Isolation is established before the cloud read: a failed read must not
+      // leave another account's local data visible to this one.
+      if (beforeLaunch) await adapter.isolate(userId);
       if (disposed) return;
-      // No cloud save yet: clear shared database data left by another account
-      // before its progress can be shown or uploaded under this account.
-      if (beforeLaunch && !cloud.snapshot) await adapter.isolate(userId);
+      const cloud = await read();
       if (disposed) return;
       const local = serialize(await adapter.capture(userId));
       const cloudData = serialize(cloud.snapshot);
@@ -156,6 +161,9 @@ export function createSaveSession(
     } catch (error) {
       retryRead = !navigator.onLine;
       fail(error);
+      // Only an isolation failure blocks launch; a network failure leaves this
+      // account's own data in place and can be retried.
+      if (beforeLaunch) launchBlocked = isIsolationError(error);
     }
   };
   const restored = schedule(() => initialize(true));
@@ -262,7 +270,7 @@ export function createSaveSession(
 
   const importSave = (json: string): Promise<SaveResult> => schedule(async () => {
     try {
-      const snapshot = adapter.validate(JSON.parse(json));
+      const snapshot = adapter.validate(JSON.parse(json), userId);
       if (!canUpload) {
         return { ok: false, error: 'Restore from the cloud (or resolve the conflict) before importing a save.' };
       }
@@ -281,7 +289,8 @@ export function createSaveSession(
 
   return {
     restored, close, saveNow, restore, keepLocal, exportSave, importSave,
-    getStatus: () => status, launchPath: adapter.launchPath(userId), supported: true, dispose,
+    getStatus: () => status, canLaunch: () => !launchBlocked,
+    launchPath: adapter.launchPath(userId), supported: true, dispose,
   };
 }
 
@@ -295,6 +304,7 @@ export function startCloudSync(gameId: string, launchPath: string, userId: strin
     restored: Promise.resolve(), close: async () => success, saveNow: async () => result,
     restore: async () => ({ ...result, restored: false }), keepLocal: async () => result,
     exportSave: async () => result, importSave: async () => result,
-    getStatus: () => userId ? 'unsupported' : 'idle', launchPath, supported: false, dispose: async () => {},
+    getStatus: () => userId ? 'unsupported' : 'idle', canLaunch: () => true,
+    launchPath, supported: false, dispose: async () => {},
   };
 }

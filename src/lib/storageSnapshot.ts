@@ -275,12 +275,16 @@ export async function dumpDatabase(name: string): Promise<SerializedDatabase | n
   }
 }
 
-function deleteDatabase(name: string): Promise<void> {
+/**
+ * Delete one database. A blocked or failed delete rejects: treating it as
+ * success would silently report isolation or a restore that never happened.
+ */
+export function deleteDatabase(name: string): Promise<void> {
   return new Promise((resolve, reject) => {
     const req = indexedDB.deleteDatabase(name);
     req.onsuccess = () => resolve();
-    req.onerror = () => reject(req.error ?? new Error('Could not replace this game’s database.'));
-    req.onblocked = () => reject(new Error('Close other tabs of this game, then retry the restore.'));
+    req.onerror = () => reject(req.error ?? new Error(`Could not replace the ${name} database.`));
+    req.onblocked = () => reject(new Error('Close other tabs of this game, then retry.'));
   });
 }
 

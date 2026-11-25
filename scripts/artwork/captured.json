@@ -1,0 +1,1083 @@
+{
+  "assets": {
+    "cl3dasheditor": {
+      "assetSha256": "738a0f3bce9e46e64894c05cbd4db4a6da898ebab7758cfb5526e6d7170f4f4e",
+      "identityEvidence": "The wrapper this repository distributes for 3 Dash Editor declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/shayderrr/portsv2@main/3dasheditor/logo.png",
+      "title": "3 Dash Editor",
+      "type": "game-asset",
+      "url": "/artwork/cl3dasheditor.webp"
+    },
+    "cladatewithdeath": {
+      "assetSha256": "7e707731b6bf745af509c4c9b8257e91deda51759c97a6cbb7b778555d362063",
+      "identityEvidence": "The wrapper this repository distributes for A Date with Death declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/shayderrr/newports@77c469d583759817a3cdf97330fd1545f0a46f24/ADatewithDeath-2.4-web/web-presplash.jpg",
+      "title": "A Date with Death",
+      "type": "game-asset",
+      "url": "/artwork/cladatewithdeath.webp"
+    },
+    "clangrybirdsslingshotfrenzy": {
+      "assetSha256": "21aea6e8e0ae09d02b7228d75899f9eaccb19bac91b55eb14013337bf5f4f982",
+      "identityEvidence": "The wrapper this repository distributes for Angry Birds Slingshot Frenzy declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/UGBONTOP/firebaseport-angrybirds-remaster/icons/icon-128.png",
+      "title": "Angry Birds Slingshot Frenzy",
+      "type": "official-icon",
+      "url": "/artwork/clangrybirdsslingshotfrenzy.webp"
+    },
+    "clastrosdreamland": {
+      "assetSha256": "f4402de4f7551e0cb5f905f04d5ba69821058fffa6c7335fa9a8996bcbb04be2",
+      "identityEvidence": "The wrapper this repository distributes for Astros Dreamland declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://static.wikia.nocookie.net/dandys-world-robloxhorror/images/9/92/Astro_Render.png",
+      "title": "Astros Dreamland",
+      "type": "official-icon",
+      "url": "/artwork/clastrosdreamland.webp"
+    },
+    "clbananasimulator": {
+      "assetSha256": "1392dcb5cbdb920f7b8106400ada4b17822b037c9299baa2d5eaf94aa41429ec",
+      "identityEvidence": "The wrapper this repository distributes for Banana Simulator declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/ruffle@ad6ffa3289c102eb4a4aced92a17e4ea291603d5/bananasim.png",
+      "title": "Banana Simulator",
+      "type": "official-icon",
+      "url": "/artwork/clbananasimulator.webp"
+    },
+    "clbasketslamdunk2": {
+      "assetSha256": "d28f8211ede22eb7939f7498f2062b01e44119ebcc9fbc8a2ffa7cd28bc728ae",
+      "identityEvidence": "The wrapper this repository distributes for Basket Slam Dunk 2 declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/yrgen73/BSD2@174be0db9145f7375365bda889a200e5cd31bbe0/icons/icon-512.png",
+      "title": "Basket Slam Dunk 2",
+      "type": "official-icon",
+      "url": "/artwork/clbasketslamdunk2.webp"
+    },
+    "clbottlecracks": {
+      "assetSha256": "5efab41cf08fca1e509d7a8c8ece1a40943567cf68a1f343ad2855fc6301d90a",
+      "identityEvidence": "The wrapper this repository distributes for Bottle Cracks declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/bottlecracks/TemplateData/favicon.ico",
+      "title": "Bottle Cracks",
+      "type": "official-icon",
+      "url": "/artwork/clbottlecracks.webp"
+    },
+    "clbrawlstars": {
+      "assetSha256": "f458a6dde0647375e2e0c5791bc49c4549063780e2fededeb6f99f9fec66cb31",
+      "identityEvidence": "The wrapper this repository distributes for Brawl Stars declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/ragdoi-archers/zort@main/icon.png",
+      "title": "Brawl Stars",
+      "type": "game-asset",
+      "url": "/artwork/clbrawlstars.webp"
+    },
+    "clburgerandfrights": {
+      "assetSha256": "2cdd115451b7e8ed9d928ae3efb4a5ef503c9fae828e0cf0ab17a0fa4ffd4fba",
+      "identityEvidence": "The wrapper this repository distributes for Burger and Frights declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/7nightz/selenitee@f7612ed1599a748d84fe5cbde422ad0062a971d0/semag/burgerandfrights/images/title.png",
+      "title": "Burger and Frights",
+      "type": "game-asset",
+      "url": "/artwork/clburgerandfrights.webp"
+    },
+    "clchickenscream": {
+      "assetSha256": "273928a937f9731ef91a5a5cdb47f98c111e73869cc6bfe8927a280f5cfd49a7",
+      "identityEvidence": "The wrapper this repository distributes for Chicken Scream declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/UNITY/chickenscream/logo.png",
+      "title": "Chicken Scream",
+      "type": "game-asset",
+      "url": "/artwork/clchickenscream.webp"
+    },
+    "clclimbforbrainrots": {
+      "assetSha256": "b064ced64dabed146a4668be03275db21033a4e9a8a6e61aacfdf454682dcca7",
+      "identityEvidence": "The wrapper this repository distributes for Climb for Brain Rots declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/shayderrr/idk@de44d061ae3c867a631b494762848a22aaacf334/climbforbrainrots/494990/o7iep38kbv6xwm980reqa1i23y9fsho6_brotli/logo.png",
+      "title": "Climb for Brain Rots",
+      "type": "game-asset",
+      "url": "/artwork/clclimbforbrainrots.webp"
+    },
+    "clcrazycattle3d": {
+      "assetSha256": "0914234441b463261ea157164b0dfa1054045f0fa0919e96f045db9095b8cace",
+      "identityEvidence": "The wrapper this repository distributes for Crazy Cattle 3D declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/cc3d-merge/index.icon.png",
+      "title": "Crazy Cattle 3D",
+      "type": "official-icon",
+      "url": "/artwork/clcrazycattle3d.webp"
+    },
+    "clcs1-6": {
+      "assetSha256": "4dd2ac1f7b04d5d1a1ff763203614885d801a8e44a46b30908aaaef1ef92a7df",
+      "identityEvidence": "The wrapper this repository distributes for CS 1.6 declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/sel-lers/x@main/logo.png",
+      "title": "CS 1.6",
+      "type": "game-asset",
+      "url": "/artwork/clcs1-6.webp"
+    },
+    "clcs6": {
+      "assetSha256": "4dd2ac1f7b04d5d1a1ff763203614885d801a8e44a46b30908aaaef1ef92a7df",
+      "identityEvidence": "The wrapper this repository distributes for CS 6 declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/sel-lers/x@main/logo.png",
+      "title": "CS 6",
+      "type": "game-asset",
+      "url": "/artwork/clcs6.webp"
+    },
+    "cldashio": {
+      "assetSha256": "95257a797b7c005369861e2d3220dff49f4410a94a26e01bac424d961cc6cf0c",
+      "identityEvidence": "The wrapper this repository distributes for Dashio declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/shayderrr/portsv2@main/dashio/TemplateData/logo.png",
+      "title": "Dashio",
+      "type": "game-asset",
+      "url": "/artwork/cldashio.webp"
+    },
+    "cldimensionalincident": {
+      "assetSha256": "5efab41cf08fca1e509d7a8c8ece1a40943567cf68a1f343ad2855fc6301d90a",
+      "identityEvidence": "The wrapper this repository distributes for Dimensional Incident declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/shayderrr/portsv4@1198e4f0a43bc83d95e0383106a2a232df9e227f/15950502/TemplateData/favicon.ico",
+      "title": "Dimensional Incident",
+      "type": "official-icon",
+      "url": "/artwork/cldimensionalincident.webp"
+    },
+    "cldodecadragons": {
+      "assetSha256": "6db4b9dbdb1e6fbbfb9a521c3dbf1868173fe76afd6168ac1d4f16b561dca4a2",
+      "identityEvidence": "The wrapper this repository distributes for Dodeca Dragons declares this image as its own artwork (official-og).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://demonin.com/games/dodecaDragons/img/logo.png",
+      "title": "Dodeca Dragons",
+      "type": "official-og",
+      "url": "/artwork/cldodecadragons.webp"
+    },
+    "cldogeminer": {
+      "assetSha256": "47cfdd55154fb07f0e4524b710ae8c43f004e91a2d86d9dfe4b699b62bc256ae",
+      "identityEvidence": "The wrapper this repository distributes for Doge Miner declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/Nailington/3kh0-assets@aeb371b7e88542fd5e61eeed9e967a446d84fe1b/DogeMiner/favicon.ico",
+      "title": "Doge Miner",
+      "type": "official-icon",
+      "url": "/artwork/cldogeminer.webp"
+    },
+    "cldriftsimulator": {
+      "assetSha256": "b8d2198a0ae6080180b955d434e33ff9afd780a64341bb02186d8217fc4a74cd",
+      "identityEvidence": "The wrapper this repository distributes for Drift Simulator declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/rammyus/4563@main/logo.png",
+      "title": "Drift Simulator",
+      "type": "game-asset",
+      "url": "/artwork/cldriftsimulator.webp"
+    },
+    "clducklingsio": {
+      "assetSha256": "071ce266b94530bcf6c96ba8bdfa42e04182cac7d96bf4cb17b8cecdf078cb0d",
+      "identityEvidence": "The wrapper this repository distributes for Ducklings.io declares this image as its own artwork (official-og).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://ducklings.io/img/thumb.png",
+      "title": "Ducklings.io",
+      "type": "official-og",
+      "url": "/artwork/clducklingsio.webp"
+    },
+    "cledelweiss": {
+      "assetSha256": "5efab41cf08fca1e509d7a8c8ece1a40943567cf68a1f343ad2855fc6301d90a",
+      "identityEvidence": "The wrapper this repository distributes for Edelweiss declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/Edelweiss/TemplateData/favicon.ico",
+      "title": "Edelweiss",
+      "type": "official-icon",
+      "url": "/artwork/cledelweiss.webp"
+    },
+    "clescapeschoolduel": {
+      "assetSha256": "b8c232fe7fc4cb4f4e4bfbe54626bdf94ae786f9f99fb379855c1c4adf31ca5f",
+      "identityEvidence": "The wrapper this repository distributes for Escape School Duel declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/shayderrr/portsv4@a797de52ff1ec8f9c0e0757dd6913ea21b841020/idk/files/games/g1/escape-school-duel-v5/TemplateData/logo.png",
+      "title": "Escape School Duel",
+      "type": "game-asset",
+      "url": "/artwork/clescapeschoolduel.webp"
+    },
+    "clfeedthevoid": {
+      "assetSha256": "64394d3cdb26e675f69899048d2cd780c8fd2a389d7a88029af488cfc38d2f9a",
+      "identityEvidence": "The wrapper this repository distributes for Feed the Void declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/shayderrr/idk@154a1cdd1b89bae93325b5dce09cb507c6c592f5/16471790/index.icon.png",
+      "title": "Feed the Void",
+      "type": "official-icon",
+      "url": "/artwork/clfeedthevoid.webp"
+    },
+    "clfireblob": {
+      "assetSha256": "a4eeb995d67a58531d01ac6fba428c2293844ba4ac2a2469dde2eaad21743b7f",
+      "identityEvidence": "The wrapper this repository distributes for Fire Blob declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://gamemonetize.com/gamemonetize-logo.png",
+      "title": "Fire Blob",
+      "type": "game-asset",
+      "url": "/artwork/clfireblob.webp"
+    },
+    "clfivenightsatshreks": {
+      "assetSha256": "f4e659def6568124db5e7a3abbe82ec0552086dc301c3396cbcd0b8b6bd7110e",
+      "identityEvidence": "The wrapper this repository distributes for Five Nights at Shrek's declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/shayderrr/newports@501858e7d2d24dad4467463cdad972db0b19cd37/fivenightsatshrek/TemplateData/favicon.ico",
+      "title": "Five Nights at Shrek's",
+      "type": "official-icon",
+      "url": "/artwork/clfivenightsatshreks.webp"
+    },
+    "clfnfgodot": {
+      "assetSha256": "fcb64656756e0299c7adffd552eb188ae86b5177e31aed83f48e1684bfd5bccd",
+      "identityEvidence": "The wrapper this repository distributes for FNF: Godot declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/shayderrr/newports@6923d8d3c6272e81d2d9d54440d4e2450c47e89b/fnf/index.icon.png",
+      "title": "FNF: Godot",
+      "type": "official-icon",
+      "url": "/artwork/clfnfgodot.webp"
+    },
+    "clfunnyshooter22": {
+      "assetSha256": "8cbed8bf561625a0b34013d3c6077c82f8222a7bd90b96b222c8e7094ca98e04",
+      "identityEvidence": "The wrapper this repository distributes for Funny Shooter 22 declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://rawcdn.githack.com/hilfig3r/lolshooter2/97a7b3542843419db52216522a84a4f68a65a904/logo.png",
+      "title": "Funny Shooter 22",
+      "type": "game-asset",
+      "url": "/artwork/clfunnyshooter22.webp"
+    },
+    "clgeometryvibes": {
+      "assetSha256": "22b77ff8a80e8cfde7a919ff2e05a1ae5417f50d172bae3ea6478417117ee310",
+      "identityEvidence": "The wrapper this repository distributes for Geometry Vibes declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/UNITY/geometryvibes/TemplateData/logo.png",
+      "title": "Geometry Vibes",
+      "type": "game-asset",
+      "url": "/artwork/clgeometryvibes.webp"
+    },
+    "clgrowdenio": {
+      "assetSha256": "fe6a0826ca96c443d3a46fb039b5e99086cd8eeaad42b86b4a509219d157e469",
+      "identityEvidence": "The wrapper this repository distributes for Growdenio declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://growden.io/favicon/android-chrome-192x192.png",
+      "title": "Growdenio",
+      "type": "official-icon",
+      "url": "/artwork/clgrowdenio.webp"
+    },
+    "clhelltaker": {
+      "assetSha256": "5efab41cf08fca1e509d7a8c8ece1a40943567cf68a1f343ad2855fc6301d90a",
+      "identityEvidence": "The wrapper this repository distributes for Helltaker declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/wasm-rip/HellTaker-Web@main/helltakerweb/TemplateData/favicon.ico",
+      "title": "Helltaker",
+      "type": "official-icon",
+      "url": "/artwork/clhelltaker.webp"
+    },
+    "clholebattle": {
+      "assetSha256": "f4e659def6568124db5e7a3abbe82ec0552086dc301c3396cbcd0b8b6bd7110e",
+      "identityEvidence": "The wrapper this repository distributes for Hole Battle declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/shayderrr/portsv2@main/holebattle/TemplateData/favicon.ico",
+      "title": "Hole Battle",
+      "type": "official-icon",
+      "url": "/artwork/clholebattle.webp"
+    },
+    "clhuggywuggypixel": {
+      "assetSha256": "f4e659def6568124db5e7a3abbe82ec0552086dc301c3396cbcd0b8b6bd7110e",
+      "identityEvidence": "The wrapper this repository distributes for Huggy Wuggy Pixel declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/dayyiq/yyy6y6y6@main/TemplateData/favicon.ico",
+      "title": "Huggy Wuggy Pixel",
+      "type": "official-icon",
+      "url": "/artwork/clhuggywuggypixel.webp"
+    },
+    "cljefflings": {
+      "assetSha256": "5efab41cf08fca1e509d7a8c8ece1a40943567cf68a1f343ad2855fc6301d90a",
+      "identityEvidence": "The wrapper this repository distributes for Jefflings declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/jefflings/TemplateData/favicon.ico",
+      "title": "Jefflings",
+      "type": "official-icon",
+      "url": "/artwork/cljefflings.webp"
+    },
+    "cljellymario": {
+      "assetSha256": "6c02411f7fa4a71fb519c084e5f47d6dbdd4ce5816ed753ca4fbbb478ec2de06",
+      "identityEvidence": "The wrapper this repository distributes for Jelly Mario declares this image as its own artwork (official-og).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "http://jellymar.io/jelly-mario.gif",
+      "title": "Jelly Mario",
+      "type": "official-og",
+      "url": "/artwork/cljellymario.webp"
+    },
+    "clkanyezone": {
+      "assetSha256": "c457a72a13d2bd5c85b6f193cb526caca7f43e72aa1ddc145215669d82634af4",
+      "identityEvidence": "The wrapper this repository distributes for Kanye Zone declares this image as its own artwork (official-og).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "http://www.kanyezone.com/images/facebooklike.jpg",
+      "title": "Kanye Zone",
+      "type": "official-og",
+      "url": "/artwork/clkanyezone.webp"
+    },
+    "clkartbros": {
+      "assetSha256": "c73c4848cd188f69df3c8a6381f11621f83735404483d7686ebfb4157970cfe1",
+      "identityEvidence": "The wrapper this repository distributes for Kart Bros declares this image as its own artwork (official-og).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://kartbros.io/TemplateData/kartbros_embed.jpg",
+      "title": "Kart Bros",
+      "type": "official-og",
+      "url": "/artwork/clkartbros.webp"
+    },
+    "clleverwarriors": {
+      "assetSha256": "5efab41cf08fca1e509d7a8c8ece1a40943567cf68a1f343ad2855fc6301d90a",
+      "identityEvidence": "The wrapper this repository distributes for Lever Warriors declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/leverwarriors/TemplateData/favicon.ico",
+      "title": "Lever Warriors",
+      "type": "official-icon",
+      "url": "/artwork/clleverwarriors.webp"
+    },
+    "cllummm": {
+      "assetSha256": "5efab41cf08fca1e509d7a8c8ece1a40943567cf68a1f343ad2855fc6301d90a",
+      "identityEvidence": "The wrapper this repository distributes for Lummm declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/deformed-steve/The-Cheese-Stash@main/games/mmm/TemplateData/favicon.ico",
+      "title": "Lummm",
+      "type": "official-icon",
+      "url": "/artwork/cllummm.webp"
+    },
+    "clmcfpsfbhd": {
+      "assetSha256": "5efab41cf08fca1e509d7a8c8ece1a40943567cf68a1f343ad2855fc6301d90a",
+      "identityEvidence": "The wrapper this repository distributes for MCFP SF BHD declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/fueledbyhotdogs/TemplateData/favicon.ico",
+      "title": "MCFP SF BHD",
+      "type": "official-icon",
+      "url": "/artwork/clmcfpsfbhd.webp"
+    },
+    "clmonsterderby": {
+      "assetSha256": "738a0f3bce9e46e64894c05cbd4db4a6da898ebab7758cfb5526e6d7170f4f4e",
+      "identityEvidence": "The wrapper this repository distributes for Monster Derby declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/shayderrr/portsv2@main/monsterderby/logo.png",
+      "title": "Monster Derby",
+      "type": "game-asset",
+      "url": "/artwork/clmonsterderby.webp"
+    },
+    "clmonstertruckportstunt": {
+      "assetSha256": "f4e659def6568124db5e7a3abbe82ec0552086dc301c3396cbcd0b8b6bd7110e",
+      "identityEvidence": "The wrapper this repository distributes for Monster Truck Port Stunt declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/mailgma-class/mos@main/TemplateData/favicon.ico",
+      "title": "Monster Truck Port Stunt",
+      "type": "official-icon",
+      "url": "/artwork/clmonstertruckportstunt.webp"
+    },
+    "clnetattack": {
+      "assetSha256": "5efab41cf08fca1e509d7a8c8ece1a40943567cf68a1f343ad2855fc6301d90a",
+      "identityEvidence": "The wrapper this repository distributes for Net Attack declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/net.attack/TemplateData/favicon.ico",
+      "title": "Net Attack",
+      "type": "official-icon",
+      "url": "/artwork/clnetattack.webp"
+    },
+    "clninjaobbyparkor": {
+      "assetSha256": "b8c232fe7fc4cb4f4e4bfbe54626bdf94ae786f9f99fb379855c1c4adf31ca5f",
+      "identityEvidence": "The wrapper this repository distributes for Ninja Obby Parkour declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/664x-main/TemplateData/logo.png",
+      "title": "Ninja Obby Parkour",
+      "type": "game-asset",
+      "url": "/artwork/clninjaobbyparkor.webp"
+    },
+    "clomegalayers": {
+      "assetSha256": "00461287b96828826b278dcf7b50a73dac771629fbc00cb9b60b56b403a5b441",
+      "identityEvidence": "The wrapper this repository distributes for Omega Layers declares this image as its own artwork (official-og).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://veprogames.github.io/omega-layers/cover.png",
+      "title": "Omega Layers",
+      "type": "official-og",
+      "url": "/artwork/clomegalayers.webp"
+    },
+    "clonlyup": {
+      "assetSha256": "c0cecd1054d6760e1464d607d89cdf612dc911a4e7c966b08f9a3a51b5d3b9cf",
+      "identityEvidence": "The wrapper this repository distributes for Only Up declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/sz-games/Games8@d12ca56d8b0a51ee19122003c75987a349816837/only-up/icon.png",
+      "title": "Only Up",
+      "type": "game-asset",
+      "url": "/artwork/clonlyup.webp"
+    },
+    "clovo2": {
+      "assetSha256": "72466a25956af4062973704b41bcf3457a019053872798f6738d42b44fe3a85c",
+      "identityEvidence": "The wrapper this repository distributes for OvO 2 declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/ov464534asa4rb/786132@main/icons/icon-256.png",
+      "title": "OvO 2",
+      "type": "official-icon",
+      "url": "/artwork/clovo2.webp"
+    },
+    "clpaperio": {
+      "assetSha256": "69f670b81b50dcb2b8890fa2512e1e72bca21c2199aac5f5a54758b084f5be69",
+      "identityEvidence": "The wrapper this repository distributes for Paper.io declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/MartinTintin3/melvin-games@e4de505d194355c344977981cdf3b2cfe5075c52/games/paper.io-2/images/logo.png",
+      "title": "Paper.io",
+      "type": "game-asset",
+      "url": "/artwork/clpaperio.webp"
+    },
+    "clpinkbike": {
+      "assetSha256": "cdb00aabe760cf3abb8eefec1aa40b0308b1ac97553d3c8c9948d0e815911255",
+      "identityEvidence": "The wrapper this repository distributes for Pink Bike declares this image as its own artwork (official-og).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://es.pinkbike.org/246/sprt/i/share/grimdonutgame.jpg",
+      "title": "Pink Bike",
+      "type": "official-og",
+      "url": "/artwork/clpinkbike.webp"
+    },
+    "clpogo3d": {
+      "assetSha256": "5efab41cf08fca1e509d7a8c8ece1a40943567cf68a1f343ad2855fc6301d90a",
+      "identityEvidence": "The wrapper this repository distributes for Pogo 3D declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/pogo3D/TemplateData/favicon.ico",
+      "title": "Pogo 3D",
+      "type": "official-icon",
+      "url": "/artwork/clpogo3d.webp"
+    },
+    "clrussiansandbox": {
+      "assetSha256": "e57d094c00ead556de49a6a1296c50e7954fc2324a8954efeac19c440e53aa84",
+      "identityEvidence": "The wrapper this repository distributes for Russian Sandbox declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/shayderrr/portsv2@main/sandbox/icon.png",
+      "title": "Russian Sandbox",
+      "type": "game-asset",
+      "url": "/artwork/clrussiansandbox.webp"
+    },
+    "clsandboxels": {
+      "assetSha256": "6189cffd886564b8dec80171cffa00936f653f25818a89ab27b6cfb73bda289d",
+      "identityEvidence": "The wrapper this repository distributes for Sandboxels declares this image as its own artwork (official-og).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://sandboxels.r74n.com/icons/cover-3840x1240px-text.png",
+      "title": "Sandboxels",
+      "type": "official-og",
+      "url": "/artwork/clsandboxels.webp"
+    },
+    "clsevendays": {
+      "assetSha256": "f4e659def6568124db5e7a3abbe82ec0552086dc301c3396cbcd0b8b6bd7110e",
+      "identityEvidence": "The wrapper this repository distributes for Seven Days declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/school-management-google/readme@main/TemplateData/favicon.ico",
+      "title": "Seven Days",
+      "type": "official-icon",
+      "url": "/artwork/clsevendays.webp"
+    },
+    "clshadowcourier": {
+      "assetSha256": "5efab41cf08fca1e509d7a8c8ece1a40943567cf68a1f343ad2855fc6301d90a",
+      "identityEvidence": "The wrapper this repository distributes for Shadow Courier declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/familiapablo/safa@main/TemplateData/favicon.ico",
+      "title": "Shadow Courier",
+      "type": "official-icon",
+      "url": "/artwork/clshadowcourier.webp"
+    },
+    "clsilk": {
+      "assetSha256": "202253788f66d6159cee815c53a12e441565cbeb0df92c2686ecc980bb74ac52",
+      "identityEvidence": "The wrapper this repository distributes for Silk declares this image as its own artwork (official-og).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "http://weavesilk.com/img/silk_thumb.png",
+      "title": "Silk",
+      "type": "official-og",
+      "url": "/artwork/clsilk.webp"
+    },
+    "clsilkmelody": {
+      "assetSha256": "f4e659def6568124db5e7a3abbe82ec0552086dc301c3396cbcd0b8b6bd7110e",
+      "identityEvidence": "The wrapper this repository distributes for Silk Melody declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/shayderrr/portsv4@main/7448601/TemplateData/favicon.ico",
+      "title": "Silk Melody",
+      "type": "official-icon",
+      "url": "/artwork/clsilkmelody.webp"
+    },
+    "clskibidiinthebackrooms": {
+      "assetSha256": "07077b4ead48199ab6a6acb4193e6b22f01fbd4a2e65cd3790280bb3220240ae",
+      "identityEvidence": "The wrapper this repository distributes for Skibidi in the Backrooms declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/dayyiq/teyetey@main/icons/icon-256.png",
+      "title": "Skibidi in the Backrooms",
+      "type": "official-icon",
+      "url": "/artwork/clskibidiinthebackrooms.webp"
+    },
+    "clsmashkarts": {
+      "assetSha256": "a4eeb995d67a58531d01ac6fba428c2293844ba4ac2a2469dde2eaad21743b7f",
+      "identityEvidence": "The wrapper this repository distributes for Smash Karts declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://gamemonetize.com/gamemonetize-logo.png",
+      "title": "Smash Karts",
+      "type": "game-asset",
+      "url": "/artwork/clsmashkarts.webp"
+    },
+    "clsoniccdmobile": {
+      "assetSha256": "6123315343c0f0582deec6b18496e8cc096df18385b6b4612f5bcd54b933b4d8",
+      "identityEvidence": "The wrapper this repository distributes for Sonic CD Mobile declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-soniccd@main/image_2026-02-28_164525280.png",
+      "title": "Sonic CD Mobile",
+      "type": "official-icon",
+      "url": "/artwork/clsoniccdmobile.webp"
+    },
+    "clsonicmaniaplus": {
+      "assetSha256": "0a2a5a99b978c9a5256f993d4bc88d647a2814be6d6826e321ba792d84ff0b38",
+      "identityEvidence": "The wrapper this repository distributes for Sonic Mania Plus declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/UGBONTOP/Sonic-Mania-InYourBrowser@main/image_2026-02-26_224423134.png",
+      "title": "Sonic Mania Plus",
+      "type": "official-icon",
+      "url": "/artwork/clsonicmaniaplus.webp"
+    },
+    "clstickslasher": {
+      "assetSha256": "f4e659def6568124db5e7a3abbe82ec0552086dc301c3396cbcd0b8b6bd7110e",
+      "identityEvidence": "The wrapper this repository distributes for Stick Slasher declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/stickslasher/TemplateData/favicon.ico",
+      "title": "Stick Slasher",
+      "type": "official-icon",
+      "url": "/artwork/clstickslasher.webp"
+    },
+    "clsupercold": {
+      "assetSha256": "36d52644768326118e0fd15417571569434cc6a27e34ebbf7daea3e6dbfd3de3",
+      "identityEvidence": "The wrapper this repository distributes for Super Cold declares this image as its own artwork (official-og).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://import-this.github.io/supercold/img/wallpaper.png",
+      "title": "Super Cold",
+      "type": "official-og",
+      "url": "/artwork/clsupercold.webp"
+    },
+    "clswingforbrainrots": {
+      "assetSha256": "14db9db391bb572b47cab2760a213b790a1ef2aee06aebb655bbb185053a68b0",
+      "identityEvidence": "The wrapper this repository distributes for Swing for Brain Rots declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/testamalame/10086@main/logo.png",
+      "title": "Swing for Brain Rots",
+      "type": "game-asset",
+      "url": "/artwork/clswingforbrainrots.webp"
+    },
+    "cltallio": {
+      "assetSha256": "f4e659def6568124db5e7a3abbe82ec0552086dc301c3396cbcd0b8b6bd7110e",
+      "identityEvidence": "The wrapper this repository distributes for Tall.io declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/shayderrr/portsv2@main/tall.io/TemplateData/favicon.ico",
+      "title": "Tall.io",
+      "type": "official-icon",
+      "url": "/artwork/cltallio.webp"
+    },
+    "cltimeshooter2": {
+      "assetSha256": "805660e6377b6870845916c6817fe077819c6be205db1fb2a0ab33c6286e6d71",
+      "identityEvidence": "The wrapper this repository distributes for Time Shooter 2 declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/mistirk/googleapis@499ff451605f5a085318b5d6252b4e1d93f456d1/grafeas/v1/logo.png",
+      "title": "Time Shooter 2",
+      "type": "game-asset",
+      "url": "/artwork/cltimeshooter2.webp"
+    },
+    "cltimeshooter3": {
+      "assetSha256": "62ee060cf9b5874e988142fc80a7e3483bef4cb7a3a7620f62dd8aa156ab3360",
+      "identityEvidence": "The wrapper this repository distributes for Time Shooter 3 declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/mistirk/google@eebffdf79a14f6e01e153d5cd4bed23c432874fb/version/time-s3/logo.png",
+      "title": "Time Shooter 3",
+      "type": "game-asset",
+      "url": "/artwork/cltimeshooter3.webp"
+    },
+    "clundertaleyellow": {
+      "assetSha256": "a709f78338aa231262b054a3caa95c5eca48faa689397fd915849a0653a71f14",
+      "identityEvidence": "The wrapper this repository distributes for Undertale Yellow declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/1e295a49108e716ce8ab7eba0c8dca7d/9326265e4f1b14345a3bdab6f8ffad0e2e7ab3fda920c5f0f095f77359af00aeae22591c5bc4914c84c13d99eb62091d7ce7@main/utyweb/fav.ico",
+      "title": "Undertale Yellow",
+      "type": "official-icon",
+      "url": "/artwork/clundertaleyellow.webp"
+    },
+    "cluzg": {
+      "assetSha256": "f4e659def6568124db5e7a3abbe82ec0552086dc301c3396cbcd0b8b6bd7110e",
+      "identityEvidence": "The wrapper this repository distributes for UZG declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/UGZ/TemplateData/favicon.ico",
+      "title": "UZG",
+      "type": "official-icon",
+      "url": "/artwork/cluzg.webp"
+    },
+    "clvaportrails": {
+      "assetSha256": "f4e659def6568124db5e7a3abbe82ec0552086dc301c3396cbcd0b8b6bd7110e",
+      "identityEvidence": "The wrapper this repository distributes for Vapor Trails declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/Vapor%20Trails/TemplateData/favicon.ico",
+      "title": "Vapor Trails",
+      "type": "official-icon",
+      "url": "/artwork/clvaportrails.webp"
+    },
+    "clvex4": {
+      "assetSha256": "528d3f414ad41de1c63d23b294bde1c2286c938829366c2911bed3b542feb9e1",
+      "identityEvidence": "The wrapper this repository distributes for Vex 4 declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/CFiltered/Matt@50f9c1bd0d376b40cb8545519b147a4030598724/other/vex4/vex4.png",
+      "title": "Vex 4",
+      "type": "official-icon",
+      "url": "/artwork/clvex4.webp"
+    },
+    "clvex5": {
+      "assetSha256": "78d5e0aa3fb21b347a59717195400a67a416924909d40393c89772fd66da0d9a",
+      "identityEvidence": "The wrapper this repository distributes for Vex 5 declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/EXM1LITARY/lio@7beab336469d96d153903e03dfe089ff2d2b035c/other/vex5/vex.jpeg",
+      "title": "Vex 5",
+      "type": "official-icon",
+      "url": "/artwork/clvex5.webp"
+    },
+    "clwordle": {
+      "assetSha256": "3b556a9ad28acaeb1ea3be0ff476a7c32e8d04aca701926b3adfb4894fe7e41b",
+      "identityEvidence": "The wrapper this repository distributes for Wordle declares this image as its own artwork (official-icon).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/Nailington/3kh0-assets@aeb371b7e88542fd5e61eeed9e967a446d84fe1b/wordle/img/logo_192x192.png",
+      "title": "Wordle",
+      "type": "official-icon",
+      "url": "/artwork/clwordle.webp"
+    },
+    "pvzm": {
+      "assetSha256": "f2d60881795af775ad245c787ab349cd1634adfe736c8b2284369bc2bb413180",
+      "identityEvidence": "The wrapper this repository distributes for PvZ Multiplayer declares this image as its own artwork (official-og).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://pvzm.net/game/images/gamethumbnail5.png",
+      "title": "PvZ Multiplayer",
+      "type": "official-og",
+      "url": "/artwork/pvzm.webp"
+    },
+    "time-shooter-3": {
+      "assetSha256": "62ee060cf9b5874e988142fc80a7e3483bef4cb7a3a7620f62dd8aa156ab3360",
+      "identityEvidence": "The wrapper this repository distributes for Time Shooter 3: SWAT declares this image as its own artwork (game-asset).",
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request.",
+      "source": "https://cdn.jsdelivr.net/gh/mistirk/google@eebffdf79a14f6e01e153d5cd4bed23c432874fb/version/time-s3/logo.png",
+      "title": "Time Shooter 3: SWAT",
+      "type": "game-asset",
+      "url": "/artwork/time-shooter-3.webp"
+    }
+  },
+  "screens": {
+    "cl1": {
+      "assetSha256": "8f898b6c103d799b23e5607195408710625cdd7e467d74ecb4426eba550de677",
+      "identityEvidence": "Captured from the 1 (Classic) wrapper this repository serves at /games/cl1.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 636,
+        "stddev": 28.27,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl1.html",
+      "title": "1 (Classic)",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl1.webp"
+    },
+    "cl100in1nes": {
+      "assetSha256": "450ced2b396aad4cb69f7a7b1318abe684e9893f7272130dad7d7273c8a2749b",
+      "identityEvidence": "Captured from the 100 in 1 NES wrapper this repository serves at /games/cl100in1nes.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 31,
+        "stddev": 13.91,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl100in1nes.html",
+      "title": "100 in 1 NES",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl100in1nes.webp"
+    },
+    "cl100roomsofenemies": {
+      "assetSha256": "dbfc06f86f6b4c69048d20fe9aecf050187f66ed10f17cbd4745d9ce29f29aab",
+      "identityEvidence": "Captured from the 100 Rooms of Enemies wrapper this repository serves at /games/cl100RoomsOfEnemies.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 32,
+        "stddev": 14.98,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl100RoomsOfEnemies.html",
+      "title": "100 Rooms of Enemies",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl100roomsofenemies.webp"
+    },
+    "cl10bullets": {
+      "assetSha256": "ddc4598de7da7a007bca5a606acfed8d88b791055607ff90941a79accdb7fefd",
+      "identityEvidence": "Captured from the 10 Bullets wrapper this repository serves at /games/cl10bullets.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 1271,
+        "stddev": 31.97,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl10bullets.html",
+      "title": "10 Bullets",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl10bullets.webp"
+    },
+    "cl10minutestildawn": {
+      "assetSha256": "626f0545b2173d140f9871abfdd257d55d91db9981a13f51d2925c1f4e962922",
+      "identityEvidence": "Captured from the 10 Minutes Till Dawn wrapper this repository serves at /games/cl10minutestildawn.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 548,
+        "stddev": 14.46,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl10minutestildawn.html",
+      "title": "10 Minutes Till Dawn",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl10minutestildawn.webp"
+    },
+    "cl10morebullets": {
+      "assetSha256": "2e6be2966e897da5d936d3fbff5f748d6946da74d32691c4b1b4d96c3576399c",
+      "identityEvidence": "Captured from the 10 More Bullets wrapper this repository serves at /games/cl10morebullets.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 1290,
+        "stddev": 31.98,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl10morebullets.html",
+      "title": "10 More Bullets",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl10morebullets.webp"
+    },
+    "cl12minibattles": {
+      "assetSha256": "34b838d10580028d34862416f9c47aa9f27256f37e3d06c7e334c9b75770a628",
+      "identityEvidence": "Captured from the 12 Mini Battles wrapper this repository serves at /games/cl12minibattles.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 9520,
+        "stddev": 41.06,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl12minibattles.html",
+      "title": "12 Mini Battles",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl12minibattles.webp"
+    },
+    "cl13bones": {
+      "assetSha256": "cfefa734c232472fd1b2df9957dc74c8b50936cebfba07d714a09a17995109f1",
+      "identityEvidence": "Captured from the 13 Bones wrapper this repository serves at /games/cl13bones.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 28,
+        "stddev": 64.7,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl13bones.html",
+      "title": "13 Bones",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl13bones.webp"
+    },
+    "cl1on1soccer": {
+      "assetSha256": "21442f1f2d2aa389b221a62d8257b603b0c90ff73b99ec83a0ff481dbdb2edeb",
+      "identityEvidence": "Captured from the 1 on 1 Soccer wrapper this repository serves at /games/cl1on1soccer.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 1291,
+        "stddev": 53.18,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl1on1soccer.html",
+      "title": "1 on 1 Soccer",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl1on1soccer.webp"
+    },
+    "cl1v1lol": {
+      "assetSha256": "0b1ec13e23b0364dc4f26b4338f3bfef37ec11bed963448266fae8e90b656dc6",
+      "identityEvidence": "Captured from the 1v1.LOL wrapper this repository serves at /games/cl1v1lol.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 71959,
+        "stddev": 54.68,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl1v1lol.html",
+      "title": "1v1.LOL",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl1v1lol.webp"
+    },
+    "cl2048cupcakes": {
+      "assetSha256": "142f75dbf58982a1f4cd426d00211513a99100d5e42a18bdb69bbdb77912f9a2",
+      "identityEvidence": "Captured from the 2048 Cupcakes wrapper this repository serves at /games/cl2048cupcakes.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 3490,
+        "stddev": 28.26,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl2048cupcakes.html",
+      "title": "2048 Cupcakes",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl2048cupcakes.webp"
+    },
+    "cl234playergame": {
+      "assetSha256": "14fc8804405aeb381a26b03746637d43882173b192570fb3c8493dd60618c239",
+      "identityEvidence": "Captured from the 2-3-4 Player Game wrapper this repository serves at /games/cl234playergame.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 2279,
+        "stddev": 13.59,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl234playergame.html",
+      "title": "2-3-4 Player Game",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl234playergame.webp"
+    },
+    "cl2doom": {
+      "assetSha256": "842518ba08a16420d1c1cbc43204c0228058c0109191ff2fb2b5c6169f7f9ff3",
+      "identityEvidence": "Captured from the 2 Doom wrapper this repository serves at /games/cl2doom.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 172,
+        "stddev": 48.93,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl2doom.html",
+      "title": "2 Doom",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl2doom.webp"
+    },
+    "cl2dshooting": {
+      "assetSha256": "b65cb287c19950cb1b77f555f5565a95c46810c02e1c70dbfde5531f3450231e",
+      "identityEvidence": "Captured from the 2D Shooting wrapper this repository serves at /games/cl2Dshooting.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 512,
+        "stddev": 30.17,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl2Dshooting.html",
+      "title": "2D Shooting",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl2dshooting.webp"
+    },
+    "cl3dash": {
+      "assetSha256": "ee1899b6e1112cf67f5a2183ed2e0af9caf8d1836596427d8d1314d801417753",
+      "identityEvidence": "Captured from the 3 Dash wrapper this repository serves at /games/cl3dash.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 406,
+        "stddev": 14.49,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl3dash.html",
+      "title": "3 Dash",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl3dash.webp"
+    },
+    "cl3dpinballspacecadet": {
+      "assetSha256": "cf43d16b2fb3edd32577272aec968a6f15fa8926a7c74bb1dee5140b612b8f49",
+      "identityEvidence": "Captured from the 3D Pinball: Space Cadet wrapper this repository serves at /games/cl3dpinballspacecadet.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 242,
+        "stddev": 44.24,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl3dpinballspacecadet.html",
+      "title": "3D Pinball: Space Cadet",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl3dpinballspacecadet.webp"
+    },
+    "cl3pandas": {
+      "assetSha256": "21442f1f2d2aa389b221a62d8257b603b0c90ff73b99ec83a0ff481dbdb2edeb",
+      "identityEvidence": "Captured from the 3 Pandas wrapper this repository serves at /games/cl3pandas.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 1291,
+        "stddev": 53.18,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl3pandas.html",
+      "title": "3 Pandas",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl3pandas.webp"
+    },
+    "cl3pandasbrazil": {
+      "assetSha256": "b1246df8c4b58d99dc791e73ae1cd6c31c8dc14bb6e3e82e2439b3955959b78e",
+      "identityEvidence": "Captured from the 3 Pandas in Brazil wrapper this repository serves at /games/cl3pandasbrazil.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 960,
+        "stddev": 41.32,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl3pandasbrazil.html",
+      "title": "3 Pandas in Brazil",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl3pandasbrazil.webp"
+    },
+    "cl3pandasfantasy": {
+      "assetSha256": "21442f1f2d2aa389b221a62d8257b603b0c90ff73b99ec83a0ff481dbdb2edeb",
+      "identityEvidence": "Captured from the 3 Pandas Fantasy wrapper this repository serves at /games/cl3pandasfantasy.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 1291,
+        "stddev": 53.18,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl3pandasfantasy.html",
+      "title": "3 Pandas Fantasy",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl3pandasfantasy.webp"
+    },
+    "cl3pandasjapan": {
+      "assetSha256": "21442f1f2d2aa389b221a62d8257b603b0c90ff73b99ec83a0ff481dbdb2edeb",
+      "identityEvidence": "Captured from the 3 Pandas in Japan wrapper this repository serves at /games/cl3pandasjapan.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 1291,
+        "stddev": 53.18,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl3pandasjapan.html",
+      "title": "3 Pandas in Japan",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl3pandasjapan.webp"
+    },
+    "cl3pandasnight": {
+      "assetSha256": "21442f1f2d2aa389b221a62d8257b603b0c90ff73b99ec83a0ff481dbdb2edeb",
+      "identityEvidence": "Captured from the 3 Pandas Night wrapper this repository serves at /games/cl3pandasnight.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 1291,
+        "stddev": 53.18,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl3pandasnight.html",
+      "title": "3 Pandas Night",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl3pandasnight.webp"
+    },
+    "cl3slices2": {
+      "assetSha256": "21442f1f2d2aa389b221a62d8257b603b0c90ff73b99ec83a0ff481dbdb2edeb",
+      "identityEvidence": "Captured from the 3 Slices 2 wrapper this repository serves at /games/cl3slices2.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 1291,
+        "stddev": 53.18,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl3slices2.html",
+      "title": "3 Slices 2",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl3slices2.webp"
+    },
+    "cl4thandgoal": {
+      "assetSha256": "cf8142f6d8998bc2186f8dc738b6bc34498777bba20754bfded19686365e2f4f",
+      "identityEvidence": "Captured from the 4th and Goal wrapper this repository serves at /games/cl4thandgoal.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 411,
+        "stddev": 74.85,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl4thandgoal.html",
+      "title": "4th and Goal",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl4thandgoal.webp"
+    },
+    "cl60secondsburgerrun": {
+      "assetSha256": "21442f1f2d2aa389b221a62d8257b603b0c90ff73b99ec83a0ff481dbdb2edeb",
+      "identityEvidence": "Captured from the 60 Seconds Burger Run wrapper this repository serves at /games/cl60secondsburgerrun.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 1291,
+        "stddev": 53.18,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl60secondsburgerrun.html",
+      "title": "60 Seconds Burger Run",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl60secondsburgerrun.webp"
+    },
+    "cl60secondssantarun": {
+      "assetSha256": "a3b246b6ba3a94564405cd70d4fd5d937ad5f0dadb8fbddc5a17ee6955bf20d9",
+      "identityEvidence": "Captured from the 60 Seconds Santa Run wrapper this repository serves at /games/cl60secondssantarun.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 1268,
+        "stddev": 31.94,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl60secondssantarun.html",
+      "title": "60 Seconds Santa Run",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl60secondssantarun.webp"
+    },
+    "cl64in1nes": {
+      "assetSha256": "450ced2b396aad4cb69f7a7b1318abe684e9893f7272130dad7d7273c8a2749b",
+      "identityEvidence": "Captured from the 64 in 1 NES wrapper this repository serves at /games/cl64in1nes.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 31,
+        "stddev": 13.91,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl64in1nes.html",
+      "title": "64 in 1 NES",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl64in1nes.webp"
+    },
+    "cl8ballpool": {
+      "assetSha256": "21442f1f2d2aa389b221a62d8257b603b0c90ff73b99ec83a0ff481dbdb2edeb",
+      "identityEvidence": "Captured from the 8 Ball Pool wrapper this repository serves at /games/cl8ballpool.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 1291,
+        "stddev": 53.18,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl8ballpool.html",
+      "title": "8 Ball Pool",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl8ballpool.webp"
+    },
+    "cl9007199254740992": {
+      "assetSha256": "824a72e0440fdf3c1eb141e9210ae7b3a33a786b2a0ea29d7474ff30ef2ff066",
+      "identityEvidence": "Captured from the 9007199254740992 wrapper this repository serves at /games/cl9007199254740992.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 27,
+        "stddev": 29.44,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl9007199254740992.html",
+      "title": "9007199254740992",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl9007199254740992.webp"
+    },
+    "cl99balls": {
+      "assetSha256": "e118109e044903a0a4ef62256f3c78fe356729709530ec2b3ebc6b6015866b3f",
+      "identityEvidence": "Captured from the 99 Balls wrapper this repository serves at /games/cl99balls.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 5935,
+        "stddev": 104.09,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl99balls.html",
+      "title": "99 Balls",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl99balls.webp"
+    },
+    "cl99nightsitf": {
+      "assetSha256": "d7723fbad0a74d8c3db01efffa0b1e28dfc05a3b32686b3e5b481a92798a7bd8",
+      "identityEvidence": "Captured from the 99 Nights in the Forest wrapper this repository serves at /games/cl99nightsitf.html after it initialised in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "signal": {
+        "colors": 93,
+        "stddev": 72.23,
+        "usable": true
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul/public/games/cl99nightsitf.html",
+      "title": "99 Nights in the Forest",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl99nightsitf.webp"
+    }
+  }
+}

@@ -35,3 +35,37 @@ Specification: Geegle-final-prompt-7-percent-stop.md, supplied 2026-11-25. Conti
 
 - **Recovered cloud-save patch:** `d3ba148` contains three game-specific adapters and additive revision migration. The local tests cover restore, conflicts, retries, and the missing-migration failure. Real database and browser testing are outstanding. The frontend disables cloud uploads when the migration is absent. Production migration and frontend rollout require coordinated approval after isolated verification.
 - **Entry gate:** local code uses the public database RPC, not the separate edge function described in README. Password is public in repository history and static game assets are accessible directly; the gate is not a security boundary. Verify actual RPC behavior and correct documentation without exposing credentials or claiming access control.
+
+## Cloud-save hardening audit (2026-11-25)
+
+Independent inspection of `ba0b634` reported ten defects. Status of each, with the
+change that addresses it and the evidence that covers it:
+
+| # | Defect | Resolution | Evidence |
+|---|--------|------------|----------|
+| 1 | Shim read unscoped legacy storage for every account | Legacy keys are adopted **once per game** into the first account's namespace, guarded by `geegle-legacy-adopted:<gameId>`; later accounts read nothing | `tests/storage-shim.test.mjs` "legacy progress is adopted once" |
+| 2 | `removeItem` deleted unscoped keys (other games/platform state) | `removeItem` now only touches the scoped key; `clear()` only the game's keys | "removeItem never deletes unscoped keys", "clear only removes this account's keys" |
+| 3 | IndexedDB ownership inferred from databases created during play | Ownership is now explicit: the shim prefixes every database name with `geegle-game:<gameId>:<userId>:`, and the adapter only ever reads/deletes names under that prefix | "IndexedDB names are namespaced per game and account", "capture ignores databases that are not this account's" |
+| 4 | Restore deleted and recreated arbitrary databases | `validate` + `restore` both reject any database name outside the caller's namespace, plus version/store/record limits | "a save cannot reference a database outside this game/account namespace" |
+| 5 | Blocked delete treated as success | `deleteDatabase` rejects on `onblocked`/`onerror`; the restore fails and writes nothing | "a blocked database delete fails the restore instead of reporting success" |
+| 6 | Account switch could expose the previous account's progress | Isolation is structural (account in every key and database name), applied before the cloud read; an isolation failure blocks the frame from opening (`canLaunch()`) | Browser check below; "isolation is structural and independent of any delete" |
+| 7 | Every local game claimed automatic saves | Support comes from a generated coverage table (`scripts/generate-save-coverage.mjs`); cross-origin embeds and >24 MB single-file builds are reported unsupported/external | `src/data/saveCoverage.ts`, `saveSupportFor` |
+| 8 | Dynamic scripts, property access, nested frames, engine storage | Shim is Proxy-based (property get/set/delete/enumeration), installs into same-origin nested frames, scopes `sessionStorage` and `indexedDB`; injection happens before game scripts via the service worker | `tests/storage-shim.test.mjs`; browser check below |
+| 9 | Game code could reach platform tokens/unrelated storage | In-page unscoped localStorage/sessionStorage/IndexedDB are hidden from the game. **Residual:** a game can still reach `window.parent` storage because frames are same-origin; closing that requires moving the session off `localStorage`, which is not part of this change | Documented limitation, not claimed as fixed |
+| 10 | Imported saves not checked against the game | v3 snapshots carry `gameId`; `validate(snapshot, userId)` rejects other games and the import path passes the signed-in user | "a save from another game is rejected, not restored" |
+
+Coverage mechanism: editing 2,800 wrappers would rewrite ~1.5 GB of game blobs, so
+`public/geegle-sw.js` injects `/games/geegle-storage-shim.js` into every
+`/games/*.html` navigation at response time (absolute URL, because wrappers set
+`<base href>`). Table: 2830 injectable, 63 cross-origin-only wrappers, 26 oversize
+builds; engine markers observed: 535 Unity, 575 Ruffle, 64 Emscripten.
+
+Browser verification (local Chromium, Vite dev server, `cl2048.html` which sets a
+CDN `<base>`): service worker `activated`; shim present with prefix
+`geegle-game:cl2048:1111…:`; probe value written through `localStorage`; IndexedDB
+`probeDb` created and then listed from the unshimmed app page as
+`geegle-game:cl2048:11111111-…:probeDb`; account `2222…` saw `null`, zero keys and
+no databases; account `1111…` read `acct-A` again afterwards.
+
+Checks: `npm run typecheck` 0, `npm run lint` 0, `npm run build` ok,
+`npm test` (`bun test tests`) 49 pass / 0 fail across 9 files.

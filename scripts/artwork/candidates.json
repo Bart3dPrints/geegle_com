@@ -1,0 +1,1251 @@
+{
+  "generated": "scripts/artwork/scan-candidates.mjs",
+  "stats": {
+    "games": 2615,
+    "withCandidate": 114,
+    "remote": 114,
+    "local": 0
+  },
+  "candidates": {
+    "cl2048": {
+      "title": "2048",
+      "file": "cl2048.html",
+      "candidates": [
+        {
+          "kind": "official-og",
+          "remote": "http://gabrielecirulli.github.io/2048/meta/og_image.png"
+        }
+      ]
+    },
+    "cl3dasheditor": {
+      "title": "3 Dash Editor",
+      "file": "cl3dasheditor.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/shayderrr/portsv2@main/3dasheditor/logo.png"
+        }
+      ]
+    },
+    "cladatewithdeath": {
+      "title": "A Date with Death",
+      "file": "cladatewithdeath.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/shayderrr/newports@77c469d583759817a3cdf97330fd1545f0a46f24/ADatewithDeath-2.4-web/web-presplash.jpg"
+        }
+      ]
+    },
+    "clangrybirdsslingshotfrenzy": {
+      "title": "Angry Birds Slingshot Frenzy",
+      "file": "clangrybirdsslingshotfrenzy.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/UGBONTOP/firebaseport-angrybirds-remaster/icons/icon-128.png"
+        },
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/UGBONTOP/firebaseport-angrybirds-remaster/icons/icon-256.png"
+        }
+      ]
+    },
+    "clastrosdreamland": {
+      "title": "Astros Dreamland",
+      "file": "clAstrosDreamland.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://static.wikia.nocookie.net/dandys-world-robloxhorror/images/9/92/Astro_Render.png"
+        }
+      ]
+    },
+    "clballsandbricks": {
+      "title": "Balls and Bricks",
+      "file": "clballsandbricks.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://35310661-713299160685702142.preview.editmysite.com/uploads/b/1285710-351987768514667200/files/assets/favicon/icon-150x150.png"
+        }
+      ]
+    },
+    "clbananasimulator": {
+      "title": "Banana Simulator",
+      "file": "clbananasimulator.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/bubbls/ruffle@ad6ffa3289c102eb4a4aced92a17e4ea291603d5/bananasim.png"
+        }
+      ]
+    },
+    "clbasketslamdunk2": {
+      "title": "Basket Slam Dunk 2",
+      "file": "clbasketslamdunk2.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/yrgen73/BSD2@174be0db9145f7375365bda889a200e5cd31bbe0/icons/icon-512.png"
+        }
+      ]
+    },
+    "clblockblast": {
+      "title": "Block Blast",
+      "file": "clblockblast.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/genizy/bl/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clbottlecracks": {
+      "title": "Bottle Cracks",
+      "file": "clbottlecracks.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/bottlecracks/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clbowlalt": {
+      "title": "Bowlalt",
+      "file": "clbowlalt.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://274079163-174037128449362058.preview.editmysite.com/uploads/b/139890129-899796311729593176/files/html5game/splash.png"
+        }
+      ]
+    },
+    "clbrawlstars": {
+      "title": "Brawl Stars",
+      "file": "clBrawlstars.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/ragdoi-archers/zort@main/icon.png"
+        }
+      ]
+    },
+    "clburgerandfrights": {
+      "title": "Burger and Frights",
+      "file": "clburgerandfrights.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/7nightz/selenitee@f7612ed1599a748d84fe5cbde422ad0062a971d0/semag/burgerandfrights/images/title.png"
+        }
+      ]
+    },
+    "clcarstuntsdriving": {
+      "title": "Car Stunts Driving",
+      "file": "clcarstuntsdriving.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/comt7xc6/c3@main/TemplateData/favicon.ico"
+        },
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/comt7xc6/c3@main/logo.png"
+        }
+      ]
+    },
+    "clcheesechompers3d": {
+      "title": "Cheese Chompers 3D",
+      "file": "clcheesechompers3d.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/classroomusers/notlook@main/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clchickenscream": {
+      "title": "Chicken Scream",
+      "file": "clchickenscream.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/UNITY/chickenscream/logo.png"
+        }
+      ]
+    },
+    "clchickencs": {
+      "title": "Chicken CS",
+      "file": "clChickenCS.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/greeniYT/gug@main/icons/chickenend.png"
+        }
+      ]
+    },
+    "clclimbforbrainrots": {
+      "title": "Climb for Brain Rots",
+      "file": "clclimbforbrainrots.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/shayderrr/idk@de44d061ae3c867a631b494762848a22aaacf334/climbforbrainrots/494990/o7iep38kbv6xwm980reqa1i23y9fsho6_brotli/logo.png"
+        }
+      ]
+    },
+    "clcookie-clicker": {
+      "title": "Cookie Clicker",
+      "file": "clcookie-clicker.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/UGBONTOP/UGB001.github.io.cookieclicker/img/favicon.ico"
+        }
+      ]
+    },
+    "clcrazycattle3d": {
+      "title": "Crazy Cattle 3D",
+      "file": "clcrazycattle3d.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/bubbls/cc3d-merge/index.icon.png"
+        },
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/bubbls/cc3d-merge/index.apple-touch-icon.png"
+        }
+      ]
+    },
+    "clcs1-6": {
+      "title": "CS 1.6",
+      "file": "clcs1.6.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/sel-lers/x@main/logo.png"
+        }
+      ]
+    },
+    "clcs6": {
+      "title": "CS 6",
+      "file": "clcs6.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/sel-lers/x@main/logo.png"
+        }
+      ]
+    },
+    "cldashio": {
+      "title": "Dashio",
+      "file": "cldashio.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/shayderrr/portsv2@main/dashio/TemplateData/logo.png"
+        }
+      ]
+    },
+    "cldimensionalincident": {
+      "title": "Dimensional Incident",
+      "file": "cldimensionalincident.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/shayderrr/portsv4@1198e4f0a43bc83d95e0383106a2a232df9e227f/15950502/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "cldodecadragons": {
+      "title": "Dodeca Dragons",
+      "file": "cldodecadragons.html",
+      "candidates": [
+        {
+          "kind": "official-og",
+          "remote": "https://demonin.com/games/dodecaDragons/img/logo.png"
+        }
+      ]
+    },
+    "cldogeminer": {
+      "title": "Doge Miner",
+      "file": "cldogeminer.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/Nailington/3kh0-assets@aeb371b7e88542fd5e61eeed9e967a446d84fe1b/DogeMiner/favicon.ico"
+        }
+      ]
+    },
+    "cldownthemountain": {
+      "title": "Down the Mountain",
+      "file": "cldownthemountain.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/tty67hlt6jf6/j@main/style/favicon.ico"
+        }
+      ]
+    },
+    "cldriftsimulator": {
+      "title": "Drift Simulator",
+      "file": "cldriftsimulator.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/rammyus/4563@main/logo.png"
+        }
+      ]
+    },
+    "cldubstep": {
+      "title": "Dubstep",
+      "file": "cldubstep.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/by5b/fdf@main/logo.png"
+        }
+      ]
+    },
+    "clducklingsio": {
+      "title": "Ducklings.io",
+      "file": "clducklingsio.html",
+      "candidates": [
+        {
+          "kind": "official-og",
+          "remote": "https://ducklings.io/img/thumb.png"
+        }
+      ]
+    },
+    "cledelweiss": {
+      "title": "Edelweiss",
+      "file": "cledelweiss.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/Edelweiss/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clescapeschoolduel": {
+      "title": "Escape School Duel",
+      "file": "clescapeschoolduel.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/shayderrr/portsv4@a797de52ff1ec8f9c0e0757dd6913ea21b841020/idk/files/games/g1/escape-school-duel-v5/TemplateData/logo.png"
+        }
+      ]
+    },
+    "clfeedthevoid": {
+      "title": "Feed the Void",
+      "file": "clfeedthevoid.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/shayderrr/idk@154a1cdd1b89bae93325b5dce09cb507c6c592f5/16471790/index.icon.png"
+        },
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/shayderrr/idk@154a1cdd1b89bae93325b5dce09cb507c6c592f5/16471790/index.apple-touch-icon.png"
+        }
+      ]
+    },
+    "clfireblob": {
+      "title": "Fire Blob",
+      "file": "clfireblob.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://gamemonetize.com/gamemonetize-logo.png"
+        }
+      ]
+    },
+    "clfivenightsatshreks": {
+      "title": "Five Nights at Shrek's",
+      "file": "clfivenightsatshreks.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/shayderrr/newports@501858e7d2d24dad4467463cdad972db0b19cd37/fivenightsatshrek/TemplateData/favicon.ico"
+        },
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/shayderrr/newports@501858e7d2d24dad4467463cdad972db0b19cd37/fivenightsatshrek/logo.png"
+        }
+      ]
+    },
+    "clfnafshooter": {
+      "title": "FNAF Shooter",
+      "file": "clfnafshooter.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/googleuserclassroomcontent/wassat@main/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clfnaw": {
+      "title": "FNAW",
+      "file": "clfnaw.html",
+      "candidates": [
+        {
+          "kind": "official-og",
+          "remote": "https://g.eags.us/fnaw/smile.jpg"
+        }
+      ]
+    },
+    "clfnfgodot": {
+      "title": "FNF: Godot",
+      "file": "clfnfgodot.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/shayderrr/newports@6923d8d3c6272e81d2d9d54440d4e2450c47e89b/fnf/index.icon.png"
+        }
+      ]
+    },
+    "clfunnyshooter22": {
+      "title": "Funny Shooter 22",
+      "file": "clfunnyshooter22.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://rawcdn.githack.com/hilfig3r/lolshooter2/97a7b3542843419db52216522a84a4f68a65a904/logo.png"
+        }
+      ]
+    },
+    "clgdlite": {
+      "title": "GD Lite",
+      "file": "clgdlite.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://e3334afd.cf-nate.pages.dev/0/g/geodash/game/splash.png"
+        }
+      ]
+    },
+    "clgeometrydashwave": {
+      "title": "Geometry Dash Wave",
+      "file": "clGeometryDashWave.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/RyGuy1375/RyGuy1375.github.io@main/Images/Logo.gif"
+        }
+      ]
+    },
+    "clgeometryvibes": {
+      "title": "Geometry Vibes",
+      "file": "clgeometryvibes.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/UNITY/geometryvibes/TemplateData/logo.png"
+        }
+      ]
+    },
+    "clgranny2": {
+      "title": "Granny 2",
+      "file": "clgranny2.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/m-e-64-cls/5@main/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clgranny22": {
+      "title": "Granny 22",
+      "file": "clgranny22.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/forms-docs-slides-glgl/ngng@main/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clgrannynightmare": {
+      "title": "Granny Nightmare",
+      "file": "clgrannynightmare.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/my-files-schoolum/o8k@main/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clgrowdenio": {
+      "title": "Growdenio",
+      "file": "clgrowdenio.html",
+      "candidates": [
+        {
+          "kind": "official-og",
+          "remote": "https://growden.io/background-og.webp"
+        },
+        {
+          "kind": "official-icon",
+          "remote": "https://growden.io/favicon/favicon.ico"
+        },
+        {
+          "kind": "official-icon",
+          "remote": "https://growden.io/favicon/android-chrome-192x192.png"
+        },
+        {
+          "kind": "official-icon",
+          "remote": "https://growden.io/favicon/android-chrome-512x512.png"
+        }
+      ]
+    },
+    "clhelltaker": {
+      "title": "Helltaker",
+      "file": "clHelltaker.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/wasm-rip/HellTaker-Web@main/helltakerweb/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clholebattle": {
+      "title": "Hole Battle",
+      "file": "clholebattle.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/shayderrr/portsv2@main/holebattle/TemplateData/favicon.ico"
+        },
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/shayderrr/portsv2@main/holebattle/logo.png"
+        }
+      ]
+    },
+    "clhuggywuggypixel": {
+      "title": "Huggy Wuggy Pixel",
+      "file": "clhuggywuggypixel.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/dayyiq/yyy6y6y6@main/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clicedodo": {
+      "title": "Icedodo",
+      "file": "clicedodo.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/genizy/ice-dodo@b950830c255518c930fbc2a0bd3182e7d4cc920c/assets/icons/duck.png"
+        },
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/genizy/ice-dodo@b950830c255518c930fbc2a0bd3182e7d4cc920c/assets/social_icons/discord.svg"
+        },
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/genizy/ice-dodo@b950830c255518c930fbc2a0bd3182e7d4cc920c/assets/social_icons/instagram.svg"
+        },
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/genizy/ice-dodo@b950830c255518c930fbc2a0bd3182e7d4cc920c/assets/social_icons/facebook.svg"
+        }
+      ]
+    },
+    "clinfinitecraft": {
+      "title": "Infinite Craft",
+      "file": "clinfinitecraft.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/genizy/google-class/nova-craft/vite.svg"
+        }
+      ]
+    },
+    "cljazzjackrabbit2": {
+      "title": "Jazz Jackrabbit 2",
+      "file": "cljazzjackrabbit2.html",
+      "candidates": [
+        {
+          "kind": "official-og",
+          "remote": "http://deat.tk/jazz2/images/logo.gif"
+        }
+      ]
+    },
+    "cljefflings": {
+      "title": "Jefflings",
+      "file": "cljefflings.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/jefflings/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "cljellymario": {
+      "title": "Jelly Mario",
+      "file": "cljellymario.html",
+      "candidates": [
+        {
+          "kind": "official-og",
+          "remote": "http://jellymar.io/jelly-mario.gif"
+        }
+      ]
+    },
+    "cljellytruck": {
+      "title": "Jelly Truck",
+      "file": "cljellytruck.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/MopNop/jello@6fc0bb6fff02f6a562752375b847a9e4ffb50c22/jellytruck/assets/launcher.png"
+        }
+      ]
+    },
+    "cljellytruckgood": {
+      "title": "Jelly Truck Good",
+      "file": "cljellytruckgood.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/MopNop/jello@6fc0bb6fff02f6a562752375b847a9e4ffb50c22/jellytruck/assets/launcher.png"
+        }
+      ]
+    },
+    "cljourneydownhill": {
+      "title": "Journey Downhill",
+      "file": "cljourneydownhill.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/tty67hlt6jf6/j@main/style/favicon.ico"
+        }
+      ]
+    },
+    "clkanyezone": {
+      "title": "Kanye Zone",
+      "file": "clkanyezone.html",
+      "candidates": [
+        {
+          "kind": "official-og",
+          "remote": "http://www.kanyezone.com/images/facebooklike.jpg"
+        }
+      ]
+    },
+    "clkaratebros": {
+      "title": "Karate Bros",
+      "file": "clkaratebros.html",
+      "candidates": [
+        {
+          "kind": "official-og",
+          "remote": "https://basketbros.io/karate/splash2.jpg"
+        }
+      ]
+    },
+    "clkartbros": {
+      "title": "Kart Bros",
+      "file": "clkartbros.html",
+      "candidates": [
+        {
+          "kind": "official-og",
+          "remote": "https://kartbros.io/TemplateData/kartbros_embed.jpg"
+        }
+      ]
+    },
+    "clletitconsume": {
+      "title": "Let It Consume",
+      "file": "clletitconsume.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/shayderrr/portsv4@main/let-it-consume/index.icon.png"
+        },
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/shayderrr/portsv4@main/let-it-consume/index.apple-touch-icon.png"
+        }
+      ]
+    },
+    "clleverwarriors": {
+      "title": "Lever Warriors",
+      "file": "clleverwarriors.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/leverwarriors/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "cllummm": {
+      "title": "Lummm",
+      "file": "cllummm.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/deformed-steve/The-Cheese-Stash@main/games/mmm/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clmcfpsfbhd": {
+      "title": "MCFP SF BHD",
+      "file": "clmcfpsfbhd.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/fueledbyhotdogs/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clminimart": {
+      "title": "Mini Mart",
+      "file": "clminimart.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/google-chrume/new@main/TemplateData/favicon.ico"
+        },
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/google-chrume/new@main/logo.png"
+        }
+      ]
+    },
+    "clmomimsleeping": {
+      "title": "Mom I'm Sleeping",
+      "file": "clmomimsleeping.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/dayyiq/mm@main/icons/Иконка-128.png"
+        },
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/dayyiq/mm@main/icons/Иконка-256.png"
+        },
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/dayyiq/mm@main/icons/Иконка-512.png"
+        }
+      ]
+    },
+    "clmonkeymartenc": {
+      "title": "Monkey Mart Enc",
+      "file": "clmonkeymartenc.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://218463058-163927403382736103.preview.editmysite.com/uploads/b/139890129-297434511671085883/files/load_bar_bg.png"
+        },
+        {
+          "kind": "game-asset",
+          "remote": "https://218463058-163927403382736103.preview.editmysite.com/uploads/b/139890129-297434511671085883/files/load_bar_fg.png"
+        }
+      ]
+    },
+    "clmonsterderby": {
+      "title": "Monster Derby",
+      "file": "clmonsterderby.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/shayderrr/portsv2@main/monsterderby/TemplateData/favicon.ico"
+        },
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/shayderrr/portsv2@main/monsterderby/logo.png"
+        }
+      ]
+    },
+    "clmonstertracks": {
+      "title": "Monster Tracks",
+      "file": "clmonstertracks.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/genizy/google-class/monster-tracks/webapp/cover.jpg"
+        }
+      ]
+    },
+    "clmonstertruckportstunt": {
+      "title": "Monster Truck Port Stunt",
+      "file": "clmonstertruckportstunt.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/mailgma-class/mos@main/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clnetattack": {
+      "title": "Net Attack",
+      "file": "clnetattack.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/net.attack/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clninjaobbyparkor": {
+      "title": "Ninja Obby Parkour",
+      "file": "clninjaobbyparkor.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/664x-main/TemplateData/logo.png"
+        }
+      ]
+    },
+    "clomegalayers": {
+      "title": "Omega Layers",
+      "file": "clomegalayers.html",
+      "candidates": [
+        {
+          "kind": "official-og",
+          "remote": "https://veprogames.github.io/omega-layers/cover.png"
+        }
+      ]
+    },
+    "clonlyup": {
+      "title": "Only Up",
+      "file": "clonlyup.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/sz-games/Games8@d12ca56d8b0a51ee19122003c75987a349816837/only-up/icon.png"
+        }
+      ]
+    },
+    "clovo2": {
+      "title": "OvO 2",
+      "file": "clovo2.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/ov464534asa4rb/786132@main/icons/icon-256.png"
+        },
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/ov464534asa4rb/786132@main/icons/icon-512.png"
+        }
+      ]
+    },
+    "clovodimensions": {
+      "title": "OvO Dimensions",
+      "file": "clovodimensions.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@102179bf4242fd237c46c555ba154c2f325d351c/icon-256.png"
+        }
+      ]
+    },
+    "clpaperio": {
+      "title": "Paper.io",
+      "file": "clpaperio.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/MartinTintin3/melvin-games@e4de505d194355c344977981cdf3b2cfe5075c52/games/paper.io-2/images/logo.png"
+        }
+      ]
+    },
+    "clpinkbike": {
+      "title": "Pink Bike",
+      "file": "clpinkbike.html",
+      "candidates": [
+        {
+          "kind": "official-og",
+          "remote": "https://es.pinkbike.org/246/sprt/i/share/grimdonutgame.jpg"
+        }
+      ]
+    },
+    "clpixelclient": {
+      "title": "Pixel Client",
+      "file": "clpixelclient.html",
+      "candidates": [
+        {
+          "kind": "official-og",
+          "remote": "https://i.imgur.com/ArPTrPB.jpeg"
+        }
+      ]
+    },
+    "clpixelgun": {
+      "title": "Pixel Gun",
+      "file": "clpixelgun.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/fnafben/1234188746455876655@main/logo.png"
+        }
+      ]
+    },
+    "clpogo3d": {
+      "title": "Pogo 3D",
+      "file": "clpogo3D.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/pogo3D/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "pvzm": {
+      "title": "PvZ Multiplayer",
+      "file": "PVZM.html",
+      "candidates": [
+        {
+          "kind": "official-og",
+          "remote": "https://pvzm.net/game/images/gamethumbnail5.png"
+        },
+        {
+          "kind": "official-icon",
+          "remote": "https://pvzm.net/game/images/gameicon2.png"
+        }
+      ]
+    },
+    "clracingarena": {
+      "title": "Racing Arena",
+      "file": "clracingarena.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/google-com-classroom/424@main/TemplateData/favicon.ico"
+        },
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/google-com-classroom/424@main/logo.png"
+        }
+      ]
+    },
+    "clrussiansandbox": {
+      "title": "Russian Sandbox",
+      "file": "clrussiansandbox.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/shayderrr/portsv2@main/sandbox/icon.png"
+        }
+      ]
+    },
+    "clsandboxels": {
+      "title": "Sandboxels",
+      "file": "clsandboxels.html",
+      "candidates": [
+        {
+          "kind": "official-og",
+          "remote": "https://sandboxels.r74n.com/icons/cover-3840x1240px-text.png"
+        }
+      ]
+    },
+    "clsevendays": {
+      "title": "Seven Days",
+      "file": "clsevendays.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/school-management-google/readme@main/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clshadowcourier": {
+      "title": "Shadow Courier",
+      "file": "clshadowcourier.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/familiapablo/safa@main/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clsilk": {
+      "title": "Silk",
+      "file": "clsilk.html",
+      "candidates": [
+        {
+          "kind": "official-og",
+          "remote": "http://weavesilk.com/img/silk_thumb.png"
+        }
+      ]
+    },
+    "clsilkmelody": {
+      "title": "Silk Melody",
+      "file": "clsilkmelody.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/shayderrr/portsv4@main/7448601/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clskibidiinthebackrooms": {
+      "title": "Skibidi in the Backrooms",
+      "file": "clskibidiinthebackrooms.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/dayyiq/teyetey@main/icons/icon-128.png"
+        },
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/dayyiq/teyetey@main/icons/icon-256.png"
+        },
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/dayyiq/teyetey@main/icons/icon-512.png"
+        }
+      ]
+    },
+    "clsmashkarts": {
+      "title": "Smash Karts",
+      "file": "clsmashkarts.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://gamemonetize.com/gamemonetize-logo.png"
+        }
+      ]
+    },
+    "clsnipershot": {
+      "title": "Sniper Shot",
+      "file": "clsnipershot.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/meymenet645x/xu@main/TemplateData/favicon.ico"
+        },
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/meymenet645x/xu@main/logo.png"
+        }
+      ]
+    },
+    "clsniperv2": {
+      "title": "Sniper V2",
+      "file": "clsniperv2.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/tty67hlt6jf6/c2@main/TemplateData/img/Logo.png"
+        }
+      ]
+    },
+    "clsoniccdmobile": {
+      "title": "Sonic CD Mobile",
+      "file": "clsoniccdmobile.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-soniccd@main/image_2026-02-28_164525280.png"
+        }
+      ]
+    },
+    "clsonicmaniaplus": {
+      "title": "Sonic Mania Plus",
+      "file": "clsonicmaniaplus.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/UGBONTOP/Sonic-Mania-InYourBrowser@main/image_2026-02-26_224423134.png"
+        }
+      ]
+    },
+    "clstarlike": {
+      "title": "Star Like",
+      "file": "clstarlike.html",
+      "candidates": [
+        {
+          "kind": "official-og",
+          "remote": "https://raw.githubusercontent.com/zumbiepig/Starlike/main/logo.png"
+        }
+      ]
+    },
+    "clstickslasher": {
+      "title": "Stick Slasher",
+      "file": "clstickslasher.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/stickslasher/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clsupercold": {
+      "title": "Super Cold",
+      "file": "clsupercold.html",
+      "candidates": [
+        {
+          "kind": "official-og",
+          "remote": "https://import-this.github.io/supercold/img/wallpaper.png"
+        }
+      ]
+    },
+    "clswingforbrainrots": {
+      "title": "Swing for Brain Rots",
+      "file": "clswingforbrainrots.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/testamalame/10086@main/logo.png"
+        }
+      ]
+    },
+    "cltacostand": {
+      "title": "Taco Stand",
+      "file": "cltacostand.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/netclassroom/998800@main/n/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "cltallio": {
+      "title": "Tall.io",
+      "file": "cltallio.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/shayderrr/portsv2@main/tall.io/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "cltemplerun2": {
+      "title": "Temple Run 2",
+      "file": "cltemplerun2.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/genizy/google-class/temple-run-2/img/og-icon.png"
+        }
+      ]
+    },
+    "cltimeshooter2": {
+      "title": "Time Shooter 2",
+      "file": "cltimeshooter2.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/mistirk/googleapis@499ff451605f5a085318b5d6252b4e1d93f456d1/grafeas/v1/logo.png"
+        }
+      ]
+    },
+    "cltimeshooter3": {
+      "title": "Time Shooter 3",
+      "file": "cltimeshooter3.html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/mistirk/google@eebffdf79a14f6e01e153d5cd4bed23c432874fb/version/time-s3/logo.png"
+        }
+      ]
+    },
+    "time-shooter-3": {
+      "title": "Time Shooter 3: SWAT",
+      "file": "Time Shooter 3_ SWAT (1).html",
+      "candidates": [
+        {
+          "kind": "game-asset",
+          "remote": "https://cdn.jsdelivr.net/gh/mistirk/google@eebffdf79a14f6e01e153d5cd4bed23c432874fb/version/time-s3/logo.png"
+        }
+      ]
+    },
+    "clundertaleyellow": {
+      "title": "Undertale Yellow",
+      "file": "clundertaleyellow.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/1e295a49108e716ce8ab7eba0c8dca7d/9326265e4f1b14345a3bdab6f8ffad0e2e7ab3fda920c5f0f095f77359af00aeae22591c5bc4914c84c13d99eb62091d7ce7@main/utyweb/fav.ico"
+        }
+      ]
+    },
+    "cluzg": {
+      "title": "UZG",
+      "file": "clUZG.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/UGZ/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clvaportrails": {
+      "title": "Vapor Trails",
+      "file": "clvaportrails.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/Vapor%20Trails/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clvex4": {
+      "title": "Vex 4",
+      "file": "clvex4.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/CFiltered/Matt@50f9c1bd0d376b40cb8545519b147a4030598724/other/vex4/vex4.png"
+        }
+      ]
+    },
+    "clvex5": {
+      "title": "Vex 5",
+      "file": "clvex5.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/EXM1LITARY/lio@7beab336469d96d153903e03dfe089ff2d2b035c/other/vex5/vex.jpeg"
+        }
+      ]
+    },
+    "clvortex": {
+      "title": "Vortex",
+      "file": "clvortex.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/shayderrr/portsv2@main/vortex/Build/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clwaterpoolio": {
+      "title": "Water Pool.io",
+      "file": "clwaterpoolio.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/tty67hlt6jf6/a@main/TemplateData/favicon.ico"
+        }
+      ]
+    },
+    "clwebdashers": {
+      "title": "Webdashers",
+      "file": "clwebdashers.html",
+      "candidates": [
+        {
+          "kind": "official-og",
+          "remote": "https://web-dashers.github.io/assets/logo.png"
+        }
+      ]
+    },
+    "clwordle": {
+      "title": "Wordle",
+      "file": "clwordle.html",
+      "candidates": [
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/Nailington/3kh0-assets@aeb371b7e88542fd5e61eeed9e967a446d84fe1b/wordle/img/logo_32x32.png"
+        },
+        {
+          "kind": "official-icon",
+          "remote": "https://cdn.jsdelivr.net/gh/Nailington/3kh0-assets@aeb371b7e88542fd5e61eeed9e967a446d84fe1b/wordle/img/logo_192x192.png"
+        }
+      ]
+    }
+  }
+}

@@ -135,12 +135,21 @@ export function GamePlayer({
       });
       handle = sync;
       saveHandleRef.current = sync;
-      setSupported(sync.supported);
+      // Buttons and status only appear when this game really is captured by
+      // the shim; the session can exist for any /games/* path.
+      setSupported(sync.supported && (!entry || saveSupportFor(entry) === 'automatic'));
       setIframePath(sync.launchPath);
       setSyncStatus(sync.getStatus());
       registerSaveHandle?.(sync);
       await sync.restored;
-      if (!cancelled) setRestoreReady(true);
+      if (cancelled) return;
+      // Isolation failure is the one case where opening the game could show
+      // another account's progress, so the frame stays closed.
+      if (!sync.canLaunch()) {
+        setManualMsg('This account’s game storage could not be isolated. Close other tabs of this game and reload.');
+        return;
+      }
+      setRestoreReady(true);
     };
 
     if (userId && navigator.locks && entry && saveSupportFor(entry) === 'automatic') {

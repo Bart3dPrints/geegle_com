@@ -31,6 +31,6 @@ function ArtworkImage({ url, className }: { url?: string; className: string }) {
 
 export function GameArt({ game, className = '' }: { game: GameEntry; className?: string }) {
   const artwork = artworkFor(game);
-  const url = artwork.status === 'verified' ? artwork.url : undefined;
+  const url = artwork.status === 'unavailable' ? undefined : artwork.url;
   return <ArtworkImage key={game.id + ':' + (url ?? '')} url={url} className={className} />;
 }

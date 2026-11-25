@@ -30,7 +30,12 @@ const game = 'clspacebarclicker';
 const path = '/games/clspacebarclicker.html';
 const adapter = adapterFor(game, path);
 const key = (id = user) => `geegle-game:${game}:${id}:spacebar_clicker_game`;
-const snapshot = (progress) => ({ format: 'geegle-local-v1', localStorage: { spacebar_clicker_game: progress } });
+const snapshot = (progress) => ({
+  format: 'geegle-storage-v3',
+  gameId: game,
+  localStorage: { spacebar_clicker_game: progress },
+  indexedDB: [],
+});
 
 function storage() {
   const data = new Map();
@@ -104,21 +109,29 @@ test('every local game gets generic storage-based cloud saves', async () => {
   localStorage.setItem(`geegle-game:clsomeadventure:${other}:slot1`, 'level 2');
   localStorage.setItem('geegle-game:clothergame:' + user + ':x', 'other game');
   const snapshot = await spec.capture(user);
-  assert.deepEqual(snapshot, { format: 'geegle-storage-v2', localStorage: { slot1: 'level 7' }, indexedDB: [] });
+  assert.deepEqual(snapshot, {
+    format: 'geegle-storage-v3',
+    gameId: 'clsomeadventure',
+    localStorage: { slot1: 'level 7' },
+    indexedDB: [],
+  });
   assert.equal(await spec.capture(other).then((s) => s.localStorage.slot1), 'level 2');
   assert.equal(await adapterFor('clsomeadventure', '/games/clsomeadventure.html').capture('cccccccc-cccc-cccc-cccc-cccccccccccc'), null);
 
   // Restore is authoritative for this account and never touches others.
-  await spec.restore(user, { format: 'geegle-storage-v2', localStorage: { slot1: 'level 9' }, indexedDB: [] });
+  await spec.restore(user, { format: 'geegle-storage-v3', gameId: 'clsomeadventure', localStorage: { slot1: 'level 9' }, indexedDB: [] });
   assert.equal(localStorage.getItem(`geegle-game:clsomeadventure:${user}:slot1`), 'level 9');
   assert.equal(localStorage.getItem(`geegle-game:clsomeadventure:${other}:slot1`), 'level 2');
   assert.equal(localStorage.getItem(`geegle-game:clothergame:${user}:x`), 'other game');
 
   // A stored save can never overwrite platform state.
-  assert.throws(() => spec.validate({ format: 'geegle-storage-v2', localStorage: { 'geegle-favorites': '[]' } }), /reserved/);
-  assert.throws(() => spec.validate({ format: 'geegle-storage-v2', localStorage: { slot1: 5 } }), /Invalid/);
-  assert.throws(() => spec.validate({ format: 'v3', localStorage: { slot1: 'x' } }), /Unrecognized/);
-  assert.deepEqual(spec.validate({ format: 'geegle-storage-v2', localStorage: {}, indexedDB: [] }), { format: 'geegle-storage-v2', localStorage: {}, indexedDB: [] });
+  assert.throws(() => spec.validate({ format: 'geegle-storage-v3', gameId: 'clsomeadventure', localStorage: { 'geegle-favorites': '[]' } }, user), /reserved/);
+  assert.throws(() => spec.validate({ format: 'geegle-storage-v3', gameId: 'clsomeadventure', localStorage: { slot1: 5 } }, user), /Invalid/);
+  assert.throws(() => spec.validate({ format: 'v3', localStorage: { slot1: 'x' } }, user), /Unrecognized/);
+  assert.deepEqual(
+    spec.validate({ format: 'geegle-storage-v3', gameId: 'clsomeadventure', localStorage: {}, indexedDB: [] }, user),
+    { format: 'geegle-storage-v3', gameId: 'clsomeadventure', localStorage: {}, indexedDB: [] },
+  );
 });
 
 test('restore from cloud before a game opens with empty browser storage', async (t) => {
@@ -144,13 +157,13 @@ test('guest progress and another account’s local saves are never uploaded', as
 });
 
 test('an unsuccessful restore never authorizes a write', async (t) => {
-  const cloud = backend({ ...snapshot('bad'), indexedDB: [{ name: 'legacy' }] });
+  const cloud = backend({ ...snapshot('bad'), indexedDB: [{ name: 'legacy', version: 1, stores: [] }] });
   const handle = session(t, cloud);
   await handle.restored;
   assert.equal(handle.getStatus(), 'error');
   localStorage.setItem(key(), 'initialized defaults');
   assert.equal((await handle.saveNow()).ok, false);
-  assert.deepEqual((await cloud.read()).save_data.indexedDB, [{ name: 'legacy' }]);
+  assert.deepEqual((await cloud.read()).save_data.indexedDB, [{ name: 'legacy', version: 1, stores: [] }]);
 });
 
 test('failed first restore can be retried explicitly', async (t) => {
