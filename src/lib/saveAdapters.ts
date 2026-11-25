@@ -7,11 +7,20 @@
 //     so a generic capture is simply every key under this game/account prefix.
 // IndexedDB cannot be namespaced per account, so generic saves also carry
 // full-fidelity database dumps and swap them on restore.
+//
+// Ownership rules for shared IndexedDB (audited hardening):
+// - A database is only ever captured when it is listed in this game's own
+//   claim ledger (previously observed as created/owned by this game).
+// - Fresh databases observed during a session are recorded as candidates
+//   ONLY after they are no longer in the adapter's baseline; a database
+//   that already existed before this game launched is never claimed.
+// - claimDatabases never steals a database owned by another game.
+// - delete failures propagate: isolation/restore failures are reported,
+//   never silently treated as success.
 import {
   dumpDatabase,
   isSerializedDatabase,
   listDatabases,
-  restoreDatabase,
   type SerializedDatabase,
 } from './storageSnapshot';
 
@@ -29,7 +38,8 @@ export interface SaveAdapter {
   /**
    * Called before launch when this account has no cloud save yet. Shared
    * IndexedDB data left by a different account is cleared so progress is
-   * never shown to, or uploaded by, the wrong account.
+   * never shown to, or uploaded by, the wrong account. Throws on failure —
+   * a blocked or failed deletion must not be reported as successful isolation.
    */
   isolate(userId: string): Promise<void>;
   /** IndexedDB databases this game has been observed writing. */
@@ -181,8 +191,10 @@ function explicitAdapter(game: typeof games[number]) {
 }
 
 function genericAdapter(gameId: string, path: string): SaveAdapter {
-  // Baselines let us claim databases this game creates during its session
-  // without touching data that belongs to anything else on the origin.
+  // The baseline is snapshotted once per adapter instance, at launch time.
+  // Any database already present when the game starts belongs to something
+  // else (the platform, another game, another account's earlier session) and
+  // is never claimed by this game.
   const baseline = listDatabases();
 
   return {
@@ -192,15 +204,18 @@ function genericAdapter(gameId: string, path: string): SaveAdapter {
     async capture(userId) {
       if (!userId) return null;
       const values = readScoped(gameId, userId);
-      const initial = await baseline;
+      // Only databases this game has already claimed are captured. New
+      // databases created during this session are recorded for the NEXT
+      // capture (after this game has demonstrably written them), never
+      // speculatively dumped on their first appearance.
       const current = await listDatabases();
       const owned = readDbNames(gameId);
+      const initial = await baseline;
       const fresh = current.filter((name) => !initial.includes(name) && !owned.includes(name));
-      const candidates = new Set([...owned.filter((name) => current.includes(name)), ...fresh]);
-      const claimed = claimDatabases(gameId, [...candidates]);
+      if (fresh.length) claimDatabases(gameId, fresh);
+      const claimable = readDbNames(gameId).filter((name) => current.includes(name));
       const databases: SerializedDatabase[] = [];
-      for (const name of claimed) {
-        if (!current.includes(name)) continue;
+      for (const name of claimable) {
         const dump = await dumpDatabase(name);
         if (dump && dump.stores.length) databases.push(dump);
       }
@@ -238,9 +253,17 @@ function genericAdapter(gameId: string, path: string): SaveAdapter {
       writeScoped(gameId, userId, values);
       removeScopedExcept(gameId, userId, values);
       const databases = snapshot.indexedDB ?? [];
-      // A restore is authoritative: databases saved with this account replace
-      // the local copies, and databases that are no longer part of the save are
-      // removed so stale progress cannot leak back in.
+      // A restore is authoritative for databases this game owns. Every
+      // database in the snapshot must already belong to this game in the
+      // ownership ledger, or be new on this origin — a save for game A can
+      // never overwrite a database owned by game B.
+      const owners = readOwners();
+      for (const database of databases) {
+        const owner = owners[database.name];
+        if (owner && owner !== gameId) {
+          throw new Error(`Cloud save targets a database owned by another game (${database.name}).`);
+        }
+      }
       const restored: string[] = [];
       for (const database of databases) {
         await restoreDatabase(database);
@@ -251,7 +274,7 @@ function genericAdapter(gameId: string, path: string): SaveAdapter {
         if (restored.includes(name)) continue;
         if (databases.length && name) await deleteDatabase(name);
       }
-      claimDatabases(gameId, [...restored, ...(databases.length ? owned : [])]);
+      claimDatabases(gameId, restored);
       try { localStorage.setItem(DB_OWNER(gameId), userId); } catch { /* quota */ }
     },
     async isolate(userId) {
@@ -265,12 +288,13 @@ function genericAdapter(gameId: string, path: string): SaveAdapter {
   };
 }
 
+/** Delete a database this game owns. Failures propagate — never silent. */
 function deleteDatabase(name: string): Promise<void> {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     const request = indexedDB.deleteDatabase(name);
     request.onsuccess = () => resolve();
-    request.onerror = () => resolve();
-    request.onblocked = () => resolve();
+    request.onerror = () => reject(request.error ?? new Error(`Could not clear this game’s stored data (${name}).`));
+    request.onblocked = () => reject(new Error(`Another tab is using this game’s data (${name}). Close it and retry.`));
   });
 }
 
