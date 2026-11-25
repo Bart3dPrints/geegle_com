@@ -1,19 +1,17 @@
-// Geegle application shell. Sections: entry gate → header (nav + search +
-// theme toggle + account) → catalog (categories, games grid, apps, proxies) →
-// game player overlay. All data flows through the catalog and user-data libs.
+// Geegle application shell.
+// Sections: entry gate → header (nav + search + theme + account) →
+// browse (games by category, apps, proxies) → game player overlay.
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import {
   Search, User as UserIcon, LogOut, Sun, Moon, Monitor, KeyRound,
-  X, ChevronDown, Star, Clock, ExternalLink, RotateCcw, Maximize2,
-  ArrowLeft, Play, Loader2, AlertTriangle, Globe,
+  Loader2, AlertTriangle,
 } from 'lucide-react';
 import { catalog, games, apps, CATEGORIES } from './data/catalog';
 import { PROXY_SERVICES, proxyUrl } from './data/proxies';
-import { searchCatalog, noResultsSuggestions } from './lib/search';
-import { isEntryUnlocked, verifyEntryPassword, lockEntry } from './lib/entryGate';
+import { isEntryUnlocked, verifyEntryPassword } from './lib/entryGate';
 import { register, login, logout, getCurrentUser, AuthError } from './lib/auth';
-import { isSupabaseConfigured, supabase } from './lib/supabase';
+import { isSupabaseConfigured } from './lib/supabase';
 import {
   toggleFavorite, loadFavorites, trackPlay, loadRecent,
   saveTheme, loadTheme, saveServerDefault, loadServerDefaults,
@@ -44,13 +42,11 @@ function useTheme() {
 }
 
 export default function App() {
-  // ── Entry gate ──────────────────────────────────────────────────────────
   const [gateOpen, setGateOpen] = useState(!isEntryUnlocked());
   const [gateInput, setGateInput] = useState('');
   const [gateError, setGateError] = useState<string | null>(null);
   const [gateBusy, setGateBusy] = useState(false);
 
-  // ── Auth ─────────────────────────────────────────────────────────────────
   const [user, setUser] = useState<SessionUser | null>(null);
   const [authOpen, setAuthOpen] = useState(false);
   const [authMode, setAuthMode] = useState<'login' | 'register'>('login');
@@ -60,22 +56,17 @@ export default function App() {
   const [authPassword, setAuthPassword] = useState('');
   const signedIn = Boolean(user);
 
-  // ── Data ────────────────────────────────────────────────────────────────
   const { theme, setTheme } = useTheme();
   const [favorites, setFavorites] = useState<string[]>([]);
   const [recent, setRecent] = useState<string[]>([]);
   const [serverDefaults, setServerDefaults] = useState<Record<string, number>>({});
 
-  // ── Browse state ────────────────────────────────────────────────────────
   const [tab, setTab] = useState<Tab>('games');
   const [category, setCategory] = useState('all');
   const [searchOpen, setSearchOpen] = useState(false);
-  [query_placeholder, setQuery] = useState('');
-  const [launching, setLaunching] = useState<GameEntry | null>(null);
   const [active, setActive] = useState<GameEntry | null>(null);
   const [activeProxy, setActiveProxy] = useState<{ url: string; title: string } | null>(null);
 
-  // Restore session on mount.
   useEffect(() => {
     (async () => {
       const u = await getCurrentUser();
@@ -83,18 +74,14 @@ export default function App() {
       if (u) {
         await migrateLocalToAccount(u.id).catch(() => undefined);
         const [f, r, servers] = await Promise.all([
-          loadFavorites(true),
-          loadRecent(true),
-          loadServerDefaults(true),
+          loadFavorites(true), loadRecent(true), loadServerDefaults(true),
         ]);
         setFavorites(f); setRecent(r); setServerDefaults(servers);
         const savedTheme = await loadTheme(true);
         if (savedTheme === 'dark' || savedTheme === 'light') setTheme(savedTheme);
       } else {
         const [f, r, servers] = await Promise.all([
-          loadFavorites(false),
-          loadRecent(false),
-          loadServerDefaults(false),
+          loadFavorites(false), loadRecent(false), loadServerDefaults(false),
         ]);
         setFavorites(f); setRecent(r); setServerDefaults(servers);
       }
@@ -102,7 +89,6 @@ export default function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // ── Auth actions ────────────────────────────────────────────────────────
   const handleAuth = async (mode: 'login' | 'register') => {
     setAuthBusy(true); setAuthError(null);
     try {
@@ -130,11 +116,9 @@ export default function App() {
     setFavorites([]); setRecent([]);
   };
 
-  // ── Game actions ───────────────────────────────────────────────────────
   const launch = async (g: GameEntry) => {
     setActiveProxy(null);
     setActive(g);
-    setLaunching(null);
     const nextRecent = await trackPlay(g.id, signedIn);
     setRecent(nextRecent);
   };
@@ -142,8 +126,7 @@ export default function App() {
   const launchProxy = (serviceId: string, index: number) => {
     const service = PROXY_SERVICES.find((s) => s.id === serviceId);
     if (!service) return;
-    const url = proxyUrl(service, index);
-    setActiveProxy({ url, title: service.name });
+    setActiveProxy({ url: proxyUrl(service, index), title: service.name });
     setActive(null);
   };
 
@@ -152,28 +135,30 @@ export default function App() {
     setFavorites(next);
   };
 
-  // ── Derived ─────────────────────────────────────────────────────────────
   const visibleGames = useMemo(
-    () =>
-      category === 'all'
-        ? games
-        : games.filter((g) => g.categories.includes(category)),
-    [games, category]
+    () => (category === 'all' ? games : games.filter((g) => g.categories.includes(category))),
+    [category]
   );
 
   const recentEntries = useMemo(
-    () => recent.map((id) => catalog.find((g) => g.id === id)).filter(Boolean) as GameEntry[],
+    () =>
+      recent
+        .map((id) => catalog.find((g) => g.id === id))
+        .filter((g): g is GameEntry => Boolean(g)),
     [recent]
   );
 
   const favoriteEntries = useMemo(
-    () => favorites.map((id) => catalog.find((g) => g.id === id)).filter(Boolean) as GameEntry[],
+    () =>
+      favorites
+        .map((id) => catalog.find((g) => g.id === id))
+        .filter((g): g is GameEntry => Boolean(g)),
     [favorites]
   );
 
   if (gateOpen) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-slate-50 dark:bg-slate-950 p-4">
+      <div className="flex min-h-screen items-center justify-center bg-slate-50 p-4 dark:bg-slate-950">
         <form
           className="card w-full max-w-sm p-6"
           onSubmit={async (e) => {
@@ -181,8 +166,9 @@ export default function App() {
             setGateBusy(true); setGateError(null);
             const res = await verifyEntryPassword(gateInput);
             setGateBusy(false);
-            if (res.ok) { setGateOpen(false); }
-            else if (res.reason === 'rate_limited') setGateError('Too many attempts. Try again in a few minutes.');
+            if (res.ok) setGateOpen(false);
+            else if (res.reason === 'rate_limited')
+              setGateError('Too many attempts. Try again in a few minutes.');
             else setGateError('Incorrect password.');
           }}
         >
@@ -217,19 +203,17 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
-      {/* Header */}
-      <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 dark:border-slate-800 dark:bg-slate-900/90 backdrop-blur">
-        <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6">
+      <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur dark:border-slate-800 dark:bg-slate-900/95">
+        <div className="mx-auto flex h-16 max-w-7xl items-center gap-3 px-4 sm:gap-4 sm:px-6">
           <button
             className="flex items-center gap-2 text-lg font-semibold"
             onClick={() => { setActive(null); setActiveProxy(null); setTab('games'); }}
             aria-label="Geegle home"
           >
-            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-white text-sm font-bold">G</span>
+            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-sm font-bold text-white">G</span>
             Geegle
           </button>
 
-          {/* Tabs */}
           <nav className="hidden gap-1 sm:flex" aria-label="Sections">
             {(['games', 'apps', 'proxies'] as Tab[]).map((t) => (
               <button
@@ -248,22 +232,22 @@ export default function App() {
 
           <div className="flex-1" />
 
-          {/* Search trigger */}
-          <button
-            className="btn-secondary gap-2 text-slate-500"
-            onClick={() => setSearchOpen(true)}
-          >
+          <button className="btn-secondary gap-2 text-slate-500" onClick={() => setSearchOpen(true)}>
             <Search size={16} />
             <span className="hidden md:inline">Search games</span>
           </button>
 
-          {/* Theme toggle (3-state) */}
-          <div className="hidden items-center gap-1 rounded-lg border border-slate-200 p-1 dark:border-slate-700 sm:flex" role="group" aria-label="Theme">
+          <div
+            className="hidden items-center gap-1 rounded-lg border border-slate-200 p-1 dark:border-slate-700 sm:flex"
+            role="group" aria-label="Theme"
+          >
             {([['light', Sun], ['system', Monitor], ['dark', Moon]] as const).map(([mode, Icon]) => (
               <button
                 key={mode}
                 className={`rounded-md p-1.5 ${
-                  theme === mode ? 'bg-blue-600 text-white' : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800'
+                  theme === mode
+                    ? 'bg-blue-600 text-white'
+                    : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800'
                 }`}
                 onClick={() => { setTheme(mode); saveTheme(mode, signedIn); }}
                 aria-label={`${mode} theme`}
@@ -274,7 +258,6 @@ export default function App() {
             ))}
           </div>
 
-          {/* Account */}
           {user ? (
             <div className="flex items-center gap-2">
               <span className="hidden text-sm text-slate-600 dark:text-slate-300 md:inline">{user.username}</span>
@@ -289,41 +272,55 @@ export default function App() {
             </button>
           )}
         </div>
+
+        <nav className="flex border-t border-slate-200 dark:border-slate-800 sm:hidden" aria-label="Sections">
+          {(['games', 'apps', 'proxies'] as Tab[]).map((t) => (
+            <button
+              key={t}
+              className={`flex-1 px-3 py-2 text-sm font-medium capitalize ${
+                tab === t
+                  ? 'border-b-2 border-blue-600 text-blue-600 dark:text-blue-400'
+                  : 'text-slate-600 dark:text-slate-400'
+              }`}
+              onClick={() => { setTab(t); setActive(null); setActiveProxy(null); }}
+            >
+              {t}
+            </button>
+          ))}
+        </nav>
       </header>
 
-      {/* Auth modal */}
       {authOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 p-4" onClick={() => setAuthOpen(false)}>
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 p-4"
+          onClick={() => setAuthOpen(false)}
+          role="dialog" aria-modal="true"
+        >
           <div className="card w-full max-w-sm p-6" onClick={(e) => e.stopPropagation()}>
             <h2 className="mb-4">{authMode === 'login' ? 'Sign in' : 'Create account'}</h2>
             {!isSupabaseConfigured && (
-              <p className="mb-4 rounded-lg bg-amber-50 p-3 text-sm text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">
-                Accounts are not configured on this deployment. Set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY.
-              </ become_placeholder>
+              <div className="mb-4 flex gap-2 rounded-lg bg-amber-50 p-3 text-sm text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">
+                <AlertTriangle size={16} className="mt-0.5 shrink-0" />
+                <span>Accounts are not configured on this deployment.</span>
+              </div>
             )}
             <form onSubmit={(e) => { e.preventDefault(); handleAuth(authMode); }}>
               <label className="label" htmlFor="auth-username">Username</label>
               <input
-                id="auth-username"
-                className="input mb-4"
-                value={authUsername}
+                id="auth-username" className="input mb-4" value={authUsername}
                 onChange={(e) => setAuthUsername(e.target.value)}
-                placeholder="3-32 characters"
-                autoComplete="username"
-                required
+                placeholder="3-32 characters" autoComplete="username" required
               />
               <label className="label" htmlFor="auth-password">Password</label>
               <input
-                id="auth-password"
-                className="input mb-2"
-                type="password"
-                value={authPassword}
+                id="auth-password" className="input mb-2" type="password" value={authPassword}
                 onChange={(e) => setAuthPassword(e.target.value)}
                 placeholder="At least 8 characters"
-                autoComplete={authMode === 'login' ? 'current-password' : 'new-password'}
-                required
+                autoComplete={authMode === 'login' ? 'current-password' : 'new-password'} required
               />
-              {authError && <p className="mb-2 text-sm text-red-600 dark:text-red-400" role="alert">{authError}</p>}
+              {authError && (
+                <p className="mb-2 text-sm text-red-600 dark:text-red-400" role="alert">{authError}</p>
+              )}
               <button className="btn-primary w-full" disabled={authBusy} type="submit">
                 {authBusy && <Loader2 className="animate-spin" size={16} />}
                 {authMode === 'login' ? 'Sign in' : 'Create account'}
@@ -339,27 +336,23 @@ export default function App() {
         </div>
       )}
 
-      {/* Search overlay */}
       {searchOpen && <SearchOverlay onClose={() => setSearchOpen(false)} onLaunch={launch} />}
 
-      {/* Game player */}
       {(active || activeProxy) && (
         <GamePlayer
-          entry={active}
-          proxy={activeProxy}
+          entry={active} proxy={activeProxy}
           onExit={() => { setActive(null); setActiveProxy(null); }}
           onToggleFavorite={() => active && toggleFav(active.id)}
           isFavorite={active ? favorites.includes(active.id) : false}
         />
       )}
 
-      {/* Main content */}
       <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
         {tab === 'games' && (
           <>
             {(favoriteEntries.length > 0 || recentEntries.length > 0) && (
               <section className="mb-8">
-                <h2 className="mb-3 flex items-center gap-2"><Star size={16} /> Favorites &amp; Recent</h2>
+                <h2 className="mb-3">Favorites &amp; Recent</h2>
                 <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
                   {[...favoriteEntries, ...recentEntries.filter((g) => !favorites.includes(g.id))]
                     .slice(0, 12)
@@ -378,9 +371,7 @@ export default function App() {
               <div className="mb-6 flex flex-wrap gap-2" role="tablist" aria-label="Categories">
                 {CATEGORIES.map((c) => (
                   <button
-                    key={c.key}
-                    role="tab"
-                    aria-selected={category === c.key}
+                    key={c.key} role="tab" aria-selected={category === c.key}
                     className={category === c.key ? 'chip-active' : 'chip'}
                     onClick={() => setCategory(c.key)}
                   >
@@ -389,14 +380,15 @@ export default function App() {
                 ))}
               </div>
               {visibleGames.length === 0 ? (
-                <EmptyState title="No games in this category" body="Try another category or search for a game." />
+                <EmptyState
+                  title="No games in this category"
+                  body="Try another category or search for a game."
+                />
               ) : (
                 <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
                   {visibleGames.map((g) => (
                     <GameCard
-                      key={g.id}
-                      game={g}
-                      onLaunch={() => launch(g)}
+                      key={g.id} game={g} onLaunch={() => launch(g)}
                       isFavorite={favorites.includes(g.id)}
                       onToggleFavorite={() => toggleFav(g.id)}
                     />
@@ -411,7 +403,9 @@ export default function App() {
           <section>
             <h2 className="mb-4">Apps</h2>
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-              {apps.map((g) => <GameCard key={g.id} game={g} onLaunch={() => launch(g)} />)}
+              {apps.map((g) => (
+                <GameCard key={g.id} game={g} onLaunch={() => launch(g)} />
+              ))}
             </div>
           </section>
         )}
@@ -425,8 +419,7 @@ export default function App() {
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {PROXY_SERVICES.map((service) => (
                 <ProxyCard
-                  key={service.id}
-                  service={service}
+                  key={service.id} service={service}
                   selected={serverDefaults[service.id] ?? 0}
                   onSelect={async (index) => {
                     setServerDefaults((prev) => ({ ...prev, [service.id]: index }));
@@ -435,7 +428,7 @@ export default function App() {
                   onLaunch={(index) => launchProxy(service.id, index)}
                 />
               ))}
-            </tab_placeholder>
+            </div>
           </section>
         )}
       </main>
