@@ -1,0 +1,187 @@
+clb3313|B 3313|platformer
+clb3313unabandoneda2|B 3313 Unabandoned A2|platformer
+clb3313v102|B3313 v1.02|platformer
+clbabeltower|Babel Tower|strategy
+clbabychiccoadventure|Baby Chic Co Adventure|platformer
+clbabykaizo|Baby Kai Zo|platformer
+clbabysniperinvietnam|Baby Sniper in Vietnam|action
+clbackrooms|Back Rooms|horror
+clbackrooms2d|Backrooms 2D|horror
+clbackyardbaseball|Backyard Baseball|sports
+clbackyardbaseball09|Backyard Baseball 09|sports
+clbackyardbaseball10|Backyard Baseball 10|sports
+clbackyardfootball|Backyard Football|sports
+clbackyardsoccer|Backyard Soccer|sports
+clbaconmaydie|Bacon May Die|action
+clbadbodyguards|Bad Bodyguards|action
+clbadicecream|Bad Ice Cream|arcade
+clbadicecream2|Bad Ice Cream 2|arcade
+clbadicecream3|Bad Ice Cream 3|arcade
+clbadmondaysimulator|Bad Monday Simulator|casual
+clbadparenting|Bad Parenting|horror
+clbadpiggies|Bad Piggies|puzzle
+clbadpiggieslatest|Bad Piggies Latest|puzzle
+clbadtimesim|Bad Time Sim|action
+clbadtimesimulator|Bad Time Simulator|action
+clbalatrogba|Bala Tro (GBA)|platformer
+clbaldicaseoh|Bald Icase Oh|casual
+clbaldidecomp|Bald Ide Comp|casual
+clbaldisbasics|Baldi's Basics|horror
+clbaldisbasicsremaster|Baldi's Basics Remaster|horror
+clbaldisfunnewschoolultimate|Baldi's Fun New School Ultimate|horror
+clballblast|Ball Blast|arcade
+clballistic|Ballistic|arcade
+clballoonfight|Balloon Fight|arcade
+clballsandbricks|Balls and Bricks|arcade
+clballsandbricksgood|Balls and Bricks Good|arcade
+clballz|Ballz|arcade
+clbananasimulator|Banana Simulator|casual
+clbanbuds|Banbuds|rhythm
+clbanditgunslingers|Bandit Gunslingers|action
+clbanjokazooie|Banjo-Kazooie|platformer
+clbanjotooie|Banjo-Tooie|platformer
+clbankbreakout2|Bank Breakout 2|puzzle
+bank-robbery|Bank Robbery|action
+clbankrobbery2|Bank Robbery 2|action
+clbarryhasasecret|Barry Has A Secret|horror
+clbartblast|Bart Blast|action
+clbas|Bas|casual
+clbaseballbros|Baseball Bros|sports
+clbaseballnes|Baseball (NES)|sports
+clbasketbattle|Basket Battle|sports
+clbasketbros|Basket Bros|sports
+clbasketrandom|Basket Random|sports
+clbasketrandomgood|Basket Random Good|sports
+clbasketslamdunk2|Basket Slam Dunk 2|sports
+clbasketballfrvr|Basketball FRVR|sports
+clbasketballlegends-1|Basketball Legends|sports
+clbasketballstars|Basketball Stars|sports
+clbasketballsuperstars|Basketball Superstars|sports
+clbatterup|Batter Up|sports
+clbattlekarts|Battle Karts|racing
+clbattlesim|Battle Sim|strategy
+clbattlezone|Battle Zone|action
+clbattles|Battles|strategy
+clbazookaboy|Bazooka Boy|platformer
+clbballlegend|Bball Legend|sports
+clbeachboxingsim|Beach Boxing Sim|simulation
+clbeamrider|Beam Rider|arcade
+clbearbarians|Bear Barians|action
+clbearsus|Bearsus|action
+clben10alienforce|Ben 10 Alien Force|action
+clben10omniverse|Ben 10 Omniverse|action
+clben10protector|Ben 10 Protector|action
+clben10racing|Ben 10 Racing|racing
+clben10ultimatealien|Ben 10 Ultimate Alien|action
+clbendrowned|Ben Drowned|horror
+clbergentruck201x|Bergen Truck 201X|racing
+clBFDIBranches|BFDI Branches|adventure
+clbfdia5b|BFDI A5B|adventure
+clbigflappytowertinysquare|Big Flappy Tower Tiny Square|platformer
+clbigicetowertinysquare|Big Ice Tower Tiny Square|platformer
+clbigneontowertinysquare|Big Neon Tower Tiny Square|platformer
+clbigshotboxing2|Big Shot Boxing 2|sports
+clbig_time_butter_baron|Big Time Butter Baron|puzzle
+clbigtowertinysquare|Big Tower Tiny Square|platformer
+clbigtowertinysquare2|Big Tower Tiny Square 2|platformer
+clbigtowertinysquare2good|Big Tower Tiny Square 2 Good|platformer
+clbindingofisaccsheeptime|Binding of Isaac Sheep Time|action
+clbioevil4|Bio Evil 4|horror
+clbitlifeencrypted|Bit Life Encrypted|simulation
+clbitlife|Bitlife|simulation
+clbitplanes|Bit Planes|action
+clblackjack|Blackjack|casual
+clblackjackbattle|Blackjack Battle|casual
+clblackjackhhhh|Blackjack (Alt)|casual
+clblackout|Blackout|puzzle
+clblacksmithlab|Blacksmith Lab|simulation
+clblazedrifter|Blaze Drifter|racing
+clbleachvsnaruto|Bleach vs Naruto|action
+clblightborne|Blightborne|adventure
+clblobsstory2|Blob's Story 2|puzzle
+clblockblast|Block Blast|puzzle
+clblockblastv2|Block Blast V2|puzzle
+clblockcraftparkour|Block Craft Parkour|platformer
+clblockcraftshooter|Block Craft Shooter|action
+clblockpost|Blockpost|action
+clblockthepig|Block the Pig|puzzle
+clblockydemolitionderby|Blocky Demolition Derby|racing
+clblockysnakes|Blocky Snakes|arcade
+clblood|Blood|action
+clbloodmoney|Blood Money|action
+clbloodtournament|Blood Tournament|action
+clbloons|Bloons|strategy
+clbloons2|Bloons 2|strategy
+clbloonspp1|Bloons PP 1|strategy
+clbloonspp2|Bloons PP 2|strategy
+clbloonspp3|Bloons PP 3|strategy
+clbloonspp4|Bloons PP 4|strategy
+clbloonspp5|Bloons PP 5|strategy
+clbloonstd1|Bloons TD 1|strategy
+clbloonstd2|Bloons TD 2|strategy
+clbloonstd3|Bloons TD 3|strategy
+clbloonstd4|Bloons TD 4|strategy
+clbloonstd5|Bloons TD 5|strategy
+clbtd1|Bloons Tower Defense 1|strategy
+clbtd5|BTD 5|strategy
+clbloxorz|Bloxorz|puzzle
+clblumgiracers|Blumgi Racers|racing
+clblumgirocket|Blumgi Rocket|arcade
+clBMX2|BMX 2|sports
+clbntts|Bntts|casual
+clbobasimulator|Boba Simulator|simulation
+clbobtherobber|Bob the Robber|puzzle
+clbobtherobber2|Bob the Robber 2|puzzle
+clbobtherobber5|Bob the Robber 5|puzzle
+clbollybeat|Bollybeat|rhythm
+clbomberman|Bomberman|arcade
+clbomberman2|Bomberman 2|arcade
+clbombermanhero|Bomberman Hero|platformer
+clbombermanworld|Bomberman World|arcade
+clbonanza-bros|Bonanza Bros|arcade
+clbonkerssnes|Bonkers (SNES)|platformer
+clboomslingers|Boom Slingers|action
+clbottlecracks|Bottle Cracks|puzzle
+clbottleflip3d|Bottle Flip 3D|arcade
+clbotwds|Botwds|adventure
+clbounceback|Bounce Back|arcade
+clbouncemasters|Bounce Masters|arcade
+clbouncybasketball|Bouncy Basketball|sports
+clbouncymotors|Bouncy Motors|racing
+clbountyofone|Bounty of One|action
+clbowmaster|Bow Master|action
+clbowlalt|Bowlalt|sports
+bowmasters|Bowmasters|action
+clboxhead2playrooms|Boxhead 2 Playrooms|action
+clboxheadnightmare|Boxhead Nightmare|action
+clboxinglive2|Boxing Live 2|sports
+clboxingrandom|Boxing Random|sports
+clboxinglive-2|Boxinglive 2|sports
+clbrainrot|Brain Rot|casual
+clbrawlsimulator3d|Brawl Simulator 3D|simulation
+clbrawlstars|Brawl Stars|action
+clbreadskate|Bread Skate|sports
+clbridgerace|Bridge Race|racing
+clbrotato|Brotato|action
+clbtts|Btts|casual
+clbubbleshooter|Bubble Shooter|puzzle
+clbubbleshooterpirate|Bubble Shooter Pirate|puzzle
+clbubbletanks|Bubble Tanks|action
+clbubbletanks2|Bubble Tanks 2|action
+clbubbletanks3|Bubble Tanks 3|action
+clbubbletanksarenas|Bubble Tanks Arenas|action
+clbubbletankstd|Bubble Tanks TD|strategy
+clbubsy|Bubsy|platformer
+clbuckshotroulette|Buckshot Roulette|horror
+clbuildnowgg|BuildNow GG|action
+clbulletforce|Bullet Force|action
+clbunzobunny|Bun Zo Bunny|platformer
+clbunnyland|Bunny Land|platformer
+clburgerandfrights|Burger and Frights|horror
+clburgertime|Burger Time|arcade
+clburritobison|Burrito Bison|arcade
+clburritobison2|Burrito Bison 2|arcade
+clburritobisonlaunchalibre|Burrito Bison Launcha Libre|arcade
+clburritobisonrevenge|Burrito Bison Revenge|arcade
+clbushidoblade|Bushido Blade|action
+clbusterjam|Buster Jam|rhythm
