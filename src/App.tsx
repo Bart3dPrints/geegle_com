@@ -23,7 +23,6 @@ import { legacyCatalog } from './data/catalog';
 import { CATEGORIES } from './data/types';
 import { PROXY_SERVICES, proxyUrl } from './data/proxies';
 import { DUAL_SECTION_ENTRIES, EVERYTHINGLE } from './data/external';
-import { ACCOUNT_INACTIVITY_NOTICE } from './lib/userData';
 import { isEntryUnlocked, verifyEntryPassword } from './lib/entryGate';
 import { useAuth } from './hooks/useAuth';
 import {
@@ -196,8 +195,6 @@ export default function App() {
   const handleSignOut = async () => {
     setActive(null);
     setActiveProxy(null);
-    // Await the registered handle's real close() (final save) if a game is
-    // still open — no timing guesses.
     const handle = saveHandleRef.current;
     if (handle) {
       await handle.close();
@@ -475,7 +472,7 @@ export default function App() {
               className={`flex-1 px-3 py-2 text-sm font-medium capitalize ${
                 tab === t
                   ? 'border-b-2 border-blue-600 text-blue-600 dark:text-blue-400'
-                  : 'text-slate-600 dark:text-slate-400"
+                  : 'text-slate-600 dark:text-slate-400'
               }`}
               onClick={() => {
                 setTab(t);
@@ -502,12 +499,6 @@ export default function App() {
               <div className="mb-4 flex gap-2 rounded-lg bg-amber-50 p-3 text-sm text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">
                 <AlertTriangle size={16} className="mt-0.5 shrink-0" />
                 <span>Accounts are not configured on this deployment.</span>
-              </div>
-            )}
-            {authMode === 'register' && (
-              <div className="mb-4 rounded-lg border border-slate-200 bg-slate-50 p-3 text-xs text-slate-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-400">
-                {ACCOUNT_INACTIVITY_NOTICE} Logging in or actively using Geegle
-                resets the inactivity timer.
               </div>
             )}
             <form
@@ -571,7 +562,6 @@ export default function App() {
       {settingsOpen && auth.user && (
         <AccountSettings
           username={auth.username}
-          userId={userId}
           onClose={() => setSettingsOpen(false)}
           onSignedOut={handleSignOut}
         />
@@ -722,7 +712,7 @@ export default function App() {
       </main>
 
       <footer className="border-t border-slate-200 py-8 text-center text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400">
-        Geegle — free web games. Build: overhaul-2026-11-25.5
+        Geegle — free web games. Build: overhaul-2026-11-25.6
       </footer>
     </div>
   );
