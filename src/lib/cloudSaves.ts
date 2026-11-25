@@ -1,108 +1,263 @@
-// Cloud save lifecycle. A handle is account-scoped and game-scoped.
-// A failed restore blocks automatic upload until the user explicitly retries;
-// this prevents a fresh/default browser from overwriting a good cloud save.
-
 import { supabase, isSupabaseConfigured, T } from './supabase';
-import { adapterFor, adapterLabel, type SaveSnapshot } from './saveAdapters';
+import { adapterFor, type SaveSnapshot } from './saveAdapters';
 
-export type SyncStatus = 'idle' | 'saving' | 'saved' | 'restoring' | 'restored' | 'offline' | 'error' | 'unsupported';
+export type SyncStatus = 'idle' | 'saving' | 'saved' | 'restoring' | 'restored' | 'offline' | 'error' | 'conflict' | 'unsupported';
 export interface SaveResult { ok: boolean; error?: string }
 export interface RestoreResult extends SaveResult { restored: boolean }
 export interface CloudSaveHandle {
   restored: Promise<void>;
-  close: () => Promise<SaveResult>;
-  saveNow: () => Promise<SaveResult>;
-  restore: () => Promise<RestoreResult>;
-  getStatus: () => SyncStatus;
-  supportLabel: string;
+  close(): Promise<SaveResult>;
+  dispose(): Promise<void>;
+  saveNow(): Promise<SaveResult>;
+  restore(): Promise<RestoreResult>;
+  keepLocal(): Promise<SaveResult>;
+  getStatus(): SyncStatus;
+  launchPath: string;
   supported: boolean;
+}
+
+type Adapter = NonNullable<ReturnType<typeof adapterFor>>;
+interface CloudRow { revision: string; save_data: unknown }
+interface SaveRemote {
+  read(): Promise<CloudRow | null>;
+  write(snapshot: SaveSnapshot, revision: string | null): Promise<string | null>;
 }
 
 const MAX_SNAPSHOT_BYTES = 512 * 1024;
 const SYNC_INTERVAL_MS = 15_000;
-function metaKey(game: string, user: string) { return `geegle-save-meta-${user}-${game}`; }
-function readTs(game: string, user: string) { try { return Number(localStorage.getItem(metaKey(game, user))) || 0; } catch { return 0; } }
-function writeTs(game: string, user: string, ts: number) { try { localStorage.setItem(metaKey(game, user), String(ts)); } catch {} }
-function fingerprint(s: SaveSnapshot): string { const x = JSON.stringify({ ...s, timestamp: 0 }); let h = 2166136261; for (let i = 0; i < x.length; i++) h = Math.imul(h ^ x.charCodeAt(i), 16777619); return `${x.length}:${h >>> 0}`; }
+const conflictMessage = 'Cloud progress changed on another device. Choose Restore from Cloud or Keep This Device.';
+const success = { ok: true };
+const describe = (error: unknown) => error instanceof Error ? error.message : 'Cloud sync failed.';
 
-export function startCloudSync(gameId: string, launchPath: string, userId: string | null, onStatus?: (s: SyncStatus) => void): CloudSaveHandle {
-  const adapter = adapterFor(launchPath);
-  let status: SyncStatus = adapter ? 'idle' : 'unsupported';
-  let timer: ReturnType<typeof setInterval> | null = null;
+function saveRemote(userId: string, gameId: string): SaveRemote {
+  const identity = { user_id: userId, game_id: gameId, save_key: 'default' };
+  return {
+    async read() {
+      const { data, error } = await supabase.from(T.saves).select('revision,save_data').match(identity)
+        .abortSignal(AbortSignal.timeout(10_000)).maybeSingle();
+      if (error) throw new Error(error.message);
+      return data;
+    },
+    async write(save_data, revision) {
+      const table = supabase.from(T.saves);
+      const query = revision === null
+        ? table.insert({ ...identity, save_data })
+        : table.update({ save_data }).match({ ...identity, revision });
+      const { data, error } = await query.select('revision').abortSignal(AbortSignal.timeout(10_000)).maybeSingle();
+      if (error?.code === '23505' && revision === null) return null;
+      if (error) throw new Error(error.message);
+      return data?.revision ?? null;
+    },
+  };
+}
+
+export function createSaveSession(
+  gameId: string,
+  userId: string,
+  adapter: Adapter,
+  remote: SaveRemote,
+  onStatus?: (s: SyncStatus) => void,
+): CloudSaveHandle {
+  const checkpointKey = `geegle-save-checkpoint:${gameId}:${userId}`;
+  const checkpoint = (): { revision: string; digest: string | null } | null => {
+    const value = localStorage.getItem(checkpointKey);
+    return value ? JSON.parse(value) : null;
+  };
+  const digest = async (value: string | null) => value === null ? null
+    : Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(value))))
+      .map((byte) => byte.toString(16).padStart(2, '0')).join('');
+  let revision: string | null = null;
+  let base: string | null = null;
+  let canUpload = false;
+  let status: SyncStatus = 'idle';
   let disposed = false;
-  let restoreFailed = false;
-  let lastHash = '';
-  let uploadPromise: Promise<SaveResult> | null = null;
-  let closePromise: Promise<SaveResult> | null = null;
-  const setStatus = (s: SyncStatus) => { status = s; onStatus?.(s); };
-
-  if (!adapter) return {
-    restored: Promise.resolve(), close: async () => ({ ok: true }), saveNow: async () => ({ ok: false, error: 'Cloud saves are unsupported for this cross-origin game.' }), restore: async () => ({ ok: false, restored: false, error: 'Cloud saves are unsupported for this cross-origin game.' }), getStatus: () => 'unsupported', supportLabel: adapterLabel(launchPath), supported: false,
+  let queue: Promise<unknown> = Promise.resolve();
+  let closing: Promise<SaveResult> | null = null;
+  let conflictingRevision: string | null | undefined;
+  const setStatus = (next: SyncStatus) => { status = next; onStatus?.(next); };
+  const unavailable = () => navigator.onLine ? 'error' : 'offline';
+  const serialize = (snapshot: SaveSnapshot | null) => snapshot ? JSON.stringify(snapshot) : null;
+  const remember = async (remoteRevision: string | null, data: string | null) => {
+    if (remoteRevision) localStorage.setItem(checkpointKey, JSON.stringify({ revision: remoteRevision, digest: await digest(data) }));
+    else localStorage.removeItem(checkpointKey);
+    revision = remoteRevision;
+    base = data;
+    canUpload = true;
+    conflictingRevision = undefined;
+  };
+  const conflict = (remoteRevision: string | null): SaveResult => {
+    canUpload = false;
+    conflictingRevision = remoteRevision;
+    setStatus('conflict');
+    return { ok: false, error: conflictMessage };
+  };
+  const fail = (error: unknown): SaveResult => {
+    setStatus(unavailable());
+    return { ok: false, error: describe(error) };
+  };
+  const schedule = <T>(work: () => Promise<T>): Promise<T> => {
+    const result = queue.then(work);
+    queue = result.catch(() => undefined);
+    return result;
   };
 
-  const restored = (async () => {
-    if (!userId || !isSupabaseConfigured) return;
+  const read = async () => {
+    const row = await remote.read();
+    return { revision: row?.revision ?? null, snapshot: row ? adapter.validate(row.save_data) : null };
+  };
+
+  let retryRead = false;
+  const initialize = async (beforeLaunch: boolean) => {
+    if (disposed) return;
     setStatus('restoring');
     try {
-      const { data, error } = await supabase.from(T.saves).select('save_data,updated_at').eq('user_id', userId).eq('game_id', gameId).eq('save_key', 'default').maybeSingle();
-      if (error) { restoreFailed = true; setStatus(navigator.onLine ? 'error' : 'offline'); return; }
-      const cloud = data?.save_data as SaveSnapshot | undefined;
-      if (!cloud) { setStatus('idle'); return; }
-      const cloudTs = cloud.timestamp || (data?.updated_at ? Date.parse(data.updated_at) : 0);
-      if (cloudTs <= readTs(gameId, userId)) { lastHash = fingerprint(cloud); setStatus('idle'); return; }
-      const applied = await adapter.restore(gameId, cloud);
-      if (!applied) { restoreFailed = true; setStatus('error'); return; }
-      writeTs(gameId, userId, cloudTs); lastHash = fingerprint(cloud); setStatus('restored');
-    } catch (e) { restoreFailed = true; setStatus(navigator.onLine ? 'error' : 'offline'); console.error('[saves] restore failed', e); }
-  })();
-
-  const doUpload = async (): Promise<SaveResult> => {
-    if (disposed || !userId || !isSupabaseConfigured) return { ok: false, error: 'Cloud saves require a signed-in account.' };
-    if (restoreFailed) return { ok: false, error: 'Restore failed; upload is paused to protect the existing cloud save.' };
-    if (!navigator.onLine) { setStatus('offline'); return { ok: false, error: 'You are offline. The next sync will retry automatically.' }; }
-    const snapshot = await adapter.capture(gameId);
-    if (!snapshot) return { ok: true }; // empty-save protection
-    const hash = fingerprint(snapshot);
-    if (hash === lastHash) return { ok: true };
-    const body = JSON.stringify(snapshot);
-    if (body.length > MAX_SNAPSHOT_BYTES) return { ok: false, error: 'Save data exceeds the 512 KB limit.' };
-    setStatus('saving');
-    const { error } = await supabase.from(T.saves).upsert({ user_id: userId, game_id: gameId, save_key: 'default', save_data: snapshot }, { onConflict: 'user_id,game_id,save_key' });
-    if (error) { setStatus(navigator.onLine ? 'error' : 'offline'); return { ok: false, error: error.message }; }
-    lastHash = hash; writeTs(gameId, userId, snapshot.timestamp); setStatus('saved'); return { ok: true };
+      const cloud = await read();
+      if (disposed) return;
+      const local = serialize(adapter.capture(userId));
+      const cloudData = serialize(cloud.snapshot);
+      const previous = checkpoint();
+      if (!cloud.snapshot && previous && local) {
+        conflict(cloud.revision);
+        return;
+      }
+      const localUnchanged = previous && await digest(local) === previous.digest;
+      retryRead = false;
+      if (local !== cloudData && previous?.revision !== cloud.revision) {
+        if (local && !localUnchanged && (cloud.snapshot || previous)) {
+          conflict(cloud.revision);
+          return;
+        }
+        if (cloud.snapshot) {
+          if (!beforeLaunch) {
+            conflict(cloud.revision);
+            return;
+          }
+          adapter.restore(userId, cloud.snapshot);
+        }
+      } else if (cloud.snapshot && !local) {
+        if (!beforeLaunch) {
+          conflict(cloud.revision);
+          return;
+        }
+        adapter.restore(userId, cloud.snapshot);
+      }
+      await remember(cloud.revision, cloudData);
+      setStatus(cloud.snapshot && (cloudData === local || !local || localUnchanged) ? 'restored' : 'idle');
+    } catch (error) {
+      retryRead = !navigator.onLine;
+      fail(error);
+    }
   };
-  const upload = () => { if (!uploadPromise) uploadPromise = doUpload().finally(() => { uploadPromise = null; }); return uploadPromise; };
-  void restored.then(() => { if (disposed || restoreFailed) return; void upload(); timer = setInterval(() => void upload(), SYNC_INTERVAL_MS); });
+  const restored = schedule(() => initialize(true));
 
+  const upload = async (): Promise<SaveResult> => {
+    if (disposed) return success;
+    if (retryRead && navigator.onLine) await initialize(false);
+    if (!canUpload) {
+      return { ok: false, error: status === 'conflict' ? conflictMessage : 'Cloud restore has not succeeded. Retry Restore from Cloud before saving.' };
+    }
+    try {
+      const snapshot = adapter.capture(userId);
+      if (!snapshot) return success;
+      const body = JSON.stringify(snapshot);
+      if (body === base) {
+        if (status === 'offline' || status === 'error') setStatus(revision ? 'saved' : 'idle');
+        return success;
+      }
+      if (!navigator.onLine) return fail(new Error('Offline. Your device still has its progress; sync will retry.'));
+      if (new TextEncoder().encode(body).byteLength > MAX_SNAPSHOT_BYTES) {
+        return fail(new Error('Save data exceeds the 512 KB limit.'));
+      }
+      setStatus('saving');
+      const next = await remote.write(snapshot, revision);
+      if (!next) {
+        canUpload = false;
+        const latest = await read();
+        if (serialize(latest.snapshot) !== body) return conflict(latest.revision);
+        await remember(latest.revision, body);
+      } else {
+        await remember(next, body);
+      }
+      setStatus('saved');
+      return success;
+    } catch (error) {
+      return fail(error);
+    }
+  };
+
+  let pending: Promise<SaveResult> | null = null;
+  const saveNow = () => {
+    if (closing) return closing;
+    if (!pending) pending = schedule(upload).finally(() => { pending = null; });
+    return pending;
+  };
+  const timer = setInterval(() => { void saveNow(); }, SYNC_INTERVAL_MS);
   const close = (): Promise<SaveResult> => {
-    if (closePromise) return closePromise;
-    closePromise = (async () => {
-      if (timer) { clearInterval(timer); timer = null; }
-      await restored;
-      const result = restoreFailed ? { ok: false, error: 'Restore failed; final upload withheld to protect cloud data.' } : await upload();
-      // Wait for the actual in-flight operation, not a boolean flag.
-      if (uploadPromise) await uploadPromise;
-      disposed = true;
-      // Remove only captured game keys after a successful authenticated save.
-      // This prevents account A's same-origin keys being seen by account B.
-      if (result.ok && userId) await adapter.clear(gameId);
-      return result;
-    })();
-    return closePromise;
+    if (!closing) {
+      closing = schedule(async () => {
+        // Capture again after a pending upload; the game may have saved during it.
+        const result = await upload();
+        if (result.ok) {
+          disposed = true;
+          clearInterval(timer);
+        }
+        return result;
+      }).finally(() => { closing = null; });
+    }
+    return closing;
   };
 
-  const restore = async (): Promise<RestoreResult> => {
-    if (!userId || !isSupabaseConfigured) return { ok: false, restored: false, error: 'Sign in to use cloud saves.' };
+  const restore = (): Promise<RestoreResult> => schedule(async () => {
+    if (disposed) return { ok: false, restored: false, error: 'This game is closing.' };
+    canUpload = false;
     setStatus('restoring');
-    const { data, error } = await supabase.from(T.saves).select('save_data').eq('user_id', userId).eq('game_id', gameId).eq('save_key', 'default').maybeSingle();
-    if (error) { restoreFailed = true; setStatus('error'); return { ok: false, restored: false, error: error.message }; }
-    const cloud = data?.save_data as SaveSnapshot | undefined;
-    if (!cloud) return { ok: true, restored: false };
-    const applied = await adapter.restore(gameId, cloud);
-    if (!applied) { restoreFailed = true; setStatus('error'); return { ok: false, restored: false, error: 'Cloud data could not be fully applied.' }; }
-    restoreFailed = false; writeTs(gameId, userId, cloud.timestamp); lastHash = fingerprint(cloud); setStatus('restored'); return { ok: true, restored: true };
+    try {
+      const cloud = await read();
+      retryRead = false;
+      if (cloud.snapshot) adapter.restore(userId, cloud.snapshot);
+      await remember(cloud.revision, serialize(cloud.snapshot));
+      setStatus(cloud.snapshot ? 'restored' : 'idle');
+      return { ok: true, restored: Boolean(cloud.snapshot) };
+    } catch (error) {
+      return { ...fail(error), restored: false };
+    }
+  });
+
+  const keepLocal = (): Promise<SaveResult> => schedule(async () => {
+    if (disposed || status !== 'conflict' || conflictingRevision === undefined) return { ok: false, error: 'No cloud conflict to resolve.' };
+    try {
+      const cloud = await read();
+      if (cloud.revision !== conflictingRevision) return conflict(cloud.revision);
+      if (!adapter.capture(userId)) return { ok: false, error: 'No saved progress on this device.' };
+      revision = cloud.revision;
+      base = serialize(cloud.snapshot);
+      canUpload = true;
+      const result = await upload();
+      if (!result.ok) canUpload = false;
+      return result;
+    } catch (error) {
+      return fail(error);
+    }
+  });
+
+  const dispose = () => {
+    disposed = true;
+    clearInterval(timer);
+    return queue.then(() => undefined);
   };
 
-  return { restored, close, saveNow: upload, restore, getStatus: () => status, supportLabel: adapter.label, supported: true };
+  return { restored, close, saveNow, restore, keepLocal, getStatus: () => status, launchPath: adapter.launchPath(userId), supported: true, dispose };
 }
-export { adapterLabel };
+
+export function startCloudSync(gameId: string, launchPath: string, userId: string | null, onStatus?: (s: SyncStatus) => void): CloudSaveHandle {
+  const adapter = adapterFor(gameId, launchPath);
+  if (adapter && userId && isSupabaseConfigured) {
+    return createSaveSession(gameId, userId, adapter, saveRemote(userId, gameId), onStatus);
+  }
+  const result = { ok: false, error: adapter ? 'Sign in to use cloud saves.' : 'Cloud saves are unavailable for this game.' };
+  return {
+    restored: Promise.resolve(), close: async () => success, saveNow: async () => result,
+    restore: async () => ({ ...result, restored: false }), keepLocal: async () => result,
+    getStatus: () => userId ? 'unsupported' : 'idle', launchPath, supported: false, dispose: async () => {},
+  };
+}

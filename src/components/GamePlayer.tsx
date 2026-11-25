@@ -3,6 +3,7 @@
 // restore, and offers an external open fallback when a site refuses framing.
 
 import { useEffect, useRef, useState } from 'react';
+import { flushSync } from 'react-dom';
 import {
   Star,
   ArrowLeft,
@@ -18,6 +19,7 @@ import {
   ExternalLink,
 } from 'lucide-react';
 import type { GameEntry } from '../types';
+import { saveSupportFor } from '../lib/saveManifest';
 import {
   startCloudSync,
   type CloudSaveHandle,
@@ -57,6 +59,8 @@ function StatusPill({ status }: { status: SyncStatus }) {
           <AlertTriangle size={12} /> Sync Failed
         </span>
       );
+    case 'conflict':
+      return <span className="text-xs text-amber-400">Cloud save conflict</span>;
     case 'unsupported':
       return (
         <span className="flex items-center gap-1 text-xs text-slate-500">
@@ -104,53 +108,65 @@ export function GamePlayer({
   // The iframe mounts only when restoreReady is true — restore-before-launch
   // is awaited for real (no arbitrary delay).
   const [restoreReady, setRestoreReady] = useState(!gameId);
-  const [restoreError, setRestoreError] = useState<string | null>(null);
+  const [iframePath, setIframePath] = useState<string | null>(null);
+  const [supported, setSupported] = useState(false);
+  const [busy, setBusy] = useState(false);
 
   useEffect(() => {
     if (!gameId) return;
     let cancelled = false;
+    let release: (() => void) | undefined;
+    const lockController = new AbortController();
+    let handle: CloudSaveHandle | undefined;
 
     setRestoreReady(false);
-    setRestoreError(null);
+    setManualMsg(null);
     setSyncStatus('idle');
     setFrameBlocked(false);
 
-    const handle = startCloudSync(
-      gameId,
-      launchPath,
-      userId,
-      (s) => {
-        if (!cancelled) setSyncStatus(s);
-      }
-    );
-    saveHandleRef.current = handle;
-    registerSaveHandle?.(handle);
+    const open = async () => {
+      if (cancelled) return;
+      setManualMsg(null);
+      const sync = startCloudSync(gameId, launchPath, userId, (status) => {
+        if (!cancelled) setSyncStatus(status);
+      });
+      handle = sync;
+      saveHandleRef.current = sync;
+      setSupported(sync.supported);
+      setIframePath(sync.launchPath);
+      setSyncStatus(sync.getStatus());
+      registerSaveHandle?.(sync);
+      await sync.restored;
+      if (!cancelled) setRestoreReady(true);
+    };
 
-    void (async () => {
-      try {
-        await handle.restored; // real restore, not a timer
-      } catch {
-        /* restore already reports its own failures via status */
-      }
-      if (!cancelled) {
-        if (handle.getStatus() === 'error') {
-          setRestoreError(
-            'Cloud restore failed for this game. Local progress is being used.'
-          );
-        }
-        setRestoreReady(true);
-      }
-    })();
+    if (userId && navigator.locks && entry && saveSupportFor(entry) === 'automatic') {
+      void navigator.locks.request(
+        `geegle-game:${gameId}:${userId}`,
+        { signal: lockController.signal },
+        async () => {
+          if (cancelled) return;
+          const owned = new Promise<void>((resolve) => { release = resolve; });
+          await open();
+          await owned;
+        },
+      ).catch(() => {
+        if (!cancelled) setManualMsg('Could not open this account’s game storage.');
+      });
+      setManualMsg('Opening save storage… Close this game in other tabs if needed.');
+    } else {
+      void open();
+    }
 
     return () => {
       cancelled = true;
-      // close() performs the final save BEFORE disposing — reliable save-on-exit.
-      void handle.close();
+      lockController.abort();
+      void (handle?.dispose() ?? Promise.resolve()).finally(() => release?.());
       saveHandleRef.current = null;
       registerSaveHandle?.(null);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [gameId, userId]);
+  }, [gameId, launchPath, userId]);
 
   const goFullscreen = () => {
     frameRef.current?.requestFullscreen?.();
@@ -175,7 +191,8 @@ export function GamePlayer({
     setLoadFailed(false);
     setFrameBlocked(false);
     setLoaded(false);
-    if (frameRef.current) frameRef.current.src = frameRef.current.src;
+    const path = gameId ? iframePath : url;
+    if (frameRef.current && path) frameRef.current.src = path;
   };
 
   const manualSave = async () => {
@@ -194,18 +211,51 @@ export function GamePlayer({
   };
 
   const manualRestore = async () => {
-    setManualMsg(null);
-    const result = await saveHandleRef.current?.restore();
-    if (!result) return;
-    if (result.restored) {
-      setManualMsg('Cloud save restored. Reloading game…');
-      reload();
-    } else if (result.error) {
-      setManualMsg(result.error);
-    } else {
-      setManualMsg('No cloud save found for this game yet.');
+    const handle = saveHandleRef.current;
+    if (busy || !handle || !window.confirm('Load cloud progress? If it differs, this device’s current save will be kept as a local backup.')) return;
+    flushSync(() => {
+      setBusy(true);
+      setRestoreReady(false);
+      setManualMsg(null);
+    });
+    try {
+      const result = await handle.restore();
+      setManualMsg(result.restored ? 'Cloud save restored.' : result.error ?? 'No cloud save found for this game yet.');
+      setLoaded(false);
+      setLoadFailed(false);
+    } finally {
+      setBusy(false);
+      setRestoreReady(true);
     }
   };
+
+  const keepLocal = async () => {
+    if (busy || !window.confirm('Replace the conflicting cloud version with this device’s progress?')) return;
+    setBusy(true);
+    try {
+      const result = await saveHandleRef.current?.keepLocal();
+      if (result) setManualMsg(result.ok ? 'This device’s progress is saved to the cloud.' : result.error ?? 'Save failed.');
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const exit = async () => {
+    if (busy) return;
+    const handle = saveHandleRef.current;
+    setBusy(true);
+    try {
+      const result = await handle?.close();
+      if (!result || result.ok || window.confirm(`${result.error} Leave the game with progress kept on this device?`)) onExit();
+      else setManualMsg(result.error ?? null);
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const restoreError = supported && syncStatus === 'conflict'
+    ? 'Cloud progress differs. Choose Restore from Cloud or Keep This Device.'
+    : supported && syncStatus === 'error' ? 'Cloud sync failed. Your device still has its saved progress.' : null;
 
   const btn =
     'btn-secondary border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800';
@@ -213,7 +263,7 @@ export function GamePlayer({
   return (
     <div className="fixed inset-0 z-50 bg-slate-950">
       <div className="flex h-14 items-center gap-2 border-b border-slate-800 bg-slate-900 px-4">
-        <button className={btn} onClick={onExit}>
+        <button className={btn} onClick={() => void exit()} disabled={busy}>
           <ArrowLeft size={16} />
           Back
         </button>
@@ -238,11 +288,12 @@ export function GamePlayer({
           </button>
         )}
 
-        {entry && !isExternal && (
+        {supported && (
           <>
             <button
               className={btn}
               onClick={manualSave}
+              disabled={busy}
               aria-label="Save progress to cloud"
               title="Save to Cloud"
             >
@@ -251,11 +302,13 @@ export function GamePlayer({
             <button
               className={btn}
               onClick={manualRestore}
+              disabled={busy}
               aria-label="Restore progress from cloud"
               title="Restore from Cloud"
             >
               <DownloadCloud size={16} />
             </button>
+            {syncStatus === 'conflict' && <button className={btn} disabled={busy} onClick={() => void keepLocal()}>Keep This Device</button>}
           </>
         )}
 
@@ -315,7 +368,7 @@ export function GamePlayer({
                   <ExternalLink size={14} /> Open in a new tab
                 </button>
               )}
-              <button className={btn} onClick={onExit}>
+              <button className={btn} onClick={() => void exit()} disabled={busy}>
                 Back to Games
               </button>
             </div>
@@ -332,16 +385,17 @@ export function GamePlayer({
               <button className={btn} onClick={reload}>
                 <RotateCcw size={14} /> Retry
               </button>
-              <button className={btn} onClick={onExit}>
+              <button className={btn} onClick={() => void exit()} disabled={busy}>
                 Back to Games
               </button>
             </div>
           </div>
         )}
-        {restoreReady && url && !frameBlocked && (
+        {restoreReady && (gameId ? iframePath : url) && !frameBlocked && (
           <iframe
             ref={frameRef}
-            src={url}
+            src={(gameId ? iframePath : url) ?? undefined}
+            referrerPolicy="no-referrer"
             title={title ?? 'Game'}
             className="h-full w-full"
             onLoad={() => setLoaded(true)}
