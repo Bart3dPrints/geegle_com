@@ -1,0 +1,27 @@
+clvampiresurvivors|Vampire Survivors|action
+clvanguard|Vanguard|action
+clvaportrails|Vapor Trails|action
+clvex|Vex|platformer
+clvex2|Vex 2|platformer
+clvex3|Vex 3|platformer
+clvex3xmas|Vex 3 Xmas|platformer
+clvex4|Vex 4|platformer
+clvex5|Vex 5|platformer
+clvex6|Vex 6|platformer
+clvex7|Vex 7|platformer
+clvex8|Vex 8|platformer
+clvexchallenges|Vex Challenges|platformer
+clvexx3m|Vexx 3M|platformer
+clvexx3m2|Vexx 3M 2|platformer
+clvibribbon|Vib-Ribbon|rhythm
+clvillager|Villager|simulation
+clvincentmansionofthedead|Vincent Mansion of the Dead|horror
+clvisitor|Visitor|horror
+clvollyballchallenge|Volleyball Challenge|sports
+clvolleyrandom|Volley Random|sports
+clvolleyball|Volleyball|sports
+clvortex|Vortex|arcade
+clvsnonsense|VS Nonsense|rhythm
+clvssmb|VS SMB|rhythm
+clvsagore|VS Agore|rhythm
+clvvvvvv-1|VVVVVV|platformer
