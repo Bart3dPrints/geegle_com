@@ -1,12 +1,8 @@
 // Game artwork: REAL images from each game's own asset folder on UGS-Assets
-// (the same origin the game itself loads from — no new licensing surface).
-// Candidate list covers Construct-style images/ folders, Unity-style
-// template/root images, icons, and favicons; falls back to a neutral tile
-// only when a game genuinely has no usable image.
-//
-// Every candidate URL is verified lazily at runtime via the onError chain:
-// failed candidates are remembered per session so each missing image is
-// requested at most once — no repeated network requests for 404s.
+// (the same origin the game itself loads from). Candidates are ordered by
+// representativeness: loading/title screens first, then icons. The onError
+// chain walks candidates with per-session memoization, so each missing file
+// is requested at most once per session.
 
 import { useState } from 'react';
 import type { GameEntry } from '../types';
@@ -21,9 +17,14 @@ function folderUrl(folder: string, file: string): string {
     .join('/')}/${encodeURIComponent(file)}`;
 }
 
-// Priority: title/menu screens first (best 16:9), then backgrounds, then
-// Unity template/root images, icons, favicons.
+// Verified file names observed in this asset library's game folders:
+// - Unity WebGL games: TemplateData/img.jpg, vin.jpg, 512.jpg, logo.png,
+//   Icon_512x512.png (e.g. granny 3, space waves)
+// - Construct games: images/*-sheet0.png sprite sheets (menu/background
+//   sheets are the most representative), loading-logo.png, icon-256.png
+// - Simple HTML5 games: favicon.ico
 const CANDIDATES = [
+  'loading-logo.png',
   'images/menu_bg-sheet0.png',
   'images/main_bg-sheet0.png',
   'images/game_bg-sheet0.png',
@@ -33,13 +34,14 @@ const CANDIDATES = [
   'images/level_select-sheet0.png',
   'images/map1_bg-sheet0.png',
   'images/menu-sheet0.png',
-  'images/sheet0.png',
   'TemplateData/img.jpg',
   'TemplateData/vin.jpg',
   '512.jpg',
   'logo.png',
+  'icon-256.png',
   'icon.png',
   'Icon_512x512.png',
+  'images/sheet0.png',
   'favicon.ico',
 ];
 
@@ -60,7 +62,6 @@ export function tileColor(id: string): string {
   return PALETTE[h % PALETTE.length];
 }
 
-/** Tracks which candidate index resolved for each game this session. */
 function rememberCandidate(gameId: string, idx: number): void {
   try {
     sessionStorage.setItem(`geegle-art-${gameId}`, String(idx));
@@ -85,23 +86,20 @@ export function GameArt({
   game: GameEntry;
   className?: string;
 }) {
-  // Explicit per-game artwork takes priority; the folder mapping is used
-  // when no curated thumb exists. Both paths share the same fallback chain.
+  // Explicit per-game artwork takes priority; the folder mapping follows;
+  // both share the same fallback chain so a failed explicit thumb never
+  // shows a broken image.
   const folder = ARTWORK_FOLDERS[game.id];
   const hasArtwork = Boolean(game.thumb || folder);
 
-  const [idx, setIdx] = useState(() =>
-    rememberedCandidate(game.id)
-  );
+  const [idx, setIdx] = useState(() => rememberedCandidate(game.id));
   const [explicitFailed, setExplicitFailed] = useState(false);
 
   const handleError = () => {
-    // Curated thumb failed → try the folder mapping if present.
     if (game.thumb && !explicitFailed && folder) {
       setExplicitFailed(true);
       return;
     }
-    // Walk the candidate list inside the mapped folder.
     if (folder) {
       const next = idx + 1;
       if (next < CANDIDATES.length) {
@@ -110,13 +108,10 @@ export function GameArt({
         return;
       }
     }
-    // No more candidates: neutral fallback for this session (remembered so
-    // we never re-request the missing image).
     rememberCandidate(game.id, CANDIDATES.length);
     setIdx(CANDIDATES.length);
   };
 
-  // Neutral fallback — only for games with no verified artwork.
   const usingFallback =
     (!hasArtwork || idx >= CANDIDATES.length) &&
     !(game.thumb && !explicitFailed);
