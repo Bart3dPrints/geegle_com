@@ -12,10 +12,10 @@ function videoIdFromInput(input: string): string | null {
   const trimmed = input.trim();
   if (!trimmed) return null;
 
-  // Direct 11-char video id.
+  // Direct 11-character video id.
   if (/^[a-zA-Z0-9_-]{11}$/.test(trimmed)) return trimmed;
 
-  // Watch URLs: youtube.com/watch?v=..., youtu.be/<id>, nocookie variants.
+  // Watch URLs: youtube.com/watch?v=…, youtu.be/<id>, /embed/<id>, /shorts/<id>.
   try {
     const u = new URL(
       trimmed.startsWith('http') ? trimmed : `https://${trimmed}`
@@ -26,7 +26,6 @@ function videoIdFromInput(input: string): string | null {
     }
     const v = u.searchParams.get('v');
     if (v && /^[a-zA-Z0-9_-]{11}$/.test(v)) return v;
-    // /embed/<id> and /shorts/<id>
     const m = u.pathname.match(
       /\/(?:embed|shorts|live)\/([a-zA-Z0-9_-]{11})/
     );
@@ -91,7 +90,10 @@ export function YouTubeApp({ onExit }: { onExit: () => void }) {
       </div>
 
       {error && (
-        <div className="mx-auto mt-6 max-w-md rounded-lg bg-red-50 p-4 text-sm text-red-700 dark:bg-red-900/30 dark:text-red-300" role="alert">
+        <div
+          className="mx-auto mt-6 max-w-md rounded-lg bg-red-50 p-4 text-sm text-red-700 dark:bg-red-900/30 dark:text-red-300"
+          role="alert"
+        >
           {error}
         </div>
       )}
@@ -108,8 +110,7 @@ export function YouTubeApp({ onExit }: { onExit: () => void }) {
               <iframe
                 key={videoId}
                 className="absolute inset-0 h-full w-full rounded-lg"
-                src={`${NOCODDIE}/embed/${videoId}?rel=0`
-                }
+                src={`${NOCODDIE}/embed/${videoId}?rel=0`}
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
