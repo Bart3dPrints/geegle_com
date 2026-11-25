@@ -1,6 +1,8 @@
 // Geegle application shell.
 // Entry gate → header → browse tabs → game player with active cloud saves.
 // Logout awaits the running game's real final save before ending the session.
+// External entries (Krillion backup / Everythingle) open in the Geegle player
+// iframe; sites that refuse framing show an Open-in-new-tab fallback button.
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
@@ -14,11 +16,14 @@ import {
   Loader2,
   AlertTriangle,
   Settings as SettingsIcon,
+  ExternalLink,
 } from 'lucide-react';
 import type { GameEntry, ThemePreference } from './types';
 import { legacyCatalog } from './data/catalog';
 import { CATEGORIES } from './data/types';
 import { PROXY_SERVICES, proxyUrl } from './data/proxies';
+import { DUAL_SECTION_ENTRIES, EVERYTHINGLE } from './data/external';
+import { ACCOUNT_INACTIVITY_NOTICE } from './lib/userData';
 import { isEntryUnlocked, verifyEntryPassword } from './lib/entryGate';
 import { useAuth } from './hooks/useAuth';
 import {
@@ -50,6 +55,7 @@ const APPS: GameEntry[] = [
     source: 'Official YouTube privacy-enhanced embed (youtube-nocookie.com)',
     description: 'Play any YouTube video via the official embed.',
   },
+  EVERYTHINGLE,
   {
     id: 'suggestions',
     title: 'Suggestions',
@@ -76,7 +82,10 @@ const APPS: GameEntry[] = [
   },
 ];
 
-const SEARCHABLE = [...legacyCatalog, ...APPS];
+// Apps grid shows APPS plus dual-section entries (Krillion backup appears in
+// BOTH Games and Apps from one stable ID, so favorites/history stay unified).
+const APPS_GRID = [...APPS, ...DUAL_SECTION_ENTRIES];
+const SEARCHABLE = [...legacyCatalog, ...APPS_GRID];
 
 type Tab = 'games' | 'apps' | 'proxies';
 
@@ -182,15 +191,16 @@ export default function App() {
     }
   };
 
-  // Save-before-logout: unmounting the player calls close() which performs
-  // the final save; then we AWAIT the same handle to guarantee the upload
-  // completed before the session actually ends. No timing guesses.
+  // Save-before-logout: closing the running game triggers GamePlayer's
+  // unmount save; then the session ends.
   const handleSignOut = async () => {
     setActive(null);
     setActiveProxy(null);
+    // Await the registered handle's real close() (final save) if a game is
+    // still open — no timing guesses.
     const handle = saveHandleRef.current;
     if (handle) {
-      await handle.close(); // real final save, awaited
+      await handle.close();
       saveHandleRef.current = null;
     }
     await auth.signOut();
@@ -465,7 +475,7 @@ export default function App() {
               className={`flex-1 px-3 py-2 text-sm font-medium capitalize ${
                 tab === t
                   ? 'border-b-2 border-blue-600 text-blue-600 dark:text-blue-400'
-                  : 'text-slate-600 dark:text-slate-400'
+                  : 'text-slate-600 dark:text-slate-400"
               }`}
               onClick={() => {
                 setTab(t);
@@ -492,6 +502,12 @@ export default function App() {
               <div className="mb-4 flex gap-2 rounded-lg bg-amber-50 p-3 text-sm text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">
                 <AlertTriangle size={16} className="mt-0.5 shrink-0" />
                 <span>Accounts are not configured on this deployment.</span>
+              </div>
+            )}
+            {authMode === 'register' && (
+              <div className="mb-4 rounded-lg border border-slate-200 bg-slate-50 p-3 text-xs text-slate-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-400">
+                {ACCOUNT_INACTIVITY_NOTICE} Logging in or actively using Geegle
+                resets the inactivity timer.
               </div>
             )}
             <form
@@ -555,6 +571,7 @@ export default function App() {
       {settingsOpen && auth.user && (
         <AccountSettings
           username={auth.username}
+          userId={userId}
           onClose={() => setSettingsOpen(false)}
           onSignedOut={handleSignOut}
         />
@@ -607,7 +624,7 @@ export default function App() {
             )}
 
             <section>
-                           <div className="mb-4 flex items-center justify-between">
+              <div className="mb-4 flex items-center justify-between">
                 <h2>All Games</h2>
                 <span className="text-sm text-slate-500">
                   {visibleGames.length} games
@@ -660,10 +677,17 @@ export default function App() {
           <section>
             <h2 className="mb-4">Apps</h2>
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-              {APPS.map((g) => (
+              {APPS_GRID.map((g) => (
                 <GameCard key={g.id} game={g} onLaunch={() => launch(g)} />
               ))}
             </div>
+            {active && active.path.startsWith('http') && (
+              <p className="mt-4 flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+                <ExternalLink size={14} />
+                If the site cannot display inside Geegle, use the Open in a new
+                tab button in the player toolbar.
+              </p>
+            )}
           </section>
         )}
 
@@ -698,7 +722,7 @@ export default function App() {
       </main>
 
       <footer className="border-t border-slate-200 py-8 text-center text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400">
-        Geegle — free web games. Build: overhaul-2026-11-25.4
+        Geegle — free web games. Build: overhaul-2026-11-25.5
       </footer>
     </div>
   );
