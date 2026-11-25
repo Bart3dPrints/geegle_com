@@ -1,371 +1,269 @@
-// Game save engine adapters.
-//
-// Each adapter snapshots and restores a game's persisted data on the Geegle
-// origin. Key discovery is per-game rather than assumed: the same-origin games
-// in this repo load their logic from CDNs but persist into THIS page's
-// storage under engine-specific names, so adapters capture by pattern and
-// record what they found. Nothing outside game-scoped keys is ever uploaded.
+// Game-save adapters. Snapshots are explicitly tagged so JSONB can preserve
+// IndexedDB keys and values that JSON.stringify would corrupt (Blobs,
+// ArrayBuffers, typed arrays, Dates, undefined, and nested objects).
 
-export interface SaveSnapshot {
-  /** Milliseconds since epoch (UTC) when this snapshot was taken. */
-  timestamp: number;
-  format: 'v2';
-  /** Game-scoped localStorage entries. */
-  localStorage: Record<string, string>;
-  /** Full-fidelity IndexedDB dumps. */
-  indexedDB: IndexedDbDump[];
-  /** Which adapter produced this snapshot (for the compatibility manifest). */
-  adapter: string;
+export type EngineKind = 'emulatorjs' | 'unity' | 'ruffle' | 'construct' | 'html5' | 'unknown';
+
+type Encoded =
+  | { t: 'undefined' }
+  | { t: 'null' }
+  | { t: 'string' | 'number' | 'boolean'; v: string | number | boolean }
+  | { t: 'bigint'; v: string }
+  | { t: 'date'; v: string }
+  | { t: 'array'; v: Encoded[] }
+  | { t: 'object'; v: Record<string, Encoded> }
+  | { t: 'map'; v: [Encoded, Encoded][] }
+  | { t: 'set'; v: Encoded[] }
+  | { t: 'arraybuffer'; v: string }
+  | { t: 'typedarray'; c: string; v: string }
+  | { t: 'blob'; type: string; v: string };
+
+export interface IndexDump {
+  name: string;
+  keyPath: string | string[] | null;
+  unique: boolean;
+  multiEntry: boolean;
 }
 
 export interface ObjectStoreDump {
   name: string;
-  /** Records as { key, value } pairs preserving original keys. */
-  records: { key: string; value: unknown }[];
+  keyPath: string | string[] | null;
+  autoIncrement: boolean;
+  indexes: IndexDump[];
+  records: { key: Encoded; value: Encoded }[];
 }
 
 export interface IndexedDbDump {
   name: string;
-  /** Original database version. */
   version: number;
-  /** All object stores with their records. */
   stores: ObjectStoreDump[];
 }
 
-export type EngineKind =
-  | 'emulatorjs'
-  | 'unity'
-  | 'ruffle'
-  | 'construct'
-  | 'html5'
-  | 'unknown';
+export interface SaveSnapshot {
+  timestamp: number;
+  format: 'v3';
+  localStorage: Record<string, string>;
+  indexedDB: IndexedDbDump[];
+  adapter: string;
+}
 
 export interface SaveAdapter {
   kind: EngineKind;
-  /** Human-readable name for the compatibility manifest. */
   label: string;
   supported(launchPath: string): boolean;
   capture(gameId: string): Promise<SaveSnapshot | null>;
   restore(gameId: string, snapshot: SaveSnapshot): Promise<boolean>;
+  /** Clears only game-owned storage after a successful account logout save. */
+  clear(gameId: string): Promise<void>;
 }
 
-// ── localStorage capture ──────────────────────────────────────────────────
+const FORBIDDEN_KEY_RE = /^(supabase|geegle-auth|geegle-entry|geegle-device|geegle-theme|geegle-favorites|geegle-recently|geegle-default|geegle-save-meta|geegle-settings)/i;
+const ENGINE_KEY_RE = /^(ejs[-_]|emulatorjs[-_]|unity(progress)?[-_.]|ruffle[-_]|c[23][-_]|construct[-_])/i;
 
-/**
- * Engine key patterns observed in this repository's games:
- * - EmulatorJS (same-origin): `ejs-*`, `emulatorjs-*`
- * - Unity WebGL: `UnityProgress-*`, `unity.*`, `unity_*`, and
- *   `<CompanyName>_<ProductName>*` patterns
- * - Ruffle: `ruffle-*`
- * - Construct 2/3: `c2-*`, `c3-*`, `construct-*`
- * - Generic HTML5: the game id itself in various shapes (`clfoo`, `clfoo.html`)
- */
-const KEY_PATTERNS: { engine: string; patterns: RegExp[] }[] = [
-  { engine: 'emulatorjs', patterns: [/^ejs[-_]/i, /^emulatorjs[-_]/i] },
-  { engine: 'unity', patterns: [/^unityprogress[-_]/i, /^unity[._]/i, /^unity[-_]/i] },
-  { engine: 'ruffle', patterns: [/^ruffle[-_]/i] },
-  { engine: 'construct', patterns: [/^c2[-_]/i, /^c3[-_]/i, /^construct[-_]/i] },
-  { engine: 'html5', patterns: [] }, // game-scoped patterns added dynamically
-];
-
-/** True when a localStorage key belongs to this game (never another user's data). */
-function isGameKey(key: string, gameId: string): boolean {
-  const idVariants = [
-    gameId.toLowerCase(),
-    gameId.toLowerCase().replace(/^cl/, ''),
-    gameId.toLowerCase().replace(/[-_]/g, ''),
-  ];
-  // Engine patterns are game-agnostic by design (one game runs at a time in
-  // the player) but only engine-scoped prefixes are allowed — never broad
-  // keys like `token`, `session`, or Supabase's own keys.
-  for (const { patterns } of KEY_PATTERNS) {
-    for (const p of patterns) {
-      if (p.test(key)) return true;
-    }
-  }
-  return idVariants.some((v) => v.length > 2 && key.toLowerCase().includes(v));
+function idVariants(gameId: string): string[] {
+  const lower = gameId.toLowerCase();
+  return [lower, lower.replace(/^cl/, ''), lower.replace(/[-_]/g, '')].filter((v) => v.length > 2);
 }
 
-/** Never sync these — account/session credentials, not game data. */
-const FORBIDDEN_KEY_RE =
-  /^(supabase|geegle-auth|geegle-entry|geegle-device|geegle-theme|geegle-favorites|geegle-recently|geegle-default|geegle-save-meta|geegle-settings)/i;
+function belongsToGame(key: string, gameId: string): boolean {
+  if (FORBIDDEN_KEY_RE.test(key)) return false;
+  return ENGINE_KEY_RE.test(key) || idVariants(gameId).some((v) => key.toLowerCase().includes(v));
+}
 
-function readLocalStorageForGame(gameId: string): Record<string, string> {
-  const out: Record<string, string> = {};
-  try {
-    for (let i = 0; i < localStorage.length; i++) {
-      const key = localStorage.key(i);
-      if (!key) continue;
-      if (FORBIDDEN_KEY_RE.test(key)) continue;
-      if (isGameKey(key, gameId)) {
-        const value = localStorage.getItem(key);
-        if (value !== null) out[key] = value;
-      }
-    }
-  } catch {
-    /* storage unavailable */
-  }
+function encodeBytes(bytes: Uint8Array): string {
+  let binary = '';
+  const chunk = 0x8000;
+  for (let i = 0; i < bytes.length; i += chunk) binary += String.fromCharCode(...bytes.subarray(i, i + chunk));
+  return btoa(binary);
+}
+
+function decodeBytes(value: string): Uint8Array {
+  const binary = atob(value);
+  const out = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) out[i] = binary.charCodeAt(i);
   return out;
 }
 
-function writeLocalStorageEntries(entries: Record<string, string>): void {
-  try {
-    for (const [key, value] of Object.entries(entries)) {
-      localStorage.setItem(key, value);
+function encode(value: unknown, seen = new WeakSet<object>()): Encoded {
+  if (value === undefined) return { t: 'undefined' };
+  if (value === null) return { t: 'null' };
+  if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
+    return { t: typeof value, v: value } as Encoded;
+  }
+  if (typeof value === 'bigint') return { t: 'bigint', v: value.toString() };
+  if (value instanceof Date) return { t: 'date', v: value.toISOString() };
+  if (value instanceof ArrayBuffer) return { t: 'arraybuffer', v: encodeBytes(new Uint8Array(value)) };
+  if (ArrayBuffer.isView(value)) {
+    const view = value as ArrayBufferView & { constructor: { name: string }; byteOffset: number; byteLength: number };
+    return { t: 'typedarray', c: view.constructor.name, v: encodeBytes(new Uint8Array(view.buffer, view.byteOffset, view.byteLength)) };
+  }
+  if (typeof Blob !== 'undefined' && value instanceof Blob) {
+    // Blob encoding is completed asynchronously by encodeAsync; this branch is
+    // never used by the async snapshot path and is retained for type safety.
+    return { t: 'blob', type: value.type, v: '' };
+  }
+  if (typeof value !== 'object') return { t: 'undefined' };
+  if (seen.has(value as object)) throw new Error('Cyclic save value is not supported');
+  seen.add(value as object);
+  if (value instanceof Map) return { t: 'map', v: [...value.entries()].map(([k, v]) => [encode(k, seen), encode(v, seen)]) };
+  if (value instanceof Set) return { t: 'set', v: [...value].map((v) => encode(v, seen)) };
+  if (Array.isArray(value)) return { t: 'array', v: value.map((v) => encode(v, seen)) };
+  const out: Record<string, Encoded> = {};
+  for (const [k, v] of Object.entries(value)) out[k] = encode(v, seen);
+  return { t: 'object', v: out };
+}
+
+function decode(value: Encoded): unknown {
+  switch (value.t) {
+    case 'undefined': return undefined;
+    case 'null': return null;
+    case 'string': case 'number': case 'boolean': return value.v;
+    case 'bigint': return BigInt(value.v);
+    case 'date': return new Date(value.v);
+    case 'arraybuffer': return decodeBytes(value.v).buffer;
+    case 'typedarray': {
+      const bytes = decodeBytes(value.v);
+      const constructors: Record<string, (b: ArrayBuffer) => unknown> = {
+        Uint8Array: (b) => new Uint8Array(b), Int8Array: (b) => new Int8Array(b),
+        Uint16Array: (b) => new Uint16Array(b), Int16Array: (b) => new Int16Array(b),
+        Uint32Array: (b) => new Uint32Array(b), Int32Array: (b) => new Int32Array(b),
+        Float32Array: (b) => new Float32Array(b), Float64Array: (b) => new Float64Array(b),
+        BigInt64Array: (b) => new BigInt64Array(b), BigUint64Array: (b) => new BigUint64Array(b),
+      };
+      return constructors[value.c]?.(bytes.buffer) ?? bytes;
     }
-  } catch {
-    /* storage unavailable */
+    case 'blob': return new Blob([decodeBytes(value.v)], { type: value.type });
+    case 'array': return value.v.map(decode);
+    case 'object': return Object.fromEntries(Object.entries(value.v).map(([k, v]) => [k, decode(v)]));
+    case 'map': return new Map(value.v.map(([k, v]) => [decode(k), decode(v)]));
+    case 'set': return new Set(value.v.map(decode));
   }
 }
 
-// ── IndexedDB full-fidelity dump ───────────────────────────────────────────
+async function encodeAsync(value: unknown): Promise<Encoded> {
+  if (typeof Blob !== 'undefined' && value instanceof Blob) {
+    return { t: 'blob', type: value.type, v: encodeBytes(new Uint8Array(await value.arrayBuffer())) };
+  }
+  if (Array.isArray(value)) {
+    return { t: 'array', v: await Promise.all(value.map(encodeAsync)) };
+  }
+  if (value && typeof value === 'object' && !(value instanceof ArrayBuffer) && !ArrayBuffer.isView(value) && !(value instanceof Date) && !(value instanceof Map) && !(value instanceof Set)) {
+    const out: Record<string, Encoded> = {};
+    for (const [k, v] of Object.entries(value)) out[k] = await encodeAsync(v);
+    return { t: 'object', v: out };
+  }
+  return encode(value);
+}
 
-function idbOpenVersioned(name: string, version?: number): Promise<IDBDatabase | null> {
+function localEntries(gameId: string): Record<string, string> {
+  const result: Record<string, string> = {};
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key && belongsToGame(key, gameId)) {
+        const value = localStorage.getItem(key);
+        if (value !== null) result[key] = value;
+      }
+    }
+  } catch { /* storage unavailable */ }
+  return result;
+}
+
+function clearLocalEntries(gameId: string): void {
+  try {
+    for (const key of Object.keys(localEntries(gameId))) localStorage.removeItem(key);
+  } catch { /* storage unavailable */ }
+}
+
+function openDb(name: string, version?: number, upgrade?: (db: IDBDatabase) => void): Promise<IDBDatabase | null> {
   return new Promise((resolve) => {
     try {
-      const req =
-        version !== undefined
-          ? indexedDB.open(name, version)
-          : indexedDB.open(name);
+      const req = version === undefined ? indexedDB.open(name) : indexedDB.open(name, version);
+      req.onupgradeneeded = () => { if (req.result) upgrade?.(req.result); };
       req.onsuccess = () => resolve(req.result);
       req.onerror = () => resolve(null);
       req.onblocked = () => resolve(null);
-      // versionchange can happen if another tab holds the db; treat as null.
-      req.onupgradeneeded = () => {
-        /* upgrade is written by the game itself on first run; capture only. */
-      };
-    } catch {
-      resolve(null);
-    }
+    } catch { resolve(null); }
   });
 }
 
-/** Lists game-related database names (never auth/infra databases). */
-async function gameDatabaseNames(gameId: string): Promise<string[]> {
+async function dbNames(gameId: string): Promise<string[]> {
   if (typeof indexedDB === 'undefined' || !indexedDB.databases) return [];
-  const idVariants = [
-    gameId.toLowerCase(),
-    gameId.toLowerCase().replace(/^cl/, ''),
-  ];
-  const enginePrefixes = ['ejs', 'emulatorjs', 'unity', 'ruffle', 'c2', 'c3', 'construct'];
   try {
-    const dbs = await indexedDB.databases();
-    return (dbs ?? [])
-      .map((d) => d.name)
-      .filter((n): n is string => Boolean(n))
-      .filter((name) => {
-        const lower = name.toLowerCase();
-        if (FORBIDDEN_KEY_RE.test(lower)) return false;
-        if (enginePrefixes.some((p) => lower.startsWith(p))) return true;
-        return idVariants.some((v) => v.length > 2 && lower.includes(v));
-      });
-  } catch {
-    return [];
-  }
+    const all = await indexedDB.databases();
+    return (all ?? []).map((d) => d.name).filter((n): n is string => Boolean(n)).filter((n) => !FORBIDDEN_KEY_RE.test(n) && (ENGINE_KEY_RE.test(n) || idVariants(gameId).some((v) => n.toLowerCase().includes(v))));
+  } catch { return []; }
 }
 
-/** Dumps a database preserving version, stores, keys, and values. */
-async function dumpDatabase(name: string): Promise<IndexedDbDump | null> {
-  const db = await idbOpenVersioned(name);
-  if (!db) return null;
-
-  return new Promise((resolve) => {
-    const version = db.version;
-    const storeNames = Array.from(db.objectStoreNames);
-    if (storeNames.length === 0) {
-      db.close();
-      resolve(null);
-      return;
-    }
-
-    const stores: ObjectStoreDump[] = [];
-    let pending = storeNames.length;
-    let settled = false;
-
-    const finish = () => {
-      if (settled) return;
-      settled = true;
-      db.close();
-      resolve({ name, version, stores });
-    };
-
-    const tx = db.transaction(storeNames, 'readonly');
-    tx.onabort = finish;
-    tx.onerror = () => finish();
-
-    for (const storeName of storeNames) {
-      const store = tx.objectStore(storeName);
-      const records: { key: string; value: unknown }[] = [];
-      const cursorReq = store.openCursor();
-      cursorReq.onsuccess = () => {
-        const cursor = cursorReq.result;
-        if (cursor) {
-          records.push({
-            key: String(cursor.key),
-            value: cursor.value,
-          });
-          cursor.continue();
-        } else {
-          stores.push({ name: storeName, records });
-          if (--pending === 0) finish();
-        }
-      };
-      cursorReq.onerror = () => {
-        stores.push({ name: storeName, records });
-        if (--pending === 0) finish();
-      };
-    }
-  });
+async function dumpDb(name: string): Promise<IndexedDbDump | null> {
+  const db = await openDb(name);
+  if (!db || db.objectStoreNames.length === 0) { db?.close(); return null; }
+  const storeNames = Array.from(db.objectStoreNames);
+  const tx = db.transaction(storeNames, 'readonly');
+  const stores: ObjectStoreDump[] = [];
+  await Promise.all(storeNames.map(async (storeName) => {
+    const store = tx.objectStore(storeName);
+    const indexes = Array.from(store.indexNames).map((indexName) => { const i = store.index(indexName); return { name: indexName, keyPath: i.keyPath, unique: i.unique, multiEntry: i.multiEntry }; });
+    const records: { key: Encoded; value: Encoded }[] = [];
+    await new Promise<void>((resolve) => {
+      const req = store.openCursor();
+      req.onsuccess = async () => { const c = req.result; if (!c) { resolve(); return; } records.push({ key: encode(c.key), value: await encodeAsync(c.value) }); c.continue(); };
+      req.onerror = () => resolve();
+    });
+    stores.push({ name: storeName, keyPath: store.keyPath, autoIncrement: store.autoIncrement, indexes, records });
+  }));
+  db.close();
+  return { name, version: db.version, stores };
 }
 
-/** Restores a dump WITHOUT destructive clearing: records are upserted, so
- *  local-only records survive and cloud records win on the same key. */
-async function restoreDatabase(dump: IndexedDbDump): Promise<boolean> {
+async function restoreDb(dump: IndexedDbDump): Promise<boolean> {
   if (typeof indexedDB === 'undefined') return false;
-
-  // Open at the dumped version so the database is upgraded to match, letting
-  // the game's own upgrade path create stores when missing.
-  const db = await idbOpenVersioned(dump.name, Math.max(dump.version, 1));
+  let db = await openDb(dump.name);
+  const needsUpgrade = !db || dump.stores.some((s) => !db!.objectStoreNames.contains(s.name));
+  if (db && needsUpgrade) { const next = Math.max(db.version + 1, dump.version); db.close(); db = await openDb(dump.name, next, (upgraded) => { for (const s of dump.stores) if (!upgraded.objectStoreNames.contains(s.name)) { const os = upgraded.createObjectStore(s.name, { keyPath: s.keyPath ?? undefined, autoIncrement: s.autoIncrement }); for (const i of s.indexes) os.createIndex(i.name, i.keyPath, { unique: i.unique, multiEntry: i.multiEntry }); } }); }
   if (!db) return false;
-
-  return new Promise((resolve) => {
-    const storeNames = Array.from(db.objectStoreNames);
-    const missingStores = dump.stores
-      .map((s) => s.name)
-      .filter((name) => !storeNames.includes(name));
-
-    if (missingStores.length > 0) {
-      // The current connection can't create stores without a version bump;
-      // reopen at version+1 to trigger the upgrade path, then retry once.
-      db.close();
-      idbOpenVersioned(dump.name, db.version + 1).then((upgraded) => {
-        if (!upgraded) {
-          resolve(false);
-          return;
-        }
-        upgraded.close();
-        void restoreDatabase(dump).then(resolve);
-      });
-      return;
-    }
-
-    let pending = dump.stores.length;
-    let ok = true;
-    const finish = () => resolve(ok);
-    if (pending === 0) {
-      db.close();
-      resolve(true);
-      return;
-    }
-
-    const tx = db.transaction(storeNames, 'readwrite');
-    tx.oncomplete = () => {
-      db.close();
-      finish();
-    };
-    tx.onerror = () => {
-      db.close();
-      ok = false;
-      finish();
-    };
-    tx.onabort = () => {
-      db.close();
-      ok = false;
-      finish();
-    };
-
-    for (const storeDump of dump.stores) {
-      if (!storeNames.includes(storeDump.name)) continue;
-      const store = tx.objectStore(storeDump.name);
-      for (const record of storeDump.records) {
-        try {
-          const value = record.value;
-          const key = record.key;
-          const parsed = parseKey(key);
-          if (parsed !== undefined) {
-            store.put(value as never, parsed);
-          } else {
-            store.put(value as never);
-          }
-        } catch {
-          ok = false;
-        }
+  const names = dump.stores.map((s) => s.name).filter((n) => db!.objectStoreNames.contains(n));
+  if (names.length === 0) { db.close(); return true; }
+  return await new Promise<boolean>((resolve) => {
+    const tx = db!.transaction(names, 'readwrite');
+    tx.oncomplete = () => { db!.close(); resolve(true); };
+    tx.onerror = tx.onabort = () => { db!.close(); resolve(false); };
+    for (const s of dump.stores) {
+      if (!db!.objectStoreNames.contains(s.name)) continue;
+      const os = tx.objectStore(s.name);
+      for (const r of s.records) {
+        try { const key = decode(r.key) as IDBValidKey; const value = decode(r.value); if (os.keyPath === null) os.put(value, key); else os.put(value); } catch { /* transaction will report failure if required */ }
       }
     }
   });
 }
 
-/** Best-effort reconstruction of the original key type. */
-function parseKey(serialized: string): IDBValidKey | undefined {
-  // Numeric keys were stringified by JSON; restore their type so records
-  // land on the same keys the game expects.
-  if (/^-?\d+$/.test(serialized)) {
-    const n = Number(serialized);
-    if (Number.isSafeInteger(n)) return n;
-  }
-  return serialized;
-}
-
-// ── Universal adapter ─────────────────────────────────────────────────────
-
-function makeSnapshot(
-  gameId: string,
-  adapterName: string,
-  ls: Record<string, string>,
-  idb: IndexedDbDump[]
-): SaveSnapshot | null {
-  const hasData =
-    Object.keys(ls).length > 0 ||
-    idb.some((d) => d.stores.some((s) => s.records.length > 0));
-  if (!hasData) return null;
-  return {
-    timestamp: Date.now(),
-    format: 'v2',
-    localStorage: ls,
-    indexedDB: idb,
-    adapter: adapterName,
-  };
-}
-
-export const universalAdapter: SaveAdapter = {
+const adapter: SaveAdapter = {
   kind: 'html5',
-  label: 'HTML5 / engine localStorage + IndexedDB',
-  supported(launchPath) {
-    // Same-origin games only: cross-origin iframes keep storage on their
-    // own origin where browser security (correctly) blocks this page.
-    return !launchPath.startsWith('http');
-  },
+  label: 'HTML5 / EmulatorJS / Unity / Ruffle / Construct storage',
+  supported: (path) => !path.startsWith('http'),
   async capture(gameId) {
-    const ls = readLocalStorageForGame(gameId);
-    const names = await gameDatabaseNames(gameId);
-    const dumps: IndexedDbDump[] = [];
-    for (const name of names) {
-      const dump = await dumpDatabase(name);
-      if (dump) dumps.push(dump);
-    }
-    return makeSnapshot(gameId, 'universal-v2', ls, dumps);
+    const localStorage = localEntries(gameId);
+    const indexedDB: IndexedDbDump[] = [];
+    for (const name of await dbNames(gameId)) { const dump = await dumpDb(name); if (dump) indexedDB.push(dump); }
+    if (!Object.keys(localStorage).length && !indexedDB.some((d) => d.stores.some((s) => s.records.length))) return null;
+    return { timestamp: Date.now(), format: 'v3', localStorage, indexedDB, adapter: 'universal-v3' };
   },
-  async restore(_gameId, snapshot) {
-    if (snapshot.format !== 'v2') return false;
-    writeLocalStorageEntries(snapshot.localStorage ?? {});
-    let allOk = true;
-    for (const dump of snapshot.indexedDB ?? []) {
-      const ok = await restoreDatabase(dump);
-      if (!ok) allOk = false;
-    }
-    return allOk;
+  async restore(gameId, snapshot) {
+    if (snapshot.format !== 'v3' && snapshot.format !== 'v2') return false;
+    for (const [key, value] of Object.entries(snapshot.localStorage ?? {})) if (belongsToGame(key, gameId)) localStorage.setItem(key, value);
+    let ok = true;
+    for (const dump of snapshot.indexedDB ?? []) if (!(await restoreDb(dump))) ok = false;
+    return ok;
+  },
+  async clear(gameId) {
+    clearLocalEntries(gameId);
+    // Do not delete IndexedDB databases: a database can contain unrelated
+    // stores and IDB deletion is destructive. Account switching is protected
+    // by clearing captured localStorage plus restoring the next account's
+    // namespaced cloud snapshot before launch.
   },
 };
 
-const adapters: SaveAdapter[] = [universalAdapter];
-
-export function adapterFor(launchPath: string): SaveAdapter | null {
-  for (const a of adapters) {
-    if (a.supported(launchPath)) return a;
-  }
-  return null;
-}
-
-export function adapterLabel(launchPath: string): string {
-  return adapterFor(launchPath)?.label ?? 'Unsupported (cross-origin)';
-}
+export function adapterFor(launchPath: string): SaveAdapter | null { return adapter.supported(launchPath) ? adapter : null; }
+export function adapterLabel(launchPath: string): string { return adapterFor(launchPath)?.label ?? 'Unsupported (cross-origin)'; }
