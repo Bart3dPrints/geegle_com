@@ -7,6 +7,7 @@ export interface RestoreResult extends SaveResult { restored: boolean }
 export interface CloudSaveHandle {
   restored: Promise<void>;
   close(): Promise<SaveResult>;
+  retire(): Promise<SaveResult>;
   dispose(): Promise<void>;
   saveNow(): Promise<SaveResult>;
   restore(): Promise<RestoreResult>;
@@ -22,6 +23,7 @@ type Adapter = NonNullable<ReturnType<typeof adapterFor>>;
 interface CloudRow { revision: string; save_data: unknown }
 interface SaveRemote {
   read(): Promise<CloudRow | null>;
+  retire?(): void;
   write(snapshot: SaveSnapshot, revision: string | null): Promise<string | null>;
 }
 
@@ -38,6 +40,16 @@ const legacyPrefix = 'legacy:';
 export function saveRemote(userId: string, gameId: string): SaveRemote {
   const identity = { user_id: userId, game_id: gameId, save_key: 'default' };
   let legacy = false;
+  let retiring = false;
+  let ownerToken: string | undefined;
+  const authorization = async () => {
+    const { data, error } = await supabase.auth.getSession();
+    if (!error && data.session?.user.id === userId) ownerToken = data.session.access_token;
+    else if (!retiring) throw new Error('The game account changed. Progress is kept on this device.');
+    if (!ownerToken) throw new Error('The previous session is unavailable. Progress is kept on this device.');
+    // Pin the header even if Supabase changes its active session before fetch.
+    return `Bearer ${ownerToken}`;
+  };
   const fromLegacy = async (row: { updated_at: string; save_data: unknown } | null) => {
     if (!row) return null;
     const bytes = new TextEncoder().encode(JSON.stringify(row.save_data));
@@ -47,15 +59,16 @@ export function saveRemote(userId: string, gameId: string): SaveRemote {
   };
   const readLegacy = async () => {
     const { data, error } = await supabase.from(T.saves).select('updated_at,save_data').match(identity)
-      .abortSignal(AbortSignal.timeout(10_000)).maybeSingle();
+      .setHeader('Authorization', await authorization()).abortSignal(AbortSignal.timeout(10_000)).maybeSingle();
     if (error) throw new Error(error.message);
     return fromLegacy(data);
   };
   return {
+    retire() { retiring = true; },
     async read() {
       if (!legacy) {
         const { data, error } = await supabase.from(T.saves).select('revision,save_data').match(identity)
-          .abortSignal(AbortSignal.timeout(10_000)).maybeSingle();
+          .setHeader('Authorization', await authorization()).abortSignal(AbortSignal.timeout(10_000)).maybeSingle();
         if (!error) return data;
         if (!missingRevision(error)) throw new Error(error.message);
         legacy = true;
@@ -70,7 +83,7 @@ export function saveRemote(userId: string, gameId: string): SaveRemote {
           throw new Error('Updating existing cloud progress requires a cloud save upgrade. Your device progress is unchanged.');
         }
         const { data, error } = await table.insert({ ...identity, save_data }).select('updated_at,save_data')
-          .abortSignal(AbortSignal.timeout(10_000)).maybeSingle();
+          .setHeader('Authorization', await authorization()).abortSignal(AbortSignal.timeout(10_000)).maybeSingle();
         if (error?.code === '23505') return null;
         if (error) throw new Error(error.message);
         return (await fromLegacy(data))?.revision ?? null;
@@ -78,7 +91,7 @@ export function saveRemote(userId: string, gameId: string): SaveRemote {
       const query = revision === null
         ? table.insert({ ...identity, save_data })
         : table.update({ save_data }).match({ ...identity, revision });
-      const { data, error } = await query.select('revision').abortSignal(AbortSignal.timeout(10_000)).maybeSingle();
+      const { data, error } = await query.select('revision').setHeader('Authorization', await authorization()).abortSignal(AbortSignal.timeout(10_000)).maybeSingle();
       if (error?.code === '23505' && revision === null) return null;
       if (error) throw new Error(error.message);
       return data?.revision ?? null;
@@ -292,13 +305,21 @@ export function createSaveSession(
     }
   });
 
-  const dispose = () => {
-    disposed = true;
+  const retire = () => {
+    remote.retire?.();
     clearInterval(timer);
-    return queue.then(() => undefined);
+    return close();
   };
 
-  return { restored, close, saveNow, restore, keepLocal, importLegacy, canImportLegacy: () => {
+  const dispose = async () => {
+    clearInterval(timer);
+    // An auth event may close the player before the final upload completes.
+    if (closing) await closing;
+    disposed = true;
+    await queue;
+  };
+
+  return { restored, close, retire, saveNow, restore, keepLocal, importLegacy, canImportLegacy: () => {
     try { return canUpload && revision === null && base === null && !adapter.capture(userId) && !!adapter.captureLegacy(); } catch { return false; }
   }, getStatus: () => status, launchPath: adapter.launchPath(userId), supported: true, dispose };
 }
@@ -310,7 +331,7 @@ export function startCloudSync(gameId: string, launchPath: string, userId: strin
   }
   const result = { ok: false, error: adapter ? 'Sign in to use cloud saves.' : 'Cloud saves are unavailable for this game.' };
   return {
-    restored: Promise.resolve(), close: async () => success, saveNow: async () => result,
+    restored: Promise.resolve(), close: async () => success, retire: async () => success, saveNow: async () => result,
     restore: async () => ({ ...result, restored: false }), keepLocal: async () => result,
     importLegacy: async () => result, canImportLegacy: () => false,
     getStatus: () => userId ? 'unsupported' : 'idle', launchPath, supported: false, dispose: async () => {},
