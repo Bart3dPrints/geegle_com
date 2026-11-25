@@ -1,7 +1,7 @@
 // Proxy library. One card per service; multi-endpoint services expose a
-// server-selection dropdown. Endpoints marked verified:false are listed as
-// unverified. These are external services for authorized use only; Geegle
-// account credentials/session data are never sent to them.
+// server-selection dropdown. Endpoints are unverified unless marked
+// otherwise. These are external services for authorized use only — Geegle
+// account credentials, tokens, and private data are never sent to them.
 
 export interface ProxyEndpoint {
   label: string;
@@ -16,10 +16,17 @@ export interface ProxyService {
   endpoints: ProxyEndpoint[];
 }
 
-// Compact builder: all remote endpoints are unverified; the local Helios
-// copy is the only verified endpoint.
-const remote = (label: string, url: string): ProxyEndpoint => ({ label, url, verified: false });
-const local = (label: string, url: string): ProxyEndpoint => ({ label, url, verified: true });
+const remote = (label: string, url: string): ProxyEndpoint => ({
+  label,
+  url,
+  verified: false,
+});
+
+const local = (label: string, url: string): ProxyEndpoint => ({
+  label,
+  url,
+  verified: true,
+});
 
 export const PROXY_SERVICES: ProxyService[] = [
   {
@@ -37,7 +44,7 @@ export const PROXY_SERVICES: ProxyService[] = [
   {
     id: 'cherry',
     name: 'Cherry Proxy',
-    description: 'External proxy service.',
+    description: 'External proxy service with five mirrors.',
     endpoints: [
       remote('Server 1', 'https://chrivtx.s3.amazonaws.com/math.html'),
       remote('Server 2', 'https://s3.amazonaws.com/chrivtx/math.html'),
@@ -49,7 +56,7 @@ export const PROXY_SERVICES: ProxyService[] = [
   {
     id: 'soluos',
     name: 'Soluos Proxy',
-    description: 'External proxy service.',
+    description: 'External proxy service with six mirrors.',
     endpoints: [
       remote('Server 1', 'https://soluos.storage.googleapis.com/index.html'),
       remote('Server 2', 'https://apmath.storage.googleapis.com/index.html'),
@@ -62,7 +69,7 @@ export const PROXY_SERVICES: ProxyService[] = [
   {
     id: 'achroma',
     name: 'Achroma Proxy',
-    description: 'External proxy service.',
+    description: 'External proxy service with 14 mirrors.',
     endpoints: [
       remote('Server 1', 'https://d36l8uvdr9o0bm.cloudfront.net/'),
       remote('Server 2', 'https://d2nz5cnyijiuet.cloudfront.net/'),
@@ -83,7 +90,7 @@ export const PROXY_SERVICES: ProxyService[] = [
   {
     id: 'astra',
     name: 'Astra Proxy',
-    description: 'External proxy service.',
+    description: 'External proxy service with 15 mirrors.',
     endpoints: [
       remote('Mega Math', 'https://mega-math22.c00lcars.media/start'),
       remote('Nova Hub', 'https://nova-hub84.c00lkiddtech.live/'),
@@ -131,5 +138,6 @@ export const PROXY_SERVICES: ProxyService[] = [
 ];
 
 export function proxyUrl(service: ProxyService, endpointIndex: number): string {
-  return service.endpoints[endpointIndex]?.url ?? service.endpoints[0]?.url ?? '';
+  const ep = service.endpoints[endpointIndex] ?? service.endpoints[0];
+  return ep?.url ?? '';
 }
