@@ -1,8 +1,8 @@
 // Geegle application shell.
 // Entry gate → header → browse tabs → game player with active cloud saves.
 // Logout awaits the running game's real final save before ending the session.
-// External entries (Krillion backup / Everythingle) open in the Geegle player
-// iframe; sites that refuse framing show an Open-in-new-tab fallback button.
+// External entries: Krillion backup opens in the Geegle player; Everythingle
+// launches its dedicated app with connection-method and server selection.
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
@@ -40,6 +40,7 @@ import { SearchOverlay } from './components/SearchOverlay';
 import { GamePlayer } from './components/GamePlayer';
 import { ProxyCard } from './components/ProxyCard';
 import { YouTubeApp } from './components/YouTubeApp';
+import { EverythingleApp } from './components/EverythingleApp';
 import { AccountSettings } from './components/AccountSettings';
 import type { CloudSaveHandle } from './lib/cloudSaves';
 
@@ -142,6 +143,7 @@ export default function App() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [active, setActive] = useState<GameEntry | null>(null);
   const [youtubeOpen, setYoutubeOpen] = useState(false);
+  const [everythingleOpen, setEverythingleOpen] = useState(false);
   const [activeProxy, setActiveProxy] = useState<{
     url: string;
     title: string;
@@ -195,6 +197,7 @@ export default function App() {
   const handleSignOut = async () => {
     setActive(null);
     setActiveProxy(null);
+    setEverythingleOpen(false);
     const handle = saveHandleRef.current;
     if (handle) {
       await handle.close();
@@ -207,6 +210,10 @@ export default function App() {
     async (g: GameEntry) => {
       if (g.kind === 'stream' && g.id === 'youtube') {
         setYoutubeOpen(true);
+        return;
+      }
+      if (g.id === 'everythingle') {
+        setEverythingleOpen(true);
         return;
       }
       setActiveProxy(null);
@@ -356,6 +363,7 @@ export default function App() {
               setActive(null);
               setActiveProxy(null);
               setYoutubeOpen(false);
+              setEverythingleOpen(false);
               setTab('games');
             }}
             aria-label="Geegle home"
@@ -577,6 +585,10 @@ export default function App() {
 
       {youtubeOpen && <YouTubeApp onExit={() => setYoutubeOpen(false)} />}
 
+      {everythingleOpen && (
+        <EverythingleApp userId={userId} onExit={() => setEverythingleOpen(false)} />
+      )}
+
       {(active || activeProxy) && (
         <GamePlayer
           entry={active}
@@ -712,7 +724,7 @@ export default function App() {
       </main>
 
       <footer className="border-t border-slate-200 py-8 text-center text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400">
-        Geegle — free web games. Build: overhaul-2026-11-25.6
+        Geegle — free web games. Build: overhaul-2026-11-25.7
       </footer>
     </div>
   );
