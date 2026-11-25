@@ -1,6 +1,6 @@
 // Game player with ACTIVE cloud saves: awaits the real restore-before-launch
-// promise (no timers), syncs every 15s, saves on exit, and exposes manual
-// Save to Cloud / Restore from Cloud with accurate status indicators.
+// promise (no timers), syncs every 15s, saves on exit, exposes manual save and
+// restore, and offers an external open fallback when a site refuses framing.
 
 import { useEffect, useRef, useState } from 'react';
 import {
@@ -15,6 +15,7 @@ import {
   Check,
   WifiOff,
   Ban,
+  ExternalLink,
 } from 'lucide-react';
 import type { GameEntry } from '../types';
 import {
@@ -88,6 +89,7 @@ export function GamePlayer({
   const frameRef = useRef<HTMLIFrameElement>(null);
   const [loaded, setLoaded] = useState(false);
   const [loadFailed, setLoadFailed] = useState(false);
+  const [frameBlocked, setFrameBlocked] = useState(false);
   const [syncStatus, setSyncStatus] = useState<SyncStatus>('idle');
   const [manualMsg, setManualMsg] = useState<string | null>(null);
   const saveHandleRef = useRef<CloudSaveHandle | null>(null);
@@ -96,6 +98,8 @@ export function GamePlayer({
   const title = entry ? entry.title : proxy?.title;
   const gameId = entry?.id ?? null;
   const launchPath = entry?.path ?? '';
+  const isExternal = Boolean(url && /^https?:\/\//.test(url));
+  const canOpenExternally = isExternal;
 
   // The iframe mounts only when restoreReady is true — restore-before-launch
   // is awaited for real (no arbitrary delay).
@@ -109,6 +113,7 @@ export function GamePlayer({
     setRestoreReady(false);
     setRestoreError(null);
     setSyncStatus('idle');
+    setFrameBlocked(false);
 
     const handle = startCloudSync(
       gameId,
@@ -151,8 +156,24 @@ export function GamePlayer({
     frameRef.current?.requestFullscreen?.();
   };
 
+  const openExternally = () => {
+    if (url) window.open(url, '_blank', 'noopener');
+  };
+
+  // External sites that send X-Frame-Options/CSP frame-ancestors load the
+  // iframe's about:blank error path; onLoad never fires. Detect it and offer
+  // the external-open fallback instead of an indefinite spinner.
+  useEffect(() => {
+    if (!isExternal || loaded || loadFailed) return;
+    const timer = setTimeout(() => {
+      setFrameBlocked(true);
+    }, 8000);
+    return () => clearTimeout(timer);
+  }, [isExternal, loaded, loadFailed]);
+
   const reload = () => {
     setLoadFailed(false);
+    setFrameBlocked(false);
     setLoaded(false);
     if (frameRef.current) frameRef.current.src = frameRef.current.src;
   };
@@ -204,7 +225,20 @@ export function GamePlayer({
 
         <div className="flex-1" />
 
-        {entry && (
+        {/* External open fallback: for cross-origin sites that may refuse to
+            be framed. Never sends Geegle credentials — plain navigation. */}
+        {canOpenExternally && (
+          <button
+            className={btn}
+            onClick={openExternally}
+            aria-label="Open in a new tab"
+            title="Open in a new tab"
+          >
+            <ExternalLink size={16} />
+          </button>
+        )}
+
+        {entry && !isExternal && (
           <>
             <button
               className={btn}
@@ -259,10 +293,32 @@ export function GamePlayer({
       </div>
 
       <div className="relative h-[calc(100vh-3.5rem)] w-full">
-        {restoreReady && !loaded && !loadFailed && (
+        {restoreReady && !loaded && !loadFailed && !frameBlocked && (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-slate-950 text-slate-400">
             <Loader2 className="animate-spin" size={28} />
             <span className="text-sm">Loading {title}…</span>
+          </div>
+        )}
+        {frameBlocked && !loaded && (
+          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-slate-950 p-6 text-center">
+            <ExternalLink size={28} className="text-blue-400" />
+            <p className="max-w-md text-sm text-slate-300">
+              {title} may not allow embedding inside other sites. You can
+              retry, or open it directly in a new tab.
+            </p>
+            <div className="flex gap-2">
+              <button className={btn} onClick={reload}>
+                <RotateCcw size={14} /> Retry
+              </button>
+              {canOpenExternally && (
+                <button className="btn-primary" onClick={openExternally}>
+                  <ExternalLink size={14} /> Open in a new tab
+                </button>
+              )}
+              <button className={btn} onClick={onExit}>
+                Back to Games
+              </button>
+            </div>
           </div>
         )}
         {loadFailed && (
@@ -282,7 +338,7 @@ export function GamePlayer({
             </div>
           </div>
         )}
-        {restoreReady && url && (
+        {restoreReady && url && !frameBlocked && (
           <iframe
             ref={frameRef}
             src={url}
