@@ -1,3 +1,2 @@
-// Legacy component kept only during the migration to GameArt. New code must
-// import GameArt from './GameArt' instead.
+// Legacy component retired. GameArt is the artwork component.
 export {};
