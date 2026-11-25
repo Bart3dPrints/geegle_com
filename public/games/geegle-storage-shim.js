@@ -6,9 +6,13 @@
 // account isolation possible without editing each game's logic.
 //
 // - Guests (no geegle_profile query parameter) are left untouched.
-// - Existing progress written before the shim existed is migrated on first
-//   read, so no player loses a save.
-// - clear() only removes the current game's keys for the current account.
+// - Pre-shim progress is migrated on first read, ONCE: a claim marker
+//   records which account migrated each legacy key so the same progress can
+//   never be inherited by a second account.
+// - removeItem and clear only touch this game+account's prefixed keys.
+// - The view is a Proxy, so property-style access (localStorage.foo = 1),
+//   getItem/setItem, in ("foo" in localStorage), delete, key() and length
+//   all behave like real Storage and all map to the scoped namespace.
 (function () {
   'use strict';
   var profile = null;
@@ -31,6 +35,9 @@
   if (!gameId) return;
 
   var prefix = 'geegle-game:' + gameId + ':' + profile + ':';
+  var claimKey = function (key) {
+    return 'geegle-legacy-claim:' + gameId + ':' + key;
+  };
   var original = window.localStorage;
   if (!original) return;
   var proto = Object.getPrototypeOf(original) || window.Storage.prototype;
@@ -48,23 +55,51 @@
     return keys;
   }
 
+  function scopedRead(key) {
+    return nativeGet.call(original, prefix + key);
+  }
+
+  function legacyRead(key) {
+    // Claim-once migration: the first account to read a pre-shim key takes
+    // it. A claim marker (independent of account prefixes) makes sure a
+    // later, different account never inherits the same progress.
+    var legacy = nativeGet.call(original, key);
+    if (legacy === null) return null;
+    var claim = nativeGet.call(original, claimKey(key));
+    if (claim !== null && claim !== profile) return null;
+    if (claim === null) {
+      try { nativeSet.call(original, claimKey(key), profile); } catch (error) { /* quota */ }
+    }
+    try { nativeSet.call(original, prefix + key, legacy); } catch (error) { /* quota */ }
+    return legacy;
+  }
+
+  function get(key) {
+    var scoped = scopedRead(String(key));
+    if (scoped !== null) return scoped;
+    return legacyRead(String(key));
+  }
+
+  function set(key, value) {
+    nativeSet.call(original, prefix + String(key), String(value));
+  }
+
+  function remove(key) {
+    // Scoped view only: never delete unscoped keys — they may belong to other
+    // games, the platform, or guest progress.
+    nativeRemove.call(original, prefix + String(key));
+  }
+
   var view = {
     getItem: function (key) {
-      var scoped = nativeGet.call(original, prefix + String(key));
-      if (scoped !== null) return scoped;
-      // One-time migration of progress saved before per-account scoping.
-      var legacy = nativeGet.call(original, String(key));
-      if (legacy !== null) {
-        try { nativeSet.call(original, prefix + String(key), legacy); } catch (error) { /* quota */ }
-      }
-      return legacy;
+      var value = get(String(key));
+      return value === null ? null : String(value);
     },
     setItem: function (key, value) {
-      nativeSet.call(original, prefix + String(key), String(value));
+      set(String(key), value);
     },
     removeItem: function (key) {
-      nativeRemove.call(original, String(key));
-      nativeRemove.call(original, prefix + String(key));
+      remove(String(key));
     },
     clear: function () {
       var keys = ownKeys();
@@ -79,13 +114,49 @@
     },
   };
 
+  var proxy = new Proxy(view, {
+    get: function (target, property) {
+      if (property in target) {
+        var value = target[property];
+        return typeof value === 'function' ? value.bind(target) : value;
+      }
+      if (typeof property === 'symbol') return undefined;
+      var item = get(String(property));
+      return item === null ? undefined : item;
+    },
+    set: function (target, property, value) {
+      if (typeof property === 'symbol') return false;
+      if (property in target) return false;
+      set(String(property), value);
+      return true;
+    },
+    deleteProperty: function (target, property) {
+      if (typeof property === 'symbol' || property in target) return false;
+      remove(String(property));
+      return true;
+    },
+    has: function (target, property) {
+      if (typeof property === 'symbol') return property in target;
+      if (property in target) return true;
+      return scopedRead(String(property)) !== null || legacyRead(String(property)) !== null;
+    },
+    ownKeys: function () {
+      return ownKeys();
+    },
+    getOwnPropertyDescriptor: function (target, property) {
+      if (typeof property === 'symbol' || property in target) return Object.getOwnPropertyDescriptor(target, property);
+      var value = get(String(property));
+      return value === null ? undefined : { value: String(value), writable: true, enumerable: true, configurable: true };
+    },
+  });
+
   try {
     Object.defineProperty(window, 'localStorage', {
       configurable: true,
       enumerable: true,
-      get: function () { return view; },
+      get: function () { return proxy; },
     });
   } catch (error) {
-    try { window.localStorage = view; } catch (ignored) { /* older engines */ }
+    try { window.localStorage = proxy; } catch (ignored) { /* older engines */ }
   }
 })();
