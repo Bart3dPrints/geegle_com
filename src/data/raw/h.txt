@@ -1,0 +1,98 @@
+clhacx|HACX|action
+clhajimeippo|Hajime no Ippo|sports
+clhajimenoippo|Hajime no Ippo (Alt)|sports
+clhalocombatdevolved|Halo Combat Devolved|action
+clhandulum|Handulum|arcade
+clhandsofwar--1|Hands of War|action
+clhandshakes|Handshakes|puzzle
+clhangonsms|Hang-On SMS|racing
+clhanger|Hanger|arcade
+clhanger2|Hanger 2|arcade
+clhappyroom|Happy Room|simulation
+clhappywheels|Happy Wheels|racing
+clhardwaretycoon|Hardware Tycoon|simulation
+clharmonyofdissonance|Castlevania: Harmony of Dissonance|action
+clharoldsbadday|Harold's Bad Day|action
+clharvestio|Harvest.io|simulation
+clharvestmoon|Harvest Moon|simulation
+clharvestmoon2|Harvest Moon 2|simulation
+clharvestmoon64|Harvest Moon 64|simulation
+clhauntthehouse|Haunt the House|puzzle
+clhauntedschool|Haunted School|horror
+clheartandsoul|Heart and Soul|puzzle
+clheartandsoul1-2-1|Heart and Soul 1.2.1|puzzle
+clhei-t|Heist|action
+helios-offline--1|Helios Offline|simulation
+clhelixjump|Helix Jump|arcade
+clhelltaker|Helltaker|puzzle
+clhellron|Hellron|action
+clhelpnobrakes|Help No Brakes|racing
+clheretic|Heretic|action
+clhero3flyingrobot|Hero 3 Flying Robot|action
+clherobrinereborn|Herobrine Reborn|simulation
+clhextris|Hextris|puzzle
+clhighstakes|High Stakes|puzzle
+clhighwayracer2|Highway Racer 2|racing
+clhighwaytraffic3d|Highway Traffic 3D|racing
+clhillclimbracinglite|Hill Climb Racing Lite|racing
+clhipsterkickball|Hipster Kickball|sports
+clhitsinglereal|Hit Single Real|rhythm
+clhitstunfly|Hitstun Fly|action
+clhl2doom|HL2 Doom|action
+clhobo|Hobo|action
+clhobo2|Hobo 2|action
+clhobo3|Hobo 3|action
+clhobo4|Hobo 4|action
+clhobo5|Hobo 5|action
+clhobo6|Hobo 6|action
+clhobo7|Hobo 7|action
+clhobovszombies|Hobo vs Zombies|action
+clholebattle|Hole Battle|arcade
+clholeio|Hole.io|arcade
+clhollowknight|Hollow Knight|platformer
+cllowknight|Hollow Knight (Alt)|platformer
+clhomesheephome|Home Sheep Home|puzzle
+clhorrormickeymouse|Horror Mickey Mouse|horror
+clhotdogbush|Hot Dog Bush|simulation
+clhotwax|Hotwax|action
+clhouseofhazards|House of Hazards|multiplayer
+clhoverracerdrive|Hover Racer Drive|racing
+clhuggywuggypixel|Huggy Wuggy Pixel|horror
+clhumanexpenditureprogram|Human Expenditure Program|horror
+clhungryknight|Hungry Knight|action
+clhungrylamu|Hungry Lamu|horror
+clhyppersandbox|Hypper Sandbox|simulation
+clice-age-baby|Ice Age Baby|casual
+cliceclimber|Ice Climber|platformer
+clicefishing|Ice Fishing|sports
+clicedodo|Icedodo|puzzle
+clicypurplehead|Icy Purple Head|puzzle
+clidlebreakout|Idle Breakout|casual
+clidlefootballmanager|Idle Football Manager|sports
+clidleidlegamedev|Idle Idle Game Dev|casual
+clidleminertycoon|Idle Miner Tycoon|simulation
+clidleminorzamnshes12|Idle Miner Zamnshes 12|simulation
+clidledice|Idle Dice|casual
+clihateyou|I Hate You|horror
+climpossiblequiz--1|Impossible Quiz|puzzle
+climpossiblequiz2|Impossible Quiz 2|puzzle
+clintellisphere|Intellisphere|puzzle
+clinclementemerald|Inclement Emerald|pokemon
+clindiantrucksimiulator|Indian Truck Simulator|racing
+clinfinitecraft|Infinite Craft|casual
+clinkgame|Ink Game|puzzle
+clinnkeeper|Innkeeper|simulation
+clinsidestory|Inside Story|adventure
+clinsomniary|Insomniary|horror
+clintoruins|Into Ruins|simulation
+clintospace|Into Space|simulation
+clintospace2|Into Space 2|simulation
+clintospace3|Into Space 3|simulation
+clintothedeepweb|Into the Deep Web|horror
+clintrusion|Intrusion|action
+cliqball|IQ Ball|puzzle
+clironsnout|Iron Snout|action
+clironsoldier|Iron Soldier|action
+clirori|Irori|adventure
+clitgetssolonelyhere|It Gets So Lonely Here|horror
+cliwbtg|IWBTG|platformer
