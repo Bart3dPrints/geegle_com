@@ -31,16 +31,20 @@ export const KRILLION_BACKUP: GameEntry = {
     'Independent fan-made Krillion-style trivia site. Not the official game.',
 };
 
-/** Everythingle puzzle collection. */
+/** Everythingle puzzle collection: in-Geegle launcher with auto destination. */
 export const EVERYTHINGLE: GameEntry = {
   id: 'everythingle',
   title: 'Everythingle',
-  path: 'https://everythingle.com/',
+  // Same-origin launcher page: frames everythingle.com with the destination
+  // pre-supplied (no manual URL entry), keeps the Geegle player interface
+  // (Back / Reload / Fullscreen), and falls back to open-in-new-tab if the
+  // site refuses framing. No Geegle credentials are passed to the site.
+  path: '/games/everythingle.html',
   categories: [],
   kind: 'app',
-  aliases: ['wordle unlimited', 'globle', 'worldle', 'puzzle collection'],
-  thumb: 'https://everythingle.com/logo.png',
-  source: 'External site (everythingle.com)',
+  aliases: ['wordle unlimited', 'globle', 'worldle', 'puzzle collection', 'chess'],
+  thumb: 'https://everythingle.com/icon-512.png',
+  source: 'External site (everythingle.com) framed via Geegle launcher',
   description: 'Free unlimited Wordle, Globle, Worldle, chess and more.',
 };
 
