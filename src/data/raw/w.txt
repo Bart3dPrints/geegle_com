@@ -1,0 +1,58 @@
+clwaluigitacostand|Waluigi's Taco Stand|simulation
+clwartheknight|War the Knight|action
+clwarfare1917|Warfare 1917|strategy
+clwarfare1944|Warfare 1944|strategy
+clwarioland1|Wario Land 1|platformer
+clwarioland3|Wario Land 3|platformer
+clwarioland4|Wario Land 4|platformer
+clwariowarediy|WarioWare DIY|casual
+clwariowareinc|WarioWare Inc|casual
+clwaterpoolio|Water Pool.io|multiplayer
+clwaterworks|Waterworks|puzzle
+clwavedash|Wave Dash|platformer
+clwaverace64|Wave Race 64|racing
+clwaverun|Wave Run|arcade
+clwbml|WBML|platformer
+clwebecomewhatwebehold|We Become What We Behold|simulation
+clwermhole|Wormhole|simulation
+clwebdashers|Webdashers|action
+clwebfishing|Web Fishing|simulation
+clweltling|Weltling|action
+clwhackthetheif|Whack the Thief|action
+clwhackyourboss|Whack Your Boss|action
+clwhackyourcomputer|Whack Your Computer|action
+clwhatamarioworld|What a Mario World|platformer
+clwheeliebike|Wheelie Bike|racing
+clwheely|Wheely|puzzle
+clwheely2|Wheely 2|puzzle
+clwheely3|Wheely 3|puzzle
+clwheely4|Wheely 4|puzzle
+clwheely5|Wheely 5|puzzle
+clwheely6|Wheely 6|puzzle
+clwheely7|Wheely 7|puzzle
+clwheely8|Wheely 8|puzzle
+clwilywars--1|Mega Man: The Wily Wars|platformer
+clwindowsdoors|Windows Doors|simulation
+clwinterfalling|Winter Falling|action
+winterolympics|Winter Olympics|sports
+clwipeout2097|Wipeout 2097|racing
+clwipeout2097alt|Wipeout 2097 (Alt)|racing
+clwitchcrafttd|Witchcraft TD|strategy
+wolfchild|Wolf Child|action
+clwolfenstein|Wolfenstein|action
+clwolfenstein3d|Wolfenstein 3D|action
+clwonderboy3|Wonder Boy 3|platformer
+clwonderboyarcade|Wonder Boy Arcade|platformer
+clwoodworm|Woodworm|puzzle
+clwordle|Wordle|puzzle
+clworldcup98|World Cup 98|sports
+clworldshardestgame|World's Hardest Game|puzzle
+clworldshardestgame2|World's Hardest Game 2|puzzle
+clworldshardestgame3|World's Hardest Game 3|puzzle
+clworldshardestgame4|World's Hardest Game 4|puzzle
+clwpnfire|WPNFire|action
+clwrassling|Wrassling|sports
+clwreckingcrew|Wrecking Crew|platformer
+clwurstclient|Wurst Client|simulation
+clwwfattitude|WWF Attitude|sports
+clwwfsmackdown2|WWF Smackdown 2|sports
