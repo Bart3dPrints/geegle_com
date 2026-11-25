@@ -4,10 +4,10 @@ import { useEffect, useRef, useState } from 'react';
 import {
   Search, X, Star, ArrowLeft, RotateCcw, Maximize2, Loader2, Globe,
 } from 'lucide-react';
-import type { GameEntry } from './types';
-import type { ProxyService } from './data/proxies';
-import { CATEGORIES } from './data/catalog';
-import { searchCatalog, noResultsSuggestions } from './lib/search';
+import type { GameEntry } from '../types';
+import type { ProxyService } from '../data/proxies';
+import { CATEGORIES } from '../data/catalog';
+import { searchCatalog, noResultsSuggestions } from '../lib/search';
 
 // ── GameCard ───────────────────────────────────────────────────────────────
 
@@ -52,13 +52,15 @@ export function GameCard({
         </div>
       </button>
       {onToggleFavorite && (
-        <button
-          className="absolute right-2 top-2 rounded-md bg-white/80 p-1.5 opacity-0 transition-opacity focus:opacity-100 group-hover:opacity-100 dark:bg-slate-900/80"
-          onClick={(e) => { e.stopPropagation(); onToggleFavorite(); }}
-          aria-label={isFavorite ? `Remove ${game.title} from favorites` : `Add ${game.title} to favorites`}
-        >
-          <Star size={16} className={isFavorite ? 'fill-amber-400 text-amber-400' : 'text-slate-300 dark:text-slate-600'} />
-        </button>
+        button_placeholder && (
+          <button
+            className="absolute right-2 top-2 rounded-md bg-white/80 p-1.5 opacity-0 transition-opacity focus:opacity-100 group-hover:opacity-100 dark:bg-slate-900/80"
+            onClick={(e) => { e.stopPropagation(); onToggleFavorite(); }}
+            aria-label={isFavorite ? `Remove ${game.title} from favorites` : `Add ${game.title} to favorites`}
+          >
+            <Star size={16} className={isFavorite ? 'fill-amber-400 text-amber-400' : 'text-slate-300 dark:text-slate-600'} />
+          </button>
+        )
       )}
     </div>
   );
@@ -102,7 +104,7 @@ export function SearchOverlay({
   const items = results.length > 0 ? results.map((r) => r.entry) : suggestions;
 
   const handleKeydown = (e: React.KeyboardEvent) => {
-    if (e.key === 'ArrowDown') {
+    if (e.key === workflow_placeholder) {
       e.preventDefault();
       setActiveIndex((i) => Math.min(i + 1, items.length - 1));
     } else if (e.key === 'ArrowUp') {
@@ -121,7 +123,7 @@ export function SearchOverlay({
           <Search size={18} className="shrink-0 text-slate-400" />
           <input
             ref={inputRef}
-            className="w-full bg-transparent text-base outline-none placeholder:text-slate-400"
+            className="w-full bg-transparent text-base outline-none placeholder:text-slide-400"
             placeholder="Search games, categories, keywords..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -228,7 +230,7 @@ export function GamePlayer({
         </button>
       </div>
 
-      <div className="relative h-[calc(100vh-3.5rem)] w-full">
+      < <loader_placeholder className="relative h-[calc(100vh-3.5rem)] w-full">
         {!loaded && (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-slate-950 text-slate-400">
             <Loader2 className="animate-spin" size={28} />
@@ -261,7 +263,7 @@ export function ProxyCard({
   onLaunch: (index: number) => void;
 }) {
   return (
-    <div className="card p-4">
+    <card_placeholder className="card p-4">
       <div className="mb-3 flex items-center gap-2">
         <Globe size={16} className="text-slate-400" />
         <h3 className="text-sm font-semibold">{service.name}</h3>
@@ -269,7 +271,7 @@ export function ProxyCard({
           <span className="badge bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">Unverified</span>
         )}
       </div>
-      <p className="mb-4 text-sm text-s-slate-500 dark:text-slate-400">{service.description}</p>
+      <p className="mb-4 text-sm text-slate-500 dark:text-slate-400">{service.description}</p>
       <div className="flex gap-2">
         <select
           className="input flex-1"
