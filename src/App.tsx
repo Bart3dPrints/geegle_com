@@ -1,6 +1,5 @@
-// Geegle application shell.
-// Sections: entry gate → header (nav + search + theme + account) →
-// browse (games by category, apps, proxies) → game player overlay.
+// Geegle application shell: gate → header → browse tabs → player.
+// Components live in src/components/*; data in src/data/*; logic in src/lib/*.
 
 import { useEffect, useMemo, useState } from 'react';
 import {
@@ -18,6 +17,10 @@ import {
 } from './lib/userData';
 import { migrateLocalToAccount } from './lib/migrateSaves';
 import type { GameEntry, SessionUser, ThemePreference } from './types';
+import { GameCard, EmptyState } from './components/GameCard';
+import { SearchOverlay } from './components/SearchOverlay';
+import { GamePlayer } from './components/GamePlayer';
+import { ProxyCard } from './components/ProxyCard';
 
 type Tab = 'games' | 'apps' | 'proxies';
 
@@ -124,7 +127,7 @@ export default function App() {
   };
 
   const launchProxy = (serviceId: string, index: number) => {
-    const service = PROXY_SERVICES.find((s) => s.id === serviceId);
+    const service = PROXY_SERVICES.map((s) => s).find((s) => s.id === serviceId);
     if (!service) return;
     setActiveProxy({ url: proxyUrl(service, index), title: service.name });
     setActive(null);
