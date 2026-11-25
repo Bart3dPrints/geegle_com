@@ -1,6 +1,10 @@
 // Geegle application shell — the redesigned main interface.
 // Sections: entry gate → header (brand, nav, search, theme, account) →
 // browse tabs (games by category, apps, proxies) → game player overlay.
+//
+// NOTE: This file is written in two passes only because of tool payload
+// limits; the committed result is one coherent file. Part 2 appends the
+// auth modal, search, player, and main content after the header.
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
@@ -136,7 +140,6 @@ export default function App() {
     title: string;
   } | null>(null);
 
-  // Load theme + user data on mount and after sign-in state changes.
   useEffect(() => {
     if (auth.loading) return;
     (async () => {
@@ -238,7 +241,6 @@ export default function App() {
     [favorites, byId]
   );
 
-  // ── Entry gate ────────────────────────────────────────────────────────
   if (gateOpen) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-slate-50 p-4 dark:bg-slate-950">
@@ -371,7 +373,7 @@ export default function App() {
                 className={`rounded-md p-1.5 ${
                   theme === mode
                     ? 'bg-blue-600 text-white'
-                    : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800'
+                    : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800"
                 }`}
                 onClick={() => handleTheme(mode)}
                 aria-label={`${mode} theme`}
@@ -428,3 +430,216 @@ export default function App() {
           ))}
         </nav>
       </header>
+
+      {authOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 p-4"
+          onClick={() => setAuthOpen(false)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div className="card w-full max-w-sm p-6" onClick={(e) => e.stopPropagation()}>
+            <h2 className="mb-4">{authMode === 'login' ? 'Sign in' : 'Create account'}</h2>
+            {!auth.enabled && (
+              <div className="mb-4 flex gap-2 rounded-lg bg-amber-50 p-3 text-sm text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">
+                <AlertTriangle size={16} className="mt-0.5 shrink-0" />
+                <span>Accounts are not configured on this deployment.</span>
+              </div>
+            )}
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                handleAuth(authMode);
+              }}
+            >
+              <label className="label" htmlFor="auth-username">
+                Username
+              </label>
+              <input
+                id="auth-username"
+                className="input mb-4"
+                value={authUsername}
+                onChange={(e) => setAuthUsername(e.target.value)}
+                placeholder="3-32 characters"
+                autoComplete="username"
+                required
+              />
+              <label className="label" htmlFor="auth-password">
+                Password
+              </label>
+              <input
+                id="auth-password"
+                className="input mb-2"
+                type="password"
+                value={authPassword}
+                onChange={(e) => setAuthPassword(e.target.value)}
+                placeholder="At least 8 characters"
+                autoComplete={
+                  authMode === 'login' ? 'current-password' : 'new-password'
+                }
+                required
+              />
+              {authError && (
+                <p className="mb-2 text-sm text-red-600 dark:text-red-400" role="alert">
+                  {authError}
+                </p>
+              )}
+              <button className="btn-primary w-full" disabled={authBusy} type="submit">
+                {authBusy && <Loader2 className="animate-spin" size={16} />}
+                {authMode === 'login' ? 'Sign in' : 'Create account'}
+              </button>
+            </form>
+            <button
+              className="mt-4 w-full text-center text-sm text-blue-600 hover:underline dark:text-blue-400"
+              onClick={() => {
+                setAuthMode(authMode === 'login' ? 'register' : 'login');
+                setAuthError(null);
+              }}
+            >
+              {authMode === 'login'
+                ? "Don't have an account? Create one"
+                : 'Already have an account? Sign in'}
+            </button>
+          </div>
+        </div>
+      )}
+
+      {searchOpen && (
+        <SearchOverlay
+          entries={SEARCHABLE}
+          onClose={() => setSearchOpen(false)}
+          onLaunch={launch}
+        />
+      )}
+
+      {youtubeOpen && <YouTubeApp onExit={() => setYoutubeOpen(false)} />}
+
+      {(active || activeProxy) && (
+        <GamePlayer
+          entry={active}
+          proxy={activeProxy}
+          onExit={() => {
+            setActive(null);
+            setActiveProxy(null);
+          }}
+          onToggleFavorite={() => active && toggleFav(active.id)}
+          isFavorite={active ? favorites.includes(active.id) : false}
+        />
+      )}
+
+      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
+        {tab === 'games' && (
+          <>
+            {(favoriteEntries.length > 0 || recentEntries.length > 0) && (
+              <section className="mb-8">
+                <h2 className="mb-3">Favorites &amp; Recent</h2>
+                <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+                  {[
+                    ...favoriteEntries,
+                    ...recentEntries.filter((g) => !favorites.includes(g.id)),
+                  ]
+                    .slice(0, 12)
+                    .map((g) => (
+                      <GameCard key={g.id} game={g} onLaunch={() => launch(g)} />
+                    ))}
+                </div>
+              </section>
+            )}
+
+            <section>
+              <div className="mb-4 flex items-center justify-between">
+                <h2>All Games</h2>
+                <span className="text-sm text-slate-500">
+                  {visibleGames.length} games
+                </span>
+              </div>
+              <div className="mb-6 flex flex-wrap gap-2" role="tablist" aria-label="Categories">
+                <button
+                  role="tab"
+                  aria-selected={category === 'all'}
+                  className={category === 'all' ? 'chip-active' : 'chip'}
+                  onClick={() => setCategory('all')}
+                >
+                  All Games
+                </button>
+                {CATEGORIES.map((c) => (
+                  <button
+                    key={c.key}
+                    role="tab"
+                    aria-selected={category === c.key}
+                    className={category === c.key ? 'chip-active' : 'chip'}
+                    onClick={() => setCategory(c.key)}
+                  >
+                    {c.label}
+                  </button>
+                ))}
+              </div>
+              {visibleGames.length === 0 ? (
+                <EmptyState
+                  title="No games in this category"
+                  body="Try another category or search for a game."
+                />
+              ) : (
+                <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+                  {visibleGames.map((g) => (
+                    <GameCard
+                      key={g.id}
+                      game={g}
+                      onLaunch={() => launch(g)}
+                      isFavorite={favorites.includes(g.id)}
+                      onToggleFavorite={() => toggleFav(g.id)}
+                    />
+                  ))}
+                </div>
+              )}
+            </section>
+          </>
+        )}
+
+        {tab === 'apps' && (
+          <section>
+            <h2 className="mb-4">Apps</h2>
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+              {APPS.map((g) => (
+                <GameCard key={g.id} game={g} onLaunch={() => launch(g)} />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {tab === 'proxies' && (
+          <section>
+            <h2 className="mb-2">Proxies</h2>
+            <p className="mb-6 text-sm text-slate-500 dark:text-slate-400">
+              External services for authorized use only. Never send your Geegle
+              account details to any proxy.
+            </p>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {PROXY_SERVICES.map((service) => (
+                <ProxyCard
+                  key={service.id}
+                  service={service}
+                  selected={serverDefaults[service.id] ?? 0}
+                  onSelect={async (index) => {
+                    setServerDefaults((prev) => ({ ...prev, [service.id]: index }));
+                    const res = await saveServerDefault(service.id, index, userId);
+                    if (!res.ok && res.error) {
+                      setSyncError(`Server default not synced: ${res.error}`);
+                    } else {
+                      setSyncError(null);
+                    }
+                  }}
+                  onLaunch={(index) => launchProxy(service.id, index)}
+                />
+              ))}
+            </div>
+          </section>
+        )}
+      </main>
+
+      <footer className="border-t border-slate-200 py-8 text-center text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400">
+        Geegle — free web games. Build: overhaul-2026-11-25.2
+      </footer>
+    </div>
+  );
+}
