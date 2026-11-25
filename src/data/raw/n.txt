@@ -1,0 +1,51 @@
+clnarc|Narc|action
+clnatsuki64|Natsuki 64|platformer
+clnaturalselection|Natural Selection|action
+clnbahangtime|NBA Hangtime|sports
+clnbajam|NBA Jam|sports
+clnbalive2000|NBA Live 2000|sports
+clnbalive2003|NBA Live 2003|sports
+clnbajamte|NBA Jam TE|sports
+clnblox|NBlox|puzzle
+clneonblaster|Neon Blaster|arcade
+clneonrider|Neon Rider|arcade
+clnesworldchampion|NES World Champion|retro
+clnetattack|Net Attack|action
+clneverendinglegacy|Neverending Legacy|simulation
+clnewsupermariobros|New Super Mario Bros|platformer
+clnewyorkshark|New York Shark|action
+clnewersmbds|Newer SMB DS|platformer
+clnewgroundsrumble|Newgrounds Rumble|action
+clnextdoor|Next Door|puzzle
+clnflblitz|NFL Blitz|sports
+clnfscarbonowncity|NFS Carbon Own City|racing
+clnfsmostwanted|NFS Most Wanted|racing
+clnfsporcheunleashed|NFS Porsche Unleashed|racing
+clnfsunderground|NFS Underground|racing
+clnfsunderground2|NFS Underground 2|racing
+clngon-1|N-gon|action
+clnguidle|NGU Idle|casual
+clnhl2002|NHL 2002|sports
+clnhl98|NHL 98|sports
+clnhlhitz2003|NHL Hitz 2003|sports
+clnickelodeonsuperbrawl2|Nickelodeon Super Brawl 2|action
+clnightcatsurvival|Night Cat Survival|action
+clnightfire|Nightfire|action
+clnightclubshowdown|Nightclub Showdown|action
+clnightshade|Nightshade|action
+clnimrods|Nimrods|action
+clninjabrawl|Ninja Brawl|action
+clninjaobbyparkor|Ninja Obby Parkour|platformer
+clnintendoworldcup|Nintendo World Cup|sports
+clnintendogslab|Nintendogs Lab|simulation
+clnitclient|Nit Client|simulation
+clnitromemustdie|Nitrome Must Die|action
+clnoobminer|Noob Miner|simulation
+clnotyourpawn|Not Your Pawn|puzzle
+clnovaclient|Nova Client|simulation
+clnplus|N+|platformer
+clnsmbuds|NSMBUDS|platformer
+clnsmbwds|NSMBWDS|platformer
+clnubbysnumberfactory|Nubby's Number Factory|puzzle
+clnullkevin|Null Kevin|puzzle
+clnzp|NZP|action
