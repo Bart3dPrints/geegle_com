@@ -75,7 +75,7 @@ create table if not exists public.geegle_game_saves (
   game_id text not null,
   save_key text not null default 'default',
   save_data jsonb not null,
-  updated_at timestamptz not null now(),
+  updated_at timestamptz not null default now(),
   created_at timestamptz not null default now(),
   unique (user_id, game_id, save_key)
 );
