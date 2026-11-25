@@ -6,7 +6,13 @@
 <!-- For the regularly updating doc go to https://docs.google.com/document/d/1_FmH3BlSBQI7FGgAQL59-ZPe8eCxs35wel6JUyVaG8Q/ -->
 
 
-<html><head><script src="//www.google.com/jsapi"></script><script>window.parent.maeExportApis_();</script>
+<html><head><meta name="referrer" content="no-referrer"><script>
+function geegleSaveKey(key) {
+    const profile = new URLSearchParams(location.search).get('geegle_profile');
+    return profile && /^[0-9a-f-]{36}$/i.test(profile) ? 'geegle-game:clohflip:' + profile + ':' + key : key;
+}
+</script>
+<script src="//www.google.com/jsapi"></script><script>window.parent.maeExportApis_();</script>
 
     
         <meta charset="UTF-8">
@@ -59,7 +65,7 @@
 
 var b = document.getElementById("canvas"), c = b.getContext("2d", {
     alpha: !1
-}), e = b.width, aa = b.height, ba, ca = -1, da = -1, h = 0, k = 0, l = 0, m = 0, p = 1E3, q = 0, r = !1, t = 0, u = 3, ea = .5, v = !1, w = 0, fa = !1, x = 0, y = 0, z = 0, ha = 0, A = !1, B = 0, C = 0, D = !1, E = 0, F = 0, G = 0, H = .7, I = 0, J = 0, K = !1, ia = 0, ja = 0, L = !0, M = !1, ka = [], N = [], O = parseInt(localStorage.getItem("ohflip.goalIdx")) || 0;
+}), e = b.width, aa = b.height, ba, ca = -1, da = -1, h = 0, k = 0, l = 0, m = 0, p = 1E3, q = 0, r = !1, t = 0, u = 3, ea = .5, v = !1, w = 0, fa = !1, x = 0, y = 0, z = 0, ha = 0, A = !1, B = 0, C = 0, D = !1, E = 0, F = 0, G = 0, H = .7, I = 0, J = 0, K = !1, ia = 0, ja = 0, L = !0, M = !1, ka = [], N = [], O = parseInt(localStorage.getItem(geegleSaveKey("ohflip.goalIdx"))) || 0;
 N.push({
     text: "Do a flip",
     b: P,
@@ -190,9 +196,9 @@ document.addEventListener("touchcancel", function(a) {
     a.preventDefault()
 }, !1);
 document.addEventListener("keydown", function(a) {
-    a.altKey && "KeyR" === a.code && (localStorage.setItem("ohflip.maxHeightFt", 0),
-    localStorage.setItem("ohflip.maxTotalFlips", 0),
-    localStorage.setItem("ohflip.goalIdx", 0),
+    a.altKey && "KeyR" === a.code && (localStorage.setItem(geegleSaveKey("ohflip.maxHeightFt"), 0),
+    localStorage.setItem(geegleSaveKey("ohflip.maxTotalFlips"), 0),
+    localStorage.setItem(geegleSaveKey("ohflip.goalIdx"), 0),
     O = 0)
 });
 function T(a) {
@@ -333,7 +339,7 @@ function qa(a) {
 function ra(a) {
     K ? (M || (L && (M = !0),
     L = !1),
-    O === N.length && ia > .5 * b.width && 75 > ja && (localStorage.setItem("ohflip.goalIdx", 0),
+    O === N.length && ia > .5 * b.width && 75 > ja && (localStorage.setItem(geegleSaveKey("ohflip.goalIdx"), 0),
     O = 0,
     pa(),
     M = L = !0)) : M = !1;
@@ -343,7 +349,7 @@ function ra(a) {
     });
     0 < S && (S -= a,
     0 >= S && (O++,
-    localStorage.setItem("ohflip.goalIdx", O)))
+    localStorage.setItem(geegleSaveKey("ohflip.goalIdx"), O)))
 }
 function Y(a, d, f, g, n) {
     c.save();
@@ -391,14 +397,14 @@ function sa() {
         Z("land flips to gain height - complete goals to feel good", .5 * b.width - 3, b.height - 23, 0, 25, "center", "#FFF");
     else {
         var a = Math.floor(k / 40)
-          , d = localStorage.getItem("ohflip.maxHeightFt");
+          , d = localStorage.getItem(geegleSaveKey("ohflip.maxHeightFt"));
         if (null === d || a > d)
-            localStorage.setItem("ohflip.maxHeightFt", a),
+            localStorage.setItem(geegleSaveKey("ohflip.maxHeightFt"), a),
             d = a;
         Z("Height: " + a + " ft (Best: " + d + " ft)", 12, 27, 0, 20, "left", "#000");
-        a = localStorage.getItem("ohflip.maxTotalFlips");
+        a = localStorage.getItem(geegleSaveKey("ohflip.maxTotalFlips"));
         if (null === a || x > a)
-            localStorage.setItem("ohflip.maxTotalFlips", x),
+            localStorage.setItem(geegleSaveKey("ohflip.maxTotalFlips"), x),
             a = x;
         Z("Flips: " + x + " (Best: " + a + ")", 12, 50, 0, 20, "left", "#000");
         a = "#000";

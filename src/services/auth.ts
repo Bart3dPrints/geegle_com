@@ -75,13 +75,15 @@ export async function register(
   if (error) {
     if (
       error.message.toLowerCase().includes('already registered') ||
-      error.status === 422
+      error.code === 'user_already_exists' ||
+      error.code === 'email_exists'
     ) {
       return { ok: false, error: 'That username is already taken.' };
     }
     return { ok: false, error: friendlyAuthError(error.message) };
   }
 
+  if (!data.session) return { ok: false, error: 'Registration did not create a session. Contact the site administrator.' };
   return {
     ok: true,
     user: data.user ?? undefined,
@@ -119,10 +121,8 @@ export async function login(
   };
 }
 
-export async function logout(): Promise<void> {
-  if (!isSupabaseConfigured) return;
-  const { error } = await supabase.auth.signOut();
-  if (error) {
-    console.error('[geegle] sign-out failed:', error.message);
-  }
+export async function logout(): Promise<string | null> {
+  if (!isSupabaseConfigured) return null;
+  const { error } = await supabase.auth.signOut({ scope: 'local' });
+  return error ? friendlyAuthError(error.message) : null;
 }

@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import type { Session, User } from '@supabase/supabase-js';
 import { supabase, isSupabaseConfigured, usernameFromEmail } from '../lib/supabase';
 import { register, login, logout } from '../services/auth';
-import { migrateLocalToAccount } from '../lib/migrateSaves';
 
 export interface AuthState {
   user: User | null;
@@ -12,7 +11,7 @@ export interface AuthState {
   enabled: boolean;
   signIn: (u: string, p: string) => Promise<string | null>;
   signUp: (u: string, p: string) => Promise<string | null>;
-  signOut: () => Promise<void>;
+  signOut: () => Promise<string | null>;
 }
 
 export function useAuth(): AuthState {
@@ -26,23 +25,12 @@ export function useAuth(): AuthState {
       return;
     }
 
-    // Restore any persisted session (login survives reload/reopen).
-    supabase.auth
-      .getSession()
-      .then(({ data }) => {
-        setSession(data.session);
-        setUser(data.session?.user ?? null);
-      })
-      .finally(() => setLoading(false));
-
     const {
       data: { subscription },
-    } = supabase.auth.onAuthStateChange((_e, next) => {
+    } = supabase.auth.onAuthStateChange((_event, next) => {
       setSession(next);
       setUser(next?.user ?? null);
-      const uid = next?.user?.id;
-      // First successful sign-in: merge anonymous local data into the account.
-      if (uid) void migrateLocalToAccount(uid);
+      setLoading(false);
     });
 
     return () => subscription.unsubscribe();

@@ -4,6 +4,7 @@
 // External entries: Krillion backup opens in the Geegle player; Everythingle
 // launches its dedicated app with connection-method and server selection.
 
+import { flushSync } from 'react-dom';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   Search,
@@ -152,29 +153,46 @@ export default function App() {
   // The running game's save handle — logout awaits its real final save.
   const saveHandleRef = useRef<CloudSaveHandle | null>(null);
 
+  const ownerRef = useRef(userId);
+  const transitionRef = useRef(false);
   useEffect(() => {
+    ownerRef.current = userId;
+    setFavorites([]);
+    setRecent([]);
+    setServerDefaults({});
+    setTheme('system');
+    setSyncError(null);
     if (auth.loading) return;
-    (async () => {
-      const [f, r, servers, savedTheme] = await Promise.all([
-        loadFavorites(userId),
-        loadRecent(userId),
-        loadServerDefaults(userId),
-        loadTheme(userId),
-      ]);
-      if (f.ok && f.data) setFavorites(f.data);
-      else if (f.error) setSyncError(f.error);
-      if (r.ok && r.data) setRecent(r.data);
-      else if (r.error) setSyncError(r.error);
-      if (servers.ok && servers.data) setServerDefaults(servers.data);
-      else if (servers.error) setSyncError(servers.error);
+    let cancelled = false;
+    void Promise.all([
+      loadFavorites(userId), loadRecent(userId), loadServerDefaults(userId), loadTheme(userId),
+    ]).then(([f, r, servers, savedTheme]) => {
+      if (cancelled) return;
+      setFavorites(f.data ?? []);
+      setRecent(r.data ?? []);
+      setServerDefaults(servers.data ?? {});
       const t = savedTheme.data;
-      if (savedTheme.ok && (t === 'dark' || t === 'light')) setTheme(t);
-      else if (savedTheme.error) setSyncError(savedTheme.error);
-    })();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [auth.loading, userId]);
+      setTheme(t === 'dark' || t === 'light' ? t : 'system');
+      setSyncError(f.error ?? r.error ?? servers.error ?? savedTheme.error ?? null);
+    });
+    return () => { cancelled = true; };
+  }, [auth.loading, userId, setTheme]);
+
+  const closeGame = useCallback(async () => {
+    if (transitionRef.current) return false;
+    transitionRef.current = true;
+    try {
+      const result = await saveHandleRef.current?.close();
+      return !result || result.ok || window.confirm(`${result.error} Continue with progress kept on this device?`);
+    } finally {
+      transitionRef.current = false;
+    }
+  }, []);
 
   const handleAuth = async (mode: 'login' | 'register') => {
+    if (!await closeGame()) return;
+    setActive(null);
+    setActiveProxy(null);
     setAuthBusy(true);
     setAuthError(null);
     try {
@@ -192,22 +210,28 @@ export default function App() {
     }
   };
 
-  // Save-before-logout: closing the running game triggers GamePlayer's
-  // unmount save; then the session ends.
   const handleSignOut = async () => {
-    setActive(null);
-    setActiveProxy(null);
-    setEverythingleOpen(false);
-    const handle = saveHandleRef.current;
-    if (handle) {
-      await handle.close();
-      saveHandleRef.current = null;
+    if (!await closeGame()) return;
+    transitionRef.current = true;
+    flushSync(() => {
+      setActive(null);
+      setActiveProxy(null);
+      setEverythingleOpen(false);
+      setSettingsOpen(false);
+    });
+    try {
+      const error = await auth.signOut();
+      if (error) setSyncError(`Could not sign out: ${error}`);
+    } finally {
+      transitionRef.current = false;
     }
-    await auth.signOut();
   };
 
   const launch = useCallback(
     async (g: GameEntry) => {
+      if (active?.id === g.id || !await closeGame()) return;
+      setActive(null);
+      setActiveProxy(null);
       if (g.kind === 'stream' && g.id === 'youtube') {
         setYoutubeOpen(true);
         return;
@@ -219,13 +243,15 @@ export default function App() {
       setActiveProxy(null);
       setActive(g);
       const res = await trackPlay(g.id, userId);
+      if (ownerRef.current !== userId) return;
       if (res.ok && res.data) setRecent(res.data);
       else if (res.error) setSyncError(res.error);
     },
-    [userId]
+    [active?.id, userId, closeGame]
   );
 
-  const launchProxy = (serviceId: string, index: number) => {
+  const launchProxy = async (serviceId: string, index: number) => {
+    if (!await closeGame()) return;
     const service = PROXY_SERVICES.find((s) => s.id === serviceId);
     if (!service) return;
     setActiveProxy({ url: proxyUrl(service, index), title: service.name });
@@ -234,6 +260,7 @@ export default function App() {
 
   const toggleFav = async (gameId: string) => {
     const res = await toggleFavorite(gameId, userId);
+    if (ownerRef.current !== userId) return;
     if (res.ok && res.data) {
       setFavorites(res.data);
       setSyncError(null);
@@ -245,7 +272,7 @@ export default function App() {
   const handleTheme = (mode: ThemePreference) => {
     setTheme(mode);
     void saveTheme(mode, userId).then((res) => {
-      if (!res.ok && res.error) setSyncError(`Theme not synced: ${res.error}`);
+      if (ownerRef.current === userId && !res.ok && res.error) setSyncError(`Theme not synced: ${res.error}`);
     });
   };
 
@@ -359,7 +386,8 @@ export default function App() {
         <div className="mx-auto flex h-16 max-w-7xl items-center gap-3 px-4 sm:gap-4 sm:px-6">
           <button
             className="flex items-center gap-2 text-lg font-semibold"
-            onClick={() => {
+            onClick={async () => {
+              if (!await closeGame()) return;
               setActive(null);
               setActiveProxy(null);
               setYoutubeOpen(false);
@@ -383,7 +411,8 @@ export default function App() {
                     ? 'bg-blue-600 text-white'
                     : 'text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800'
                 }`}
-                onClick={() => {
+                onClick={async () => {
+                  if (!await closeGame()) return;
                   setTab(t);
                   setActive(null);
                   setActiveProxy(null);
@@ -482,7 +511,8 @@ export default function App() {
                   ? 'border-b-2 border-blue-600 text-blue-600 dark:text-blue-400'
                   : 'text-slate-600 dark:text-slate-400'
               }`}
-              onClick={() => {
+              onClick={async () => {
+                if (!await closeGame()) return;
                 setTab(t);
                 setActive(null);
                 setActiveProxy(null);
@@ -586,11 +616,12 @@ export default function App() {
       {youtubeOpen && <YouTubeApp onExit={() => setYoutubeOpen(false)} />}
 
       {everythingleOpen && (
-        <EverythingleApp userId={userId} onExit={() => setEverythingleOpen(false)} />
+        <EverythingleApp key={userId ?? "guest"} userId={userId} onExit={() => setEverythingleOpen(false)} />
       )}
 
       {(active || activeProxy) && (
         <GamePlayer
+          key={JSON.stringify([userId, active?.id, activeProxy?.url])}
           entry={active}
           proxy={activeProxy}
           userId={userId}
@@ -709,6 +740,7 @@ export default function App() {
                   onSelect={async (index) => {
                     setServerDefaults((prev) => ({ ...prev, [service.id]: index }));
                     const res = await saveServerDefault(service.id, index, userId);
+                    if (ownerRef.current !== userId) return;
                     if (!res.ok && res.error) {
                       setSyncError(`Server default not synced: ${res.error}`);
                     } else {
