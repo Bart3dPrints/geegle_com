@@ -1,0 +1,103 @@
+clpacman|Pac-Man|arcade
+clpacmansuperfast|Pac-Man: Super Fast|arcade
+clpacmanworld3|Pac-Man World 3|platformer
+clpacmanworldg|Pac-Man World G|platformer
+clpacmanworldpsx|Pac-Man World (PSX)|platformer
+clpacmana|Pac-Man (Alt)|arcade
+clpandameic2|Panda Mei C 2|platformer
+clpapabakeria|Papa's Bakeria|simulation
+clpapadonut|Papa's Donut|simulation
+clpapalouienighthunt2|Papa Louie: Night Hunt 2|platformer
+clpapalouiewhenburgersattack|Papa Louie: When Burgers Attack|platformer
+clpapalouiewhenpizzasattack|Papa Louie: When Pizzas Attack|platformer
+clpapalouiewhensundaesattack|Papa Louie: When Sundaes Attack|platformer
+clpapapizzagood|Papa's Pizzeria|simulation
+clpapapizzagoody|Papa's Pizzeria (Good)|simulation
+clpapapizzamamamia|Papa's Pizzeria (Mama Mia)|simulation
+clpapascheeseria|Papa's Cheeseria|simulation
+clpapascupcakeria|Papa's Cupcakeria|simulation
+clpapasfreezeria|Papa's Freezeria|simulation
+clpapashotdoggeria|Papa's Hot Doggeria|simulation
+clpapaspancakeria|Papa's Pancakeria|simulation
+clpapaspastaria|Papa's Pastaria|simulation
+clpapasscooperia|Papa's Scooperia|simulation
+clpapassushiria|Papa's Sushiria|simulation
+clpapastacomia|Papa's Taco Mia|simulation
+clpapaswingeria|Papa's Wingeria|simulation
+clpapasburgeriiiaaaaa|Papa's Burgeria|simulation
+clpaperio3d|Paper.io 3D|multiplayer
+clpaperiomania|Paper.io Mania|multiplayer
+clpapermario|Paper Mario|adventure
+clpapermariodse|Paper Mario DSE|adventure
+clpapermariopromode|Paper Mario Promo de|adventure
+clpapermariottyd|Paper Mario: TTYD|adventure
+clpaperio|Paper.io|multiplayer
+clparappatherapper|Parappa the Rapper|rhythm
+clparkingfury|Parking Fury|racing
+clparkingfury2|Parking Fury 2|racing
+clparkingfury3|Parking Fury 3|racing
+clparkingrush|Parking Rush|puzzle
+clpartnersintime|Mario & Luigi: Partners in Time|adventure
+clpeacekeeper|Peace Keeper|action
+clpeggle|Peggle|puzzle
+clpenaltykicks|Penalty Kicks|sports
+clpenguinpass|Penguin Pass|puzzle
+clpepsiman|Pepsi Man|racing
+clpepsimanalt|Pepsi Man (Alt)|racing
+clpereelous|Per Eelo Us|action
+clperfectdark|Perfect Dark|action
+clperfecthotel|Perfect Hotel|simulation
+clpersona2|Persona 2|adventure
+clpersona2alt|Persona 2 (Alt)|adventure
+clpersonaalt|Persona (Alt)|adventure
+clpersona|Persona|adventure
+clpetworld|Pet World|simulation
+clphantasystar|Phantasy Star|adventure
+clphantasystar2|Phantasy Star 2|adventure
+clphantasystar3|Phantasy Star 3|adventure
+clphantasystar4|Phantasy Star 4|adventure
+clphasma|Phasma|horror
+clpheonixjusticeforall|Phoenix Wright: Justice for All|adventure
+clpheonixrightaceattorny|Phoenix Wright: Ace Attorney|adventure
+clpheonixtrialsandyear|Phoenix Wright: Trials and Tribulations|adventure
+clpiclient|Pi Client|simulation
+clpibbyapocalypse|Pibby Apocalypse|action
+clpico8|Pico-8|simulation
+clpico8edu|Pico-8 Edu|simulation
+clpicodriller|Pico Driller|arcade
+clpicolife|Pico Life|simulation
+clpiconightpunkin|Pico Night Punkin|rhythm
+clpicosschool|Pico's School|action
+clpicovsbeardx|Pico vs. Beard X|action
+clpicohot|Picohot|puzzle
+clpiecesofcake|Pieces of Cake|puzzle
+clpikwip|Pikwip|multiplayer
+clpinballnes|Pinball (NES)|arcade
+clpingpongchaos|Ping Pong Chaos|sports
+clpinkbike|Pink Bike|racing
+clpint|Pint|puzzle
+clpitof100trials|Pit of 100 Trials|adventure
+clpitfall|Pitfall|arcade
+clpixelbattlegroundsio|Pixel Battlegrounds.io|multiplayer
+clpixelclient|Pixel Client|simulation
+clpixelcombat2|Pixel Combat 2|action
+clpixelgun|Pixel Gun|action
+clpixelquestlostidols|Pixel Quest: Lost Idols|adventure
+clpixelshooter|Pixel Shooter|action
+clpixelspeedrun|Pixel Speedrun|platformer
+clpixelwarfare|Pixel Warfare|action
+clpizzapapa|Pizza Papa|simulation
+clpizzatower|Pizza Tower|platformer
+clpkmnarutoans|PKM Naruto ANS|action
+clplazmaburst|Plazma Burst|action
+clplangman|Plangman|puzzle
+clplanetlife|Planet Life|simulation
+clplantsvszombies|Plants vs. Zombies|strategy
+clplantsvszombiesnds|Plants vs. Zombies (NDS)|strategy
+clplinko|Plinko|casual
+clplonky|Plonky|casual
+clpokegschronicles|Poke GS Chronicles|pokemon
+clpogo3d|Pogo 3D|arcade
+clpokeacademylifeforever|Poke Academy Life Forever|pokemon
+clpokeallin|Poke All In|pokemon
+clpokebattlefact|Poke Battle Fact|pokemon

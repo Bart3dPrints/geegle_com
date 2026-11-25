@@ -2,34 +2,33 @@
 // Verifies the site entry password WITHOUT exposing it to the client.
 //
 // Setup:
-//   supabase secrets set ENTRY_PASSWORD_HASH='__HASH_FROM_SETUP__'
-//   supabase secrets set ENTRY_SALT='__SALT_FROM_SETUP__'
-//
-// Generate the hash locally with:
 //   node supabase/functions/_shared/hash-entry-password.mjs pirate
+//   supabase secrets set ENTRY_PASSWORD_HASH='...' ENTRY_SALT='...'
+//   supabase functions deploy verify-entry-password
 //
-// The frontend calls: POST /functions/v1/verify-entry-password { password }
-// and receives { valid: true } only when the password matches.
+// The frontend calls POST /functions/v1/verify-entry-password { password }.
+// Rate limiting: 10 failed attempts per 10 minutes per (hashed) IP, then a
+// 15-minute lockout. Attempts are recorded in geegle.entry_attempts.
 
 import { createClient } from 'jsr:@supabase/supabase-js@2';
 
 const MAX_ATTEMPTS = 10;
 const WINDOW_MINUTES = 10;
 const BAN_MINUTES = 15;
+const SCHEMA = 'geegle';
+
+const corsHeaders = {
+  'Access-Control-Allow-Origin': Deno.env.get('ALLOWED_ORIGIN') ?? '*',
+  'Access-Control-Allow-Headers':
+    'authorization, x-client-info, apikey, content-type',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+};
 
 interface RequestBody {
   password?: string;
 }
 
-interface AttemptRow {
-  attempted_at: string;
-  success: boolean | null;
-}
-
 function ipToHash(ip: string, salt: string): string {
-  // Best-effort privacy-preserving IP fingerprint (Edge Functions have no
-  // Web Crypto HMAC in this context; a simple async iterator hash is enough
-  // for rate-limit bucketing — it never leaves the server and stores no raw IP).
   let h1 = 0x811c9dc5;
   const input = salt + ip;
   for (let i = 0; i < input.length; i++) {
@@ -39,7 +38,7 @@ function ipToHash(ip: string, salt: string): string {
   return 'ip_' + h1.toString(16);
 }
 
-async function scryptHash(password: string, salt: string): Promise<string> {
+async function pbkdf2Hash(password: string, salt: string): Promise<string> {
   const encoder = new TextEncoder();
   const keyMaterial = await crypto.subtle.importKey(
     'raw',
@@ -48,11 +47,10 @@ async function scryptHash(password: string, salt: string): Promise<string> {
     false,
     ['deriveBits']
   );
-  const saltBytes = encoder.encode(salt);
   const bits = await crypto.subtle.deriveBits(
     {
       name: 'PBKDF2',
-      salt: saltBytes,
+      salt: encoder.encode(salt),
       iterations: 600000,
       hash: 'SHA-256',
     },
@@ -62,14 +60,16 @@ async function scryptHash(password: string, salt: string): Promise<string> {
   return btoa(String.fromCharCode(...new Uint8Array(bits)));
 }
 
-Deno.serve(async (req: Request) => {
-  // CORS for same-origin static hosting on a different domain (e.g. Heroku).
-  const corsHeaders = {
-    'Access-Control-Allow-Origin': Deno.env.get('ALLOWED_ORIGIN') ?? '*',
-    'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-  };
+/** Constant-time comparison of two strings. */
+function timingSafeEqual(a: string, b: string): boolean {
+  let diff = a.length ^ b.length;
+  for (let i = 0; i < Math.max(a.length, b.length); i++) {
+    diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  }
+  return diff === 0;
+}
 
+Deno.serve(async (req: Request) => {
   if (req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders });
   }
@@ -101,76 +101,80 @@ Deno.serve(async (req: Request) => {
 
   const password = typeof body.password === 'string' ? body.password : '';
   if (password.length === 0 || password.length > 128) {
-    return new Response(JSON.stringify({ valid: false, reason: 'invalid_password' }), {
-      status: 200,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    });
+    return new Response(
+      JSON.stringify({ valid: false, reason: 'invalid_password' }),
+      {
+        status: 200,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      }
+    );
   }
 
-  // Rate limiting: hash the client IP (privacy-preserving) and count recent
-  // failures. Uses the anon key client (service role only for rate-limit table).
   const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
   const serviceRoleKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
-  const supabase = createClient(supabaseUrl, serviceRoleKey);
+  const supabase = createClient(supabaseUrl, serviceRoleKey, {
+    db: { schema: SCHEMA },
+  });
 
   const clientIp =
     req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ??
     req.headers.get('cf-connecting-ip') ??
     'unknown';
-
   const ipHash = ipToHash(clientIp, envSalt);
 
-  const since = new Date(Date.now() - WINDOW_MINUTES * 60_000).toISOString();
+  // Rate limiting: count recent failures for this IP hash.
+  const since = new Date(
+    Date.now() - WINDOW_MINUTES * 60_000
+  ).toISOString();
   const { data: attempts, error: attemptError } = await supabase
     .from('entry_attempts')
-    .select('attempted_at, success')
+    .select('success')
     .eq('ip_hash', ipHash)
     .gte('attempted_at', since)
     .order('attempted_at', { ascending: false })
     .limit(MAX_ATTEMPTS * 2);
 
   if (attemptError) {
-    console.error('rate-limit lookup failed', attemptError);
-    // Fail closed on rate-limit infra errors? No — fail open but log;
-    // password verification below is still required.
-  }
-
-  if (attempts) {
-    const failures = attempts.filter((a: AttemptRow) => a.success !== true).length;
+    console.error('rate-limit lookup failed:', attemptError.message);
+  } else if (attempts) {
+    const failures = attempts.filter((a) => a.success !== true).length;
     if (failures >= MAX_ATTEMPTS) {
       return new Response(
-        JSON.stringify({ valid: false, reason: 'rate_limited', retry_after_minutes: BAN_MINUTES }),
-        { status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        JSON.stringify({
+          valid: false,
+          reason: 'rate_limited',
+          retry_after_minutes: BAN_MINUTES,
+        }),
+        {
+          status: 429,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        }
       );
     }
   }
 
-  // Constant-time-ish comparison of derived hash.
-  const derived = await scryptHash(password, envSalt);
-  let diff = 0;
-  if (derived.length !== envHash.length) diff = 1;
-  for (let i = 0; i < Math.min(derived.length, envHash.length); i++) {
-    diff |= derived.charCodeAt(i) ^ envHash.charCodeAt(i);
-  }
-  const valid = diff === 0;
+  const derived = await pbkdf2Hash(password, envSalt);
+  const valid = timingSafeEqual(derived, envHash);
 
-  // Record the attempt (best effort).
+  // Record the attempt (best effort — never blocks the response).
   await supabase
     .from('entry_attempts')
     .insert({ ip_hash: ipHash, success: valid })
-    .then(({ error }: { error: unknown }) => {
-      if (error) console.error('attempt insert failed', error);
+    .then(({ error }: { error: { message: string } | null }) => {
+      if (error) console.error('attempt insert failed:', error.message);
     });
 
-  // Prune old attempts occasionally (probabilistic cleanup).
+  // Occasional cleanup of old attempts.
   if (Math.random() < 0.05) {
-    const cutoff = new Date(Date.now() - 24 * 60 * 60_000).toISOString();
+    const cutoff = new Date(
+      Date.now() - 24 * 60 * 60_000
+    ).toISOString();
     await supabase
       .from('entry_attempts')
       .delete()
       .lt('attempted_at', cutoff)
-      .then(({ error }: { error: unknown }) => {
-        if (error) console.error('attempt prune failed', error);
+      .then(({ error }: { error: { message: string } | null }) => {
+        if (error) console.error('attempt prune failed:', error.message);
       });
   }
 

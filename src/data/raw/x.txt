@@ -1,0 +1,6 @@
+clxmenvsstreetfighter|X-Men vs Street Fighter|action
+clxmenchildrenoftheatomarcade|X-Men: Children of the Atom|action
+clxevent|Xevent|action
+clxevious|Xevious|arcade
+clxmenarcade|X-Men Arcade|action
+clxor|XOR|puzzle

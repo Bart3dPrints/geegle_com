@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><meta name="referrer" content="no-referrer">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Quantum Clicker</title>
@@ -637,7 +637,13 @@ padding:10px;
 </div>
 
 <script>
-const SAVE_KEY = 'qcSave';
+function geegleSaveKey(key) {
+    const profile = new URLSearchParams(location.search).get('geegle_profile');
+    return profile && /^[0-9a-f-]{36}$/i.test(profile) ? 'geegle-game:clquantumclicker:' + profile + ':' + key : key;
+}
+</script>
+<script>
+const SAVE_KEY = geegleSaveKey('qcSave');
 
 const REALM_NODES = {
 access: {x:320,y:260,cost:1,name:'Realm Access',desc:'Unlock the rest of the Quantum Realm tree.',flavor:'A node appears. Civilization advances.',req:null},

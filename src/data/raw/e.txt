@@ -1,0 +1,58 @@
+cleaglercraft152|Eaglercraft 1.5.2|simulation
+cleaglercraftlite|Eaglercraft Lite|simulation
+cleaglercraftmagic|Eaglercraft Magic|simulation
+cleaglercraftnebula|Eaglercraft Nebula|simulation
+cleaglercraftshadow|Eaglercraft Shadow|simulation
+cleaglercraftsky|Eaglercraft Sky|simulation
+cleaglerforge|EaglerForge|simulation
+cleagleride|Eagle Ride|arcade
+eaglercraft-indev-offline--1|Eaglercraft Indev Offline|simulation
+clearntodie|Earn to Die|racing
+clearntodie2|Earn to Die 2|racing
+clearthtaken|Earth Taken|action
+clearthtaken2|Earth Taken 2|action
+clearthtaken3|Earth Taken 3|action
+clearthbound|Earthbound|rpg
+clearthbound3|Earthbound 3|rpg
+clearthboundsnes|Earthbound (SNES)|rpg
+clearthwormgg|Earthworm Jim|platformer
+clearthwormjim--1|Earthworm Jim|platformer
+clearthwormjim2--1|Earthworm Jim 2|platformer
+eb-client-v1-0-0r2-wasm|EB Client WASM|simulation
+cleccothedolphin|Ecco the Dolphin|adventure
+cledelweiss|Edelweiss|adventure
+cleffinghail|Effing Hail|simulation
+cleffingmachines|Effing Machines|action
+cleffingworms|Effing Worms|action
+cleffingzombies|Effing Zombies|action
+clegg|Egg|casual
+cleggycar|Eggycar|arcade
+clelasticface|Elastic Face|casual
+clelectricman2|Electric Man 2|action
+clelevatoraction|Elevator Action|arcade
+clelytraflight|Elytra Flight|simulation
+clemujs|EmuJS|simulation
+clenchain|Enchain|platformer
+clendacopia|Endacopia|adventure
+clendlesswar4|Endless War 4|action
+clendlesswar5|Endless War 5|action
+clendlesswar5wow|Endless War 5 WOW|action
+clendlesswar7|Endless War 7|action
+clenduro|Enduro|racing
+clepicbattlefantasy5|Epic Battle Fantasy 5|rpg
+clescalatingduel|Escalating Duel|action
+clescaperoad|Escape Road|racing
+clescaperoad3|Escape Road 3|racing
+clescaperoadcity2|Escape Road City 2|racing
+clescapeschoolduel|Escape School Duel|multiplayer
+clet|Et|casual
+cletrianoddyssey|Etrian Odyssey|rpg
+cleugeneslife|Eugene's Life|simulation
+cleurovisionsim|Eurovision Sim|simulation
+clevilglitch|Evil Glitch|arcade
+clevolution|Evolution|simulation
+clexcitebike|Excitebike|racing
+clexcitebike64|Excitebike 64|racing
+clexitpath|Exit Path|platformer
+clexoobservation|Exo Observation|adventure
+clextremerun3d|Extreme Run 3D|arcade

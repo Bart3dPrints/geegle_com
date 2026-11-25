@@ -1,0 +1,198 @@
+clsonny2|Sonny 2|action
+clsortthecourt|Sort the Court|simulation
+clsotn|Castlevania: Symphony of the Night|action
+clsouljumper|Soul Jumper|platformer
+clsouthparkn64|South Park (N64)|action
+clspacebarclicker|Spacebar Clicker|casual
+clspacecompany|Space Company|simulation
+clspaceharriersms|Space Harrier (SMS)|arcade
+clspaceinvade95|Space Invade 95|arcade
+clspaceinvaders|Space Invaders|arcade
+clspaceiskey|Space Is Key|platformer
+clspaceiskey2|Space Is Key 2|platformer
+clspaceiskeyxmas|Space Is Key Xmas|platformer
+clspacewarsbattleground|Space Wars Battleground|action
+clspecialmission|Special Mission|action
+clspeedperclick|Speed Per Click|casual
+clspeedstars|Speed Stars|sports
+clspelunky|Spelunky|platformer
+clspewer|Spewer|platformer
+clspidermanps1|Spider-Man (PS1)|action
+clspiralroll|Spiral Roll|arcade
+clspiritsofhell|Spirits of Hell|horror
+clsprinter|Sprinter|sports
+clsprunked|Sprunked|rhythm
+clsprunkiclicker|Sprunki Clicker|casual
+clsprunkipyramixed|Sprunki Pyramixed|rhythm
+clsprunki|Sprunki|rhythm
+clspyhunter|Spy Hunter|racing
+clsquidplayground|Squid Playground|simulation
+clstackballio|Stack Ball.io|arcade
+clstacktris|Stacktris|puzzle
+clstackydash|Stacky Dash|puzzle
+clstarfox64|Star Fox 64|action
+clstarlike|Star Like|arcade
+clstarraiders|Star Raiders|action
+clstarfox|Starfox|action
+clstateio|State.io|multiplayer
+clstation141|Station 141|action
+clstationmeltdown|Station Meltdown|action
+clstationsaturn|Station Saturn|action
+clsteakandjake|Steak and Jake|platformer
+clstealbrainrot|Steal Brainrot|arcade
+clstealbrainrotonline|Steal Brainrot Online|arcade
+clstealthassassin|Stealth Assassin|action
+clstealthmaster|Stealth Master|action
+clsteelempire|Steel Empire|action
+clsteelsurge|Steel Surge|action
+clsteepdescent|Steep Descent|racing
+clstickarchersbattle|Stick Archers Battle|action
+clstickdefenders|Stick Defenders|strategy
+clstickfighter|Stick Fighter|action
+clstickjetchallenge|Stick Jet Challenge|action
+clstickmanandguns|Stickman and Guns|action
+clstickmanclash|Stickman Clash|action
+clstickmanduel|Stickman Duel|action
+clstickmangtacity|Stickman GTA City|action
+clstickmanhook|Stickman Hook|action
+clstickmankombat2d|Stickman Kombat 2D|action
+clstickmanstealingdiamond|Henry Stickmin: Stealing the Diamond|adventure
+clstickminairship|Henry Stickmin: Infiltrating the Airship|adventure
+clstickminbreakingbank|Henry Stickmin: Breaking the Bank|adventure
+clstickminescapingprison|Henry Stickmin: Escaping the Prison|adventure
+clstickminfleecomplex|Henry Stickmin: Fleeing the Complex|adventure
+clstickrpgcomplete|Stick RPG Complete|simulation
+clstickslasher|Stick Slasher|action
+clstickwar|Stick War|strategy
+clstickwar2|Stick War 2|strategy
+clstickwithit|Stick With It|puzzle
+clstormthehouse|Storm the House|action
+clstormthehouse2|Storm the House 2|action
+clstormthehouse3|Storm the House 3|action
+clstrangejournet|Strange Journey|adventure
+clstreangeropepolice|Strange Rope Police|action
+clstreetfighter1arcade|Street Fighter 1 Arcade|action
+clstreetfighter2|Street Fighter 2|action
+clstreetfighter2arcade|Street Fighter 2 Arcade|action
+clstreetfighter2cearcade|Street Fighter 2 CE Arcade|action
+clstreetfighter2turbo|Street Fighter 2 Turbo|action
+clstreetfighteralpha3|Street Fighter Alpha 3|action
+clstreetfighterumuhsomething|Street Fighter Umuh Something|action
+clstreetofrage|Street of Rage|action
+clstreetofrage2|Street of Rage 2|action
+clstreetofrage3|Street of Rage 3|action
+clstrikeforceheroes|Strike Force Heroes|action
+clstrikeforceheroes2|Strike Force Heroes 2|action
+clstrikeforceheroes3|Strike Force Heroes 3|action
+clstrikerdummies|Striker Dummies|sports
+clstylesavvy|Style Savvy|simulation
+clsubwaysurfersbeijing|Subway Surfers: Beijing|action
+clsubwaysurfersberlin|Subway Surfers: Berlin|action
+clsubwaysurfersbuenosaires|Subway Surfers: Buenos Aires|action
+clsubwaysurfershavana|Subway Surfers: Havana|action
+clsubwaysurfershouston|Subway Surfers: Houston|action
+clsubwaysurfersiceland|Subway Surfers: Iceland|action
+clsubwaysurferslondon|Subway Surfers: London|action
+clsubwaysurfersmexico|Subway Surfers: Mexico|action
+clsubwaysurfersmiami|Subway Surfers: Miami|action
+clsubwaysurfersmonaco|Subway Surfers: Monaco|action
+clsubwaysurfersneworeleans|Subway Surfers: New Oreleans|action
+clsubwaysurfersneworleans|Subway Surfers: New Orleans|action
+clsubwaysurferssanfrancisco--1|Subway Surfers: San Francisco|action
+clsubwaysurfersstpetersburg|Subway Surfers: St Petersburg|action
+clsubwaysurferswinterholiday|Subway Surfers: Winter Holiday|action
+clsubwaysurferszurich|Subway Surfers: Zurich|action
+clsugarsugar|Sugar Sugar|puzzle
+clsugaryspire|Sugary Spire|platformer
+clsuikapico|Suika Pico|puzzle
+clsuika|Suika|puzzle
+clsummerrider|Summer Rider|racing
+clsunandmoon|Sun and Moon|adventure
+clsupitdept|Sup It Dept|simulation
+clsuperbomberman|Super Bomberman|arcade
+clsuperbomberman2|Super Bomberman 2|arcade
+clsuperbomberman3|Super Bomberman 3|arcade
+clsuperbomberman4|Super Bomberman 4|arcade
+clsuperbomberman5|Super Bomberman 5|arcade
+clsuperchibiknight|Super Chibi Knight|action
+clsupercold|Super Cold|puzzle
+clsuperdarkdeception|Super Dark Deception|horror
+clsuperdiagonalmario2|Super Diagonal Mario 2|platformer
+clsuperdromebugs-1|Super Drome Bugs|action
+clsuperfallingfred|Super Falling Fred|action
+clsuperfighters|Super Fighters|action
+clsuperhot|Superhot|action
+clsuperhotlinemiami|Superhotline Miami|action
+clsuperhouseofdeadninjas|Super House of Dead Ninjas|action
+clsuperislandadventure|Super Island Adventure|platformer
+clsuperkidadventure|Super Kid Adventure|platformer
+clsuperliquidsoccer|Super Liquid Soccer|sports
+clsupermario|Super Mario|platformer
+clsupermario3mix|Super Mario 3 Mix|platformer
+clsupermario63|Super Mario 63|platformer
+clsupermario64|Super Mario 64|platformer
+clsupermario64ds|Super Mario 64 DS|platformer
+clsm64land|SM64 Land|platformer
+clsupermario74|Super Mario 74|platformer
+clsupermarioallstars|Super Mario All-Stars|platformer
+clsupermariobros|Super Mario Bros|platformer
+clsupermariobros2|Super Mario Bros 2|platformer
+clsupermariobros2us|Super Mario Bros 2 (US)|platformer
+clsupermariobros3|Super Mario Bros 3|platformer
+clsupermariobros3real|Super Mario Bros 3 (Real)|platformer
+clsupermariokart|Super Mario Kart|racing
+clsupermarioland|Super Mario Land|platformer
+clsupermarioland2|Super Mario Land 2|platformer
+clsupermarioland2dx|Super Mario Land 2 DX|platformer
+clsupermariolanddx|Super Mario Land DX|platformer
+clsupermariomon|Super Mario Mon|platformer
+clsupermariorpg|Super Mario RPG|adventure
+clsupermariostarroad|Super Mario Star Road|platformer
+clsupermariostarroadretooled|Super Mario Star Road (Retooled)|platformer
+clsupermariosunshine64|Super Mario Sunshine 64|platformer
+clsupermarioworld|Super Mario World|platformer
+clsupermarioworldthe-secretofthe7goldenstatues|Super Mario World: Secret of the 7 Golden Statues|platformer
+clsupermarioworld2|Super Mario World 2|platformer
+clsupermetroid|Super Metroid|action
+clsupermonkeyballjr|Super Monkey Ball Jr|arcade
+clsuperoliverworld|Super Oliver World|platformer
+clsuperonionboy2|Super Onion Boy 2|platformer
+clsuperpickleballadventure|Super Pickleball Adventure|sports
+clsuperpunchout|Super Punch-Out!!|sports
+clsuperpunchouten|Super Punch-Out!! (EN)|sports
+clsuperpuzzlefighter2turbo|Super Puzzle Fighter 2 Turbo|puzzle
+clsuperpuzzlefighter2turboalt|Super Puzzle Fighter 2 Turbo (Alt)|puzzle
+clsupersantakicker|Super Santa Kicker|puzzle
+clsupersantakicker2|Super Santa Kicker 2|puzzle
+clsuperscribblenauts|Super Scribblenauts|puzzle
+clsupersmashbros|Super Smash Bros|action
+clsupersmashflash|Super Smash Flash|action
+clsupersmashflash2|Super Smash Flash 2|action
+clsupersmashflash2butdifversion|Super Smash Flash 2 (Alt Version)|action
+clsupersmashflash0-8|Super Smash Flash 0.8|action
+clssf2arcade|Super Street Fighter 2 Arcade|action
+clsuperstreetfighter2turbojp|Super Street Fighter 2 Turbo JP|action
+clsupertiltbros|Super Tilt Bros|platformer
+clsuperc|Superc|platformer
+clsupercarrush|Supercar Rush|racing
+clsupercastlevaniavi|Super Castlevania IV|action
+clsupernoahsark3d|Super Noah's Ark 3D|action
+clsupremeduelist|Supreme Duelist|action
+clsupremeduelist2019|Supreme Duelist 2019|action
+supremeduelistfix|Supreme Duelist Fix|action
+clsurvevio|Surviv.io|multiplayer
+clsurvivalracev2|Survival Race V2|racing
+clsurvivorio|Survivor.io|multiplayer
+clsushicat|Sushi Cat|puzzle
+clsushicat2|Sushi Cat 2|puzzle
+clsushiunroll|Sushi Unroll|puzzle
+clswerve|Swerve|action
+clswingforbrainrots|Swing for Brain Rots|arcade
+clswitchblade|Switchblade|action
+clswordandshieldultimateplus|Pokemon Sword and Shield Ultimate Plus|pokemon
+clswordfight|Sword Fight|action
+clswordplay|Swordplay|action
+clswordsandsandals|Swords and Sandals|action
+clswordsandsandals2|Swords and Sandals 2|action
+clswordsandsouls|Swords and Souls|action
+clsydneyshark|Sydney Shark|action

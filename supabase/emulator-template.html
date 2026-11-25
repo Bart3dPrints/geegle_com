@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Game</title>
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; background: #000; overflow: hidden; }
+  #game { width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+  <div id="game"></div>
+  <script>
+    // EmulatorJS launcher template. Copy this file to public/games/<game-id>.html
+    // and set EJS_gameUrl to YOUR authorized ROM under public/games/roms/.
+    // Never commit ROM files to this repository.
+    EJS_player = '#game';
+    EJS_core = 'gba';
+    EJS_gameUrl = '/games/roms/YOUR-AUTHORIZED-FILE.gba';
+    EJS_pathtodata = 'https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@latest/data/';
+    EJS_startOnLoaded = true;
+    EJS_threads = true;
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@latest/data/loader.js"></script>
+</body>
+</html>

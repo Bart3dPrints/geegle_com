@@ -1,0 +1,296 @@
+clfamidash|Famidash|platformer
+clfamidash1-2-8|Famidash 1.2.8|platformer
+clfamidashalbum1-2-8|Famidash Album 1.2.8|platformer
+clfamidashbsides1-2-8|Famidash B-Sides 1.2.8|platformer
+clfamidashcsides1-2-8|Famidash C-Sides 1.2.8|platformer
+clfamidashdsides1-2-8|Famidash D-Sides 1.2.8|platformer
+clfamilyguycorrupted|Family Guy Corrupted|adventure
+clfancypantsadventure|Fancy Pants Adventure|platformer
+clfancypantsadventure2|Fancy Pants Adventure 2|platformer
+clfancypantsadventure3|Fancy Pants Adventure 3|platformer
+clfancysnowboarding|Fancy Snowboarding|sports
+clfantasyzone|Fantasy Zone|arcade
+clfashionbattle|Fashion Battle|sports
+clfattygenius|Fatty Genius|platformer
+clfearassessment|Fear Assessment|horror
+clfearstofathomhomealone|Fears to Fathom: Home Alone|horror
+clfeedthevoid|Feed the Void|simulation
+clfeedus|Feed Us|action
+clfeedus2|Feed Us 2|action
+clfeedus3|Feed Us 3|action
+clfeedus5|Feed Us 5|action
+clff2ws|FF 2 WS|rpg
+clff6|FF6|rpg
+clffmysticquest|FF Mystic Quest|rpg
+clffsonic1|FF Sonic 1|platformer
+clffaf|FFAF|action
+clfifa07|FIFA 07|sports
+clfifa10|FIFA 10|sports
+clfifa11|FIFA 11|sports
+clfifa2000|FIFA 2000|sports
+clfinalearth2|Final Earth 2|simulation
+clfinalfantasy|Final Fantasy|rpg
+clfinalfantasy2nes|Final Fantasy 2 (NES)|rpg
+clfinalfantasy3nes|Final Fantasy 3 (NES)|rpg
+clFF3|Final Fantasy III|rpg
+clfinalfantasylegend2|Final Fantasy Legend 2|rpg
+clfinalninja|Final Ninja|platformer
+clfinalfantasyii|Final Fantasy II|rpg
+clfinalfantasyix|Final Fantasy IX|rpg
+clfinalfantasyvi|Final Fantasy VI|rpg
+clfinalfantasyviid2|Final Fantasy VII D2|rpg
+clfinalfantasyviid3|Final Fantasy VII D3|rpg
+clfinalfantasyvii|Final Fantasy VII|rpg
+clfindthealien|Find the Alien|action
+clfireblob|Fire Blob|platformer
+clfireboyandwatergirl|Fireboy and Watergirl|puzzle
+clfireboyandwatergirl2|Fireboy and Watergirl 2|puzzle
+clfireboyandwatergirl3|Fireboy and Watergirl 3|puzzle
+clfireboyandwatergirl5|Fireboy and Watergirl 5|puzzle
+clfireboyandwatergirl6|Fireboy and Watergirl 6|puzzle
+clfireemblem|Fire Emblem|strategy
+clfisquarium|Fisquarium|casual
+clfisheatgettingbig|Fish Eat Getting Big|arcade
+clfivenightsatbaldisredone|Five Nights at Baldi's Redone|horror
+clfivenightsatepsteins|Five Nights at Epstein's|horror
+clFNAF|Five Nights at Freddy's|horror
+clFNAF2|Five Nights at Freddy's 2|horror
+clFNAF3|Five Nights at Freddy's 3|horror
+clFNAF4|Five Nights at Freddy's 4|horror
+clfivenightsatshreks|Five Nights at Shrek's|horror
+clfivenightsatshrekshotel|Five Nights at Shrek's Hotel|horror
+clfivenightsatyoshis|Five Nights at Yoshi's|horror
+clflappybird|Flappy Bird|arcade
+clflashsonic|Flash Sonic|platformer
+clfloodrunner|Flood Runner|arcade
+clfloodrunner2|Flood Runner 2|arcade
+clfloodrunner4|Flood Runner 4|arcade
+clfluidism|Fluidism|puzzle
+clfnfaethos|FNF: Aethos|rhythm
+clfnfagoti|FNF: Agoti|rhythm
+clfnfakage|FNF: Akage|rhythm
+clfnfannie|FNF: Annie|rhythm
+clfnfbside|FNF: B-Side|rhythm
+clfnfdsides|FNF: D-Sides|rhythm
+clfnffnaf1|FNF: FNAF 1|rhythm
+clfnffnaf2|FNF: FNAF 2|rhythm
+clfnffnaf3|FNF: FNAF 3|rhythm
+clfnffnatpt|FNF: FNAF PT|rhythm
+clfnfhorkglorpgloop|FNF: Horkglor RPG Loop|rhythm
+clfnfmcmadness|FNF: MC Madness|rhythm
+clfnac1|FNAC 1|horror
+clfnac2|FNAC 2|horror
+clfnaf3remastered|FNAF 3 Remastered|horror
+clfnaf4halloween|FNAF 4 Halloween|horror
+clfnafanimatronics|FNAF Animatronics|horror
+clfnafshooter|FNAF Shooter|action
+clfnafworldd|FNAF World|casual
+clfnafps|FNAF PS|action
+clfnafsl|FNAF Sister Location|horror
+clfnafucn|FNAF UCN|horror
+clfnaw|FNAW|horror
+clfnfanimation|FNF Animation|rhythm
+clfnfbelowdepths|FNF: Below Depths|rhythm
+clfnfbfdi26|FNF: BFDI 26|rhythm
+clfnfbinarybreakdown|FNF: Binary Breakdown|rhythm
+clfnfblackbetrayal|FNF: Black Betrayal|rhythm
+clfnfcamelliarudeblaster|FNF: Camellia Rude Blaster|rhythm
+clfnfcandycarrier|FNF: Candy Carrier|rhythm
+clfnfcitytales|FNF: City Tales|rhythm
+clfnfclassified|FNF: Classified|rhythm
+clfnfcorrosion|FNF: Corrosion|rhythm
+clfnfcrunchin|FNF: Crunchin|rhythm
+clfnfdeciever|FNF: Deceiver|rhythm
+clfnfdesolation|FNF: Desolation|rhythm
+clfnfdokitakeoverplus|FNF: Doki Takeover Plus|rhythm
+clfnfdropandroll|FNF: Drop and Roll|rhythm
+clfnfdusttale|FNF: Dusttale|rhythm
+clfnfdustin|FNF: Dustin|rhythm
+clfnffleetway|FNF: Fleetway|rhythm
+clfnfflippedout|FNF: Flipped Out|rhythm
+clfnfgamebreakerbundle|FNF: Game Breaker Bundle|rhythm
+clfnfgodot|FNF: Godot|rhythm
+clfnfgoldenapple|FNF: Golden Apple|rhythm
+clfnfheartbreakhavoc|FNF: Heartbreak Havoc|rhythm
+clfnfherobrine|FNF: Herobrine|rhythm
+clfnfholiday|FNF: Holiday|rhythm
+clfnfhotline|FNF: Hotline|rhythm
+clfnfhypnoslullaby|FNF: Hypno's Lullaby|rhythm
+clfnfimposter3|FNF: Imposter 3|rhythm
+clfnfimposterv4|FNF: Imposter V4|rhythm
+clfnfindiecross|FNF: Indie Cross|rhythm
+clfnfinfernalbout|FNF: Infernal Bout|rhythm
+clfnfinfiniteirida|FNF: Infinite Irida|rhythm
+clfnfironlung|FNF: Iron Lung|rhythm
+clfnfjapcreepypasta|FNF: Jap Creepypasta|rhythm
+clfnfmadnesspoop|FNF: Madness Poop|rhythm
+clfnfmaginagematches|FNF: Maginage Matches|rhythm
+clfnfmariomadnessdside|FNF: Mario Madness D-Side|rhythm
+clfnfmarioport|FNF: Mario Port|rhythm
+clfnfmidfight|FNF: Mid Fight|rhythm
+clfnfmobmod|FNF: Mob Mod|rhythm
+clfnfpiggyfield|FNF: Piggy Field|rhythm
+clfnfplutoshi|FNF: Plutosh|rhythm
+clfnfpokepastaperdition|FNF: Pokepasta Perdition|rhythm
+clfnfporifera|FNF: Porifera|rhythm
+clfnfremnants|FNF: Remnants|rhythm
+clfnfretrospecter|FNF: Retrospecter|rhythm
+clfnfrevmixed|FNF: Rev Mixed|rhythm
+clfnfrewrite|FNF: Rewrite|rhythm
+clfnfrhythmicrev|FNF: Rhythmic Rev|rhythm
+clfnfrottensmoothie|FNF: Rotten Smoothie|rhythm
+clfnfselfpaced|FNF: Self Paced|rhythm
+clfnfshaggyxmatt|FNF: Shaggy X Matt|rhythm
+clfnfsohv2|FNF: SOHV 2|rhythm
+clfnfsonicexe|FNF: Sonic.EXE|rhythm
+clfnfsonicexe4|FNF: Sonic.EXE 4|rhythm
+clfnfstarlightmayhem|FNF: Starlight Mayhem|rhythm
+clfnftailsgetstrolled|FNF: Tails Gets Trolled|rhythm
+clfnftooslowfran|FNF: Too Slow Fran|rhythm
+clfnftricky|FNF: Tricky|rhythm
+clfnftwiddlefinger|FNF: Twiddlefinger|rhythm
+clfnfundertale|FNF: Undertale|rhythm
+clfnfvstabi|FNF: vs Tabi|rhythm
+clfnfwhitty|FNF: Whitty|rhythm
+clfnfzardy|FNF: Zardy|rhythm
+clfnfasdf|FNF ASDF|rhythm
+clfnfchara|FNF Chara|rhythm
+clfnfcory|FNF Cory|rhythm
+clfnfdocumic-txtv3|FNF Documic TXT V3|rhythm
+clfnfgfmode|FNF GF Mode|rhythm
+clfnfhank|FNF Hank|rhythm
+clfnfhex|FNF Hex|rhythm
+clfnfmiku|FNF Miku|rhythm
+clfnfneo|FNF Neo|rhythm
+clfnfqt|FNF QT|rhythm
+clfnfstridentcrisis|FNF Strident Crisis|rhythm
+clfnfshucks-v2|FNF Shucks V2|rhythm
+clfnfsky|FNF Sky|rhythm
+clfnfsoft|FNF Soft|rhythm
+clfnfvoid|FNF Void|rhythm
+clfnfwaltenfiles|FNF Walten Files|rhythm
+clfnfwednesday-infedility|FNF Wednesday Infidelity|rhythm
+clfocus|Focus|puzzle
+clfolderdungeon|Folder Dungeon|rpg
+clfootballbros|Football Bros|sports
+clfootballlegends|Football Legends|sports
+clforknsausage|Fork n Sausage|puzzle
+clfortzone|Fortzone|action
+clfpa4p1|FPA 4 P1|platformer
+clfpa4p2|FPA 4 P2|platformer
+clfreegemas|Free Gemas|puzzle
+clfreerider|Free Rider|simulation
+clfreerider2|Free Rider 2|simulation
+clfreerider3|Free Rider 3|simulation
+clfridaynightfunkin|Friday Night Funkin'|rhythm
+friday-night-funkin|Friday Night Funkin'|rhythm
+clfroggerarcade|Frogger Arcade|arcade
+clfromrusttoash|From Rust to Ash|action
+clfunnybattle|Funny Battle|strategy
+clfunnybattle2|Funny Battle 2|strategy
+clfunnymadracing|Funny Mad Racing|racing
+clfunnyshooter2|Funny Shooter 2|action
+clfunnyshooter22|Funny Shooter 22|action
+clfused240|Fused 240|action
+clfzero|F-Zero|racing
+clfzerox|F-Zero X|racing
+clgachaverse|Gachaverse|casual
+clgalaga|Galaga|arcade
+clgameandwatchcollection|Game & Watch Collection|arcade
+clgamewatchgallery3|Game & Watch Gallery 3|arcade
+clgangstabean|Gangsta Bean|action
+clgangstabean2|Gangsta Bean 2|action
+clgangsterbros|Gangster Bros|platformer
+clgarcello|Garcello|rhythm
+clgarfcaughtinact|Garf Caught in Act|casual
+clgdwaveover100mb|GD Wave (100MB+)|platformer
+clgdlite|GD Lite|platformer
+clgeneralchaos|General Chaos|action
+clgenericfightermaybe|Generic Fighter Maybe|action
+geometrydashlite|Geometry Dash Lite|platformer
+clgeometrydashscratch|Geometry Dash Scratch|platformer
+clgeometrydashwave|Geometry Dash Wave|platformer
+clgeometryvibes|Geometry Vibes|platformer
+clgeorgeandtheprinter|George and the Printer|adventure
+clgetontop|Get on Top|multiplayer
+clgetyoked|Get Yoked|sports
+clgetawayshootout|Getaway Shootout|multiplayer
+clggshinobi|GG Shinobi|action
+clggshinobi2|GG Shinobi 2|action
+clghosttrick|Ghost Trick|puzzle
+clgimmietheairpod|Gimmie the Airpod|adventure
+clglfighters|GL Fighters|action
+clgladdihoppers|Gladdi Hoppers|platformer
+clgloryhunters|Glory Hunters|sports
+clglover|Glover|platformer
+clgooftroopsnes|Goondu Troops (NES)|action
+clgoalsouthafrica|Goal South Africa|sports
+clgobble|Gobble|arcade
+clgoingballs|Going Balls|arcade
+clgolddiggerfrvr|Gold Digger FRVR|arcade
+clgoldminer|Gold Miner|arcade
+clgoldenaxe|Golden Axe|action
+clgoldenaxe2|Golden Axe 2|action
+clgoldenaxe3|Golden Axe 3|action
+clgoldensun|Golden Sun|rpg
+clgoldensunnds|Golden Sun NDS|rpg
+clgoldensunthelostage|Golden Sun: The Lost Age|rpg
+clgoldeneye007|GoldenEye 007|action
+clgolfbattle|Golf Battle|sports
+clgolforbit|Golf Orbit|sports
+clgolfsunday|Golf Sunday|sports
+clgoodbigtowertinysquare|Good Big Tower Tiny Square|platformer
+clgoodbigtowertinysquare2|Good Big Tower Tiny Square 2|platformer
+clgoodboygalaxy|Good Boy Galaxy|adventure
+clgoodmonkeymart|Good Monkey Mart|simulation
+clgoogledino|Google Dino|arcade
+clgorescriptclassic|Gore Script Classic|action
+clgorillatag|Gorilla Tag|simulation
+clgotobed|Go to Bed|casual
+clgrandescapeprison|Grand Escape Prison|adventure
+clgrandtheftautoadvance|Grand Theft Auto Advance|action
+clgrandactionsimulator-ny|Grand Action Simulator NY|action
+clgranddad|Granddad|platformer
+clgranny|Granny|horror
+clgranny2|Granny 2|horror
+clgranny22|Granny 22|horror
+clgranny3|Granny 3|horror
+clgrannycreepy|Granny Creepy|horror
+clgrannynightmare|Granny Nightmare|horror
+clgrannyy|Granny Y|horror
+clgranturismo|Gran Turismo|racing
+clgranturismo2|Gran Turismo 2|racing
+clgrassmowing|Grass Mowing|simulation
+clgravity|Gravity|puzzle
+clgravitymod|Gravity Mod|simulation
+clgreenergrassawaits|Greener Grass Awaits|simulation
+clgrey-box-testing|Grey Box Testing|puzzle
+clgrimacebirthday|Grimace Birthday|arcade
+clgrindcraft|Grindcraft|simulation
+clgrn|Grn|casual
+clgrowagarden|Grow a Garden|simulation
+clgrowdenio|Growdenio|puzzle
+clgrowyourgarden|Grow Your Garden|simulation
+clgrowmi|Growmi|puzzle
+clgta|GTA|action
+clgta2|GTA 2|action
+clgta22|GTA 22|action
+clgtachina|GTA China|action
+clgtaalty|GTA Alty|action
+clgtamods|GTA Mods|action
+clguesstheiranswer|Guess Their Answer|puzzle
+clgunblood|Gunblood|action
+clgunknight|Gun Knight|action
+clgunmayhem|Gun Mayhem|action
+clgunmayhem2|Gun Mayhem 2|action
+clgunmayhem2goof|Gun Mayhem 2 Goof|action
+clgunmayhemredux|Gun Mayhem Redux|action
+clgunnight|Gun Night|action
+clgun-spin|Gun Spin|action
+clgunstarheroes|Gunstar Heroes|action
+clguncho|Guncho|action
+clgunfighterjessejames|Gunfighter Jesse James|action
+clgunsmoke|Gunsmoke|action
+clGXclient|GX Client|simulation
+clgymstack|Gym Stack|puzzle
+clgyromite|Gyromite|puzzle

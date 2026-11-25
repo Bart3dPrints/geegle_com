@@ -1,0 +1,130 @@
+cl1|1 (Classic)|arcade
+cl1on1soccer|1 on 1 Soccer|sports
+cl10bullets|10 Bullets|arcade
+cl10morebullets|10 More Bullets|arcade
+cl10minutestildawn|10 Minutes Till Dawn|action
+cl10yardfight|10 Yard Fight|sports
+cl12minibattles|12 Mini Battles|arcade
+cl13bones|13 Bones|adventure
+cl1942nes|1942 (NES)|retro
+cl100in1nes|100 in 1 NES|retro
+cl100roomsofenemies|100 Rooms of Enemies|action
+cl20smallmazes|20 Small Mazes|puzzle
+cl2048|2048|puzzle
+cl2048cupcakes|2048 Cupcakes|puzzle
+cl234playergame|2-3-4 Player Game|multiplayer
+cl2doom|2 Doom|action
+cl2dshooting|2D Shooting|action
+cl3dash|3 Dash|platformer
+cl3dasheditor|3 Dash Editor|platformer
+cl3pandas|3 Pandas|puzzle
+cl3pandasfantasy|3 Pandas Fantasy|puzzle
+cl3pandasbrazil|3 Pandas in Brazil|puzzle
+cl3pandasjapan|3 Pandas in Japan|puzzle
+cl3pandasnight|3 Pandas Night|puzzle
+cl3slices2|3 Slices 2|puzzle
+cl3dpinballspacecadet|3D Pinball: Space Cadet|arcade
+cl40xescape|40x Escape|puzzle
+cl4thandgoal|4th and Goal|sports
+cl500calibercontractz|500 Caliber Contractz|action
+cl60secondsburgerrun|60 Seconds Burger Run|arcade
+cl60secondssantarun|60 Seconds Santa Run|arcade
+cl64in1nes|64 in 1 NES|retro
+cl8ballclassic|8 Ball Classic|sports
+cl8ballpool|8 Ball Pool|sports
+cl9007199254740992|9007199254740992|casual
+cl99balls|99 Balls|arcade
+cl99nightsitf|99 Nights in the Forest|adventure
+cl1v1lol|1v1.LOL|action
+cl1v1tennis|1v1 Tennis|sports
+clADOFAI|A Dance of Fire and Ice|rhythm
+clADarkRoom|A Dark Room|adventure
+clabandoned3|Abandoned 3|puzzle
+clabsolutemadness|Absolute Madness|action
+clacecombat2|Ace Combat 2|action
+clacecombat3|Ace Combat 3|action
+clacegangstertaxi|Ace Gangster Taxi|simulation
+clachievementunlocked|Achievement Unlocked|platformer
+clachillies|Achillies|action
+clachillies2|Achillies 2|action
+cladatewithdeath|A Date with Death|horror
+cladayintheoffice|A Day in the Office|casual
+cladvancewars|Advance Wars|strategy
+cladvancewars2|Advance Wars 2|strategy
+cladvancewarsdualstrike|Advance Wars: Dual Strike|strategy
+cladventneon|Advent Neon|platformer
+cladventurecapitalist|Adventure Capitalist|casual
+claflac|AFLAC|casual
+clagariolite|Agar.io Lite|multiplayer
+clageofwar|Age of War|strategy
+clageofwar2|Age of War 2|strategy
+clagesofconflict|Ages of Conflict|strategy
+clagesofempire|Ages of Empire|strategy
+clairlinetycoonidle|Airline Tycoon Idle|simulation
+clakumanorgaiden|Akumano Gaiden|action
+claladdinsnes|Aladdin (SNES)|platformer
+clalexkiddinmiracleworld|Alex Kidd in Miracle World|platformer
+clalienhominid|Alien Hominid|action
+clalienskyinvasion|Alien Sky Invasion|action
+clalientransporter|Alien Transporter|simulation
+clalienvspredator|Alien vs Predator|action
+clallbossesin1|All Bosses in 1|action
+clallocation|Allocation|puzzle
+clAltered Beast|Altered Beast|action
+clamaze|Amaze|puzzle
+clambulencearush|Ambulance Rush|racing
+clamidstthesky|Amidst the Sky|puzzle
+clamigopancho|Amigo Pancho|puzzle
+clamigopancho2|Amigo Pancho 2|puzzle
+clamigopancho3|Amigo Pancho 3|puzzle
+clamigopancho4|Amigo Pancho 4|puzzle
+clamigopancho5|Amigo Pancho 5|puzzle
+clamigopancho6|Amigo Pancho 6|puzzle
+clamigopancho7|Amigo Pancho 7|puzzle
+clamongus|Among Us|multiplayer
+clamorphous|Amorphous|action
+clantarttycoon|Antart Tycoon|simulation
+clancientsins|Ancient Sins|adventure
+clangrybirds|Angry Birds|action
+clangrybirdsshowdown|Angry Birds Showdown|action
+clangrybirdsslingshotfrenzy|Angry Birds Slingshot Frenzy|action
+clangrybirds-space|Angry Birds Space|action
+clanimalcrossingwildworld|Animal Crossing: Wild World|simulation
+clanimalforestn64|Animal Forest (N64)|simulation
+clannsmb|Another New Super Mario Bros|platformer
+clanotherworld|Another World|adventure
+clantimatterdimensions|Antimatter Dimensions|casual
+clapesvshelium|Apes vs Helium|casual
+clapotris|Apotris|puzzle
+clappleshooter|Apple Shooter|action
+clappleworm|Apple Worm|puzzle
+claquaparkio|Aqua Park IO|racing
+clarcadevolley|Arcade Volley|sports
+clarceuslegend|Arceus Legend|pokemon
+clarcheryworldtour|Archery World Tour|sports
+clarchimedesclient|Archimedes Client|simulation
+clarena|Arena|action
+clarmormayhem2|Armor Mayhem 2|action
+clarsonate|Arsonate|strategy
+clarthursnightmare|Arthur's Nightmare|horror
+clascent|Ascent|adventure
+clasmallworldcup|A Small World Cup|sports
+classessmentexamination|Assessment Examination|puzzle
+clasteroids|Asteroids|arcade
+clasteroidsalt|Asteroids Alt|arcade
+clasteroidsarcade|Asteroids Arcade|arcade
+clastraclient|Astra Client|simulation
+clastrawasm|Astra WASM|simulation
+clastrosdreamland|Astros Dreamland|platformer
+clastynax|Astynax|platformer
+clatariadventure|Atari Adventure|adventure
+clattackhole|Attack Hole|arcade
+clavalanche|Avalanche|arcade
+claviamasters|Avia Masters|simulation
+claviamastersbuggy|Avia Masters Buggy|simulation
+clawesomepirates|Awesome Pirates|action
+clawesomeplanes|Awesome Planes|action
+clawesometanks|Awesome Tanks|action
+clawesometanks2|Awesome Tanks 2|action
+claxbattler|Ax Battler|action
+claxisfootballleague|Axis Football League|sports

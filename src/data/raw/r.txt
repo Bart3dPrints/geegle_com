@@ -1,0 +1,106 @@
+repo|R.E.P.O|horror
+clragollhit|Ragdoll Hit|action
+clracemaster3d|Race Master 3D|racing
+clracingarena|Racing Arena|racing
+clradracer|Rad Racer|racing
+clradicalred|Pokemon Radical Red|pokemon
+clraftwars|Raft Wars|action
+clraftwars2|Raft Wars 2|action
+clragdollachivement|Ragdoll Achievement|action
+clragdollarchers|Ragdoll Archers|action
+clragdolldrop|Ragdoll Drop|action
+clragdollhit|Ragdoll Hit|action
+clragdoll-io|Ragdoll.io|multiplayer
+clragdollrunners|Ragdoll Runners|sports
+clragdollsoccer|Ragdoll Soccer|sports
+clrainbowsix|Rainbow Six|action
+clrainbowsixalt|Rainbow Six (Alt)|action
+clraldiscrackhouse|Raldis Crack House|action
+clravenbase|Raven Base|action
+clray1|Ray 1|adventure
+clray2|Ray 2|adventure
+clrayman|Rayman|platformer
+clraze|Raze|action
+clraze2|Raze 2|action
+clraze3|Raze 3|action
+clre3|Resident Evil 3|horror
+clreachthecore|Reach the Core|simulation
+clreacticore|Reacticore|strategy
+clrealflightsim|Real Flight Sim|simulation
+clrebornclient|Reborn Client|simulation
+clrebuild|Rebuild|strategy
+clrebuild2|Rebuild 2|strategy
+clrecoil|Recoil|action
+clredalert|Red Alert|strategy
+clredball2|Red Ball 2|platformer
+clredball3|Red Ball 3|platformer
+clredball4|Red Ball 4|platformer
+clredball4vol2|Red Ball 4 Vol 2|platformer
+clredball4vol3|Red Ball 4 Vol 3|platformer
+clredhanded|Red Handed|action
+clredtierunner|Red Tie Runner|platformer
+clredball|Red Ball|platformer
+clreignofcentipede|Reign of Centipede|strategy
+clrepobad|Repo Bad|horror
+clresentclient|Resent Client|simulation
+clresidentevil|Resident Evil|horror
+clresidentevil2|Resident Evil 2|horror
+clresidentevil2d1|Resident Evil 2D 1|horror
+clresidentevil2d2|Resident Evil 2D 2|horror
+clresizer|Resizer|puzzle
+clresortempire|Resort Empire|simulation
+clretrobowl|Retro Bowl|sports
+clretrobowlcollege|Retro Bowl College|sports
+clretrohighway|Retro Highway|racing
+clretropingpong|Retro Ping Pong|sports
+clreturnman|Return Man|sports
+clreturnman2|Return Man 2|sports
+clreturntoriddleschool|Return to Riddle School|adventure
+clrevolutionidle|Revolution Idle|casual
+clrewrite2|Rewrite 2|rhythm
+clrh|Rh|action
+clrhythmheaven|Rhythm Heaven|rhythm
+clrhythymymheaven|Rhythm Heaven (Alt)|rhythm
+clricochetkills2|Ricochet Kills 2|action
+clriddle|Riddle|puzzle
+clriddlemiddleschool|Riddle Middle School|adventure
+clriddleschool|Riddle School|adventure
+clriddleschool2|Riddle School 2|adventure
+clriddleschool3|Riddle School 3|adventure
+clriddletransfer|Riddle Transfer|adventure
+clriddletransfer2|Riddle Transfer 2|adventure
+clridgeracer|Ridge Racer|racing
+clrisehigher|Rise Higher|arcade
+clristar|Ristar|platformer
+clroadfighter|Road Fighter|racing
+clroadoffury|Road of Fury|action
+clroadofthedead|Road of the Dead|action
+clroadofthedead2|Road of the Dead 2|action
+clroadrunnernes|Roadrunner (NES)|arcade
+clrocketgoalio|Rocket Goal.io|sports
+clrocketjump|Rocket Jump|platformer
+clrocketknight2--1|Rocket Knight 2|platformer
+clrocketknightadventures|Rocket Knight Adventures|platformer
+clrocketleague|Rocket League|sports
+clrocketsoccerderby|Rocket Soccer Derby|sports
+clrodha|Rodha|platformer
+clroguesoul|Rogue Soul|platformer
+clroguesoul2|Rogue Soul 2|platformer
+clrollyvortex|Rolly Vortex|arcade
+clrollerballer|Rollerballer|puzzle
+clrollingsky|Rolling Sky|arcade
+clrolypolymonster|Roly Poly Monster|puzzle
+clrooftoprun|Rooftop Run|platformer
+clrooftopsnipers|Rooftop Snipers|action
+clrooftopsnipers2|Rooftop Snipers 2|action
+clroomclicker|Room Clicker|casual
+clrosegold|Rose Gold|adventure
+clrotate|Rotate|puzzle
+clroulettehero|Roulette Hero|action
+clrouletteknight|Roulette Knight|strategy
+clrun|Run|platformer
+clrun2|Run 2|platformer
+clrunningfred|Running Fred|platformer
+clrussianbuckshot|Russian Buckshot|action
+clrussiancardriver|Russian Car Driver|racing
+clrussiansandbox|Russian Sandbox|simulation

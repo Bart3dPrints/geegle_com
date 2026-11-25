@@ -1,0 +1,41 @@
+clobby1jumpperclick|Obby: 1 Jump Per Click|platformer
+clobbybike|Obby: Bike|platformer
+clobbycart|Obby: Cart|platformer
+clobbyonlyup|Obby: Only Up|platformer
+clobbyrainbowtower|Obby: Rainbow Tower|platformer
+clobbyslide|Obby: Slide|platformer
+clobbyswing|Obby: Swing|platformer
+clobby456|Obby 456|platformer
+clobby-99-will-lose|Obby: 99 Will Lose|platformer
+clobeythegame|Obey the Game|action
+clocarinaoftime|Zelda: Ocarina of Time|adventure
+clootmasterquest|Zelda: Ocarina of Time Master Quest|adventure
+cloddbotout|Odd Bot Out|puzzle
+cloddfuture|Odd Future|action
+clofflineparadise|Offline Paradise|simulation
+clohflip|Ohflip|arcade
+clomegalayers|Omega Layers|casual
+clomeganuggetclicker|Omega Nugget Clicker|casual
+clomnipresent|Omnipresent|adventure
+clonebitadventure|One Bit Adventure|adventure
+clonepiece|One Piece|action
+clonepiecefighting|One Piece Fighting|action
+cloneshotold|One Shot Old|action
+clonlyup|Only Up|platformer
+cloperius|Operius|action
+clopposumcountry|Opposum Country|action
+cloppositeday|Opposite Day|puzzle
+clortalkombat4|Mortal Kombat 4 (Alt)|action
+clorbofcreation|Orb of Creation|simulation
+clordinarysonicromhack|Ordinary Sonic Rom Hack|platformer
+cloregontrail|Oregon Trail|simulation
+clorigamiking|Paper Mario: The Origami King|adventure
+closu|Osu|rhythm
+clourpleguy|Ourple Guy|rhythm
+clouthold|Outhold|action
+cloutnumbered|Outnumbered|action
+cloverburden|Overburden|action
+clovo|OvO|platformer
+clovo2|OvO 2|platformer
+clovodimensions|OvO Dimensions|platformer
+clovofixed|OvO Fixed|platformer

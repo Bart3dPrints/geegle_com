@@ -1,0 +1,2 @@
+clkrillion|Krillion|puzzle,casual
+clkrillion-backup|Krillion (Backup)|puzzle,casual

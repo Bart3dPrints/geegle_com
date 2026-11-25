@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/games/geegle-storage-shim.js" data-geegle-storage data-game="clkrillion"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krillion</title>
+<style>html,body{margin:0;height:100%;background:#050a14;font-family:system-ui,sans-serif}.wrap{max-width:680px;margin:0 auto;padding:12px;display:flex;flex-direction:column;align-items:center;gap:8px;height:100%;box-sizing:border-box}#bar{display:flex;gap:8px;width:100%;justify-content:center}.btn{padding:8px 16px;border:1px solid #1e3a5f;border-radius:6px;background:#0b1c33;color:#dbeafe;font-size:14px;cursor:pointer}.btn[aria-pressed="true"]{background:#1d4ed8;border-color:#1d4ed8;color:#fff}#status{color:#7fa8d0;font-size:13px;text-align:center}#krillion-frame{width:100%;height:640px;border:0;flex:1;min-height:480px}</style>
+</head>
+<body>
+<div class="wrap">
+  <div id="bar">
+    <button class="btn" data-mode="daily" aria-pressed="true">Daily</button>
+    <button class="btn" data-mode="unlimited" aria-pressed="false">Unlimited</button>
+  </div>
+  <p id="status">Loading Krillion…</p>
+</div>
+<iframe id="krillion-frame" title="Krillion" src="https://krillion.cc/embed/?mode=daily" allow="fullscreen" loading="lazy"></iframe>
+<script>
+(function () {
+  'use strict';
+  var ORIGIN = 'https://krillion.cc';
+  var frame = document.getElementById('krillion-frame');
+  var status = document.getElementById('status');
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('[data-mode]'));
+
+  // Mode switching per the documented embed options.
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b === button)); });
+      frame.src = ORIGIN + '/embed/?mode=' + encodeURIComponent(button.dataset.mode);
+      status.textContent = 'Loading ' + button.dataset.mode + '…';
+    });
+  });
+
+  // Documented postMessage contract: source, type, and per-type payloads.
+  window.addEventListener('message', function (event) {
+    if (event.origin !== ORIGIN) return;
+    if (event.source !== frame.contentWindow) return;
+    var data = event.data;
+    if (!data || data.source !== 'krillion' || typeof data.type !== 'string') return;
+    switch (data.type) {
+      case 'ready': status.textContent = 'Krillion ready'; break;
+      case 'start': status.textContent = 'Dive started (' + String(data.mode) + ')'; break;
+      case 'resize':
+        if (Number.isFinite(data.height)) {
+          frame.style.height = Math.max(320, Math.min(1200, data.height)) + 'px';
+        }
+        break;
+      case 'answer':
+        if (Number.isFinite(data.points)) {
+          status.textContent = 'Answer: ' + data.points + ' pts';
+        }
+        break;
+      case 'complete':
+        if (Number.isFinite(data.points) && Number.isFinite(data.metres)) {
+          status.textContent = 'Dive complete: ' + data.points + ' pts, ' + data.metres + ' m';
+          try {
+            // Persist the latest official-embed result locally under a
+            // game-scoped key the Geegle cloud-save adapter captures.
+            localStorage.setItem('krillion-results', JSON.stringify({
+              timestamp: Date.now(), points: data.points,
+              maxPoints: data.maxPoints, metres: data.metres, zone: data.zone
+            }));
+          } catch (e) { /* storage unavailable */ }
+        }
+        break;
+    }
+  });
+})();
+</script>
+</body>
+</html>
