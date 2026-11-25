@@ -1,8 +1,12 @@
 // Game artwork: REAL images from each game's own asset folder on UGS-Assets
 // (the same origin the game itself loads from — no new licensing surface).
 // Candidate list covers Construct-style images/ folders, Unity-style
-// template/root images, and favicons; falls back to a neutral tile only when
-// a game genuinely has no usable image.
+// template/root images, icons, and favicons; falls back to a neutral tile
+// only when a game genuinely has no usable image.
+//
+// Every candidate URL is verified lazily at runtime via the onError chain:
+// failed candidates are remembered per session so each missing image is
+// requested at most once — no repeated network requests for 404s.
 
 import { useState } from 'react';
 import type { GameEntry } from '../types';
@@ -17,11 +21,8 @@ function folderUrl(folder: string, file: string): string {
     .join('/')}/${encodeURIComponent(file)}`;
 }
 
-// Priority order: title/menu screens first (best 16:9 sources), then
-// backgrounds, then Unity template images, then icons/favicons. Construct
-// projects keep images in images/; Unity WebGL builds use TemplateData/ or
-// the folder root; simpler HTML games often only ship a favicon. The onError
-// chain walks the list until one image loads.
+// Priority: title/menu screens first (best 16:9), then backgrounds, then
+// Unity template/root images, icons, favicons.
 const CANDIDATES = [
   'images/menu_bg-sheet0.png',
   'images/main_bg-sheet0.png',
@@ -35,6 +36,7 @@ const CANDIDATES = [
   'images/sheet0.png',
   'TemplateData/img.jpg',
   'TemplateData/vin.jpg',
+  '512.jpg',
   'logo.png',
   'icon.png',
   'Icon_512x512.png',
@@ -58,6 +60,24 @@ export function tileColor(id: string): string {
   return PALETTE[h % PALETTE.length];
 }
 
+/** Tracks which candidate index resolved for each game this session. */
+function rememberCandidate(gameId: string, idx: number): void {
+  try {
+    sessionStorage.setItem(`geegle-art-${gameId}`, String(idx));
+  } catch {
+    /* ignore */
+  }
+}
+
+function rememberedCandidate(gameId: string): number {
+  try {
+    const stored = sessionStorage.getItem(`geegle-art-${gameId}`);
+    return stored !== null ? Number(stored) : 0;
+  } catch {
+    return 0;
+  }
+}
+
 export function GameArt({
   game,
   className = '',
@@ -65,48 +85,43 @@ export function GameArt({
   game: GameEntry;
   className?: string;
 }) {
-  const folder = game.thumb ? undefined : ARTWORK_FOLDERS[game.id];
+  // Explicit per-game artwork takes priority; the folder mapping is used
+  // when no curated thumb exists. Both paths share the same fallback chain.
+  const folder = ARTWORK_FOLDERS[game.id];
+  const hasArtwork = Boolean(game.thumb || folder);
 
-  const startIdx = (() => {
-    if (!folder) return -1;
-    try {
-      const stored = sessionStorage.getItem(`geegle-art-${game.id}`);
-      if (stored !== null) return Number(stored);
-    } catch {
-      /* ignore */
-    }
-    return 0;
-  })();
-
-  const [idx, setIdx] = useState(startIdx);
+  const [idx, setIdx] = useState(() =>
+    rememberedCandidate(game.id)
+  );
+  const [explicitFailed, setExplicitFailed] = useState(false);
 
   const handleError = () => {
-    if (!folder) return;
-    const next = idx + 1;
-    setIdx(next);
-    if (next < CANDIDATES.length) {
-      try {
-        sessionStorage.setItem(`geegle-art-${game.id}`, String(next));
-      } catch {
-        /* ignore */
+    // Curated thumb failed → try the folder mapping if present.
+    if (game.thumb && !explicitFailed && folder) {
+      setExplicitFailed(true);
+      return;
+    }
+    // Walk the candidate list inside the mapped folder.
+    if (folder) {
+      const next = idx + 1;
+      if (next < CANDIDATES.length) {
+        rememberCandidate(game.id, next);
+        setIdx(next);
+        return;
       }
     }
+    // No more candidates: neutral fallback for this session (remembered so
+    // we never re-request the missing image).
+    rememberCandidate(game.id, CANDIDATES.length);
+    setIdx(CANDIDATES.length);
   };
 
-  // Explicit per-game artwork (curated URL) takes priority.
-  if (game.thumb) {
-    return (
-      <img
-        src={game.thumb}
-        alt={game.title}
-        loading="lazy"
-        className={`object-cover ${className}`}
-        onError={handleError}
-      />
-    );
-  }
+  // Neutral fallback — only for games with no verified artwork.
+  const usingFallback =
+    (!hasArtwork || idx >= CANDIDATES.length) &&
+    !(game.thumb && !explicitFailed);
 
-  if (!folder || idx < 0 || idx >= CANDIDATES.length) {
+  if (usingFallback) {
     return (
       <span
         className={`flex items-center justify-center text-white ${tileColor(game.id)} ${className}`}
@@ -117,9 +132,14 @@ export function GameArt({
     );
   }
 
+  const src =
+    game.thumb && !explicitFailed
+      ? game.thumb
+      : folderUrl(folder as string, CANDIDATES[idx]);
+
   return (
     <img
-      src={folderUrl(folder, CANDIDATES[idx])}
+      src={src}
       alt={game.title}
       loading="lazy"
       className={`object-cover ${className}`}
