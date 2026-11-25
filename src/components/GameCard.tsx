@@ -1,8 +1,8 @@
-// Game card: artwork/letter tile, title, optional favorite toggle.
+// Game card: real artwork, title, favorite toggle. Used by every grid.
 
 import { Star } from 'lucide-react';
 import type { GameEntry } from '../types';
-import { TileThumb } from './TileThumb';
+import { GameArt } from './GameArt';
 
 export function GameCard({
   game,
@@ -22,11 +22,16 @@ export function GameCard({
         onClick={onLaunch}
         aria-label={`Play ${game.title}`}
       >
-        <div className="flex aspect-video items-center justify-center bg-slate-200 dark:bg-slate-800">
-          <TileThumb game={game} className="h-full w-full text-3xl font-bold" />
+        <div className="flex aspect-video items-center justify-center overflow-hidden bg-slate-200 dark:bg-slate-800">
+          <GameArt game={game} className="h-full w-full" />
         </div>
         <div className="p-3">
           <p className="truncate text-sm font-medium">{game.title}</p>
+          {game.description && (
+            <p className="mt-0.5 truncate text-xs text-slate-500 dark:text-slate-400">
+              {game.description}
+            </p>
+          )}
         </div>
       </button>
       {onToggleFavorite && (
