@@ -1,45 +1,30 @@
 #!/usr/bin/env node
-// Generates the PBKDF2 hash for the site entry password.
+// Generates the PBKDF2-SHA256 hash + salt for the Geegle site entry password.
+// The hash is stored ONLY as a Supabase Edge Function secret — never in the
+// repository, never in frontend code.
 //
-// Usage:  node supabase/functions/_shared/hash-entry-password.mjs pirate
-// Output: ENTRY_PASSWORD_HASH=...  ENTRY_SALT=...
+// Usage:
+//   node supabase/functions/_shared/hash-entry-password.mjs <password>
 //
-// Then:  supabase secrets set ENTRY_PASSWORD_HASH=... ENTRY_SALT=...
-//
-// The password never appears in the repository or client bundle.
-// Run from the repository root so relative imports resolve.
+// Then set the secrets on your Supabase project:
+//   supabase secrets set ENTRY_PASSWORD_HASH='<hash>' ENTRY_SALT='<salt>'
+
+import { pbkdf2, randomBytes } from 'node:crypto';
 
 const password = process.argv[2];
 if (!password) {
-  console.error('Usage: node supabase/functions/_shared/hash-entry-password.mjs <password>');
+  console.error(
+    'Usage: node supabase/functions/_shared/hash-entry-password.mjs <password>'
+  );
   process.exit(1);
 }
 
-const PBKDF2_ITERATIONS = 600_000;
-const KEY_LENGTH_BYTES = 32;
+const salt = randomBytes(16);
+const derived = pbkdf2(password, salt, 600000, 32, 'sha256');
 
-const encoder = new TextEncoder();
-const keyMaterial = await crypto.subtle.importKey(
-  'raw',
-  encoder.encode(password),
-  'PBKDF2',
-  false,
-  ['deriveBits']
+console.log('Run these commands on your Supabase project:');
+console.log('');
+console.log(
+  `supabase secrets set ENTRY_PASSWORD_HASH='${derived.toString('base64')}'`
 );
-const salt = crypto.randomUUID();
-const bits = await crypto.subtle.deriveBits(
-  {
-    name: 'PBKDF2',
-    salt: encoder.encode(salt),
-    iterations: PBKDF2_ITERATIONS,
-    hash: 'SHA-256',
-  },
-  keyMaterial,
-  KEY_LENGTH_BYTES * 8
-);
-const hash = btoa(String.fromCharCode(...new Uint8Array(bits)));
-
-console.log('ENTRY_PASSWORD_HASH=' + hash);
-console.log('ENTRY_SALT=' + salt);
-console.log('\nApply with:');
-console.log('  supabase secrets set ENTRY_PASSWORD_HASH=... ENTRY_SALT=...');
+console.log(`supabase secrets set ENTRY_SALT='${salt.toString('base64')}'`);
