@@ -1,0 +1,81 @@
+clmachrider|Mach Rider|racing
+clmadalinstuntcars|Madalin Stunt Cars|racing
+clmadalinstuntcarsgood|Madalin Stunt Cars Good|racing
+clmadalinstuntcarsmultiplayerfixed|Madalin Stunt Cars Multiplayer|racing
+clmadskillsmotocross2|Mad Skills Motocross 2|racing
+clmadstick|Mad Stick|arcade
+clmadstuntcars2|Mad Stunt Cars 2|racing
+clmadden93|Madden 93|sports
+clmadden94|Madden 94|sports
+clmadden95|Madden 95|sports
+clmadden96|Madden 96|sports
+clmadden99|Madden 99|sports
+clmaddenfootball|Madden Football|sports
+clmaddenfootball64|Madden Football 64|sports
+clmaddennfl|Madden NFL|sports
+clmaddennfl2000|Madden NFL 2000|sports
+clmaddennfl2001|Madden NFL 2001|sports
+clmaddennfl2002|Madden NFL 2002|sports
+clmaddy98|Madden 98|sports
+clmadnessaccelerant|Madness Accelerant|action
+clmadnesscombatdefense|Madness Combat Defense|action
+clmadnesscombatnexus|Madness Combat Nexus|action
+clmadnessgemini|Madness Gemini|action
+clmadnesshydraulic|Madness Hydraulic|action
+clmadnessinteractive|Madness Interactive|action
+clmadnessoffcolor|Madness Off Color|action
+clmadnesspremediation|Madness Premediation|action
+clmadnessretaliation|Madness Retaliation|action
+clmadnesss2010|Madness 2010|action
+clmadnessstand|Madness Stand|action
+clmagetoweridle|Mage Tower Idle|casual
+clmagictiles3|Magic Tiles 3|rhythm
+clmajorasmask|Zelda: Majora's Mask|adventure
+clmakesureitsclosed|Make Sure It's Closed|puzzle
+clmami|Mami|adventure
+clmanagod|Managod|simulation
+clmarbleracer-1|Marble Racer|racing
+clmari0|Mari0|platformer
+clmario3|Mario 3|platformer
+clmario64webgl|Mario 64 WebGL|platformer
+clmarioandluigisuperstarsaga|Mario & Luigi: Superstar Saga|adventure
+clmariobrosnes|Mario Bros (NES)|platformer
+clmariobuilder64-1|Mario Builder 64|platformer
+clmariocombat|Mario Combat|platformer
+clmariogolf|Mario Golf|sports
+clmarioismissingdoneright|Mario Is Missing Done Right|adventure
+clmariokart64|Mario Kart 64|racing
+clmariokartds|Mario Kart DS|racing
+clmariokartsupercircuit|Mario Kart: Super Circuit|racing
+clmariolostlevels|Mario Lost Levels|platformer
+clmariomadness|Mario Madness|platformer
+clmariomakersnes|Mario Maker (NES)|platformer
+clmariominusrabbids|Mario Minus Rabbids|platformer
+clmariopaint|Mario Paint|casual
+clmarioparty|Mario Party|casual
+clmarioparty2|Mario Party 2|casual
+clmarioparty3|Mario Party 3|casual
+clmariopartyds|Mario Party DS|casual
+clmariosmysterymeat|Mario's Mystery Meat|platformer
+clmariotennis|Mario Tennis|sports
+clmariotennisgb|Mario Tennis (GB)|sports
+clmariovsluigi|Mario vs Luigi|platformer
+clmarvelsuperheroesarcade|Marvel Super Heroes Arcade|action
+clmarvelvscapcomps1|Marvel vs Capcom (PS1)|action
+clmarvelvsstreetfighter|Marvel vs Street Fighter|action
+clmarvelvsstreetfighterjp|Marvel vs Street Fighter JP|action
+clmaskedforcesunlimited|Masked Forces Unlimited|action
+clmastermindworldconquerer|Mastermind World Conquerer|strategy
+clmatrixrampage|Matrix Rampage|action
+clmattv2|Matt V2|rhythm
+clmauimallard|Maui Mallard|platformer
+clmaxpayne|Max Payne|action
+clmcfpsfbhd|MCFP SF BHD|action
+clmcraerally|McRae Rally|racing
+clmeatboyflash|Meat Boy (Flash)|platformer
+clmeatboy|Meatboy|platformer
+clmedalofhonor-1|Medal of Honor|action
+clmedievil|MediEvil|action
+clmedievalshark|Medieval Shark|action
+clmegachess|Mega Chess|puzzle
+clmegaclient|Mega Client|simulation
