@@ -65,7 +65,7 @@ clshrek-2|Shrek 2|platformer
 clshrubnaut|Shrub Naut|platformer
 clsideeffects|Side Effects|puzzle
 clsidepocket|Side Pocket|sports
-clsierra7|Sierra 7|action
+clsierra7|Sierra 7|action,shooting
 clsilenthill|Silent Hill|horror
 clsilenthillalt|Silent Hill (Alt)|horror
 clsilk|Silk|puzzle
@@ -112,8 +112,8 @@ clsm64sapphire|SM64: Sapphire|platformer
 smash-hit-ripoff|Smash Hit Ripoff|action
 clsmashkarts|Smash Karts|multiplayer
 clsmashkartsworking|Smash Karts (Working)|multiplayer
-clsmashremix|Smash Remix|action
-clsmashremix2-0-1|Smash Remix 2.0.1|action
+clsmashremix|Smash Remix|action,fighting
+clsmashremix2-0-1|Smash Remix 2.0.1|action,fighting
 clsmb12|SMB 12|platformer
 clsmbcrossover|SMB Crossover|platformer
 clsmbgameover|SMB Game Over|platformer
@@ -128,22 +128,18 @@ clsnailbob4space|Snail Bob 4: Space|puzzle
 clsnailbob5lovestory|Snail Bob 5: Love Story|puzzle
 clsnakelike|Snake Like|arcade
 clsnakeis|Snake.is|arcade
-clsnipershot|Sniper Shot|action
-clsniperv2|Sniper V2|action
+clsnipershot|Sniper Shot|action,shooting
+clsniperv2|Sniper V2|action,shooting
 clsnowbros--1|Snow Bros|arcade
 clsnowbrosgenesis|Snow Bros: Genesis|arcade
 clsnowbrothers|Snow Brothers|arcade
-clsnowrideee|Snow Rider|sports
-clsnowrider|Snow Rider|sports
 snow-rider|Snow Rider 3D|sports
-clsnowridergoodygumdrops|Snow Rider: Goody Gumdrops|sports
-clsnowriderrrr|Snow Rider (Alt)|sports
+clsnowrider|Snow Rider|sports
 clsnowroad|Snow Road|sports
 snowwhite|Snow White|puzzle
 clsnowballio|Snowball.io|multiplayer
 clsnowboardobby|Snowboard Obby|platformer
 clsnowdrift|Snowdrift|sports
-clsnowrid|Snowrid|sports
 clsoccerbros|Soccer Bros|sports
 clsoccernes|Soccer (NES)|sports
 clsoccerrandom|Soccer Random|sports
