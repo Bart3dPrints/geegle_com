@@ -1,0 +1,18 @@
+clzdoom|ZDoom|action
+clzelda2thelegendoflink|Zelda 2: The Legend of Link|adventure
+clzeldaindigoch2|Zelda Indigoch 2|adventure
+clzeldaminishcap|Zelda: The Minish Cap|adventure
+clzenword|Zen Word|puzzle
+clzetaclient|Zeta Client|simulation
+clzoinkz|Zoinkz|action
+clzombieexploder|Zombie Exploder|action
+clzombieroad|Zombie Road|racing
+clzombierush|Zombie Rush|action
+clzombiesatemyneighboors|Zombies Ate My Neighbors|action
+clzombopaclypse2|Zombocalypse 2|action
+clzombotron|Zombotron|action
+clzombotron2|Zombotron 2|action
+clzombotronreboot|Zombotron Reboot|action
+clzrist|Zrist|action
+clzuma|Zuma|puzzle
+clzumashooter|Zuma Shooter|puzzle
