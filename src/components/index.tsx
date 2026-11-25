@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import {
-  Search, X, Star, ArrowLeft, RotateCcw, Maximize2, Loader2, Globe, Clock,
+  Search, X, Star, ArrowLeft, RotateCcw, Maximize2, Loader2, Globe,
 } from 'lucide-react';
 import type { GameEntry } from './types';
 import type { ProxyService } from './data/proxies';
@@ -32,7 +32,7 @@ export function GameCard({
 }) {
   const initial = game.title.charAt(0).toUpperCase();
   return (
-    <div className="card group overflow-hidden">
+    <div className="card group relative overflow-hidden">
       <button
         className="block w-full text-left"
         onClick={onLaunch}
@@ -53,9 +53,9 @@ export function GameCard({
       </button>
       {onToggleFavorite && (
         <button
-          className="absolute right-2 top-2 rounded-md p-1.5 opacity-0 transition-opacity focus:opacity-100 group-hover:opacity-100"
+          className="absolute right-2 top-2 rounded-md bg-white/80 p-1.5 opacity-0 transition-opacity focus:opacity-100 group-hover:opacity-100 dark:bg-slate-900/80"
           onClick={(e) => { e.stopPropagation(); onToggleFavorite(); }}
-          aria-label={isFavorite ? `Unfavorite ${game.title}` : `Favorite ${game.title}`}
+          aria-label={isFavorite ? `Remove ${game.title} from favorites` : `Add ${game.title} to favorites`}
         >
           <Star size={16} className={isFavorite ? 'fill-amber-400 text-amber-400' : 'text-slate-300 dark:text-slate-600'} />
         </button>
@@ -86,7 +86,6 @@ export function SearchOverlay({
   const [query, setQuery] = useState('');
   const [activeIndex, setActiveIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
-  const listRef = useRef<HTMLDivElement>(null);
   const results = searchCatalog(query);
   const suggestions = query ? [] : noResultsSuggestions();
 
@@ -110,13 +109,14 @@ export function SearchOverlay({
       e.preventDefault();
       setActiveIndex((i) => Math.max(i - 1, 0));
     } else if (e.key === 'Enter') {
-      if (items[activeIndex]) { onLaunch(items[activeIndex]); onClose(); }
+      const target = items[activeIndex];
+      if (target) { onLaunch(target); onClose(); }
     }
   };
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center bg-slate-950/70 p-4 pt-24 backdrop-blur-sm" onClick={onClose}>
-      <div className="card w-full max-w-2xl" onClick={(e) => e.stopPropagation()} role="dialog" aria-label="Search">
+      <div className="card w-full max-w-2xl" onClick={(e) => e.stopPropagation()} role="dialog" aria-label="Search games">
         <div className="flex items-center gap-3 border-b border-slate-200 px-4 py-3 dark:border-slate-800">
           <Search size={18} className="shrink-0 text-slate-400" />
           <input
@@ -126,29 +126,25 @@ export function SearchOverlay({
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKeydown}
-            aria-label="Search"
+            aria-label="Search query"
           />
           <button className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300" onClick={onClose} aria-label="Close search">
             <X size={18} />
-          </build_placeholder>
+          </button>
         </div>
 
         <div className="flex flex-wrap gap-2 border-b border-slate-200 px-4 py-3 dark:border-slate-800">
           {CATEGORIES.filter((c) => c.key !== 'all').slice(0, 10).map((c) => (
-            <button
-              key={c.key}
-              className="chip"
-              onClick={() => { setQuery(c.label); }}
-            >
+            <button key={c.key} className="chip" onClick={() => setQuery(c.label)}>
               {c.label}
             </button>
           ))}
         </div>
 
-        <div ref={listRef} className="max-h-80 overflow-y-auto p-2">
+        <div className="max-h-80 overflow-y-auto p-2">
           {query && results.length === 0 && (
             <div className="p-6 text-center text-sm text-slate-500 dark:text-slate-400">
-              No results for "{query}". Try a category, or check the spelling.
+              No results for "{query}". Try a category name, or check the spelling.
             </div>
           )}
           {!query && (
@@ -199,8 +195,7 @@ export function GamePlayer({
   useEffect(() => { setLoaded(false); }, [url]);
 
   const goFullscreen = () => {
-    const frame = frameRef.current;
-    if (frame?.requestFullscreen) frame.requestFullscreen();
+    frameRef.current?.requestFullscreen?.();
   };
 
   const reload = () => {
@@ -247,8 +242,7 @@ export function GamePlayer({
             title={title ?? 'Game'}
             className="h-full w-full"
             onLoad={() => setLoaded(true)}
-            allow="autoplay; fullscreen; gamepad; pointer-lock; cross-origin-isolated"
-            sandbox={proxy ? 'allow-scripts allow-same-origin allow-forms allow-popups' : undefined}
+            allow="autoplay; fullscreen; gamepad; pointer-lock"
           />
         )}
       </div>
@@ -275,7 +269,7 @@ export function ProxyCard({
           <span className="badge bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">Unverified</span>
         )}
       </div>
-      <p className="mb-4 text-sm text-slate-500 dark:text-slate-400">{service.description}</p>
+      <p className="mb-4 text-sm text-s-slate-500 dark:text-slate-400">{service.description}</p>
       <div className="flex gap-2">
         <select
           className="input flex-1"
