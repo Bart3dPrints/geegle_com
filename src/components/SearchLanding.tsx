@@ -1,7 +1,7 @@
 import { useEffect, useId, useRef, useState, type CSSProperties } from 'react';
 import { ArrowUpRight, Check, Gamepad2, Globe2, Palette, Search, X } from 'lucide-react';
 import { AppearanceEditor } from '../landing/AppearanceEditor';
-import { DEFAULT_APPEARANCE, parseAppearance, readCachedAppearance, writeAppearance, darkInk, type LandingAppearance } from '../landing/appearance';
+import { confirmAppearanceSync, parseAppearance, readAppearance, writeAppearance, darkInk, type LandingAppearance } from '../landing/appearance';
 import { externalSearch, searchAction, type LandingSearch, type SearchMode } from '../landing/search';
 import '../landing/landing.css';
 
@@ -29,7 +29,18 @@ export function SearchLanding(props: SearchLandingProps) {
 }
 
 function LandingSession({ account, onSearch, onOpenLibrary, suggestions = EXAMPLES }: SearchLandingProps) {
-  const [saved, setSaved] = useState(() => readCachedAppearance(account?.id) ?? parseAppearance(account?.appearance) ?? DEFAULT_APPEARANCE);
+  const accountId = account?.id;
+  const remote = account?.appearance;
+  const [saved, setSaved] = useState(() => readAppearance(accountId, remote));
+  const previousRemote = useRef(remote);
+  useEffect(() => {
+    const prev = parseAppearance(previousRemote.current);
+    const next = parseAppearance(remote);
+    const changed = prev?.color !== next?.color || prev?.image !== next?.image ||
+      prev?.mode !== next?.mode || (remote === null) !== (previousRemote.current === null);
+    previousRemote.current = remote;
+    if (changed) setSaved(readAppearance(accountId, remote));
+  }, [remote, accountId]);
   const [draft, setDraft] = useState<LandingAppearance | null>(null);
   const [query, setQuery] = useState('');
   const [focused, setFocused] = useState(false);
@@ -65,12 +76,15 @@ function LandingSession({ account, onSearch, onOpenLibrary, suggestions = EXAMPL
   }
 
   async function save(value: LandingAppearance, sync: boolean) {
-    try { writeAppearance(value, account?.id); }
+    let edit: string;
+    try { edit = writeAppearance(value, accountId); }
     catch { throw new Error('Could not save on this device. Check browser storage or try a smaller background.'); }
     setSaved(value);
     if (sync && account?.saveAppearance) {
       try { await account.saveAppearance(value); }
       catch { throw new Error('Saved on this device, but account sync failed. Retry Save to sync.'); }
+      try { confirmAppearanceSync(account.id, edit); }
+      catch { throw new Error('Saved to your account, but this device could not record the sync.'); }
     }
     setMessage(sync ? 'Appearance saved on this device and to your account.' : 'Appearance saved on this device.');
   }
