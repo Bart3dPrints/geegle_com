@@ -403,3 +403,73 @@ had credentials to create one.
 | Everythingle / Krillion framing and retry | IMPLEMENTED BUT UNVERIFIED | Browser pass |
 | Missing games (Smashy Road, Wanted 2, HOBO, Henry Stickmin) | NOT STARTED | An authorized build; none was obtained |
 | 5 missing launch paths, 248 unreferenced wrappers | NOT STARTED | Owner decision; entries were preserved rather than guessed |
+
+---
+
+## 2026-11-26 — corrective branch `feature/geegle-regression-fixes`
+
+Base `e780686` (latest `main`). Full, evidence-backed status for every contract
+row is in [`docs/ACCEPTANCE_EVIDENCE.md`](docs/ACCEPTANCE_EVIDENCE.md); this
+section supersedes the artwork count, the production host and the auth cause
+recorded above.
+
+### What changed in this pass
+
+- Library search is back inside the library: ranked suggestions, Enter always
+  commits the query and filters the grid (a hovered suggestion is never
+  launched), Escape closes, empty Enter resets. The separate search overlay and
+  the header search button were removed.
+- The exact library loading notice is restored (`Please wait if you see nothing
+  upon clicking on a Game/Proxy.`, `Don't remind me again`, `Got it`), shown on
+  every entry unless permanently suppressed, with a reset in Settings.
+- The proxy safety notice is restored on every launch with `Got it`/`Cancel`,
+  and no destination opens before confirmation.
+- Player chrome is compact again: games get one top-right cluster (back,
+  favorites, save controls, open in new window, fullscreen); apps and proxies
+  get back bottom-left with fullscreen/open top-right; the reload button is
+  gone; no full-width toolbar.
+- Settings works signed out and restores solid neutral appearance (mode,
+  background, card colour, preview, Apply, Reset), the Recently Played toggle
+  and the notice reset. Image and animated backgrounds are no longer offered.
+- Every authored colour is true neutral (R=G=B), including Tailwind's default
+  border colour; the favicon is a circular G on a pale ground; the landing
+  footer and header follow the reference composition without Google links.
+- Proxy cards show only provider, `Server 1…N` and Open. Achroma Server 6
+  returned 404 and is disabled with a visible reason.
+- 90 catalog entries removed by the earlier dedupe pass are restored under their
+  original IDs (including the two missing Snow Rider variants); catalog is 2711
+  unique IDs.
+- Auth: duplicate/dead auth module removed; the live service now distinguishes
+  rate limiting and the email-confirmation failure instead of a generic message,
+  and logs only status/code in development.
+
+### Verified in this pass
+
+`npm run typecheck` 0 · `npm run lint` 0 · `bun test tests` 71 pass ·
+`npm run build` exit 0 · `node scripts/qa/interface-check.mjs` 39/39 ·
+`node scripts/qa/auth-check.mjs` 12/12 against the isolated backend ·
+`node --env-file=.env.local scripts/qa/check-password-change.mjs` 6/6 ·
+`node scripts/qa/check-proxies.mjs` 61 endpoints recorded.
+
+### Corrected facts
+
+- Production is **Render** `https://bartisawesome.onrender.com`, not Vercel.
+  Its deployed bundle hardcodes the isolated project
+  `wkdlsaydqyymynoipmhl.supabase.co` and a publishable key for it, and that
+  project requires email confirmation while Geegle collects no email. That is
+  the verified reason account creation cannot complete there. Existing
+  production users live in `oizdbkxnzwatytxcrvoo`, which the build never talks
+  to. Owner action: set the intended `VITE_SUPABASE_URL`/`VITE_SUPABASE_ANON_KEY`
+  on Render, redeploy, and disable "Confirm email" for this username-only flow.
+- Artwork is **73 records for 2711 IDs (2.7%)**: 3 licensed and 70 captured.
+  A scan of every local build found no usable bundled icons at all (696 declared
+  files absent, 132 remote/inline), which is why the visible grid still shows
+  placeholders. Full coverage remains blocked on per-title research or reviewed
+  title-screen capture; no placeholder or loading screen is counted as artwork.
+
+### Still open
+
+Artwork for the remaining catalog; full proxy identity review; mirror
+classification of the 248 unreferenced wrappers; real cloud-save round trip;
+game-frame origin isolation; Smashy Road and Wanted 2 (no authorized build);
+production migrations awaiting approval.

@@ -33,15 +33,24 @@ export function ProxyCard({
           aria-label={`Server for ${service.name}`}
         >
           {service.endpoints.map((ep, i) => (
-            <option key={ep.url} value={i}>
+            <option key={ep.url} value={i} disabled={ep.available === false}>
               {ep.label}
             </option>
           ))}
         </select>
-        <button className="btn-primary" onClick={() => onLaunch(selected)}>
+        <button
+          className="btn-primary"
+          onClick={() => onLaunch(selected)}
+          disabled={endpoint?.available === false}
+        >
           Open
         </button>
       </div>
+      {endpoint?.available === false && (
+        <p className="mt-2 text-xs text-neutral-600 dark:text-neutral-400" role="status">
+          {endpoint.unavailableReason ?? 'This server is unavailable.'}
+        </p>
+      )}
     </div>
   );
 }

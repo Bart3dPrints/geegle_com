@@ -7,6 +7,9 @@ export interface ProxyEndpoint {
   label: string;
   url: string;
   verified: boolean;
+  /** False when a normal check proved the endpoint unusable. */
+  available?: boolean;
+  unavailableReason?: string;
 }
 
 export interface ProxyService {
@@ -61,7 +64,11 @@ export const PROXY_SERVICES: ProxyService[] = [
       remote('Server 3', 'https://d3u0ui99s4kkgt.cloudfront.net/'),
       remote('Server 4', 'https://d1ljihqku73jk2.cloudfront.net/'),
       remote('Server 5', 'https://d239rcypmdrr3x.cloudfront.net/'),
-      remote('Server 6', 'https://d2gid9ydi5u955.cloudfront.net/nutrition80874.z13.web.core.windows.net/'),
+      {
+        ...remote('Server 6', 'https://d2gid9ydi5u955.cloudfront.net/nutrition80874.z13.web.core.windows.net/'),
+        available: false,
+        unavailableReason: 'This server returned 404 when checked on 2026-11-26.',
+      },
       remote('Server 7', 'https://calculus91138.z13.web.core.windows.net/'),
       remote('Server 8', 'https://french79619.z13.web.core.windows.net/'),
       remote('Server 9', 'https://geometry11765.z13.web.core.windows.net/'),

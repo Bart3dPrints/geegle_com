@@ -73,6 +73,10 @@ export async function register(
   const { data, error } = await supabase.auth.signUp({ email, password });
 
   if (error) {
+    if (import.meta.env.DEV) {
+      // Redacted: status and code only, never the password or the full body.
+      console.debug('[geegle-auth] signup failed: status=%s code=%s', error.status ?? 'n/a', error.code ?? 'n/a');
+    }
     if (
       error.message.toLowerCase().includes('already registered') ||
       error.code === 'user_already_exists' ||
@@ -80,10 +84,20 @@ export async function register(
     ) {
       return { ok: false, error: 'That username is already taken.' };
     }
+    if (error.status === 429) {
+      return { ok: false, error: 'Too many attempts. Please wait a minute and try again.' };
+    }
     return { ok: false, error: friendlyAuthError(error.message) };
   }
 
-  if (!data.session) return { ok: false, error: 'Registration did not create a session. Contact the site administrator.' };
+  if (!data.session) {
+    // Supabase created the user but issued no session: the project still
+    // requires email confirmation, and Geegle collects no email to confirm.
+    return {
+      ok: false,
+      error: 'Account creation needs email confirmation, which Geegle does not use. Try again later.',
+    };
+  }
   return {
     ok: true,
     user: data.user ?? undefined,
@@ -111,6 +125,9 @@ export async function login(
   });
 
   if (error) {
+    if (import.meta.env.DEV) {
+      console.debug('[geegle-auth] signin failed: status=%s code=%s', error.status ?? 'n/a', error.code ?? 'n/a');
+    }
     return { ok: false, error: friendlyAuthError(error.message) };
   }
 
