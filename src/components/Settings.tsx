@@ -2,6 +2,7 @@
 //   Theme        — light/dark/system plus solid background and card colours.
 //   Preferences  — Recently Played, the library notice preference, account.
 //   Tab appearance — optional user-owned page title and icon.
+//   Changelog    — release history from merged pull requests (always last).
 //
 // There are no image or animated backgrounds and no preset that imitates
 // another service.
@@ -11,6 +12,8 @@ import { motion } from 'motion/react';
 import { X, KeyRound, LogOut, Loader2, Check, Upload } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { DEFAULT_APPEARANCE_SETTINGS, type AppearanceSettings } from '../lib/userData';
+import { PasswordInput } from './PasswordInput';
+import { Changelog } from './Changelog';
 import {
   DEFAULT_TAB_IDENTITY,
   TAB_ICON_MAX_BYTES,
@@ -25,6 +28,7 @@ const TABS = [
   { key: 'theme', label: 'Theme' },
   { key: 'preferences', label: 'Preferences' },
   { key: 'tab', label: 'Tab appearance' },
+  { key: 'changelog', label: 'Changelog' },
 ] as const;
 type SettingsTab = (typeof TABS)[number]['key'];
 
@@ -166,7 +170,7 @@ export function Settings({
       aria-label="Settings"
     >
       <motion.div
-        className="card max-h-[calc(100vh-2rem)] w-full max-w-md overflow-y-auto p-6"
+        className="card max-h-[calc(100vh-2rem)] w-full max-w-2xl overflow-y-auto p-6"
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.18, ease: 'easeOut' }}
@@ -179,31 +183,35 @@ export function Settings({
           </button>
         </div>
 
-        <div
-          className="mb-5 flex gap-1 rounded-md border border-neutral-200 p-1 dark:border-neutral-700"
-          role="tablist"
-          aria-label="Settings sections"
-        >
-          {TABS.map((entry) => (
-            <button
-              key={entry.key}
-              type="button"
-              role="tab"
-              aria-selected={tab === entry.key}
-              className={`flex-1 rounded px-2 py-1.5 text-xs sm:text-sm ${
-                tab === entry.key
-                  ? 'bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900'
-                  : 'hover:bg-neutral-100 dark:hover:bg-neutral-800'
-              }`}
-              onClick={() => {
-                setTab(entry.key);
-                setMessage(null);
-              }}
-            >
-              {entry.label}
-            </button>
-          ))}
-        </div>
+        <div className="flex flex-col gap-4 sm:flex-row sm:gap-5">
+          <div
+            className="flex shrink-0 flex-wrap gap-1 rounded-md border border-neutral-200 p-1 sm:w-36 sm:flex-col sm:flex-nowrap sm:content-start sm:rounded-none sm:border-0 sm:border-r sm:border-neutral-200 sm:p-0 sm:pr-2 dark:border-neutral-700 dark:sm:border-neutral-700"
+            role="tablist"
+            aria-label="Settings sections"
+            aria-orientation="vertical"
+          >
+            {TABS.map((entry) => (
+              <button
+                key={entry.key}
+                type="button"
+                role="tab"
+                aria-selected={tab === entry.key}
+                className={`rounded px-2 py-1.5 text-xs sm:w-full sm:text-left sm:text-sm ${
+                  tab === entry.key
+                    ? 'bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900'
+                    : 'hover:bg-neutral-100 dark:hover:bg-neutral-800'
+                }`}
+                onClick={() => {
+                  setTab(entry.key);
+                  setMessage(null);
+                }}
+              >
+                {entry.label}
+              </button>
+            ))}
+          </div>
+
+          <div className="min-w-0 flex-1">
 
         {tab === 'theme' && (
           <section aria-labelledby="settings-theme">
@@ -349,9 +357,8 @@ export function Settings({
                   <div className="mb-2 flex items-center gap-2 text-sm font-medium">
                     <KeyRound size={14} /> Change password
                   </div>
-                  <input
+                  <PasswordInput
                     className="input mb-2"
-                    type="password"
                     value={currentPassword}
                     onChange={(e) => setCurrentPassword(e.target.value)}
                     placeholder="Current password"
@@ -359,9 +366,8 @@ export function Settings({
                     autoComplete="current-password"
                     required
                   />
-                  <input
+                  <PasswordInput
                     className="input mb-2"
-                    type="password"
                     value={newPassword}
                     onChange={(e) => setNewPassword(e.target.value)}
                     placeholder="New password (at least 8 characters)"
@@ -455,6 +461,11 @@ export function Settings({
             </div>
           </section>
         )}
+
+        {tab === 'changelog' && <Changelog />}
+
+          </div>
+        </div>
 
         {message && (
           <p

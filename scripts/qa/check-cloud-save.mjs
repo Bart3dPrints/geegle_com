@@ -39,7 +39,7 @@ async function newSignedIn(user) {
   await page.getByRole('button', { name: /Sign in/ }).first().click();
   const dialog = page.getByRole('dialog', { name: 'Sign in' });
   await dialog.getByLabel('Username').fill(user.username);
-  await dialog.getByLabel('Password').fill(user.password);
+  await dialog.getByLabel('Password', { exact: true }).fill(user.password);
   await dialog.getByRole('button', { name: 'Sign in' }).click();
   await page.waitForTimeout(2000);
   return { context, page };

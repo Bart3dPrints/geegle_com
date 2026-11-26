@@ -15,9 +15,6 @@ import {
   FileDown,
   FileUp,
   AlertTriangle,
-  Check,
-  WifiOff,
-  Ban,
   ExternalLink,
 } from 'lucide-react';
 import type { GameEntry } from '../types';
@@ -27,52 +24,6 @@ import {
   type CloudSaveHandle,
   type SyncStatus,
 } from '../lib/cloudSaves';
-
-function StatusPill({ status }: { status: SyncStatus }) {
-  switch (status) {
-    case 'restoring':
-      return (
-        <span className="flex items-center gap-1 text-xs text-neutral-400">
-          <Loader2 size={12} className="animate-spin" /> Restoring…
-        </span>
-      );
-    case 'saving':
-      return (
-        <span className="flex items-center gap-1 text-xs text-neutral-400">
-          <Loader2 size={12} className="animate-spin" /> Saving…
-        </span>
-      );
-    case 'saved':
-    case 'restored':
-      return (
-        <span className="flex items-center gap-1 text-xs text-neutral-300">
-          <Check size={12} /> Saved to Cloud
-        </span>
-      );
-    case 'offline':
-      return (
-        <span className="flex items-center gap-1 text-xs text-neutral-300">
-          <WifiOff size={12} /> Offline
-        </span>
-      );
-    case 'error':
-      return (
-        <span className="flex items-center gap-1 text-xs text-red-400">
-          <AlertTriangle size={12} /> Sync Failed
-        </span>
-      );
-    case 'conflict':
-      return <span className="text-xs text-neutral-300">Cloud save conflict</span>;
-    case 'unsupported':
-      return (
-        <span className="flex items-center gap-1 text-xs text-neutral-500">
-          <Ban size={12} /> Cloud Saves Unsupported
-        </span>
-      );
-    default:
-      return null;
-  }
-}
 
 export function GamePlayer({
   entry,
@@ -289,6 +240,8 @@ export function GamePlayer({
     }
   };
 
+  // Automatic saves stay silent. Only a failure you can act on is shown; a
+  // routine successful sync is never announced.
   const restoreError = supported && syncStatus === 'conflict'
     ? 'Cloud progress differs. Choose Restore from Cloud or Keep This Device.'
     : supported && syncStatus === 'error' ? 'Cloud sync failed. Your device still has its saved progress.' : null;
@@ -480,11 +433,6 @@ export function GamePlayer({
         </p>
       )}
 
-      {isGame && (
-        <div className="absolute bottom-3 right-3 z-10 rounded-md bg-neutral-900/90 px-2 py-1">
-          <StatusPill status={syncStatus} />
-        </div>
-      )}
     </motion.div>
   );
 }

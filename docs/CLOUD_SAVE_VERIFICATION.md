@@ -70,7 +70,7 @@ now labels the probe for what it is (account-scoped capture/restore mechanism).
 | Import from another game | VERIFIED | production check 9: "This save file belongs to a different game." |
 | Failed cloud upload | VERIFIED | production check 11: offline write → "Offline. Your device still has its progress; sync will retry." |
 | A failed save never destroys stored progress | VERIFIED | production check 12: revision unchanged `d64fb4f8 → d64fb4f8` during the failure |
-| Network disconnection + reconnection | VERIFIED | production check 13: back online → revision advanced to `53f4adc9`, status "Saved to Cloud" |
+| Network disconnection + reconnection | VERIFIED | production check 13: back online → revision advanced to `53f4adc9` with no on-screen confirmation (the status box was later removed) |
 | Conflict detection / stale revision rejected | VERIFIED | `production-data-integrity.mjs`: revision rotates on an accepted write, a stale revision matches 0 rows, newer `{"progress":2}` survives |
 | Empty snapshot cannot replace a valid save | VERIFIED (code + tests) | `tests/cloud-saves.test.mjs`; capture returns null for empty storage and upload returns early |
 | Account isolation of saves | VERIFIED | A cannot read B's saves, insert as B (`42501`), update or delete them |
@@ -107,3 +107,35 @@ restore, import/export and failure recovery all work on production.
 2. Fix or quarantine `clspacebarclicker`'s init crash before any save claim is made
    for it (it is a game-content defect, not a platform defect).
 3. Script the page-lifecycle save path separately from the 15-second tick.
+
+---
+
+## Player feedback after the status overlay removal (2026-11-26)
+
+Branch `fix/geegle-changelog-notifications`, from `fdf2ab3`.
+
+The bottom-right status box is gone from the player: no container, no text and
+no reserved space. A routine automatic save is silent. What remains is the one
+message line the player already used:
+
+| Situation | What the player shows |
+| --- | --- |
+| Manual save (`Save progress to cloud`) | `Progress saved to cloud.`, or `No changes to save — already in sync.` |
+| Manual restore | `Cloud save restored.` / the reason it could not be |
+| Export / import | `Save file downloaded.` / `Save file imported and synced to the cloud.` / the validation error |
+| Conflicting cloud and device progress | `Cloud progress differs. Choose Restore from Cloud or Keep This Device.` |
+| Failed synchronisation you can act on | `Cloud sync failed. Your device still has its saved progress.` |
+| Automatic save success, offline, unsupported | nothing (no standing box, no repeated notice) |
+
+Evidence that saving still runs without the overlay (local backend, 6/6 in
+`scripts/qa/check-cloud-save.mjs`): progress written inside the game was
+captured on the 15-second tick, the stored row matched it, a fresh browser
+restored it for the same account, and a different account received nothing.
+
+`production-cloud-saves.mjs` check 13 now asserts the status container is absent
+instead of reading `Saved to Cloud` from it, and check 14 proves reconnection by
+the stored revision advancing in the background, without any on-screen
+confirmation.
+
+The same checks on production are pending the deploy that follows this merge;
+the deployed bundle still contains the old overlay.

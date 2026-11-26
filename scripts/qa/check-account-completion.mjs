@@ -73,7 +73,7 @@ async function openAccountDialog(mode) {
 async function submitAccount(mode, user, password) {
   const dialog = await openAccountDialog(mode);
   await dialog.getByLabel('Username').fill(user.username);
-  await dialog.getByLabel('Password').fill(password);
+  await dialog.getByLabel('Password', { exact: true }).fill(password);
   await dialog.getByRole('button', { name: mode === 'register' ? 'Create account' : 'Sign in' }).click();
   await page.waitForTimeout(2500);
   return page.getByRole('dialog', { name: mode === 'register' ? 'Create account' : 'Sign in' });
@@ -153,6 +153,29 @@ try {
   await page.getByRole('button', { name: 'Settings' }).click();
   let settings = page.getByRole('dialog', { name: 'Settings' });
   await settings.getByRole('tab', { name: 'Preferences' }).click();
+  // Password visibility: independent per field, and never a submit.
+  const currentInput = settings.locator('input[aria-label="Current password"]');
+  const newInput = settings.locator('input[aria-label="New password"]');
+  check(
+    'Settings passwords start hidden',
+    (await currentInput.getAttribute('type')) === 'password' && (await newInput.getAttribute('type')) === 'password'
+  );
+  await currentInput.locator('..').getByRole('button', { name: 'Show password' }).click();
+  check(
+    'revealing one field leaves the other hidden',
+    (await currentInput.getAttribute('type')) === 'text' && (await newInput.getAttribute('type')) === 'password'
+  );
+  await newInput.locator('..').getByRole('button', { name: 'Show password' }).click();
+  check('both fields can be revealed independently', (await newInput.getAttribute('type')) === 'text');
+  await newInput.locator('..').getByRole('button', { name: 'Hide password' }).click();
+  check(
+    'hiding one field leaves the other revealed',
+    (await currentInput.getAttribute('type')) === 'text' && (await newInput.getAttribute('type')) === 'password'
+  );
+  await currentInput.locator('..').getByRole('button', { name: 'Hide password' }).click();
+  check('both fields hide again', (await currentInput.getAttribute('type')) === 'password');
+  check('toggling visibility does not submit the form', !(await settings.innerText()).includes('Password updated'));
+
   await settings.getByLabel('Current password').fill('definitely-wrong');
   await settings.getByLabel('New password').fill(NEW_PASSWORD);
   await settings.getByRole('button', { name: 'Update password' }).click();

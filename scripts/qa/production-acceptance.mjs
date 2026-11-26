@@ -76,7 +76,7 @@ async function submitAccount(page, mode, user, password) {
     await dialog.waitFor({ state: 'visible', timeout: 10_000 });
   }
   await dialog.getByLabel('Username').fill(user.username);
-  await dialog.getByLabel('Password').fill(password);
+  await dialog.getByLabel('Password', { exact: true }).fill(password);
   await dialog
     .getByRole('button', { name: mode === 'register' ? 'Create account' : 'Sign in' })
     .click();

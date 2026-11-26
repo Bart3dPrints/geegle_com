@@ -74,7 +74,7 @@ async function signIn(page, account, { register = false } = {}) {
     await dialog.waitFor({ state: 'visible', timeout: 10_000 });
   }
   await dialog.getByLabel('Username').fill(account.username);
-  await dialog.getByLabel('Password').fill(account.password);
+  await dialog.getByLabel('Password', { exact: true }).fill(account.password);
   await dialog.getByRole('button', { name: register ? 'Create account' : 'Sign in' }).click();
   await page.waitForTimeout(4000);
   const signedIn = (await page.getByRole('button', { name: 'Account', exact: true }).count()) > 0;
@@ -366,14 +366,21 @@ try {
   const duringOffline = await saved(api, 'cl2048');
   check('12. the failed upload leaves the stored cloud save intact', String(duringOffline?.revision ?? '') === beforeRevision, `${beforeRevision.slice(0, 8)} → ${String(duringOffline?.revision ?? '').slice(0, 8)}`);
 
+  // The old bottom-right status box is gone; the UI must not keep a box or
+  // its success text over the game.
+  check(
+    '13. the player shows no persistent cloud-save status box',
+    (await page.locator('div.absolute.bottom-3.right-3').count()) === 0 &&
+      (await page.locator('text=Saved to Cloud').count()) === 0
+  );
+
   await context.setOffline(false);
   await page.waitForTimeout(SYNC_WAIT_MS + 4000);
   const afterReconnect = await saved(api, 'cl2048');
-  const status = await page.locator('div.absolute.bottom-3.right-3').innerText().catch(() => '');
   check(
-    '13. reconnecting synchronises the pending progress',
-    String(afterReconnect?.revision ?? '') !== beforeRevision || /saved/i.test(status),
-    `revision=${String(afterReconnect?.revision ?? '').slice(0, 8)} status=${status.replace(/\s+/g, ' ')}`
+    '14. reconnecting synchronises the pending progress in the background',
+    String(afterReconnect?.revision ?? '') !== beforeRevision,
+    `revision=${String(afterReconnect?.revision ?? '').slice(0, 8)} (was ${beforeRevision.slice(0, 8)})`
   );
 
   await context.close();

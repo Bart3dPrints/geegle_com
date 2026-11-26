@@ -53,7 +53,7 @@ async function signIn(user) {
   await page.getByRole('button', { name: /Sign in/ }).first().click();
   const dialog = page.getByRole('dialog', { name: 'Sign in' });
   await dialog.getByLabel('Username').fill(user.username);
-  await dialog.getByLabel('Password').fill(user.password);
+  await dialog.getByLabel('Password', { exact: true }).fill(user.password);
   await dialog.getByRole('button', { name: 'Sign in' }).click();
   await page.waitForTimeout(2000);
 }
@@ -75,7 +75,7 @@ try {
   await page.getByRole('button', { name: /Sign in/ }).first().click();
   const dialog = page.getByRole('dialog', { name: 'Sign in' });
   await dialog.getByLabel('Username').fill(USER_A.username);
-  await dialog.getByLabel('Password').fill('definitely-wrong');
+  await dialog.getByLabel('Password', { exact: true }).fill('definitely-wrong');
   await dialog.getByRole('button', { name: 'Sign in' }).click();
   await page.waitForTimeout(1500);
   check('wrong password shows a safe error', (await dialog.innerText()).includes('Invalid username or password'));

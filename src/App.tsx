@@ -54,6 +54,13 @@ import type { CloudSaveHandle } from './lib/cloudSaves';
 import { buildSearchIndex, searchIndex } from './lib/search';
 import { CATEGORIES } from './data/types';
 import { LibrarySearchBar } from './components/LibrarySearchBar';
+import { PasswordInput } from './components/PasswordInput';
+import { AccountReminder } from './components/AccountReminder';
+import {
+  dismissReminder,
+  reminderDismissed,
+  shouldShowAccountReminder,
+} from './lib/accountReminder';
 import {
   applyTabIdentity,
   DEFAULT_TAB_IDENTITY,
@@ -168,6 +175,11 @@ export default function App() {
   const [authBusy, setAuthBusy] = useState(false);
   const [authUsername, setAuthUsername] = useState('');
   const [authPassword, setAuthPassword] = useState('');
+  // A guest's chosen destination waits here while the reminder or the account
+  // form is open, so closing the form never launches it by accident.
+  const [pendingLaunch, setPendingLaunch] = useState<GameEntry | null>(null);
+  const [reminderOpen, setReminderOpen] = useState(false);
+  const authFromReminderRef = useRef(false);
   const reduceMotion = useReducedMotion();
 
   const { theme, setTheme } = useTheme();
@@ -282,15 +294,23 @@ export default function App() {
     setNoticeOpen(true);
   }, [showLanding, settingsLoaded, noticeDismissed]);
 
+  /** Closes the account form. A destination waiting behind it is kept. */
+  const closeAuth = useCallback(() => {
+    setAuthOpen(false);
+    const fromReminder = authFromReminderRef.current;
+    authFromReminderRef.current = false;
+    if (fromReminder && pendingLaunch) setReminderOpen(true);
+  }, [pendingLaunch]);
+
   // Escape closes the account form, matching every other dialog.
   useEffect(() => {
     if (!authOpen) return;
     const onKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setAuthOpen(false);
+      if (event.key === 'Escape') closeAuth();
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [authOpen]);
+  }, [authOpen, closeAuth]);
 
   // Close the account menu on outside click or Escape.
   useEffect(() => {
@@ -366,6 +386,8 @@ export default function App() {
     }
     noticeShownRef.current = false;
     setNoticeOpen(false);
+    setReminderOpen(false);
+    setPendingLaunch(null);
     setShowLanding(true);
     window.scrollTo(0, 0);
   }, [closeGame]);
@@ -446,8 +468,11 @@ export default function App() {
           : await auth.signUp(authUsername, authPassword);
       if (error) setAuthError(error);
       else {
+        // The pending destination is launched by the effect below once the
+        // signed-in user is available, never from a stale closure.
         setAuthOpen(false);
         setAuthPassword('');
+        authFromReminderRef.current = false;
       }
     } finally {
       setAuthBusy(false);
@@ -463,6 +488,9 @@ export default function App() {
       setEverythingleOpen(false);
       setSettingsOpen(false);
       setAccountMenuOpen(false);
+      setPendingLaunch(null);
+      setReminderOpen(false);
+      authFromReminderRef.current = false;
     });
     try {
       const error = await auth.signOut();
@@ -472,7 +500,7 @@ export default function App() {
     }
   };
 
-  const launch = useCallback(
+  const performLaunch = useCallback(
     async (g: GameEntry) => {
       if (active?.id === g.id || !await closeGame()) return;
       setActive(null);
@@ -493,6 +521,39 @@ export default function App() {
     },
     [active?.id, userId, closeGame]
   );
+
+  // The guest reminder pauses the first launch of a browsing session without
+  // losing the destination. Signed-in visitors go straight through.
+  const launch = useCallback(
+    async (g: GameEntry) => {
+      if (active?.id === g.id || reminderOpen || pendingLaunch || authOpen) return;
+      if (shouldShowAccountReminder({ signedIn: Boolean(userId), dismissed: reminderDismissed() })) {
+        setPendingLaunch(g);
+        setReminderOpen(true);
+        return;
+      }
+      await performLaunch(g);
+    },
+    [active?.id, authOpen, pendingLaunch, reminderOpen, userId, performLaunch]
+  );
+
+  // Signing in or creating an account opens the destination chosen before the
+  // reminder appeared.
+  useEffect(() => {
+    if (!userId || !pendingLaunch) return;
+    const target = pendingLaunch;
+    setPendingLaunch(null);
+    setReminderOpen(false);
+    void performLaunch(target);
+  }, [pendingLaunch, performLaunch, userId]);
+
+  const continueAsGuest = () => {
+    dismissReminder();
+    setReminderOpen(false);
+    const target = pendingLaunch;
+    setPendingLaunch(null);
+    if (target) void performLaunch(target);
+  };
 
   // Every proxy launch shows the safety notice first; the destination opens
   // only after the user confirms.
@@ -544,7 +605,7 @@ export default function App() {
     {authOpen && (
       <div
         className="fixed inset-0 z-50 flex items-center justify-center bg-neutral-950/60 p-4"
-        onClick={() => setAuthOpen(false)}
+        onClick={closeAuth}
         role="dialog"
         aria-modal="true"
         aria-label={authMode === 'login' ? 'Sign in' : 'Create account'}
@@ -554,7 +615,10 @@ export default function App() {
           {...dialogMotion(reduceMotion)}
           onClick={(e) => e.stopPropagation()}
         >
-          <h2 className="mb-4">{authMode === 'login' ? 'Sign in' : 'Create account'}</h2>
+          <h2 className="mb-1">{authMode === 'login' ? 'Sign in' : 'Create account'}</h2>
+          <p className="mb-4 text-xs text-neutral-500 dark:text-neutral-400">
+            Keep your progress and preferences across devices.
+          </p>
           {!auth.enabled && (
             <div className="mb-4 flex gap-2 rounded-md bg-neutral-100 p-3 text-sm text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">
               <AlertTriangle size={16} className="mt-0.5 shrink-0" />
@@ -582,10 +646,9 @@ export default function App() {
             <label className="label" htmlFor="auth-password">
               Password
             </label>
-            <input
+            <PasswordInput
               id="auth-password"
               className="input mb-2"
-              type="password"
               value={authPassword}
               onChange={(e) => setAuthPassword(e.target.value)}
               placeholder="At least 8 characters"
@@ -628,6 +691,7 @@ export default function App() {
         onAvatarClick={() => {
           if (userId) setSettingsOpen(true);
           else {
+            authFromReminderRef.current = false;
             setAuthOpen(true);
             setAuthMode('login');
           }
@@ -749,6 +813,7 @@ export default function App() {
               className="flex items-center gap-1.5 rounded-full border border-neutral-300 p-1 pr-2 dark:border-neutral-700"
               aria-label="Sign in"
               onClick={() => {
+                authFromReminderRef.current = false;
                 setAuthOpen(true);
                 setAuthMode('login');
               }}
@@ -862,6 +927,31 @@ export default function App() {
             setActiveProxy(pendingProxy);
             setActive(null);
             setPendingProxy(null);
+          }}
+        />
+      )}
+
+      {reminderOpen && pendingLaunch && (
+        <AccountReminder
+          onSignIn={() => {
+            authFromReminderRef.current = true;
+            setReminderOpen(false);
+            setAuthMode('login');
+            setAuthError(null);
+            setAuthOpen(true);
+          }}
+          onCreateAccount={() => {
+            authFromReminderRef.current = true;
+            setReminderOpen(false);
+            setAuthMode('register');
+            setAuthError(null);
+            setAuthOpen(true);
+          }}
+          onContinueAsGuest={continueAsGuest}
+          onDismiss={() => {
+            dismissReminder();
+            setReminderOpen(false);
+            setPendingLaunch(null);
           }}
         />
       )}

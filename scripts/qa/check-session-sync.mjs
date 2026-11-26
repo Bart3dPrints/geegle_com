@@ -34,7 +34,7 @@ async function signIn(page) {
   await page.getByRole('button', { name: /Sign in/ }).first().click();
   const dialog = page.getByRole('dialog', { name: 'Sign in' });
   await dialog.getByLabel('Username').fill(USER.username);
-  await dialog.getByLabel('Password').fill(USER.password);
+  await dialog.getByLabel('Password', { exact: true }).fill(USER.password);
   await dialog.getByRole('button', { name: 'Sign in' }).click();
   await page.waitForTimeout(1800);
 }

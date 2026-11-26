@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/generate-changelog.mjs && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
     "test": "bun test tests",
