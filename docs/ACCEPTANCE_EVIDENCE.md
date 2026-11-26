@@ -22,6 +22,8 @@ resource. Nothing is marked complete because code exists.
 | Account journey | `node scripts/qa/auth-check.mjs` (isolated Supabase) | 12/12 checks pass |
 | Password change | `node --env-file=.env.local scripts/qa/check-password-change.mjs` | 6/6 checks pass |
 | Proxy reachability | `node scripts/qa/check-proxies.mjs` | 61 endpoints recorded in `docs/qa/proxy-endpoints.json` |
+| External services | `node scripts/qa/check-services.mjs` | 9/9 checks pass |
+| Cloud save round trip | `node --env-file=.env.local scripts/qa/check-cloud-save.mjs` | 6/6 checks pass |
 
 Screenshots inspected after the run: `docs/qa/landing-desktop.png`,
 `library-notice.png`, `library-desktop.png`, `library-chromebook.png`,
@@ -58,7 +60,7 @@ and the email-confirmation condition; the dev console logs only status/code.
 | L03 | VERIFIED | Typing shows ranked suggestions; hovering a suggestion and pressing Enter filters the library (352 results, no iframe); explicit click launches; Escape closes; empty Enter resets; misspelling `zeldaa` still suggests; Puzzle filter narrows to 259. |
 | L04 | VERIFIED | Star always visible and touch-sized; Recently Played hidden by default with a persisted toggle. |
 | L05 | VERIFIED | Cards show name/art/stars only (descriptions removed); proxies show name, `Server 1…N` labels and Open, no marketing copy; only Backup shows Unverified. |
-| P01 | VERIFIED | Games: compact top-right cluster (back, favorite, save, open-in-new-window, fullscreen) at x=1274, y=12; apps: back bottom-left, open/fullscreen top-right; no reload control; no full-width toolbar. |
+| P01 | VERIFIED | Games: compact top-right cluster (back, favorite, save, open-in-new-window, fullscreen) at x=1274, y=12; apps: back bottom-left, open/fullscreen top-right; no reload control; no full-width toolbar. Everythingle and YouTube were also converted from full-width bars to floating clusters (YouTube keeps only its compact URL form at the top). |
 | P02 | VERIFIED | Proxy notice with exact text shown every launch, Got it/Cancel, Cancel opens nothing. |
 | P03 | PARTIAL | 61 endpoints checked once at low rate. 54 returned < 400. Achroma Server 6 returned 404 and is now disabled with a visible reason. 5 endpoints failed to connect from this network and are recorded. Astra 1, 2, 5–10 refuse framing, so those launches use the external-open fallback. Backup endpoints serve NASA and Astra 11–15 serve BullBooks as their default proxied page: that is destination content, not provider identity, so identity review remains open. |
 | S01 | VERIFIED | Settings (left of header, works signed out): light/dark/system, background and card colour pickers, live preview, Apply, Reset to defaults, persistence across reload; no image/animated backgrounds. Account sync uses the `appearance` settings object (implemented, not exercised signed-in). |
@@ -78,10 +80,10 @@ and the email-confirmation condition; the dev console logs only status/code.
 
 | ID | Status | Evidence |
 |---|---|---|
-| I01 | PARTIAL | Everythingle/Krillion/YouTube code paths unchanged and their cards intact; proxy reachability recorded above. A fresh interactive launch of each external service was not repeated this session. |
+| I01 | VERIFIED | Everythingle opens its player and frames `https://everythingle.com/` with exit/open/fullscreen controls; YouTube accepts a watch URL and embeds `https://www.youtube-nocookie.com/embed/…`; Krillion official appears exactly once in Games with its own card, and `Krillion (Backup)` is a separate Apps card; no page errors on those surfaces. 9/9 checks. |
 | W01/W02 | BLOCKED (coverage) | Runtime artwork is 73 records (3 licensed + 70 captured) for 2711 IDs — 2.7%. The owner's "~20 visible images" is explained: only 73 cards can render artwork. `scripts/artwork/scan-wrapper-art.mjs` scanned every local build and found 0 usable bundled icons (696 declared files absent, 132 remote/inline), so the bundled-asset tier yields nothing; remaining coverage needs per-title research or reviewed title-screen capture. No generic placeholder is counted. |
 | W03 | PARTIAL | The capture runner keeps per-item checkpointing and bounded timeouts. Full-catalog research is not complete; individual batches remain to be run and reviewed. |
-| C01 | NOT RE-RUN | Save pipeline unchanged. Real progress/save/restore across engines was not exercised in this session. |
+| C01 | VERIFIED (representative engine) | 2048 (verified save support): progress written in the game frame was saved automatically on the 15-second tick (backend row contains the key and value), a fresh browser context for the same account restored the value before launch, and a second account never received it. 6/6 checks. Other engines remain individually untested. |
 | C02 | KNOWN BLOCKER | Same-origin game frames can still reach parent APIs; the JS storage guard is not a security boundary. Real isolation (separate origin) needs owner infrastructure approval. No tokens are exposed to game content and no universal save claim is made. |
 
 ## Q — Delivery

@@ -442,6 +442,9 @@ recorded above.
 - Auth: duplicate/dead auth module removed; the live service now distinguishes
   rate limiting and the email-confirmation failure instead of a generic message,
   and logs only status/code in development.
+- Everythingle and YouTube no longer use full-width bars; both use the same
+  compact floating controls as games. The library notice is shown once per
+  visit, so signing in no longer reopens a notice the visitor dismissed.
 
 ### Verified in this pass
 
@@ -449,7 +452,9 @@ recorded above.
 `npm run build` exit 0 · `node scripts/qa/interface-check.mjs` 39/39 ·
 `node scripts/qa/auth-check.mjs` 12/12 against the isolated backend ·
 `node --env-file=.env.local scripts/qa/check-password-change.mjs` 6/6 ·
-`node scripts/qa/check-proxies.mjs` 61 endpoints recorded.
+`node scripts/qa/check-proxies.mjs` 61 endpoints recorded ·
+`node scripts/qa/check-services.mjs` 9/9 ·
+`node --env-file=.env.local scripts/qa/check-cloud-save.mjs` 6/6.
 
 ### Corrected facts
 
@@ -470,6 +475,6 @@ recorded above.
 ### Still open
 
 Artwork for the remaining catalog; full proxy identity review; mirror
-classification of the 248 unreferenced wrappers; real cloud-save round trip;
-game-frame origin isolation; Smashy Road and Wanted 2 (no authorized build);
-production migrations awaiting approval.
+classification of the 248 unreferenced wrappers; save verification for engines
+other than 2048; game-frame origin isolation; Smashy Road and Wanted 2 (no
+authorized build); production migrations awaiting approval.

@@ -171,6 +171,9 @@ export default function App() {
   // The running game's save handle — logout awaits its real final save.
   const saveHandleRef = useRef<CloudSaveHandle | null>(null);
   const accountMenuRef = useRef<HTMLDivElement>(null);
+  // One notice per library visit: signing in or loading settings must not
+  // bring back a notice the visitor already dismissed for this visit.
+  const noticeShownRef = useRef(false);
 
   const ownerRef = useRef(userId);
   const transitionRef = useRef(false);
@@ -224,7 +227,8 @@ export default function App() {
 
   // The library notice appears on entry unless the user opted out permanently.
   useEffect(() => {
-    if (showLanding || !settingsLoaded || noticeDismissed) return;
+    if (showLanding || !settingsLoaded || noticeDismissed || noticeShownRef.current) return;
+    noticeShownRef.current = true;
     setNoticeOpen(true);
   }, [showLanding, settingsLoaded, noticeDismissed]);
 
@@ -266,6 +270,7 @@ export default function App() {
   }, [showLanding, auth.loading, userId]);
 
   const openLibrary = () => {
+    noticeShownRef.current = false;
     if (location.hash !== '#games') history.pushState(null, '', '#games');
     setTab('games');
     setShowLanding(false);
@@ -281,6 +286,8 @@ export default function App() {
     setYoutubeOpen(false);
     setEverythingleOpen(false);
     if (!historyTraversal && location.hash) history.pushState(null, '', location.pathname + location.search);
+    noticeShownRef.current = false;
+    setNoticeOpen(false);
     setShowLanding(true);
     window.scrollTo(0, 0);
   }, [closeGame]);
