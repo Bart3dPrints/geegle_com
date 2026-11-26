@@ -21,23 +21,18 @@ export function GameCard({
   return (
     <div
       data-card=""
-      className="card group relative overflow-hidden transition-colors hover:border-slate-300 dark:hover:border-slate-700"
+      className="card group relative overflow-hidden transition-colors hover:border-neutral-300 dark:hover:border-neutral-700"
     >
       <button
         className="block w-full text-left"
         onClick={onLaunch}
         aria-label={`Play ${game.title}`}
       >
-        <div className="flex aspect-video items-center justify-center overflow-hidden bg-slate-200 dark:bg-slate-800">
+        <div className="flex aspect-video items-center justify-center overflow-hidden bg-neutral-200 dark:bg-neutral-800">
           <GameArt game={game} className="h-full w-full" />
         </div>
         <div className="p-3">
           <p className="truncate text-sm font-medium">{game.title}</p>
-          {game.description && (
-            <p className="mt-0.5 truncate text-xs text-slate-500 dark:text-slate-400">
-              {game.description}
-            </p>
-          )}
         </div>
       </button>
       {onToggleFavorite && (
@@ -45,7 +40,7 @@ export function GameCard({
           type="button"
           whileTap={{ scale: 0.86 }}
           transition={{ duration: 0.12, ease: 'easeOut' }}
-          className="absolute right-2 top-2 rounded-md border border-slate-200 bg-white/95 p-1.5 dark:border-slate-700 dark:bg-slate-900/95"
+          className="absolute right-2 top-2 rounded-md border border-neutral-200 bg-white/95 p-1.5 dark:border-neutral-700 dark:bg-neutral-900/95"
           onClick={(e) => {
             e.stopPropagation();
             onToggleFavorite();
@@ -61,8 +56,8 @@ export function GameCard({
             size={16}
             className={
               isFavorite
-                ? 'fill-slate-900 text-slate-900 dark:fill-slate-100 dark:text-slate-100'
-                : 'text-slate-400 dark:text-slate-500'
+                ? 'fill-neutral-900 text-neutral-900 dark:fill-neutral-100 dark:text-neutral-100'
+                : 'text-neutral-400 dark:text-neutral-500'
             }
           />
         </motion.button>
@@ -75,7 +70,7 @@ export function EmptyState({ title, body }: { title: string; body: string }) {
   return (
     <div className="card flex flex-col items-center justify-center p-12 text-center">
       <h3 className="mb-1 text-base font-semibold">{title}</h3>
-      <p className="max-w-sm text-sm text-slate-500 dark:text-slate-400">{body}</p>
+      <p className="max-w-sm text-sm text-neutral-500 dark:text-neutral-400">{body}</p>
     </div>
   );
 }

@@ -15,7 +15,7 @@ function ArtworkImage({ url, className }: { url?: string; className: string }) {
   if (!url || failed) {
     return (
       <span
-        className={`flex items-center justify-center bg-slate-100 text-slate-400 dark:bg-slate-800 dark:text-slate-500 ${className}`}
+        className={`flex items-center justify-center bg-neutral-100 text-neutral-400 dark:bg-neutral-800 dark:text-neutral-500 ${className}`}
         aria-hidden="true"
       >
         <Image className="h-1/3 w-1/3 max-h-8 max-w-8" />

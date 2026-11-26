@@ -8,7 +8,6 @@ import { motion } from 'motion/react';
 import {
   Star,
   ArrowLeft,
-  RotateCcw,
   Maximize2,
   Loader2,
   UploadCloud,
@@ -22,7 +21,7 @@ import {
   ExternalLink,
 } from 'lucide-react';
 import type { GameEntry } from '../types';
-import { attemptsAutomaticSave, saveSupportFor, supportLabel } from '../lib/saveManifest';
+import { attemptsAutomaticSave, saveSupportFor } from '../lib/saveManifest';
 import {
   startCloudSync,
   type CloudSaveHandle,
@@ -33,26 +32,26 @@ function StatusPill({ status }: { status: SyncStatus }) {
   switch (status) {
     case 'restoring':
       return (
-        <span className="flex items-center gap-1 text-xs text-slate-400">
+        <span className="flex items-center gap-1 text-xs text-neutral-400">
           <Loader2 size={12} className="animate-spin" /> Restoring…
         </span>
       );
     case 'saving':
       return (
-        <span className="flex items-center gap-1 text-xs text-slate-400">
+        <span className="flex items-center gap-1 text-xs text-neutral-400">
           <Loader2 size={12} className="animate-spin" /> Saving…
         </span>
       );
     case 'saved':
     case 'restored':
       return (
-        <span className="flex items-center gap-1 text-xs text-emerald-400">
+        <span className="flex items-center gap-1 text-xs text-neutral-300">
           <Check size={12} /> Saved to Cloud
         </span>
       );
     case 'offline':
       return (
-        <span className="flex items-center gap-1 text-xs text-amber-400">
+        <span className="flex items-center gap-1 text-xs text-neutral-300">
           <WifiOff size={12} /> Offline
         </span>
       );
@@ -63,10 +62,10 @@ function StatusPill({ status }: { status: SyncStatus }) {
         </span>
       );
     case 'conflict':
-      return <span className="text-xs text-amber-400">Cloud save conflict</span>;
+      return <span className="text-xs text-neutral-300">Cloud save conflict</span>;
     case 'unsupported':
       return (
-        <span className="flex items-center gap-1 text-xs text-slate-500">
+        <span className="flex items-center gap-1 text-xs text-neutral-500">
           <Ban size={12} /> Cloud Saves Unsupported
         </span>
       );
@@ -107,7 +106,6 @@ export function GamePlayer({
   const gameId = entry?.id ?? null;
   const launchPath = entry?.path ?? '';
   const isExternal = Boolean(url && /^https?:\/\//.test(url));
-  const canOpenExternally = isExternal;
 
   // The iframe mounts only when restoreReady is true — restore-before-launch
   // is awaited for real (no arbitrary delay).
@@ -199,14 +197,6 @@ export function GamePlayer({
     }, 8000);
     return () => clearTimeout(timer);
   }, [isExternal, loaded, loadFailed]);
-
-  const reload = () => {
-    setLoadFailed(false);
-    setFrameBlocked(false);
-    setLoaded(false);
-    const path = gameId ? iframePath : url;
-    if (frameRef.current && path) frameRef.current.src = path;
-  };
 
   const manualSave = async () => {
     setManualMsg(null);
@@ -303,184 +293,139 @@ export function GamePlayer({
     ? 'Cloud progress differs. Choose Restore from Cloud or Keep This Device.'
     : supported && syncStatus === 'error' ? 'Cloud sync failed. Your device still has its saved progress.' : null;
 
-  const btn =
-    'btn-secondary border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800';
+  const clusterButton =
+    'rounded-md border border-neutral-700 bg-neutral-900/95 p-2 text-neutral-200 shadow-sm transition-colors hover:bg-neutral-800';
+  const isGame = entry?.kind === 'game';
+
+  const backButton = (
+    <button
+      className={clusterButton}
+      onClick={() => void exit()}
+      disabled={busy}
+      aria-label="Back to library"
+      title="Back to library"
+    >
+      <ArrowLeft size={16} />
+    </button>
+  );
+
+  const openButton = (
+    <button
+      className={clusterButton}
+      onClick={openExternally}
+      aria-label="Open in a new window"
+      title="Open in a new window"
+    >
+      <ExternalLink size={16} />
+    </button>
+  );
+
+  const fullscreenButton = (
+    <button
+      className={clusterButton}
+      onClick={goFullscreen}
+      aria-label="Fullscreen"
+      title="Fullscreen"
+    >
+      <Maximize2 size={16} />
+    </button>
+  );
+
+  const saveControls = supported ? (
+    <>
+      <button
+        className={clusterButton}
+        onClick={() => void manualSave()}
+        aria-label="Save progress to cloud"
+        title="Save to Cloud"
+      >
+        <UploadCloud size={16} />
+      </button>
+      <button
+        className={clusterButton}
+        onClick={() => void manualRestore()}
+        disabled={busy}
+        aria-label="Restore progress from cloud"
+        title="Restore from Cloud"
+      >
+        <DownloadCloud size={16} />
+      </button>
+      <button
+        className={clusterButton}
+        onClick={() => void manualExport()}
+        disabled={busy}
+        aria-label="Export this save as a file"
+        title="Export save file"
+      >
+        <FileDown size={16} />
+      </button>
+      <button
+        className={clusterButton}
+        onClick={() => importInputRef.current?.click()}
+        disabled={busy}
+        aria-label="Import a save file"
+        title="Import save file"
+      >
+        <FileUp size={16} />
+      </button>
+      <input
+        ref={importInputRef}
+        type="file"
+        accept="application/json,.json"
+        className="hidden"
+        onChange={(event) => {
+          const file = event.target.files?.[0];
+          event.target.value = '';
+          void manualImport(file);
+        }}
+      />
+      {syncStatus === 'conflict' && (
+        <button className={clusterButton} disabled={busy} onClick={() => void keepLocal()} title="Keep this device's progress">
+          Keep This Device
+        </button>
+      )}
+    </>
+  ) : null;
 
   return (
     <motion.div
-      className="fixed inset-0 z-50 bg-slate-950"
+      className="fixed inset-0 z-50 bg-neutral-950"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.15, ease: 'easeOut' }}
     >
-      <div className="flex h-14 items-center gap-2 border-b border-slate-800 bg-slate-900 px-4">
-        <button className={btn} onClick={() => void exit()} disabled={busy}>
-          <ArrowLeft size={16} />
-          Back
-        </button>
-        <h2 className="truncate text-sm font-medium text-slate-200">{title}</h2>
-
-        {/* Save support is stated at the strength the evidence supports: only
-            individually played games claim verification. */}
-        {entry && supported && (
-          <span
-            className="hidden shrink-0 rounded-full border border-slate-700 px-2 py-0.5 text-[11px] text-slate-400 lg:inline"
-            title={supportLabel(saveSupportFor(entry), entry)}
-          >
-            {saveSupportFor(entry) === 'verified'
-              ? 'Verified save'
-              : saveSupportFor(entry) === 'engine-compatible'
-                ? 'Engine save'
-                : 'Experimental save'}
-          </span>
-        )}
-
-        <div className="hidden md:block">
-          <StatusPill status={syncStatus} />
-        </div>
-
-        <div className="flex-1" />
-
-        {/* External open fallback: for cross-origin sites that may refuse to
-            be framed. Never sends Geegle credentials — plain navigation. */}
-        {canOpenExternally && (
-          <button
-            className={btn}
-            onClick={openExternally}
-            aria-label="Open in a new tab"
-            title="Open in a new tab"
-          >
-            <ExternalLink size={16} />
-          </button>
-        )}
-
-        {supported && (
-          <>
-            <button
-              className={btn}
-              onClick={() => void manualSave()}
-              aria-label="Save progress to cloud"
-              title="Save to Cloud"
-            >
-              <UploadCloud size={16} />
-            </button>
-            <button
-              className={btn}
-              onClick={() => void manualRestore()}
-              disabled={busy}
-              aria-label="Restore progress from cloud"
-              title="Restore from Cloud"
-            >
-              <DownloadCloud size={16} />
-            </button>
-            <button
-              className={btn}
-              onClick={() => void manualExport()}
-              disabled={busy}
-              aria-label="Export this save as a file"
-              title="Export save file"
-            >
-              <FileDown size={16} />
-            </button>
-            <button
-              className={btn}
-              onClick={() => importInputRef.current?.click()}
-              disabled={busy}
-              aria-label="Import a save file"
-              title="Import save file"
-            >
-              <FileUp size={16} />
-            </button>
-            <input
-              ref={importInputRef}
-              type="file"
-              accept="application/json,.json"
-              className="hidden"
-              onChange={(event) => {
-                const file = event.target.files?.[0];
-                event.target.value = '';
-                void manualImport(file);
-              }}
-            />
-            {syncStatus === 'conflict' && <button className={btn} disabled={busy} onClick={() => void keepLocal()}>Keep This Device</button>}
-          </>
-        )}
-
-        {entry && (
-          <button
-            className={btn}
-            onClick={onToggleFavorite}
-            aria-label="Toggle favorite"
-          >
-            <Star
-              size={16}
-              className={isFavorite ? 'fill-amber-400 text-amber-400' : ''}
-            />
-          </button>
-        )}
-        <button className={btn} onClick={reload} aria-label="Reload game">
-          <RotateCcw size={16} />
-        </button>
-        <button className={btn} onClick={goFullscreen} aria-label="Fullscreen">
-          <Maximize2 size={16} />
-        </button>
-      </div>
-
-      {(manualMsg || restoreError) && (
-        <div
-          className="border-b border-slate-800 bg-slate-900 px-4 py-2 text-center text-xs text-slate-300"
-          role="status"
-        >
-          {manualMsg ?? restoreError}
-        </div>
-      )}
-
-      <div className="flex items-center justify-center bg-slate-900 py-1 md:hidden">
-        <StatusPill status={syncStatus} />
-      </div>
-
-      <div className="relative h-[calc(100vh-3.5rem)] w-full">
+      <div className="absolute inset-0">
         {restoreReady && !loaded && !loadFailed && !frameBlocked && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-slate-950 text-slate-400">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-neutral-950 text-neutral-400">
             <Loader2 className="animate-spin" size={28} />
             <span className="text-sm">Loading {title}…</span>
           </div>
         )}
         {frameBlocked && !loaded && (
-          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-slate-950 p-6 text-center">
-            <ExternalLink size={28} className="text-slate-400" />
-            <p className="max-w-md text-sm text-slate-300">
-              {title} may not allow embedding inside other sites. You can
-              retry, or open it directly in a new tab.
+          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-neutral-950 p-6 text-center">
+            <ExternalLink size={28} className="text-neutral-400" />
+            <p className="max-w-md text-sm text-neutral-300">
+              {title} may not allow embedding inside other sites. You can open
+              it directly in a new window.
             </p>
-            <div className="flex gap-2">
-              <button className={btn} onClick={reload}>
-                <RotateCcw size={14} /> Retry
-              </button>
-              {canOpenExternally && (
-                <button className="btn-primary" onClick={openExternally}>
-                  <ExternalLink size={14} /> Open in a new tab
-                </button>
-              )}
-              <button className={btn} onClick={() => void exit()} disabled={busy}>
-                Back to Games
+            <div className="flex flex-wrap justify-center gap-2">
+              {openButton}
+              <button className="btn-secondary" onClick={() => void exit()} disabled={busy}>
+                Back to library
               </button>
             </div>
           </div>
         )}
         {loadFailed && (
-          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-slate-950 p-6 text-center">
-            <AlertTriangle size={28} className="text-amber-400" />
-            <p className="text-sm text-slate-300">
-              {title} failed to load. The game's server may be temporarily
-              unavailable.
+          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-neutral-950 p-6 text-center">
+            <AlertTriangle size={28} className="text-neutral-300" />
+            <p className="text-sm text-neutral-300">
+              {title} failed to load. Try opening it in a new window.
             </p>
-            <div className="flex gap-2">
-              <button className={btn} onClick={reload}>
-                <RotateCcw size={14} /> Retry
-              </button>
-              <button className={btn} onClick={() => void exit()} disabled={busy}>
-                Back to Games
+            <div className="flex flex-wrap justify-center gap-2">
+              {openButton}
+              <button className="btn-secondary" onClick={() => void exit()} disabled={busy}>
+                Back to library
               </button>
             </div>
           </div>
@@ -491,13 +436,53 @@ export function GamePlayer({
             src={(gameId ? iframePath : url) ?? undefined}
             referrerPolicy="no-referrer"
             title={title ?? 'Game'}
-            className="h-full w-full"
+            className="h-full w-full border-0"
             onLoad={() => setLoaded(true)}
             onError={() => setLoadFailed(true)}
             allow="autoplay; fullscreen; gamepad; pointer-lock"
           />
         )}
       </div>
+
+      {isGame ? (
+        <div className="absolute right-3 top-3 z-20 flex max-w-[calc(100%-1.5rem)] flex-wrap items-center justify-end gap-1.5">
+          {backButton}
+          {entry && (
+            <button
+              className={clusterButton}
+              onClick={onToggleFavorite}
+              aria-label="Toggle favorite"
+              aria-pressed={isFavorite}
+              title="Favorite"
+            >
+              <Star size={16} className={isFavorite ? 'fill-neutral-100 text-neutral-100' : ''} />
+            </button>
+          )}
+          {saveControls}
+          {openButton}
+          {fullscreenButton}
+        </div>
+      ) : (
+        <>
+          <div className="absolute bottom-3 left-3 z-20 flex items-center gap-1.5">{backButton}</div>
+          <div className="absolute right-3 top-3 z-20 flex items-center gap-1.5">
+            {openButton}
+            {fullscreenButton}
+          </div>
+        </>
+      )}
+
+      {(manualMsg || restoreError) && (
+        <p className="absolute inset-x-3 bottom-3 z-10 mx-auto max-w-lg rounded-md bg-neutral-900/95 px-3 py-2 text-center text-xs text-neutral-200">
+          {manualMsg ?? restoreError}
+        </p>
+      )}
+
+      {isGame && (
+        <div className="absolute bottom-3 right-3 z-10 rounded-md bg-neutral-900/90 px-2 py-1">
+          <StatusPill status={syncStatus} />
+        </div>
+      )}
     </motion.div>
   );
 }

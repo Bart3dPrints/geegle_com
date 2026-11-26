@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <circle cx="32" cy="32" r="32" fill="#0f172a"/>
-  <text x="32" y="43" font-family="Inter, Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">G</text>
+  <circle cx="32" cy="32" r="32" fill="#f2f2f2"/>
+  <circle cx="32" cy="32" r="29" fill="none" stroke="#d9d9d9" stroke-width="1"/>
+  <path d="M32 12a20 20 0 1 0 20 20h-20v-7h27a27 27 0 1 1-27-27z" fill="#181818"/>
 </svg>

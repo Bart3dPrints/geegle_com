@@ -13,14 +13,12 @@ export const DEFAULT_APPEARANCE: LandingAppearance = {
 };
 
 export const PRESETS: readonly { name: string; color: string }[] = Object.freeze([
-  { name: 'Classic white', color: '#ffffff' },
-  { name: 'Charcoal', color: '#364152' },
-  { name: 'Soft blue', color: '#dbeafe' },
-  { name: 'Sage green', color: '#dce8df' },
-  { name: 'Lavender', color: '#e9ddf5' },
-  { name: 'Warm beige', color: '#f3e6d0' },
-  { name: 'Soft pink', color: '#f8dce5' },
-  { name: 'Muted gray', color: '#e5e7eb' },
+  { name: 'White', color: '#ffffff' },
+  { name: 'Off white', color: '#fafafa' },
+  { name: 'Light gray', color: '#e5e5e5' },
+  { name: 'Gray', color: '#a3a3a3' },
+  { name: 'Charcoal', color: '#2c2c2c' },
+  { name: 'Near black', color: '#181818' },
 ].map((preset) => Object.freeze(preset)));
 
 const STORAGE_PREFIX = 'geegle-landing-appearance:v1:';

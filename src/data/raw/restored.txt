@@ -1,0 +1,92 @@
+# Restored after the owner reversed the duplicate-removal direction.
+# id|title|categories
+cladofai|A Dance of Fire and Ice|arcade
+cladarkroom|A Dark Room|arcade
+claftertheweek|After the Week|arcade
+clahoysurvival|Ahoy Survival|arcade
+clai|AI|arcade
+clormmimastickwithclsoitcanberememberedoyeahclalienhominid|Alien Hominid (Classic)|arcade
+clalienhominidgba|Alien Hominid GBA|arcade
+claltered-beast|Altered Beast|arcade
+clanemonesfall|Anemone Fall|arcade
+clarchesspelago|Archipelago|arcade
+clasdutydemands|As Duty Demands|arcade
+clbaldiepstein|Bald Iepstein|arcade
+clbejeweledtwistflash|Be Jeweled Twist Flash|arcade
+clbejeweledtwistds|Bejeweled Twist DS|arcade
+clbfdibranches|BFDI Branches|arcade
+clblastronaut|Bl Astronaut|arcade
+clblackknight|Black Knight|arcade
+clbloonstd6scratch|Bloons Td 6 Scratch|arcade
+clbmx2|BMX 2|arcade
+clcartoonnetworktabletennisultimatetournament|Cartoon Network Table Tennis Ultimate Tournament|arcade
+clchoroqwonderful|Ch Oro Qwonderful|arcade
+clfactoryballs|Factory Balls|puzzle,casual
+clfactoryballs2|Factory Balls 2|puzzle,casual
+clfactoryballs3|Factory Balls 3|puzzle,casual
+clfactoryballs4|Factory Balls 4|puzzle,casual
+clfairytalevsonepiece|Fairytale vs One Piece|arcade
+clfallguys|Fall Guys|arcade
+clfallout|Fallout|adventure,sandbox
+clff3|Final Fantasy III|arcade
+clfuschiax|Fu Schia X|arcade
+clfunkinmix|Funk in Mix|arcade
+clgxclient|GX Client|arcade
+clicantbelievegoogleflaggedmeforthenameofthefilelol|Icant Believe Google Flagged Me for the Name of the File LOL|arcade
+cljacksmithencryptedorsmthn|Jack Smith Encrypted|arcade
+clkengriffeyjrpresentsmajorleaguebaseball|Ken Griffey Jr Presents Major League Baseball|arcade
+clkilltheiceagebabyadventure|Kill the Ice Age Baby Adventure|arcade
+clmegacd|Megacd|arcade
+clmetalsonichyperdrive|Metal Sonic Hyperdrive|retro,platformer
+clmickeymaniasnes|Mickey Mania SNES|arcade
+clmidwaysgreatesthitsn64|Midways Greatest Hits N64|arcade
+clminecraft1-8-8|Minecraft 1 8 8|adventure,sandbox
+minecraft|Minecraft 1.12.2|adventure,sandbox
+clminecraftcasesim|Minecraft Cases Im|adventure,sandbox
+clminecraftpocketedition|Minecraft Pocket Edition|adventure,sandbox
+clminecraftshooter|Minecraft Shooter|adventure,sandbox
+minecrafttowerdefense|Minecraft Tower Defense|adventure,sandbox
+clmk4ampedup|Mk 4 Am Ped Up|arcade
+clmkmythologiesn64|Mk Mythologies N64|arcade
+clmktrilogyps1|Mk Trilogy Ps 1|arcade
+clmmwilywars|Mm Wily Wars|arcade
+clmmbn3b|Mmbn 3 B|arcade
+clmmbn3w|Mmbn 3 W|arcade
+clmmbn4bm|Mmbn 4 Bm|arcade
+clmmbn4rs|Mmbn 4 Rs|arcade
+clmmbnws|Mmbnws|arcade
+clmmsf2zxn|Mmsf 2 Zx N|arcade
+clmmsf2zxs|Mmsf 2 Zx S|arcade
+clmmsf3ba|Mmsf 3 Ba|arcade
+clmmsf3rj|Mmsf 3 Rj|arcade
+clmmsfd|Mmsfd|arcade
+clmmsfl|Mmsfl|arcade
+clmmsfp|Mmsfp|arcade
+clmo64-1|Mo 64|arcade
+clmobcontrolhtml5|Mob Control Html 5|arcade
+clmobiusrevolution|Mobius Revolution|arcade
+clmonsterswing|Monsters Wing|arcade
+clmortkom4|Mort Kom 4|arcade
+nazi-zombies|Nazi Zombies Portable|arcade
+clnewsupermarioworld2aroundtheworld|New Super Mario World 2|retro,platformer
+clnomoregameasdsadfagfggdfs|No More Games DS|arcade
+clobbyyardsale|Ob by Yard Sale|arcade
+clpokemonemeraldimperium|Pokemon Emerald Imperium|pokemon,retro,adventure
+clpokemonevolvedsfdgsdfs|Pokemon Evolved|pokemon,retro,adventure
+clpokemonfireredandleafgreenplusedition|Pokemon Firered and Leafgreen Plus Edition|pokemon,retro,adventure
+clpolytrackbutnotflagged-1|Poly Track|arcade
+clprofessorlaytonandthecuriousvillage|Professor Layton and the Curious Village|arcade
+clredvsblue2|Red vs Blue 2|arcade
+redvbluefix|Red vs Blue Fix|arcade
+clredvsbluewar|Red vs Blue War|arcade
+clriddleschool445544444--444-444|Riddle School (Alt)|puzzle,casual
+riddleuneversityfix|Riddle University Fix|puzzle,casual
+clskibididibidygyattohiorizzingallovertheplacestillwatermang|Skibi Didi Bid Yg Yat to Hi or Izz in Gall Over the Place Stillwater Mango Theory Fem Boy Drool|arcade
+clsnowrideee|Snow Ride Ee|arcade,casual
+clsnowridergoodygumdrops|Snow Rider Goody Gumdrops|arcade,casual
+clsnowriderrrr|Snow Rider Rrr|arcade,casual
+clsnowrid|Snowrid|arcade,casual
+clthanksforremindingmeihadtofixthis|Thanks for Reminding Mei Had to Fix This|arcade
+cltralalerotralalaescapetungtungtungsahur|Tralalero Escape|arcade
+clumstickmangameidkiforgor|Umstickman Game (I Forgot)|arcade
+cluvuvwevwevweonyetenvewveugwemubwemossas|Uvuvwevwevwe Onyetenvewve Ugwemubwem Ossas|arcade

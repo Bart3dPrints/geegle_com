@@ -57,25 +57,25 @@ export function YouTubeApp({ onExit }: { onExit: () => void }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-slate-950">
-      <div className="flex h-14 items-center gap-2 border-b border-slate-800 bg-slate-900 px-4">
+    <div className="fixed inset-0 z-50 bg-neutral-950">
+      <div className="flex h-14 items-center gap-2 border-b border-neutral-800 bg-neutral-900 px-4">
         <button
-          className="btn-secondary border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800"
+          className="btn-secondary border-neutral-700 bg-neutral-900 text-neutral-200 hover:bg-neutral-800"
           onClick={onExit}
         >
           <ArrowLeft size={16} />
           Back
         </button>
-        <h2 className="text-sm font-medium text-slate-200">YouTube</h2>
+        <h2 className="text-sm font-medium text-neutral-200">YouTube</h2>
         <div className="flex-1" />
         <form onSubmit={submit} className="flex items-center gap-2">
           <div className="relative">
             <Search
               size={14}
-              className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400"
+              className="pointer-events-none absolute left-2.5 top-1/2 -tranneutral-y-1/2 text-neutral-400"
             />
             <input
-              className="input w-56 bg-slate-900 py-1.5 pl-8 text-sm"
+              className="input w-56 bg-neutral-900 py-1.5 pl-8 text-sm"
               placeholder="Paste a YouTube URL…"
               value={input}
               onChange={(e) => setInput(e.target.value)}
@@ -103,7 +103,7 @@ export function YouTubeApp({ onExit }: { onExit: () => void }) {
           <div className="h-full w-full max-w-5xl">
             <div className="relative mx-auto aspect-video h-full max-h-full">
               {loading && (
-                <div className="absolute inset-0 flex items-center justify-center text-slate-400">
+                <div className="absolute inset-0 flex items-center justify-center text-neutral-400">
                   <Loader2 className="animate-spin" size={28} />
                 </div>
               )}
@@ -120,9 +120,9 @@ export function YouTubeApp({ onExit }: { onExit: () => void }) {
             </div>
           </div>
         ) : (
-          <div className="text-center text-slate-400">
+          <div className="text-center text-neutral-400">
             <p className="text-sm">Paste a YouTube video URL above to play it.</p>
-            <p className="mt-1 text-xs text-slate-500">
+            <p className="mt-1 text-xs text-neutral-500">
               Videos play through YouTube's official privacy-enhanced embed.
             </p>
           </div>

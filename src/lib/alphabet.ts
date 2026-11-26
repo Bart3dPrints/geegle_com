@@ -17,7 +17,7 @@ export function letterFor(title: string): string {
   return /^[A-Z]$/.test(first) ? first : '#';
 }
 
-/** Groups already-sorted entries into A–Z sections, then "#" last. */
+/** Groups entries into the "#" section first (numbers/symbols), then A–Z. */
 export function groupByLetter(entries: GameEntry[]): AlphabetSection[] {
   const buckets = new Map<string, GameEntry[]>();
   for (const entry of entries) {
@@ -27,6 +27,6 @@ export function groupByLetter(entries: GameEntry[]): AlphabetSection[] {
     else buckets.set(letter, [entry]);
   }
   return [...buckets.keys()]
-    .sort((a, b) => (a === '#' ? 1 : b === '#' ? -1 : a.localeCompare(b)))
+    .sort((a, b) => (a === '#' ? -1 : b === '#' ? 1 : a.localeCompare(b)))
     .map((letter) => ({ letter, entries: buckets.get(letter) ?? [] }));
 }

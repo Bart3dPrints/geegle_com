@@ -28,7 +28,7 @@ test('titles map to one uppercase letter or the # bucket', () => {
   assert.equal(letterFor('krillion'), 'K');
 });
 
-test('sections are ordered A–Z with # last', () => {
+test('sections are ordered # first, then A–Z', () => {
   const sections = groupByLetter([
     entry('Zelda'),
     entry('2048'),
@@ -37,7 +37,7 @@ test('sections are ordered A–Z with # last', () => {
   ]);
   assert.deepEqual(
     sections.map((section) => section.letter),
-    ['A', 'B', 'Z', '#']
+    ['#', 'A', 'B', 'Z']
   );
   assert.deepEqual(
     sections.find((section) => section.letter === 'Z').entries.map((item) => item.title),

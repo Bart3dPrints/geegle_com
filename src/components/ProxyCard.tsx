@@ -1,6 +1,6 @@
-// Proxy card: service name, server dropdown, launch button, verified badge.
+// Proxy card: provider name, server selector and Open. No descriptions or
+// promotional text. Only the backup provider may show an Unverified badge.
 
-import { Globe, Star } from 'lucide-react';
 import type { ProxyService } from '../data/proxies';
 
 export function ProxyCard({
@@ -18,17 +18,13 @@ export function ProxyCard({
   return (
     <div className="card p-4">
       <div className="mb-3 flex items-center gap-2">
-        <Globe size={16} className="text-slate-400" />
         <h3 className="text-sm font-semibold">{service.name}</h3>
-        {endpoint && !endpoint.verified && (
-          <span className="badge bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">
+        {service.id === 'backup' && endpoint && !endpoint.verified && (
+          <span className="badge border border-neutral-300 text-neutral-600 dark:border-neutral-600 dark:text-neutral-300">
             Unverified
           </span>
         )}
       </div>
-      <p className="mb-4 text-sm text-slate-500 dark:text-slate-400">
-        {service.description}
-      </p>
       <div className="flex gap-2">
         <select
           className="input flex-1"
@@ -39,7 +35,6 @@ export function ProxyCard({
           {service.endpoints.map((ep, i) => (
             <option key={ep.url} value={i}>
               {ep.label}
-              {ep.verified ? '' : ' (unverified)'}
             </option>
           ))}
         </select>
@@ -47,14 +42,6 @@ export function ProxyCard({
           Open
         </button>
       </div>
-      <button
-        className="mt-2 flex items-center gap-1 text-xs text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
-        onClick={() => onSelect(selected)}
-        aria-label={`${service.name} is the selected default`}
-      >
-        <Star size={12} className="fill-current" />
-        Default server — saved automatically
-      </button>
     </div>
   );
 }

@@ -12,6 +12,8 @@ export const RECENT_KEY = 'geegle-recently-played';
 export const THEME_KEY = 'geegle-theme';
 export const SERVERS_KEY = 'geegle-default-servers';
 export const RECENT_VISIBLE_KEY = 'geegle-recent-visible';
+export const LIBRARY_NOTICE_KEY = 'geegle-library-notice-dismissed';
+export const APPEARANCE_KEY = 'geegle-appearance';
 // Storage optimization retained after deletion-feature cancellation: recently
 // played history is capped at 50 games per account.
 const RECENT_CAP = 50;
@@ -138,6 +140,53 @@ export async function loadRecentVisible(userId: string | null): Promise<OpResult
   if (!userId || !isSupabaseConfigured) return { ok: true, data: readJson(RECENT_VISIBLE_KEY) === true };
   const { data, error } = await supabase.from(T.settings).select('value:settings->recentVisible').eq('id', userId).maybeSingle();
   return error ? { ok: false, error: error.message } : { ok: true, data: data?.value === true };
+}
+
+/** Library loading notice: dismissed permanently only when the user opted in. */
+export async function saveLibraryNoticeDismissed(dismissed: boolean, userId: string | null): Promise<OpResult<null>> {
+  writeJson(LIBRARY_NOTICE_KEY, dismissed);
+  if (!userId || !isSupabaseConfigured) return { ok: true };
+  return updateSettings(userId, (settings) => ({ ...settings, libraryNoticeDismissed: dismissed }));
+}
+
+export async function loadLibraryNoticeDismissed(userId: string | null): Promise<OpResult<boolean>> {
+  if (!userId || !isSupabaseConfigured) return { ok: true, data: readJson(LIBRARY_NOTICE_KEY) === true };
+  const { data, error } = await supabase.from(T.settings).select('value:settings->libraryNoticeDismissed').eq('id', userId).maybeSingle();
+  return error ? { ok: false, error: error.message } : { ok: true, data: data?.value === true };
+}
+
+/** Solid neutral appearance: background and card/surface colours only. */
+export interface AppearanceSettings {
+  mode: ThemePreference;
+  background: string | null;
+  card: string | null;
+}
+
+export const DEFAULT_APPEARANCE_SETTINGS: AppearanceSettings = { mode: 'system', background: null, card: null };
+const HEX_COLOR = /^#[\da-f]{6}$/i;
+
+export function parseAppearanceSettings(value: unknown): AppearanceSettings {
+  const record = settingsObject(value);
+  const mode = record.mode === 'light' || record.mode === 'dark' ? record.mode : 'system';
+  const color = (entry: unknown) => (typeof entry === 'string' && HEX_COLOR.test(entry) ? entry : null);
+  return { mode, background: color(record.background), card: color(record.card) };
+}
+
+export function readLocalAppearance(): AppearanceSettings {
+  return parseAppearanceSettings(readJson(APPEARANCE_KEY));
+}
+
+export async function saveAppearanceSettings(value: AppearanceSettings, userId: string | null): Promise<OpResult<null>> {
+  const appearance = parseAppearanceSettings(value);
+  writeJson(APPEARANCE_KEY, appearance);
+  if (!userId || !isSupabaseConfigured) return { ok: true };
+  return updateSettings(userId, (settings) => ({ ...settings, appearance }));
+}
+
+export async function loadAppearanceSettings(userId: string | null): Promise<OpResult<AppearanceSettings>> {
+  if (!userId || !isSupabaseConfigured) return { ok: true, data: readLocalAppearance() };
+  const { data, error } = await supabase.from(T.settings).select('value:settings->appearance').eq('id', userId).maybeSingle();
+  return error ? { ok: false, error: error.message } : { ok: true, data: parseAppearanceSettings(data?.value) };
 }
 
 export async function loadLandingAppearance(userId: string): Promise<OpResult<LandingAppearance | null>> {

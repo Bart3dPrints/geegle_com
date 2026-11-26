@@ -101,16 +101,16 @@ export function EverythingleApp({
   }, [frameKey, loaded, blocked]);
 
   const btn =
-    'btn-secondary border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800';
+    'btn-secondary border-neutral-700 bg-neutral-900 text-neutral-200 hover:bg-neutral-800';
 
   return (
-    <div className="fixed inset-0 z-50 bg-slate-950">
-      <div className="flex h-14 items-center gap-2 border-b border-slate-800 bg-slate-900 px-4">
+    <div className="fixed inset-0 z-50 bg-neutral-950">
+      <div className="flex h-14 items-center gap-2 border-b border-neutral-800 bg-neutral-900 px-4">
         <button className={btn} onClick={onExit}>
           <ArrowLeft size={16} />
           Back
         </button>
-        <h2 className="truncate text-sm font-medium text-slate-200">Everythingle</h2>
+        <h2 className="truncate text-sm font-medium text-neutral-200">Everythingle</h2>
         <div className="flex-1" />
         {mode === 'cherry' && (
           <select
@@ -151,22 +151,22 @@ export function EverythingleApp({
       </div>
 
       {error && (
-        <div className="border-b border-slate-800 bg-slate-900 px-4 py-2 text-center text-xs text-amber-400" role="status">
+        <div className="border-b border-neutral-800 bg-neutral-900 px-4 py-2 text-center text-xs text-amber-400" role="status">
           {error}
         </div>
       )}
 
       <div className="relative h-[calc(100vh-3.5rem)] w-full">
         {!loaded && !blocked && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-slate-950 text-slate-400">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-neutral-950 text-neutral-400">
             <Loader2 className="animate-spin" size={28} />
             <span className="text-sm">Opening Everythingle…</span>
           </div>
         )}
         {blocked && !loaded && (
-          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-slate-950 p-6 text-center">
+          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-neutral-950 p-6 text-center">
             <AlertTriangle size={28} className="text-amber-400" />
-            <p className="max-w-md text-sm text-slate-300">
+            <p className="max-w-md text-sm text-neutral-300">
               {mode === 'direct'
                 ? 'Everythingle could not be framed directly. Try the Cherry proxy connection, or open it in a new tab.'
                 : 'The Cherry proxy server did not respond. Try another server or open Everythingle directly.'}
