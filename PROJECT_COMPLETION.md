@@ -449,12 +449,15 @@ recorded above.
 ### Verified in this pass
 
 `npm run typecheck` 0 · `npm run lint` 0 · `bun test tests` 71 pass ·
-`npm run build` exit 0 · `node scripts/qa/interface-check.mjs` 39/39 ·
-`node scripts/qa/auth-check.mjs` 12/12 against the isolated backend ·
+`npm run build` exit 0 · `node scripts/qa/interface-check.mjs` 54/54 ·
+`node scripts/qa/auth-check.mjs` 14/14 against the isolated backend ·
+`node --env-file=.env.local scripts/qa/check-session-sync.mjs` 5/5 ·
 `node --env-file=.env.local scripts/qa/check-password-change.mjs` 6/6 ·
 `node scripts/qa/check-proxies.mjs` 61 endpoints recorded ·
 `node scripts/qa/check-services.mjs` 9/9 ·
-`node --env-file=.env.local scripts/qa/check-cloud-save.mjs` 6/6.
+`node --env-file=.env.local scripts/qa/check-cloud-save.mjs` 6/6 ·
+`GEEGLE_EXPECT_PRODUCTION=1 node scripts/qa/check-production-env.mjs` fails on the
+isolated build as designed.
 
 ### Corrected facts
 
@@ -478,3 +481,35 @@ Artwork for the remaining catalog; full proxy identity review; mirror
 classification of the 248 unreferenced wrappers; save verification for engines
 other than 2048; game-frame origin isolation; Smashy Road and Wanted 2 (no
 authorized build); production migrations awaiting approval.
+
+## Final release cycle (feature/geegle-final-release-fixes)
+
+- **Production sign-in root cause re-confirmed after PR #4 merged.** Render now
+  serves `index-CC8Bq6la.js`, still compiled with
+  `https://wkdlsaydqyymynoipmhl.supabase.co` (isolated). Live sanitized
+  checks: `/auth/v1/settings` 200 with `mailer_autoconfirm: false`; password
+  grant 400 `invalid_credentials`. Owner steps are in
+  `docs/PRODUCTION_AUTH_HANDOFF.md`; `npm run check:prod-build` now fails a
+  production build that points at the isolated project.
+- **Search moved into the sticky top header** (wordmark + Settings left,
+  search centre, avatar right, Games/Apps/Proxies row, categories below), with
+  suggestions anchored under the field and Enter always filtering.
+- **Canonical root navigation**: no `#games` fragment; history state carries the
+  view; Back/Forward return landing/library at `/`; old `#games` links rewrite.
+- **Library brand is text-only**; the circular G badge beside the wordmark is
+  gone. Independent circular favicon remains.
+- **Player controls**: games show the exit arrow alone at top left and the rest
+  at top right; YouTube's viewer is centered at 16:9 with an external fallback.
+- **Settings is tabbed** (Theme / Preferences / Tab appearance) with an optional
+  user-owned tab title/icon, validated and synced per account.
+- **Landing avatar** now opens the account form (the dialog is rendered on both
+  surfaces), and Escape closes it.
+- Cards lift 1–2 px with a soft neutral shadow over 150 ms.
+
+Verified in this cycle: typecheck 0, lint 0, build 0, interface 54/54, auth
+14/14, session/sync 5/5, services 9/9, cloud save 6/6, password change passing,
+production guard failing on the isolated build by design.
+
+Still open: artwork (73 verified records of 2711), proxy identity review, mirror
+classification, per-engine save verification beyond 2048, real frame origin
+isolation, Smashy Road / Wanted 2 builds, production rollout approval.

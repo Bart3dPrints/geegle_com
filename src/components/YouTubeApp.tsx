@@ -3,7 +3,7 @@
 // YouTube's supported integration methods. This is an official embed, not a
 // mirror of YouTube.
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ArrowLeft, Search, Play, Loader2 } from 'lucide-react';
 
 const NOCODDIE = 'https://www.youtube-nocookie.com';
@@ -41,6 +41,18 @@ export function YouTubeApp({ onExit }: { onExit: () => void }) {
   const [videoId, setVideoId] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [embedFailed, setEmbedFailed] = useState(false);
+
+  // A frame the provider refuses to embed never fires onError; fall back to an
+  // ordinary external open after a bounded wait.
+  useEffect(() => {
+    if (!videoId || !loading) return;
+    const timer = window.setTimeout(() => {
+      setEmbedFailed(true);
+      setLoading(false);
+    }, 8000);
+    return () => window.clearTimeout(timer);
+  }, [videoId, loading]);
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -53,6 +65,7 @@ export function YouTubeApp({ onExit }: { onExit: () => void }) {
       return;
     }
     setLoading(true);
+    setEmbedFailed(false);
     setVideoId(id);
   };
 
@@ -90,10 +103,10 @@ export function YouTubeApp({ onExit }: { onExit: () => void }) {
         </div>
       )}
 
-      <div className="absolute inset-0 flex items-center justify-center p-4 pt-20">
+      <div className="absolute inset-0 flex items-center justify-center px-4 pb-6 pt-20">
         {videoId ? (
-          <div className="h-full w-full max-w-5xl">
-            <div className="relative mx-auto aspect-video h-full max-h-full">
+          <div className="w-full max-w-5xl">
+            <div className="relative mx-auto aspect-video w-full overflow-hidden rounded-lg bg-neutral-900">
               {loading && (
                 <div className="absolute inset-0 flex items-center justify-center text-neutral-400">
                   <Loader2 className="animate-spin" size={28} />
@@ -101,15 +114,45 @@ export function YouTubeApp({ onExit }: { onExit: () => void }) {
               )}
               <iframe
                 key={videoId}
-                className="absolute inset-0 h-full w-full rounded-lg"
+                className="absolute inset-0 h-full w-full"
                 src={`${NOCODDIE}/embed/${videoId}?rel=0`}
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 referrerPolicy="strict-origin-when-cross-origin"
-                onLoad={() => setLoading(false)}
+                onLoad={() => {
+                  setLoading(false);
+                  setEmbedFailed(false);
+                }}
               />
             </div>
+            {embedFailed && (
+              <p
+                className="mx-auto mt-3 max-w-xl text-center text-sm text-neutral-300"
+                role="alert"
+              >
+                This video can't be played inside Geegle.{' '}
+                <a
+                  className="underline underline-offset-2"
+                  href={`https://www.youtube.com/watch?v=${videoId}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open it on YouTube
+                </a>
+                .
+              </p>
+            )}
+            <p className="mt-2 text-center text-xs text-neutral-500">
+              <a
+                className="underline underline-offset-2 hover:text-neutral-300"
+                href={`https://www.youtube.com/watch?v=${videoId}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open on YouTube
+              </a>
+            </p>
           </div>
         ) : (
           <div className="text-center text-neutral-400">

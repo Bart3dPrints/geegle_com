@@ -21,7 +21,7 @@ export function GameCard({
   return (
     <div
       data-card=""
-      className="card group relative overflow-hidden transition-colors hover:border-neutral-300 dark:hover:border-neutral-700"
+      className="card group relative overflow-hidden transition-[transform,border-color,box-shadow,background-color] duration-150 ease-out hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-[0_1px_2px_rgba(0,0,0,0.16),0_6px_14px_-6px_rgba(0,0,0,0.28)] dark:hover:border-neutral-600"
     >
       <button
         className="block w-full text-left"

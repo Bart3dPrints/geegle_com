@@ -445,23 +445,25 @@ export function GamePlayer({
       </div>
 
       {isGame ? (
-        <div className="absolute right-3 top-3 z-20 flex max-w-[calc(100%-1.5rem)] flex-wrap items-center justify-end gap-1.5">
-          {backButton}
-          {entry && (
-            <button
-              className={clusterButton}
-              onClick={onToggleFavorite}
-              aria-label="Toggle favorite"
-              aria-pressed={isFavorite}
-              title="Favorite"
-            >
-              <Star size={16} className={isFavorite ? 'fill-neutral-100 text-neutral-100' : ''} />
-            </button>
-          )}
-          {saveControls}
-          {openButton}
-          {fullscreenButton}
-        </div>
+        <>
+          <div className="absolute left-3 top-3 z-20 flex items-center gap-1.5">{backButton}</div>
+          <div className="absolute right-3 top-3 z-20 flex max-w-[calc(100%-4.5rem)] flex-wrap items-center justify-end gap-1.5">
+              {entry && (
+              <button
+                className={clusterButton}
+                onClick={onToggleFavorite}
+                aria-label="Toggle favorite"
+                aria-pressed={isFavorite}
+                title="Favorite"
+              >
+                <Star size={16} className={isFavorite ? 'fill-neutral-100 text-neutral-100' : ''} />
+              </button>
+            )}
+            {saveControls}
+            {openButton}
+            {fullscreenButton}
+          </div>
+        </>
       ) : (
         <>
           <div className="absolute bottom-3 left-3 z-20 flex items-center gap-1.5">{backButton}</div>

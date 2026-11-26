@@ -60,7 +60,7 @@ try {
   await page.fill('.gl-field input', 'pirate');
   await page.press('.gl-field input', 'Enter');
   await page.waitForSelector('text=Please wait if you see nothing upon clicking on a Game/Proxy.');
-  check('pirate opens the library with no gate', page.url().endsWith('#games'));
+  check('pirate opens the library with no gate or fragment', new URL(page.url()).hash === '' && page.url().startsWith(BASE));
   const notice = page.locator('[role="dialog"][aria-labelledby="library-notice-text"]');
   check('library notice uses the exact text', (await notice.innerText()).includes('Please wait if you see nothing upon clicking on a Game/Proxy.'));
   check("library notice checkbox starts unchecked", !(await notice.locator('input[type=checkbox]').isChecked()));
@@ -81,9 +81,19 @@ try {
   check('suppressed notice stays dismissed after reload', (await page.locator('[aria-labelledby="library-notice-text"]').count()) === 0);
 
   // Library search: hovering a suggestion and pressing Enter filters, never launches.
+  // Sticky search: scroll deep, keep the field in the sticky header, type,
+  // hover a suggestion and press Enter — results filter and no game launches.
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight * 0.6));
+  await page.waitForTimeout(300);
+  const headerBox = await page.locator('header').boundingBox();
+  check('sticky header stays at the top while scrolled', (headerBox?.y ?? 99) === 0, JSON.stringify(headerBox));
   const search = page.getByRole('combobox', { name: 'Search games' });
+  const searchBox = await search.boundingBox();
+  check('search field remains visible while scrolled', (searchBox?.y ?? 999) >= 0 && (searchBox?.y ?? 999) < 120, JSON.stringify(searchBox));
+  await search.click();
   await search.fill('mario');
-  const suggestion = page.locator('#library-suggestions [role="option"]').first();
+  const suggestion = page.locator('#library-search-suggestions [role="option"]').first();
+  check('suggestions are anchored below the header field', (await suggestion.boundingBox())?.y > (searchBox?.y ?? 0) - 1);
   await suggestion.hover();
   await search.press('Enter');
   await page.waitForTimeout(300);
@@ -91,18 +101,43 @@ try {
   check('Enter commits the query as a library filter', (await page.getByRole('status').first().innerText()).includes('results for'));
   const filtered = await page.locator('[data-card]').count();
   check('filtered results are a subset', filtered > 0 && filtered < 2621, String(filtered));
-  check('suggestions close after Enter', (await page.locator('#library-suggestions').count()) === 0);
+  check('suggestions close after Enter', (await page.locator('#library-search-suggestions').count()) === 0);
+  check('filtering did not navigate away from the root URL', new URL(page.url()).hash === '');
 
   await search.fill('zeldaa');
   await page.waitForTimeout(200);
-  const fuzzy = await page.locator('#library-suggestions [role="option"]').count();
+  const fuzzy = await page.locator('#library-search-suggestions [role="option"]').count();
   check('misspelling still suggests results', fuzzy > 0, String(fuzzy));
   await search.press('Escape');
-  check('Escape closes suggestions', (await page.locator('#library-suggestions').count()) === 0);
+  check('Escape closes suggestions', (await page.locator('#library-search-suggestions').count()) === 0);
   await search.fill('');
   await search.press('Enter');
   await page.waitForTimeout(200);
   check('empty search resets the library', (await page.locator('[data-card]').count()) > 1000);
+
+  // The same sticky field filters Apps and Proxies.
+  await page.getByRole('button', { name: 'apps', exact: true }).click();
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+  await page.waitForTimeout(300);
+  await search.fill('youtube');
+  await search.press('Enter');
+  await page.waitForTimeout(300);
+  const appCards = await page.locator('section[aria-label="Apps"] [data-card]').count();
+  check('search filters the Apps view', appCards > 0 && appCards < 10, String(appCards));
+  await search.fill('');
+  await search.press('Enter');
+  await page.getByRole('button', { name: 'proxies', exact: true }).click();
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+  await page.waitForTimeout(300);
+  await search.fill('achroma');
+  await search.press('Enter');
+  await page.waitForTimeout(300);
+  const proxyCards = await page.locator('section[aria-label="Proxies"] .card').count();
+  check('search filters the Proxies view', proxyCards > 0 && proxyCards < 10, String(proxyCards));
+  await search.fill('');
+  await search.press('Enter');
+  await page.getByRole('button', { name: 'games', exact: true }).click();
+  await page.waitForTimeout(200);
 
   // Category filter.
   await page.getByRole('tab', { name: 'Puzzle' }).click();
@@ -162,7 +197,9 @@ try {
   check('player shows open-in-new-window', (await page.getByRole('button', { name: 'Open in a new window' }).count()) === 1);
   check('player shows fullscreen', (await page.getByRole('button', { name: 'Fullscreen' }).count()) === 1);
   const backBox = await page.getByRole('button', { name: 'Back to library' }).boundingBox();
-  check('game back control sits in the top-right cluster', (backBox?.x ?? 0) > 1000 && (backBox?.y ?? 999) < 80, JSON.stringify(backBox));
+  check('game exit sits alone at the top left', (backBox?.x ?? 999) < 100 && (backBox?.y ?? 999) < 100, JSON.stringify(backBox));
+  const fullscreenBox = await page.getByRole('button', { name: 'Fullscreen' }).boundingBox();
+  check('game controls sit at the top right', (fullscreenBox?.x ?? 0) > 1000 && (fullscreenBox?.y ?? 999) < 100, JSON.stringify(fullscreenBox));
   await page.getByRole('button', { name: 'Back to library' }).click();
   await page.waitForSelector('[data-card]');
 
@@ -170,6 +207,7 @@ try {
   await page.getByRole('button', { name: 'Settings' }).click();
   const settings = page.locator('[role="dialog"][aria-label="Settings"]');
   check('settings opens from the left of the header', await settings.isVisible());
+  check('settings is tabbed', (await settings.getByRole('tab').count()) === 3);
   await settings.locator('input[aria-label="Custom background colour"]').fill('#202020');
   await settings.getByRole('button', { name: 'Apply' }).click();
   await page.waitForTimeout(200);
@@ -184,6 +222,41 @@ try {
   const reset = await page.evaluate(() => getComputedStyle(document.body).backgroundColor);
   check('reset restores the neutral default', reset === 'rgb(250, 250, 250)', reset);
   await page.locator('[role="dialog"][aria-label="Settings"]').getByRole('button', { name: 'Close settings' }).click();
+
+  // Library header brand is text only.
+  const brand = page.locator('header').getByRole('button', { name: /Geegle home/ });
+  check('library brand is the text Geegle alone', (await brand.innerText()).trim() === 'Geegle');
+  check('no circular G badge remains in the header', (await brand.locator('span').count()) === 0);
+
+  // Optional tab appearance: apply a custom title, reload, then reset.
+  await page.getByRole('button', { name: 'Settings' }).click();
+  const settingsDialog = page.locator('[role="dialog"][aria-label="Settings"]');
+  await settingsDialog.getByRole('tab', { name: 'Tab appearance' }).click();
+  await settingsDialog.locator('#tab-title').fill('Geegle Test');
+  await settingsDialog.getByRole('button', { name: 'Apply' }).click();
+  await page.waitForTimeout(200);
+  check('custom page title applies', (await page.title()) === 'Geegle Test', await page.title());
+  await page.reload({ waitUntil: 'networkidle' });
+  check('custom page title persists after reload', (await page.title()) === 'Geegle Test', await page.title());
+  await page.getByRole('button', { name: 'Settings' }).click();
+  await page.locator('[role="dialog"][aria-label="Settings"]').getByRole('tab', { name: 'Tab appearance' }).click();
+  await page.locator('[role="dialog"][aria-label="Settings"]').getByRole('button', { name: 'Reset to defaults' }).click();
+  await page.waitForTimeout(200);
+  check('resetting tab appearance restores the Geegle title', (await page.title()) === 'Geegle', await page.title());
+  await page.locator('[role="dialog"][aria-label="Settings"]').getByRole('button', { name: 'Close settings' }).click();
+
+  // Browser Back/Forward use ordinary history entries at the root URL.
+  for (let step = 0; step < 3 && (await page.locator('.gl-field').count()) === 0; step += 1) {
+    await page.goBack();
+    await page.waitForTimeout(250);
+  }
+  const backUrl = new URL(page.url());
+  check('browser Back returns to the landing page at the root URL', backUrl.hash === '' && (await page.locator('.gl-field').count()) === 1, page.url());
+  for (let step = 0; step < 3 && (await page.locator('header').count()) === 0; step += 1) {
+    await page.goForward();
+    await page.waitForTimeout(250);
+  }
+  check('browser Forward returns to the library at the root URL', new URL(page.url()).hash === '' && (await page.locator('header').count()) === 1, page.url());
 
   await page.screenshot({ path: `${OUT}/library-desktop.png`, fullPage: true });
 

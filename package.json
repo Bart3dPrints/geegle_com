@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "test": "bun test tests",
-    "typecheck": "tsc --noEmit -p tsconfig.app.json"
+    "typecheck": "tsc --noEmit -p tsconfig.app.json",
+    "check:prod-build": "node scripts/qa/check-production-env.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",

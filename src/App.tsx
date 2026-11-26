@@ -51,6 +51,15 @@ import { SearchLanding } from './components/SearchLanding';
 import { PROXY_SERVICES, proxyUrl } from './data/proxies';
 import type { LandingAppearance } from './landing/appearance';
 import type { CloudSaveHandle } from './lib/cloudSaves';
+import { buildSearchIndex, searchIndex } from './lib/search';
+import { CATEGORIES } from './data/types';
+import { LibrarySearchBar } from './components/LibrarySearchBar';
+import {
+  applyTabIdentity,
+  DEFAULT_TAB_IDENTITY,
+  type TabIdentity,
+} from './lib/tabIdentity';
+import { loadTabIdentity, saveTabIdentity } from './lib/userData';
 
 const APPS: GameEntry[] = [
   {
@@ -93,6 +102,8 @@ const APPS: GameEntry[] = [
 // BOTH Games and Apps from one stable ID, so favorites/history stay unified).
 const APPS_GRID = [...APPS, ...DUAL_SECTION_ENTRIES];
 const SEARCHABLE = [...new Map([...legacyCatalog, ...APPS_GRID].map((entry) => [entry.id, entry])).values()];
+const SEARCH_INDEX = buildSearchIndex(SEARCHABLE);
+const APP_SEARCH_INDEX = buildSearchIndex(APPS_GRID);
 
 type Tab = 'games' | 'apps' | 'proxies';
 
@@ -135,7 +146,17 @@ function dialogMotion(reduce: boolean | null) {
 }
 
 export default function App() {
-  const [showLanding, setShowLanding] = useState(() => location.hash !== '#games');
+  const [showLanding, setShowLanding] = useState(
+    () => !(history.state?.geegleView === 'library' || location.hash === '#games')
+  );
+  const [searchInput, setSearchInput] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [activeSuggestion, setActiveSuggestion] = useState(-1);
+  const [category, setCategory] = useState('all');
+  const [headerOffset, setHeaderOffset] = useState(150);
+  const [tabIdentity, setTabIdentity] = useState<TabIdentity>(DEFAULT_TAB_IDENTITY);
+  const headerRef = useRef<HTMLElement>(null);
 
   const auth = useAuth();
   const userId = auth.user?.id ?? null;
@@ -186,6 +207,7 @@ export default function App() {
     setServerDefaults({});
     setSettingsLoaded(false);
     setAppearance(DEFAULT_APPEARANCE_SETTINGS);
+    setTabIdentity(DEFAULT_TAB_IDENTITY);
     setTheme('system');
     setSyncError(null);
     if (auth.loading) return;
@@ -215,6 +237,34 @@ export default function App() {
     return () => { cancelled = true; };
   }, [auth.loading, userId, setTheme]);
 
+  // Tab identity is per account; defaults are restored on account change.
+  useEffect(() => {
+    if (auth.loading) return;
+    let cancelled = false;
+    void loadTabIdentity(userId).then((result) => {
+      if (cancelled) return;
+      setTabIdentity(result.data ?? DEFAULT_TAB_IDENTITY);
+      if (!result.ok && result.error) setSyncError(result.error);
+    });
+    return () => { cancelled = true; };
+  }, [auth.loading, userId]);
+
+  useEffect(() => {
+    applyTabIdentity(tabIdentity);
+  }, [tabIdentity]);
+
+  // The sticky header grows or shrinks with the viewport and the category row;
+  // letter navigation and scroll margins use its real measured height.
+  useEffect(() => {
+    const element = headerRef.current;
+    if (!element) return;
+    const update = () => setHeaderOffset(element.getBoundingClientRect().height);
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [showLanding, tab]);
+
   // Solid appearance colours are applied as CSS variables; unset means the
   // neutral default from index.css.
   useEffect(() => {
@@ -231,6 +281,16 @@ export default function App() {
     noticeShownRef.current = true;
     setNoticeOpen(true);
   }, [showLanding, settingsLoaded, noticeDismissed]);
+
+  // Escape closes the account form, matching every other dialog.
+  useEffect(() => {
+    if (!authOpen) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setAuthOpen(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [authOpen]);
 
   // Close the account menu on outside click or Escape.
   useEffect(() => {
@@ -271,9 +331,25 @@ export default function App() {
 
   const openLibrary = () => {
     noticeShownRef.current = false;
-    if (location.hash !== '#games') history.pushState(null, '', '#games');
+    if (history.state?.geegleView !== 'library') {
+      history.pushState({ geegleView: 'library' }, '', location.pathname + location.search);
+    }
     setTab('games');
     setShowLanding(false);
+  };
+
+  const commitSearch = useCallback(() => {
+    setSearchQuery(searchInput.trim());
+    setSearchOpen(false);
+    setActiveSuggestion(-1);
+    window.scrollTo({ top: 0 });
+  }, [searchInput]);
+
+  const clearSearch = () => {
+    setSearchInput('');
+    setSearchQuery('');
+    setSearchOpen(false);
+    setActiveSuggestion(-1);
   };
 
   const openLanding = useCallback(async (historyTraversal = false) => {
@@ -285,21 +361,74 @@ export default function App() {
     setActiveProxy(null);
     setYoutubeOpen(false);
     setEverythingleOpen(false);
-    if (!historyTraversal && location.hash) history.pushState(null, '', location.pathname + location.search);
+    if (!historyTraversal && history.state?.geegleView === 'library') {
+      history.replaceState({ geegleView: 'landing' }, '', location.pathname + location.search);
+    }
     noticeShownRef.current = false;
     setNoticeOpen(false);
     setShowLanding(true);
     window.scrollTo(0, 0);
   }, [closeGame]);
 
+  // Canonical navigation lives at the root URL: the view is history state, not
+  // a fragment. Old #games bookmarks are normalized to the same clean URL.
+  useEffect(() => {
+    const library = location.hash === '#games' || history.state?.geegleView === 'library';
+    history.replaceState(
+      { geegleView: library ? 'library' : 'landing' },
+      '',
+      location.pathname + location.search
+    );
+  }, []);
+
+  // Old #games links keep working, but the app immediately rewrites them to
+  // the canonical root URL so the fragment does not persist.
+  useEffect(() => {
+    const onHash = () => {
+      if (location.hash !== '#games') return;
+      setShowLanding(false);
+      history.replaceState({ geegleView: 'library' }, '', location.pathname + location.search);
+    };
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, []);
+
   useEffect(() => {
     const navigate = () => {
-      if (location.hash === '#games') setShowLanding(false);
+      if (history.state?.geegleView === 'library') setShowLanding(false);
       else if (!showLanding) void openLanding(true);
     };
     window.addEventListener('popstate', navigate);
     return () => window.removeEventListener('popstate', navigate);
   }, [showLanding, openLanding]);
+
+  const suggestions = useMemo(
+    () => (searchOpen && searchInput.trim()
+      ? searchIndex(SEARCH_INDEX, searchInput, 6).map((result) => result.entry)
+      : []),
+    [searchOpen, searchInput]
+  );
+
+  const filteredGames = useMemo(() => {
+    const base = searchQuery
+      ? searchIndex(SEARCH_INDEX, searchQuery, legacyCatalog.length).map((result) => result.entry)
+      : legacyCatalog;
+    return category === 'all' ? base : base.filter((entry) => entry.categories.includes(category as never));
+  }, [searchQuery, category]);
+
+  const filteredApps = useMemo(
+    () => (searchQuery
+      ? searchIndex(APP_SEARCH_INDEX, searchQuery, APPS_GRID.length).map((result) => result.entry)
+      : APPS_GRID),
+    [searchQuery]
+  );
+
+  const filteredProxies = useMemo(() => {
+    const term = searchQuery.trim().toLowerCase();
+    return term
+      ? PROXY_SERVICES.filter((service) => service.name.toLowerCase().includes(term))
+      : PROXY_SERVICES;
+  }, [searchQuery]);
 
   const handleAuth = async (mode: 'login' | 'register') => {
     if (!await closeGame()) return;
@@ -382,6 +511,16 @@ export default function App() {
     }
   };
 
+  const handleSaveTabIdentity = async (value: TabIdentity) => {
+    const previous = tabIdentity;
+    setTabIdentity(value);
+    const result = await saveTabIdentity(value, userId);
+    if (!result.ok) {
+      setTabIdentity(previous);
+      throw new Error(result.error ?? 'Could not save tab appearance.');
+    }
+  };
+
   const handleShowRecent = (visible: boolean) => {
     setShowRecent(visible);
     void saveRecentVisible(visible, userId).then((res) => {
@@ -395,8 +534,91 @@ export default function App() {
     [recent, byId]
   );
 
+  // The account dialog belongs to both surfaces: the landing avatar and the
+  // library header open the same form.
+  const renderAuthDialog = () => (
+  <AnimatePresence>
+    {authOpen && (
+      <div
+        className="fixed inset-0 z-50 flex items-center justify-center bg-neutral-950/60 p-4"
+        onClick={() => setAuthOpen(false)}
+        role="dialog"
+        aria-modal="true"
+        aria-label={authMode === 'login' ? 'Sign in' : 'Create account'}
+      >
+        <motion.div
+          className="card w-full max-w-sm p-6"
+          {...dialogMotion(reduceMotion)}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <h2 className="mb-4">{authMode === 'login' ? 'Sign in' : 'Create account'}</h2>
+          {!auth.enabled && (
+            <div className="mb-4 flex gap-2 rounded-md bg-neutral-100 p-3 text-sm text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">
+              <AlertTriangle size={16} className="mt-0.5 shrink-0" />
+              <span>Accounts are not configured on this deployment.</span>
+            </div>
+          )}
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleAuth(authMode);
+            }}
+          >
+            <label className="label" htmlFor="auth-username">
+              Username
+            </label>
+            <input
+              id="auth-username"
+              className="input mb-4"
+              value={authUsername}
+              onChange={(e) => setAuthUsername(e.target.value)}
+              placeholder="3-32 characters"
+              autoComplete="username"
+              required
+            />
+            <label className="label" htmlFor="auth-password">
+              Password
+            </label>
+            <input
+              id="auth-password"
+              className="input mb-2"
+              type="password"
+              value={authPassword}
+              onChange={(e) => setAuthPassword(e.target.value)}
+              placeholder="At least 8 characters"
+              autoComplete={authMode === 'login' ? 'current-password' : 'new-password'}
+              required
+            />
+            {authError && (
+              <p className="mb-2 text-sm text-red-600 dark:text-red-400" role="alert">
+                {authError}
+              </p>
+            )}
+            <button className="btn-primary w-full" disabled={authBusy} type="submit">
+              {authBusy && <Loader2 className="animate-spin" size={16} />}
+              {authMode === 'login' ? 'Sign in' : 'Create account'}
+            </button>
+          </form>
+          <button
+            className="mt-4 w-full text-center text-sm text-neutral-600 underline-offset-2 hover:underline dark:text-neutral-300"
+            onClick={() => {
+              setAuthMode(authMode === 'login' ? 'register' : 'login');
+              setAuthError(null);
+            }}
+          >
+            {authMode === 'login'
+              ? "Don't have an account? Create one"
+              : 'Already have an account? Sign in'}
+          </button>
+        </motion.div>
+      </div>
+    )}
+  </AnimatePresence>
+  );
+
   if (showLanding) {
     return (
+      <>
       <SearchLanding
         signedIn={Boolean(userId)}
         onOpenLibrary={openLibrary}
@@ -418,21 +640,20 @@ export default function App() {
           },
         } : undefined}
       />
+      {renderAuthDialog()}
+      </>
     );
   }
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--geegle-bg)' }}>
-      <header className="sticky top-0 z-40 border-b border-neutral-200 dark:border-neutral-800" style={{ backgroundColor: 'var(--geegle-card)' }}>
-        <div className="mx-auto flex h-14 max-w-7xl items-center gap-2 px-4 sm:px-6">
+      <header ref={headerRef} className="sticky top-0 z-40 border-b border-neutral-200 dark:border-neutral-800" style={{ backgroundColor: 'var(--geegle-card)' }}>
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-4 py-2 sm:px-6">
           <button
-            className="flex items-center gap-2 text-base font-semibold"
+            className="text-base font-semibold"
             onClick={() => void openLanding()}
             aria-label={`${SITE_TITLE} home`}
           >
-            <span className="flex h-7 w-7 items-center justify-center rounded-full border border-neutral-900 text-sm font-bold dark:border-neutral-100">
-              G
-            </span>
             {SITE_TITLE}
           </button>
 
@@ -445,7 +666,35 @@ export default function App() {
             <SettingsIcon size={18} />
           </button>
 
-          <div className="flex-1" />
+          <div className="order-last w-full md:order-none md:w-auto md:max-w-xl md:flex-1">
+            <LibrarySearchBar
+              input={searchInput}
+              query={searchQuery}
+              suggestions={suggestions}
+              open={searchOpen}
+              activeIndex={activeSuggestion}
+              onInputChange={(value) => {
+                setSearchInput(value);
+                setSearchOpen(true);
+                setActiveSuggestion(-1);
+              }}
+              onSubmit={commitSearch}
+              onClear={clearSearch}
+              onFocus={() => setSearchOpen(true)}
+              onClose={() => setSearchOpen(false)}
+              onActiveIndexChange={setActiveSuggestion}
+              onPick={(entry) => {
+                setSearchOpen(false);
+                setSearchInput('');
+                setSearchQuery('');
+                launch(entry);
+              }}
+              placeholder="Search games, apps and proxies"
+              inputId="library-search"
+            />
+          </div>
+
+          <div className="flex-1 md:hidden" />
 
           {syncError && (
             <span
@@ -555,85 +804,39 @@ export default function App() {
             ))}
           </div>
         </nav>
-      </header>
 
-      <AnimatePresence>
-        {authOpen && (
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-neutral-950/60 p-4"
-            onClick={() => setAuthOpen(false)}
-            role="dialog"
-            aria-modal="true"
-            aria-label={authMode === 'login' ? 'Sign in' : 'Create account'}
-          >
-            <motion.div
-              className="card w-full max-w-sm p-6"
-              {...dialogMotion(reduceMotion)}
-              onClick={(e) => e.stopPropagation()}
+        {tab === 'games' && (
+          <div className="border-t border-neutral-200 dark:border-neutral-800">
+            <div
+              className="mx-auto flex max-w-7xl flex-wrap gap-1.5 px-4 py-2 sm:px-6"
+              role="tablist"
+              aria-label="Categories"
             >
-              <h2 className="mb-4">{authMode === 'login' ? 'Sign in' : 'Create account'}</h2>
-              {!auth.enabled && (
-                <div className="mb-4 flex gap-2 rounded-md bg-neutral-100 p-3 text-sm text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">
-                  <AlertTriangle size={16} className="mt-0.5 shrink-0" />
-                  <span>Accounts are not configured on this deployment.</span>
-                </div>
-              )}
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  handleAuth(authMode);
-                }}
-              >
-                <label className="label" htmlFor="auth-username">
-                  Username
-                </label>
-                <input
-                  id="auth-username"
-                  className="input mb-4"
-                  value={authUsername}
-                  onChange={(e) => setAuthUsername(e.target.value)}
-                  placeholder="3-32 characters"
-                  autoComplete="username"
-                  required
-                />
-                <label className="label" htmlFor="auth-password">
-                  Password
-                </label>
-                <input
-                  id="auth-password"
-                  className="input mb-2"
-                  type="password"
-                  value={authPassword}
-                  onChange={(e) => setAuthPassword(e.target.value)}
-                  placeholder="At least 8 characters"
-                  autoComplete={authMode === 'login' ? 'current-password' : 'new-password'}
-                  required
-                />
-                {authError && (
-                  <p className="mb-2 text-sm text-red-600 dark:text-red-400" role="alert">
-                    {authError}
-                  </p>
-                )}
-                <button className="btn-primary w-full" disabled={authBusy} type="submit">
-                  {authBusy && <Loader2 className="animate-spin" size={16} />}
-                  {authMode === 'login' ? 'Sign in' : 'Create account'}
-                </button>
-              </form>
               <button
-                className="mt-4 w-full text-center text-sm text-neutral-600 underline-offset-2 hover:underline dark:text-neutral-300"
-                onClick={() => {
-                  setAuthMode(authMode === 'login' ? 'register' : 'login');
-                  setAuthError(null);
-                }}
+                role="tab"
+                aria-selected={category === 'all'}
+                className={category === 'all' ? 'chip-active' : 'chip'}
+                onClick={() => setCategory('all')}
               >
-                {authMode === 'login'
-                  ? "Don't have an account? Create one"
-                  : 'Already have an account? Sign in'}
+                All
               </button>
-            </motion.div>
+              {CATEGORIES.map((entry) => (
+                <button
+                  key={entry.key}
+                  role="tab"
+                  aria-selected={category === entry.key}
+                  className={category === entry.key ? 'chip-active' : 'chip'}
+                  onClick={() => setCategory(entry.key)}
+                >
+                  {entry.label}
+                </button>
+              ))}
+            </div>
           </div>
         )}
-      </AnimatePresence>
+      </header>
+
+      {renderAuthDialog()}
 
       <AnimatePresence>
         {settingsOpen && (
@@ -641,6 +844,8 @@ export default function App() {
             username={auth.user ? auth.username : null}
             showRecent={showRecent}
             onShowRecentChange={handleShowRecent}
+            tabIdentity={tabIdentity}
+            onSaveTabIdentity={handleSaveTabIdentity}
             appearance={{ ...appearance, mode: theme }}
             onSaveAppearance={async (value) => {
               setAppearance(value);
@@ -711,10 +916,12 @@ export default function App() {
       <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
         {tab === 'games' && (
           <Library
-            games={legacyCatalog}
+            games={filteredGames}
             favorites={favorites}
             recent={recentEntries}
             showRecent={showRecent}
+            query={searchQuery}
+            headerOffset={headerOffset}
             onLaunch={launch}
             onToggleFavorite={toggleFav}
           />
@@ -723,7 +930,7 @@ export default function App() {
         {tab === 'apps' && (
           <section aria-label="Apps">
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-              {APPS_GRID.map((g) => (
+              {filteredApps.map((g) => (
                 <GameCard key={g.id} game={g} onLaunch={() => launch(g)} />
               ))}
             </div>
@@ -733,7 +940,7 @@ export default function App() {
         {tab === 'proxies' && (
           <section aria-label="Proxies">
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {PROXY_SERVICES.map((service) => (
+              {filteredProxies.map((service) => (
                 <ProxyCard
                   key={service.id}
                   service={service}
