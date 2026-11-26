@@ -1,11 +1,10 @@
-// Focused search overlay: blurred backdrop, category chips under the input,
-// live fuzzy results with real game artwork, full keyboard navigation.
-// Sharp foreground over blurred background per the design principles.
+// Focused search overlay: live fuzzy results with real artwork and full
+// keyboard navigation. Sharp foreground over a dimmed backdrop.
 
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { motion } from 'motion/react';
 import { Search, X } from 'lucide-react';
 import type { GameEntry } from '../types';
-import { CATEGORIES } from '../data/types';
 import { buildSearchIndex, searchIndex } from '../lib/search';
 import { GameArt } from './GameArt';
 
@@ -28,10 +27,7 @@ export function SearchOverlay({
     [index, query]
   );
   const suggestions = useMemo(
-    () =>
-      [...entries]
-        .sort((a, b) => a.title.localeCompare(b.title))
-        .slice(0, 6),
+    () => [...entries].sort((a, b) => a.title.localeCompare(b.title)).slice(0, 6),
     [entries]
   );
   const items = results.length > 0 ? results.map((r) => r.entry) : suggestions;
@@ -70,11 +66,14 @@ export function SearchOverlay({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-start justify-center bg-slate-950/70 p-4 pt-24 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-start justify-center bg-slate-950/70 p-4 pt-24"
       onClick={onClose}
     >
-      <div
+      <motion.div
         className="card w-full max-w-2xl"
+        initial={{ opacity: 0, y: -6 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.16, ease: 'easeOut' }}
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-label="Search games"
@@ -108,58 +107,41 @@ export function SearchOverlay({
           </button>
         </div>
 
-        <div className="flex flex-wrap gap-2 border-b border-slate-200 px-4 py-3 dark:border-slate-800">
-          {CATEGORIES.slice(0, 12).map((c) => (
-            <button
-              key={c.key}
-              className="chip"
-              onClick={() => setQuery(c.label.toLowerCase())}
-            >
-              {c.label}
-            </button>
-          ))}
-        </div>
-
         <div className="max-h-80 overflow-y-auto p-2">
           {query && results.length === 0 && (
             <div className="p-6 text-center text-sm text-slate-500 dark:text-slate-400">
-              No results for &quot;{query}&quot;. Try a category name (e.g.
-              &quot;horror&quot;) or check the spelling.
+              No results for &quot;{query}&quot;. Check the spelling or try a
+              category name.
             </div>
           )}
           {!query && (
-            <p className="px-2 py-1 text-xs uppercase tracking-wide text-slate-400">
-              Suggested
-            </p>
+            <p className="px-2 py-1 text-xs uppercase tracking-wide text-slate-400">Suggested</p>
           )}
-          {items.map((g, i) => (
+          {items.map((game, i) => (
             <button
-              key={g.id}
-              className={`flex w-full items-center gap-3 rounded-lg p-2 text-left ${
+              key={game.id}
+              className={`flex w-full items-center gap-3 rounded-md p-2 text-left transition-colors ${
                 i === activeIndex
                   ? 'bg-slate-100 dark:bg-slate-800'
                   : 'hover:bg-slate-50 dark:hover:bg-slate-800/50'
               }`}
               onMouseEnter={() => setActiveIndex(i)}
               onClick={() => {
-                onLaunch(g);
+                onLaunch(game);
                 onClose();
               }}
             >
-              <GameArt
-                game={g}
-                className="h-10 w-16 shrink-0 rounded-md text-sm font-bold"
-              />
+              <GameArt game={game} className="h-10 w-16 shrink-0 rounded text-sm font-bold" />
               <span className="min-w-0 flex-1">
-                <span className="block truncate text-sm font-medium">{g.title}</span>
+                <span className="block truncate text-sm font-medium">{game.title}</span>
                 <span className="block truncate text-xs text-slate-500 dark:text-slate-400">
-                  {g.categories.join(', ') || 'App'}
+                  {game.categories.join(', ') || 'App'}
                 </span>
               </span>
             </button>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

@@ -212,3 +212,194 @@ external fallback was **not** performed this session.
 ### Checks run (this session, fresh)
 `npm run typecheck` 0 · `npm run lint` 0 · `npm run build` 0 (`dist/geegle-sw.js`
 present) · `bun test tests` 59 pass / 0 fail across 11 files.
+
+## Final quality pass (2026-11-25, third session)
+
+Branch `fix/final-production-quality`, created from the merged `main` (`b65ffdb`,
+PR #2). `HEAD` matched `origin/main` before the branch was cut, so this work is
+corrective and additive.
+
+Fresh checks at the end of this pass: `npm run typecheck` 0, `npm run lint` 0,
+`npm run build` 0, `bun test tests` 70 pass / 0 fail across 13 files,
+`node scripts/qa/journey.mjs` 35 checks pass / 0 fail with no page errors and no
+failed same-origin requests.
+
+### Requirement checklist for this specification
+
+| # | Requirement | Status | Evidence |
+|---|---|---|---|
+| 1 | No unrequested visible elements, content or navigation | IMPLEMENTED AND VERIFIED | Rendered library contains only brand, secondary nav, search, filters, alphabetical rail, cards, Starred, optional Recently Played, account/settings, `docs/qa/library-desktop.png` |
+| 2 | No development content in public text, metadata, assets or errors | IMPLEMENTED AND VERIFIED | `tests/public-content.test.mjs` (8 tests); two real leaks found and removed (see below) |
+| 3 | Browser title exactly `Geegle` | IMPLEMENTED AND VERIFIED | `index.html`, live `document.title`, test |
+| 4 | Circular Geegle G favicon | IMPLEMENTED AND VERIFIED | `public/favicon.svg` is a circle in the neutral palette; assert in the content test |
+| 5 | Landing: faithful Google composition, no Games shortcut, no promo text | IMPLEMENTED AND VERIFIED | `docs/qa/landing-desktop.png`; `SearchLanding.tsx` no longer renders the library shortcut |
+| 6 | Neutral person silhouette when logged out, landing top-right | IMPLEMENTED AND VERIFIED | `.gl-avatar` in the screenshot; `signedIn` prop keeps it neutral |
+| 7 | `pirate` opens the library directly | IMPLEMENTED AND VERIFIED | Journey: "pirate opens the library" (`#games`) |
+| 8 | No secondary password page or verification modal | IMPLEMENTED AND VERIFIED | Gate component deleted from `App.tsx`; journey asserts no password input; content test forbids the old gate strings |
+| 9 | Only one Games/Apps/Proxies navigation area, without the small duplicate | IMPLEMENTED AND VERIFIED | Header renders one full-width secondary nav; journey counts exactly 3 section buttons |
+| 10 | Footer exactly `Bart made this. Thank him` | IMPLEMENTED AND VERIFIED | `src/lib/brand.ts` + live footer text + test |
+| 11 | Overhaul/redesign wording removed everywhere public | IMPLEMENTED AND VERIFIED | Footer build string removed; branch name stripped from 30 artwork source URLs; internal comment removed from bundled catalog data |
+| 12 | No navy/dark blue/purple/neon/gradient/glow/sparkle/emoji styling | IMPLEMENTED AND VERIFIED | Blue accent replaced with slate-900/slate-100 tokens in `index.css`; screenshots show a neutral grayscale interface |
+| 13 | Motion library actually used | IMPLEMENTED AND VERIFIED | `motion/react`: account menu, auth dialog, settings dialog, search dialog, tab underline (`layoutId`), Recently Played reveal, player entrance, star tap |
+| 14 | Anime.js actually used | IMPLEMENTED AND VERIFIED | Alphabetical scroll (`animate` on a scroll proxy) and the per-filter card stagger (`stagger`), first 60 cards only |
+| 15 | Reduced motion respected | IMPLEMENTED AND VERIFIED (code + CSS) | `useReducedMotion` gates every JS animation; `prefers-reduced-motion` block in `index.css` |
+| 16 | Interface responsive during transitions | PARTIALLY VERIFIED | Animations are opacity/translate only, 140–420 ms; responsive layouts measured at 3 widths |
+| 17 | Favorites visible without hovering | IMPLEMENTED AND VERIFIED | Always-visible `aria-pressed` star; journey toggles it |
+| 18 | Recently Played hidden by default with a settings toggle | IMPLEMENTED AND VERIFIED | Journey: unchecked by default, hidden before any play, visible after a play, persisted across reload |
+| 19 | Separate full-width alphabetical sections | IMPLEMENTED AND VERIFIED | 27 sections `#letter-A…`; `tests/library-alphabet.test.mjs` |
+| 20 | Working alphabetical sidebar navigation | IMPLEMENTED AND VERIFIED | Journey: clicking M scrolls to the M section; active letter tracks the scroll position |
+| 21 | Fuzzy search, misspelling tolerant | IMPLEMENTED AND VERIFIED | Journey: `amogn us` finds Among Us |
+| 22 | Category filtering | IMPLEMENTED AND VERIFIED | Journey: Puzzle reduces the grid and All restores it |
+| 23 | Separate Games/Apps/Proxies views | IMPLEMENTED AND VERIFIED | One secondary nav, three views |
+| 24 | Username/password registration | EXTERNALLY BLOCKED | Deployed build has no Supabase credentials (`placeholder.invalid`) and predates this work; login/session/logout verified against the isolated backend. See the authentication section |
+| 25 | Username/password login | IMPLEMENTED AND VERIFIED (isolated backend) | Journey signs in `qauser1`; wrong password rejected by the API |
+| 26 | Secure persistent sessions | IMPLEMENTED AND VERIFIED | Session survives reload and a new tab; `storageGuard` hides the session from game frames |
+| 27 | Explicit logout | IMPLEMENTED AND VERIFIED | Account menu → Log out returns to signed-out state |
+| 28 | Account isolation | IMPLEMENTED AND VERIFIED | `qauser2` starts with no favorites and Recently Played off |
+| 29 | Password change | IMPLEMENTED BUT UNVERIFIED IN UI | `AccountSettings` calls `auth.updateUser`; not exercised end-to-end this pass |
+| 30 | Cloud-save restoration | IMPLEMENTED AND VERIFIED (earlier + unit) | `tests/cloud-saves.test.mjs`; player mounts only after `sync.restored` |
+| 31 | Authentic artwork for every obtainable game | IN PROGRESS | 74 of 2,621 entries carry authentic artwork (71 official assets + 3 licensed); the screenshot tier was withdrawn as inaccurate, see below |
+| 32 | Missing-game research | NOT STARTED | No authorized build obtained; unchanged from the prior session |
+| 33 | Catalog verification | IMPLEMENTED AND VERIFIED | `node scripts/audit-catalog-paths.mjs`, `audit-duplicates.mjs`; `tests/catalog-audit.test.mjs` |
+| 34 | Existing integrations preserved | IMPLEMENTED BUT UNVERIFIED | Everythingle and Krillion code paths unchanged; framing/retry not re-driven this pass |
+| 35 | Desktop / Chromebook / mobile layouts | IMPLEMENTED AND VERIFIED | Journey measures all three; no horizontal overflow; screenshots in `docs/qa/` |
+| 36 | Automated public-content regression check | IMPLEMENTED AND VERIFIED | `tests/public-content.test.mjs` |
+| 37 | Automated browser journey | IMPLEMENTED AND VERIFIED | `scripts/qa/journey.mjs`, 35 checks |
+| 38 | Independent design review | IMPLEMENTED (self-review) | No independent review agent is exposed in this runtime; the review below is my own |
+
+### Public content audit: what it caught
+
+The audit scans authored interface text (`src`, comments stripped), served HTML
+outside the game wrappers, and the built shell/assets. It found two genuine
+leaks, both fixed:
+
+1. `src/data/artwork.ts` carried 30 provenance URLs pointing at
+   `blob/feature/platform-overhaul`. They are bundled into the client, so an
+   internal branch name was shipping in the JavaScript. Rewritten to `blob/main`.
+2. `src/data/raw/path-exceptions.txt` had a comment about "pre-overhaul launch
+   files". Raw catalog files are imported at build time, so the comment was
+   inside `dist/assets/index-*.js`. Rewritten as a neutral note.
+
+Game titles in `src/data/raw/*.txt` are data, not authored copy, and are
+deliberately excluded from the wording scan (the wrappers themselves are
+third-party documents). The test therefore cannot delete legitimate game
+content to satisfy itself.
+
+### Design review against the published report
+
+| Report requirement | Component | Evidence | Result | Correction |
+|---|---|---|---|---|
+| No purple/navy/neon accent | Library shell, buttons, chips | `docs/qa/library-desktop.png`; `index.css` uses slate-900/100 | Pass | Blue accent removed |
+| No decorative gradients or glows | Surfaces, cards | Screenshots; only the landing page's background scrim remains (Google-style, exempt) | Pass | — |
+| No interface emoji or sparkles | All copy | Content test; no emoji in `src` | Pass | — |
+| No hero section or promo headline | Library | Header is 56 px with the nav directly beneath | Pass | — |
+| Consistent neutral grayscale | Buttons, chips, cards, dialogs | One radius scale (4/6/8 px), one shadow level | Pass | Blue → slate |
+| No redundant navigation | Header | One nav area; duplicate small nav deleted | Pass | — |
+| No unnecessary descriptions | Apps grid | Removed the duplicated external-fallback paragraph (the player already offers the control) | Pass | — |
+| Favorites not hover-only | Cards | Star always visible with a border | Pass | — |
+| Authentic artwork not recoloured | Cards | Artwork is `object-contain`, never filtered | Pass | Loading-screen capture removed |
+| Loading/empty/error states | Player, search, library | Spinner, "No results", "No games in this category" | Pass | — |
+| Spacing rhythm | All | Tailwind 4 px scale only | Pass | — |
+| No internal wording | All | Content audit | Pass | Two leaks fixed |
+
+Not assessed visually: hover states on every card, focus rings in a real
+keyboard-only session, and the Everythingle/Krillion frames.
+
+### Authentication investigation
+
+The deployed site is `https://geegle-com.vercel.app` (recorded in the repository
+homepage field). Fetching it settles the reported failure:
+
+- Its tab title is still `Geegle — Free Web Games`, its bundle still contains
+  `Enter the site password` and the `overhaul-2026` footer string, and it has no
+  alphabetical sections — **the deployed build predates this work**.
+- Its only JavaScript chunk contains `placeholder.invalid` and no
+  `*.supabase.co` host at all. Vite inlines `VITE_*` variables at build time, so
+  `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` were **not set when that build
+  was produced**. `isSupabaseConfigured` is therefore false and the client falls
+  back to the placeholder project, which is why the app reports "Accounts are not
+  configured on this deployment" and why both registration and login fail. The
+  entry gate cannot verify either, for the same reason.
+
+So the production cause is a **build/deployment configuration defect**, not a
+Supabase project defect, and no Supabase setting can repair a bundle with no
+credentials.
+
+Required owner actions, in order:
+
+1. Vercel → project for `geegle-com.vercel.app` → Settings → Environment
+   Variables → add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` for the
+   production environment, using the production project's **anon** (public) key.
+   Do not use a service-role key: everything in the client bundle is public.
+2. Redeploy from `main` after this branch is merged, so the corrected interface
+   ships. Until then, production keeps the old password page and old footer.
+3. Check Authentication → Providers → Email → **Confirm email**. This app maps a
+   username to a non-deliverable internal address, so if confirmation is on,
+   `signUp` returns a user with no session and login then fails. The isolated
+   project has `mailer_autoconfirm: false`, which reproduces exactly that
+   symptom; production's setting could not be read because its bundle holds no
+   key. With confirmation off, registration works with no code change.
+
+Verified against a real Supabase backend (isolated project), not assumed:
+
+- `POST /auth/v1/token?grant_type=password` returns 200 and an access token for a
+  confirmed username account; a wrong password returns 400 "Invalid login
+  credentials".
+- In the browser: sign-in, session across reload and a new tab, logout, and
+  isolation between two accounts (favorites, Recently Played and settings are per
+  user; the requests appear in the journey's network log).
+
+Production data was only read: 5 auth users, all real Gmail addresses, all
+confirmed within ~300 ms of creation (admin-created), and no
+`@users.geegle.internal` account — consistent with a deployed build that never
+had credentials to create one.
+
+### Animation implementation
+
+- `motion/react` (v14): account menu (enter/exit), auth dialog, settings dialog,
+  search dialog, the secondary-nav underline (`layoutId`), the Recently Played
+  reveal, the game player's entrance, and the star's tap response.
+- `animejs` (v4.5): the alphabetical jump animates `window.scrollTo` through a
+  proxy object over 420 ms with `outCubic`; changing category or filter plays a
+  5 ms-staggered opacity/translate on the first 60 cards only, never the whole
+  grid.
+- Reduced motion: `useReducedMotion()` disables every JS animation, and a
+  `prefers-reduced-motion` block neutralises CSS transitions.
+
+### Artwork this pass
+
+- Capture toolchain restored in a scratch virtualenv (`pillow`, `playwright`);
+  the Node-only runner had lost it.
+- Asset pass added 2 official assets (71 official-asset records total). These are
+  images the game wrapper declares for itself (official icon, logo, `og:image`),
+  and spot checks confirm they are the real brands (2048's icon, Angry Birds
+  Slingshot Frenzy's art).
+- 50 games were captured through the production preview and 46 passed the
+  automated checks. Visual review then rejected the result: the captures were
+  mostly **splashes and loading screens** rather than title screens or main
+  menus — a "Ren'Py loading…" screen, a "Made with Unity" splash, a shared
+  Ruffle "PLAY" button, a shared play-button splash (byte-identical across 20
+  games), a GameTop advert, a JavaScript error page, and several near-blank
+  grey pages. Four duplicate groups were already detectable by content hash.
+- Decision: the whole screenshot tier was **withdrawn** rather than shipped as
+  inaccurate coverage. 40 files and records were deleted, plus 35 earlier
+  shared or portal captures, plus the Ren'Py loading record. Only official
+  assets and licensed images remain: 74 records.
+- `scripts/artwork/capture.py` was hardened so a future batch is less noisy: it
+  now waits 6 s, dismisses a splash with two clicks, rejects a digest already
+  recorded for another game, and rejects near-monochrome captures (< 64
+  colours). It still needs per-batch visual review before records are kept.
+- Resumable command (repeat, committing each reviewed batch):
+  `GEEGLE_BASE=http://127.0.0.1:4173 /tmp/venv-art/bin/python scripts/artwork/capture.py --screens --limit 50`
+
+### Outstanding work and blockers
+
+| Item | Status | Needed |
+|---|---|---|
+| Artwork for the remaining ~2,490 games | IN PROGRESS | Repeated capture batches; each batch committed |
+| Production registration | EXTERNALLY BLOCKED | Owner sets `VITE_SUPABASE_URL` + `VITE_SUPABASE_ANON_KEY` on Vercel, redeploys, and confirms email confirmation is off (exact steps above) |
+| Production migrations `0002`, `0003` (and `0004` for parity) | EXTERNALLY BLOCKED | Owner approval; SQL is the repository's migration files, unchanged |
+| Password change in the UI | IMPLEMENTED BUT UNVERIFIED | Run after registration is unblocked |
+| Everythingle / Krillion framing and retry | IMPLEMENTED BUT UNVERIFIED | Browser pass |
+| Missing games (Smashy Road, Wanted 2, HOBO, Henry Stickmin) | NOT STARTED | An authorized build; none was obtained |
+| 5 missing launch paths, 248 unreferenced wrappers | NOT STARTED | Owner decision; entries were preserved rather than guessed |

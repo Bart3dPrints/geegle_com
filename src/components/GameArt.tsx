@@ -1,10 +1,16 @@
 import { Image } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { artworkFor } from '../data/artworkManifest';
 import type { GameEntry } from '../types';
 
 function ArtworkImage({ url, className }: { url?: string; className: string }) {
   const [failed, setFailed] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setFailed(false);
+    setLoaded(false);
+  }, [url]);
 
   if (!url || failed) {
     return (
@@ -23,7 +29,9 @@ function ArtworkImage({ url, className }: { url?: string; className: string }) {
       alt=""
       loading="lazy"
       decoding="async"
-      className={`object-contain ${className}`}
+      data-loaded={loaded ? 'true' : 'false'}
+      className={`geegle-art object-contain ${className}`}
+      onLoad={() => setLoaded(true)}
       onError={() => setFailed(true)}
     />
   );

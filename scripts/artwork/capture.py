@@ -17,6 +17,7 @@ an interrupted run resumes without repeating work.
     /tmp/venv/bin/python scripts/artwork/capture.py --screens --limit 200
 """
 import argparse
+import re
 import asyncio
 import hashlib
 import io
@@ -33,9 +34,13 @@ ARTWORK = os.path.join(ROOT, "public", "artwork")
 CAPTURED = os.path.join(ROOT, "scripts", "artwork", "captured.json")
 CANDIDATES = os.path.join(ROOT, "scripts", "artwork", "candidates.json")
 BASE = os.environ.get("GEEGLE_BASE", "http://127.0.0.1:3000")
-REPO = "https://github.com/Bart3dPrints/geegle_com/blob/feature/platform-overhaul"
+REPO = "https://github.com/Bart3dPrints/geegle_com/blob/main"
 
 os.makedirs(ARTWORK, exist_ok=True)
+
+# Asset URLs and file names must stay safe slugs; a catalog row with a space in
+# its id would otherwise create a record the manifest generator rejects.
+SAFE_ID = re.compile(r"^[A-Za-z0-9._-]+$")
 
 
 def load_json(path, default):
@@ -121,11 +126,17 @@ def run_assets():
     licensed = cleared_ids()
     accepted = skipped = 0
     for game_id, entry in candidates.items():
+        if not SAFE_ID.match(game_id):
+            continue
         if game_id in licensed or game_id in RECORDS["assets"] or game_id in RECORDS["screens"]:
             continue
         for candidate in entry["candidates"]:
             url = candidate.get("remote")
             if not url:
+                continue
+            # A wrapper can declare its own splash/presplash; that is a loading
+            # screen, not the title's artwork.
+            if re.search(r"presplash|loading|splash|placeholder", url, re.I):
                 continue
             try:
                 raw = fetch(url)
@@ -197,7 +208,8 @@ async def run_screens(limit, delay):
     licensed = cleared_ids()
     todo = [
         game for game in games
-        if game["path"].startswith("/games/")
+        if SAFE_ID.match(game["id"])
+        and game["path"].startswith("/games/")
         and game["id"] not in licensed
         and game["id"] not in RECORDS["assets"]
         and game["id"] not in RECORDS["screens"]
@@ -221,12 +233,15 @@ async def run_screens(limit, delay):
                 continue
             try:
                 # Let engines boot (Unity/Ruffle fetch large payloads).
-                await page.wait_for_timeout(3200)
-                try:
-                    await page.mouse.click(512, 300)
-                    await page.wait_for_timeout(600)
-                except Exception:
-                    pass
+                # Engines boot slowly and often show a "PLAY"/engine splash
+                # first, so dismiss it and give the real title screen time.
+                await page.wait_for_timeout(6000)
+                for _ in range(2):
+                    try:
+                        await page.mouse.click(512, 300)
+                    except Exception:
+                        pass
+                    await page.wait_for_timeout(2000)
                 raw = await page.screenshot(type="png")
             except Exception:
                 rejected += 1
@@ -236,12 +251,26 @@ async def run_screens(limit, delay):
 
             image = Image.open(io.BytesIO(raw)).convert("RGB")
             info = informativeness(image)
+            colours = len(image.getcolors(maxcolors=200000) or [])
+            if colours < 64:
+                info["usable"] = False
             if not info["usable"]:
                 rejected += 1
                 continue
             out = os.path.join(ARTWORK, f"{game['id']}.webp")
             digest = optimize(raw, out)
             if not digest:
+                rejected += 1
+                continue
+            # A digest already recorded for another game is a shared splash or
+            # loading screen, not this title's artwork: drop it.
+            seen = {
+                record.get("assetSha256")
+                for bucket in ("assets", "screens")
+                for record in RECORDS[bucket].values()
+            }
+            if digest in seen:
+                os.remove(out)
                 rejected += 1
                 continue
             RECORDS["screens"][game["id"]] = {
