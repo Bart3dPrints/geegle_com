@@ -251,7 +251,7 @@ failed same-origin requests.
 | 21 | Fuzzy search, misspelling tolerant | IMPLEMENTED AND VERIFIED | Journey: `amogn us` finds Among Us |
 | 22 | Category filtering | IMPLEMENTED AND VERIFIED | Journey: Puzzle reduces the grid and All restores it |
 | 23 | Separate Games/Apps/Proxies views | IMPLEMENTED AND VERIFIED | One secondary nav, three views |
-| 24 | Username/password registration | EXTERNALLY BLOCKED | See the authentication section: production needs "Confirm email" off; verified users can log in |
+| 24 | Username/password registration | EXTERNALLY BLOCKED | Deployed build has no Supabase credentials (`placeholder.invalid`) and predates this work; login/session/logout verified against the isolated backend. See the authentication section |
 | 25 | Username/password login | IMPLEMENTED AND VERIFIED (isolated backend) | Journey signs in `qauser1`; wrong password rejected by the API |
 | 26 | Secure persistent sessions | IMPLEMENTED AND VERIFIED | Session survives reload and a new tab; `storageGuard` hides the session from game frames |
 | 27 | Explicit logout | IMPLEMENTED AND VERIFIED | Account menu → Log out returns to signed-out state |
@@ -307,48 +307,52 @@ keyboard-only session, and the Everythingle/Krillion frames.
 
 ### Authentication investigation
 
-Verified facts, not assumptions:
+The deployed site is `https://geegle-com.vercel.app` (recorded in the repository
+homepage field). Fetching it settles the reported failure:
 
-- Isolated project `wkdlsaydqyymynoipmhl`: `GET /auth/v1/settings` returns
-  `mailer_autoconfirm: false`, `disable_signup: false`, email provider enabled.
-  With confirmation required, `supabase.auth.signUp` returns a user but **no
-  session**, and `src/services/auth.ts` then reports "Registration did not
-  create a session." The subsequent login fails with "Invalid login
-  credentials" because the account is unconfirmed. That is exactly the reported
-  symptom, produced by configuration, not by the form.
-- Production `oizdbkxnzwatytxcrvoo` (read-only SQL): 5 auth users, all real
-  Gmail addresses, every `email_confirmed_at` within ~300 ms of `created_at`
-  (admin/dashboard-created, not email-confirmed by a person), and **no**
-  `@users.geegle.internal` account at all. Username registration through this
-  app has therefore never produced an account in production.
-- The public `/auth/v1/settings` endpoint for production needs an API key I do
-  not hold, and the deployed site URL is not recorded in the repository, so I
-  could not read production's `mailer_autoconfirm` directly or open the
-  deployed build. I did not write a test user into production.
+- Its tab title is still `Geegle — Free Web Games`, its bundle still contains
+  `Enter the site password` and the `overhaul-2026` footer string, and it has no
+  alphabetical sections — **the deployed build predates this work**.
+- Its only JavaScript chunk contains `placeholder.invalid` and no
+  `*.supabase.co` host at all. Vite inlines `VITE_*` variables at build time, so
+  `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` were **not set when that build
+  was produced**. `isSupabaseConfigured` is therefore false and the client falls
+  back to the placeholder project, which is why the app reports "Accounts are not
+  configured on this deployment" and why both registration and login fail. The
+  entry gate cannot verify either, for the same reason.
 
-What is proven working, end to end against a real Supabase backend:
+So the production cause is a **build/deployment configuration defect**, not a
+Supabase project defect, and no Supabase setting can repair a bundle with no
+credentials.
 
-- `POST /auth/v1/token?grant_type=password` returns 200 and an access token for
-  a confirmed username account; a wrong password returns 400 "Invalid login
+Required owner actions, in order:
+
+1. Vercel → project for `geegle-com.vercel.app` → Settings → Environment
+   Variables → add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` for the
+   production environment, using the production project's **anon** (public) key.
+   Do not use a service-role key: everything in the client bundle is public.
+2. Redeploy from `main` after this branch is merged, so the corrected interface
+   ships. Until then, production keeps the old password page and old footer.
+3. Check Authentication → Providers → Email → **Confirm email**. This app maps a
+   username to a non-deliverable internal address, so if confirmation is on,
+   `signUp` returns a user with no session and login then fails. The isolated
+   project has `mailer_autoconfirm: false`, which reproduces exactly that
+   symptom; production's setting could not be read because its bundle holds no
+   key. With confirmation off, registration works with no code change.
+
+Verified against a real Supabase backend (isolated project), not assumed:
+
+- `POST /auth/v1/token?grant_type=password` returns 200 and an access token for a
+  confirmed username account; a wrong password returns 400 "Invalid login
   credentials".
 - In the browser: sign-in, session across reload and a new tab, logout, and
-  isolation between two accounts (favorites, Recently Played and settings are
-  per user; the requests are visible in the journey's network log).
+  isolation between two accounts (favorites, Recently Played and settings are per
+  user; the requests appear in the journey's network log).
 
-Required production change (needs the owner, because it is a dashboard setting
-and a production change):
-
-1. Supabase → project `oizdbkxnzwatytxcrvoo` → Authentication → Providers →
-   Email → turn **Confirm email** off. This app collects only a username and
-   maps it to a non-deliverable internal address, so confirmation can never
-   complete. With it off, `signUp` returns a session and registration works with
-   no other change.
-2. Record the deployed site URL in the repository so the deployed build's
-   configuration can be inspected.
-
-No data migration is required, and no existing user is affected: the five
-existing accounts keep their passwords and can still sign in with their real
-email only if the product ever accepts email, which it does not.
+Production data was only read: 5 auth users, all real Gmail addresses, all
+confirmed within ~300 ms of creation (admin-created), and no
+`@users.geegle.internal` account — consistent with a deployed build that never
+had credentials to create one.
 
 ### Animation implementation
 
@@ -393,7 +397,7 @@ email only if the product ever accepts email, which it does not.
 | Item | Status | Needed |
 |---|---|---|
 | Artwork for the remaining ~2,490 games | IN PROGRESS | Repeated capture batches; each batch committed |
-| Production registration | EXTERNALLY BLOCKED | Owner turns off "Confirm email" (exact steps above) |
+| Production registration | EXTERNALLY BLOCKED | Owner sets `VITE_SUPABASE_URL` + `VITE_SUPABASE_ANON_KEY` on Vercel, redeploys, and confirms email confirmation is off (exact steps above) |
 | Production migrations `0002`, `0003` (and `0004` for parity) | EXTERNALLY BLOCKED | Owner approval; SQL is the repository's migration files, unchanged |
 | Password change in the UI | IMPLEMENTED BUT UNVERIFIED | Run after registration is unblocked |
 | Everythingle / Krillion framing and retry | IMPLEMENTED BUT UNVERIFIED | Browser pass |
