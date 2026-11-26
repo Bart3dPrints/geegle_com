@@ -729,7 +729,7 @@ UNVERIFIED, VERIFIED (environment stated), BLOCKED.
 | `interface-check.mjs` (built artifact) | 78/78 pass |
 | `capture-release-ui.mjs` (built artifact) | 8/8 pass; screenshots in `docs/qa/` |
 | `check-account-reminder.mjs` (local backend) | 21/21 pass |
-| `auth-check` / `check-session-sync` / `check-password-change` / `check-account-completion` / `check-cloud-save` (local backend) | 14/14 · 5/5 · 6/6 · 21/21 · 6/6 |
+| `auth-check` / `check-session-sync` / `check-password-change` / `check-account-completion` / `check-cloud-save` (local backend) | 14/14 · 5/5 · 6/6 · 27/27 · 6/6 |
 
 ### Findings recorded instead of claimed
 

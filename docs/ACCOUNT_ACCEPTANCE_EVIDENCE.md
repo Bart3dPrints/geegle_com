@@ -129,7 +129,10 @@ Password fields (`tests/password-visibility.test.mjs` and
 - The eye is a `type="button"` control labelled `Show password` / `Hide
   password`; it never submits the form.
 - Each field keeps its own state, and the dialog closes with the password hidden
-  again (the component unmounts).
+  again (the component unmounts). In a signed-in Settings session the six
+  independent-toggle checks in `check-account-completion.mjs` passed: hidden by
+  default, revealing one leaves the other hidden, hiding one leaves the other
+  revealed, and no toggle submitted the form.
 - `autoComplete` (`current-password` / `new-password`), labels and ids are
   unchanged, so password managers still recognise the fields.
 
@@ -139,7 +142,7 @@ Regression suites re-run on the same backend after the change:
 $ … auth-check.mjs                14/14
 $ … check-session-sync.mjs         5/5
 $ … check-password-change.mjs      6/6
-$ … check-account-completion.mjs  21/21
+$ … check-account-completion.mjs  27/27
 $ … check-cloud-save.mjs           6/6
 ```
 
