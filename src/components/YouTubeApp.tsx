@@ -57,53 +57,45 @@ export function YouTubeApp({ onExit }: { onExit: () => void }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-slate-950">
-      <div className="flex h-14 items-center gap-2 border-b border-slate-800 bg-slate-900 px-4">
-        <button
-          className="btn-secondary border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800"
-          onClick={onExit}
-        >
-          <ArrowLeft size={16} />
-          Back
+    <div className="fixed inset-0 z-50 bg-neutral-950">
+      <form
+        onSubmit={submit}
+        className="absolute inset-x-0 top-0 z-20 mx-auto flex w-full max-w-xl flex-wrap items-center justify-center gap-2 p-3"
+      >
+        <div className="relative">
+          <Search
+            size={14}
+            className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-neutral-400"
+          />
+          <input
+            className="input w-56 border-neutral-700 bg-neutral-900 py-1.5 pl-8 text-sm text-neutral-100"
+            placeholder="Paste a YouTube URL…"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            aria-label="YouTube video URL"
+          />
+        </div>
+        <button className="btn-primary py-1.5" type="submit">
+          <Play size={14} />
+          Play
         </button>
-        <h2 className="text-sm font-medium text-slate-200">YouTube</h2>
-        <div className="flex-1" />
-        <form onSubmit={submit} className="flex items-center gap-2">
-          <div className="relative">
-            <Search
-              size={14}
-              className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400"
-            />
-            <input
-              className="input w-56 bg-slate-900 py-1.5 pl-8 text-sm"
-              placeholder="Paste a YouTube URL…"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              aria-label="YouTube video URL"
-            />
-          </div>
-          <button className="btn-primary py-1.5" type="submit">
-            <Play size={14} />
-            Play
-          </button>
-        </form>
-      </div>
+      </form>
 
       {error && (
         <div
-          className="mx-auto mt-6 max-w-md rounded-lg bg-red-50 p-4 text-sm text-red-700 dark:bg-red-900/30 dark:text-red-300"
+          className="absolute inset-x-0 top-20 z-20 mx-auto max-w-md rounded-lg bg-neutral-900 p-4 text-sm text-red-300"
           role="alert"
         >
           {error}
         </div>
       )}
 
-      <div className="flex h-[calc(100vh-3.5rem)] items-center justify-center p-4">
+      <div className="absolute inset-0 flex items-center justify-center p-4 pt-20">
         {videoId ? (
           <div className="h-full w-full max-w-5xl">
             <div className="relative mx-auto aspect-video h-full max-h-full">
               {loading && (
-                <div className="absolute inset-0 flex items-center justify-center text-slate-400">
+                <div className="absolute inset-0 flex items-center justify-center text-neutral-400">
                   <Loader2 className="animate-spin" size={28} />
                 </div>
               )}
@@ -120,13 +112,23 @@ export function YouTubeApp({ onExit }: { onExit: () => void }) {
             </div>
           </div>
         ) : (
-          <div className="text-center text-slate-400">
+          <div className="text-center text-neutral-400">
             <p className="text-sm">Paste a YouTube video URL above to play it.</p>
-            <p className="mt-1 text-xs text-slate-500">
+            <p className="mt-1 text-xs text-neutral-500">
               Videos play through YouTube's official privacy-enhanced embed.
             </p>
           </div>
         )}
+      </div>
+
+      <div className="absolute bottom-3 left-3 z-20">
+        <button
+          className="rounded-md border border-neutral-700 bg-neutral-900/95 p-2 text-neutral-200 shadow-sm transition-colors hover:bg-neutral-800"
+          onClick={onExit}
+          aria-label="Back to Apps"
+        >
+          <ArrowLeft size={16} />
+        </button>
       </div>
     </div>
   );

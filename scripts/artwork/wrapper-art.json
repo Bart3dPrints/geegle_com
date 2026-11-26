@@ -1,0 +1,250 @@
+{
+  "generatedFrom": "local game builds",
+  "summary": {
+    "missing-file": 696,
+    "remote-or-inline": 132
+  },
+  "entries": [],
+  "skipped": [
+    {
+      "id": "cl1",
+      "title": "1 (Classic)",
+      "reason": "missing-file",
+      "value": "favicon.ico"
+    },
+    {
+      "id": "cl1",
+      "title": "1 (Classic)",
+      "reason": "missing-file",
+      "value": "favicon.ico"
+    },
+    {
+      "id": "cl1",
+      "title": "1 (Classic)",
+      "reason": "missing-file",
+      "value": "meta/apple-touch-icon.png"
+    },
+    {
+      "id": "cl13bones",
+      "title": "13 Bones",
+      "reason": "missing-file",
+      "value": "index.icon.png"
+    },
+    {
+      "id": "cl13bones",
+      "title": "13 Bones",
+      "reason": "missing-file",
+      "value": "index.apple-touch-icon.png"
+    },
+    {
+      "id": "cl20smallmazes",
+      "title": "20 Small Mazes",
+      "reason": "missing-file",
+      "value": "index.icon.png"
+    },
+    {
+      "id": "cl20smallmazes",
+      "title": "20 Small Mazes",
+      "reason": "missing-file",
+      "value": "index.apple-touch-icon.png"
+    },
+    {
+      "id": "cl2048",
+      "title": "2048",
+      "reason": "missing-file",
+      "value": "favicon.ico"
+    },
+    {
+      "id": "cl2048",
+      "title": "2048",
+      "reason": "remote-or-inline",
+      "value": "http://gabrielecirulli.github.io/2048/meta/og_image.png"
+    },
+    {
+      "id": "cl9007199254740992",
+      "title": "9007199254740992",
+      "reason": "missing-file",
+      "value": "favicon.ico"
+    },
+    {
+      "id": "clADarkRoom",
+      "title": "A Dark Room",
+      "reason": "missing-file",
+      "value": "favicon.ico"
+    },
+    {
+      "id": "clADarkRoom",
+      "title": "A Dark Room",
+      "reason": "missing-file",
+      "value": "img/adr.png"
+    },
+    {
+      "id": "clADarkRoom",
+      "title": "A Dark Room",
+      "reason": "missing-file",
+      "value": "img/adr.png"
+    },
+    {
+      "id": "cladayintheoffice",
+      "title": "A Day in the Office",
+      "reason": "missing-file",
+      "value": "favicon.png"
+    },
+    {
+      "id": "claflac",
+      "title": "AFLAC",
+      "reason": "missing-file",
+      "value": "./favicon.png"
+    },
+    {
+      "id": "clalienskyinvasion",
+      "title": "Alien Sky Invasion",
+      "reason": "missing-file",
+      "value": "TemplateData/favicon.ico"
+    },
+    {
+      "id": "clangrybirdsslingshotfrenzy",
+      "title": "Angry Birds Slingshot Frenzy",
+      "reason": "remote-or-inline",
+      "value": "https://cdn.jsdelivr.net/gh/UGBONTOP/firebaseport-angrybirds-remaster/icons/icon-128.png"
+    },
+    {
+      "id": "clangrybirdsslingshotfrenzy",
+      "title": "Angry Birds Slingshot Frenzy",
+      "reason": "remote-or-inline",
+      "value": "https://cdn.jsdelivr.net/gh/UGBONTOP/firebaseport-angrybirds-remaster/icons/icon-256.png"
+    },
+    {
+      "id": "clangrybirdsslingshotfrenzy",
+      "title": "Angry Birds Slingshot Frenzy",
+      "reason": "remote-or-inline",
+      "value": "https://cdn.jsdelivr.net/gh/UGBONTOP/firebaseport-angrybirds-remaster/icons/icon-256.png"
+    },
+    {
+      "id": "clantimatterdimensions",
+      "title": "Antimatter Dimensions",
+      "reason": "missing-file",
+      "value": "icon.png"
+    },
+    {
+      "id": "clapesvshelium",
+      "title": "Apes vs Helium",
+      "reason": "missing-file",
+      "value": "TemplateData/favicon.ico"
+    },
+    {
+      "id": "clarchimedesclient",
+      "title": "Archimedes Client",
+      "reason": "remote-or-inline",
+      "value": "data:image/png;base64,_logo_"
+    },
+    {
+      "id": "clarsonate",
+      "title": "Arsonate",
+      "reason": "missing-file",
+      "value": "TemplateData/favicon.ico"
+    },
+    {
+      "id": "clarthursnightmare",
+      "title": "Arthur's Nightmare",
+      "reason": "missing-file",
+      "value": "TemplateData/favicon.ico"
+    },
+    {
+      "id": "clastrosdreamland",
+      "title": "Astros Dreamland",
+      "reason": "remote-or-inline",
+      "value": "https://static.wikia.nocookie.net/dandys-world-robloxhorror/images/9/92/Astro_Render.png"
+    },
+    {
+      "id": "claviamasters",
+      "title": "Avia Masters",
+      "reason": "remote-or-inline",
+      "value": "data:,"
+    },
+    {
+      "id": "claviamastersbuggy",
+      "title": "Avia Masters Buggy",
+      "reason": "remote-or-inline",
+      "value": "data:,"
+    },
+    {
+      "id": "clbabeltower",
+      "title": "Babel Tower",
+      "reason": "missing-file",
+      "value": "art/icon16x16.png"
+    },
+    {
+      "id": "clbackrooms2d",
+      "title": "Backrooms 2D",
+      "reason": "missing-file",
+      "value": "TemplateData/favicon.ico"
+    },
+    {
+      "id": "clbadbodyguards",
+      "title": "Bad Bodyguards",
+      "reason": "missing-file",
+      "value": "index.icon.png"
+    },
+    {
+      "id": "clbadbodyguards",
+      "title": "Bad Bodyguards",
+      "reason": "missing-file",
+      "value": "index.apple-touch-icon.png"
+    },
+    {
+      "id": "clbadparenting",
+      "title": "Bad Parenting",
+      "reason": "missing-file",
+      "value": "TemplateData/favicon.ico"
+    },
+    {
+      "id": "clbadpiggieslatest",
+      "title": "Bad Piggies Latest",
+      "reason": "missing-file",
+      "value": "TemplateData/favicon.ico"
+    },
+    {
+      "id": "clbaldicaseoh",
+      "title": "Bald Icase Oh",
+      "reason": "missing-file",
+      "value": "TemplateData/favicon.ico"
+    },
+    {
+      "id": "clbaldidecomp",
+      "title": "Bald Ide Comp",
+      "reason": "missing-file",
+      "value": "TemplateData/favicon.png"
+    },
+    {
+      "id": "clbaldidecomp",
+      "title": "Bald Ide Comp",
+      "reason": "missing-file",
+      "value": "TemplateData/AppIcon.png"
+    },
+    {
+      "id": "clbaldisfunnewschoolultimate",
+      "title": "Baldi's Fun New School Ultimate",
+      "reason": "missing-file",
+      "value": "TemplateData/favicon.ico"
+    },
+    {
+      "id": "clballsandbricks",
+      "title": "Balls and Bricks",
+      "reason": "remote-or-inline",
+      "value": "https://35310661-713299160685702142.preview.editmysite.com/uploads/b/1285710-351987768514667200/files/assets/favicon/ico"
+    },
+    {
+      "id": "clbananasimulator",
+      "title": "Banana Simulator",
+      "reason": "remote-or-inline",
+      "value": "https://cdn.jsdelivr.net/gh/bubbls/ruffle@ad6ffa3289c102eb4a4aced92a17e4ea291603d5/bananasim.png"
+    },
+    {
+      "id": "clbanbuds",
+      "title": "Banbuds",
+      "reason": "missing-file",
+      "value": "./favicon.png"
+    }
+  ]
+}

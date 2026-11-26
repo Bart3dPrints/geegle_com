@@ -57,16 +57,19 @@ describe('landing appearance parsing', () => {
   });
 
   it('exposes immutable preset data', () => {
+    // Neutral presets only: authored UI must have R=G=B.
     assert.deepEqual(PRESETS.map(({ name }) => name), [
-      'Classic white',
+      'White',
+      'Off white',
+      'Light gray',
+      'Gray',
       'Charcoal',
-      'Soft blue',
-      'Sage green',
-      'Lavender',
-      'Warm beige',
-      'Soft pink',
-      'Muted gray',
+      'Near black',
     ]);
+    for (const { color } of PRESETS) {
+      const channels = color.slice(1).match(/../g);
+      assert.equal(new Set(channels.map((channel) => channel.toLowerCase())).size, 1, `${color} is neutral`);
+    }
     assert.ok(PRESETS.every(({ name, color }) => typeof name === 'string' && /^#[\da-f]{6}$/i.test(color)));
     assert.equal(Object.isFrozen(PRESETS), true);
     assert.ok(PRESETS.every(Object.isFrozen));

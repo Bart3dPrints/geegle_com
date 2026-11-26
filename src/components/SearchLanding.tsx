@@ -1,5 +1,5 @@
 import { useEffect, useId, useRef, useState, type CSSProperties } from 'react';
-import { ArrowUpRight, Check, Globe2, Palette, Search, User, X } from 'lucide-react';
+import { Check, Globe2, Palette, Search, User, X } from 'lucide-react';
 import { AppearanceEditor } from '../landing/AppearanceEditor';
 import { DEFAULT_APPEARANCE, parseAppearance, readAppearanceCache, writeAppearance, darkInk, type LandingAppearance } from '../landing/appearance';
 import { externalSearch, searchAction, type LandingSearch, type SearchMode } from '../landing/search';
@@ -20,6 +20,7 @@ export interface SearchLandingProps {
   signedIn?: boolean;
   account?: LandingAccount;
   onSearch?: (request: LandingSearch) => void;
+  onAvatarClick?: () => void;
   suggestions?: readonly string[];
 }
 
@@ -30,7 +31,7 @@ export function SearchLanding(props: SearchLandingProps) {
   return <LandingSession key={props.account ? 'account:' + props.account.id : 'guest'} {...props}/>;
 }
 
-function LandingSession({ account, onSearch, onOpenLibrary, signedIn, suggestions = EXAMPLES }: SearchLandingProps) {
+function LandingSession({ account, onSearch, onOpenLibrary, onAvatarClick, signedIn, suggestions = EXAMPLES }: SearchLandingProps) {
   const [cached, setCached] = useState(() => readAppearanceCache(account?.id));
   const [draft, setDraft] = useState<LandingAppearance | null>(null);
   const [query, setQuery] = useState('');
@@ -85,8 +86,9 @@ function LandingSession({ account, onSearch, onOpenLibrary, signedIn, suggestion
     data-custom={Boolean(appearance.color || appearance.image)} data-image={Boolean(appearance.image)} style={style}>
     <header className="gl-bar"><nav aria-label="Search services">
       <span className="gl-web"><Globe2 size={16} aria-hidden="true"/> Web</span>
-      <a href="https://images.google.com/" target="_blank" rel="noreferrer">Images<ArrowUpRight size={13} aria-hidden="true"/></a>
-    </nav><span className="gl-avatar" aria-hidden="true" data-signed-in={signedIn ? 'true' : 'false'}><User size={20}/></span></header>
+    </nav>{onAvatarClick
+      ? <button type="button" className="gl-avatar" aria-label={signedIn ? 'Account settings' : 'Sign in'} onClick={onAvatarClick}><User size={20}/></button>
+      : <span className="gl-avatar" aria-hidden="true"><User size={20}/></span>}</header>
     <main className="gl-main"><div className="gl-center">
       <h1 className="gl-wordmark" aria-label="Geegle">{letters.map((l,i) => <span key={i} aria-hidden="true">{l}</span>)}</h1>
       <form className="gl-form" role="search" aria-label="Web search" onSubmit={e => {e.preventDefault(); submit(options[highlight] ?? query, 'web');}}>
@@ -115,7 +117,7 @@ function LandingSession({ account, onSearch, onOpenLibrary, signedIn, suggestion
       </form>
       <p className="gl-status" role="status">{message && <><Check size={15}/>{message}</>}</p>
     </div></main>
-    <footer className="gl-foot"><span>Web results by Google</span><button type="button" onClick={() => {setDraft(saved);setMessage('');}}>
+    <footer className="gl-foot"><span>Bart made this. Thank him</span><button type="button" onClick={() => {setDraft(saved);setMessage('');}}>
       <Palette size={16}/> Customize appearance</button></footer>
     {draft && <AppearanceEditor value={draft} canSync={!!account?.saveAppearance} onPreview={setDraft} onClose={() => setDraft(null)} onSave={save}/>}
   </div>;

@@ -6,12 +6,8 @@
 import { flushSync } from 'react-dom';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
-  Search,
   User as UserIcon,
   LogOut,
-  Sun,
-  Moon,
-  Monitor,
   Loader2,
   AlertTriangle,
   Settings as SettingsIcon,
@@ -27,7 +23,6 @@ import {
   loadFavorites,
   trackPlay,
   loadRecent,
-  saveTheme,
   loadTheme,
   saveServerDefault,
   loadServerDefaults,
@@ -35,16 +30,23 @@ import {
   saveLandingAppearance,
   loadRecentVisible,
   saveRecentVisible,
+  loadLibraryNoticeDismissed,
+  saveLibraryNoticeDismissed,
+  loadAppearanceSettings,
+  saveAppearanceSettings,
+  DEFAULT_APPEARANCE_SETTINGS,
+  type AppearanceSettings,
 } from './lib/userData';
 import { FOOTER_TEXT, SITE_TITLE } from './lib/brand';
 import { Library } from './components/Library';
 import { GameCard } from './components/GameCard';
-import { SearchOverlay } from './components/SearchOverlay';
 import { GamePlayer } from './components/GamePlayer';
+import { LibraryNotice } from './components/LibraryNotice';
+import { ProxyNotice } from './components/ProxyNotice';
 import { ProxyCard } from './components/ProxyCard';
 import { YouTubeApp } from './components/YouTubeApp';
 import { EverythingleApp } from './components/EverythingleApp';
-import { AccountSettings } from './components/AccountSettings';
+import { Settings } from './components/Settings';
 import { SearchLanding } from './components/SearchLanding';
 import { PROXY_SERVICES, proxyUrl } from './data/proxies';
 import type { LandingAppearance } from './landing/appearance';
@@ -151,20 +153,27 @@ export default function App() {
   const [favorites, setFavorites] = useState<string[]>([]);
   const [recent, setRecent] = useState<string[]>([]);
   const [showRecent, setShowRecent] = useState(false);
+  const [noticeDismissed, setNoticeDismissed] = useState(false);
+  const [noticeOpen, setNoticeOpen] = useState(false);
+  const [settingsLoaded, setSettingsLoaded] = useState(false);
+  const [appearance, setAppearance] = useState<AppearanceSettings>(DEFAULT_APPEARANCE_SETTINGS);
   const [serverDefaults, setServerDefaults] = useState<Record<string, number>>({});
   const [syncError, setSyncError] = useState<string | null>(null);
   const [landingAppearance, setLandingAppearance] = useState<{ owner: string; value: LandingAppearance | null } | null>(null);
 
   const [tab, setTab] = useState<Tab>('games');
-  const [searchOpen, setSearchOpen] = useState(false);
   const [active, setActive] = useState<GameEntry | null>(null);
   const [youtubeOpen, setYoutubeOpen] = useState(false);
   const [everythingleOpen, setEverythingleOpen] = useState(false);
   const [activeProxy, setActiveProxy] = useState<{ url: string; title: string } | null>(null);
+  const [pendingProxy, setPendingProxy] = useState<{ url: string; title: string } | null>(null);
 
   // The running game's save handle — logout awaits its real final save.
   const saveHandleRef = useRef<CloudSaveHandle | null>(null);
   const accountMenuRef = useRef<HTMLDivElement>(null);
+  // One notice per library visit: signing in or loading settings must not
+  // bring back a notice the visitor already dismissed for this visit.
+  const noticeShownRef = useRef(false);
 
   const ownerRef = useRef(userId);
   const transitionRef = useRef(false);
@@ -173,7 +182,10 @@ export default function App() {
     setFavorites([]);
     setRecent([]);
     setShowRecent(false);
+    setNoticeDismissed(false);
     setServerDefaults({});
+    setSettingsLoaded(false);
+    setAppearance(DEFAULT_APPEARANCE_SETTINGS);
     setTheme('system');
     setSyncError(null);
     if (auth.loading) return;
@@ -184,18 +196,41 @@ export default function App() {
       loadServerDefaults(userId),
       loadTheme(userId),
       loadRecentVisible(userId),
-    ]).then(([f, r, servers, savedTheme, recentVisible]) => {
+      loadLibraryNoticeDismissed(userId),
+      loadAppearanceSettings(userId),
+    ]).then(([f, r, servers, savedTheme, recentVisible, notice, savedAppearance]) => {
       if (cancelled) return;
       setFavorites(f.data ?? []);
       setRecent(r.data ?? []);
       setServerDefaults(servers.data ?? {});
       setShowRecent(recentVisible.data === true);
-      const t = savedTheme.data;
+      setNoticeDismissed(notice.data === true);
+      const saved = savedAppearance.data ?? DEFAULT_APPEARANCE_SETTINGS;
+      setAppearance(saved);
+      const t = saved.mode !== 'system' ? saved.mode : savedTheme.data;
       setTheme(t === 'dark' || t === 'light' ? t : 'system');
-      setSyncError(f.error ?? r.error ?? servers.error ?? savedTheme.error ?? recentVisible.error ?? null);
+      setSettingsLoaded(true);
+      setSyncError(f.error ?? r.error ?? servers.error ?? savedTheme.error ?? recentVisible.error ?? notice.error ?? savedAppearance.error ?? null);
     });
     return () => { cancelled = true; };
   }, [auth.loading, userId, setTheme]);
+
+  // Solid appearance colours are applied as CSS variables; unset means the
+  // neutral default from index.css.
+  useEffect(() => {
+    const root = document.documentElement;
+    if (appearance.background) root.style.setProperty('--geegle-bg', appearance.background);
+    else root.style.removeProperty('--geegle-bg');
+    if (appearance.card) root.style.setProperty('--geegle-card', appearance.card);
+    else root.style.removeProperty('--geegle-card');
+  }, [appearance.background, appearance.card]);
+
+  // The library notice appears on entry unless the user opted out permanently.
+  useEffect(() => {
+    if (showLanding || !settingsLoaded || noticeDismissed || noticeShownRef.current) return;
+    noticeShownRef.current = true;
+    setNoticeOpen(true);
+  }, [showLanding, settingsLoaded, noticeDismissed]);
 
   // Close the account menu on outside click or Escape.
   useEffect(() => {
@@ -235,6 +270,7 @@ export default function App() {
   }, [showLanding, auth.loading, userId]);
 
   const openLibrary = () => {
+    noticeShownRef.current = false;
     if (location.hash !== '#games') history.pushState(null, '', '#games');
     setTab('games');
     setShowLanding(false);
@@ -249,8 +285,9 @@ export default function App() {
     setActiveProxy(null);
     setYoutubeOpen(false);
     setEverythingleOpen(false);
-    setSearchOpen(false);
     if (!historyTraversal && location.hash) history.pushState(null, '', location.pathname + location.search);
+    noticeShownRef.current = false;
+    setNoticeOpen(false);
     setShowLanding(true);
     window.scrollTo(0, 0);
   }, [closeGame]);
@@ -325,12 +362,13 @@ export default function App() {
     [active?.id, userId, closeGame]
   );
 
+  // Every proxy launch shows the safety notice first; the destination opens
+  // only after the user confirms.
   const launchProxy = async (serviceId: string, index: number) => {
     if (!await closeGame()) return;
     const service = PROXY_SERVICES.find((s) => s.id === serviceId);
     if (!service) return;
-    setActiveProxy({ url: proxyUrl(service, index), title: service.name });
-    setActive(null);
+    setPendingProxy({ url: proxyUrl(service, index), title: service.name });
   };
 
   const toggleFav = async (gameId: string) => {
@@ -342,13 +380,6 @@ export default function App() {
     } else if (res.error) {
       setSyncError(`Could not save favorite: ${res.error}`);
     }
-  };
-
-  const handleTheme = (mode: ThemePreference) => {
-    setTheme(mode);
-    void saveTheme(mode, userId).then((res) => {
-      if (ownerRef.current === userId && !res.ok && res.error) setSyncError(`Theme not synced: ${res.error}`);
-    });
   };
 
   const handleShowRecent = (visible: boolean) => {
@@ -369,6 +400,13 @@ export default function App() {
       <SearchLanding
         signedIn={Boolean(userId)}
         onOpenLibrary={openLibrary}
+        onAvatarClick={() => {
+          if (userId) setSettingsOpen(true);
+          else {
+            setAuthOpen(true);
+            setAuthMode('login');
+          }
+        }}
         account={userId ? {
           id: userId,
           appearance: landingAppearance?.owner === userId ? landingAppearance.value : null,
@@ -383,86 +421,54 @@ export default function App() {
     );
   }
 
-  const themeButtons = (
-    <>
-      {([
-        ['light', Sun],
-        ['system', Monitor],
-        ['dark', Moon],
-      ] as const).map(([mode, Icon]) => (
-        <button
-          key={mode}
-          className={`rounded p-1.5 transition-colors ${
-            theme === mode
-              ? 'bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900'
-              : 'text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800'
-          }`}
-          onClick={() => handleTheme(mode)}
-          aria-label={`${mode} theme`}
-          aria-pressed={theme === mode}
-        >
-          <Icon size={15} />
-        </button>
-      ))}
-    </>
-  );
-
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
-      <header className="sticky top-0 z-40 border-b border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--geegle-bg)' }}>
+      <header className="sticky top-0 z-40 border-b border-neutral-200 dark:border-neutral-800" style={{ backgroundColor: 'var(--geegle-card)' }}>
         <div className="mx-auto flex h-14 max-w-7xl items-center gap-2 px-4 sm:px-6">
           <button
             className="flex items-center gap-2 text-base font-semibold"
             onClick={() => void openLanding()}
             aria-label={`${SITE_TITLE} home`}
           >
-            <span className="flex h-7 w-7 items-center justify-center rounded-full border border-slate-900 text-sm font-bold dark:border-slate-100">
+            <span className="flex h-7 w-7 items-center justify-center rounded-full border border-neutral-900 text-sm font-bold dark:border-neutral-100">
               G
             </span>
             {SITE_TITLE}
+          </button>
+
+          <button
+            className="rounded-md p-2 text-neutral-600 transition-colors hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
+            onClick={() => setSettingsOpen(true)}
+            aria-label="Settings"
+            title="Settings"
+          >
+            <SettingsIcon size={18} />
           </button>
 
           <div className="flex-1" />
 
           {syncError && (
             <span
-              className="hidden max-w-48 truncate text-xs text-slate-500 dark:text-slate-400 md:inline"
+              className="hidden max-w-48 truncate text-xs text-neutral-500 dark:text-neutral-400 md:inline"
               title={syncError}
             >
               {syncError}
             </span>
           )}
 
-          <button
-            className="btn-secondary gap-2"
-            onClick={() => setSearchOpen(true)}
-            aria-label="Search games and apps"
-          >
-            <Search size={16} />
-            <span className="hidden md:inline">Search</span>
-          </button>
-
-          <div
-            className="flex items-center gap-0.5 rounded-md border border-slate-200 p-0.5 dark:border-slate-700"
-            role="group"
-            aria-label="Theme"
-          >
-            {themeButtons}
-          </div>
-
           {auth.user ? (
             <div className="relative" ref={accountMenuRef}>
               <button
-                className="flex items-center gap-1.5 rounded-full border border-slate-300 p-1 pr-2 dark:border-slate-700"
+                className="flex items-center gap-1.5 rounded-full border border-neutral-300 p-1 pr-2 dark:border-neutral-700"
                 onClick={() => setAccountMenuOpen((open) => !open)}
                 aria-label="Account"
                 aria-expanded={accountMenuOpen}
                 aria-haspopup="menu"
               >
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 text-slate-600 dark:bg-slate-700 dark:text-slate-300">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-neutral-200 text-neutral-600 dark:bg-neutral-700 dark:text-neutral-300">
                   <UserIcon size={14} />
                 </span>
-                <ChevronDown size={14} className="text-slate-400" />
+                <ChevronDown size={14} className="text-neutral-400" />
               </button>
               <AnimatePresence>
                 {accountMenuOpen && (
@@ -475,12 +481,12 @@ export default function App() {
                     exit={reduceMotion ? { opacity: 1 } : { opacity: 0, y: -4 }}
                     transition={{ duration: reduceMotion ? 0 : 0.14, ease: 'easeOut' }}
                   >
-                    <p className="truncate px-3 py-2 text-xs text-slate-500 dark:text-slate-400">
+                    <p className="truncate px-3 py-2 text-xs text-neutral-500 dark:text-neutral-400">
                       {auth.username}
                     </p>
                     <button
                       role="menuitem"
-                      className="flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm hover:bg-slate-100 dark:hover:bg-slate-800"
+                      className="flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800"
                       onClick={() => {
                         setAccountMenuOpen(false);
                         setSettingsOpen(true);
@@ -490,7 +496,7 @@ export default function App() {
                     </button>
                     <button
                       role="menuitem"
-                      className="flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm hover:bg-slate-100 dark:hover:bg-slate-800"
+                      className="flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800"
                       onClick={() => void handleSignOut()}
                     >
                       <LogOut size={15} /> Log out
@@ -501,14 +507,14 @@ export default function App() {
             </div>
           ) : (
             <button
-              className="flex items-center gap-1.5 rounded-full border border-slate-300 p-1 pr-2 dark:border-slate-700"
+              className="flex items-center gap-1.5 rounded-full border border-neutral-300 p-1 pr-2 dark:border-neutral-700"
               aria-label="Sign in"
               onClick={() => {
                 setAuthOpen(true);
                 setAuthMode('login');
               }}
             >
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 text-slate-600 dark:bg-slate-700 dark:text-slate-300">
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-neutral-200 text-neutral-600 dark:bg-neutral-700 dark:text-neutral-300">
                 <UserIcon size={14} />
               </span>
               <span className="hidden pr-1 text-sm sm:inline">Sign in</span>
@@ -517,7 +523,7 @@ export default function App() {
         </div>
 
         <nav
-          className="border-t border-slate-200 dark:border-slate-800"
+          className="border-t border-neutral-200 dark:border-neutral-800"
           aria-label="Sections"
         >
           <div className="mx-auto flex max-w-7xl px-2 sm:px-4">
@@ -526,8 +532,8 @@ export default function App() {
                 key={t}
                 className={`relative flex-1 px-3 py-3 text-[15px] font-medium capitalize transition-colors sm:flex-none sm:px-8 ${
                   tab === t
-                    ? 'text-slate-900 dark:text-slate-100'
-                    : 'text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100'
+                    ? 'text-neutral-900 dark:text-neutral-100'
+                    : 'text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100'
                 }`}
                 aria-current={tab === t ? 'page' : undefined}
                 onClick={async () => {
@@ -541,7 +547,7 @@ export default function App() {
                 {tab === t && (
                   <motion.span
                     layoutId="tab-underline"
-                    className="absolute inset-x-3 bottom-0 h-0.5 bg-slate-900 dark:bg-slate-100"
+                    className="absolute inset-x-3 bottom-0 h-0.5 bg-neutral-900 dark:bg-neutral-100"
                     transition={{ duration: reduceMotion ? 0 : 0.2, ease: 'easeOut' }}
                   />
                 )}
@@ -554,7 +560,7 @@ export default function App() {
       <AnimatePresence>
         {authOpen && (
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-neutral-950/60 p-4"
             onClick={() => setAuthOpen(false)}
             role="dialog"
             aria-modal="true"
@@ -567,7 +573,7 @@ export default function App() {
             >
               <h2 className="mb-4">{authMode === 'login' ? 'Sign in' : 'Create account'}</h2>
               {!auth.enabled && (
-                <div className="mb-4 flex gap-2 rounded-md bg-slate-100 p-3 text-sm text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                <div className="mb-4 flex gap-2 rounded-md bg-neutral-100 p-3 text-sm text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">
                   <AlertTriangle size={16} className="mt-0.5 shrink-0" />
                   <span>Accounts are not configured on this deployment.</span>
                 </div>
@@ -614,7 +620,7 @@ export default function App() {
                 </button>
               </form>
               <button
-                className="mt-4 w-full text-center text-sm text-slate-600 underline-offset-2 hover:underline dark:text-slate-300"
+                className="mt-4 w-full text-center text-sm text-neutral-600 underline-offset-2 hover:underline dark:text-neutral-300"
                 onClick={() => {
                   setAuthMode(authMode === 'login' ? 'register' : 'login');
                   setAuthError(null);
@@ -630,26 +636,53 @@ export default function App() {
       </AnimatePresence>
 
       <AnimatePresence>
-        {settingsOpen && auth.user && (
-          <AccountSettings
-            username={auth.username}
+        {settingsOpen && (
+          <Settings
+            username={auth.user ? auth.username : null}
             showRecent={showRecent}
             onShowRecentChange={handleShowRecent}
+            appearance={{ ...appearance, mode: theme }}
+            onSaveAppearance={async (value) => {
+              setAppearance(value);
+              setTheme(value.mode);
+              const result = await saveAppearanceSettings({ ...value, mode: value.mode }, userId);
+              if (!result.ok) throw new Error(result.error ?? 'Could not save appearance.');
+            }}
+            noticeDismissed={noticeDismissed}
+            onShowNoticeAgain={async () => {
+              setNoticeDismissed(false);
+              const result = await saveLibraryNoticeDismissed(false, userId);
+              if (!result.ok) setSyncError(result.error ?? null);
+            }}
             onClose={() => setSettingsOpen(false)}
             onSignedOut={handleSignOut}
           />
         )}
       </AnimatePresence>
 
-      <AnimatePresence>
-        {searchOpen && (
-          <SearchOverlay
-            entries={SEARCHABLE}
-            onClose={() => setSearchOpen(false)}
-            onLaunch={launch}
-          />
-        )}
-      </AnimatePresence>
+      {pendingProxy && (
+        <ProxyNotice
+          onCancel={() => setPendingProxy(null)}
+          onConfirm={() => {
+            setActiveProxy(pendingProxy);
+            setActive(null);
+            setPendingProxy(null);
+          }}
+        />
+      )}
+
+      {noticeOpen && !showLanding && (
+        <LibraryNotice
+          onDismiss={() => setNoticeOpen(false)}
+          onDismissForever={() => {
+            setNoticeOpen(false);
+            setNoticeDismissed(true);
+            void saveLibraryNoticeDismissed(true, userId).then((result) => {
+              if (!result.ok) setSyncError(result.error ?? null);
+            });
+          }}
+        />
+      )}
 
       {youtubeOpen && <YouTubeApp onExit={() => setYoutubeOpen(false)} />}
 
@@ -720,7 +753,7 @@ export default function App() {
         )}
       </main>
 
-      <footer className="border-t border-slate-200 py-6 text-center text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400">
+      <footer className="border-t border-neutral-200 py-6 text-center text-sm text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
         {FOOTER_TEXT}
       </footer>
     </div>

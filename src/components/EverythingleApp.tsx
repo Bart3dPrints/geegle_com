@@ -101,20 +101,20 @@ export function EverythingleApp({
   }, [frameKey, loaded, blocked]);
 
   const btn =
-    'btn-secondary border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800';
+    'btn-secondary border-neutral-700 bg-neutral-900 text-neutral-200 hover:bg-neutral-800';
 
   return (
-    <div className="fixed inset-0 z-50 bg-slate-950">
-      <div className="flex h-14 items-center gap-2 border-b border-slate-800 bg-slate-900 px-4">
-        <button className={btn} onClick={onExit}>
+    <div className="fixed inset-0 z-50 bg-neutral-950">
+      <div className="absolute bottom-3 left-3 z-20">
+        <button className={btn} onClick={onExit} aria-label="Back to Apps">
           <ArrowLeft size={16} />
-          Back
         </button>
-        <h2 className="truncate text-sm font-medium text-slate-200">Everythingle</h2>
-        <div className="flex-1" />
+      </div>
+
+      <div className="absolute right-3 top-3 z-20 flex flex-wrap items-center justify-end gap-1.5">
         {mode === 'cherry' && (
           <select
-            className="input max-w-40 py-1.5 text-xs"
+            className="input max-w-32 border-neutral-700 bg-neutral-900/95 py-1.5 text-xs text-neutral-100"
             value={serverIndex}
             onChange={(e) => chooseServer(Number(e.target.value))}
             aria-label="Everythingle server"
@@ -127,7 +127,7 @@ export function EverythingleApp({
           </select>
         )}
         <select
-          className="input max-w-36 py-1.5 text-xs"
+          className="input max-w-32 border-neutral-700 bg-neutral-900/95 py-1.5 text-xs text-neutral-100"
           value={mode}
           onChange={(e) => chooseMode(e.target.value as Mode)}
           aria-label="Connection method"
@@ -135,10 +135,7 @@ export function EverythingleApp({
           <option value="direct">Direct</option>
           <option value="cherry">Cherry proxy</option>
         </select>
-        <button className={btn} onClick={resetFrame} aria-label="Retry">
-          <RotateCcw size={16} />
-        </button>
-        <button className={btn} onClick={openExternally} aria-label="Open in a new tab">
+        <button className={btn} onClick={openExternally} aria-label="Open in a new window">
           <ExternalLink size={16} />
         </button>
         <button
@@ -151,22 +148,22 @@ export function EverythingleApp({
       </div>
 
       {error && (
-        <div className="border-b border-slate-800 bg-slate-900 px-4 py-2 text-center text-xs text-amber-400" role="status">
+        <div className="absolute inset-x-0 top-16 z-10 mx-auto w-fit rounded-md bg-neutral-900/95 px-3 py-2 text-center text-xs text-neutral-300" role="status">
           {error}
         </div>
       )}
 
-      <div className="relative h-[calc(100vh-3.5rem)] w-full">
+      <div className="absolute inset-0">
         {!loaded && !blocked && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-slate-950 text-slate-400">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-neutral-950 text-neutral-400">
             <Loader2 className="animate-spin" size={28} />
             <span className="text-sm">Opening Everythingle…</span>
           </div>
         )}
         {blocked && !loaded && (
-          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-slate-950 p-6 text-center">
-            <AlertTriangle size={28} className="text-amber-400" />
-            <p className="max-w-md text-sm text-slate-300">
+          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-neutral-950 p-6 text-center">
+            <AlertTriangle size={28} className="text-neutral-300" />
+            <p className="max-w-md text-sm text-neutral-300">
               {mode === 'direct'
                 ? 'Everythingle could not be framed directly. Try the Cherry proxy connection, or open it in a new tab.'
                 : 'The Cherry proxy server did not respond. Try another server or open Everythingle directly.'}

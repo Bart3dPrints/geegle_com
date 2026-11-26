@@ -24,7 +24,6 @@ export const DESTINATION_PROVIDERS: ProxyService[] = [
   {
     id: 'everythingle-direct',
     name: 'Direct',
-    description: 'Open Everythingle framed inside the Geegle player.',
     endpoints: [{ label: 'Direct framing', url: '/games/everythingle.html', verified: true }],
   },
 ];

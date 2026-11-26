@@ -18,10 +18,9 @@ const url = import.meta.env.VITE_SUPABASE_URL as string | undefined;
 const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
 
 if (!url || !anonKey) {
-  // The entry gate remains locked without a configured backend.
-  console.warn(
-    '[geegle] Supabase is not configured. The entry gate, accounts and cloud sync are unavailable.'
-  );
+  // Accounts and cloud sync are unavailable until the deployment supplies
+  // both public values at build time.
+  console.warn('[geegle] Supabase is not configured; accounts and cloud sync are unavailable.');
 }
 
 export const isSupabaseConfigured = Boolean(url && anonKey);

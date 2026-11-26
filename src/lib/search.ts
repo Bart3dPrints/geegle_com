@@ -93,7 +93,8 @@ function tokenFuzzyScore(queryTokens: string[], fields: string[]): number {
 
 export function searchIndex(
   index: IndexedEntry[],
-  rawQuery: string
+  rawQuery: string,
+  maxResults = MAX_RESULTS
 ): SearchResult[] {
   const query = normalize(rawQuery);
   if (!query) return [];
@@ -132,6 +133,6 @@ export function searchIndex(
     (a, b) => a.score - b.score || a.idx.title.localeCompare(b.idx.title)
   );
   return scored
-    .slice(0, MAX_RESULTS)
+    .slice(0, maxResults)
     .map((s) => ({ entry: s.idx.entry, matchType: s.matchType }));
 }
