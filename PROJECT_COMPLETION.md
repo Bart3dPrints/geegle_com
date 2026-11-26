@@ -594,3 +594,51 @@ checks only ever signed in to accounts that already existed.
   (`select=revision` → `42703`).
 - Game-frame origin isolation: needs separate-origin hosting.
 - Per-engine save verification: only `cl2048` remains verified end to end.
+
+## 2026-11-26 — production account repair applied and verified (`fix/production-account-repair`)
+
+PR #6 merged as `32dab61`. The deployed client was already correct; the database
+had never been migrated. Using the connected Supabase integration, the production
+project `oizdbkxnzwatytxcrvoo` was inspected, repaired and verified directly.
+
+### Applied to production
+
+| Version | Migration | Effect |
+| --- | --- | --- |
+| 20261126180218 | `geegle_0005_signup_confirmation_hardened` | FK to `auth.users`, provisioning trigger recreated `AFTER INSERT`, namespace-scoped confirmation (`%@users.geegle.internal`), case-insensitive unique index, backfill |
+| 20261126180229 | `geegle_0002_game_save_revision` | `revision` column + rotation trigger |
+| 20261126180239 | `geegle_0006_least_privilege_grants` | removed `anon` access to Geegle tables, revoked the retired entry-gate RPC, explicit `authenticated` grants |
+
+Both repo migrations now carry preflight checks and post-migration validation that
+abort the migration rather than warn. During the local dry run the new validation
+caught a real hole: revoking EXECUTE from `anon` alone left the `PUBLIC` grant in
+place, so the entry-gate RPC was still callable. Fixed by revoking from `public`
+as well.
+
+### Production verification (fresh output)
+
+| Check | Result |
+| --- | --- |
+| `production-acceptance.mjs` (live site, real form) | 22/22 |
+| `production-data-integrity.mjs` (live project, real sessions) | 17/17 |
+| Live `POST /auth/v1/signup` | 200 with session (was 500/23503) |
+| Live duplicate sign-up | 200 sanitized user, no session → client reports "already taken" |
+| Live bundle | `index-C72ESc1B.js`, intended project only, no privileged key |
+| `npm run typecheck` / `lint` / `build` | 0 / 0 / 0 |
+| `bun test tests` | 71 pass, 0 fail |
+
+### Shared-project safety verified
+
+The other application's `sync_owner_admin_user_on_auth_users` trigger is intact,
+its RLS policies are untouched, and `is_admin()` needs an `admin_users` row plus an
+owner-admin email, so a Geegle account cannot reach its data. Only the Geegle
+namespace is auto-confirmed; the project-wide confirmation setting is unchanged.
+
+### Still open
+
+- Game-frame origin isolation (needs separate-origin hosting).
+- Per-engine cloud-save evidence beyond the `cl2048` capture path; automated input
+  did not produce game-written state for 2048, Bloxorz or Slope.
+- Manual save/restore/import/export and failed-upload recovery are implemented but
+  not scripted.
+- Optional cleanup: drop the retired entry-gate objects and enable PITR.
