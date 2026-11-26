@@ -39,13 +39,13 @@ clhipsterkickball|Hipster Kickball|sports
 clhitsinglereal|Hit Single Real|rhythm
 clhitstunfly|Hitstun Fly|action
 clhl2doom|HL2 Doom|action
-clhobo|Hobo|action
-clhobo2|Hobo 2|action
-clhobo3|Hobo 3|action
-clhobo4|Hobo 4|action
-clhobo5|Hobo 5|action
-clhobo6|Hobo 6|action
-clhobo7|Hobo 7|action
+clhobo|HOBO|action
+clhobo2|HOBO 2: Prison Brawl|action
+clhobo3|HOBO 3: Wanted|action
+clhobo4|HOBO 4: Total War|action
+clhobo5|HOBO 5: Space Brawls|action
+clhobo6|HOBO 6: Hell|action
+clhobo7|HOBO 7: Heaven|action
 clhobovszombies|Hobo vs Zombies|action
 clholebattle|Hole Battle|arcade
 clholeio|Hole.io|arcade

@@ -41,8 +41,8 @@ test('previously misdirected series have distinct source evidence', () => {
   }
   assert.equal(rows.filter(row => /^polytrack\b/i.test(row.title)).length, 1);
   assert.equal(byId.get('clpolytrackworksnow').title, 'Polytrack (working)');
-  assert.equal(byId.get('snow-rider').path, 'https://gamebiz.com/game/snow-rider-3d');
-  assert.equal(byId.get('clsnowrider').path, 'https://gamebiz.com/game/snow-rider-3d-nostalgia');
+  assert.equal(byId.get('snow-rider').path, '/games/snow-rider.html');
+  assert.equal(byId.get('clsnowrider').path, '/games/clsnowrider.html');
 });
 
 test('the Krillion Backup card uses the same ID and path across Games and Apps', () => {

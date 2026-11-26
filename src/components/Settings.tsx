@@ -42,6 +42,8 @@ export function Settings({
   onSaveTabIdentity,
   noticeDismissed,
   onShowNoticeAgain,
+  accountReminderOff,
+  onResetReminder,
   onClose,
   onSignedOut,
 }: {
@@ -54,6 +56,8 @@ export function Settings({
   onSaveTabIdentity: (value: TabIdentity) => Promise<void>;
   noticeDismissed: boolean;
   onShowNoticeAgain: () => Promise<void>;
+  accountReminderOff: boolean;
+  onResetReminder: () => void;
   onClose: () => void;
   onSignedOut: () => Promise<void>;
 }) {
@@ -346,6 +350,21 @@ export function Settings({
                   Show the library notice again
                 </button>
               )}
+            </section>
+
+            <section className="mb-6" aria-label="Guest reminder">
+              <p className="mb-2 text-xs text-neutral-500 dark:text-neutral-400">
+                The guest account reminder can be turned back on.
+              </p>
+              <button
+                type="button"
+                className="btn-secondary w-full"
+                disabled={!accountReminderOff}
+                onClick={onResetReminder}
+                title={accountReminderOff ? undefined : 'The guest reminder is already shown.'}
+              >
+                Reset account reminder
+              </button>
             </section>
 
             {username ? (

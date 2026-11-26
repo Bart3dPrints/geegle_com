@@ -750,3 +750,66 @@ UNVERIFIED, VERIFIED (environment stated), BLOCKED.
   Render deploy that follows the merge.
 - Per-engine play scripts that reach a real save point (unchanged from the
   previous cycle).
+
+## Catalog restoration and guest reminder preference (2026-11-26)
+
+Branch `feature/geegle-catalog-restoration`, based on merged PR #9
+(`44494cd`). This cycle restored the historical catalog audit, fixed the
+restoration script, removed the unwanted Poly Track entry, repaired the
+missing-series wrappers, and added the reminder's permanent dismissal.
+
+### Delivered
+
+- `scripts/restore-catalog.mjs` is idempotent: `restored.txt` is output only,
+  previous rows are carried forward, deleted builds are recovered from Git
+  history where a commit ever held them, and the Poly Track IDs are excluded
+  before restoration. `tests/catalog-restoration.test.mjs` runs it twice.
+- Historical audit: 2,697 entries at `2d09055`; no legitimate game entry is
+  missing. The 16 rows outside the catalog are apps, proxies, themes and the
+  removed chatbot. Full accounting in `docs/CATALOG_RESTORATION_REPORT.md`.
+- Poly Track (`clpolytrackbutnotflagged-1`) removed from rows, path
+  exceptions, generated overrides and runtime filtering; only
+  `clpolytrackworksnow` ("Polytrack (working)") can appear. Saved data is
+  untouched.
+- All seven HOBO IDs carry their real subtitles. All five original Henry
+  Stickmin installments are present. Smashy Road remains blocked: no
+  authorized browser build exists (see `docs/MISSING_GAMES_VERIFICATION.md`).
+- Eight wrappers that loaded a literal `$1` instead of their SWF now load the
+  real file; Escaping the Prison starts muted instead of waiting on a stuck
+  splash. Per-title browser evidence is recorded in
+  `docs/MISSING_GAMES_VERIFICATION.md`.
+- Snow Rider's four required entries use distinct local builds and stable IDs,
+  including the two that previously redirected to `gamebiz.com`.
+- Guest reminder: unchecked Continue as guest stays session-only; the new
+  unchecked-by-default "Don't remind me again" checkbox stores a permanent
+  `localStorage` preference; Settings → Preferences has Reset account
+  reminder. Wording and the three existing actions are unchanged. Behavior is
+  documented in `docs/ACCOUNT_REMINDER.md`.
+- `scripts/qa/journey.mjs` was unblocked from the library-notice overlay and
+  updated for the current search field, Settings tabs, Back control and root
+  URL. It now completes 36/36 checks.
+
+### Evidence
+
+| Check | Result |
+| --- | --- |
+| `npm run typecheck` | exit 0 |
+| `npm run lint` | exit 0 |
+| `npm run build` | exit 0 |
+| `bun test tests` | 120 pass, 0 fail |
+| `scripts/qa/check-catalog-games.mjs` | 16 PASS, 1 FAIL (Goody Gumdrops wrapper is a redirect, no build) |
+| `scripts/qa/check-guest-reminder-preference.mjs` | 14/14 pass |
+| `scripts/qa/interface-check.mjs` | pass (changelog date updated to PR #9) |
+| `scripts/qa/journey.mjs` | 36/36, no console or request problems |
+
+### Still blocked / not claimed
+
+- Smashy Road, Smashy Road: Wanted and Smashy Road: Wanted 2 have no
+  authorized browser build.
+- Snow Rider Goody Gumdrops has no functional build in the repository; the
+  existing row is preserved but its wrapper is a Cookie Love redirect.
+- Hobo vs Zombies remains an external iframe and is deferred to the
+  catalog-wide wrapper audit.
+- Five historical rows point at files that were never committed.
+- Production was not redeployed in this cycle; every browser result is from
+  the local built artifact.

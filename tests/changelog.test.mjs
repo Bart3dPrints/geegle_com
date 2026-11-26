@@ -75,8 +75,13 @@ test('the committed changelog holds the real merged history', () => {
   assert.ok(existsSync('src/data/changelog.json'), 'the changelog data is committed');
   const data = JSON.parse(readFileSync('src/data/changelog.json', 'utf8'));
   const entries = data.entries ?? [];
-  assert.ok(entries.length >= 8, `only ${entries.length} entries`);
-  assert.deepEqual([...entries].map((entry) => entry.pr).sort((a, b) => a - b), [1, 2, 3, 4, 5, 6, 7, 8]);
+  assert.ok(entries.length >= 9, `only ${entries.length} entries`);
+  const prNumbers = [...entries].map((entry) => entry.pr).sort((a, b) => a - b);
+  assert.deepEqual(
+    prNumbers,
+    Array.from({ length: Math.max(...prNumbers) }, (_, index) => index + 1)
+  );
+  assert.ok(prNumbers.includes(9), 'the first post-restoration merged PR is present');
   const prs = entries.map((entry) => entry.pr);
   assert.equal(new Set(prs).size, prs.length, 'no PR appears twice');
   const times = entries.map((entry) => entry.mergedAt);
@@ -87,8 +92,8 @@ test('the committed changelog holds the real merged history', () => {
     assert.ok(!/prompt|codebuff|\bAI\b|supabase\.co|service_role/i.test(entry.summary), `PR ${entry.pr} summary is safe`);
   }
   const latest = entries[0];
-  assert.equal(latest.pr, 8);
-  assert.deepEqual(formatEastern(latest.mergedAt), { date: 'November 26, 2026', time: '2:56 PM EST' });
+  assert.equal(latest.pr, 9);
+  assert.deepEqual(formatEastern(latest.mergedAt), { date: 'November 26, 2026', time: '4:08 PM EST' });
 });
 
 test('Changelog is the last Settings tab and its own component renders the list', () => {

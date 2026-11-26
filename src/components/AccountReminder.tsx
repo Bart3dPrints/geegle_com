@@ -2,7 +2,7 @@
 // the chosen destination is kept until the visitor signs in, creates an
 // account or continues as a guest.
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion } from 'motion/react';
 
 export const ACCOUNT_REMINDER_TITLE = 'Save your progress';
@@ -17,11 +17,13 @@ export function AccountReminder({
 }: {
   onSignIn: () => void;
   onCreateAccount: () => void;
-  onContinueAsGuest: () => void;
+  /** `permanent` is true when the visitor checked "Don't remind me again". */
+  onContinueAsGuest: (permanent: boolean) => void;
   /** Closes without launching; the visitor can try again later. */
   onDismiss: () => void;
 }) {
   const guestRef = useRef<HTMLButtonElement>(null);
+  const [permanent, setPermanent] = useState(false);
 
   useEffect(() => {
     guestRef.current?.focus();
@@ -50,11 +52,20 @@ export function AccountReminder({
         <h2 id="account-reminder-title" className="mb-2">
           {ACCOUNT_REMINDER_TITLE}
         </h2>
-        <p id="account-reminder-text" className="mb-5 text-sm text-neutral-600 dark:text-neutral-300">
+        <p id="account-reminder-text" className="mb-4 text-sm text-neutral-600 dark:text-neutral-300">
           {ACCOUNT_REMINDER_TEXT}
         </p>
+        <label className="mb-5 flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-300">
+          <input
+            type="checkbox"
+            className="h-4 w-4"
+            checked={permanent}
+            onChange={(event) => setPermanent(event.target.checked)}
+          />
+          Don't remind me again
+        </label>
         <div className="flex flex-wrap justify-end gap-2">
-          <button className="btn-secondary" onClick={onContinueAsGuest} ref={guestRef}>
+          <button className="btn-secondary" onClick={() => onContinueAsGuest(permanent)} ref={guestRef}>
             Continue as guest
           </button>
           <button className="btn-secondary" onClick={onCreateAccount}>

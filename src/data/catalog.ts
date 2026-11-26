@@ -62,12 +62,24 @@ const ALIASES: Record<string, string[]> = {
   clstickmanstealingdiamond: ['henry stickmin', 'stealing the diamond', 'stickman'],
   clstickminfleecomplex: ['henry stickmin', 'fleeing the complex', 'stickman'],
   clstickminairship: ['henry stickmin', 'infiltrating the airship', 'stickman'],
+  clsnowrider: ['snow rider', 'snow rider 3d', 'snowboard'],
+  'snow-rider': ['snow rider', 'snow rider 3d nostalgia', 'snowboard'],
+  clsnowridergoodygumdrops: ['snow rider', 'goody gumdrops', 'snowboard'],
+  clsnowriderrrr: ['snow rider', 'snow rider rrr', 'snowboard'],
   clvampiresurvivors: ['vampire survivors'],
   clfnfsonicexe: ['sonic exe', 'fnf sonic'],
   clgeometrydashwave: ['geometry dash'],
   clslope: ['slope game'],
   cltunnelrush: ['tunnel rush'],
 };
+
+/**
+ * Owner-authorized exception to the restore-everything policy: only
+ * "Polytrack (working)" (clpolytrackworksnow) may appear in Games, search,
+ * categories, Recently Played and Starred. These IDs are filtered even if a
+ * historical restoration or saved-data reference tries to bring them back.
+ */
+const EXCLUDED_IDS = new Set(['clpolytrackbutnotflagged', 'clpolytrackbutnotflagged-1']);
 
 /** Derived secondary categories for accurate classification. */
 const CATEGORY_ADDITIONS: Record<string, Category[]> = {
@@ -152,9 +164,12 @@ for (const [fileName, raw] of Object.entries(rawModules)) {
   }
 }
 
-/** Deduplicate by id, keeping the first occurrence. */
+/** Deduplicate by id, keeping the first occurrence. Distinct game versions
+ * keep distinct IDs, so this only guards against the same row appearing in two
+ * raw data files; it never collapses alternate builds. */
 const seen = new Set<string>();
 export const legacyCatalog: GameEntry[] = legacyGames.filter((g) => {
+  if (EXCLUDED_IDS.has(g.id)) return false;
   if (seen.has(g.id)) return false;
   seen.add(g.id);
   return true;
