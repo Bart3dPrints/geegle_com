@@ -10,14 +10,14 @@ const { outputFiles: [{ text }] } = await build({
   stdin: {
     resolveDir: process.cwd(),
     contents:
-      "export { shouldShowAccountReminder, reminderDismissed, dismissReminder, ACCOUNT_REMINDER_KEY } from './src/lib/accountReminder.ts';",
+      "export { shouldShowAccountReminder, reminderDismissed, dismissReminder, dismissReminderPermanently, resetReminder, reminderSuppressed, ACCOUNT_REMINDER_KEY } from './src/lib/accountReminder.ts';",
   },
   bundle: true,
   write: false,
   platform: 'node',
   format: 'esm',
 });
-const { shouldShowAccountReminder, reminderDismissed, dismissReminder, ACCOUNT_REMINDER_KEY } = await import(
+const { shouldShowAccountReminder, reminderDismissed, dismissReminder, dismissReminderPermanently, resetReminder, reminderSuppressed, ACCOUNT_REMINDER_KEY } = await import(
   `data:text/javascript;base64,${Buffer.from(text).toString('base64')}`
 );
 
@@ -26,6 +26,8 @@ function memoryStorage(initial = {}) {
   return {
     getItem: (key) => data.get(key) ?? null,
     setItem: (key, value) => data.set(key, String(value)),
+    removeItem: (key) => data.delete(key),
+    clear: () => data.clear(),
   };
 }
 
@@ -97,4 +99,39 @@ test('the account forms carry the short secondary sentence', () => {
   assert.match(dialog, /Keep your progress and preferences across devices\./);
   assert.match(dialog, /text-xs text-neutral-500/, 'small secondary text');
   assert.equal(dialog.match(/Keep your progress and preferences across devices\./g).length, 1);
+});
+
+test('the permanent dismissal lives in persistent storage and overrides the session flag', () => {
+  const permanent = memoryStorage();
+  const session = memoryStorage();
+  assert.equal(reminderSuppressed(session, permanent), false);
+  dismissReminderPermanently(permanent);
+  assert.equal(reminderSuppressed(memoryStorage(), permanent), true, 'a fresh session stays suppressed');
+  // Resetting clears both stores so the reminder can return.
+  resetReminder(session, permanent);
+  assert.equal(reminderSuppressed(session, permanent), false);
+});
+
+test('permanent dismissal is stored in localStorage, never sessionStorage alone', () => {
+  const source = readFileSync('src/lib/accountReminder.ts', 'utf8');
+  assert.match(source, /localStorage/);
+  assert.match(source, /PERMANENT_REMINDER_KEY/);
+  const permanentFn = source.slice(source.indexOf('export function dismissReminderPermanently'));
+  assert.doesNotMatch(permanentFn.slice(0, 400), /sessionStorageSafe\(\)/);
+});
+
+test('the checkbox is present, unchecked by default and lets guest launches opt out permanently', () => {
+  const dialog = readFileSync('src/components/AccountReminder.tsx', 'utf8');
+  assert.match(dialog, /Don't remind me again/);
+  assert.match(dialog, /type="checkbox"/);
+  assert.match(dialog, /useState\(false\)/);
+  assert.match(dialog, /onContinueAsGuest\(.*permanent/);
+  // Closing the dialog must not persist the preference.
+  assert.match(dialog, /onDismiss/);
+});
+
+test('Preferences offers a reset action for the account reminder', () => {
+  const settings = readFileSync('src/components/Settings.tsx', 'utf8');
+  assert.match(settings, /Reset account reminder/);
+  assert.match(settings, /onResetReminder/);
 });

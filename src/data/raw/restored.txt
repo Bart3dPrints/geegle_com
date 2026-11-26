@@ -74,7 +74,6 @@ clobbyyardsale|Ob by Yard Sale|arcade
 clpokemonemeraldimperium|Pokemon Emerald Imperium|pokemon,retro,adventure
 clpokemonevolvedsfdgsdfs|Pokemon Evolved|pokemon,retro,adventure
 clpokemonfireredandleafgreenplusedition|Pokemon Firered and Leafgreen Plus Edition|pokemon,retro,adventure
-clpolytrackbutnotflagged-1|Poly Track|arcade
 clprofessorlaytonandthecuriousvillage|Professor Layton and the Curious Village|arcade
 clredvsblue2|Red vs Blue 2|arcade
 redvbluefix|Red vs Blue Fix|arcade

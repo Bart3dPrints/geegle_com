@@ -58,7 +58,9 @@ import { PasswordInput } from './components/PasswordInput';
 import { AccountReminder } from './components/AccountReminder';
 import {
   dismissReminder,
-  reminderDismissed,
+  dismissReminderPermanently,
+  reminderSuppressed,
+  resetReminder,
   shouldShowAccountReminder,
 } from './lib/accountReminder';
 import {
@@ -179,6 +181,8 @@ export default function App() {
   // form is open, so closing the form never launches it by accident.
   const [pendingLaunch, setPendingLaunch] = useState<GameEntry | null>(null);
   const [reminderOpen, setReminderOpen] = useState(false);
+  // Mirrors the persistent "Don't remind me again" preference for Settings.
+  const [accountReminderOff, setAccountReminderOff] = useState(() => reminderSuppressed());
   const authFromReminderRef = useRef(false);
   const reduceMotion = useReducedMotion();
 
@@ -527,7 +531,7 @@ export default function App() {
   const launch = useCallback(
     async (g: GameEntry) => {
       if (active?.id === g.id || reminderOpen || pendingLaunch || authOpen) return;
-      if (shouldShowAccountReminder({ signedIn: Boolean(userId), dismissed: reminderDismissed() })) {
+      if (shouldShowAccountReminder({ signedIn: Boolean(userId), dismissed: reminderSuppressed() })) {
         setPendingLaunch(g);
         setReminderOpen(true);
         return;
@@ -547,8 +551,12 @@ export default function App() {
     void performLaunch(target);
   }, [pendingLaunch, performLaunch, userId]);
 
-  const continueAsGuest = () => {
+  const continueAsGuest = (permanent = false) => {
     dismissReminder();
+    if (permanent) {
+      dismissReminderPermanently();
+      setAccountReminderOff(true);
+    }
     setReminderOpen(false);
     const target = pendingLaunch;
     setPendingLaunch(null);
@@ -913,6 +921,11 @@ export default function App() {
               setNoticeDismissed(false);
               const result = await saveLibraryNoticeDismissed(false, userId);
               if (!result.ok) setSyncError(result.error ?? null);
+            }}
+            accountReminderOff={accountReminderOff}
+            onResetReminder={() => {
+              resetReminder();
+              setAccountReminderOff(false);
             }}
             onClose={() => setSettingsOpen(false)}
             onSignedOut={handleSignOut}

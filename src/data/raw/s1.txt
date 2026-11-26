@@ -134,7 +134,7 @@ clsnowbros--1|Snow Bros|arcade
 clsnowbrosgenesis|Snow Bros: Genesis|arcade
 clsnowbrothers|Snow Brothers|arcade
 snow-rider|Snow Rider 3D|racing
-clsnowrider|Snow Rider 3D Nostalgia|racing
+clsnowrider|Snow Rider|racing
 clsnowroad|Snow Road|sports
 snowwhite|Snow White|puzzle
 clsnowballio|Snowball.io|multiplayer

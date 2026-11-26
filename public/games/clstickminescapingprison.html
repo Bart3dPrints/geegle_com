@@ -66,6 +66,13 @@
       display: block;
     }
   </style>
+  <script>
+    // The movie needs audio, and browsers block audible autoplay. Start it
+    // muted automatically instead of parking on Ruffle's click-to-start
+    // splash, which synthetic and keyboard users could not dismiss.
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.RufflePlayer.config = { autoplay: 'on', unmuteOverlay: 'hidden' };
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/@ruffle-rs/ruffle@0.2.0-nightly.2025.10.2/ruffle.min.js"></script>
 </head>
 <body>
@@ -119,14 +126,12 @@
         player.style.height = "100%";
         player.style.background = "black";
         container.appendChild(player);
-        player.load("$1");
+        player.load("https://cdn.jsdelivr.net/gh/selenite-cc/flasharchive@187e8105c2afdd4dc1c49d36c840e933bef695dc/Henry%20Stickmin%20-%20Escaping%20the%20Prison.swf");
       } else {
         container.textContent = "Ruffle failed to load."; 
       }
     });
   </script>
-    <param name="movie" value="https://cdn.jsdelivr.net/gh/selenite-cc/flasharchive@187e8105c2afdd4dc1c49d36c840e933bef695dc/Henry%20Stickmin%20-%20Escaping%20the%20Prison.swf">
-    <embed src="https://cdn.jsdelivr.net/gh/selenite-cc/flasharchive@187e8105c2afdd4dc1c49d36c840e933bef695dc/Henry%20Stickmin%20-%20Escaping%20the%20Prison.swf" width="100%" height="100%">
 </body>
 </html>
 ]]></Content>

@@ -116,7 +116,9 @@ for (const { dir, mount, app } of SCAN_DIRS) {
   }
 }
 
-/** Byte-identical duplicate resolution: keep one canonical entry per sha. */
+/** Byte-identical build detection: report a canonical sibling, but never hide
+ * an entry. The owner reversed the duplicate-removal policy, so alternate
+ * builds, copy-named files and identical hashes all remain visible. */
 const bySha = new Map();
 for (const entry of collected) {
   if (!bySha.has(entry.sha)) bySha.set(entry.sha, []);
@@ -139,7 +141,7 @@ for (const group of bySha.values()) {
       categories: e.categories ?? inferCategories(e.title),
       aliases: e.aliases,
       isApp: e.isApp,
-      hidden: e.hiddenByOverride || duplicate,
+      hidden: e.hiddenByOverride,
       duplicateOf: duplicate ? canonical.file : null,
       description: e.description,
     });
@@ -173,4 +175,4 @@ await writeFile(outPath, header + JSON.stringify(out, null, 2) + ';\n', 'utf8');
 
 const visible = out.filter((e) => !e.hidden).length;
 const dups = out.filter((e) => e.duplicateOf).length;
-console.log(`[catalog] ${out.length} files scanned, ${visible} visible entries, ${dups} duplicates hidden.`);
+console.log(`[catalog] ${out.length} files scanned, ${visible} visible entries, ${dups} identical builds kept visible.`);

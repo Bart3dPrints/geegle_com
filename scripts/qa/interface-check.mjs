@@ -255,7 +255,7 @@ try {
   const latestRelease = (await releases.first().innerText()).replace(/\s+/g, ' ').trim();
   check(
     'the newest release shows its real Eastern date and time',
-    /November 26, 2026 · 2:56 PM EST/.test(latestRelease),
+    /November 26, 2026 · 4:08 PM EST/.test(latestRelease),
     latestRelease
   );
   const releaseTexts = await releases.allInnerTexts();

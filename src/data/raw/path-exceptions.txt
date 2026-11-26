@@ -23,8 +23,8 @@ peach|/games/peach.html
 repo|/games/R.E.P.O%20copy%20copy%20copy.html
 riddleuneversityfix|/games/riddleuneversityfix.html
 redvbluefix|/games/redvbluefix.html
-snow-rider|https://gamebiz.com/game/snow-rider-3d
-clsnowrider|https://gamebiz.com/game/snow-rider-3d-nostalgia
+snow-rider|/games/snow-rider.html
+clsnowrider|/games/clsnowrider.html
 snowwhite|/games/snowwhite.html
 supremeduelistfix|/games/supremeduelistfix.html
 smash-hit-ripoff|/games/Smash%20Hit%20Ripoff.html
@@ -268,6 +268,5 @@ clmetalsonichyperdrive|/games/clMetalSonicHyperdrive.html
 clmo64-1|/games/clmo64(1).html
 nazi-zombies|/games/Nazi%20Zombies_%20Portable%20(1)%20copy.html
 clnewsupermarioworld2aroundtheworld|/games/clNewSuperMarioWorld2AroundtheWorld.html
-clpolytrackbutnotflagged-1|/games/clpolytrackbutnotflagged(1).html
 clriddleschool445544444--444-444|/games/clriddleschool445544444%24%24444%24444.html
 clskibididibidygyattohiorizzingallovertheplacestillwatermang|/games/clskibididibidygyattohiorizzingallovertheplacestillwatermangotheoryfemboydrool.html
