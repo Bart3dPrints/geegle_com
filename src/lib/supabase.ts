@@ -65,3 +65,21 @@ export function usernameFromEmail(email: string | undefined): string {
   const local = email.split('@')[0];
   return local || 'user';
 }
+
+/**
+ * The name to show for a signed-in account. Accounts created from now on carry
+ * the capitalisation the user typed (the stored identity stays lowercase);
+ * older accounts fall back to the lowercase synthetic address.
+ */
+export function usernameFor(
+  user: { email?: string; user_metadata?: Record<string, unknown> } | null | undefined
+): string {
+  const canonical = usernameFromEmail(user?.email);
+  const typed = user?.user_metadata?.username;
+  // Metadata is client-supplied, so it may only change the capitalisation of
+  // the real identity, never replace it with a different name.
+  if (typeof typed === 'string' && typed.trim().toLowerCase() === canonical.toLowerCase()) {
+    return typed.trim();
+  }
+  return canonical;
+}

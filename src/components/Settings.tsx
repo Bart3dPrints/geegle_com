@@ -56,6 +56,7 @@ export function Settings({
   const [tab, setTab] = useState<SettingsTab>('theme');
   const [draft, setDraft] = useState<AppearanceSettings>(appearance);
   const [identity, setIdentity] = useState<TabIdentity>(tabIdentity);
+  const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [busy, setBusy] = useState(false);
   const [saving, setSaving] = useState(false);
@@ -67,7 +68,33 @@ export function Settings({
       setMessage({ kind: 'err', text: 'New password must be at least 8 characters.' });
       return;
     }
+    if (newPassword.length > 72) {
+      setMessage({ kind: 'err', text: 'New password must be at most 72 characters.' });
+      return;
+    }
+    if (!currentPassword) {
+      setMessage({ kind: 'err', text: 'Enter your current password to confirm the change.' });
+      return;
+    }
     setBusy(true);
+    // Reauthenticate first: an open session on a shared computer must not be
+    // enough to replace the account password.
+    const { data: current } = await supabase.auth.getUser();
+    const email = current.user?.email;
+    if (!email) {
+      setBusy(false);
+      setMessage({ kind: 'err', text: 'You are no longer signed in.' });
+      return;
+    }
+    const { error: reauthError } = await supabase.auth.signInWithPassword({
+      email,
+      password: currentPassword,
+    });
+    if (reauthError) {
+      setBusy(false);
+      setMessage({ kind: 'err', text: 'Current password is incorrect.' });
+      return;
+    }
     const { error } = await supabase.auth.updateUser({ password: newPassword });
     setBusy(false);
     setMessage(
@@ -75,7 +102,10 @@ export function Settings({
         ? { kind: 'err', text: `Could not change password: ${error.message}` }
         : { kind: 'ok', text: 'Password updated.' }
     );
-    if (!error) setNewPassword('');
+    if (!error) {
+      setCurrentPassword('');
+      setNewPassword('');
+    }
   };
 
   const apply = async () => {
@@ -322,9 +352,20 @@ export function Settings({
                   <input
                     className="input mb-2"
                     type="password"
+                    value={currentPassword}
+                    onChange={(e) => setCurrentPassword(e.target.value)}
+                    placeholder="Current password"
+                    aria-label="Current password"
+                    autoComplete="current-password"
+                    required
+                  />
+                  <input
+                    className="input mb-2"
+                    type="password"
                     value={newPassword}
                     onChange={(e) => setNewPassword(e.target.value)}
-                    placeholder="At least 8 characters"
+                    placeholder="New password (at least 8 characters)"
+                    aria-label="New password"
                     autoComplete="new-password"
                     required
                   />

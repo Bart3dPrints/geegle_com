@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import type { Session, User } from '@supabase/supabase-js';
-import { supabase, isSupabaseConfigured, usernameFromEmail } from '../lib/supabase';
+import { supabase, isSupabaseConfigured, usernameFor } from '../lib/supabase';
 import { register, login, logout } from '../services/auth';
 
 export interface AuthState {
@@ -38,7 +38,7 @@ export function useAuth(): AuthState {
 
   return {
     user,
-    username: usernameFromEmail(user?.email),
+    username: usernameFor(user),
     session,
     loading,
     enabled: isSupabaseConfigured,

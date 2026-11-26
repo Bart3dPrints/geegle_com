@@ -431,6 +431,9 @@ export default function App() {
   }, [searchQuery]);
 
   const handleAuth = async (mode: 'login' | 'register') => {
+    // One request at a time: pressing Enter while a submit is in flight must
+    // not queue a second sign-up or sign-in.
+    if (authBusy) return;
     if (!await closeGame()) return;
     setActive(null);
     setActiveProxy(null);

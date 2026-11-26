@@ -513,3 +513,84 @@ production guard failing on the isolated build by design.
 Still open: artwork (73 verified records of 2711), proxy identity review, mirror
 classification, per-engine save verification beyond 2048, real frame origin
 isolation, Smashy Road / Wanted 2 builds, production rollout approval.
+
+## 2026-11-26 — account system cycle (`feature/geegle-auth-cloud-completion`)
+
+### Corrected diagnosis
+
+The previous cycle concluded that production authentication failed because Render
+compiled the isolated project into the bundle. The owner changed the environment
+variables and Render rebuilt: the live bundle
+`/assets/index-BkXO0FIe.js` now contains only
+`https://oizdbkxnzwatytxcrvoo.supabase.co`, and that project accepts the key. That
+part is fixed. The remaining failure is in the database:
+
+```
+POST /auth/v1/signup → 500
+{"code":"23503","message":"insert or update on table \"geegle_profiles\" violates
+ foreign key constraint \"geegle_profiles_id_fkey\"",
+ "detail":"Key (id)=(…) is not present in table \"users\"."}
+```
+
+Reproduced exactly on a real GoTrue + Postgres stack by making
+`geegle_on_auth_user_created` a `BEFORE INSERT` trigger: the profile row is
+inserted before the `auth.users` row exists. With the correct `AFTER` trigger the
+same stack still fails (HTTP 500 `Error sending confirmation email`), because both
+hosted projects run `mailer_autoconfirm = false` and a synthetic
+`@users.geegle.internal` address has no mailbox. So registration had two defects,
+not one, and no earlier "authentication passes" run used the confirmation-required
+condition: local development ran with `GOTRUE_MAILER_AUTOCONFIRM=true`, and hosted
+checks only ever signed in to accounts that already existed.
+
+### What changed
+
+- `supabase/migrations/0005_geegle_signup_confirmation.sql`: repairs the FK and
+  the `AFTER INSERT` provisioning trigger, adds a case-insensitive unique index,
+  confirms **only** `@users.geegle.internal` addresses at creation time so GoTrue
+  skips the mailer and issues a session, and backfills existing Geegle accounts.
+  The shared project's confirmation setting is untouched.
+- `src/services/auth.ts`: duplicate usernames (422, sanitized 200, or a 23505
+  race) all report "That username is already taken."; 5xx reports a service
+  problem instead of the generic fallback; the typed capitalisation is kept for
+  display; registration falls back to a password sign-in when a project returns a
+  user without a session.
+- `src/App.tsx`: one in-flight submit guard, so Enter plus click cannot send two
+  requests.
+- `src/components/Settings.tsx`: password change now reauthenticates with the
+  current password before `updateUser`.
+- `scripts/qa/check-production-env.mjs` + `Procfile`: the release gate now runs on
+  every Render deploy, inspects the built artifact, checks the key belongs to the
+  project, rejects placeholders and any privileged key. Verified isolated → exit 1,
+  correct build → exit 0, mismatched key → exit 1.
+- `scripts/qa/check-account-completion.mjs`: new acceptance run against a real
+  backend with the production confirmation setting.
+- Docs: `docs/PRODUCTION_AUTH_HANDOFF.md` (rewritten),
+  `docs/ACCOUNT_ACCEPTANCE_EVIDENCE.md`, `docs/CLOUD_SAVE_VERIFICATION.md`.
+
+### Verified in this cycle (fresh output)
+
+| Check | Result |
+| --- | --- |
+| `npm run typecheck` | exit 0 |
+| `npm run lint` | exit 0 |
+| `bun test tests` | 71 pass, 0 fail |
+| `npm run build` | exit 0 |
+| `interface-check.mjs` | 54/54 |
+| `check-account-completion.mjs` | 21/21 |
+| `auth-check.mjs` | 14/14 |
+| `check-session-sync.mjs` | 5/5 |
+| `check-password-change.mjs` | 6/6 |
+| `check-cloud-save.mjs` | 6/6 |
+| production gate, isolated build | exit 1 by design |
+| production gate, correct production build | exit 0 |
+| production gate, production URL + isolated key | exit 1 (`auth settings returned 401`) |
+
+### Blocked
+
+- Live-site registration and login: needs the owner to apply migration `0005`
+  (see `docs/PRODUCTION_AUTH_HANDOFF.md` §4.1). Production account acceptance is
+  BLOCKED, not done.
+- Cloud-save conflict detection in production: migration `0002` is missing
+  (`select=revision` → `42703`).
+- Game-frame origin isolation: needs separate-origin hosting.
+- Per-engine save verification: only `cl2048` remains verified end to end.

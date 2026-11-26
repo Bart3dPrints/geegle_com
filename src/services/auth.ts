@@ -53,7 +53,42 @@ function friendlyAuthError(raw: string): string {
   if (msg.includes('failed to fetch') || msg.includes('network')) {
     return 'Could not reach the account service. Check your connection.';
   }
+  if (msg.includes('not confirmed')) {
+    return 'This account is not activated yet. Please contact support.';
+  }
   return 'Something went wrong. Please try again.';
+}
+
+const USERNAME_TAKEN = 'That username is already taken.';
+const ACCOUNT_UNAVAILABLE =
+  'The account service is unavailable right now. Please try again shortly.';
+const ACCOUNT_NOT_ACTIVATED =
+  'This deployment could not activate the new account. Please try again shortly.';
+
+/**
+ * Duplicate usernames arrive in three shapes depending on project settings
+ * and timing: 422 `user_already_exists`, a sanitized 200 response with no
+ * identities, or a 23505 unique violation when two requests race. The
+ * database enforces uniqueness in every case; this only maps the reply.
+ */
+function isDuplicateSignup(error: {
+  code?: string;
+  message?: string;
+}): boolean {
+  // Supabase normally reports a string code, but GoTrue's unique violation
+  // arrives as the number 23505, so coerce before comparing.
+  const code = String(error.code ?? '').toLowerCase();
+  const msg = String(error.message ?? '').toLowerCase();
+  return (
+    code === 'user_already_exists' ||
+    code === 'email_exists' ||
+    code === '23505' ||
+    msg.includes('already registered') ||
+    msg.includes('already been registered') ||
+    msg.includes('already exists') ||
+    msg.includes('duplicate key') ||
+    msg.includes('unique constraint')
+  );
 }
 
 export async function register(
@@ -70,39 +105,61 @@ export async function register(
   }
 
   const email = usernameToEmail(username);
-  const { data, error } = await supabase.auth.signUp({ email, password });
+  // The stored identity is the lowercase synthetic address; the typed
+  // capitalisation is kept as display metadata only.
+  const { data, error } = await supabase.auth.signUp({
+    email,
+    password,
+    options: { data: { username: username.trim() } },
+  });
 
   if (error) {
     if (import.meta.env.DEV) {
       // Redacted: status and code only, never the password or the full body.
       console.debug('[geegle-auth] signup failed: status=%s code=%s', error.status ?? 'n/a', error.code ?? 'n/a');
     }
-    if (
-      error.message.toLowerCase().includes('already registered') ||
-      error.code === 'user_already_exists' ||
-      error.code === 'email_exists'
-    ) {
-      return { ok: false, error: 'That username is already taken.' };
-    }
+    if (isDuplicateSignup(error)) return { ok: false, error: USERNAME_TAKEN };
     if (error.status === 429) {
       return { ok: false, error: 'Too many attempts. Please wait a minute and try again.' };
+    }
+    if (error.status && error.status >= 500) {
+      return { ok: false, error: ACCOUNT_UNAVAILABLE };
     }
     return { ok: false, error: friendlyAuthError(error.message) };
   }
 
-  if (!data.session) {
-    // Supabase created the user but issued no session: the project still
-    // requires email confirmation, and Geegle collects no email to confirm.
+  if (data.session) {
     return {
-      ok: false,
-      error: 'Account creation needs email confirmation, which Geegle does not use. Try again later.',
+      ok: true,
+      user: data.user ?? undefined,
+      session: data.session,
     };
   }
-  return {
-    ok: true,
-    user: data.user ?? undefined,
-    session: data.session ?? undefined,
-  };
+
+  // No session. A duplicate registration is answered with a sanitized user
+  // that has no identities; anything else means the account exists but this
+  // deployment did not activate it, so try the password the user just chose.
+  if (Array.isArray(data.user?.identities) && data.user.identities.length === 0) {
+    return { ok: false, error: USERNAME_TAKEN };
+  }
+
+  const { data: signedIn, error: signInError } =
+    await supabase.auth.signInWithPassword({ email, password });
+  if (!signInError && signedIn.session) {
+    return {
+      ok: true,
+      user: signedIn.user ?? undefined,
+      session: signedIn.session,
+    };
+  }
+  if (
+    signInError?.code === 'email_not_confirmed' ||
+    (signInError?.message ?? '').toLowerCase().includes('not confirmed')
+  ) {
+    return { ok: false, error: ACCOUNT_NOT_ACTIVATED };
+  }
+  if (signInError) return { ok: false, error: USERNAME_TAKEN };
+  return { ok: false, error: ACCOUNT_UNAVAILABLE };
 }
 
 export async function login(
