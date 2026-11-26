@@ -4,6 +4,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
+import { motion } from 'motion/react';
 import {
   Star,
   ArrowLeft,
@@ -306,7 +307,12 @@ export function GamePlayer({
     'btn-secondary border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800';
 
   return (
-    <div className="fixed inset-0 z-50 bg-slate-950">
+    <motion.div
+      className="fixed inset-0 z-50 bg-slate-950"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.15, ease: 'easeOut' }}
+    >
       <div className="flex h-14 items-center gap-2 border-b border-slate-800 bg-slate-900 px-4">
         <button className={btn} onClick={() => void exit()} disabled={busy}>
           <ArrowLeft size={16} />
@@ -442,7 +448,7 @@ export function GamePlayer({
         )}
         {frameBlocked && !loaded && (
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-slate-950 p-6 text-center">
-            <ExternalLink size={28} className="text-blue-400" />
+            <ExternalLink size={28} className="text-slate-400" />
             <p className="max-w-md text-sm text-slate-300">
               {title} may not allow embedding inside other sites. You can
               retry, or open it directly in a new tab.
@@ -492,6 +498,6 @@ export function GamePlayer({
           />
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }

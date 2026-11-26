@@ -1,8 +1,7 @@
 // Geegle application shell.
-// Web search → entry gate → library → game player with active cloud saves.
-// Logout awaits the running game's real final save before ending the session.
-// External entries: Krillion backup opens in the Geegle player; Everythingle
-// launches its dedicated app with connection-method and server selection.
+// Web search → library → game player with active cloud saves.
+// A search for "pirate" (or "games") opens the library directly; there is no
+// secondary password page. Logout awaits the running game's real final save.
 
 import { flushSync } from 'react-dom';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
@@ -13,19 +12,15 @@ import {
   Sun,
   Moon,
   Monitor,
-  KeyRound,
   Loader2,
   AlertTriangle,
-  ArrowLeft,
   Settings as SettingsIcon,
-  ExternalLink,
+  ChevronDown,
 } from 'lucide-react';
+import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import type { GameEntry, ThemePreference } from './types';
 import { legacyCatalog } from './data/catalog';
-import { CATEGORIES } from './data/types';
-import { PROXY_SERVICES, proxyUrl } from './data/proxies';
 import { DUAL_SECTION_ENTRIES, EVERYTHINGLE } from './data/external';
-import { isEntryUnlocked, verifyEntryPassword } from './lib/entryGate';
 import { useAuth } from './hooks/useAuth';
 import {
   toggleFavorite,
@@ -38,8 +33,12 @@ import {
   loadServerDefaults,
   loadLandingAppearance,
   saveLandingAppearance,
+  loadRecentVisible,
+  saveRecentVisible,
 } from './lib/userData';
-import { GameCard, EmptyState } from './components/GameCard';
+import { FOOTER_TEXT, SITE_TITLE } from './lib/brand';
+import { Library } from './components/Library';
+import { GameCard } from './components/GameCard';
 import { SearchOverlay } from './components/SearchOverlay';
 import { GamePlayer } from './components/GamePlayer';
 import { ProxyCard } from './components/ProxyCard';
@@ -47,6 +46,7 @@ import { YouTubeApp } from './components/YouTubeApp';
 import { EverythingleApp } from './components/EverythingleApp';
 import { AccountSettings } from './components/AccountSettings';
 import { SearchLanding } from './components/SearchLanding';
+import { PROXY_SERVICES, proxyUrl } from './data/proxies';
 import type { LandingAppearance } from './landing/appearance';
 import type { CloudSaveHandle } from './lib/cloudSaves';
 
@@ -59,7 +59,6 @@ const APPS: GameEntry[] = [
     kind: 'stream',
     aliases: ['yt', 'videos', 'streaming', 'stream'],
     source: 'Official YouTube privacy-enhanced embed (youtube-nocookie.com)',
-    description: 'Play any YouTube video via the official embed.',
   },
   EVERYTHINGLE,
   {
@@ -95,6 +94,8 @@ const SEARCHABLE = [...new Map([...legacyCatalog, ...APPS_GRID].map((entry) => [
 
 type Tab = 'games' | 'apps' | 'proxies';
 
+const TABS: Tab[] = ['games', 'apps', 'proxies'];
+
 function useTheme() {
   const [theme, setTheme] = useState<ThemePreference>(() => {
     try {
@@ -122,43 +123,48 @@ function useTheme() {
   return { theme, setTheme };
 }
 
+/** Short dialog entrance that is skipped when reduced motion is requested. */
+function dialogMotion(reduce: boolean | null) {
+  return {
+    initial: reduce ? false : { opacity: 0, y: 8 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: reduce ? 0 : 0.18, ease: 'easeOut' as const },
+  };
+}
+
 export default function App() {
   const [showLanding, setShowLanding] = useState(() => location.hash !== '#games');
-  const [gateOpen, setGateOpen] = useState(!isEntryUnlocked());
-  const [gateInput, setGateInput] = useState('');
-  const [gateError, setGateError] = useState<string | null>(null);
-  const [gateBusy, setGateBusy] = useState(false);
 
   const auth = useAuth();
   const userId = auth.user?.id ?? null;
   const [authOpen, setAuthOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [accountMenuOpen, setAccountMenuOpen] = useState(false);
   const [authMode, setAuthMode] = useState<'login' | 'register'>('login');
   const [authError, setAuthError] = useState<string | null>(null);
   const [authBusy, setAuthBusy] = useState(false);
   const [authUsername, setAuthUsername] = useState('');
   const [authPassword, setAuthPassword] = useState('');
+  const reduceMotion = useReducedMotion();
 
   const { theme, setTheme } = useTheme();
   const [favorites, setFavorites] = useState<string[]>([]);
   const [recent, setRecent] = useState<string[]>([]);
+  const [showRecent, setShowRecent] = useState(false);
   const [serverDefaults, setServerDefaults] = useState<Record<string, number>>({});
   const [syncError, setSyncError] = useState<string | null>(null);
   const [landingAppearance, setLandingAppearance] = useState<{ owner: string; value: LandingAppearance | null } | null>(null);
 
   const [tab, setTab] = useState<Tab>('games');
-  const [category, setCategory] = useState('all');
   const [searchOpen, setSearchOpen] = useState(false);
   const [active, setActive] = useState<GameEntry | null>(null);
   const [youtubeOpen, setYoutubeOpen] = useState(false);
   const [everythingleOpen, setEverythingleOpen] = useState(false);
-  const [activeProxy, setActiveProxy] = useState<{
-    url: string;
-    title: string;
-  } | null>(null);
+  const [activeProxy, setActiveProxy] = useState<{ url: string; title: string } | null>(null);
 
   // The running game's save handle — logout awaits its real final save.
   const saveHandleRef = useRef<CloudSaveHandle | null>(null);
+  const accountMenuRef = useRef<HTMLDivElement>(null);
 
   const ownerRef = useRef(userId);
   const transitionRef = useRef(false);
@@ -166,24 +172,47 @@ export default function App() {
     ownerRef.current = userId;
     setFavorites([]);
     setRecent([]);
+    setShowRecent(false);
     setServerDefaults({});
     setTheme('system');
     setSyncError(null);
     if (auth.loading) return;
     let cancelled = false;
     void Promise.all([
-      loadFavorites(userId), loadRecent(userId), loadServerDefaults(userId), loadTheme(userId),
-    ]).then(([f, r, servers, savedTheme]) => {
+      loadFavorites(userId),
+      loadRecent(userId),
+      loadServerDefaults(userId),
+      loadTheme(userId),
+      loadRecentVisible(userId),
+    ]).then(([f, r, servers, savedTheme, recentVisible]) => {
       if (cancelled) return;
       setFavorites(f.data ?? []);
       setRecent(r.data ?? []);
       setServerDefaults(servers.data ?? {});
+      setShowRecent(recentVisible.data === true);
       const t = savedTheme.data;
       setTheme(t === 'dark' || t === 'light' ? t : 'system');
-      setSyncError(f.error ?? r.error ?? servers.error ?? savedTheme.error ?? null);
+      setSyncError(f.error ?? r.error ?? servers.error ?? savedTheme.error ?? recentVisible.error ?? null);
     });
     return () => { cancelled = true; };
   }, [auth.loading, userId, setTheme]);
+
+  // Close the account menu on outside click or Escape.
+  useEffect(() => {
+    if (!accountMenuOpen) return;
+    const onPointer = (event: PointerEvent) => {
+      if (!accountMenuRef.current?.contains(event.target as Node)) setAccountMenuOpen(false);
+    };
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setAccountMenuOpen(false);
+    };
+    document.addEventListener('pointerdown', onPointer);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('pointerdown', onPointer);
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [accountMenuOpen]);
 
   const closeGame = useCallback(async () => {
     if (transitionRef.current) return false;
@@ -221,8 +250,6 @@ export default function App() {
     setYoutubeOpen(false);
     setEverythingleOpen(false);
     setSearchOpen(false);
-    setGateInput('');
-    setGateError(null);
     if (!historyTraversal && location.hash) history.pushState(null, '', location.pathname + location.search);
     setShowLanding(true);
     window.scrollTo(0, 0);
@@ -266,6 +293,7 @@ export default function App() {
       setActiveProxy(null);
       setEverythingleOpen(false);
       setSettingsOpen(false);
+      setAccountMenuOpen(false);
     });
     try {
       const error = await auth.signOut();
@@ -288,7 +316,6 @@ export default function App() {
         setEverythingleOpen(true);
         return;
       }
-      setActiveProxy(null);
       setActive(g);
       const res = await trackPlay(g.id, userId);
       if (ownerRef.current !== userId) return;
@@ -324,31 +351,23 @@ export default function App() {
     });
   };
 
-  const visibleGames = useMemo(
-    () =>
-      category === 'all'
-        ? legacyCatalog
-        : legacyCatalog.filter((g) => g.categories.includes(category as never)),
-    [category]
-  );
+  const handleShowRecent = (visible: boolean) => {
+    setShowRecent(visible);
+    void saveRecentVisible(visible, userId).then((res) => {
+      if (ownerRef.current === userId && !res.ok && res.error) setSyncError(`Setting not synced: ${res.error}`);
+    });
+  };
 
-  const byId = useCallback(
-    (id: string) => SEARCHABLE.find((g) => g.id === id),
-    []
-  );
-
+  const byId = useCallback((id: string) => SEARCHABLE.find((g) => g.id === id), []);
   const recentEntries = useMemo(
     () => recent.map(byId).filter((g): g is GameEntry => Boolean(g)),
     [recent, byId]
-  );
-  const favoriteEntries = useMemo(
-    () => favorites.map(byId).filter((g): g is GameEntry => Boolean(g)),
-    [favorites, byId]
   );
 
   if (showLanding) {
     return (
       <SearchLanding
+        signedIn={Boolean(userId)}
         onOpenLibrary={openLibrary}
         account={userId ? {
           id: userId,
@@ -364,89 +383,25 @@ export default function App() {
     );
   }
 
-  if (gateOpen) {
-    return (
-      <div className="flex min-h-screen items-center justify-center bg-slate-50 p-4 dark:bg-slate-950">
-        <form
-          className="card w-full max-w-sm p-6"
-          onSubmit={async (e) => {
-            e.preventDefault();
-            setGateBusy(true);
-            setGateError(null);
-            const res = await verifyEntryPassword(gateInput);
-            setGateBusy(false);
-            if (res.ok) {
-              setGateInput('');
-              setGateOpen(false);
-            }
-            else if (res.reason === 'rate_limited')
-              setGateError('Too many attempts. Try again in a few minutes.');
-            else if (res.reason === 'not_configured')
-              setGateError(
-                'The entry gate is not configured. Set the Supabase environment variables on Render.'
-              );
-            else if (res.reason === 'network')
-              setGateError('Could not reach the verification service. Try again.');
-            else setGateError('Incorrect password.');
-          }}
-        >
-          <div className="mb-6 flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600 text-white">
-              <KeyRound size={20} />
-            </div>
-            <div>
-              <h1 className="text-lg font-semibold">Geegle</h1>
-              <p className="text-sm text-slate-500 dark:text-slate-400">
-                Enter the site password
-              </p>
-            </div>
-          </div>
-          <input
-            className="input mb-2"
-            type="password"
-            placeholder="Password"
-            value={gateInput}
-            onChange={(e) => setGateInput(e.target.value)}
-            autoFocus
-            aria-label="Site password"
-          />
-          {gateError && (
-            <p className="mb-2 text-sm text-red-600 dark:text-red-400" role="alert">
-              {gateError}
-            </p>
-          )}
-          <button className="btn-primary w-full" disabled={gateBusy} type="submit">
-            {gateBusy ? <Loader2 className="animate-spin" size={16} /> : 'Enter'}
-          </button>
-          <button className="btn-secondary mt-3 w-full gap-2" type="button" disabled={gateBusy} onClick={() => void openLanding()}>
-            <ArrowLeft size={16} /> Back to web search
-          </button>
-        </form>
-      </div>
-    );
-  }
-
   const themeButtons = (
     <>
-      {(
-        [
-          ['light', Sun],
-          ['system', Monitor],
-          ['dark', Moon],
-        ] as const
-      ).map(([mode, Icon]) => (
+      {([
+        ['light', Sun],
+        ['system', Monitor],
+        ['dark', Moon],
+      ] as const).map(([mode, Icon]) => (
         <button
           key={mode}
-          className={`rounded-md p-1.5 ${
+          className={`rounded p-1.5 transition-colors ${
             theme === mode
-              ? 'bg-blue-600 text-white'
-              : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800'
+              ? 'bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900'
+              : 'text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800'
           }`}
           onClick={() => handleTheme(mode)}
           aria-label={`${mode} theme`}
           aria-pressed={theme === mode}
         >
-          <Icon size={16} />
+          <Icon size={15} />
         </button>
       ))}
     </>
@@ -454,45 +409,24 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
-      <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur dark:border-slate-800 dark:bg-slate-900/95">
-        <div className="mx-auto flex h-16 max-w-7xl items-center gap-3 px-4 sm:gap-4 sm:px-6">
+      <header className="sticky top-0 z-40 border-b border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
+        <div className="mx-auto flex h-14 max-w-7xl items-center gap-2 px-4 sm:px-6">
           <button
-            className="flex items-center gap-2 text-lg font-semibold"
+            className="flex items-center gap-2 text-base font-semibold"
             onClick={() => void openLanding()}
-            aria-label="Geegle home"
+            aria-label={`${SITE_TITLE} home`}
           >
-            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-sm font-bold text-white">
+            <span className="flex h-7 w-7 items-center justify-center rounded-full border border-slate-900 text-sm font-bold dark:border-slate-100">
               G
             </span>
-            Geegle
+            {SITE_TITLE}
           </button>
-
-          <nav className="hidden gap-1 sm:flex" aria-label="Sections">
-            {(['games', 'apps', 'proxies'] as Tab[]).map((t) => (
-              <button
-                key={t}
-                className={`rounded-lg px-3 py-2 text-sm font-medium capitalize transition-colors ${
-                  tab === t
-                    ? 'bg-blue-600 text-white'
-                    : 'text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800'
-                }`}
-                onClick={async () => {
-                  if (!await closeGame()) return;
-                  setTab(t);
-                  setActive(null);
-                  setActiveProxy(null);
-                }}
-              >
-                {t}
-              </button>
-            ))}
-          </nav>
 
           <div className="flex-1" />
 
           {syncError && (
             <span
-              className="mr-2 hidden max-w-48 truncate text-xs text-amber-600 dark:text-amber-400 md:inline"
+              className="hidden max-w-48 truncate text-xs text-slate-500 dark:text-slate-400 md:inline"
               title={syncError}
             >
               {syncError}
@@ -500,7 +434,7 @@ export default function App() {
           )}
 
           <button
-            className="btn-secondary gap-2 text-slate-500"
+            className="btn-secondary gap-2"
             onClick={() => setSearchOpen(true)}
             aria-label="Search games and apps"
           >
@@ -509,7 +443,7 @@ export default function App() {
           </button>
 
           <div
-            className="hidden items-center gap-1 rounded-lg border border-slate-200 p-1 dark:border-slate-700 sm:flex"
+            className="flex items-center gap-0.5 rounded-md border border-slate-200 p-0.5 dark:border-slate-700"
             role="group"
             aria-label="Theme"
           >
@@ -517,173 +451,210 @@ export default function App() {
           </div>
 
           {auth.user ? (
-            <div className="flex items-center gap-2">
+            <div className="relative" ref={accountMenuRef}>
               <button
-                className="btn-secondary"
-                onClick={() => setSettingsOpen(true)}
-                aria-label="Account settings"
+                className="flex items-center gap-1.5 rounded-full border border-slate-300 p-1 pr-2 dark:border-slate-700"
+                onClick={() => setAccountMenuOpen((open) => !open)}
+                aria-label="Account"
+                aria-expanded={accountMenuOpen}
+                aria-haspopup="menu"
               >
-                <SettingsIcon size={16} />
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 text-slate-600 dark:bg-slate-700 dark:text-slate-300">
+                  <UserIcon size={14} />
+                </span>
+                <ChevronDown size={14} className="text-slate-400" />
               </button>
-              <span className="hidden text-sm text-slate-600 dark:text-slate-300 md:inline">
-                {auth.username}
-              </span>
-              <button className="btn-secondary" onClick={handleSignOut} aria-label="Log out">
-                <LogOut size={16} />
-              </button>
+              <AnimatePresence>
+                {accountMenuOpen && (
+                  <motion.div
+                    role="menu"
+                    aria-label="Account menu"
+                    className="card absolute right-0 top-full z-50 mt-2 w-56 overflow-hidden p-1 shadow-lg"
+                    initial={reduceMotion ? false : { opacity: 0, y: -4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={reduceMotion ? { opacity: 1 } : { opacity: 0, y: -4 }}
+                    transition={{ duration: reduceMotion ? 0 : 0.14, ease: 'easeOut' }}
+                  >
+                    <p className="truncate px-3 py-2 text-xs text-slate-500 dark:text-slate-400">
+                      {auth.username}
+                    </p>
+                    <button
+                      role="menuitem"
+                      className="flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm hover:bg-slate-100 dark:hover:bg-slate-800"
+                      onClick={() => {
+                        setAccountMenuOpen(false);
+                        setSettingsOpen(true);
+                      }}
+                    >
+                      <SettingsIcon size={15} /> Settings
+                    </button>
+                    <button
+                      role="menuitem"
+                      className="flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm hover:bg-slate-100 dark:hover:bg-slate-800"
+                      onClick={() => void handleSignOut()}
+                    >
+                      <LogOut size={15} /> Log out
+                    </button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ) : (
             <button
-              className="btn-secondary"
+              className="flex items-center gap-1.5 rounded-full border border-slate-300 p-1 pr-2 dark:border-slate-700"
               aria-label="Sign in"
               onClick={() => {
                 setAuthOpen(true);
                 setAuthMode('login');
               }}
             >
-              <UserIcon size={16} />
-              <span className="hidden md:inline">Sign in</span>
-            </button>
-          )}
-        </div>
-
-        <div className="flex items-center justify-between border-t border-slate-200 px-4 py-1.5 dark:border-slate-800 sm:hidden">
-          <div
-            className="flex items-center gap-1 rounded-lg border border-slate-200 p-1 dark:border-slate-700"
-            role="group"
-            aria-label="Theme"
-          >
-            {themeButtons}
-          </div>
-          {auth.user && (
-            <button
-              className="btn-secondary py-1"
-              onClick={() => setSettingsOpen(true)}
-              aria-label="Account settings"
-            >
-              <SettingsIcon size={14} />
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 text-slate-600 dark:bg-slate-700 dark:text-slate-300">
+                <UserIcon size={14} />
+              </span>
+              <span className="hidden pr-1 text-sm sm:inline">Sign in</span>
             </button>
           )}
         </div>
 
         <nav
-          className="flex border-t border-slate-200 dark:border-slate-800"
+          className="border-t border-slate-200 dark:border-slate-800"
           aria-label="Sections"
         >
-          {(['games', 'apps', 'proxies'] as Tab[]).map((t) => (
-            <button
-              key={t}
-              className={`flex-1 px-3 py-2 text-sm font-medium capitalize ${
-                tab === t
-                  ? 'border-b-2 border-blue-600 text-blue-600 dark:text-blue-400'
-                  : 'text-slate-600 dark:text-slate-400'
-              }`}
-              onClick={async () => {
-                if (!await closeGame()) return;
-                setTab(t);
-                setActive(null);
-                setActiveProxy(null);
-              }}
-            >
-              {t}
-            </button>
-          ))}
+          <div className="mx-auto flex max-w-7xl px-2 sm:px-4">
+            {TABS.map((t) => (
+              <button
+                key={t}
+                className={`relative flex-1 px-3 py-3 text-[15px] font-medium capitalize transition-colors sm:flex-none sm:px-8 ${
+                  tab === t
+                    ? 'text-slate-900 dark:text-slate-100'
+                    : 'text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100'
+                }`}
+                aria-current={tab === t ? 'page' : undefined}
+                onClick={async () => {
+                  if (!await closeGame()) return;
+                  setTab(t);
+                  setActive(null);
+                  setActiveProxy(null);
+                }}
+              >
+                {t}
+                {tab === t && (
+                  <motion.span
+                    layoutId="tab-underline"
+                    className="absolute inset-x-3 bottom-0 h-0.5 bg-slate-900 dark:bg-slate-100"
+                    transition={{ duration: reduceMotion ? 0 : 0.2, ease: 'easeOut' }}
+                  />
+                )}
+              </button>
+            ))}
+          </div>
         </nav>
       </header>
 
-      {authOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 p-4"
-          onClick={() => setAuthOpen(false)}
-          role="dialog"
-          aria-modal="true"
-        >
-          <div className="card w-full max-w-sm p-6" onClick={(e) => e.stopPropagation()}>
-            <h2 className="mb-4">{authMode === 'login' ? 'Sign in' : 'Create account'}</h2>
-            {!auth.enabled && (
-              <div className="mb-4 flex gap-2 rounded-lg bg-amber-50 p-3 text-sm text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">
-                <AlertTriangle size={16} className="mt-0.5 shrink-0" />
-                <span>Accounts are not configured on this deployment.</span>
-              </div>
-            )}
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                handleAuth(authMode);
-              }}
+      <AnimatePresence>
+        {authOpen && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 p-4"
+            onClick={() => setAuthOpen(false)}
+            role="dialog"
+            aria-modal="true"
+            aria-label={authMode === 'login' ? 'Sign in' : 'Create account'}
+          >
+            <motion.div
+              className="card w-full max-w-sm p-6"
+              {...dialogMotion(reduceMotion)}
+              onClick={(e) => e.stopPropagation()}
             >
-              <label className="label" htmlFor="auth-username">
-                Username
-              </label>
-              <input
-                id="auth-username"
-                className="input mb-4"
-                value={authUsername}
-                onChange={(e) => setAuthUsername(e.target.value)}
-                placeholder="3-32 characters"
-                autoComplete="username"
-                required
-              />
-              <label className="label" htmlFor="auth-password">
-                Password
-              </label>
-              <input
-                id="auth-password"
-                className="input mb-2"
-                type="password"
-                value={authPassword}
-                onChange={(e) => setAuthPassword(e.target.value)}
-                placeholder="At least 8 characters"
-                autoComplete={
-                  authMode === 'login' ? 'current-password' : 'new-password'
-                }
-                required
-              />
-              {authError && (
-                <p className="mb-2 text-sm text-red-600 dark:text-red-400" role="alert">
-                  {authError}
-                </p>
+              <h2 className="mb-4">{authMode === 'login' ? 'Sign in' : 'Create account'}</h2>
+              {!auth.enabled && (
+                <div className="mb-4 flex gap-2 rounded-md bg-slate-100 p-3 text-sm text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                  <AlertTriangle size={16} className="mt-0.5 shrink-0" />
+                  <span>Accounts are not configured on this deployment.</span>
+                </div>
               )}
-              <button className="btn-primary w-full" disabled={authBusy} type="submit">
-                {authBusy && <Loader2 className="animate-spin" size={16} />}
-                {authMode === 'login' ? 'Sign in' : 'Create account'}
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  handleAuth(authMode);
+                }}
+              >
+                <label className="label" htmlFor="auth-username">
+                  Username
+                </label>
+                <input
+                  id="auth-username"
+                  className="input mb-4"
+                  value={authUsername}
+                  onChange={(e) => setAuthUsername(e.target.value)}
+                  placeholder="3-32 characters"
+                  autoComplete="username"
+                  required
+                />
+                <label className="label" htmlFor="auth-password">
+                  Password
+                </label>
+                <input
+                  id="auth-password"
+                  className="input mb-2"
+                  type="password"
+                  value={authPassword}
+                  onChange={(e) => setAuthPassword(e.target.value)}
+                  placeholder="At least 8 characters"
+                  autoComplete={authMode === 'login' ? 'current-password' : 'new-password'}
+                  required
+                />
+                {authError && (
+                  <p className="mb-2 text-sm text-red-600 dark:text-red-400" role="alert">
+                    {authError}
+                  </p>
+                )}
+                <button className="btn-primary w-full" disabled={authBusy} type="submit">
+                  {authBusy && <Loader2 className="animate-spin" size={16} />}
+                  {authMode === 'login' ? 'Sign in' : 'Create account'}
+                </button>
+              </form>
+              <button
+                className="mt-4 w-full text-center text-sm text-slate-600 underline-offset-2 hover:underline dark:text-slate-300"
+                onClick={() => {
+                  setAuthMode(authMode === 'login' ? 'register' : 'login');
+                  setAuthError(null);
+                }}
+              >
+                {authMode === 'login'
+                  ? "Don't have an account? Create one"
+                  : 'Already have an account? Sign in'}
               </button>
-            </form>
-            <button
-              className="mt-4 w-full text-center text-sm text-blue-600 hover:underline dark:text-blue-400"
-              onClick={() => {
-                setAuthMode(authMode === 'login' ? 'register' : 'login');
-                setAuthError(null);
-              }}
-            >
-              {authMode === 'login'
-                ? "Don't have an account? Create one"
-                : 'Already have an account? Sign in'}
-            </button>
+            </motion.div>
           </div>
-        </div>
-      )}
+        )}
+      </AnimatePresence>
 
-      {settingsOpen && auth.user && (
-        <AccountSettings
-          username={auth.username}
-          onClose={() => setSettingsOpen(false)}
-          onSignedOut={handleSignOut}
-        />
-      )}
+      <AnimatePresence>
+        {settingsOpen && auth.user && (
+          <AccountSettings
+            username={auth.username}
+            showRecent={showRecent}
+            onShowRecentChange={handleShowRecent}
+            onClose={() => setSettingsOpen(false)}
+            onSignedOut={handleSignOut}
+          />
+        )}
+      </AnimatePresence>
 
-      {searchOpen && (
-        <SearchOverlay
-          entries={SEARCHABLE}
-          onClose={() => setSearchOpen(false)}
-          onLaunch={launch}
-        />
-      )}
+      <AnimatePresence>
+        {searchOpen && (
+          <SearchOverlay
+            entries={SEARCHABLE}
+            onClose={() => setSearchOpen(false)}
+            onLaunch={launch}
+          />
+        )}
+      </AnimatePresence>
 
       {youtubeOpen && <YouTubeApp onExit={() => setYoutubeOpen(false)} />}
 
       {everythingleOpen && (
-        <EverythingleApp key={userId ?? "guest"} userId={userId} onExit={() => setEverythingleOpen(false)} />
+        <EverythingleApp key={userId ?? 'guest'} userId={userId} onExit={() => setEverythingleOpen(false)} />
       )}
 
       {(active || activeProxy) && (
@@ -706,98 +677,28 @@ export default function App() {
 
       <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
         {tab === 'games' && (
-          <>
-            {(favoriteEntries.length > 0 || recentEntries.length > 0) && (
-              <section className="mb-8">
-                <h2 className="mb-3">Favorites &amp; Recent</h2>
-                <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-                  {[
-                    ...favoriteEntries,
-                    ...recentEntries.filter((g) => !favorites.includes(g.id)),
-                  ]
-                    .slice(0, 12)
-                    .map((g) => (
-                      <GameCard key={g.id} game={g} onLaunch={() => launch(g)} />
-                    ))}
-                </div>
-              </section>
-            )}
-
-            <section>
-              <div className="mb-4 flex items-center justify-between">
-                <h2>All Games</h2>
-                <span className="text-sm text-slate-500">
-                  {visibleGames.length} games
-                </span>
-              </div>
-              <div className="mb-6 flex flex-wrap gap-2" role="tablist" aria-label="Categories">
-                <button
-                  role="tab"
-                  aria-selected={category === 'all'}
-                  className={category === 'all' ? 'chip-active' : 'chip'}
-                  onClick={() => setCategory('all')}
-                >
-                  All Games
-                </button>
-                {CATEGORIES.map((c) => (
-                  <button
-                    key={c.key}
-                    role="tab"
-                    aria-selected={category === c.key}
-                    className={category === c.key ? 'chip-active' : 'chip'}
-                    onClick={() => setCategory(c.key)}
-                  >
-                    {c.label}
-                  </button>
-                ))}
-              </div>
-              {visibleGames.length === 0 ? (
-                <EmptyState
-                  title="No games in this category"
-                  body="Try another category or search for a game."
-                />
-              ) : (
-                <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-                  {visibleGames.map((g) => (
-                    <GameCard
-                      key={g.id}
-                      game={g}
-                      onLaunch={() => launch(g)}
-                      isFavorite={favorites.includes(g.id)}
-                      onToggleFavorite={() => toggleFav(g.id)}
-                    />
-                  ))}
-                </div>
-              )}
-            </section>
-          </>
+          <Library
+            games={legacyCatalog}
+            favorites={favorites}
+            recent={recentEntries}
+            showRecent={showRecent}
+            onLaunch={launch}
+            onToggleFavorite={toggleFav}
+          />
         )}
 
         {tab === 'apps' && (
-          <section>
-            <h2 className="mb-4">Apps</h2>
+          <section aria-label="Apps">
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
               {APPS_GRID.map((g) => (
                 <GameCard key={g.id} game={g} onLaunch={() => launch(g)} />
               ))}
             </div>
-            {active && active.path.startsWith('http') && (
-              <p className="mt-4 flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
-                <ExternalLink size={14} />
-                If the site cannot display inside Geegle, use the Open in a new
-                tab button in the player toolbar.
-              </p>
-            )}
           </section>
         )}
 
         {tab === 'proxies' && (
-          <section>
-            <h2 className="mb-2">Proxies</h2>
-            <p className="mb-6 text-sm text-slate-500 dark:text-slate-400">
-              External services for authorized use only. Never send your Geegle
-              account details to any proxy.
-            </p>
+          <section aria-label="Proxies">
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {PROXY_SERVICES.map((service) => (
                 <ProxyCard
@@ -808,11 +709,8 @@ export default function App() {
                     setServerDefaults((prev) => ({ ...prev, [service.id]: index }));
                     const res = await saveServerDefault(service.id, index, userId);
                     if (ownerRef.current !== userId) return;
-                    if (!res.ok && res.error) {
-                      setSyncError(`Server default not synced: ${res.error}`);
-                    } else {
-                      setSyncError(null);
-                    }
+                    if (!res.ok && res.error) setSyncError(`Server default not synced: ${res.error}`);
+                    else setSyncError(null);
                   }}
                   onLaunch={(index) => launchProxy(service.id, index)}
                 />
@@ -822,8 +720,8 @@ export default function App() {
         )}
       </main>
 
-      <footer className="border-t border-slate-200 py-8 text-center text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400">
-        Geegle — free web games. Build: overhaul-2026-11-25.7
+      <footer className="border-t border-slate-200 py-6 text-center text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400">
+        {FOOTER_TEXT}
       </footer>
     </div>
   );

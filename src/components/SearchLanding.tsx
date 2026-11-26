@@ -1,5 +1,5 @@
 import { useEffect, useId, useRef, useState, type CSSProperties } from 'react';
-import { ArrowUpRight, Check, Gamepad2, Globe2, Palette, Search, X } from 'lucide-react';
+import { ArrowUpRight, Check, Globe2, Palette, Search, User, X } from 'lucide-react';
 import { AppearanceEditor } from '../landing/AppearanceEditor';
 import { DEFAULT_APPEARANCE, parseAppearance, readAppearanceCache, writeAppearance, darkInk, type LandingAppearance } from '../landing/appearance';
 import { externalSearch, searchAction, type LandingSearch, type SearchMode } from '../landing/search';
@@ -14,8 +14,10 @@ export interface LandingAccount {
 }
 
 export interface SearchLandingProps {
-  /** Must enter the normal guarded Games flow, not directly mount a game or unlock the gate. */
+  /** Enters the library directly; a "pirate" search calls this. */
   onOpenLibrary: () => void;
+  /** Whether an account session is active; the avatar is neutral otherwise. */
+  signedIn?: boolean;
   account?: LandingAccount;
   onSearch?: (request: LandingSearch) => void;
   suggestions?: readonly string[];
@@ -28,7 +30,7 @@ export function SearchLanding(props: SearchLandingProps) {
   return <LandingSession key={props.account ? 'account:' + props.account.id : 'guest'} {...props}/>;
 }
 
-function LandingSession({ account, onSearch, onOpenLibrary, suggestions = EXAMPLES }: SearchLandingProps) {
+function LandingSession({ account, onSearch, onOpenLibrary, signedIn, suggestions = EXAMPLES }: SearchLandingProps) {
   const [cached, setCached] = useState(() => readAppearanceCache(account?.id));
   const [draft, setDraft] = useState<LandingAppearance | null>(null);
   const [query, setQuery] = useState('');
@@ -84,7 +86,7 @@ function LandingSession({ account, onSearch, onOpenLibrary, suggestions = EXAMPL
     <header className="gl-bar"><nav aria-label="Search services">
       <span className="gl-web"><Globe2 size={16} aria-hidden="true"/> Web</span>
       <a href="https://images.google.com/" target="_blank" rel="noreferrer">Images<ArrowUpRight size={13} aria-hidden="true"/></a>
-    </nav><button className="gl-library" type="button" onClick={onOpenLibrary}><Gamepad2 size={18}/> Games</button></header>
+    </nav><span className="gl-avatar" aria-hidden="true" data-signed-in={signedIn ? 'true' : 'false'}><User size={20}/></span></header>
     <main className="gl-main"><div className="gl-center">
       <h1 className="gl-wordmark" aria-label="Geegle">{letters.map((l,i) => <span key={i} aria-hidden="true">{l}</span>)}</h1>
       <form className="gl-form" role="search" aria-label="Web search" onSubmit={e => {e.preventDefault(); submit(options[highlight] ?? query, 'web');}}>

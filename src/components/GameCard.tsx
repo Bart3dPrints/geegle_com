@@ -1,6 +1,9 @@
 // Game card: real artwork, title, favorite toggle. Used by every grid.
+// The favorite control is always visible (never hover-only) and the star
+// reacts with a short tap animation that respects reduced motion.
 
 import { Star } from 'lucide-react';
+import { motion } from 'motion/react';
 import type { GameEntry } from '../types';
 import { GameArt } from './GameArt';
 
@@ -16,7 +19,10 @@ export function GameCard({
   onToggleFavorite?: () => void;
 }) {
   return (
-    <div className="card group relative overflow-hidden">
+    <div
+      data-card=""
+      className="card group relative overflow-hidden transition-colors hover:border-slate-300 dark:hover:border-slate-700"
+    >
       <button
         className="block w-full text-left"
         onClick={onLaunch}
@@ -35,8 +41,11 @@ export function GameCard({
         </div>
       </button>
       {onToggleFavorite && (
-        <button
-          className="absolute right-2 top-2 rounded-md bg-white/80 p-1.5 opacity-0 transition-opacity focus:opacity-100 group-hover:opacity-100 dark:bg-slate-900/80"
+        <motion.button
+          type="button"
+          whileTap={{ scale: 0.86 }}
+          transition={{ duration: 0.12, ease: 'easeOut' }}
+          className="absolute right-2 top-2 rounded-md border border-slate-200 bg-white/95 p-1.5 dark:border-slate-700 dark:bg-slate-900/95"
           onClick={(e) => {
             e.stopPropagation();
             onToggleFavorite();
@@ -46,16 +55,17 @@ export function GameCard({
               ? `Remove ${game.title} from favorites`
               : `Add ${game.title} to favorites`
           }
+          aria-pressed={Boolean(isFavorite)}
         >
           <Star
             size={16}
             className={
               isFavorite
-                ? 'fill-amber-400 text-amber-400'
-                : 'text-slate-300 dark:text-slate-600'
+                ? 'fill-slate-900 text-slate-900 dark:fill-slate-100 dark:text-slate-100'
+                : 'text-slate-400 dark:text-slate-500'
             }
           />
-        </button>
+        </motion.button>
       )}
     </div>
   );

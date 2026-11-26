@@ -35,7 +35,7 @@ wolfchild|/games/wolfchild.html
 clkrillion|/games/krillion.html
 clkrillion-backup|https://krillionunlimited.org/
 
-# Restore exact pre-overhaul launch files (including canonical Unicode equivalents).
+# Exact launch files, including canonical Unicode equivalents.
 cl100roomsofenemies|/games/cl100RoomsOfEnemies.html
 cl2dshooting|/games/cl2Dshooting.html
 cla-walk-in-the-forest--v1-0|/games/clA%20Walk%20in%20The%20Forest%20(v1.0).html

@@ -6,9 +6,9 @@
  * Geegle design system
  * - Spacing: Tailwind's 4px-based scale only (4/8px increments).
  * - Typography: single family (Inter), defined ramp, consistent line heights.
- * - Colors: neutral slate surfaces + blue accent. No gradients, no neon glows.
+ * - Colors: neutral grayscale surfaces and accent. No gradients, no neon glows.
  * - Borders/radius: 8px cards, 6px controls, 4px chips.
- * - Shadows: two subtle levels only.
+ * - Shadows: one subtle level only; motion is short and consistent.
  */
 
 @layer base {
@@ -23,7 +23,7 @@
   }
   /* Visible keyboard focus on every interactive element. */
   :focus-visible {
-    @apply outline-none ring-2 ring-blue-500 ring-offset-1 dark:ring-offset-slate-950;
+    @apply outline-none ring-2 ring-slate-900 ring-offset-1 dark:ring-slate-100 dark:ring-offset-slate-950;
   }
   h1 {
     @apply text-xl font-semibold leading-7 tracking-tight;
@@ -35,10 +35,10 @@
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50;
+    @apply inline-flex items-center justify-center gap-2 rounded-md border px-3.5 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50;
   }
   .btn-primary {
-    @apply btn border-transparent bg-blue-600 text-white hover:bg-blue-700;
+    @apply btn border-transparent bg-slate-900 text-white hover:bg-slate-800 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white;
   }
   .btn-secondary {
     @apply btn border-slate-300 bg-white text-slate-700 hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800;
@@ -47,16 +47,16 @@
     @apply rounded-lg border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900;
   }
   .input {
-    @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/40 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:placeholder-slate-500;
+    @apply w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder-slate-400 focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:placeholder-slate-500 dark:focus:border-slate-100 dark:focus:ring-slate-100;
   }
   .label {
     @apply mb-1 block text-sm font-medium text-slate-700 dark:text-slate-300;
   }
   .chip {
-    @apply inline-flex shrink-0 items-center gap-1 rounded-md border border-slate-200 bg-white px-3 py-1.5 text-sm font-medium text-slate-600 transition-colors hover:border-slate-300 hover:text-slate-900 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-400 dark:hover:border-slate-600 dark:hover:text-slate-200;
+    @apply inline-flex shrink-0 items-center gap-1 rounded border border-slate-200 bg-white px-2.5 py-1.5 text-sm font-medium text-slate-600 transition-colors hover:border-slate-300 hover:text-slate-900 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-400 dark:hover:border-slate-600 dark:hover:text-slate-200;
   }
   .chip-active {
-    @apply chip border-blue-600 bg-blue-600 text-white hover:border-blue-700 hover:text-white dark:border-blue-500 dark:bg-blue-500;
+    @apply chip border-slate-900 bg-slate-900 text-white hover:border-slate-800 hover:text-white dark:border-slate-100 dark:bg-slate-100 dark:text-slate-900 dark:hover:border-white dark:hover:text-slate-900;
   }
   .badge {
     @apply inline-flex items-center gap-1 rounded px-1.5 py-0.5 text-xs font-medium;
@@ -66,5 +66,25 @@
   }
   .shadow-pop {
     @apply shadow-lg;
+  }
+}
+
+/* Artwork fades in once decoded instead of popping into the grid. */
+.geegle-art {
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+}
+.geegle-art[data-loaded='true'] {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

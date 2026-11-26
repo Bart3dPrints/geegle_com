@@ -11,6 +11,7 @@ export const FAVORITES_KEY = 'geegle-favorites';
 export const RECENT_KEY = 'geegle-recently-played';
 export const THEME_KEY = 'geegle-theme';
 export const SERVERS_KEY = 'geegle-default-servers';
+export const RECENT_VISIBLE_KEY = 'geegle-recent-visible';
 // Storage optimization retained after deletion-feature cancellation: recently
 // played history is capped at 50 games per account.
 const RECENT_CAP = 50;
@@ -122,6 +123,21 @@ export async function loadServerDefaults(userId: string | null): Promise<OpResul
   if (!userId || !isSupabaseConfigured) return { ok: true, data: readLocalServerDefaults() };
   const { data, error } = await supabase.from(T.settings).select('defaults:settings->defaultServers').eq('id', userId).maybeSingle();
   return error ? { ok: false, error: error.message } : { ok: true, data: serverDefaults(data?.defaults) };
+}
+
+/** Recently Played is hidden until the owner of the settings turns it on. */
+export async function saveRecentVisible(visible: boolean, userId: string | null): Promise<OpResult<null>> {
+  if (!userId || !isSupabaseConfigured) {
+    writeJson(RECENT_VISIBLE_KEY, visible);
+    return { ok: true };
+  }
+  return updateSettings(userId, (settings) => ({ ...settings, recentVisible: visible }));
+}
+
+export async function loadRecentVisible(userId: string | null): Promise<OpResult<boolean>> {
+  if (!userId || !isSupabaseConfigured) return { ok: true, data: readJson(RECENT_VISIBLE_KEY) === true };
+  const { data, error } = await supabase.from(T.settings).select('value:settings->recentVisible').eq('id', userId).maybeSingle();
+  return error ? { ok: false, error: error.message } : { ok: true, data: data?.value === true };
 }
 
 export async function loadLandingAppearance(userId: string): Promise<OpResult<LandingAppearance | null>> {
