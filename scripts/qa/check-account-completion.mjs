@@ -91,7 +91,7 @@ async function signOut() {
   await dismissNotice();
   if (!(await page.getByRole('button', { name: 'Account', exact: true }).count())) return;
   await page.getByRole('button', { name: 'Account', exact: true }).click();
-  await page.getByRole('menuitem', { name: 'Log out' }).click();
+  await page.getByRole('menuitem', { name: 'Sign out' }).click();
   await page.waitForTimeout(1500);
 }
 

@@ -33,10 +33,17 @@ const {
 const entry = (id, kind) => ({ id, path: `/games/${id}.html`, kind });
 
 test('a game is only "verified" when it is in the recorded evidence list', () => {
-  assert.equal(saveSupportFor(entry('cl2048')), 'verified');
   for (const id of VERIFIED_GAMES) {
     assert.equal(saveSupportFor(entry(id)), 'verified', `${id} should be verified`);
   }
+});
+
+// cl2048 shipped without any persistence: its wrapper loads every script from a
+// CDN and includes no storage manager. It must never be advertised as verified
+// again on the strength of a key the test wrote itself.
+test('2048 is not advertised as individually verified', () => {
+  assert.equal(VERIFIED_GAMES.has('cl2048'), false);
+  assert.notEqual(saveSupportFor(entry('cl2048')), 'verified');
 });
 
 test('an injectable game with a detected mechanism is engine-compatible, not verified', () => {

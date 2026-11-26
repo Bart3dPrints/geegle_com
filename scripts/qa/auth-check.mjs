@@ -47,7 +47,7 @@ async function signIn(user) {
   await dismissNotice();
   if (await page.getByRole('button', { name: 'Account', exact: true }).count()) {
     await page.getByRole('button', { name: 'Account', exact: true }).click();
-    await page.getByRole('menuitem', { name: 'Log out' }).click();
+    await page.getByRole('menuitem', { name: 'Sign out' }).click();
     await page.waitForTimeout(800);
   }
   await page.getByRole('button', { name: /Sign in/ }).first().click();
@@ -132,7 +132,7 @@ try {
 
   // Explicit logout.
   await page.getByRole('button', { name: 'Account', exact: true }).click();
-  await page.getByRole('menuitem', { name: 'Log out' }).click();
+  await page.getByRole('menuitem', { name: 'Sign out' }).click();
   await page.waitForTimeout(1500);
   check('explicit logout returns to signed out', (await page.getByRole('button', { name: /Sign in/ }).count()) > 0);
 

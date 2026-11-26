@@ -170,9 +170,9 @@ await page.waitForFunction(
 check('the clicked star becomes a favorite', true, favoriteLabelAfter);
 check('Starred section appears', (await page.getByRole('heading', { name: 'Starred' }).count()) === 1);
 
-// Settings: enable Recently Played.
-await page.locator('button[aria-label="Account"]').click();
-await page.getByRole('menuitem', { name: 'Settings' }).click();
+// Settings: enable Recently Played (the header Settings button, not the
+// account dropdown, which holds only Sign out).
+await page.locator('header button[aria-label="Settings"]').click();
 await page.waitForSelector('input[type=checkbox]');
 check('Recently Played is off by default', !(await page.locator('input[type=checkbox]').isChecked()));
 await page.locator('input[type=checkbox]').check();
@@ -213,7 +213,7 @@ await reopened.close();
 
 // Log out, then verify account isolation.
 await page.locator('button[aria-label="Account"]').click();
-await page.getByRole('menuitem', { name: 'Log out' }).click();
+await page.getByRole('menuitem', { name: 'Sign out' }).click();
 await page.waitForSelector('button[aria-label="Sign in"]', { timeout: 20000 });
 check('logout returns to signed out', true);
 

@@ -1,90 +1,91 @@
 # Account acceptance evidence
 
-Cycle: 2026-11-26, branch `fix/production-account-repair`.
+Cycle: 2026-11-26, branch `feature/geegle-account-cloud-final` from `7fe74b0`.
 Statuses: NOT STARTED, IN PROGRESS, IMPLEMENTED BUT UNVERIFIED, VERIFIED, BLOCKED.
 
 Environments:
 
 - **production** — `https://bartisawesome.onrender.com` against project
-  `oizdbkxnzwatytxcrvoo`, deployed bundle `/assets/index-C72ESc1B.js`.
-- **local** — local Supabase stack (Postgres 17 + GoTrue 2.188.1 + PostgREST 14)
-  with `GOTRUE_MAILER_AUTOCONFIRM=false` and migrations 0002/0005/0006 applied.
+  `oizdbkxnzwatytxcrvoo` (the deployed bundle is from `main` at `7fe74b0`).
+- **local** — local Supabase stack with `GOTRUE_MAILER_AUTOCONFIRM=false` and
+  migrations 0002/0005/0006, app served by `vite --mode qa` on 127.0.0.1:5174.
 
-All accounts used below were created for the test with randomized usernames and
-passwords and are disposable. No existing account was touched, and no credential
-is recorded in the repository.
+All accounts below were created for the test with randomized usernames and
+passwords and are disposable. No existing account was touched and no credential is
+recorded in the repository.
 
-## Results
+## Results (production unless stated)
 
-| Requirement | Status | Environment | Method | Result |
-| --- | --- | --- | --- | --- |
-| Registration (username + password only) | VERIFIED | production | `scripts/qa/production-acceptance.mjs` drives the real form | account created, session issued, interface switches to signed-in |
-| Profile + preferences row created | VERIFIED | production | authenticated query as the new account + DB read | `geegle_profiles.username` matches, one `geegle_user_settings` row |
-| No email / phone / third party required | VERIFIED | production | sign-up payload contains only username, password and display metadata | accepted |
-| Duplicate username rejected | VERIFIED | production | register the same name through the form | "That username is already taken." |
-| Case-insensitive duplicate rejected | VERIFIED | production | register `USERNAME` after `username` | refused |
-| Whitespace normalised | VERIFIED | local | register `"  name  "` | refused, no second account |
-| Concurrent duplicate registration | VERIFIED | local + production DB | parallel sign-ups of one name | exactly one account; the rest `23505` on `users_email_partial_key` |
-| Invalid characters / length / empty | VERIFIED | local | client regex + DB `check (3..32)` | rejected before any request |
-| Invalid password | VERIFIED | production | short password in the form | refused |
-| Login from landing page and library | VERIFIED | production | both surfaces | succeeds |
-| Wrong password / unknown account | VERIFIED | production | form and API | `invalid_credentials`, identical wording, no account disclosure |
-| No overlapping submissions | VERIFIED | production | single in-flight guard | one request per submit |
-| Session across refresh | VERIFIED | production | reload | still signed in |
-| Session across new tab | VERIFIED | production | second page, same context | still signed in |
-| Session across full browser restart | VERIFIED | production | browser closed, relaunched with the stored profile | still signed in |
-| Explicit logout | VERIFIED | production | account menu → Log out | signed out, account surfaces gone |
-| Password change requires current password | VERIFIED | production | Settings → Preferences | wrong current refused; correct accepted ("Password updated.") |
-| Old password rejected / new accepted | VERIFIED | production | sign-in attempts after the change | old `Invalid username or password`, new signs in |
-| Favorites sync | VERIFIED | production | star a game, clear storage, sign in again | restored |
-| Recently Played visibility | VERIFIED | production | toggle in Preferences, persisted | restored |
-| Appearance (background colour) sync | VERIFIED | production | set `#203a2f`, clear storage, sign in | `rgb(32, 58, 47)` restored |
-| Game progress save + restore | VERIFIED | production | play path, automatic sync, cleared storage, relaunch | value restored in the game frame |
-| Save revision rotation | VERIFIED | production | accepted write vs stale write | revision rotates; stale revision matches 0 rows; newer data survives |
-| Account isolation — reads | VERIFIED | production | A queries B's favorites, saves, profile, settings while B's rows exist | 0 rows |
-| Account isolation — writes | VERIFIED | production | A inserts with B's `user_id` | `42501` |
-| Account isolation — update/delete | VERIFIED | production | A patches B's settings/saves, deletes B's favorites | 0 rows affected |
-| Authorization comes from the session | VERIFIED | production | A's JWT with B's id in payload/query | refused |
-| Anonymous cannot reach Geegle tables | VERIFIED | production | `has_table_privilege('anon', …)` after migration 0006 | no privileges, RPC not executable |
-| Shared project unaffected | VERIFIED | production | trigger/constraint/policy review | other app's trigger intact, its RLS untouched, `is_admin()` unreachable for Geegle accounts |
-| Account deletion disabled | VERIFIED (repository) | — | no deletion job, no scheduled function in `supabase/migrations` or `src` | none exists; production `pg_cron` not inspectable through the integration |
-| Game-frame origin isolation | BLOCKED | — | same-origin iframe architecture | a storage guard is not a security boundary; needs separate-origin hosting |
-| Other game engines' saves | IMPLEMENTED BUT UNVERIFIED | production | see `docs/CLOUD_SAVE_VERIFICATION.md` | only `cl2048` has a verified capture/restore path |
+| Requirement | Status | Method | Result |
+| --- | --- | --- | --- |
+| Registration through the real form | VERIFIED | `scripts/qa/production-acceptance.mjs` | account created, session issued, interface switches to signed-in |
+| Actual Supabase Auth user | VERIFIED | `/auth/v1/user` as the new account | user id returned |
+| Profile row | VERIFIED | `geegle_profiles` select as the account | username matches (lower-cased) |
+| Preferences row | VERIFIED | `geegle_user_settings` select | one row |
+| Login | VERIFIED | form, after logout | succeeds |
+| Explicit logout | VERIFIED | account menu → logout action | signed out |
+| Subsequent login | VERIFIED | form | succeeds |
+| Duplicate username | VERIFIED | register the same name | "That username is already taken." |
+| Case-insensitive duplicate | VERIFIED | register the upper-cased name | refused |
+| Concurrent duplicate registration | VERIFIED | two simultaneous `signUp` calls for one new name | exactly one session; the other request is refused (`500` from GoTrue's unique violation, sanitized) |
+| Password change with reauthentication | VERIFIED | Settings → Preferences | wrong current refused, correct accepted |
+| Incorrect password rejected | VERIFIED | old password after the change | `Invalid username or password` |
+| Session across refresh | VERIFIED | reload | still signed in |
+| Session across a full browser restart | VERIFIED | browser closed, relaunched with the stored profile | still signed in |
+| Session token refresh | VERIFIED | `refreshSession()` then a profile read with the new token | new access token reads the same profile |
+| Account isolation — reads | VERIFIED | A queries B's favorites, saves, profile, preferences | 0 rows |
+| Account isolation — writes | VERIFIED | A inserts with B's `user_id` | `42501` |
+| Account isolation — update/delete | VERIFIED | A patches/deletes B's rows | 0 rows affected |
+| Save revision rotation and stale rejection | VERIFIED | `production-data-integrity.mjs` | revision rotates, stale write matches 0 rows, newer data survives |
+| Favorites, appearance, Recently Played sync | VERIFIED | set values, discard storage, sign in | restored (`rgb(32, 58, 47)`, stars) |
+| Account-based game storage capture/restore | VERIFIED (mechanism) | storage written in the game frame, profile destroyed, sign in | value restored before launch; second account receives `null` |
+| Genuine gameplay save/restore | NOT VERIFIED — see `docs/CLOUD_SAVE_VERIFICATION.md` | real input in four games | none of them wrote progress of its own; each reason is recorded |
+| Game-frame origin isolation | BLOCKED | same-origin iframe architecture | a storage guard is not a security boundary; needs separate-origin hosting |
+| Account deletion stays disabled | VERIFIED (repository) | no deletion job or scheduled function in `supabase/migrations` / `src` | none exists |
+
+## Interface corrections in this cycle
+
+| Requirement | Status | Evidence |
+| --- | --- | --- |
+| Account dropdown holds exactly one action, `Sign out` | IMPLEMENTED, verified locally | `tests/account-menu.test.mjs` (8 tests) + `scripts/qa/interface-check.mjs`; production check `4b-4g` is staged behind `GEEGLE_EXPECT_NEW_MENU=1` because the deployed bundle predates the change |
+| Settings entry removed from the dropdown only | IMPLEMENTED, verified locally | the header Settings button is unchanged and still follows the wordmark |
+| Dropdown sits under the avatar, outside click and Escape close it | IMPLEMENTED, verified locally | production check `4e-4g` when the flag is set; local `interface-check` passes |
+| Wordmark ~30-40% larger, licensed geometric typeface | IMPLEMENTED, verified locally | 16px → 22px (+37.5%), Poppins Medium (SIL OFL 1.1, `public/fonts/`), header height unchanged (194px at both sizes), `docs/qa/wordmark-header.png` and `wordmark-header-mobile.png` |
 
 ## Command transcript (fresh, this cycle)
 
 ```
 $ node --env-file=.env.prod.local scripts/qa/production-acceptance.mjs
-22/22 production acceptance checks passed
+24/24 production acceptance checks passed
 
 $ node --env-file=.env.prod.local scripts/qa/production-data-integrity.mjs
 17/17 production data-integrity checks passed
 
-$ node --env-file=.env.qa.local scripts/qa/check-account-completion.mjs
-21/21 account checks passed                (local backend, after migrations)
+$ node --env-file=.env.prod.local scripts/qa/production-cloud-saves.mjs
+22/22 gameplay cloud-save checks passed (3 skipped with evidence)
 
-$ npm run typecheck     # exit 0
-$ npm run lint          # exit 0
-$ bun test tests        # 71 pass, 0 fail
-$ npm run build         # exit 0
-$ npm run check:prod-build   # FAIL on the isolated artifact, exit 0 outside release mode
-                             # (exit 1 with GEEGLE_EXPECT_PRODUCTION=1, verified earlier)
+$ GEEGLE_AUTH_BASE=http://127.0.0.1:5174 node --env-file=.env.qa.local scripts/qa/auth-check.mjs
+14/14   (local backend)
+
+$ … check-session-sync.mjs      5/5
+$ … check-password-change.mjs   6/6
+$ … check-account-completion.mjs 21/21
+$ … check-cloud-save.mjs        6/6
+$ node scripts/qa/interface-check.mjs
+all checks pass (landing, library, player, settings, wordmark, viewports)
+
+$ npm run typecheck              exit 0
+$ npm run lint                   exit 0
+$ bun test tests                 83 pass, 0 fail
+$ npm run build                  exit 0
+$ node --env-file=.env.prod.local node_modules/vite/bin/vite.js build   exit 0
+$ npm run check:prod-build       PASS (production project, key accepted, no privileged key)
 ```
-
-## Live production evidence (sanitized)
-
-- Bundle `/assets/index-C72ESc1B.js` contains `oizdbkxnzwatytxcrvoo` only, no
-  isolated reference, no privileged key.
-- `POST /auth/v1/signup` now returns `200` with a session; before the migration it
-  returned `500 / 23503`.
-- Duplicate sign-up returns `200` with a sanitized user that has no identities and
-  no session; the client reports the username as taken.
-- `GET /auth/v1/settings` reports `mailer_autoconfirm: false`; registration works
-  anyway because only the Geegle namespace is confirmed at insert time.
 
 ## Not claimed
 
+- The account-dropdown and wordmark changes are not yet on production: the
+  deployed bundle predates this branch. They are verified on the built artifact.
+- Genuine gameplay save and restore is not verified for any game; the mechanisms
+  are verified, the games' own persistence is not.
 - Game-frame origin isolation is not implemented.
-- Cloud saves are not verified for engines other than the `cl2048` capture path.
-- The production database has no restorable backup entry, so rollback relies on
-  the documented reverse migrations.

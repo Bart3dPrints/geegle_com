@@ -11,6 +11,19 @@
  * - Shadows: one subtle level only; motion is short and consistent.
  */
 
+/*
+ * Library wordmark typeface: Poppins Medium (SIL Open Font License 1.1, see
+ * public/fonts/POPPINS-OFL.txt). Geometric letterforms close to the reference
+ * search-engine typography, self-hosted so the mark never depends on a CDN.
+ */
+@font-face {
+  font-family: 'Geegle Wordmark';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/poppins-500.woff2') format('woff2');
+}
+
 @layer base {
   html {
     color-scheme: light;
@@ -72,6 +85,16 @@
   }
   .badge {
     @apply inline-flex items-center gap-1 rounded px-1.5 py-0.5 text-xs font-medium;
+  }
+  /* 22px is a ~38% increase over the previous 16px, with tight leading so the
+     56px library header keeps its height. */
+  .geegle-wordmark {
+    font-family: 'Geegle Wordmark', Inter, ui-sans-serif, system-ui, sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.017em;
+    color: inherit;
   }
   .shadow-card {
     @apply shadow-sm;

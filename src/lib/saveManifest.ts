@@ -30,11 +30,16 @@ export type SaveSupport =
   | 'external-service';
 
 /**
- * Games verified end-to-end in a browser: progress written, captured, browser
- * storage cleared, then restored. Add an id only with recorded evidence in
- * PROJECT_COMPLETION.md.
+ * Games verified end-to-end in a browser: the game itself wrote progress, it
+ * was captured, the browser profile was destroyed, and the same account restored
+ * it. Add an id only with recorded evidence in docs/CLOUD_SAVE_VERIFICATION.md.
+ *
+ * Empty on purpose: `cl2048` was listed here, but its shipped build loads every
+ * script from a CDN and contains no storage manager at all, so its progress
+ * never existed outside the page. The earlier evidence came from a key written
+ * by the test itself, which proved the shim, not the game.
  */
-export const VERIFIED_GAMES = new Set<string>(['cl2048']);
+export const VERIFIED_GAMES = new Set<string>([]);
 
 /**
  * Storage mechanisms whose capture-and-restore path is exercised by the save
