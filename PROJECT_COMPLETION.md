@@ -642,3 +642,52 @@ namespace is auto-confirmed; the project-wide confirmation setting is unchanged.
 - Manual save/restore/import/export and failed-upload recovery are implemented but
   not scripted.
 - Optional cleanup: drop the retired entry-gate objects and enable PITR.
+
+## 2026-11-26 — account verification, cloud saving and final interface corrections
+
+Branch `feature/geegle-account-cloud-final`, cut from `7fe74b0` (PR #7 merged).
+Authentication and the production database are untouched; every change is a
+corrective one with a failing test first.
+
+### Changes
+
+| Change | File | Why |
+| --- | --- | --- |
+| Account dropdown reduced to one action, `Sign out` | `src/App.tsx` | the dropdown carried a redundant Settings entry and a repeated username |
+| Wordmark 16px → 22px in a self-hosted licensed geometric typeface | `src/index.css`, `public/fonts/poppins-500.woff2` (+ `POPPINS-OFL.txt`), `src/App.tsx` | the mark read as small and generic; the header height is unchanged (194px at both sizes) |
+| `geegleSaveKey` defined by the storage shim | `public/games/geegle-storage-shim.js` | three wrappers called it and it existed nowhere, so their save calls threw and their progress was never stored |
+| `cl2048` removed from `VERIFIED_GAMES` | `src/lib/saveManifest.ts` | its build keeps no progress at all; the earlier "verified gameplay restore" was a key the test itself wrote |
+| Account-dropdown, wordmark and shim regression tests | `tests/account-menu.test.mjs`, `tests/storage-shim.test.mjs`, `tests/save-manifest.test.mjs` | keep the corrections from silently reverting |
+| First-party-only failed-request assertion; header height compared at both wordmark sizes | `scripts/qa/interface-check.mjs` | the old assertion counted a third-party beacon fired inside a game frame as our failure, and had no header-height baseline |
+| Token refresh + concurrent duplicate registration checks; probe labels corrected; menu checks staged behind `GEEGLE_EXPECT_NEW_MENU=1` | `scripts/qa/production-acceptance.mjs` | the deployed bundle predates the menu change, and the save probe must not be called gameplay |
+| New genuine-play cloud-save run | `scripts/qa/production-cloud-saves.mjs` | manual save/restore/import/export, invalid and foreign imports, offline failure, reconnect sync, and per-game evidence |
+
+### Evidence (fresh, this cycle)
+
+| Check | Result |
+| --- | --- |
+| `production-acceptance.mjs` (production) | 24/24 |
+| `production-data-integrity.mjs` (production) | 17/17 |
+| `production-cloud-saves.mjs` (production) | 22/22 passed, 3 skipped with recorded evidence |
+| `auth-check` / `check-session-sync` / `check-password-change` / `check-account-completion` / `check-cloud-save` (local backend) | 14/14 · 5/5 · 6/6 · 21/21 · 6/6 |
+| `interface-check.mjs` (built artifact) | passing, including wordmark size/height and first-party requests |
+| `npm run typecheck` / `lint` / `build` | 0 / 0 / 0 |
+| `bun test tests` | 83 pass, 0 fail |
+| production build + `check:prod-build` | PASS — `oizdbkxnzwatytxcrvoo`, key accepted, no privileged key |
+
+### Findings recorded instead of claimed
+
+- `cl2048`, `clspacebarclicker`, `clquantumclicker` and `clohflip` produced real
+  on-screen progress but wrote no progress of their own, so no game is marked
+  individually verified. `clspacebarclicker` additionally throws during init
+  (`init is not defined`) and never clears its `reloading` flag on a fresh
+  profile, so its save routine cannot run at all.
+- IndexedDB, Unity, Ruffle and Emscripten saves remain engine-compatible only.
+- The account dropdown and wordmark changes are verified on the built artifact,
+  not on production: the deployed bundle predates this branch.
+
+### Still open
+
+Per-engine play scripts that reach a real save point; the `clspacebarclicker`
+init crash (game content); genuine game-frame origin isolation (needs
+separate-origin hosting); production rollout of this branch.

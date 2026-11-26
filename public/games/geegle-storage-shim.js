@@ -166,13 +166,37 @@
   }
 
   /**
+   * Wrappers with explicit save keys call geegleSaveKey(name). The shim scopes
+   * every key itself, so the helper returns the name unchanged; without it those
+   * games throw inside their save routine and keep progress only in memory.
+   * It exists for guests as well, because play without an account must not
+   * break either.
+   */
+  function defineSaveKeyHelper(win) {
+    if (typeof win.geegleSaveKey === 'function') return;
+    var helper = function (key) { return String(key); };
+    try {
+      Object.defineProperty(win, 'geegleSaveKey', {
+        configurable: true,
+        enumerable: false,
+        writable: false,
+        value: helper,
+      });
+    } catch (error) {
+      try { win.geegleSaveKey = helper; } catch (ignored) { /* locked window */ }
+    }
+  }
+
+  /**
    * Install the shim in `win`. When called for a nested frame, the parent
    * passes its own profile/gameId so a frame served from a helper page still
    * writes into the same game's namespace.
    */
   function install(win, inherited) {
     try {
-      if (!win || win[MARK]) return;
+      if (!win) return;
+      defineSaveKeyHelper(win);
+      if (win[MARK]) return;
       var profile = (inherited && inherited.profile) || query(win, 'geegle_profile');
       if (!profile) { win[MARK] = { guest: true }; return; }
       var gameId = (inherited && inherited.gameId) || gameIdFrom(win);

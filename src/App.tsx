@@ -653,7 +653,7 @@ export default function App() {
       <header ref={headerRef} className="sticky top-0 z-40 border-b border-neutral-200 dark:border-neutral-800" style={{ backgroundColor: 'var(--geegle-card)' }}>
         <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-4 py-2 sm:px-6">
           <button
-            className="text-base font-semibold"
+            className="geegle-wordmark mr-1"
             onClick={() => void openLanding()}
             aria-label={`${SITE_TITLE} home`}
           >
@@ -733,25 +733,12 @@ export default function App() {
                     exit={reduceMotion ? { opacity: 1 } : { opacity: 0, y: -4 }}
                     transition={{ duration: reduceMotion ? 0 : 0.14, ease: 'easeOut' }}
                   >
-                    <p className="truncate px-3 py-2 text-xs text-neutral-500 dark:text-neutral-400">
-                      {auth.username}
-                    </p>
-                    <button
-                      role="menuitem"
-                      className="flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800"
-                      onClick={() => {
-                        setAccountMenuOpen(false);
-                        setSettingsOpen(true);
-                      }}
-                    >
-                      <SettingsIcon size={15} /> Settings
-                    </button>
                     <button
                       role="menuitem"
                       className="flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800"
                       onClick={() => void handleSignOut()}
                     >
-                      <LogOut size={15} /> Log out
+                      <LogOut size={15} /> Sign out
                     </button>
                   </motion.div>
                 )}

@@ -34,8 +34,13 @@ page.on('console', (message) => {
 });
 page.on('pageerror', (error) => consoleErrors.push('pageerror: ' + error.message));
 page.on('requestfailed', (request) => {
-  if (!request.url().includes('favicon') && !isGameContent(request.url())) {
-    failedRequests.push(`${request.url()} ${request.failure()?.errorText}`);
+  const url = request.url();
+  // Only this site's own requests: a third-party beacon fired from inside a
+  // game frame (Twitter syndication, ad tags) is game content, not our failure.
+  let firstParty = false;
+  try { firstParty = new URL(url).origin === new URL(BASE).origin; } catch { firstParty = false; }
+  if (firstParty && !url.includes('favicon') && !isGameContent(url)) {
+    failedRequests.push(`${url} ${request.failure()?.errorText}`);
   }
 });
 
@@ -227,6 +232,20 @@ try {
   const brand = page.locator('header').getByRole('button', { name: /Geegle home/ });
   check('library brand is the text Geegle alone', (await brand.innerText()).trim() === 'Geegle');
   check('no circular G badge remains in the header', (await brand.locator('span').count()) === 0);
+  const brandStyle = await brand.evaluate((element) => {
+    const style = getComputedStyle(element);
+    return { size: parseFloat(style.fontSize), family: style.fontFamily, weight: style.fontWeight, height: Math.round(element.getBoundingClientRect().height) };
+  });
+  check('wordmark is roughly 30-40% larger than the previous 16px label', brandStyle.size >= 21 && brandStyle.size <= 23, `${brandStyle.size}px`);
+  check('wordmark uses the licensed geometric typeface', /Geegle Wordmark/.test(brandStyle.family), brandStyle.family);
+  check('wordmark does not grow the header row', brandStyle.height <= 30, `${brandStyle.height}px`);
+  // The header must not grow because the wordmark did: measure it again with the
+  // previous 16px size forced, which is the only difference.
+  const headerHeight = await page.locator('header').evaluate((element) => Math.round(element.getBoundingClientRect().height));
+  await page.addStyleTag({ content: '.geegle-wordmark{font-size:16px!important;line-height:20px!important}' });
+  await page.waitForTimeout(120);
+  const previousHeaderHeight = await page.locator('header').evaluate((element) => Math.round(element.getBoundingClientRect().height));
+  check('the larger wordmark does not increase the header height', headerHeight === previousHeaderHeight, `${headerHeight}px now vs ${previousHeaderHeight}px at 16px`);
 
   // Optional tab appearance: apply a custom title, reload, then reset.
   await page.getByRole('button', { name: 'Settings' }).click();

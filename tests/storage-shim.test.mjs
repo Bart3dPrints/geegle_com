@@ -185,3 +185,29 @@ test('same-origin nested frames inherit the parent game namespace', () => {
   child.localStorage.setItem('frameKey', 'frameValue');
   assert.equal(store.local.getItem(`geegle-game:clcatalogname:${A}:frameKey`), 'frameValue');
 });
+
+// Wrappers that write their own save keys call geegleSaveKey(name). Without it
+// they throw inside their save routine and keep progress only in memory, which
+// is what the explicit adapters for clspacebarclicker, clQuantumClicker and
+// clohflip depend on.
+test('the shim provides geegleSaveKey for signed-in play', () => {
+  const win = install(`?geegle_profile=${A}&geegle_game=clspacebarclicker`, shared());
+  assert.equal(typeof win.geegleSaveKey, 'function');
+  assert.equal(win.geegleSaveKey('spacebar_clicker_game'), 'spacebar_clicker_game');
+});
+
+test('the shim provides geegleSaveKey for guest play too', () => {
+  const win = install('', shared());
+  assert.equal(typeof win.geegleSaveKey, 'function');
+  assert.equal(win.geegleSaveKey('qcSave'), 'qcSave');
+});
+
+test('a key written through geegleSaveKey lands in this account namespace', () => {
+  const store = shared();
+  const win = install(`?geegle_profile=${A}&geegle_game=clspacebarclicker`, store);
+  win.localStorage.setItem(win.geegleSaveKey('spacebar_clicker_game'), '{"v":13}');
+  assert.equal(
+    store.local.getItem(`geegle-game:clspacebarclicker:${A}:spacebar_clicker_game`),
+    '{"v":13}'
+  );
+});

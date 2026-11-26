@@ -33,6 +33,10 @@ const PASSWORD = makePassword();
 const NEW_PASSWORD = makePassword();
 const A = { username: `pa${tag}`, password: PASSWORD };
 const B = { username: `pb${tag}`, password: makePassword() };
+// The dropdown/wordmark corrections ship with this branch. Set
+// GEEGLE_EXPECT_NEW_MENU=1 once that build is deployed; until then the menu
+// checks are recorded as skipped instead of pretending to pass.
+const EXPECT_NEW_MENU = process.env.GEEGLE_EXPECT_NEW_MENU === '1';
 const PROBE_KEY = 'e2eProgress';
 const PROBE_VALUE = `progress-${tag}`;
 
@@ -93,7 +97,9 @@ async function signOut(page) {
   await closeGame(page);
   if (!(await signedIn(page))) return;
   await page.getByRole('button', { name: 'Account', exact: true }).click();
-  await page.getByRole('menuitem', { name: 'Log out' }).click();
+  const current = page.getByRole('menuitem', { name: 'Sign out' });
+  if (await current.count()) await current.click();
+  else await page.getByRole('menuitem', { name: 'Log out' }).click(); // pre-correction build
   await page.waitForTimeout(2000);
 }
 
@@ -141,6 +147,31 @@ try {
     `${profile.data?.username ?? 'none'}/${Boolean(settings.data)}`
   );
 
+  // 2b-2c. Token refresh and two simultaneous registrations of one username.
+  const refreshed = await apiA.auth.refreshSession();
+  const refreshedToken = refreshed.data?.session?.access_token;
+  const afterRefresh = refreshedToken
+    ? await apiA.from('geegle_profiles').select('username').eq('id', authA.user.id).maybeSingle()
+    : { data: null, error: refreshed.error };
+  check(
+    '2b. the session token refreshes and still reads this account',
+    Boolean(refreshedToken) && afterRefresh.data?.username === A.username.toLowerCase(),
+    afterRefresh.error?.message ?? 'ok'
+  );
+
+  const raceName = `pr${tag}`;
+  const raceClient = () => createClient(SUPA_URL, SUPA_KEY, { auth: { persistSession: false } });
+  const attempts = await Promise.all([
+    raceClient().auth.signUp({ email: email(raceName), password: makePassword(), data: { username: raceName } }),
+    raceClient().auth.signUp({ email: email(raceName), password: makePassword(), data: { username: raceName } }),
+  ]);
+  const raced = attempts.filter((attempt) => !attempt.error && attempt.data?.session);
+  check(
+    '2c. two simultaneous registrations of one username create one account',
+    raced.length === 1,
+    `sessions=${raced.length} errors=${attempts.map((a) => a.error?.status ?? a.error?.code ?? 'none').join('/')}`
+  );
+
   // 3. Logout.
   await signOut(page);
   check('3. logout signs out', !(await signedIn(page)));
@@ -148,6 +179,40 @@ try {
   // 4. Login again.
   await submitAccount(page, 'login', A, PASSWORD);
   check('4. login succeeds', await signedIn(page));
+
+  // 4b-4g. The account dropdown is the avatar menu and holds one action.
+  if (!EXPECT_NEW_MENU) {
+    console.log('SKIP  4b-4g account dropdown corrections — the deployed build predates them (set GEEGLE_EXPECT_NEW_MENU=1)');
+  } else {
+  const menuButton = page.getByRole('button', { name: 'Account', exact: true });
+  const menu = page.getByRole('menu', { name: 'Account menu' });
+  await menuButton.click();
+  await menu.waitFor({ state: 'visible', timeout: 5000 });
+  const menuItems = await menu.getByRole('menuitem').allInnerTexts();
+  check('4b. the account dropdown lists exactly one action', menuItems.length === 1, JSON.stringify(menuItems));
+  check('4c. the only action reads exactly Sign out', menuItems[0]?.trim() === 'Sign out', menuItems[0] ?? '');
+  const menuText = (await menu.innerText()).replace(/\s+/g, ' ').trim();
+  check(
+    '4d. the dropdown has no Settings entry and no username',
+    !/Settings/.test(menuText) && !menuText.toLowerCase().includes(A.username.toLowerCase()),
+    menuText
+  );
+  const menuBox = await menu.boundingBox();
+  const avatarBox = await menuButton.boundingBox();
+  check(
+    '4e. the dropdown sits directly beneath the avatar',
+    Boolean(menuBox && avatarBox) && menuBox.y >= avatarBox.y + avatarBox.height - 2 && Math.abs(menuBox.y + menuBox.width - (avatarBox.x + avatarBox.width)) < 40,
+    `menu=${JSON.stringify(menuBox)} avatar=${JSON.stringify(avatarBox)}`
+  );
+  await page.keyboard.press('Escape');
+  await page.waitForTimeout(400);
+  check('4f. Escape closes the dropdown', (await menu.count()) === 0);
+  await menuButton.click();
+  await menu.waitFor({ state: 'visible', timeout: 5000 });
+  await page.mouse.click(20, 700);
+  await page.waitForTimeout(400);
+  check('4g. clicking outside closes the dropdown', (await menu.count()) === 0);
+  }
 
   // 5. Duplicate registration.
   await signOut(page);
@@ -208,6 +273,10 @@ try {
   // 13-14. Real gameplay progress and automatic saving.
   const frame = await launch2048(page);
   check('13. 2048 launches on production', Boolean(frame));
+  // Mechanism check: this 2048 build keeps no progress of its own (no storage
+  // manager), so the value below is written by this test on purpose. It proves
+  // the account-scoped capture, upload and restore path, not game support.
+  // Genuine gameplay evidence lives in docs/CLOUD_SAVE_VERIFICATION.md.
   await frame.evaluate(([key, value]) => localStorage.setItem(key, value), [PROBE_KEY, PROBE_VALUE]);
   await page.waitForTimeout(18_000);
 
@@ -217,7 +286,7 @@ try {
     .eq('game_id', 'cl2048')
     .maybeSingle();
   check(
-    '14. gameplay progress is saved to the account automatically',
+    '14. the shimmed game storage is captured and saved to the account automatically',
     Boolean(saveRow.data) && JSON.stringify(saveRow.data.save_data).includes(PROBE_VALUE),
     saveRow.data ? `revision=${String(saveRow.data.revision).slice(0, 8)}` : (saveRow.error?.message ?? 'no row')
   );
@@ -256,7 +325,7 @@ try {
   const restoredValue = restoredFrame
     ? await restoredFrame.evaluate((key) => localStorage.getItem(key), PROBE_KEY)
     : null;
-  check('20. actual gameplay progress is restored', restoredValue === PROBE_VALUE, String(restoredValue));
+  check('20. the account save is restored into a cleared browser before launch', restoredValue === PROBE_VALUE, String(restoredValue));
 
   // 21-22. A second account sees none of it.
   await signOut(clean);
