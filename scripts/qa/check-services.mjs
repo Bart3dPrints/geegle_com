@@ -30,6 +30,12 @@ async function launchApp(title) {
   await page.waitForTimeout(400);
   const card = page.locator('[data-card]').filter({ hasText: new RegExp(`^${title}$`) }).first();
   await card.locator('button').first().click();
+  // A guest's first app launch shows the account reminder once per session.
+  const guestReminder = page.getByRole('button', { name: 'Continue as guest' });
+  if (await guestReminder.count()) {
+    await guestReminder.click();
+    await page.waitForTimeout(400);
+  }
   await page.waitForTimeout(1800);
 }
 

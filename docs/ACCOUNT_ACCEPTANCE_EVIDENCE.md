@@ -89,3 +89,64 @@ $ npm run check:prod-build       PASS (production project, key accepted, no priv
 - Genuine gameplay save and restore is not verified for any game; the mechanisms
   are verified, the games' own persistence is not.
 - Game-frame origin isolation is not implemented.
+
+---
+
+## Account reminder and password visibility (2026-11-26)
+
+Branch `fix/geegle-changelog-notifications`, from `fdf2ab3`. Environment: the
+isolated QA backend (`vite --mode qa --port 5174`, `.env.qa.local`) and the
+built artifact from this branch. No production data was touched.
+
+```
+$ GEEGLE_AUTH_BASE=http://127.0.0.1:5174 node --env-file=.env.qa.local \
+    scripts/qa/check-account-reminder.mjs
+21/21 reminder checks passed
+```
+
+What the run actually did, in one browser:
+
+1. A signed-out launch opened the reminder instead of the game. Title
+   `Save your progress`, the exact message, and the three choices were present;
+   no iframe loaded behind it.
+2. `Create account` opened the existing registration form. A disposable account
+   was created (`qaRem…`, random password), the account button appeared, and the
+   originally selected game opened by itself.
+3. That account signed in to the backend with the public key, and its
+   `geegle_profiles` row was read back by id.
+4. While signed in, launches showed no reminder and opened immediately.
+5. After sign-out, the reminder returned; `Sign in` with the same account opened
+   the chosen game again.
+6. Opening the form from the reminder and pressing Escape launched nothing and
+   brought the reminder back with the destination kept.
+7. `Continue as guest` opened the chosen game, and the next guest launch in the
+   same session was not interrupted.
+
+Password fields (`tests/password-visibility.test.mjs` and
+`interface-check.mjs`):
+
+- Hidden by default in the sign-in / create-account form and in Settings.
+- The eye is a `type="button"` control labelled `Show password` / `Hide
+  password`; it never submits the form.
+- Each field keeps its own state, and the dialog closes with the password hidden
+  again (the component unmounts).
+- `autoComplete` (`current-password` / `new-password`), labels and ids are
+  unchanged, so password managers still recognise the fields.
+
+Regression suites re-run on the same backend after the change:
+
+```
+$ … auth-check.mjs                14/14
+$ … check-session-sync.mjs         5/5
+$ … check-password-change.mjs      6/6
+$ … check-account-completion.mjs  21/21
+$ … check-cloud-save.mjs           6/6
+```
+
+## Not claimed for this cycle
+
+- None of this is on production yet: the deployed bundle predates the branch.
+  It is verified on the built artifact and the isolated backend only.
+- Account registration is not presented as a guarantee that every game restores
+  cloud progress. The reminder says "supported game progress", matching
+  `src/lib/saveManifest.ts`, and no game is individually verified.

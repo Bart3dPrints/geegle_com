@@ -194,7 +194,19 @@ try {
   await gameSearch.fill('2048');
   await gameSearch.press('Enter');
   await page.waitForTimeout(200);
+  // A guest's first game launch asks once about keeping progress.
   await page.locator('[data-card] button').first().click();
+  const reminder = page.locator('[aria-labelledby="account-reminder-title"]');
+  await reminder.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {});
+  check('guest launch shows the account reminder', (await reminder.count()) === 1);
+  check(
+    'the reminder uses the approved wording',
+    (await reminder.innerText()).includes(
+      'Sign in or create an account to keep supported game progress and preferences across devices.'
+    ) && (await reminder.innerText()).includes('Save your progress')
+  );
+  check('nothing launches before the guest chooses', (await page.locator('iframe').count()) === 0);
+  await reminder.getByRole('button', { name: 'Continue as guest' }).click();
   await page.waitForSelector('iframe');
   await page.waitForTimeout(800);
   check('player has no reload control', (await page.getByRole('button', { name: /reload/i }).count()) === 0);
@@ -205,6 +217,21 @@ try {
   check('game exit sits alone at the top left', (backBox?.x ?? 999) < 100 && (backBox?.y ?? 999) < 100, JSON.stringify(backBox));
   const fullscreenBox = await page.getByRole('button', { name: 'Fullscreen' }).boundingBox();
   check('game controls sit at the top right', (fullscreenBox?.x ?? 0) > 1000 && (fullscreenBox?.y ?? 999) < 100, JSON.stringify(fullscreenBox));
+  check(
+    'the player shows no persistent cloud-save status box',
+    (await page.locator('div.absolute.bottom-3.right-3').count()) === 0 &&
+      (await page.locator('text=Saved to Cloud').count()) === 0
+  );
+  await page.getByRole('button', { name: 'Back to library' }).click();
+  await page.waitForSelector('[data-card]');
+
+  // The same guest is not interrupted again in this session.
+  await page.locator('[data-card] button').first().click();
+  await page.waitForSelector('iframe');
+  check(
+    'a later guest launch is not interrupted again',
+    (await page.locator('[aria-labelledby="account-reminder-title"]').count()) === 0
+  );
   await page.getByRole('button', { name: 'Back to library' }).click();
   await page.waitForSelector('[data-card]');
 
@@ -212,7 +239,39 @@ try {
   await page.getByRole('button', { name: 'Settings' }).click();
   const settings = page.locator('[role="dialog"][aria-label="Settings"]');
   check('settings opens from the left of the header', await settings.isVisible());
-  check('settings is tabbed', (await settings.getByRole('tab').count()) === 3);
+  check('settings is tabbed', (await settings.getByRole('tab').count()) === 4);
+  const settingsTabs = (await settings.getByRole('tab').allInnerTexts()).map((label) => label.trim());
+  check('Changelog is the last Settings tab', settingsTabs.at(-1) === 'Changelog', settingsTabs.join(' | '));
+  check(
+    'the existing settings tabs are preserved',
+    ['Theme', 'Preferences', 'Tab appearance'].every((label) => settingsTabs.includes(label)),
+    settingsTabs.join(' | ')
+  );
+  await settings.getByRole('tab', { name: 'Changelog' }).click();
+  const releases = settings.locator('ol li');
+  const releaseCount = await releases.count();
+  check('the changelog lists the merged releases', releaseCount >= 8, String(releaseCount));
+  check('the changelog needs no account', await settings.getByRole('tab', { name: 'Changelog' }).isVisible());
+  const latestRelease = (await releases.first().innerText()).replace(/\s+/g, ' ').trim();
+  check(
+    'the newest release shows its real Eastern date and time',
+    /November 26, 2026 · 2:56 PM EST/.test(latestRelease),
+    latestRelease
+  );
+  const releaseTexts = await releases.allInnerTexts();
+  check(
+    'no release appears twice',
+    new Set(releaseTexts.map((text) => text.replace(/\s+/g, ' ').trim())).size === releaseTexts.length
+  );
+  check(
+    'release descriptions are concise and free of internal detail',
+    releaseTexts.every((text) => {
+      const body = text.split('\n').slice(2).join(' ').trim();
+      return body.length > 10 && body.length <= 200 && !/prompt|codebuff|service_role/i.test(body);
+    })
+  );
+  check('the changelog is plain text, not decorated cards', (await settings.locator('ol li .badge, ol li svg').count()) === 0);
+  await settings.getByRole('tab', { name: 'Theme' }).click();
   await settings.locator('input[aria-label="Custom background colour"]').fill('#202020');
   await settings.getByRole('button', { name: 'Apply' }).click();
   await page.waitForTimeout(200);
@@ -227,6 +286,28 @@ try {
   const reset = await page.evaluate(() => getComputedStyle(document.body).backgroundColor);
   check('reset restores the neutral default', reset === 'rgb(250, 250, 250)', reset);
   await page.locator('[role="dialog"][aria-label="Settings"]').getByRole('button', { name: 'Close settings' }).click();
+
+  // Password visibility: hidden by default, its own toggle, never submits.
+  await page.getByRole('button', { name: 'Sign in', exact: true }).click();
+  const auth = page.locator('[role="dialog"][aria-label="Sign in"]');
+  check(
+    'the account form carries the short secondary line',
+    (await auth.innerText()).includes('Keep your progress and preferences across devices.')
+  );
+  const passwordField = auth.locator('#auth-password');
+  check('passwords are hidden by default', (await passwordField.getAttribute('type')) === 'password');
+  await auth.getByRole('button', { name: 'Show password' }).click();
+  check('the eye reveals the password', (await passwordField.getAttribute('type')) === 'text');
+  check(
+    'the toggle is relabelled Hide password',
+    (await auth.getByRole('button', { name: 'Hide password' }).count()) === 1
+  );
+  check('revealing the password does not submit the form', await auth.isVisible());
+  await auth.getByRole('button', { name: 'Hide password' }).click();
+  check('the eye hides it again', (await passwordField.getAttribute('type')) === 'password');
+  await page.keyboard.press('Escape');
+  await page.waitForTimeout(200);
+  check('Escape closes the account form', (await page.locator('[role="dialog"][aria-label="Sign in"]').count()) === 0);
 
   // Library header brand is text only.
   const brand = page.locator('header').getByRole('button', { name: /Geegle home/ });

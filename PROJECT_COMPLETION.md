@@ -691,3 +691,62 @@ corrective one with a failing test first.
 Per-engine play scripts that reach a real save point; the `clspacebarclicker`
 init crash (game content); genuine game-frame origin isolation (needs
 separate-origin hosting); production rollout of this branch.
+
+---
+
+## Account notifications and changelog
+
+Cycle: 2026-11-26, branch `fix/geegle-changelog-notifications` from `fdf2ab3`
+(the PR #8 merge). Statuses: NOT STARTED, IN PROGRESS, IMPLEMENTED BUT
+UNVERIFIED, VERIFIED (environment stated), BLOCKED.
+
+| Requirement | Status | Evidence |
+| --- | --- | --- |
+| Persistent bottom-right cloud-save status overlay removed (container and text) | VERIFIED (built artifact) | `src/components/GamePlayer.tsx` no longer renders `StatusPill` or its `bottom-3 right-3` container; `cloud-save-status.test.mjs` and `interface-check.mjs` ("the player shows no persistent cloud-save status box") |
+| Automatic saving still works in the background | VERIFIED (local backend) | `check-cloud-save.mjs` 6/6: changed progress captured on the 15 s tick, row value matches, fresh browser restores it, another account does not receive it |
+| Manual save/restore/export/import feedback kept | VERIFIED (source + local backend) | `Progress saved to cloud.`, `Cloud save restored.`, `Save file downloaded.`, `Save file imported and synced to the cloud.` unchanged; `password`-independent tests in `cloud-save-status.test.mjs` |
+| Actionable sync failure still surfaced | VERIFIED (source) | conflict → "Cloud progress differs. Choose Restore from Cloud or Keep This Device."; error → "Cloud sync failed. Your device still has its saved progress." |
+| Settings sidebar with Changelog as the last tab | VERIFIED (built artifact) | `interface-check.mjs`: tabs `Theme | Preferences | Tab appearance | Changelog`, geometry check that the sidebar is left of the content and the list runs downward; `docs/qa/changelog-settings.png` |
+| Changelog entries: real merge date, time and concise description, newest first | VERIFIED (built artifact + GitHub API) | 8 merged PRs (1–8); newest `November 26, 2026 · 2:56 PM EST`; `docs/qa/changelog-settings.png` |
+| Eastern Time with daylight-saving adjustment | VERIFIED (unit) | `formatEastern` tests: EST in November, EDT in July, and the 2026-03-08 switch (`1:59 AM EST` → `3:01 AM EDT`) |
+| Duplicate entries prevented | VERIFIED (unit + browser) | entries keyed by PR number; `no release appears twice` in the browser |
+| Future merged PRs produce entries; unmerged PRs never appear | IMPLEMENTED BUT UNVERIFIED end-to-end | `scripts/generate-changelog.mjs` runs on every `npm run build` (the Render build command) and is covered by `changelog.test.mjs`; the first post-merge deploy is the end-to-end proof |
+| Password visibility toggle on every password field | VERIFIED (built artifact, unit) | `interface-check.mjs`: hidden by default, eye reveals, relabelled Hide password, no submit, hides again; `tests/password-visibility.test.mjs` |
+| Account reminder for signed-out launches | VERIFIED (local backend, 21/21) | `scripts/qa/check-account-reminder.mjs`: exact title/message/buttons, destination kept, account creation and sign-in both open the chosen game, closing the form launches nothing, Continue as guest opens it, later launches are not interrupted, signed-in launches never see it |
+| Reminder appears at most once per guest session | VERIFIED (local backend) | session-scoped dismissal in `src/lib/accountReminder.ts`, `tests/account-reminder.test.mjs` |
+| Account forms carry one short secondary sentence | VERIFIED (built artifact) | `Keep your progress and preferences across devices.` in the sign-in and create-account form only |
+| Account dropdown still holds exactly one action (`Sign out`), Settings stays in the header | VERIFIED (built artifact) | `account-menu.test.mjs` (8/8) and `interface-check.mjs` |
+
+### Test summary for this cycle
+
+| Command | Result |
+| --- | --- |
+| `npm run typecheck` | exit 0 |
+| `npm run lint` | exit 0 |
+| `npm run build` | exit 0 (changelog regenerated: 8 releases) |
+| production build + `check:prod-build` | PASS — `oizdbkxnzwatytxcrvoo`, key accepted, no privileged key |
+| `bun test tests` | 110 pass, 0 fail |
+| `interface-check.mjs` (built artifact) | 78/78 pass |
+| `capture-release-ui.mjs` (built artifact) | 8/8 pass; screenshots in `docs/qa/` |
+| `check-account-reminder.mjs` (local backend) | 21/21 pass |
+| `auth-check` / `check-session-sync` / `check-password-change` / `check-account-completion` / `check-cloud-save` (local backend) | 14/14 · 5/5 · 6/6 · 21/21 · 6/6 |
+
+### Findings recorded instead of claimed
+
+- Production still serves the PR #8 bundle; none of this cycle's UI is on
+  `https://bartisawesome.onrender.com` until this branch merges and deploys.
+  Every browser result above is from the built artifact or the isolated QA
+  backend, and is labelled that way.
+- `scripts/qa/journey.mjs` fails before any launch on `fdf2ab3` as well: it
+  clicks the letter rail while the library notice overlay is open. The only
+  change to that script here is handling the new reminder; it is a stale script
+  from before the notice overhaul, not a regression from this branch.
+- A future merged pull request cannot be demonstrated in this branch; the
+  generator's merge rules are unit-tested and the build step runs on deploy.
+
+### Still open
+
+- Confirm the changelog, reminder and password toggles on production after the
+  Render deploy that follows the merge.
+- Per-engine play scripts that reach a real save point (unchanged from the
+  previous cycle).

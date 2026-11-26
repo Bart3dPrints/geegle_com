@@ -1,0 +1,45 @@
+{
+  "source": "github:Bart3dPrints/geegle_com",
+  "entries": [
+    {
+      "pr": 8,
+      "mergedAt": "2026-11-26T19:56:39Z",
+      "summary": "Game saving fixed in three clicker games, cloud-save accuracy corrected, and the larger Geegle wordmark with a single Sign out action."
+    },
+    {
+      "pr": 7,
+      "mergedAt": "2026-11-26T18:30:10Z",
+      "summary": "Database fixes for registration, case-insensitive duplicate usernames and save revisions, with tighter permissions."
+    },
+    {
+      "pr": 6,
+      "mergedAt": "2026-11-26T17:40:12Z",
+      "summary": "Username-only accounts can now sign up on the live site, and a deploy check catches a misconfigured backend."
+    },
+    {
+      "pr": 5,
+      "mergedAt": "2026-11-26T04:30:02Z",
+      "summary": "Sticky header search, cleaner root-URL navigation, and fixes for production sign-up and session handling."
+    },
+    {
+      "pr": 4,
+      "mergedAt": "2026-11-26T02:47:48Z",
+      "summary": "Library search with ranked suggestions, the library and proxy notices, and more compact game controls."
+    },
+    {
+      "pr": 3,
+      "mergedAt": "2026-11-26T00:37:32Z",
+      "summary": "A simpler landing page and library: one navigation row, alphabetical sections, neutral styling, and the current Geegle title and footer."
+    },
+    {
+      "pr": 2,
+      "mergedAt": "2026-11-25T22:48:31Z",
+      "summary": "Cloud saves for supported games, a much larger game catalogue, and settings for theme and tab appearance."
+    },
+    {
+      "pr": 1,
+      "mergedAt": "2026-11-24T23:55:59Z",
+      "summary": "Geegle's foundation: accounts and cloud saves backed by Supabase, plus the start of the neutral design system."
+    }
+  ]
+}

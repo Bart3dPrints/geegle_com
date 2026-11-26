@@ -73,7 +73,7 @@ async function openAccountDialog(mode) {
 async function submitAccount(mode, user, password) {
   const dialog = await openAccountDialog(mode);
   await dialog.getByLabel('Username').fill(user.username);
-  await dialog.getByLabel('Password').fill(password);
+  await dialog.getByLabel('Password', { exact: true }).fill(password);
   await dialog.getByRole('button', { name: mode === 'register' ? 'Create account' : 'Sign in' }).click();
   await page.waitForTimeout(2500);
   return page.getByRole('dialog', { name: mode === 'register' ? 'Create account' : 'Sign in' });

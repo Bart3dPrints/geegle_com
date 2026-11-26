@@ -181,6 +181,12 @@ check('Recently Played stays hidden before any play', (await page.getByRole('hea
 
 // Open a game and use fullscreen.
 await page.locator('[data-card] button[aria-label^="Play "]').first().click();
+// A guest is offered the account reminder once before the first game opens.
+const guestReminder = page.getByRole('button', { name: 'Continue as guest' });
+if (await guestReminder.count()) {
+  await guestReminder.click();
+  await page.waitForTimeout(400);
+}
 await page.waitForSelector('iframe', { timeout: 20000 });
 check('game opens in the player', (await page.locator('iframe').count()) === 1);
 await page.locator('button[aria-label="Fullscreen"]').focus();
