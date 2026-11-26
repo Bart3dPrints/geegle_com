@@ -33,8 +33,17 @@ async function dismissNotice() {
   await notice.waitFor({ state: 'detached', timeout: 2500 });
 }
 
+async function openLibrary(target) {
+  await target.goto(BASE + '/', { waitUntil: 'networkidle' });
+  if (!(await target.locator('.gl-field').count())) return;
+  await target.fill('.gl-field input', 'pirate');
+  await target.press('.gl-field input', 'Enter');
+  await target.waitForSelector('header');
+  await target.waitForTimeout(300);
+}
+
 async function signIn(user) {
-  await page.goto(BASE + '/#games', { waitUntil: 'networkidle' });
+  await openLibrary(page);
   await dismissNotice();
   if (await page.getByRole('button', { name: 'Account', exact: true }).count()) {
     await page.getByRole('button', { name: 'Account', exact: true }).click();
@@ -50,7 +59,15 @@ async function signIn(user) {
 }
 
 try {
-  await page.goto(BASE + '/#games', { waitUntil: 'networkidle' });
+  // The landing avatar opens the same account form as the library header.
+  await page.goto(BASE + '/', { waitUntil: 'networkidle' });
+  await page.getByRole('button', { name: /Sign in/ }).first().click();
+  check('landing avatar opens the sign-in form', await page.getByRole('dialog', { name: 'Sign in' }).isVisible());
+  await page.keyboard.press('Escape');
+  await page.waitForTimeout(300);
+  check('Escape closes the account form', (await page.locator('[role="dialog"][aria-label="Sign in"]').count()) === 0);
+
+  await openLibrary(page);
   await dismissNotice();
   check('visitor starts logged out', (await page.getByRole('button', { name: /Sign in/ }).count()) > 0);
 
@@ -75,7 +92,7 @@ try {
   check('session survives a reload', (await page.getByRole('button', { name: 'Account', exact: true }).count()) > 0);
 
   const second = await context.newPage();
-  await second.goto(BASE + '/#games', { waitUntil: 'networkidle' });
+  await openLibrary(second);
   const secondNotice = second.locator('[aria-labelledby="library-notice-text"]');
   if (await secondNotice.count()) await secondNotice.getByRole('button', { name: 'Got it' }).click();
   await second.waitForTimeout(800);
@@ -96,6 +113,7 @@ try {
   // Recently Played preference persists.
   await page.getByRole('button', { name: 'Settings' }).click();
   const settings = page.getByRole('dialog', { name: 'Settings' });
+  await settings.getByRole('tab', { name: 'Preferences' }).click();
   check('signed-in settings shows the username', (await settings.innerText()).includes(USER_A.username));
   const recentToggle = settings.getByRole('checkbox', { name: /Show Recently Played/ });
   await recentToggle.check();
@@ -105,6 +123,7 @@ try {
   await dismissNotice();
   await page.waitForTimeout(1000);
   await page.getByRole('button', { name: 'Settings' }).click();
+  await page.getByRole('dialog', { name: 'Settings' }).getByRole('tab', { name: 'Preferences' }).click();
   check(
     'Recently Played preference persists',
     await page.getByRole('dialog', { name: 'Settings' }).getByRole('checkbox', { name: /Show Recently Played/ }).isChecked()
@@ -128,6 +147,7 @@ try {
   await page.screenshot({ path: 'docs/qa/library-signed-in.png', fullPage: false });
 } catch (error) {
   results.push({ name: 'journey threw', ok: false, detail: error instanceof Error ? error.message : String(error) });
+  try { await page.screenshot({ path: 'docs/qa/auth-failure.png' }); } catch { /* diagnostics only */ }
 } finally {
   await browser.close();
 }

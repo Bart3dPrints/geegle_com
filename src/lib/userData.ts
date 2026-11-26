@@ -3,6 +3,13 @@
 import { supabase, isSupabaseConfigured, T } from './supabase';
 import type { OpResult, ThemePreference } from '../types';
 import { parseAppearance, type LandingAppearance } from '../landing/appearance';
+import {
+  DEFAULT_TAB_IDENTITY,
+  readTabIdentityLocal,
+  validateTabIdentity,
+  writeTabIdentityLocal,
+  type TabIdentity,
+} from './tabIdentity';
 
 function readJson(key: string): unknown { try { const raw = localStorage.getItem(key); return raw ? JSON.parse(raw) : null; } catch { return null; } }
 function writeJson(key: string, value: unknown): void { try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* Storage may be disabled. */ } }
@@ -187,6 +194,32 @@ export async function loadAppearanceSettings(userId: string | null): Promise<OpR
   if (!userId || !isSupabaseConfigured) return { ok: true, data: readLocalAppearance() };
   const { data, error } = await supabase.from(T.settings).select('value:settings->appearance').eq('id', userId).maybeSingle();
   return error ? { ok: false, error: error.message } : { ok: true, data: parseAppearanceSettings(data?.value) };
+}
+
+export function parseTabIdentity(value: unknown): TabIdentity {
+  const record = settingsObject(value);
+  const title = typeof record.tabTitle === 'string' && record.tabTitle.trim() ? record.tabTitle : DEFAULT_TAB_IDENTITY.title;
+  const icon = typeof record.tabIcon === 'string' ? record.tabIcon : null;
+  const parsed: TabIdentity = { title, icon };
+  return validateTabIdentity(parsed) ? { ...DEFAULT_TAB_IDENTITY } : parsed;
+}
+
+/** Tab identity is user-owned and syncs with the rest of the account settings. */
+export async function saveTabIdentity(value: TabIdentity, userId: string | null): Promise<OpResult<null>> {
+  const identity = { title: value.title.trim(), icon: value.icon };
+  const problem = validateTabIdentity(identity);
+  if (problem) return { ok: false, error: problem };
+  writeTabIdentityLocal(identity);
+  if (!userId || !isSupabaseConfigured) return { ok: true };
+  return updateSettings(userId, (settings) => ({ ...settings, tabTitle: identity.title, tabIcon: identity.icon }));
+}
+
+export async function loadTabIdentity(userId: string | null): Promise<OpResult<TabIdentity>> {
+  if (!userId || !isSupabaseConfigured) return { ok: true, data: readTabIdentityLocal() };
+  const { data, error } = await supabase.from(T.settings).select('title:settings->tabTitle,icon:settings->tabIcon').eq('id', userId).maybeSingle();
+  return error
+    ? { ok: false, error: error.message }
+    : { ok: true, data: parseTabIdentity({ tabTitle: data?.title, tabIcon: data?.icon }) };
 }
 
 export async function loadLandingAppearance(userId: string): Promise<OpResult<LandingAppearance | null>> {
