@@ -12575,6 +12575,24 @@
     "status": "verified",
     "title": "Smash Remix"
   },
+  "clsmashremix2-0-1": {
+    "reason": "Smash Remix 2.0.1 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Smash Remix 2.0.1"
+  },
+  "clsmb12": {
+    "reason": "New Super Mario Bros Part 12 title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SMB 12"
+  },
+  "clsmbc": {
+    "reason": "Super Mario Bros World 1-1 gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SMBC"
+  },
   "clsmbcrossover": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -12598,6 +12616,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "SMC"
+  },
+  "clsmgds": {
+    "reason": "Super Mario Galaxy DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario Galaxy DS"
   },
   "clsnailbob": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -12635,6 +12659,24 @@
     "status": "verified",
     "title": "Snake.is"
   },
+  "clsnakelike": {
+    "reason": "Snake Like gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Snake Like"
+  },
+  "clsnipershot": {
+    "reason": "Sniper Shot aiming scene.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sniper Shot"
+  },
+  "clsniperv2": {
+    "reason": "Sniper Elite V2 Remastered key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sniper V2"
+  },
   "clsnowballio": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -12646,6 +12688,30 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Snowboard Obby"
+  },
+  "clsnowbros--1": {
+    "reason": "Snow Bros. arcade title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Snow Bros"
+  },
+  "clsnowbrosgenesis": {
+    "reason": "Snow Bros. Genesis gameplay with its logo and high score.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Snow Bros: Genesis"
+  },
+  "clsnowbrothers": {
+    "reason": "Snow Bros. box art, kept distinct from the arcade title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Snow Brothers"
+  },
+  "clsnowdrift": {
+    "reason": "Snow Drift key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Snowdrift"
   },
   "clsnowrid": {
     "reason": "Snow Rider 3D logo art.",
@@ -12677,6 +12743,42 @@
     "status": "verified",
     "title": "Snow Rider Rrr"
   },
+  "clsnowroad": {
+    "reason": "Snow Road art with its snowboarder.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Snow Road"
+  },
+  "clsoccerbros": {
+    "reason": "Soccer Bros key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Soccer Bros"
+  },
+  "clsoccernes": {
+    "reason": "Soccer NES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Soccer (NES)"
+  },
+  "clsoccerrandom": {
+    "reason": "Soccer Random stadium art, kept distinct from the title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Soccer Random"
+  },
+  "clsoccerrandomgood": {
+    "reason": "Soccer Random title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Soccer Random Good"
+  },
+  "clsodasimulator": {
+    "reason": "Soda Simulator scene.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Soda Simulator"
+  },
   "clsolarclient": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -12695,17 +12797,47 @@
     "status": "verified",
     "title": "Solar Smash"
   },
+  "clsolatrobo": {
+    "reason": "Solitaire Classic board.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Solataire Bo"
+  },
   "clsolitaire": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Solitaire"
   },
+  "clsolstice": {
+    "reason": "Solstice NES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Solstice"
+  },
+  "clsomari64": {
+    "reason": "Somari 64 title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Somari 64"
+  },
   "clsonic---knuckles---sonic-the-hedgehog-3": {
     "reason": "Sonic 3 & Knuckles key art with its characters.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Sonic & Knuckles + Sonic 3"
+  },
+  "clsonic1contemporary": {
+    "reason": "Sonic 1 Contemporary title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic 1 Contemporary"
+  },
+  "clsonic1mobile": {
+    "reason": "Sonic 1 Green Hill gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic 1 Mobile"
   },
   "clsonic1scorerush": {
     "reason": "Sonic 1 Score Rush title art.",
@@ -12719,11 +12851,119 @@
     "status": "verified",
     "title": "Sonic 1 the Super Challenges"
   },
+  "clsonic2mobile": {
+    "reason": "Sonic 2 logo art with Sonic and Tails.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic 2 Mobile"
+  },
+  "clsonic2pinkedition": {
+    "reason": "Sonic 2 Pink Edition box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic 2: Pink Edition"
+  },
   "clsonic2scorerush": {
     "reason": "Sonic 2 Score Rush title art.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Sonic 2 Score Rush"
+  },
+  "clsonic2timeandplace": {
+    "reason": "Sonic 2 Time and Place isometric gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic 2: Time and Place"
+  },
+  "clsonic3andknuckles": {
+    "reason": "Sonic 3 & Knuckles box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic 3 & Knuckles"
+  },
+  "clsonic3andsally": {
+    "reason": "Sonic 3 & Sally gameplay with Sally.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic 3 & Sally"
+  },
+  "clsonic3complete": {
+    "reason": "Sonic 3 Complete box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic 3 Complete"
+  },
+  "clsonic3dblast": {
+    "reason": "Sonic 3D Blast key art with its logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic 3D Blast"
+  },
+  "clsonic3dblastdx": {
+    "reason": "Sonic 3D Blast DX key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic 3D Blast DX"
+  },
+  "clsonicadvance": {
+    "reason": "Sonic Advance box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Advance"
+  },
+  "clsonicadvance2": {
+    "reason": "Sonic Advance 2 GBA box art, kept distinct from the plain cover.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Advance 2"
+  },
+  "clsonicadvance2sp": {
+    "reason": "Sonic Advance 2 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Advance 2 (SP)"
+  },
+  "clsonicadvance3": {
+    "reason": "Sonic Advance 3 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Advance 3"
+  },
+  "clsonicandashuro": {
+    "reason": "Sonic and Ashuro title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic and Ashuro"
+  },
+  "clsonicandfallingstar": {
+    "reason": "Sonic and the Falling Star key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic and Falling Star"
+  },
+  "clsonicandknuckles": {
+    "reason": "Sonic & Knuckles box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic & Knuckles"
+  },
+  "clsonicbattle": {
+    "reason": "Sonic Battle box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Battle"
+  },
+  "clsonicblast": {
+    "reason": "Sonic Blast Master System box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Blast"
+  },
+  "clsoniccd": {
+    "reason": "Sonic CD Sega CD box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic CD"
   },
   "clsoniccdmobile": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -12731,11 +12971,77 @@
     "status": "verified",
     "title": "Sonic CD Mobile"
   },
+  "clsonicchaos": {
+    "reason": "Sonic Chaos Master System box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Chaos"
+  },
+  "clsonicclassiccollection": {
+    "reason": "Sonic Classic Collection key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Classic Collection"
+  },
+  "clsonicclassicheroes-1": {
+    "reason": "Sonic Classic Heroes title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Classic Heroes"
+  },
+  "clsonicclassics": {
+    "reason": "Sonic Classics box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Classics"
+  },
+  "clsoniccolors": {
+    "reason": "Sonic Colors key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Colors"
+  },
+  "clsonicdeltaorigins": {
+    "reason": "Sonic Delta Origins title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Delta Origins"
+  },
+  "clsonicdrift": {
+    "reason": "Sonic Drift Game Gear box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Drift"
+  },
+  "clsonicdrift2": {
+    "reason": "Sonic Drift 2 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Drift 2"
+  },
+  "clsoniceexeog": {
+    "reason": "Sonic.exe The Original Game key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic.exe OG"
+  },
   "clsonicerazor": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Sonic Razor"
+  },
+  "clsonicgg": {
+    "reason": "Sonic the Hedgehog Game Gear cartridge.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic GG"
+  },
+  "clsonichellfiresaga": {
+    "reason": "Sonic Hellfire Saga box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic: Hellfire Saga"
   },
   "clsonicinsm64": {
     "reason": "Sonic in SM64 gameplay showing Sonic in the castle grounds; result 2 was a different SM64 Coop thumbnail.",
@@ -12743,11 +13049,29 @@
     "status": "verified",
     "title": "Sonic in SM64"
   },
+  "clsonicinsmw": {
+    "reason": "Sonic in SMW gameplay with the Sonic sprite.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic in SMW"
+  },
   "clsonicinsmw-1": {
     "reason": "Sonic in SMW gameplay with the score HUD.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Sonic in SMW"
+  },
+  "clsonicjam": {
+    "reason": "Sonic Jam Saturn box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Jam"
+  },
+  "clsoniclabyrinth": {
+    "reason": "Sonic Labyrinth box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Labyrinth"
   },
   "clsonicmania": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -12761,17 +13085,119 @@
     "status": "verified",
     "title": "Sonic Mania Plus"
   },
+  "clsonicmegamix": {
+    "reason": "Sonic MegaMix box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Mega Mix"
+  },
+  "clsonicmon": {
+    "reason": "Sonic Mon Adventure GBA box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Mon"
+  },
+  "clsonicmushroomblast": {
+    "reason": "Sonic Mushroom Blast Legacy logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Mushroom Blast"
+  },
+  "clsonicpocketadventure": {
+    "reason": "Sonic Pocket Adventure box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Pocket Adventure"
+  },
+  "clsonicr": {
+    "reason": "Sonic R box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic R"
+  },
+  "clsonicralt": {
+    "reason": "Sonic R box art, kept distinct from the Saturn cover used by the other entry.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic R (Alt)"
+  },
   "clsonicrevert": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Sonic Revert"
   },
+  "clsonicrush": {
+    "reason": "Sonic Rush box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Rush"
+  },
+  "clsonicrushadventure": {
+    "reason": "Sonic Rush Adventure DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Rush Adventure"
+  },
+  "clsonicscorchedquest": {
+    "reason": "Sonic Scorched Quest title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Scorched Quest"
+  },
+  "clsonicspinball": {
+    "reason": "Sonic Spinball Genesis box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Spinball"
+  },
+  "clsonicthehedgehog": {
+    "reason": "Sonic the Hedgehog title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic the Hedgehog"
+  },
+  "clsonicthehedgehog2": {
+    "reason": "Sonic the Hedgehog 2 Genesis box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic the Hedgehog 2"
+  },
+  "clsonicthehedgehog3": {
+    "reason": "Sonic the Hedgehog 3 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic the Hedgehog 3"
+  },
+  "clsonny2": {
+    "reason": "Sonny 2 title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonny 2"
+  },
   "clsortthecourt": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Sort the Court"
+  },
+  "clsotn": {
+    "reason": "Symphony of the Night gameplay with Alucard.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Castlevania: Symphony of the Night"
+  },
+  "clsouljumper": {
+    "reason": "Soul Jumper logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Soul Jumper"
+  },
+  "clsouthparkn64": {
+    "reason": "South Park Nintendo 64 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "South Park (N64)"
   },
   "clsovereignoftheskys": {
     "reason": "Pokemon Sovereign of the Skies box art.",
@@ -12784,6 +13210,30 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Spacebar Clicker"
+  },
+  "clspacecompany": {
+    "reason": "Space Company rocket art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Space Company"
+  },
+  "clspaceharriersms": {
+    "reason": "Space Harrier Master System box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Space Harrier (SMS)"
+  },
+  "clspaceinvade95": {
+    "reason": "Space Invaders 95 arcade title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Space Invade 95"
+  },
+  "clspaceinvaders": {
+    "reason": "Space Invaders gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Space Invaders"
   },
   "clspaceiskey": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -12833,6 +13283,36 @@
     "status": "verified",
     "title": "Speed Stars"
   },
+  "clspelunky": {
+    "reason": "Spelunky key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Spelunky"
+  },
+  "clspewer": {
+    "reason": "Spewer gameplay with its title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Spewer"
+  },
+  "clspidermanps1": {
+    "reason": "Spider-Man PlayStation cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Spider-Man (PS1)"
+  },
+  "clspiralroll": {
+    "reason": "Spiral Roll logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Spiral Roll"
+  },
+  "clspiritsofhell": {
+    "reason": "Sonic.exe: The Spirits of Hell key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Spirits of Hell"
+  },
   "clspongebobpowerkartgrandprix": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -12845,11 +13325,23 @@
     "status": "verified",
     "title": "Sports Heads Ice Hockey"
   },
+  "clsprinter": {
+    "reason": "Sprinter gameplay with its logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sprinter"
+  },
   "clsprunked": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Sprunked"
+  },
+  "clsprunki": {
+    "reason": "Sprunki character art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sprunki"
   },
   "clsprunkiclicker": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -12862,6 +13354,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Sprunki Pyramixed"
+  },
+  "clspyhunter": {
+    "reason": "Spy Hunter box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Spy Hunter"
   },
   "clsquidplayground": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
@@ -12893,11 +13391,29 @@
     "status": "verified",
     "title": "Stacky Dash"
   },
+  "clstarfox": {
+    "reason": "Star Fox key art with its team.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Starfox"
+  },
+  "clstarfox64": {
+    "reason": "Star Fox 64 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Star Fox 64"
+  },
   "clstarlike": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Star Like"
+  },
+  "clstarraiders": {
+    "reason": "Star Raiders art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Star Raiders"
   },
   "clstateio": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -12923,11 +13439,23 @@
     "status": "verified",
     "title": "Station Saturn"
   },
+  "clsteakandjake": {
+    "reason": "Steak and Jake title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Steak and Jake"
+  },
   "clstealbrainrot": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Steal Brainrot"
+  },
+  "clstealbrainrotonline": {
+    "reason": "Steal Brainrot key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Steal Brainrot Online"
   },
   "clstealthassassin": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -12940,6 +13468,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Stealth Master"
+  },
+  "clsteelempire": {
+    "reason": "The Legend of Steel Empire box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Steel Empire"
+  },
+  "clsteelsurge": {
+    "reason": "Steel Surge tank key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Steel Surge"
   },
   "clsteepdescent": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -12965,17 +13505,41 @@
     "status": "verified",
     "title": "Stick Fighter"
   },
+  "clstickjetchallenge": {
+    "reason": "Stick Jet Challenge art without store badges.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Stick Jet Challenge"
+  },
+  "clstickmanandguns": {
+    "reason": "Stickman and Guns logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Stickman and Guns"
+  },
   "clstickmanclash": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Stickman Clash"
   },
+  "clstickmanduel": {
+    "reason": "Stickman Duel logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Stickman Duel"
+  },
   "clstickmangtacity": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Stickman GTA City"
+  },
+  "clstickmanhook": {
+    "reason": "Stickman Hook art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Stickman Hook"
   },
   "clstickmankingdomclash": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
@@ -12988,6 +13552,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Stickman Kombat 2D"
+  },
+  "clstickmanstealingdiamond": {
+    "reason": "Stealing the Diamond scene art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Henry Stickmin: Stealing the Diamond"
   },
   "clstickminairship": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -13019,6 +13589,12 @@
     "status": "verified",
     "title": "Stick RPG Complete"
   },
+  "clstickslasher": {
+    "reason": "Stick Slasher key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Stick Slasher"
+  },
   "clstickwar": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -13043,11 +13619,23 @@
     "status": "verified",
     "title": "Storm the House"
   },
+  "clstormthehouse2": {
+    "reason": "Storm the House 2 gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Storm the House 2"
+  },
   "clstormthehouse3": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Storm the House 3"
+  },
+  "clstrangejournet": {
+    "reason": "Shin Megami Tensei: Strange Journey Redux key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Strange Journey"
   },
   "clstreetfighter2hfarcade-1": {
     "reason": "Street Fighter II arcade cabinet on a clean background; result 1 carried a cabinet-brand credit.",
@@ -14194,6 +14782,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Snow Rider 3D"
+  },
+  "snowwhite": {
+    "reason": "Snow White Game Boy Color box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Snow White"
   },
   "soundboard": {
     "reason": "The captured frame is a nearly empty toolbar with no recognizable content; kept out until a better image is found.",
