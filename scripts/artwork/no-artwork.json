@@ -94,5 +94,17 @@
   "clgrannycreepy": {
     "reason": "Results were the retail Granny titles, not artwork for this mod; using them would mislabel the card.",
     "recorded": "2026-11-27"
+  },
+  "clhighstakes": {
+    "reason": "Results were High Stakes on the Vegas Strip (poker) and a physical High Stakes board game, not this entry.",
+    "recorded": "2026-11-27"
+  },
+  "clinsomniary": {
+    "reason": "Results were the Insomniac Games studio logos and a Spider-Man game, not this title.",
+    "recorded": "2026-11-27"
+  },
+  "clknockknock": {
+    "reason": "Results were a physical Knock Knock board game and its packaging, not this title.",
+    "recorded": "2026-11-27"
   }
 }

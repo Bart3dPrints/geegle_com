@@ -15,24 +15,24 @@ Identity evidence and reuse basis are recorded separately on every record. Captu
 | Measure | Count |
 | --- | --- |
 | Catalog rows (unique IDs) | 2,710 |
-| Verified artwork | 1,635 |
+| Verified artwork | 1,732 |
 | Awaiting review | 0 |
-| Rejected (removed from the UI, queued for a new capture) | 42 |
+| Rejected (removed from the UI, queued for a new capture) | 45 |
 | Blocked | 0 |
 | Reopened after the blocked classification was rejected | 1,676 |
 | Render investigations from the earlier long-observation pass (that protocol was cancelled) | 590 |
 | ... that rendered an authentic frame | 551 |
 | ... that stopped at their own start gate | 6 |
 | ... that stayed blank for the whole observation | 26 |
-| Remaining unprocessed | 1,075 |
-| Actual verified coverage | 60.3% |
-| Total optimized asset size (verified images) | 39018 KiB |
+| Remaining unprocessed | 978 |
+| Actual verified coverage | 63.9% |
+| Total optimized asset size (verified images) | 41895 KiB |
 
 ## Verified artwork by acquisition method
 
 | Method | Count |
 | --- | --- |
-| game-asset | 574 |
+| game-asset | 671 |
 | gameplay-screenshot | 962 |
 | official-icon | 72 |
 | official-og | 27 |
@@ -84,7 +84,7 @@ No entry is left in a blocked state: the whole 1,676-entry blocked manifest was 
 The next unprocessed batch starts at `cladarkroom`:
 
 ```
-cladarkroom,claftertheweek,clai,clalienhominidgba,claltered-beast,clanemonesfall,clasdutydemands,clb3313v102,clbejeweledtwistds,clbejeweledtwistflash,clbfdibranches,clblackout,clbloonspp3,clbloonstd2,clbloonstd6scratch,clbmx2,clboxinglive2,clburritobison2,clchoroqwonderful,clclover,clcotlk,clcreepyinternetstories,clcvooc,cldonkeykong,cldoomps,cleaglercraftshadow,clenduro,clfactoryballs,clfactoryballs2,clfactoryballs3,clfactoryballs4,clfairytalevsonepiece,clfallout,clfamilyguycorrupted,clff2ws,clff3,clffaf,clfinalfantasy,clfinalfantasyviid2,clfinalfantasyviid3,clfireemblem,clfocus,clfuschiax,clgameandwatchcollection,clgrannycreepy,clgxclient,clhajimenoippo,clhalocombatdevolved,clhandshakes,clhandsofwar--1
+cladarkroom,claftertheweek,clai,clalienhominidgba,claltered-beast,clanemonesfall,clasdutydemands,clb3313v102,clbejeweledtwistds,clbejeweledtwistflash,clbfdibranches,clblackout,clbloonspp3,clbloonstd2,clbloonstd6scratch,clbmx2,clboxinglive2,clburritobison2,clchoroqwonderful,clclover,clcotlk,clcreepyinternetstories,clcvooc,cldonkeykong,cldoomps,cleaglercraftshadow,clenduro,clfactoryballs,clfactoryballs2,clfactoryballs3,clfactoryballs4,clfairytalevsonepiece,clfallout,clfamilyguycorrupted,clff2ws,clff3,clffaf,clfinalfantasy,clfinalfantasyviid2,clfinalfantasyviid3,clfireemblem,clfocus,clfuschiax,clgameandwatchcollection,clgrannycreepy,clgxclient,clhighstakes,clicantbelievegoogleflaggedmeforthenameofthefilelol,clinsomniary,cljacksmithencryptedorsmthn
 ```
 
 Resume commands:

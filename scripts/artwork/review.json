@@ -6143,11 +6143,53 @@
     "status": "verified",
     "title": "Hajime no Ippo"
   },
+  "clhajimenoippo": {
+    "reason": "Hajime no Ippo Japanese box art, kept distinct from the other Ippo entry.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hajime no Ippo (Alt)"
+  },
+  "clhalocombatdevolved": {
+    "reason": "Halo Combat Devolved fan-game key art; results 2 and 3 were the retail Combat Evolved box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Halo Combat Devolved"
+  },
+  "clhandshakes": {
+    "reason": "Handshakes title art with its graphic.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Handshakes"
+  },
+  "clhandsofwar--1": {
+    "reason": "Hands of War key art on its dark background.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hands of War"
+  },
+  "clhandulum": {
+    "reason": "Handulum gameplay with its swinging hand obstacle.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Handulum"
+  },
   "clhanger": {
     "reason": "Captured title screen shows the actual game.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Hanger"
+  },
+  "clhanger2": {
+    "reason": "Hanger 2 title art with its rope and figure.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hanger 2"
+  },
+  "clhangonsms": {
+    "reason": "Hang-On box art with the arcade label.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hang-On SMS"
   },
   "clhappyroom": {
     "reason": "Captured gameplay shows the actual game.",
@@ -6155,11 +6197,53 @@
     "status": "verified",
     "title": "Happy Room"
   },
+  "clhappywheels": {
+    "reason": "Happy Wheels logo art with its cyclist; results 1 and 2 carried portal branding.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Happy Wheels"
+  },
   "clhardwaretycoon": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Hardware Tycoon"
+  },
+  "clharmonyofdissonance": {
+    "reason": "Castlevania: Harmony of Dissonance box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Castlevania: Harmony of Dissonance"
+  },
+  "clharoldsbadday": {
+    "reason": "Harold's Bad Day key art with its character.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Harold's Bad Day"
+  },
+  "clharvestio": {
+    "reason": "Harvest.io key art with its tractor.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Harvest.io"
+  },
+  "clharvestmoon": {
+    "reason": "Harvest Moon SNES box art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Harvest Moon"
+  },
+  "clharvestmoon2": {
+    "reason": "Harvest Moon 2 box art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Harvest Moon 2"
+  },
+  "clharvestmoon64": {
+    "reason": "Harvest Moon 64 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Harvest Moon 64"
   },
   "clhauntedschool": {
     "reason": "Captured menu shows the actual game.",
@@ -6172,6 +6256,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Haunt the House"
+  },
+  "clheartandsoul": {
+    "reason": "Heart & Soul key art with its couple.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Heart and Soul"
+  },
+  "clheartandsoul1-2-1": {
+    "reason": "Pokemon Heart & Soul title screen for this build.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Heart and Soul 1.2.1"
   },
   "clhei-t": {
     "reason": "Captured title screen shows the actual game.",
@@ -6191,6 +6287,18 @@
     "status": "verified",
     "title": "Helix Jump"
   },
+  "clhellron": {
+    "reason": "Hellron key art with its astronauts; result 3 carried a review banner.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hellron"
+  },
+  "clhelltaker": {
+    "reason": "Helltaker gameplay with its character and HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Helltaker"
+  },
   "clhelpnobrakes": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -6209,6 +6317,12 @@
     "status": "verified",
     "title": "Hero 3 Flying Robot"
   },
+  "clherobrinereborn": {
+    "reason": "FNF vs Herobrine Reborn key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Herobrine Reborn"
+  },
   "clhextris": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
@@ -6221,11 +6335,23 @@
     "status": "verified",
     "title": "High Speed"
   },
+  "clhighstakes": {
+    "reason": "Results were High Stakes on the Vegas Strip (poker) and a physical High Stakes board game, not this entry.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
   "clhighwayracer2": {
     "reason": "Captured menu shows the actual game.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Highway Racer 2"
+  },
+  "clhighwaytraffic3d": {
+    "reason": "Highway Traffic 3D gameplay without a site credit.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Highway Traffic 3D"
   },
   "clhil-climbracing2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6250,6 +6376,24 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Hipster Kickball"
+  },
+  "clhitsinglereal": {
+    "reason": "Hit Single Cool Sauce key art; results 2 and 3 carried captions.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hit Single Real"
+  },
+  "clhitstunfly": {
+    "reason": "Hitstun Fly gameplay with its HUD; result 3 carried a watermark.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hitstun Fly"
+  },
+  "clhl2doom": {
+    "reason": "Half-Life 2 Doom crossover key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "HL2 Doom"
   },
   "clhobo": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6305,17 +6449,35 @@
     "status": "verified",
     "title": "Hoenn's Last Wish"
   },
+  "clholebattle": {
+    "reason": "Hole Battle.io key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hole Battle"
+  },
   "clholeio": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Hole.io"
   },
+  "clhollowknight": {
+    "reason": "Hollow Knight gameplay scene in the caverns.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hollow Knight"
+  },
   "clhomesheephome": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Home Sheep Home"
+  },
+  "clhorrormickeymouse": {
+    "reason": "Horror Mickey Mouse artwork with the character; result 2 carried an OFFICIAL TRAILER caption.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Horror Mickey Mouse"
   },
   "clhotdogbush": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6341,17 +6503,65 @@
     "status": "verified",
     "title": "Hover Racer Drive"
   },
+  "clhuggywuggypixel": {
+    "reason": "Huggy Wuggy pixel art on its black background.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Huggy Wuggy Pixel"
+  },
+  "clhumanexpenditureprogram": {
+    "reason": "Human Expenditure Program character art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Human Expenditure Program"
+  },
+  "clhungryknight": {
+    "reason": "Hungry Knight title art with its knight.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hungry Knight"
+  },
   "clhungrylamu": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Hungry Lamu"
   },
+  "clhyppersandbox": {
+    "reason": "Hypper Sandbox logo screen with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hypper Sandbox"
+  },
+  "clice-age-baby": {
+    "reason": "Kill the Ice Age Baby Adventure key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ice Age Baby"
+  },
+  "cliceclimber": {
+    "reason": "Ice Climber title screen with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ice Climber"
+  },
+  "clicedodo": {
+    "reason": "Ice Dodo app icon with the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Icedodo"
+  },
   "clicefishing": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Ice Fishing"
+  },
+  "clicypurplehead": {
+    "reason": "Icy Purple Head key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Icy Purple Head"
   },
   "clidlebreakout": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6371,11 +6581,29 @@
     "status": "verified",
     "title": "Idle Football Manager"
   },
+  "clidleidlegamedev": {
+    "reason": "Idle Game Dev Simulator key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Idle Idle Game Dev"
+  },
   "clidleminertycoon": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Idle Miner Tycoon"
+  },
+  "clidleminorzamnshes12": {
+    "reason": "Idle Miner key art with its miner.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Idle Miner Zamnshes 12"
+  },
+  "clihateyou": {
+    "reason": "I Hate You gameplay with its HP bars; result 1 carried a channel watermark.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "I Hate You"
   },
   "climpossiblequiz--1": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6383,11 +6611,35 @@
     "status": "verified",
     "title": "Impossible Quiz"
   },
+  "climpossiblequiz2": {
+    "reason": "The Impossible Quiz 2 title art; result 3 carried menu buttons.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Impossible Quiz 2"
+  },
+  "clinclementemerald": {
+    "reason": "Pokemon Inclement Emerald box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Inclement Emerald"
+  },
   "clindiantrucksimiulator": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Indian Truck Simulator"
+  },
+  "clinfinitecraft": {
+    "reason": "InfiniteCraft crafting tree; result 1 carried a Play online button.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Infinite Craft"
+  },
+  "clinkgame": {
+    "reason": "Ink Game platformer collage with its title; result 1 was a physical board game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ink Game"
   },
   "clinkwell--v1-04": {
     "reason": "Inkwell title art with its character.",
@@ -6401,17 +6653,59 @@
     "status": "verified",
     "title": "Innkeeper"
   },
+  "clinsidestory": {
+    "reason": "Mario & Luigi: Bowser's Inside Story box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Inside Story"
+  },
+  "clinsomniary": {
+    "reason": "Results were the Insomniac Games studio logos and a Spider-Man game, not this title.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
   "clintellisphere": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Intellisphere"
   },
+  "clintoruins": {
+    "reason": "Into Ruins title screen with its pixel scene.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Into Ruins"
+  },
+  "clintospace": {
+    "reason": "Into Space gameplay with its HUD and rocket.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Into Space"
+  },
   "clintospace2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Into Space 2"
+  },
+  "clintospace3": {
+    "reason": "Into Space 3 logo art with the rocket.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Into Space 3"
+  },
+  "clintothedeepweb": {
+    "reason": "Into the Deep Web key art with its character.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Into the Deep Web"
+  },
+  "clintrusion": {
+    "reason": "Intrusion key art with its walker.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Intrusion"
   },
   "cliqball": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6425,11 +6719,23 @@
     "status": "verified",
     "title": "Iron Snout"
   },
+  "clironsoldier": {
+    "reason": "Iron Soldier box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Iron Soldier"
+  },
   "clirori": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Irori"
+  },
+  "clitgetssolonelyhere": {
+    "reason": "It Gets So Lonely Here scene with its character.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "It Gets So Lonely Here"
   },
   "cliwbtg": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6437,11 +6743,23 @@
     "status": "verified",
     "title": "IWBTG"
   },
+  "cljacksmith": {
+    "reason": "Jacksmith logo over the forge scene.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Jacksmith"
+  },
   "cljailbreakobbbobob": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Jailbreak Obby"
+  },
+  "cljamesbondjr": {
+    "reason": "James Bond Jr box art with the Nintendo seal.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "James Bond Jr"
   },
   "cljazzjackrabbit": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6455,11 +6773,23 @@
     "status": "verified",
     "title": "Jazz Jackrabbit 2"
   },
+  "cljefflings": {
+    "reason": "JeffLings title art; results 1 and 3 were A World of Keflings.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Jefflings"
+  },
   "cljellydadhero": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Jelly Dad Hero"
+  },
+  "cljellydrift": {
+    "reason": "Jelly Drift title art with its car.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Jelly Drift"
   },
   "cljellymario": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -6479,11 +6809,29 @@
     "status": "verified",
     "title": "Jelly Truck Good"
   },
+  "cljetforcegemini": {
+    "reason": "Jet Force Gemini box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Jet Force Gemini"
+  },
+  "cljetpackjoyride": {
+    "reason": "Jetpack Joyride app icon with Barry.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Jetpack Joyride"
+  },
   "cljetrush": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Jetrush"
+  },
+  "cljetskiracing": {
+    "reason": "Jet Ski Racing 3D gameplay with its title; result 1 carried a site watermark.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Jet Ski Racing"
   },
   "cljmocraft": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6503,6 +6851,42 @@
     "status": "verified",
     "title": "Johnny Upgrade"
   },
+  "cljojobaps1": {
+    "reason": "JoJo's Bizarre Adventure PlayStation box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "JoJo Baps 1"
+  },
+  "cljourneyarcade": {
+    "reason": "Journey arcade cabinet.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Journey Arcade"
+  },
+  "cljourneydownhill": {
+    "reason": "Journey Downhill key art with its animals.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Journey Downhill"
+  },
+  "cljoustarcade": {
+    "reason": "Joust arcade cabinet close-up.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Joust Arcade"
+  },
+  "cljsvecx": {
+    "reason": "JSVecx emulator screen with its games.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "JSVecx"
+  },
+  "cljumbomario": {
+    "reason": "Jumbo Mario key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Jumbo Mario"
+  },
   "cljump": {
     "reason": "Jump Jump Jump title art with its logo.",
     "reviewed": "2026-11-27",
@@ -6515,11 +6899,41 @@
     "status": "verified",
     "title": "Jumping Shell"
   },
+  "cljunglebooksnes": {
+    "reason": "The Jungle Book box art with the Nintendo seal.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Jungle Book (NES)"
+  },
+  "cljungledeerhunting": {
+    "reason": "Jungle Deer Hunting gameplay with its title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Jungle Deer Hunting"
+  },
   "cljurassicpark": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Jurassic Park"
+  },
+  "cljustaplatformer": {
+    "reason": "Just a Platformer level with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Just a Platformer"
+  },
+  "cljustaplatformere": {
+    "reason": "Just a Platformer E level.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Just a Platformer E"
+  },
+  "cljustaplatformere2": {
+    "reason": "Just a Platformer E2 level.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Just a Platformer E2"
   },
   "cljustfalllol": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6527,11 +6941,35 @@
     "status": "verified",
     "title": "Just Fall LOL"
   },
+  "cljusthitthebutton": {
+    "reason": "Just Hit the Button times-table board.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Just Hit the Button"
+  },
   "cljustinclient": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Justin Client"
+  },
+  "cljustoneboss": {
+    "reason": "Just One Boss title art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Just One Boss"
+  },
+  "clkaizomarioworld": {
+    "reason": "Kaizo Mario World title art for this build.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kaizo Mario World"
+  },
+  "clkalikan": {
+    "reason": "Kalikan gameplay with its logo; result 3 carried a watermark.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kalikan"
   },
   "clkanyezone": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -6551,6 +6989,12 @@
     "status": "verified",
     "title": "Karate Bros"
   },
+  "clkarlson": {
+    "reason": "Karlson title art; result 1 carried a site watermark.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Karlson"
+  },
   "clkartbros": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
@@ -6563,17 +7007,125 @@
     "status": "verified",
     "title": "Ken Griffey Jr. Baseball"
   },
+  "clkeroseneclient": {
+    "reason": "Kerosene Client gameplay with its speedometer; result 2 was a price advert.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kerosene Client"
+  },
+  "clkillerinstinct": {
+    "reason": "Killer Instinct key art with its fighters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Killer Instinct"
+  },
+  "clkillover": {
+    "reason": "Kill Over gameplay with its title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kill Over"
+  },
   "clkilltheiceagebabyadventure": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Kill the Ice Age Baby Adventure"
   },
+  "clkimjonguntilepuzzle": {
+    "reason": "Kim Jong-Un Tile Puzzle key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kim Jong-Un Tile Puzzle"
+  },
+  "clkingdomheartsdays": {
+    "reason": "Kingdom Hearts 358/2 Days box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kingdom Hearts 358/2 Days"
+  },
+  "clkingdomheartsrecoded": {
+    "reason": "Kingdom Hearts Re:coded logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kingdom Hearts Re:coded"
+  },
+  "clkingdomheartsrecodedalt": {
+    "reason": "Kingdom Hearts Re:coded DS box art, kept distinct from the other entry.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kingdom Hearts Re:coded (Alt)"
+  },
+  "clkirby64": {
+    "reason": "Kirby 64 box art with the N64 badge.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kirby 64"
+  },
+  "clkirby64crystalshards": {
+    "reason": "Kirby 64: The Crystal Shards cover art without the badge strip.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kirby 64: Crystal Shards"
+  },
+  "clkirbyandtheamzingmirror": {
+    "reason": "Kirby & the Amazing Mirror box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kirby & the Amazing Mirror"
+  },
+  "clkirbycanvascurse": {
+    "reason": "Kirby: Canvas Curse DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kirby: Canvas Curse"
+  },
+  "clkirbysadventure": {
+    "reason": "Kirby's Adventure NES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kirby's Adventure"
+  },
+  "clkirbysdreamland": {
+    "reason": "Kirby's Dream Land box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kirby's Dream Land"
+  },
+  "clkirbysdreamland3": {
+    "reason": "Kirby's Dream Land 3 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kirby's Dream Land 3"
+  },
   "clkirbysoftandwet": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Kirby's Soft and Wet"
+  },
+  "clkirbysqueaksquad": {
+    "reason": "Kirby: Squeak Squad key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kirby: Squeak Squad"
+  },
+  "clkirbysuperstar": {
+    "reason": "Kirby Super Star box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kirby Super Star"
+  },
+  "clkirbysuperstarultra": {
+    "reason": "Kirby Super Star Ultra box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kirby Super Star Ultra"
+  },
+  "clkirbytiltandtumble": {
+    "reason": "Kirby Tilt 'n' Tumble box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kirby Tilt 'n' Tumble"
   },
   "clkittencannon": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6598,6 +7150,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Knightmare Tower"
+  },
+  "clknockknock": {
+    "reason": "Results were a physical Knock Knock board game and its packaging, not this title.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
   },
   "clkonkrio": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6629,11 +7187,29 @@
     "status": "verified",
     "title": "Krillion (Backup)"
   },
+  "clks2teams": {
+    "reason": "KS 2 Teams key art with its shooters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "KS 2 Teams"
+  },
+  "cllaceysflashgames": {
+    "reason": "Lacey's Flash Games key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Lacey's Flash Games"
+  },
   "cllambdaclient": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Lambda Client"
+  },
+  "cllastfirered": {
+    "reason": "Pokemon The Last Fire Red box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Last FireRed"
   },
   "cllasthorizon": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6646,6 +7222,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Last Stand"
+  },
+  "cllaststand2": {
+    "reason": "The Last Stand 2 key art with its survivor.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Last Stand 2"
   },
   "clleaderstrike": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6677,11 +7259,23 @@
     "status": "verified",
     "title": "Learn to Fly 2 Hacked"
   },
+  "cllearntofly3": {
+    "reason": "Learn to Fly 3 key art with its penguin.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Learn to Fly 3"
+  },
   "cllearntofly3debug": {
     "reason": "Learn to Fly 3 upgrade screen from its debug build.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Learn to Fly 3 Debug"
+  },
+  "cllearntoflyidle": {
+    "reason": "Learn to Fly Idle key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Learn to Fly Idle"
   },
   "cllegacyofgoku": {
     "reason": "Dragon Ball Z: The Legacy of Goku cover art without a platform band.",
@@ -6724,6 +7318,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Los Angeles Shark"
+  },
+  "cllowknight": {
+    "reason": "Hollow Knight key art for the alternate entry, kept distinct from the main entry.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hollow Knight (Alt)"
   },
   "cllse": {
     "reason": "LSE gameplay with its dialogue box and HUD.",
