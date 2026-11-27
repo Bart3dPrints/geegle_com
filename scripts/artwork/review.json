@@ -5633,17 +5633,119 @@
     "status": "rejected",
     "title": "Pico-8 Edu"
   },
+  "clpicohot": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Picohot"
+  },
+  "clpikwip": {
+    "reason": "Non-identifying abstract blocks, not game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pikwip"
+  },
+  "clpingpongchaos": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ping Pong Chaos"
+  },
   "clpinkbike": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Pink Bike"
   },
+  "clpint": {
+    "reason": "Near-empty frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pint"
+  },
+  "clpitof100trials": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pit of 100 Trials"
+  },
+  "clpixelbattlegroundsio": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pixel Battlegrounds.io"
+  },
   "clpixelclient": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Pixel Client"
+  },
+  "clpixelcombat2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pixel Combat 2"
+  },
+  "clpixelgun": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pixel Gun"
+  },
+  "clpixelquestlostidols": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pixel Quest: Lost Idols"
+  },
+  "clpixelshooter": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pixel Shooter"
+  },
+  "clpixelspeedrun": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pixel Speedrun"
+  },
+  "clpixelwarfare": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pixel Warfare"
+  },
+  "clpizzapapa": {
+    "reason": "Store promo banner for a different title, not this game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pizza Papa"
+  },
+  "clplanetlife": {
+    "reason": "Near-black frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Planet Life"
+  },
+  "clplantsvszombies": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Plants vs. Zombies"
+  },
+  "clplazmaburst": {
+    "reason": "Portal splash (Coolbuddy), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Plazma Burst"
+  },
+  "clplinko": {
+    "reason": "Near-empty frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Plinko"
   },
   "clplonky": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -5663,17 +5765,275 @@
     "status": "rejected",
     "title": "Poke Academy Life Forever"
   },
+  "clpokeallin": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Poke All In"
+  },
+  "clpokeclassic": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Classic"
+  },
+  "clpokecrown": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Crown"
+  },
+  "clpokecrystalclear": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Crystal Clear"
+  },
+  "clpokedreamstone": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Dream Stone"
+  },
+  "clpokeeliteredux": {
+    "reason": "Generic overworld tile with no identifying content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pokemon Elite Redux"
+  },
+  "clpokeelysiuma": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Elysium A"
+  },
+  "clpokeelysiumb": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Elysium B"
+  },
+  "clpokeemeraldenhanced": {
+    "reason": "Generic overworld tile with no identifying content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pokemon Emerald Enhanced"
+  },
+  "clpokeemeraldexceeded": {
+    "reason": "Generic overworld tile with no identifying content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pokemon Emerald Exceeded"
+  },
+  "clpokeemeraldhorizons": {
+    "reason": "Generic overworld tile with no identifying content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pokemon Emerald Horizons"
+  },
+  "clpokeemeraldz": {
+    "reason": "Generic overworld tile with no identifying content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pokemon Emerald Z"
+  },
+  "clpokefiregold": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon FireGold"
+  },
+  "clpokefuseddimension": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Fused Dimension"
+  },
+  "clpokegoldenshield": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pokemon Golden Shield"
+  },
+  "clpokegschronicles": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Poke GS Chronicles"
+  },
+  "clpokeheartgoldgenerations": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Poke HeartGold Generations"
+  },
+  "clpokemontowerdefense": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Tower Defense"
+  },
+  "clpokemonvolume3": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pokemon Volume 3"
+  },
+  "clpokeodyssey": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Odyssey"
+  },
+  "clpokepasta": {
+    "reason": "Near-black frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pokemon Pasta"
+  },
+  "clpokeperfectfirered": {
+    "reason": "Generic overworld tile with no identifying content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pokemon Perfect FireRed"
+  },
+  "clpokepisces": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Pisces"
+  },
+  "clpokerechargedpink": {
+    "reason": "Generic overworld tile with no identifying content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pokemon Recharged Pink"
+  },
+  "clpokerecordkeepers": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Record Keepers"
+  },
+  "clpokerocketedition": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Rocket Edition"
+  },
+  "clpokethepit": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon the Pit"
+  },
+  "clpoketourmaline": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Tourmaline"
+  },
+  "clpokeunovaemerald": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Unova Emerald"
+  },
+  "clpokevoltwhite2redux": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pokemon Volt White 2 Redux"
+  },
+  "clpokewhite2alt": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pokemon White 2 (Alt)"
+  },
+  "clpolishedcrystal": {
+    "reason": "Generic overworld tile with no identifying content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pokemon Polished Crystal"
+  },
+  "clpolytrackworksnow": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Polytrack (working)"
+  },
   "clpoorbunny": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Poor Bunny"
   },
+  "clportalflash": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Portal Flash"
+  },
   "clpostal": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Postal"
+  },
+  "clpotatomanseeksthetroof": {
+    "reason": "Portal splash (Pogo), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Potato Man Seeks the Troof"
+  },
+  "clpou": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pou"
+  },
+  "clpowerslave": {
+    "reason": "Error page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "PowerSlave"
+  },
+  "clprebronzeage": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pre Bronze Age"
+  },
+  "clprecivilationbronzeage": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Precivilization Bronze Age"
+  },
+  "clprehistoricshark": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Prehistoric Shark"
+  },
+  "clprimary": {
+    "reason": "Publisher splash (Armor Games), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Primary"
+  },
+  "clprismclient": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Prism Client"
+  },
+  "clprocessortycoon": {
+    "reason": "Near-black frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Processor Tycoon"
   },
   "clpuppethockey": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",

@@ -2,11 +2,11 @@
   "generated": "scripts/artwork/build-progress.py",
   "summary": {
     "catalogEntries": 2710,
-    "verified": 641,
-    "awaitingReview": 33,
+    "verified": 677,
+    "awaitingReview": 23,
     "rejected": 0,
     "blocked": 0,
-    "notStarted": 2036
+    "notStarted": 2010
   },
   "entries": [
     {
@@ -9442,18 +9442,17 @@
         "pokemon"
       ],
       "path": "/games/clPokeHeartgoldGenerations.html",
-      "status": "awaiting-review",
-      "method": "gameplay-screenshot",
-      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokeheartgoldgenerations.html",
-      "imagePath": "/artwork/clpokeheartgoldgenerations.webp",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clpokeheartgoldgenerations.html after it rendered its own screen in Chromium.",
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": null,
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
       "dimensions": null,
-      "sha256": "6f613275492d44a4157b99dee27698ce6276ae0c7ccf2aa4466714f4434e24ac",
-      "visualVerification": "awaiting-review",
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
+        "attempted live distribution fetch (no usable response)"
       ],
       "blocker": null
     },
@@ -9611,18 +9610,19 @@
         "simulation"
       ],
       "path": "/games/clPou.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/greeniYT/clever@gh-pages/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpou.html",
+      "imagePath": "/artwork/clpou.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clpou.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "d6d4ddc80bc492be31503aa0cccd66f4ec123fe6e349398fa200361a18096abe",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
-        "fetched cdn.jsdelivr.net page metadata"
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -35334,7 +35334,7 @@
         "puzzle"
       ],
       "path": "/games/clpicohot.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpicohot.html",
       "imagePath": "/artwork/clpicohot.webp",
@@ -35342,7 +35342,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "9085196f2312b918ddd43d81a053d5a6929571dd6fdadabd3c69cd83ea8415db",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -35377,18 +35377,17 @@
         "multiplayer"
       ],
       "path": "/games/clpikwip.html",
-      "status": "awaiting-review",
-      "method": "gameplay-screenshot",
-      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpikwip.html",
-      "imagePath": "/artwork/clpikwip.webp",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clpikwip.html after it rendered its own screen in Chromium.",
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": null,
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
       "dimensions": null,
-      "sha256": "d89a9ecd76fceab98cf511f476fa2087a1a6e35e41288e2d9f272f6c34970746",
-      "visualVerification": "awaiting-review",
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
+        "attempted live distribution fetch (no usable response)"
       ],
       "blocker": null
     },
@@ -35420,7 +35419,7 @@
         "sports"
       ],
       "path": "/games/clpingpongchaos.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpingpongchaos.html",
       "imagePath": "/artwork/clpingpongchaos.webp",
@@ -35428,7 +35427,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "882ad36f6e469628b3783ce29fab9be8f5697ffa0b6e06e9f6f232f3eb5b82c1",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (last resort)"
@@ -35464,18 +35463,17 @@
         "puzzle"
       ],
       "path": "/games/clpint.html",
-      "status": "awaiting-review",
-      "method": "gameplay-screenshot",
-      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpint.html",
-      "imagePath": "/artwork/clpint.webp",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clpint.html after it rendered its own screen in Chromium.",
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": null,
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
       "dimensions": null,
-      "sha256": "566b470cd5327e79a75ac91bd12030fbbacf95aceba230732e9542e0b3010b6d",
-      "visualVerification": "awaiting-review",
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
+        "attempted live distribution fetch (no usable response)"
       ],
       "blocker": null
     },
@@ -35486,7 +35484,7 @@
         "adventure"
       ],
       "path": "/games/clpitof100trials.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpitof100trials.html",
       "imagePath": "/artwork/clpitof100trials.webp",
@@ -35494,7 +35492,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "40e5599f738057a84cdb8353409e6b4b158eac3aab370da7be8f269bd171f7fd",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -35529,7 +35527,7 @@
         "multiplayer"
       ],
       "path": "/games/clpixelbattlegroundsio.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpixelbattlegroundsio.html",
       "imagePath": "/artwork/clpixelbattlegroundsio.webp",
@@ -35537,7 +35535,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "3a273940ec6a21c09580233e6969336a1cc3b95e1a35b3ad174d5970f7078767",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched cdn.jsdelivr.net page metadata",
@@ -35574,7 +35572,7 @@
         "action"
       ],
       "path": "/games/clpixelcombat2.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpixelcombat2.html",
       "imagePath": "/artwork/clpixelcombat2.webp",
@@ -35582,7 +35580,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "158df9b0ea628f2e14e2a56e189e1790261da5da389dff31b23b0ebd46c5875c",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (last resort)"
@@ -35596,7 +35594,7 @@
         "action"
       ],
       "path": "/games/clpixelgun.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpixelgun.html",
       "imagePath": "/artwork/clpixelgun.webp",
@@ -35604,7 +35602,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "a4a5ef13605324ee62f8994be4903cb3e46a9659e8ed567040205ba2156aeb07",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched cdn.jsdelivr.net page metadata",
@@ -35619,7 +35617,7 @@
         "adventure"
       ],
       "path": "/games/clpixelquestlostidols.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpixelquestlostidols.html",
       "imagePath": "/artwork/clpixelquestlostidols.webp",
@@ -35627,7 +35625,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "2d869fad616eae502a390ab51fdd251cb9ec9ee228a01bfb9cdf1defdb372551",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -35641,7 +35639,7 @@
         "action"
       ],
       "path": "/games/clpixelshooter.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpixelshooter.html",
       "imagePath": "/artwork/clpixelshooter.webp",
@@ -35649,7 +35647,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "a4136fe891e057e50b2896e7f5a4bcc8756a876796a47248f09d7ab3db55ca2b",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -35663,7 +35661,7 @@
         "platformer"
       ],
       "path": "/games/clpixelspeedrun.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpixelspeedrun.html",
       "imagePath": "/artwork/clpixelspeedrun.webp",
@@ -35671,7 +35669,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "c8bb8b468fb43a7e3292bc6948ea6d03cecffb91643f8d042bfbf98db20bbf2e",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -35685,7 +35683,7 @@
         "action"
       ],
       "path": "/games/clpixelwarfare.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpixelwarfare.html",
       "imagePath": "/artwork/clpixelwarfare.webp",
@@ -35693,7 +35691,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "b76d92a0cdb4d021d0a280ff6bc45aa7bb3f5a49cd19b0f23081c3b1458645de",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -35707,18 +35705,17 @@
         "simulation"
       ],
       "path": "/games/clpizzapapa.html",
-      "status": "awaiting-review",
-      "method": "gameplay-screenshot",
-      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpizzapapa.html",
-      "imagePath": "/artwork/clpizzapapa.webp",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clpizzapapa.html after it rendered its own screen in Chromium.",
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": "https://cdn.jsdelivr.net/gh/LoloNiz/Pizzeria@25bdd5a9a06bf15786d3299b5a8f29555ca21491/",
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
       "dimensions": null,
-      "sha256": "5f11e91a0540e2170e847064ba5f7999753196cad2ab33b216ba56b9213aa394",
-      "visualVerification": "awaiting-review",
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "title-screen capture (last resort)"
+        "fetched cdn.jsdelivr.net page metadata"
       ],
       "blocker": null
     },
@@ -35771,18 +35768,17 @@
         "action"
       ],
       "path": "/games/clplazmaburst.html",
-      "status": "awaiting-review",
-      "method": "gameplay-screenshot",
-      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clplazmaburst.html",
-      "imagePath": "/artwork/clplazmaburst.webp",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clplazmaburst.html after it rendered its own screen in Chromium.",
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": null,
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
       "dimensions": null,
-      "sha256": "dd3adb3b109a6ee52ffe562484d0ee25221af52b4bdef9ad18e73317f8291a6b",
-      "visualVerification": "awaiting-review",
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
+        "attempted live distribution fetch (no usable response)"
       ],
       "blocker": null
     },
@@ -35814,18 +35810,17 @@
         "simulation"
       ],
       "path": "/games/clplanetlife.html",
-      "status": "awaiting-review",
-      "method": "gameplay-screenshot",
-      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clplanetlife.html",
-      "imagePath": "/artwork/clplanetlife.webp",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clplanetlife.html after it rendered its own screen in Chromium.",
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": null,
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
       "dimensions": null,
-      "sha256": "7b294388e486c1e5875798133aa5d02c6e8947250f48d85a4583b2db9a8671d8",
-      "visualVerification": "awaiting-review",
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
+        "attempted live distribution fetch (no usable response)"
       ],
       "blocker": null
     },
@@ -35836,7 +35831,7 @@
         "strategy"
       ],
       "path": "/games/clplantsvszombies.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clplantsvszombies.html",
       "imagePath": "/artwork/clplantsvszombies.webp",
@@ -35844,7 +35839,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "32cde4e52f3571321b712dbd38ac1bc4d2f247a1c2ce5b4807974e56847dcf4c",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -35879,18 +35874,17 @@
         "casual"
       ],
       "path": "/games/clplinko.html",
-      "status": "awaiting-review",
-      "method": "gameplay-screenshot",
-      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clplinko.html",
-      "imagePath": "/artwork/clplinko.webp",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clplinko.html after it rendered its own screen in Chromium.",
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/plinko/index.html",
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
       "dimensions": null,
-      "sha256": "78d38b285d8b858cf4af1138cb9e8fb27e4f9ba3ebd163e31dad2d01a6b6551a",
-      "visualVerification": "awaiting-review",
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "title-screen capture (last resort)"
+        "fetched cdn.jsdelivr.net page metadata"
       ],
       "blocker": null
     },
@@ -35926,7 +35920,7 @@
         "pokemon"
       ],
       "path": "/games/clpokegschronicles.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokegschronicles.html",
       "imagePath": "/artwork/clpokegschronicles.webp",
@@ -35934,7 +35928,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "fcca1e33445741e8f6c762e14f0e2a541005178b0981e89531a0b3e939740510",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -35990,7 +35984,7 @@
         "pokemon"
       ],
       "path": "/games/clpokeallin.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokeallin.html",
       "imagePath": "/artwork/clpokeallin.webp",
@@ -35998,7 +35992,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "b21ab00baa6bb9eda22acc00d03e3473b3d683818fdd57b90f6063ae4b50a12b",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -36138,7 +36132,7 @@
         "pokemon"
       ],
       "path": "/games/clpokeclassic.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokeclassic.html",
       "imagePath": "/artwork/clpokeclassic.webp",
@@ -36146,7 +36140,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "2f75351101fe0355777bb922e88ec4a6ca34240c8b099668d820975110304713",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -36160,7 +36154,7 @@
         "pokemon"
       ],
       "path": "/games/clpokecrown.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokecrown.html",
       "imagePath": "/artwork/clpokecrown.webp",
@@ -36168,7 +36162,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "fe23e7994b00c3d3863cf1836be344f34bb3660fe6ca2c79eef807101dfd60ac",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -36203,7 +36197,7 @@
         "pokemon"
       ],
       "path": "/games/clpokecrystalclear.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokecrystalclear.html",
       "imagePath": "/artwork/clpokecrystalclear.webp",
@@ -36211,7 +36205,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "82cfc734dd4fca9fa6720d84498a59534d8b5fce173966000ac822e6b5eb7166",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -36246,7 +36240,7 @@
         "pokemon"
       ],
       "path": "/games/clpokedreamstone.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokedreamstone.html",
       "imagePath": "/artwork/clpokedreamstone.webp",
@@ -36254,7 +36248,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "a6060b906ddb12bb00ce30ad5d1187c8358260fe896efa0c0077531f7bf7da76",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -36268,18 +36262,17 @@
         "pokemon"
       ],
       "path": "/games/clpokeeliteredux.html",
-      "status": "awaiting-review",
-      "method": "gameplay-screenshot",
-      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokeeliteredux.html",
-      "imagePath": "/artwork/clpokeeliteredux.webp",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clpokeeliteredux.html after it rendered its own screen in Chromium.",
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": null,
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
       "dimensions": null,
-      "sha256": "df37e43514dcd590ef333db772fd1b79e197e32489ea1a6491d18444f9113407",
-      "visualVerification": "awaiting-review",
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
+        "attempted live distribution fetch (no usable response)"
       ],
       "blocker": null
     },
@@ -36290,7 +36283,7 @@
         "pokemon"
       ],
       "path": "/games/clpokeelysiuma.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokeelysiuma.html",
       "imagePath": "/artwork/clpokeelysiuma.webp",
@@ -36298,7 +36291,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "8018036d63ddb31322e0ea4c02112053dd06b0e9ab9484a9fdcd0b5955387df3",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -36312,7 +36305,7 @@
         "pokemon"
       ],
       "path": "/games/clpokeelysiumb.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokeelysiumb.html",
       "imagePath": "/artwork/clpokeelysiumb.webp",
@@ -36320,7 +36313,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "2fdaba1c51804af8445f480fb09d595f288aafc3c0a931a0956e1de47dead318",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -36334,18 +36327,17 @@
         "pokemon"
       ],
       "path": "/games/clpokeemeraldenhanced.html",
-      "status": "awaiting-review",
-      "method": "gameplay-screenshot",
-      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokeemeraldenhanced.html",
-      "imagePath": "/artwork/clpokeemeraldenhanced.webp",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clpokeemeraldenhanced.html after it rendered its own screen in Chromium.",
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": null,
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
       "dimensions": null,
-      "sha256": "d66533c3465b0580d0d4e89443d66475e0de9fdbf38447ff33969e25ba7dce15",
-      "visualVerification": "awaiting-review",
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
+        "attempted live distribution fetch (no usable response)"
       ],
       "blocker": null
     },
@@ -36356,18 +36348,17 @@
         "pokemon"
       ],
       "path": "/games/clpokeemeraldexceeded.html",
-      "status": "awaiting-review",
-      "method": "gameplay-screenshot",
-      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokeemeraldexceeded.html",
-      "imagePath": "/artwork/clpokeemeraldexceeded.webp",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clpokeemeraldexceeded.html after it rendered its own screen in Chromium.",
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": null,
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
       "dimensions": null,
-      "sha256": "c14e258ba8edf25d1fcbb67815567bb18b4b02bf415cfa39f8d164b51fb18877",
-      "visualVerification": "awaiting-review",
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
+        "attempted live distribution fetch (no usable response)"
       ],
       "blocker": null
     },
@@ -36378,18 +36369,17 @@
         "pokemon"
       ],
       "path": "/games/clpokeemeraldhorizons.html",
-      "status": "awaiting-review",
-      "method": "gameplay-screenshot",
-      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokeemeraldhorizons.html",
-      "imagePath": "/artwork/clpokeemeraldhorizons.webp",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clpokeemeraldhorizons.html after it rendered its own screen in Chromium.",
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": null,
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
       "dimensions": null,
-      "sha256": "fbc47193efc0159be1e259dddba7ebb4d6fc182d258b0ffde45e991150b07527",
-      "visualVerification": "awaiting-review",
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
+        "attempted live distribution fetch (no usable response)"
       ],
       "blocker": null
     },
@@ -36463,18 +36453,17 @@
         "pokemon"
       ],
       "path": "/games/clpokeemeraldz.html",
-      "status": "awaiting-review",
-      "method": "gameplay-screenshot",
-      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokeemeraldz.html",
-      "imagePath": "/artwork/clpokeemeraldz.webp",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clpokeemeraldz.html after it rendered its own screen in Chromium.",
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": null,
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
       "dimensions": null,
-      "sha256": "4b33fca22ea59027a8170838b96516fa0f9097f485fab5034a38434f62f21301",
-      "visualVerification": "awaiting-review",
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
+        "attempted live distribution fetch (no usable response)"
       ],
       "blocker": null
     },
@@ -36485,7 +36474,7 @@
         "pokemon"
       ],
       "path": "/games/clpokefiregold.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokefiregold.html",
       "imagePath": "/artwork/clpokefiregold.webp",
@@ -36493,7 +36482,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "bf6c2fc19a4c7b18130336a7f5712237dbc9612b972954d3d2c2333acaf8fccc",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -36549,7 +36538,7 @@
         "pokemon"
       ],
       "path": "/games/clpokefuseddimension.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokefuseddimension.html",
       "imagePath": "/artwork/clpokefuseddimension.webp",
@@ -36557,7 +36546,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "ba780c7a5ca1fc89624d8d3b84d09dd35d696f4c3f5b4c8726ad7f943cda0883",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -36781,17 +36770,18 @@
         "pokemon"
       ],
       "path": "/games/clpokeodyssey.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokeodyssey.html",
+      "imagePath": "/artwork/clpokeodyssey.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clpokeodyssey.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "d6cd649e1f922978dc95343d65aec3f07749f14018d48a663ebd89b8d3d5821f",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -36907,17 +36897,18 @@
         "pokemon"
       ],
       "path": "/games/clpokepisces.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokepisces.html",
+      "imagePath": "/artwork/clpokepisces.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clpokepisces.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "18f2911f4ccf0a28d103ff280ec1fcd79ff1c97f65f4836fccb75f39db0b7793",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -37075,17 +37066,18 @@
         "pokemon"
       ],
       "path": "/games/clpokerecordkeepers.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokerecordkeepers.html",
+      "imagePath": "/artwork/clpokerecordkeepers.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clpokerecordkeepers.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "2a7d462f2e6a33f686dbee2b2c85f2171de110f11c6a6b9490075532f26b7404",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -37117,17 +37109,18 @@
         "pokemon"
       ],
       "path": "/games/clpokerocketedition.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokerocketedition.html",
+      "imagePath": "/artwork/clpokerocketedition.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clpokerocketedition.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "1fe8eef43a27ffe5091452e3ca8a4e6c2deeb5c20840647a9e1309e98d1c8e08",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -37285,17 +37278,18 @@
         "pokemon"
       ],
       "path": "/games/clpokethepit.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokethepit.html",
+      "imagePath": "/artwork/clpokethepit.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clpokethepit.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "1aa0917ecd52f640a14342c2195d0d2d5490cac56fdea49da68b47e44daab344",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -37327,17 +37321,18 @@
         "pokemon"
       ],
       "path": "/games/clpoketourmaline.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpoketourmaline.html",
+      "imagePath": "/artwork/clpoketourmaline.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clpoketourmaline.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "c026ef8cd1071dbcde8fdce7d34b93af6df9fde1247baf49054657405fb16422",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -37369,17 +37364,18 @@
         "pokemon"
       ],
       "path": "/games/clpokeunovaemerald.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokeunovaemerald.html",
+      "imagePath": "/artwork/clpokeunovaemerald.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clpokeunovaemerald.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "4fd4226c3b1c4d18ca24aaced02527feaf0a254a531b126c9dd1dca4d57405dc",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -38167,17 +38163,18 @@
         "pokemon"
       ],
       "path": "/games/clpokemontowerdefense.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokemontowerdefense.html",
+      "imagePath": "/artwork/clpokemontowerdefense.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clpokemontowerdefense.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "0cb4363210978a08a7200bc2abb00a2b3a4c4cffdccf932357f8bed34f2c4a0b",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -38545,18 +38542,19 @@
         "racing"
       ],
       "path": "/games/clpolytrackworksnow.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/AZURE2077/polytrack-beta-0.6.0@main/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpolytrackworksnow.html",
+      "imagePath": "/artwork/clpolytrackworksnow.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clpolytrackworksnow.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "fbf9678ccf4f2ad51bf5dec4670eeaf4c5decad9448a7405575d647256c5fd9c",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
-        "fetched cdn.jsdelivr.net page metadata"
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -38718,17 +38716,18 @@
         "puzzle"
       ],
       "path": "/games/clportalflash.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clportalflash.html",
+      "imagePath": "/artwork/clportalflash.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clportalflash.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "dc4eab1c7f5c4c4bf878108b842a6f8366892988917820fbcde7dd4c663a353f",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -38932,17 +38931,18 @@
         "strategy"
       ],
       "path": "/games/clprebronzeage.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clprebronzeage.html",
+      "imagePath": "/artwork/clprebronzeage.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clprebronzeage.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "33d2eae2a6864a58a411b9d590a32fa64f32fc855b42dac1afe5b369eb63549c",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -38953,17 +38953,18 @@
         "strategy"
       ],
       "path": "/games/clprecivilationbronzeage.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clprecivilationbronzeage.html",
+      "imagePath": "/artwork/clprecivilationbronzeage.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clprecivilationbronzeage.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "2d8425b959f2e5e894a3b4e9e6201567939446a2e18e8a61ab96c6d34033f8b5",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -38995,17 +38996,18 @@
         "action"
       ],
       "path": "/games/clprehistoricshark.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clprehistoricshark.html",
+      "imagePath": "/artwork/clprehistoricshark.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clprehistoricshark.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "90de29440478e54cfea42973d390f05b5db7ac206ee111c332dc6d9664cf856d",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -39079,17 +39081,18 @@
         "simulation"
       ],
       "path": "/games/clprismclient.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clprismclient.html",
+      "imagePath": "/artwork/clprismclient.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clprismclient.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "4a933a92818a445342a6eedff675e76c436d1cd2562a8c50bf9a69d3da33c623",
+      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
       "methodsInvestigated": [
-        "no reachable remote distribution found"
+        "no reachable remote distribution found",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -39184,17 +39187,18 @@
         "arcade"
       ],
       "path": "/games/clpumpkinrun.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpumpkinrun.html",
+      "imagePath": "/artwork/clpumpkinrun.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clpumpkinrun.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "0f0935bb652af0aef92102947b51397edc8b2f7bf416e7d34fcb94a8dacd9a86",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -39226,17 +39230,18 @@
         "action"
       ],
       "path": "/games/clpunchthetrump.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpunchthetrump.html",
+      "imagePath": "/artwork/clpunchthetrump.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clpunchthetrump.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "63ef6aeec729e02f4d543b6ba8cced2f1700ec9d6b75fa5b52ea13b120efa9b6",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -39272,17 +39277,18 @@
         "action"
       ],
       "path": "/games/clpuppetmaster.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@latest/puppet-master/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpuppetmaster.html",
+      "imagePath": "/artwork/clpuppetmaster.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clpuppetmaster.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "8db2b2a687ff828fb238a5c24def3f2f6c0547231827b42cbf70fb73d5bba5b6",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -39293,17 +39299,18 @@
         "casual"
       ],
       "path": "/games/clpushyourluck.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpushyourluck.html",
+      "imagePath": "/artwork/clpushyourluck.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clpushyourluck.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "4988bb6384cc34a79fe88c8f0e98544887f2ab15b352b4184851903f2c8526a6",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -39335,17 +39342,18 @@
         "strategy"
       ],
       "path": "/games/clpvz2gardenless.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/gardenless/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpvz2gardenless.html",
+      "imagePath": "/artwork/clpvz2gardenless.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clpvz2gardenless.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "552fa916342e3f62171a9a1a8faa00559ae59e8d22866ccd5cfc5999f3f226cd",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -39356,17 +39364,18 @@
         "strategy"
       ],
       "path": "/games/clpvz.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpvz.html",
+      "imagePath": "/artwork/clpvz.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clpvz.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "3915c63d665f700e210c720ec654001e7a2db2ff92aaa51626e0a6d158c64fe6",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -39504,17 +39513,18 @@
         "action"
       ],
       "path": "/games/clquake.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clquake.html",
+      "imagePath": "/artwork/clquake.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clquake.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "93e96bb57988b7bb23c176d5370851fcffac1235f1569120d41b4f615753889b",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -39567,17 +39577,18 @@
         "casual"
       ],
       "path": "/games/clQuantumClicker.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clquantumclicker.html",
+      "imagePath": "/artwork/clquantumclicker.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clquantumclicker.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "555d031c7500cb597b5177ae62d0d85669a8ac1af91ba1fce9fb7dd639ace576",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "no reachable remote distribution found"
+        "no reachable remote distribution found",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -39609,17 +39620,18 @@
         "sports"
       ],
       "path": "/games/clqwop.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clqwop.html",
+      "imagePath": "/artwork/clqwop.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clqwop.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "3056fc8a91ed0ffa6a070bfa096abd79924ca512c8368c176cdfcaa2068b3bc7",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -39651,17 +39663,18 @@
         "action"
       ],
       "path": "/games/clragollhit.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/ragdoll-hit/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clragollhit.html",
+      "imagePath": "/artwork/clragollhit.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clragollhit.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "980eb8e5c34513283ab93d5099c9272c5ae0a384fa040d7e822dc982f3c90370",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -39757,17 +39770,18 @@
         "action"
       ],
       "path": "/games/clraftwars.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clraftwars.html",
+      "imagePath": "/artwork/clraftwars.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clraftwars.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "fc3acf04a1888efb6aec0e7cefb7625ed4aa200b4cf358d341f4120eacd0be26",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -39778,17 +39792,18 @@
         "action"
       ],
       "path": "/games/clraftwars2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clraftwars2.html",
+      "imagePath": "/artwork/clraftwars2.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clraftwars2.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "08660702715bd5868331ef5c95ac6f655963a0a16aa2754ce09a99c6863818bd",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -39820,17 +39835,18 @@
         "action"
       ],
       "path": "/games/clragdollarchers.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/laparda14/Ragdoll-archers@62504c9570ea720c6367e7debe1e110c68f77c2d/vs/",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clragdollarchers.html",
+      "imagePath": "/artwork/clragdollarchers.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clragdollarchers.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "71356c15a9947d7fbe651f52c2be642eb851d488b51c4f92dd9088b824afcddc",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -39841,17 +39857,18 @@
         "action"
       ],
       "path": "/games/clragdolldrop.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/ragdoll-drop/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clragdolldrop.html",
+      "imagePath": "/artwork/clragdolldrop.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clragdolldrop.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "fba4e271cf18e5fb057ac0bedc8b4e622559402758f3e4e2bc240f7bd9a07fc2",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -39862,17 +39879,18 @@
         "action"
       ],
       "path": "/games/clragdollhit.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://rawcdn.githack.com/genizy/google-class/main/ragdoll-hit/",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clragdollhit.html",
+      "imagePath": "/artwork/clragdollhit.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clragdollhit.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "78e4a00c7bf83d95c9c2f52a3ca6b81634e5a3f12088252e94e07873ef0e2866",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "fetched rawcdn.githack.com page metadata"
+        "fetched rawcdn.githack.com page metadata",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -39883,17 +39901,18 @@
         "multiplayer"
       ],
       "path": "/games/clragdoll-io.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clragdoll-io.html",
+      "imagePath": "/artwork/clragdoll-io.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clragdoll-io.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "398a2e7fecabfc8ab881ad87ad0a4ca8d4e12541cd9a2cefe5de7899a6532668",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -39904,17 +39923,18 @@
         "sports"
       ],
       "path": "/games/clragdollrunners.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clragdollrunners.html",
+      "imagePath": "/artwork/clragdollrunners.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clragdollrunners.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "bd287bbe383f8b78abbee4a8db79ae32d4dc2288d317d40b6f0a0d54ce89f724",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "no reachable remote distribution found"
+        "no reachable remote distribution found",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -39925,17 +39945,18 @@
         "sports"
       ],
       "path": "/games/clragdollsoccer.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clragdollsoccer.html",
+      "imagePath": "/artwork/clragdollsoccer.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clragdollsoccer.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "67c411d2dc9654e47ab0580055de7aae6e3a394ee7e2bdae8a41540e154e9540",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -39967,17 +39988,18 @@
         "action"
       ],
       "path": "/games/clrainbowsixalt.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clrainbowsixalt.html",
+      "imagePath": "/artwork/clrainbowsixalt.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clrainbowsixalt.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "717024aea68a8371e06b5da784076670b63419949af49f6de4681fd782412e25",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -39988,17 +40010,18 @@
         "action"
       ],
       "path": "/games/clraldiscrackhouse.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/web-ports/raldi@main/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clraldiscrackhouse.html",
+      "imagePath": "/artwork/clraldiscrackhouse.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clraldiscrackhouse.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "7f09972e84ca7583d54e3825142a375ba9ed1f6b060736eac07736dcccae091a",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -40030,17 +40053,18 @@
         "adventure"
       ],
       "path": "/games/clray1.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clray1.html",
+      "imagePath": "/artwork/clray1.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clray1.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "9d2593388ac27fffb914c7a1180d997ecd4aa212d8f4d020f7eda26773fe1045",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -40093,17 +40117,18 @@
         "action"
       ],
       "path": "/games/clraze.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clraze.html",
+      "imagePath": "/artwork/clraze.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clraze.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "85b6a48cde3c471b723e762963d71e7f9d198f8b5cdb253a453fd7b0aedd7e4e",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -43492,17 +43517,18 @@
         "arcade"
       ],
       "path": "/games/clprofessorlaytonandthecuriousvillage.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "awaiting-review",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clprofessorlaytonandthecuriousvillage.html",
+      "imagePath": "/artwork/clprofessorlaytonandthecuriousvillage.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clprofessorlaytonandthecuriousvillage.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "1c2ef6c13ebd3275ce428414429adf21b0ffcd90e427461048b5095d1e075e76",
+      "visualVerification": "awaiting-review",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
