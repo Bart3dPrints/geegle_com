@@ -2129,7 +2129,8 @@
       "url": "/artwork/cl99balls.webp"
     },
     "clADOFAI": {
-      "assetSha256": "b0bd3621829d7f93f4ca48e29572890649f507f122c8c5d5bd2061f50f519380",
+      "asset": "clADOFAI.webp",
+      "assetSha256": "70eb4cdb8dac40c31c5cb713c28d5d40cd74bb82b46a11f520fe2ab70a3d60ae",
       "frame": "clADOFAI@1.png",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clADOFAI.html after it rendered its own screen in Chromium.",
       "methodsInvestigated": [
@@ -2209,6 +2210,7 @@
       "url": "/artwork/clachillies.webp"
     },
     "cladofai": {
+      "asset": "clADOFAI.webp",
       "assetSha256": "70eb4cdb8dac40c31c5cb713c28d5d40cd74bb82b46a11f520fe2ab70a3d60ae",
       "frame": "cladofai@5.png",
       "identityEvidence": "Captured from the actual game this repository serves at /games/cladofai.html after it rendered its own screen in Chromium.",

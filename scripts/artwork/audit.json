@@ -470,7 +470,6 @@
       "id": "clADOFAI",
       "phash": "f2c6070f8f0fc2cc",
       "problems": [
-        "hash-mismatch",
         "exact-duplicate:clADOFAI,cladofai",
         "near-duplicate:clADOFAI,cladofai"
       ],
