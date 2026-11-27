@@ -2,11 +2,11 @@
   "generated": "scripts/artwork/build-progress.py",
   "summary": {
     "catalogEntries": 2710,
-    "verified": 987,
-    "awaitingReview": 7,
+    "verified": 989,
+    "awaitingReview": 0,
     "rejected": 0,
     "blocked": 0,
-    "notStarted": 1716
+    "notStarted": 1721
   },
   "entries": [
     {
@@ -18778,19 +18778,18 @@
         "rhythm"
       ],
       "path": "/games/clfnfdusttale.html",
-      "status": "awaiting-review",
-      "method": "gameplay-screenshot",
-      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clfnfdusttale.html",
-      "imagePath": "/artwork/clfnfdusttale.webp",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clfnfdusttale.html after it rendered its own screen in Chromium.",
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@latest/dusttale/index.html",
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
       "dimensions": null,
-      "sha256": "4560dc9b50ba923799a5ec19f418ce2f01eae897181c0af9ec67090a293467f0",
-      "visualVerification": "awaiting-review",
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
-        "fetched game.fnfhub.net page metadata",
-        "title-screen capture (last resort)"
+        "fetched game.fnfhub.net page metadata"
       ],
       "blocker": null
     },
@@ -33664,7 +33663,7 @@
         "rhythm"
       ],
       "path": "/games/clourpleguy.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clourpleguy.html",
       "imagePath": "/artwork/clourpleguy.webp",
@@ -33672,7 +33671,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "ca9e99d2bd2805f2ffa85ba8688e757e98f3bb4aa18b7845b6a5dc0512fb8c00",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured mod artwork shows the actual title.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched game3.glov3.me page metadata",
@@ -33709,18 +33708,17 @@
         "action"
       ],
       "path": "/games/cloutnumbered.html",
-      "status": "awaiting-review",
-      "method": "gameplay-screenshot",
-      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cloutnumbered.html",
-      "imagePath": "/artwork/cloutnumbered.webp",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/cloutnumbered.html after it rendered its own screen in Chromium.",
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/outnumbered/index.html",
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
       "dimensions": null,
-      "sha256": "2899cf136d19b395e31fc9480d05c6e171c344fe705f0237440dc9c9d8d90cd1",
-      "visualVerification": "awaiting-review",
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "title-screen capture (last resort)"
+        "fetched cdn.jsdelivr.net page metadata"
       ],
       "blocker": null
     },
@@ -38758,7 +38756,7 @@
         "strategy"
       ],
       "path": "/games/clportaldefendersTD.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clportaldefenderstd.html",
       "imagePath": "/artwork/clportaldefenderstd.webp",
@@ -38766,7 +38764,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "a3e99a75ed5e1234484bd3b77f5011a65cf01dcc166b7717ee0899e2009638bd",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured title screen shows the actual game.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -39660,18 +39658,17 @@
         "horror"
       ],
       "path": "/games/R.E.P.O%20copy%20copy%20copy.html",
-      "status": "awaiting-review",
-      "method": "gameplay-screenshot",
-      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/repo.html",
-      "imagePath": "/artwork/repo.webp",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/repo.html after it rendered its own screen in Chromium.",
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": null,
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
       "dimensions": null,
-      "sha256": "f22133929295cba87b2a2c1e7c12f35a2e1ee330bf0a29fd102db712d2727534",
-      "visualVerification": "awaiting-review",
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
+        "attempted live distribution fetch (no usable response)"
       ],
       "blocker": null
     },
@@ -55250,18 +55247,17 @@
         "puzzle"
       ],
       "path": "/games/cltrollfacequest10.html",
-      "status": "awaiting-review",
-      "method": "gameplay-screenshot",
-      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltrollfacequest10.html",
-      "imagePath": "/artwork/cltrollfacequest10.webp",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/cltrollfacequest10.html after it rendered its own screen in Chromium.",
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": null,
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
       "dimensions": null,
-      "sha256": "e4b7bb754d4c1f500e51a3252034f0d29019128c9cd7b5166fbe559ece7a5d04",
-      "visualVerification": "awaiting-review",
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
+        "attempted live distribution fetch (no usable response)"
       ],
       "blocker": null
     },
@@ -58146,18 +58142,17 @@
         "sports"
       ],
       "path": "/games/clwwfattitude.html",
-      "status": "awaiting-review",
-      "method": "gameplay-screenshot",
-      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clwwfattitude.html",
-      "imagePath": "/artwork/clwwfattitude.webp",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clwwfattitude.html after it rendered its own screen in Chromium.",
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": null,
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
       "dimensions": null,
-      "sha256": "25e34125507520f4ec786f9a3a27dd13141467cdd82805fc13ea59f80f8fda5e",
-      "visualVerification": "awaiting-review",
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
+        "attempted live distribution fetch (no usable response)"
       ],
       "blocker": null
     },

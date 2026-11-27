@@ -3191,6 +3191,12 @@
     "status": "verified",
     "title": "FNF: Dustin"
   },
+  "clfnfdusttale": {
+    "reason": "Engine splash, not the mod artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Dusttale"
+  },
   "clfnffleetway": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -5537,11 +5543,23 @@
     "status": "verified",
     "title": "Paper Mario: The Origami King"
   },
+  "clourpleguy": {
+    "reason": "Captured mod artwork shows the actual title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ourple Guy"
+  },
   "clouthold": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Outhold"
+  },
+  "cloutnumbered": {
+    "reason": "Default engine menu shared across mods.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Outnumbered"
   },
   "cloverburden": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6160,6 +6178,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Poor Bunny"
+  },
+  "clportaldefenderstd": {
+    "reason": "Captured title screen shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Portal Defenders TD"
   },
   "clportalflash": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8537,6 +8561,12 @@
     "status": "rejected",
     "title": "Troll Face Quest 1"
   },
+  "cltrollfacequest10": {
+    "reason": "Error page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Troll Face Quest 10"
+  },
   "cltrucksim": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -8993,6 +9023,12 @@
     "status": "verified",
     "title": "Wurst Client"
   },
+  "clwwfattitude": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "WWF Attitude"
+  },
   "clwwfsmackdown2": {
     "reason": "Loading screen, not rendered gameplay.",
     "reviewed": "2026-11-27",
@@ -9166,6 +9202,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Red vs Blue Fix"
+  },
+  "repo": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "R.E.P.O"
   },
   "riddleuneversityfix": {
     "reason": "Loading screen, not rendered gameplay.",

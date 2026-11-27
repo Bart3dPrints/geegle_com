@@ -7270,29 +7270,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clfnfdustin.webp"
     },
-    "clfnfdusttale": {
-      "assetSha256": "4560dc9b50ba923799a5ec19f418ce2f01eae897181c0af9ec67090a293467f0",
-      "frame": "clfnfdusttale@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clfnfdusttale.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "fetched game.fnfhub.net page metadata",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 1832,
-        "coverage": 0.999,
-        "dominant": 0.077,
-        "edges": 95.56,
-        "stddev": 43.37
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clfnfdusttale.html",
-      "title": "FNF: Dusttale",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clfnfdusttale.webp"
-    },
     "clfnffleetway": {
       "assetSha256": "71d455ca2214a72a882ae4c6a17888b3f0d9621356cbf8b87576dae68b7a2707",
       "frame": "clfnffleetway@8.png",
@@ -11713,28 +11690,6 @@
       "title": "Outhold",
       "type": "gameplay-screenshot",
       "url": "/artwork/clouthold.webp"
-    },
-    "cloutnumbered": {
-      "assetSha256": "2899cf136d19b395e31fc9480d05c6e171c344fe705f0237440dc9c9d8d90cd1",
-      "frame": "cloutnumbered@4.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/cloutnumbered.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 2016,
-        "coverage": 1.0,
-        "dominant": 0.642,
-        "edges": 6.98,
-        "stddev": 60.9
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cloutnumbered.html",
-      "title": "Outnumbered",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/cloutnumbered.webp"
     },
     "cloverburden": {
       "assetSha256": "83829d889228a20f4fbb1b83fd5a8b9860a3d8998b79938be629c477048bebef",
@@ -18060,28 +18015,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/cltriviacrack.webp"
     },
-    "cltrollfacequest10": {
-      "assetSha256": "e4b7bb754d4c1f500e51a3252034f0d29019128c9cd7b5166fbe559ece7a5d04",
-      "frame": "cltrollfacequest10@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/cltrollfacequest10.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 2109,
-        "coverage": 0.972,
-        "dominant": 0.019,
-        "edges": 5.06,
-        "stddev": 23.89
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltrollfacequest10.html",
-      "title": "Troll Face Quest 10",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/cltrollfacequest10.webp"
-    },
     "cltrucksim": {
       "assetSha256": "0a039066094428f6227ec7acfad403bc0b0b5df32ef3778a54e8e67170c3e1bd",
       "frame": "cltrucksim@2.png",
@@ -19186,28 +19119,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clwurstclient.webp"
     },
-    "clwwfattitude": {
-      "assetSha256": "25e34125507520f4ec786f9a3a27dd13141467cdd82805fc13ea59f80f8fda5e",
-      "frame": "clwwfattitude@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clwwfattitude.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 218,
-        "coverage": 0.017,
-        "dominant": 0.593,
-        "edges": 27.27,
-        "stddev": 64.59
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clwwfattitude.html",
-      "title": "WWF Attitude",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clwwfattitude.webp"
-    },
     "clxor": {
       "assetSha256": "1d7fec4c1c8c407109efc7cef506cab26950bc443ce687af52015b69af835817",
       "frame": "clxor@1.png",
@@ -19607,28 +19518,6 @@
       "title": "Red vs Blue Fix",
       "type": "gameplay-screenshot",
       "url": "/artwork/redvbluefix.webp"
-    },
-    "repo": {
-      "assetSha256": "f22133929295cba87b2a2c1e7c12f35a2e1ee330bf0a29fd102db712d2727534",
-      "frame": "repo@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/repo.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 173,
-        "coverage": 0.018,
-        "dominant": 0.782,
-        "edges": 41.11,
-        "stddev": 89.12
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/repo.html",
-      "title": "R.E.P.O",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/repo.webp"
     },
     "smash-hit-ripoff": {
       "assetSha256": "a53b33af912ee86e2a738eb0ee33a53875d36f24b323309fa3593f00c0ff8907",
