@@ -77,11 +77,13 @@ def main():
                  "`artworkFor()` record, so a verified image appears everywhere the title appears. "
                  "No catalog ID, launch path, save key or layout was changed.")
     lines.append("")
-    lines.append("Acquisition order, enforced per title: (1) authentic icon or official social image "
-                 "declared by the game's own distribution; (2) authentic logo/game asset from that build; "
-                 "(3) authentic gameplay artwork; (4) a captured title screen or recognizable gameplay "
-                 "frame from the actual build this repository serves, with engine splashes, loading screens, "
-                 "error pages, ads and generic play splashes rejected.")
+    lines.append("Acquisition order, enforced per title: (1) an independent internet image search for the "
+                 "exact title (plus developer or alternate name when needed), preferring a logo, then an "
+                 "icon, then a title screen or gameplay image; (2) an authentic icon or official social image "
+                 "declared by the game's own distribution; (3) a captured title screen or gameplay frame from "
+                 "the actual build this repository serves, run one at a time as a last resort. Engine splashes, "
+                 "loading screens, error pages, ads, watermarks, portal branding and generic play splashes are "
+                 "rejected in every case.")
     lines.append("")
     lines.append("Identity evidence and reuse basis are recorded separately on every record. Captured "
                  "frames carry no license claim; they are the game's own screen shown on the same platform "
@@ -97,7 +99,8 @@ def main():
     lines.append(f"| Rejected (removed from the UI, queued for a new capture) | {len(rejected_decisions):,} |")
     lines.append(f"| Blocked | {len(blocked):,} |")
     lines.append(f"| Reopened after the blocked classification was rejected | {len(reopened):,} |")
-    lines.append(f"| Ten-minute render investigations completed | {len(investigation):,} |")
+    lines.append(f"| Render investigations from the earlier long-observation pass (that protocol was "
+                 f"cancelled) | {len(investigation):,} |")
     lines.append(f"| ... that rendered an authentic frame | {investigated('rendered'):,} |")
     lines.append(f"| ... that stopped at their own start gate | {investigated('start-gate-only'):,} |")
     lines.append(f"| ... that stayed blank for the whole observation | {investigated('blank-after-observation'):,} |")

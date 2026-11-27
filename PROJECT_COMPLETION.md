@@ -962,12 +962,11 @@ guess. Krillion and Krillion (Backup) keep their separate, distinct artwork.
 
 ### Not claimed
 
-- 1,672 catalog entries are still unprocessed. The required ten-minute
-  observation takes ten minutes per entry, so a full pass cannot finish in one
-  session; the queue, the evidence gathered so far and the exact resume command
-  are preserved in `scripts/artwork/reopened.json`,
-  `scripts/artwork/render-investigation.json` and
-  `docs/ARTWORK_COMPLETION_REPORT.md`.
+- 1,672 catalog entries were still unprocessed at that point. The ten-minute
+  observation then in force could not finish in one session, and the owner has
+  since cancelled it (see phase 4 and phase 5); the queue and evidence remain in
+  `scripts/artwork/reopened.json`, `scripts/artwork/render-investigation.json`
+  and `docs/ARTWORK_COMPLETION_REPORT.md`.
 - No game was removed. The removal protocol requires a completed observation, a
   clean retry and no obtainable artwork; nothing has met all seven conditions
   yet, so `docs/NONFUNCTIONAL_GAME_REMOVALS.md` records zero removals instead of
@@ -1022,3 +1021,63 @@ it still shows the neutral placeholder.
   traced to a browser-blocked loader, a CDN 403/404, a reset connection or an
   unfinished download, so the failure is not attributable to the game.
 - Coverage is 40.4%, not complete.
+
+
+## Phase 5 — internet image search replaces mass local rendering
+
+The owner stopped mass local rendering because running hundreds of HTML games
+overheated the machine, and replaced the acquisition rule: search the internet
+for each title first, render only as a last resort, one game at a time.
+
+Search is now the primary method (`scripts/artwork/search-images.mjs`): for each
+unprocessed id it queries Bing Images with the exact catalog title plus "game",
+downloads the first usable results and records the query, the result rank, the
+source page and the saved file. No game, browser engine or WebGL context is
+started for this step, so a 100-title batch costs no rendering work at all.
+`scripts/artwork/review-sheet.py` renders labelled contact sheets of the first
+three results per title, `apply-search-art.py` writes the chosen image as a
+640x360 WebP (wide images centre-cropped, tall box art shown whole over a blurred
+copy of itself) and records `collectionMethod: internet-image-search` with the
+review note that justified the choice.
+
+| Measurement | Value |
+| --- | --- |
+| Catalog rows (unique IDs) | 2,710 |
+| Titles searched in this phase | 400 |
+| Verified artwork | 1,459 (53.8%) |
+| Artwork obtained through internet search | 364 |
+| Artwork obtained through local screenshots in this phase | 0 |
+| Titles rejected after review (no identifiable, unwatermarked image) | 12 |
+| Games removed as nonfunctional | 0 |
+| Remaining titles without artwork | 1,251 |
+
+Rejected searches are recorded with their exact reason in
+`scripts/artwork/review.json` — for example results that were a different game
+(Bloons TD Battles 2 for Bloons TD 2), a board game, portal watermarks
+(plimpl.com, silvergames.com, minigamesville.com), or gameplay video thumbnails
+with captions burned over the art. Nothing was accepted because a file merely
+existed: every record names the search query, the result rank, the source page
+and the note written after looking at the contact sheet.
+
+The seven owner service screenshots (Helios, Arctic, Cherry, Achroma, Bull-33,
+Soluos, Xylora) are unchanged, Astra remains removed, and Krillion and Krillion
+(Backup) keep separate official artwork in both Games and Apps.
+
+### Verification in this phase
+
+| Check | Result |
+| --- | --- |
+| `npm run typecheck` | exit 0 |
+| `npm run lint` | exit 0 |
+| `npm run build` | exit 0 |
+| `bun test tests` | 124 pass, 0 fail |
+| `node scripts/map-artwork.mjs --check` | exit 0 |
+| `python3 scripts/artwork/audit-artwork.py` | 0 broken |
+
+### Not claimed
+
+- 1,251 titles still have no artwork. The queue is not exhausted; the next batch
+  continues from the first `not-started` row in `scripts/artwork/progress.json`.
+- The 12 rejected titles are not counted as complete. They stay visible as
+  "no artwork" in the manifest, with the reason recorded.
+- No game was removed: none met all seven removal conditions.

@@ -30,7 +30,7 @@ early frame is evidence of a capture problem, not of a broken game.
 Evidence that the old blanket "blank-render" label was wrong (both entries had
 been marked `blank-render`):
 
-| Game ID | Title | What the ten-minute observation showed |
+| Game ID | Title | What the long observation showed |
 | --- | --- | --- |
 | `cl10bullets` | 10 Bullets | Once the Ruffle SWF finished downloading, the game's own title screen appeared: "10 BULLETS — A GAME BY MICHEL GERARD", PLAY / SPACEBAR, high-score and Kiz branding. Previously rejected as a "generic play splash". |
 | `cl100roomsofenemies` | 100 Rooms Of Enemies | Its wrapper's own green PLAY button appeared, but the EmulatorJS loader and game archive never started the emulator; the frame stayed black for the whole window. This is a dependency failure, and it is **not** yet a confirmed removal: a clean retry under the full protocol is still outstanding. |
