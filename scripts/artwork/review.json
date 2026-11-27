@@ -984,10 +984,10 @@
     "title": "B 3313 Unabandoned A2"
   },
   "clb3313v102": {
-    "reason": "Internet image search returned only gameplay video thumbnails with FULL GAMEPLAY captions layered over them; no clean artwork exists in the first results.",
+    "reason": "B3313 logo used by the project itself, matching this build without walkthrough captions.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "B3313 v1.02"
   },
   "clbabeltower": {
     "reason": "Captured frame shows the actual game with identifying title or gameplay.",
@@ -1692,10 +1692,10 @@
     "title": "Bloons PP 2"
   },
   "clbloonspp3": {
-    "reason": "Results were Bloons Pop Three, a different game from this Bloons Player Pack entry; using it would mislabel the card.",
+    "reason": "Bing Images box art for the third Bloons Player Pack; the art reads PLAYER PACK 3, matching this catalog entry rather than Bloons Pop Three.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Bloons PP 3"
   },
   "clbloonspp4": {
     "reason": "Bloons Player Pack 4 title screen.",
@@ -1926,10 +1926,10 @@
     "title": "Boxinglive 2"
   },
   "clboxinglive2": {
-    "reason": "Every result carried a flash-portal watermark (plimpl.com or silvergames.com); no clean artwork available.",
+    "reason": "Title screen of Boxing Live Round 2, the second Boxing Live game; the screen names the game and shows its boxers.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Boxing Live 2"
   },
   "clboxingrandom": {
     "reason": "Boxing Random in-game title art, clean.",
@@ -3492,10 +3492,10 @@
     "title": "Dome Romantik"
   },
   "cldonkeykong": {
-    "reason": "Results were Donkey Kong Country Returns, a different title; the arcade original is a separate catalog entry.",
+    "reason": "Classic Donkey Kong arcade gameplay with the girder and barrel stage, matching the original arcade entry rather than Donkey Kong Country.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Donkey Kong"
   },
   "cldonkeykong64": {
     "reason": "Donkey Kong 64 box art.",
@@ -3618,10 +3618,10 @@
     "title": "Doom (Emscripten)"
   },
   "cldoomps": {
-    "reason": "Results were Doom Eternal, a different title from this PlayStation Doom build.",
+    "reason": "PlayStation Doom cover art carrying the PlayStation mark and the Doom logo, matching the PlayStation build this entry serves.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Doom PS"
   },
   "cldoomzio": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -3990,10 +3990,10 @@
     "title": "Eaglercraft Nebula"
   },
   "cleaglercraftshadow": {
-    "reason": "Results were a specific hosted world and embedding-page screenshots for another player's world, not artwork for this build.",
+    "reason": "Eaglercraft client welcome screen naming Eaglercraft and its version, matching this client entry.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Eaglercraft Shadow"
   },
   "cleaglercraftsky": {
     "reason": "EAGLECRAFT key art with its character.",
@@ -4218,10 +4218,10 @@
     "title": "Endless War 7"
   },
   "clenduro": {
-    "reason": "Results were stock motocross photographs, not the game's own artwork.",
+    "reason": "Atari 2600 Enduro box front with the Enduro logo and racing car, matching the catalog title.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Enduro"
   },
   "clepicbattlefantasy5": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -4494,10 +4494,10 @@
     "title": "Feed Us 5"
   },
   "clff2ws": {
-    "reason": "Results were the Final Fantasy I cartridge and title art, not the WonderSwan Final Fantasy II this entry serves.",
+    "reason": "Final Fantasy II WonderSwan Color box front, matching the WS build this entry serves.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "FF 2 WS"
   },
   "clff3": {
     "reason": "Final Fantasy III NES box art.",
@@ -4650,10 +4650,10 @@
     "title": "Final Earth 2"
   },
   "clfinalfantasy": {
-    "reason": "Results were Final Fantasy VII Remake and XV, later titles; none represents the original game this entry serves.",
+    "reason": "Original NES Final Fantasy box art with the Nintendo seal, matching this entry rather than a later remake.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Final Fantasy"
   },
   "clfinalfantasy2nes": {
     "reason": "Final Fantasy II box art with the Firion artwork.",
@@ -4698,16 +4698,16 @@
     "title": "Final Fantasy VII"
   },
   "clfinalfantasyviid2": {
-    "reason": "Results were retail Final Fantasy VII products, not artwork for this build.",
+    "reason": "Final Fantasy VII logo on black, identifying the game this second-disc build belongs to.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Final Fantasy VII D2"
   },
   "clfinalfantasyviid3": {
-    "reason": "Results were the retail Final Fantasy VII Remake key art and a captioned video frame.",
+    "reason": "Final Fantasy VII logo on a green field, identifying the game this third-disc build belongs to.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Final Fantasy VII D3"
   },
   "clfinalninja": {
     "reason": "Captured the Final Ninja logo title screen.",
@@ -5634,10 +5634,10 @@
     "title": "Galaga"
   },
   "clgameandwatchcollection": {
-    "reason": "Results were photographs of Game & Watch hardware, not the DS collection this entry serves.",
+    "reason": "Nintendo DS Game & Watch Collection box front, matching the DS collection this entry serves.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Game & Watch Collection"
   },
   "clgamewatchgallery3": {
     "reason": "Game & Watch Gallery 3 box art.",
@@ -7260,10 +7260,10 @@
     "title": "Knightmare Tower"
   },
   "clknockknock": {
-    "reason": "Results were a physical Knock Knock board game and its packaging, not this title.",
+    "reason": "Knock Knock gameplay showing its characters and the game's own site name, matching the horror game rather than a board game.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Knock Knock"
   },
   "clkonkrio": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7440,10 +7440,10 @@
     "title": "LEGO Star Wars 2 (GBA)"
   },
   "cllegostarwarsgba": {
-    "reason": "Search results for this GBA build were all LEGO Star Wars II box art; the original's GBA cover was not among the first results.",
+    "reason": "LEGO Star Wars: The Video Game Game Boy Advance box art, matching this GBA build rather than LEGO Star Wars II.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "LEGO Star Wars (GBA)"
   },
   "cllemmings": {
     "reason": "Lemmings key art with its lemming and logo.",
@@ -7938,10 +7938,10 @@
     "title": "Mario Paint"
   },
   "clmarioparty": {
-    "reason": "Results were Super Mario Party and Jamboree, not the N64 Mario Party this entry serves.",
+    "reason": "Nintendo 64 Mario Party box art, matching this entry rather than a later Mario Party game.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Mario Party"
   },
   "clmarioparty2": {
     "reason": "Mario Party 2 box art.",
@@ -8106,10 +8106,10 @@
     "title": "Mega Client"
   },
   "clmegaman": {
-    "reason": "Results were Mega Man 2, Mega Man X and Mega Man V artwork, not the original NES entry.",
+    "reason": "Original NES Mega Man box art with the Capcom and Nintendo marks, matching this entry rather than a sequel.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Mega Man"
   },
   "clmegaman2": {
     "reason": "Mega Man 2 box art.",
@@ -8190,10 +8190,10 @@
     "title": "Mega Man BN 5 TP"
   },
   "clmegamanbn6cf": {
-    "reason": "Every first result for this build was Cybeast Gregar artwork; the Cybeast Falzar cover was not among them, so using it would mislabel the card.",
+    "reason": "Mega Man Battle Network 6 Cybeast Falzar logo, matching the CF build this entry serves rather than Gregar.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Mega Man BN 6 CF"
   },
   "clmegamanbn6cg": {
     "reason": "Mega Man Battle Network 6 Cybeast Gregar box art.",
@@ -9174,10 +9174,10 @@
     "title": "Not Your Pawn"
   },
   "clnovaclient": {
-    "reason": "Every result was a promotional banner or tutorial thumbnail with burned-in text, not artwork for this client.",
+    "reason": "Nova Client launcher screen showing the client name and version, matching this client entry.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Nova Client"
   },
   "clnplus": {
     "reason": "N+ logo art with its stick figure.",
@@ -9804,10 +9804,10 @@
     "title": "Perfect Hotel"
   },
   "clpersona": {
-    "reason": "Results were Persona 5 Royal and a platform promo banner, not the original Persona.",
+    "reason": "Original Persona PlayStation cover with the Persona wordmark, matching this entry rather than Persona 5.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Persona"
   },
   "clpersona2": {
     "reason": "Persona 2: Innocent Sin cover art.",
@@ -11082,10 +11082,10 @@
     "title": "Professor Layton and the Curious Village"
   },
   "clprowrestling": {
-    "reason": "Results were Ultra Pro Wrestling and Pro Wrestling Action mobile games, not the NES title.",
+    "reason": "NES Pro Wrestling box art with the Nintendo seal, matching the original title.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Pro Wrestling"
   },
   "clpuckman": {
     "reason": "Pac-Man maze art; results 1 and 2 carried the Doodlebug watermark.",
@@ -11340,10 +11340,10 @@
     "title": "Ray 2"
   },
   "clrayman": {
-    "reason": "Results were Rayman Legends box art and gameplay, not the original Rayman.",
+    "reason": "Original Rayman PlayStation box art with the Rayman logo, matching this entry rather than a later Rayman game.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Rayman"
   },
   "clraze": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -11814,10 +11814,10 @@
     "title": "Room Clicker"
   },
   "clrosegold": {
-    "reason": "Every result was a video thumbnail carrying playthrough or review text over the art.",
+    "reason": "Pokemon Rose Gold title screen with the ROM hack's name and starter, matching this entry.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Rose Gold"
   },
   "clrotate": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -12450,10 +12450,10 @@
     "title": "Slide in the Woods"
   },
   "clslimelabratory": {
-    "reason": "Results were Slime Laboratory 2 and 3 art, not the original title.",
+    "reason": "Slime Laboratory gameplay with the game's name in its own HUD and the green slime character.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Slime Laboratory"
   },
   "clslipways": {
     "reason": "Slipways key art.",
@@ -14418,10 +14418,10 @@
     "title": "Taco Stand"
   },
   "cltag": {
-    "reason": "Results were stock photographs of children playing tag, not artwork for a game.",
+    "reason": "TAG title screen with its player-count menu, matching the arcade-style Tag game.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Tag"
   },
   "cltagc3": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -16290,9 +16290,9 @@
     "title": "Snow White"
   },
   "soundboard": {
-    "reason": "The captured frame is a nearly empty toolbar with no recognizable content; kept out until a better image is found.",
+    "reason": "Owner supplied this cover artwork for the Soundboard application; all four buttons are visible.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Soundboard"
   },
   "suggestions": {
@@ -16326,10 +16326,10 @@
     "title": "Unown King"
   },
   "winterolympics": {
-    "reason": "Results were Olympic ceremony, skiing and curling photographs rather than game artwork.",
+    "reason": "Winter Olympics title screen with the event list, matching the classic game rather than ceremony photographs.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Winter Olympics"
   },
   "wolfchild": {
     "reason": "WolfChild SNES box art.",

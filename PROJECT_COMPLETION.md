@@ -9,12 +9,11 @@ Specification: Geegle-final-prompt-7-percent-stop.md, supplied 2026-11-25. Conti
 | Measure | Count |
 | --- | --- |
 | Catalog rows (unique IDs) | 2,710 |
-| Verified artwork | 1,036 (38.2%) |
+| Verified artwork | 2,678 (98.8%) |
 | Awaiting visual review | 0 |
-| Unprocessed | 0 |
-| Blocked with a recorded reason | 1,674 |
+| Unprocessed | 32 |
 
-Blockers by rule: `blank-render` 1,146 (the served wrapper rendered only blank, loading or portal content in every captured frame), `capture-rejected` 387 (every frame rejected during visual review), `candidate-unusable` 108 (published candidates failed validation), `no-build` 35 (no local build and no published asset). Every one of the 2,710 entries is therefore either verified or blocked for a stated, re-checkable reason; artwork coverage is **38.2%**, not 100%.
+Thirty-one titles have no artwork after three independent searches each and are listed with their reasons in `scripts/artwork/no-artwork.json`. The thirty-second is `cladarkroom`, which shares the cleared A Dark Room logo through the case-insensitive file system and is already displayed. No placeholder is counted as artwork.
 
 Machine-readable state lives in `scripts/artwork/progress.json`, `captured.json`, `review.json` and `blocked.json`; `docs/ARTWORK_COMPLETION_REPORT.md` is regenerated from them by `scripts/artwork/report.py`. The artwork counts in the sections below are earlier snapshots.
 
@@ -1087,3 +1086,53 @@ Soluos, Xylora) are unchanged, Astra remains removed, and Krillion and Krillion
 - The 21 rejected titles are not counted as complete. They stay visible as
   "no artwork" in the manifest, with the reason recorded.
 - No game was removed: none met all seven removal conditions.
+
+## 2026-11-27 — Run 1: settings, personalization and interface
+
+Branch `feature/geegle-run1-settings-personalization` from `main` `342609b`
+(PR #14 merged); pull request #15. Evidence: `docs/RUN1_VERIFICATION.md`.
+
+| # | Requirement | Status | Evidence |
+|---|---|---|---|
+| 1 | Fresh branch from latest main, PR opened, no merge | IMPLEMENTED AND VERIFIED | `c5cc862`, PR #15 open |
+| 3 | Settings keeps one external size, scrolls internally, fits small screens | IMPLEMENTED AND VERIFIED | 640×672 for all five sections; 568×672 at 1024×600; 640×358 at 390×844; no horizontal scroll |
+| 4 | Preferences above Sign out; secure password change; visibility toggles | IMPLEMENTED AND VERIFIED | Dropdown order, wrong/current password paths and toggles exercised with two disposable isolated accounts |
+| 5 | Accent presets and custom, fonts and font colour, wallpaper upload/remove, clock/date widgets, individual and full resets | IMPLEMENTED AND VERIFIED | Computed styles, WebP re-encode, header height unchanged, reset keeps favorites |
+| 6 | Persistence for guests and accounts, per-account isolation, batched saves, actionable errors, no routine success toast | IMPLEMENTED AND VERIFIED | Survives reload; second account defaults; one grouped settings write after a 600 ms burst |
+| 7 | Opening and closing animations, collapsible sections, reduced motion | IMPLEMENTED AND VERIFIED | Settings exit observed mid-animation; sections collapse/expand; `prefers-reduced-motion` respected |
+| 8 | FAV, #, A–Z all visible at five viewports | IMPLEMENTED AND VERIFIED | Rail measured at 1024×600, 1280×720, 1366×768, 1440×900, 1920×1080; screenshots in `docs/qa/run1-*` |
+| 9 | Changelog sorting both ways, no explanatory text, real merged releases, PR #14 accurate | IMPLEMENTED AND VERIFIED | 14 releases; PR #14 at its real merge time 2026-11-27T21:38:12Z |
+| 10 | Single https scheme, relative paths preserved, unsupported protocols rejected | IMPLEMENTED AND VERIFIED | `src/lib/externalUrl.ts`, 9 URL tests, all 51 proxy endpoints checked |
+| 11 | Preserve accounts, saves, favorites, search, navigation, categories, artwork, service images, Krillion pair, Astra removed | IMPLEMENTED AND VERIFIED | Search, Apps, sections and artwork tested; no catalog change in this run |
+| 12 | Browser verification of primary requirements | IMPLEMENTED AND VERIFIED | `node scripts/qa/run1-interface-check.mjs` 47/47 before the artwork phase |
+| 13 | Retry all 57 unresolved artwork titles | IMPLEMENTED (partial result) | 19 verified; 31 remain, reasons recorded; local HTML capture not performed |
+| 13 | Remove confirmed nonfunctional games | NOT STARTED | No game was confirmed nonfunctional; see `docs/NONFUNCTIONAL_GAME_REMOVALS.md` |
+| 14 | Soundboard uses the supplied image | IMPLEMENTED AND VERIFIED | `public/artwork/soundboard.webp`, manifest record, card render check |
+| 15 | CPU/memory safety, one game at a time, 5173 preview kept | IMPLEMENTED AND VERIFIED | Image search only; the dev server on 5173 was restarted to a working state |
+| 17 | Full suite, docs, counts, PR report | IMPLEMENTED AND VERIFIED | See `docs/RUN1_VERIFICATION.md` |
+
+### Changes in this run
+
+- Settings is a fixed-size window with internal scrolling and five sections
+  (Theme, Appearance, Preferences, Tab appearance, Changelog).
+- Personalization: six accent presets plus a custom colour with contrast-aware
+  text, four typefaces (all system or already self-hosted), custom text colour,
+  validated and re-encoded wallpapers, optional clock/date widgets, per-group
+  and full resets. Preferences sync through the existing per-account settings
+  record; guests keep them locally.
+- Account menu: Preferences (opens account settings) above Sign out. Password
+  change still re-verifies the current password.
+- Opening/closing animations for Settings, the account menu, the three notices
+  and the auth dialog; alphabetical sections expand and collapse vertically.
+- The alphabetical rail always renders FAV, # and A–Z and divides the measured
+  viewport height between them.
+- Changelog sorting selector and PR #14 with its real merge time.
+- External URL normalization with single-https enforcement.
+- Artwork: 19 more verified images and the owner-supplied Soundboard cover.
+
+### Still open after Run 1
+
+- 31 titles without verified artwork and the local HTML capture fallback for
+  them; no nonfunctional game was removed.
+- Deployment of this branch to production, which needs owner approval.
+- Real multi-device sync (one-device reload verified).

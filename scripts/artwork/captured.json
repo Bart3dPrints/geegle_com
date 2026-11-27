@@ -1746,6 +1746,19 @@
       "title": "YouTube",
       "type": "official-icon",
       "url": "/artwork/youtube.webp"
+    },
+    "soundboard": {
+      "assetSha256": "c61e7a6610f7048471456479d3d8267b959d07fb2483e8efa4e97bb67aa83120",
+      "identityEvidence": "Owner-supplied cover artwork for the Soundboard application: four arcade buttons, two red above two green.",
+      "methodsInvestigated": [
+        "owner-supplied image"
+      ],
+      "reuseEvidence": "Provided by the site owner for use as the Soundboard application thumbnail on this platform.",
+      "reviewStatus": "verified",
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/artwork/soundboard.webp",
+      "title": "Soundboard",
+      "type": "owner-supplied",
+      "url": "/artwork/soundboard.webp"
     }
   },
   "screens": {
@@ -1757,7 +1770,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 23022,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.157,
         "edges": 15.09,
         "stddev": 57.02
@@ -1815,7 +1828,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 453,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.709,
         "edges": 3.17,
         "stddev": 20.18
@@ -1855,7 +1868,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 180,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.296,
         "edges": 16.96,
         "stddev": 39.64
@@ -2028,7 +2041,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 14462,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.152,
         "edges": 9.12,
         "stddev": 45.24
@@ -2154,7 +2167,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 411,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.073,
         "edges": 14.77,
         "stddev": 74.97
@@ -2253,7 +2266,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 36849,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.03,
         "edges": 7.77,
         "stddev": 50.36
@@ -2397,7 +2410,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 10797,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.104,
         "edges": 18.96,
         "stddev": 69.78
@@ -2415,7 +2428,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 18270,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.396,
         "edges": 12.32,
         "stddev": 53.73
@@ -2433,7 +2446,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 3063,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.828,
         "edges": 3.55,
         "stddev": 51.86
@@ -2545,7 +2558,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 91743,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.024,
         "edges": 10.38,
         "stddev": 46.16
@@ -2779,7 +2792,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 64546,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.003,
         "edges": 12.98,
         "stddev": 44.79
@@ -2833,7 +2846,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 101509,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.075,
         "edges": 9.81,
         "stddev": 73.25
@@ -2869,7 +2882,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 32943,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.788,
         "edges": 5.69,
         "stddev": 44.38
@@ -3017,7 +3030,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 15130,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.081,
         "edges": 7.64,
         "stddev": 59.71
@@ -3053,7 +3066,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 6555,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.514,
         "edges": 3.22,
         "stddev": 24.33
@@ -3205,7 +3218,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 78844,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.459,
         "edges": 6.56,
         "stddev": 28.45
@@ -3259,7 +3272,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 57313,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.024,
         "edges": 10.88,
         "stddev": 52.04
@@ -3505,7 +3518,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 48744,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.174,
         "edges": 22.21,
         "stddev": 57.81
@@ -3541,7 +3554,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 56539,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.032,
         "edges": 16.48,
         "stddev": 61.21
@@ -3577,7 +3590,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 114176,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.027,
         "edges": 11.95,
         "stddev": 51.42
@@ -3649,7 +3662,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 45008,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.021,
         "edges": 9.81,
         "stddev": 44.99
@@ -3667,7 +3680,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 82,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.168,
         "edges": 8.01,
         "stddev": 42.29
@@ -3685,7 +3698,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 47487,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.025,
         "edges": 3.8,
         "stddev": 35.31
@@ -3779,7 +3792,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 25237,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.189,
         "edges": 12.19,
         "stddev": 56.97
@@ -3859,7 +3872,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 22204,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.216,
         "edges": 15.03,
         "stddev": 65.02
@@ -3897,7 +3910,7 @@
         "colors": 637,
         "coverage": 0.974,
         "dominant": 0.291,
-        "edges": 8.0,
+        "edges": 8,
         "stddev": 86.53
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbindingofisaccsheeptime.html",
@@ -4025,7 +4038,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 23363,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.034,
         "edges": 12.36,
         "stddev": 54.39
@@ -4101,7 +4114,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 34500,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.024,
         "edges": 11.83,
         "stddev": 67.79
@@ -4137,7 +4150,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 57000,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.23,
         "edges": 16.17,
         "stddev": 80.53
@@ -4329,7 +4342,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 34844,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.181,
         "edges": 5.4,
         "stddev": 55.32
@@ -4404,7 +4417,7 @@
         "coverage": 0.554,
         "dominant": 0.604,
         "edges": 12.08,
-        "stddev": 47.0
+        "stddev": 47
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbobtherobber2.html",
       "title": "Bob the Robber 2",
@@ -4437,7 +4450,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 2733,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.561,
         "edges": 15.67,
         "stddev": 58.81
@@ -4455,7 +4468,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 19783,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.016,
         "edges": 12.49,
         "stddev": 36.32
@@ -4549,7 +4562,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 28332,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.116,
         "edges": 16.89,
         "stddev": 61.6
@@ -4588,9 +4601,9 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 78754,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.066,
-        "edges": 13.0,
+        "edges": 13,
         "stddev": 62.68
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbrotato.html",
@@ -4852,7 +4865,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 53472,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.031,
         "edges": 9.27,
         "stddev": 58.05
@@ -4870,7 +4883,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 56650,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.025,
         "edges": 5.61,
         "stddev": 29.83
@@ -4906,7 +4919,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 6630,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.46,
         "edges": 12.36,
         "stddev": 71.42
@@ -4924,7 +4937,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 114251,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.007,
         "edges": 11.43,
         "stddev": 54.59
@@ -4946,7 +4959,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 170706,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.053,
         "edges": 20.05,
         "stddev": 87.33
@@ -4964,7 +4977,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 165852,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.053,
         "edges": 19.65,
         "stddev": 87.33
@@ -5000,7 +5013,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 1530,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.035,
         "edges": 12.01,
         "stddev": 52.35
@@ -5090,7 +5103,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 92729,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.04,
         "edges": 21.66,
         "stddev": 70.29
@@ -5113,7 +5126,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 3031,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.303,
         "edges": 19.85,
         "stddev": 63.3
@@ -5185,7 +5198,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 64386,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.013,
         "edges": 16.7,
         "stddev": 50.14
@@ -5203,7 +5216,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 65372,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.011,
         "edges": 16.4,
         "stddev": 50.14
@@ -5329,7 +5342,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 16908,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.156,
         "edges": 11.17,
         "stddev": 71.4
@@ -5428,7 +5441,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 1412,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.77,
         "edges": 5.87,
         "stddev": 20.73
@@ -5449,7 +5462,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 32903,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.351,
         "edges": 16.25,
         "stddev": 72.42
@@ -5470,7 +5483,7 @@
         "coverage": 0.903,
         "dominant": 0.065,
         "edges": 2.97,
-        "stddev": 20.0
+        "stddev": 20
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcolormatch.html",
       "title": "Color Match",
@@ -5539,7 +5552,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 92462,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.01,
         "edges": 20.79,
         "stddev": 45.03
@@ -5557,7 +5570,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 89874,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.011,
         "edges": 19.98,
         "stddev": 39.62
@@ -5746,7 +5759,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 722,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.531,
         "edges": 7.6,
         "stddev": 20.67
@@ -5764,7 +5777,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 634,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.569,
         "edges": 7.97,
         "stddev": 28.01
@@ -5782,7 +5795,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 22607,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.086,
         "edges": 13.69,
         "stddev": 74.45
@@ -5800,7 +5813,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 5189,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.072,
         "edges": 16.89,
         "stddev": 43.6
@@ -5818,7 +5831,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 94487,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.035,
         "edges": 12.7,
         "stddev": 52.23
@@ -5836,7 +5849,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 15938,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.166,
         "edges": 9.5,
         "stddev": 75.17
@@ -5854,7 +5867,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 1528,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.242,
         "edges": 12.98,
         "stddev": 68.46
@@ -5986,7 +5999,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 44486,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.103,
         "edges": 3.01,
         "stddev": 27.62
@@ -6004,7 +6017,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 15618,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.447,
         "edges": 14.27,
         "stddev": 73.1
@@ -6026,7 +6039,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 48118,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.013,
         "edges": 13.02,
         "stddev": 50.72
@@ -6044,7 +6057,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 2983,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.28,
         "edges": 5.89,
         "stddev": 96.01
@@ -6066,7 +6079,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 54,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.268,
         "edges": 9.74,
         "stddev": 98.04
@@ -6174,7 +6187,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 135753,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.013,
         "edges": 11.24,
         "stddev": 55.66
@@ -6192,7 +6205,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 6017,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.182,
         "edges": 10.12,
         "stddev": 86.42
@@ -6326,7 +6339,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 202795,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.029,
         "edges": 29.22,
         "stddev": 61.19
@@ -6369,7 +6382,7 @@
         "coverage": 0.974,
         "dominant": 0.62,
         "edges": 13.14,
-        "stddev": 25.0
+        "stddev": 25
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldiamondhollow2.html",
       "title": "Diamond Hollow 2",
@@ -6384,9 +6397,9 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 360,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.224,
-        "edges": 12.0,
+        "edges": 12,
         "stddev": 62.62
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldieinthedungeon.html",
@@ -6424,7 +6437,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 1575,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.245,
         "edges": 8.85,
         "stddev": 38.73
@@ -6446,7 +6459,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 329,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.057,
         "edges": 7.11,
         "stddev": 65.39
@@ -6471,7 +6484,7 @@
         "coverage": 0.692,
         "dominant": 0.293,
         "edges": 10.2,
-        "stddev": 74.0
+        "stddev": 74
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldinorunmarathonofdoom.html",
       "title": "Dino Run: Marathon of Doom",
@@ -6509,7 +6522,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 61,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.477,
         "edges": 5.65,
         "stddev": 31.2
@@ -6671,7 +6684,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 44213,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.018,
         "edges": 9.79,
         "stddev": 39.08
@@ -6809,7 +6822,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 16393,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.322,
         "edges": 6.12,
         "stddev": 42.87
@@ -6849,7 +6862,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 34179,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.112,
         "edges": 10.33,
         "stddev": 73.22
@@ -6948,7 +6961,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 13289,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.233,
         "edges": 4.55,
         "stddev": 38.65
@@ -6966,7 +6979,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 2933,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.02,
         "edges": 4.32,
         "stddev": 24.91
@@ -7484,7 +7497,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 64742,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.029,
         "edges": 8.78,
         "stddev": 65.68
@@ -7660,10 +7673,10 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 27882,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.061,
         "edges": 21.31,
-        "stddev": 76.0
+        "stddev": 76
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clescaperoad.html",
       "title": "Escape Road",
@@ -7682,7 +7695,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 21437,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.089,
         "edges": 19.74,
         "stddev": 53.69
@@ -7704,7 +7717,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 84308,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.077,
         "edges": 14.41,
         "stddev": 71.46
@@ -7726,7 +7739,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 55008,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.012,
         "edges": 5.66,
         "stddev": 36.87
@@ -7924,7 +7937,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 29015,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.159,
         "edges": 4.7,
         "stddev": 35.32
@@ -8255,7 +8268,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 104104,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.055,
         "edges": 18.3,
         "stddev": 53.79
@@ -8277,7 +8290,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 75880,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.063,
         "edges": 18.86,
         "stddev": 53.12
@@ -8453,7 +8466,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 43656,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.246,
         "edges": 4.87,
         "stddev": 18.58
@@ -8498,7 +8511,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 12776,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.073,
         "edges": 11.09,
         "stddev": 72.58
@@ -8520,7 +8533,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 41685,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.043,
         "edges": 8.66,
         "stddev": 36.73
@@ -8564,7 +8577,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 22167,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.233,
         "edges": 9.25,
         "stddev": 94.7
@@ -8652,7 +8665,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 2712,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.369,
         "edges": 7.43,
         "stddev": 31.42
@@ -8809,7 +8822,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 94599,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.35,
         "edges": 13.93,
         "stddev": 37.82
@@ -8831,7 +8844,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 14742,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.342,
         "edges": 4.72,
         "stddev": 55.8
@@ -8964,7 +8977,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 21356,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.13,
         "edges": 8.6,
         "stddev": 70.06
@@ -8986,7 +8999,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 5071,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.155,
         "edges": 10.46,
         "stddev": 62.27
@@ -9008,7 +9021,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 3407,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.434,
         "edges": 7.75,
         "stddev": 31.34
@@ -9075,7 +9088,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 1313,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.016,
         "edges": 24.57,
         "stddev": 56.59
@@ -9097,7 +9110,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 2115,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.517,
         "edges": 6.12,
         "stddev": 88.62
@@ -9119,7 +9132,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 34182,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.571,
         "edges": 3.24,
         "stddev": 38.38
@@ -9141,7 +9154,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 1406,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.686,
         "edges": 5.31,
         "stddev": 27.4
@@ -9274,7 +9287,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 107019,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.079,
         "edges": 7.01,
         "stddev": 48.29
@@ -9296,7 +9309,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 28910,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.031,
         "edges": 4.49,
         "stddev": 30.53
@@ -9472,7 +9485,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 28970,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.027,
         "edges": 8.55,
         "stddev": 43.57
@@ -9604,7 +9617,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 7714,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.125,
         "edges": 6.14,
         "stddev": 15.84
@@ -9670,7 +9683,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 53371,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.08,
         "edges": 8.31,
         "stddev": 42.06
@@ -9780,7 +9793,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 19266,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.135,
         "edges": 19.98,
         "stddev": 33.45
@@ -9824,7 +9837,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 106826,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.033,
         "edges": 11.41,
         "stddev": 47.2
@@ -9847,7 +9860,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 133854,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.016,
         "edges": 12.45,
         "stddev": 57.27
@@ -9869,7 +9882,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 38888,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.158,
         "edges": 13.96,
         "stddev": 37.16
@@ -9893,7 +9906,7 @@
         "colors": 791,
         "coverage": 0.732,
         "dominant": 0.284,
-        "edges": 9.0,
+        "edges": 9,
         "stddev": 110.05
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clgravity.html",
@@ -9914,7 +9927,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 108217,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.006,
         "edges": 8.85,
         "stddev": 53.27
@@ -9936,7 +9949,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 49737,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.03,
         "edges": 7.44,
         "stddev": 40.8
@@ -10024,7 +10037,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 42,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.137,
         "edges": 6.52,
         "stddev": 76.8
@@ -10135,7 +10148,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 27083,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.034,
         "edges": 17.02,
         "stddev": 62.28
@@ -10245,7 +10258,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 32257,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.046,
         "edges": 10.13,
         "stddev": 41.02
@@ -10399,7 +10412,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 33550,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.011,
         "edges": 14.78,
         "stddev": 56.55
@@ -10796,7 +10809,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 13693,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.107,
         "edges": 4.48,
         "stddev": 45.47
@@ -10818,7 +10831,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 9392,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.079,
         "edges": 7.33,
         "stddev": 56.53
@@ -10840,7 +10853,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 130427,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.009,
         "edges": 10.43,
         "stddev": 68.08
@@ -10909,7 +10922,7 @@
         "colors": 660,
         "coverage": 0.562,
         "dominant": 0.259,
-        "edges": 4.0,
+        "edges": 4,
         "stddev": 32.09
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clidlefootballmanager.html",
@@ -11197,7 +11210,7 @@
         "coverage": 0.421,
         "dominant": 0.019,
         "edges": 30.05,
-        "stddev": 46.0
+        "stddev": 46
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cljellytruckgood.html",
       "title": "Jelly Truck Good",
@@ -11638,7 +11651,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 292976,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.014,
         "edges": 18.61,
         "stddev": 60.23
@@ -11770,7 +11783,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 62,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.116,
         "edges": 14.14,
         "stddev": 44.65
@@ -12078,7 +12091,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 27450,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.083,
         "edges": 7.6,
         "stddev": 50.15
@@ -12100,7 +12113,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 77722,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.392,
         "edges": 6.75,
         "stddev": 30.78
@@ -12144,7 +12157,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 168904,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.027,
         "edges": 17.32,
         "stddev": 31.08
@@ -12189,7 +12202,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 35977,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.513,
         "edges": 5.55,
         "stddev": 46.6
@@ -12235,7 +12248,7 @@
         "colors": 767,
         "coverage": 0.974,
         "dominant": 0.545,
-        "edges": 13.0,
+        "edges": 13,
         "stddev": 72.84
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clmariolostlevels.html",
@@ -12255,7 +12268,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 107083,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.028,
         "edges": 18.55,
         "stddev": 55.63
@@ -12324,7 +12337,7 @@
         "coverage": 0.354,
         "dominant": 0.285,
         "edges": 22.62,
-        "stddev": 68.0
+        "stddev": 68
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clmedievalshark.html",
       "title": "Medieval Shark",
@@ -12387,7 +12400,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 60619,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.083,
         "edges": 9.26,
         "stddev": 36.51
@@ -12477,7 +12490,7 @@
         "colors": 86032,
         "coverage": 0.693,
         "dominant": 0.018,
-        "edges": 11.0,
+        "edges": 11,
         "stddev": 26.48
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clmightyknight2.html",
@@ -12519,7 +12532,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 60151,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.032,
         "edges": 11.53,
         "stddev": 59.64
@@ -12564,7 +12577,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 26020,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.02,
         "edges": 24.03,
         "stddev": 41.96
@@ -12696,7 +12709,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 77193,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.048,
         "edges": 7.17,
         "stddev": 81.11
@@ -12718,7 +12731,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 126275,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.056,
         "edges": 11.48,
         "stddev": 80.68
@@ -12741,7 +12754,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 52615,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.194,
         "edges": 8.09,
         "stddev": 69.44
@@ -12807,7 +12820,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 88573,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.045,
         "edges": 9.68,
         "stddev": 81.51
@@ -12852,7 +12865,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 27096,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.48,
         "edges": 6.35,
         "stddev": 58.94
@@ -12919,7 +12932,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 3783,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.336,
         "edges": 2.63,
         "stddev": 28.48
@@ -12988,7 +13001,7 @@
         "coverage": 0.366,
         "dominant": 0.472,
         "edges": 9.69,
-        "stddev": 45.0
+        "stddev": 45
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clnautilusos-1.html",
       "title": "Nautilus OS",
@@ -13142,7 +13155,7 @@
         "coverage": 0.355,
         "dominant": 0.107,
         "edges": 68.2,
-        "stddev": 71.0
+        "stddev": 71
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clnewyorkshark.html",
       "title": "New York Shark",
@@ -13251,7 +13264,7 @@
         "colors": 26102,
         "coverage": 0.996,
         "dominant": 0.089,
-        "edges": 7.0,
+        "edges": 7,
         "stddev": 50.7
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clnightclubshowdown.html",
@@ -13359,7 +13372,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 5790,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.168,
         "edges": 5.83,
         "stddev": 33.31
@@ -13381,7 +13394,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 28021,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.023,
         "edges": 5.34,
         "stddev": 27.3
@@ -13447,7 +13460,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 16746,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.021,
         "edges": 19.77,
         "stddev": 49.88
@@ -13469,7 +13482,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 46731,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.012,
         "edges": 10.33,
         "stddev": 63.87
@@ -13491,7 +13504,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 55368,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.091,
         "edges": 13.76,
         "stddev": 61.55
@@ -13535,7 +13548,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 69110,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.013,
         "edges": 3.18,
         "stddev": 28.61
@@ -13691,7 +13704,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 296,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.789,
         "edges": 4.51,
         "stddev": 36.91
@@ -14200,7 +14213,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 119385,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.045,
         "edges": 7.83,
         "stddev": 62.16
@@ -14333,7 +14346,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 47666,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.044,
         "edges": 8.95,
         "stddev": 35.7
@@ -14422,7 +14435,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 97770,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.026,
         "edges": 14.74,
         "stddev": 57.36
@@ -14688,7 +14701,7 @@
         "colors": 328,
         "coverage": 0.762,
         "dominant": 0.331,
-        "edges": 12.0,
+        "edges": 12,
         "stddev": 63.52
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpokefiregold.html",
@@ -15039,7 +15052,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 122,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.124,
         "edges": 13.5,
         "stddev": 51.39
@@ -15172,7 +15185,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 52542,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.032,
         "edges": 12.54,
         "stddev": 69.71
@@ -15260,7 +15273,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 296844,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.01,
         "edges": 23.67,
         "stddev": 63.23
@@ -15524,7 +15537,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 15793,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.047,
         "edges": 31.36,
         "stddev": 77.65
@@ -15546,7 +15559,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 11362,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.031,
         "edges": 6.06,
         "stddev": 43.44
@@ -15810,7 +15823,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 15187,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.362,
         "edges": 8.24,
         "stddev": 55.72
@@ -15943,7 +15956,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 5196,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.085,
         "edges": 5.93,
         "stddev": 38.44
@@ -15965,7 +15978,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 79174,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.037,
         "edges": 7.59,
         "stddev": 48.5
@@ -16164,7 +16177,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 133022,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.009,
         "edges": 21.76,
         "stddev": 44.6
@@ -16274,7 +16287,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 65334,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.023,
         "edges": 9.63,
         "stddev": 51.52
@@ -16362,7 +16375,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 497,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.047,
         "edges": 4.86,
         "stddev": 78.86
@@ -16450,7 +16463,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 111834,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.108,
         "edges": 8.01,
         "stddev": 45.23
@@ -16472,7 +16485,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 27474,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.016,
         "edges": 3.57,
         "stddev": 31.15
@@ -16626,7 +16639,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 141212,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.004,
         "edges": 22.82,
         "stddev": 40.15
@@ -16714,7 +16727,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 74008,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.015,
         "edges": 4.8,
         "stddev": 48.97
@@ -16804,7 +16817,7 @@
         "colors": 5661,
         "coverage": 0.99,
         "dominant": 0.238,
-        "edges": 6.0,
+        "edges": 6,
         "stddev": 60.94
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clshoppingcarthero.html",
@@ -16824,7 +16837,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 35815,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.061,
         "edges": 11.49,
         "stddev": 61.49
@@ -16956,7 +16969,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 31591,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.03,
         "edges": 7.23,
         "stddev": 47.03
@@ -17000,7 +17013,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 7596,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.181,
         "edges": 6.03,
         "stddev": 52.13
@@ -17198,7 +17211,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 116,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.152,
         "edges": 9.01,
         "stddev": 48.58
@@ -17222,7 +17235,7 @@
         "colors": 29740,
         "coverage": 0.728,
         "dominant": 0.035,
-        "edges": 18.0,
+        "edges": 18,
         "stddev": 56.06
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clsm64hiddenstars.html",
@@ -17442,7 +17455,7 @@
         "colors": 9800,
         "coverage": 0.856,
         "dominant": 0.693,
-        "edges": 6.0,
+        "edges": 6,
         "stddev": 34.7
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clsnakeis.html",
@@ -17484,7 +17497,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 105583,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.008,
         "edges": 5.24,
         "stddev": 47.07
@@ -17506,7 +17519,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 82797,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.535,
         "edges": 11.24,
         "stddev": 74.32
@@ -17550,7 +17563,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 30988,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.026,
         "edges": 4.5,
         "stddev": 54.31
@@ -17792,7 +17805,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 4521,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.087,
         "edges": 10.83,
         "stddev": 46.69
@@ -17837,7 +17850,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 11913,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.128,
         "edges": 10.36,
         "stddev": 57.78
@@ -17859,7 +17872,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 24459,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.087,
         "edges": 13.64,
         "stddev": 61.11
@@ -17969,7 +17982,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 18039,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.048,
         "edges": 3.73,
         "stddev": 27.68
@@ -18057,7 +18070,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 174361,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.012,
         "edges": 7.87,
         "stddev": 43.1
@@ -18079,7 +18092,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 1957,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.133,
         "edges": 7.45,
         "stddev": 25.47
@@ -18101,7 +18114,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 36786,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.027,
         "edges": 8.36,
         "stddev": 44.73
@@ -18123,7 +18136,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 17075,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.06,
         "edges": 11.27,
         "stddev": 43.57
@@ -18190,7 +18203,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 52517,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.283,
         "edges": 13.26,
         "stddev": 67.88
@@ -18234,7 +18247,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 66004,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.209,
         "edges": 13.09,
         "stddev": 45.35
@@ -18300,7 +18313,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 20149,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.016,
         "edges": 4.87,
         "stddev": 35.6
@@ -18501,7 +18514,7 @@
         "coverage": 0.978,
         "dominant": 0.16,
         "edges": 4.21,
-        "stddev": 45.0
+        "stddev": 45
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clstickwithit.html",
       "title": "Stick With It",
@@ -18652,7 +18665,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 87810,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.007,
         "edges": 8.58,
         "stddev": 50.93
@@ -18674,7 +18687,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 99031,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.047,
         "edges": 14.27,
         "stddev": 57.01
@@ -18696,7 +18709,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 79451,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.037,
         "edges": 13.11,
         "stddev": 53.23
@@ -18718,7 +18731,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 81915,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.028,
         "edges": 14.27,
         "stddev": 54.99
@@ -18740,7 +18753,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 104805,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.02,
         "edges": 14.61,
         "stddev": 62.01
@@ -18762,7 +18775,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 741,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.416,
         "edges": 18.16,
         "stddev": 73.18
@@ -18784,7 +18797,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 135107,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.018,
         "edges": 19.55,
         "stddev": 50.35
@@ -18806,7 +18819,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 59349,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.03,
         "edges": 6.65,
         "stddev": 65.11
@@ -18850,7 +18863,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 804,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.285,
         "edges": 13.99,
         "stddev": 40.73
@@ -18894,7 +18907,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 105881,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.015,
         "edges": 5.81,
         "stddev": 45.74
@@ -18938,7 +18951,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 33015,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.03,
         "edges": 3.81,
         "stddev": 50.74
@@ -18982,7 +18995,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 17975,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.086,
         "edges": 3.89,
         "stddev": 20.89
@@ -19004,7 +19017,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 92,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.452,
         "edges": 11.79,
         "stddev": 75.3
@@ -19114,7 +19127,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 18795,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.183,
         "edges": 11.5,
         "stddev": 43.9
@@ -19158,7 +19171,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 16352,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.398,
         "edges": 11.28,
         "stddev": 53.58
@@ -19180,7 +19193,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 21550,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.218,
         "edges": 11.11,
         "stddev": 51.24
@@ -19246,7 +19259,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 8240,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.683,
         "edges": 5.06,
         "stddev": 29.23
@@ -19268,7 +19281,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 738,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.183,
         "edges": 13.99,
         "stddev": 68.65
@@ -19290,7 +19303,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 11567,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.15,
         "edges": 9.95,
         "stddev": 80.98
@@ -19378,7 +19391,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 61573,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.007,
         "edges": 12.22,
         "stddev": 42.13
@@ -19444,7 +19457,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 216225,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.055,
         "edges": 19.28,
         "stddev": 37.23
@@ -19466,7 +19479,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 11347,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.099,
         "edges": 6.35,
         "stddev": 51.84
@@ -19532,7 +19545,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 63044,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.021,
         "edges": 7.35,
         "stddev": 61.27
@@ -19554,7 +19567,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 63538,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.021,
         "edges": 7.37,
         "stddev": 61.3
@@ -19598,7 +19611,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 671,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.217,
         "edges": 27.73,
         "stddev": 64.31
@@ -19642,7 +19655,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 11659,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.075,
         "edges": 12.22,
         "stddev": 42.85
@@ -19973,7 +19986,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 15266,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.709,
         "edges": 9.57,
         "stddev": 25.14
@@ -20061,7 +20074,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 125153,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.006,
         "edges": 19.56,
         "stddev": 66.59
@@ -20237,9 +20250,9 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 47999,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.021,
-        "edges": 7.0,
+        "edges": 7,
         "stddev": 29.18
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltowercrash3d.html",
@@ -20259,7 +20272,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 56406,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.002,
         "edges": 7.86,
         "stddev": 27.53
@@ -20281,7 +20294,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 15120,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.031,
         "edges": 5.01,
         "stddev": 51.64
@@ -20303,7 +20316,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 23837,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.072,
         "edges": 11.15,
         "stddev": 51.6
@@ -20369,7 +20382,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 180,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.275,
         "edges": 8.28,
         "stddev": 50.73
@@ -20435,7 +20448,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 48416,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.628,
         "edges": 7.87,
         "stddev": 88.26
@@ -20458,7 +20471,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 120027,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.121,
         "edges": 21.24,
         "stddev": 72.43
@@ -20502,7 +20515,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 33510,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.026,
         "edges": 8.35,
         "stddev": 49.25
@@ -20524,7 +20537,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 33412,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.028,
         "edges": 8.04,
         "stddev": 49.21
@@ -20635,7 +20648,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 68476,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.109,
         "edges": 15.28,
         "stddev": 63.01
@@ -20657,7 +20670,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 125834,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.006,
         "edges": 19.59,
         "stddev": 66.63
@@ -20745,7 +20758,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 60587,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.004,
         "edges": 11.83,
         "stddev": 27.37
@@ -21076,7 +21089,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 16518,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.14,
         "edges": 10.05,
         "stddev": 61.94
@@ -21098,7 +21111,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 649,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.793,
         "edges": 9.36,
         "stddev": 89.86
@@ -21410,7 +21423,7 @@
         "coverage": 0.758,
         "dominant": 0.032,
         "edges": 12.53,
-        "stddev": 49.0
+        "stddev": 49
       },
       "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clwheely8.html",
       "title": "Wheely 8",
@@ -21429,7 +21442,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 4868,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.484,
         "edges": 3.42,
         "stddev": 40.2
@@ -21627,7 +21640,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 28365,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.348,
         "edges": 7.81,
         "stddev": 70.07
@@ -21983,7 +21996,7 @@
       "reviewStatus": "awaiting-review",
       "signal": {
         "colors": 87016,
-        "coverage": 1.0,
+        "coverage": 1,
         "dominant": 0.459,
         "edges": 13.43,
         "stddev": 73.25
@@ -40733,6 +40746,306 @@
       "title": "Zrist",
       "type": "game-asset",
       "url": "/artwork/clzrist.webp"
+    },
+    "clb3313v102": {
+      "assetSha256": "8b4e3d087e254a63fa2dcee19cfa5baee67ae890754d0f3793491b395525fcf5",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"B3313 v1.02 logo\" in Bing Images and taking result 2; the image was checked against the catalog title \"B3313 v1.02\" before use. Source page: https://b3313.fandom.com/wiki/B3313",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "B3313 v1.02 logo",
+      "source": "https://b3313.fandom.com/wiki/B3313",
+      "title": "B3313 v1.02",
+      "type": "game-asset",
+      "url": "/artwork/clb3313v102.webp"
+    },
+    "clfinalfantasyviid3": {
+      "assetSha256": "c6e9b07f3c1877d7905c95be190f2d75caf977ad696f0cbccd7b41f1370263ed",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Final Fantasy VII D3 logo\" in Bing Images and taking result 1; the image was checked against the catalog title \"Final Fantasy VII D3\" before use. Source page: https://logos-world.net/final-fantasy-7-logo/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Final Fantasy VII D3 logo",
+      "source": "https://logos-world.net/final-fantasy-7-logo/",
+      "title": "Final Fantasy VII D3",
+      "type": "game-asset",
+      "url": "/artwork/clfinalfantasyviid3.webp"
+    },
+    "clfinalfantasyviid2": {
+      "assetSha256": "00e5ba9921d238e1b1a874b1765fab13dcd780b508337d1336d374abf4bc4491",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Final Fantasy VII D2 logo\" in Bing Images and taking result 2; the image was checked against the catalog title \"Final Fantasy VII D2\" before use. Source page: https://www.deviantart.com/mockingraffy/art/Final-fantasy-vii-logo-920407814",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Final Fantasy VII D2 logo",
+      "source": "https://www.deviantart.com/mockingraffy/art/Final-fantasy-vii-logo-920407814",
+      "title": "Final Fantasy VII D2",
+      "type": "game-asset",
+      "url": "/artwork/clfinalfantasyviid2.webp"
+    },
+    "cllegostarwarsgba": {
+      "assetSha256": "d51081437b9a481a6add603f605a448d59c63f973780ff33901ca221272f1ee0",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"LEGO Star Wars (GBA) logo\" in Bing Images and taking result 2; the image was checked against the catalog title \"LEGO Star Wars (GBA)\" before use. Source page: https://visualboyadvance.org/gba-roms",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "LEGO Star Wars (GBA) logo",
+      "source": "https://visualboyadvance.org/gba-roms",
+      "title": "LEGO Star Wars (GBA)",
+      "type": "game-asset",
+      "url": "/artwork/cllegostarwarsgba.webp"
+    },
+    "clmegamanbn6cf": {
+      "assetSha256": "be3ef5eb65a69bc1516302648acdcbc375cf8eda120f46fbd5292b0f65299a63",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Mega Man BN 6 CF logo\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mega Man BN 6 CF\" before use. Source page: https://www.steamgriddb.com/logo/22775",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Mega Man BN 6 CF logo",
+      "source": "https://www.steamgriddb.com/logo/22775",
+      "title": "Mega Man BN 6 CF",
+      "type": "game-asset",
+      "url": "/artwork/clmegamanbn6cf.webp"
+    },
+    "clnovaclient": {
+      "assetSha256": "0ccd48099375225be8f79ac5d6aa8c84792c4312f483a603791ab3ca1b1a5e60",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Nova Client logo\" in Bing Images and taking result 2; the image was checked against the catalog title \"Nova Client\" before use. Source page: https://www.figma.com/community/tag/nova/files",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Nova Client logo",
+      "source": "https://www.figma.com/community/tag/nova/files",
+      "title": "Nova Client",
+      "type": "game-asset",
+      "url": "/artwork/clnovaclient.webp"
+    },
+    "clbloonspp3": {
+      "assetSha256": "636c3125594301ebc4658f3fc436140ccbdb272fe23418c9c3c23a791bdfe872",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Bloons PP 3 box art\" in Bing Images and taking result 2; the image was checked against the catalog title \"Bloons PP 3\" before use. Source page: https://browsercraft.com/game/bloons-player-pack-3",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Bloons PP 3 box art",
+      "source": "https://browsercraft.com/game/bloons-player-pack-3",
+      "title": "Bloons PP 3",
+      "type": "game-asset",
+      "url": "/artwork/clbloonspp3.webp"
+    },
+    "clboxinglive2": {
+      "assetSha256": "7d14f101287a89caebaca04a38decf1dca6461a8b5b3dceb85da4b958e7f3e2b",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Boxing Live 2 box art\" in Bing Images and taking result 1; the image was checked against the catalog title \"Boxing Live 2\" before use. Source page: https://www.noflashgame.com/html5-25/boxing-live-2-unblocked-2002/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Boxing Live 2 box art",
+      "source": "https://www.noflashgame.com/html5-25/boxing-live-2-unblocked-2002/",
+      "title": "Boxing Live 2",
+      "type": "game-asset",
+      "url": "/artwork/clboxinglive2.webp"
+    },
+    "cldoomps": {
+      "assetSha256": "e915660702eaaf09b77ce3e7e17f3f4d783650f3873b355dea3f9db26451756d",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Doom PS box art\" in Bing Images and taking result 3; the image was checked against the catalog title \"Doom PS\" before use. Source page: https://www.technopat.net/sosyal/blog/deneyimlerim-3-doom-doom-ii-2024-paketi.7295/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Doom PS box art",
+      "source": "https://www.technopat.net/sosyal/blog/deneyimlerim-3-doom-doom-ii-2024-paketi.7295/",
+      "title": "Doom PS",
+      "type": "game-asset",
+      "url": "/artwork/cldoomps.webp"
+    },
+    "clenduro": {
+      "assetSha256": "797871b843be987595d4bdeb2411c4fb122e027612750cf255bd11989e21623a",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Enduro box art\" in Bing Images and taking result 2; the image was checked against the catalog title \"Enduro\" before use. Source page: https://www.retroartgames.com.br/produtos/enduro/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Enduro box art",
+      "source": "https://www.retroartgames.com.br/produtos/enduro/",
+      "title": "Enduro",
+      "type": "game-asset",
+      "url": "/artwork/clenduro.webp"
+    },
+    "clfinalfantasy": {
+      "assetSha256": "bfd58e993bd646efd1b936444ae8ac22c4a0e0259b238e2b94f2477be9d6967f",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Final Fantasy box art\" in Bing Images and taking result 2; the image was checked against the catalog title \"Final Fantasy\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/2701-final-fantasy",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Final Fantasy box art",
+      "source": "https://gamesdb.launchbox-app.com/games/images/2701-final-fantasy",
+      "title": "Final Fantasy",
+      "type": "game-asset",
+      "url": "/artwork/clfinalfantasy.webp"
+    },
+    "clgameandwatchcollection": {
+      "assetSha256": "4b50ba9ce3b58f69dafbde3ae6ad8957c4c57737c1192a79e5cd87822ca6e563",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Game & Watch Collection box art\" in Bing Images and taking result 1; the image was checked against the catalog title \"Game & Watch Collection\" before use. Source page: https://nintendo.miraheze.org/wiki/Game_&_Watch_Collection",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Game & Watch Collection box art",
+      "source": "https://nintendo.miraheze.org/wiki/Game_&_Watch_Collection",
+      "title": "Game & Watch Collection",
+      "type": "game-asset",
+      "url": "/artwork/clgameandwatchcollection.webp"
+    },
+    "clff2ws": {
+      "assetSha256": "74beadc96e4ca2d419e9d41e526a8fe1efeca89e07a7ab1cbe88530ba67ad43d",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"FF 2 WS box art\" in Bing Images and taking result 1; the image was checked against the catalog title \"FF 2 WS\" before use. Source page: https://archive.org/details/final_fantasy_ii_red_wonderswan_color_box_art",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "FF 2 WS box art",
+      "source": "https://archive.org/details/final_fantasy_ii_red_wonderswan_color_box_art",
+      "title": "FF 2 WS",
+      "type": "game-asset",
+      "url": "/artwork/clff2ws.webp"
+    },
+    "clmegaman": {
+      "assetSha256": "8e7d1163c5d02986baa650a7143fd58cd0c1b9675e557c3f2dbbc12e92d4025e",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Mega Man box art\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mega Man\" before use. Source page: https://famiboards.com/threads/nintendo-direct-speculation-st10-everybody-1-2-switch-directs-switch-2-direct-april-2nd-6am-pst-9am-et-new-staff-post-please-read.12257/page-407",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Mega Man box art",
+      "source": "https://famiboards.com/threads/nintendo-direct-speculation-st10-everybody-1-2-switch-directs-switch-2-direct-april-2nd-6am-pst-9am-et-new-staff-post-please-read.12257/page-407",
+      "title": "Mega Man",
+      "type": "game-asset",
+      "url": "/artwork/clmegaman.webp"
+    },
+    "clpersona": {
+      "assetSha256": "6fdc281b960ceb4a83eace2be02d70d22d5d55000978302daf18a2c8238ae2cb",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Persona box art\" in Bing Images and taking result 2; the image was checked against the catalog title \"Persona\" before use. Source page: http://strategywiki.org/wiki/Shin_Megami_Tensei:_Persona",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Persona box art",
+      "source": "http://strategywiki.org/wiki/Shin_Megami_Tensei:_Persona",
+      "title": "Persona",
+      "type": "game-asset",
+      "url": "/artwork/clpersona.webp"
+    },
+    "clprowrestling": {
+      "assetSha256": "94535ce863cd0b2f6d0c98f0e753c75a5a48a13165235bd2e16151433114a936",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Pro Wrestling box art\" in Bing Images and taking result 1; the image was checked against the catalog title \"Pro Wrestling\" before use. Source page: https://www.mobygames.com/game/8057/pro-wrestling/covers/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Pro Wrestling box art",
+      "source": "https://www.mobygames.com/game/8057/pro-wrestling/covers/",
+      "title": "Pro Wrestling",
+      "type": "game-asset",
+      "url": "/artwork/clprowrestling.webp"
+    },
+    "clrayman": {
+      "assetSha256": "e6757aa3c89879019ac16c4b6dce4ce7bade2bf07502a01470511431916db7e3",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Rayman box art\" in Bing Images and taking result 2; the image was checked against the catalog title \"Rayman\" before use. Source page: https://www.video-games-museum.com/en/game/Rayman/31/2/12004/boxarts",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Rayman box art",
+      "source": "https://www.video-games-museum.com/en/game/Rayman/31/2/12004/boxarts",
+      "title": "Rayman",
+      "type": "game-asset",
+      "url": "/artwork/clrayman.webp"
+    },
+    "clmarioparty": {
+      "assetSha256": "e8bb6094d37f4fadad4be726d89d2719d828cf23d5b43453534aa47e855f888c",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Mario Party box art\" in Bing Images and taking result 3; the image was checked against the catalog title \"Mario Party\" before use. Source page: https://www.reddit.com/r/NintendoSwitchBoxArt/comments/o87mle/mario_party_superstar_cover_the_front_cover_is/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Mario Party box art",
+      "source": "https://www.reddit.com/r/NintendoSwitchBoxArt/comments/o87mle/mario_party_superstar_cover_the_front_cover_is/",
+      "title": "Mario Party",
+      "type": "game-asset",
+      "url": "/artwork/clmarioparty.webp"
+    },
+    "cldonkeykong": {
+      "assetSha256": "b60afc8b6d5c41f9c1056109d9e5170b06062b6f7ad763b059065d19f1437837",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Donkey Kong game screenshot\" in Bing Images and taking result 3; the image was checked against the catalog title \"Donkey Kong\" before use. Source page: https://www.mobygames.com/game/574/donkey-kong/screenshots/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Donkey Kong game screenshot",
+      "source": "https://www.mobygames.com/game/574/donkey-kong/screenshots/",
+      "title": "Donkey Kong",
+      "type": "game-asset",
+      "url": "/artwork/cldonkeykong.webp"
+    },
+    "cleaglercraftshadow": {
+      "assetSha256": "4e322d19f518e5161de654fda9af6e968e958063fe8cabc69d16b9b599675f74",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Eaglercraft Shadow game screenshot\" in Bing Images and taking result 1; the image was checked against the catalog title \"Eaglercraft Shadow\" before use. Source page: https://www.youtube.com/shorts/4wcz_nGSEyo",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Eaglercraft Shadow game screenshot",
+      "source": "https://www.youtube.com/shorts/4wcz_nGSEyo",
+      "title": "Eaglercraft Shadow",
+      "type": "game-asset",
+      "url": "/artwork/cleaglercraftshadow.webp"
+    },
+    "clknockknock": {
+      "assetSha256": "67207744ad97837e6a18917cc2c963a9330bcb9fbc5f6d78a199354338d3e4c8",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Knock Knock game screenshot\" in Bing Images and taking result 1; the image was checked against the catalog title \"Knock Knock\" before use. Source page: https://www.pushsquare.com/games/ps4/knock_knock",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Knock Knock game screenshot",
+      "source": "https://www.pushsquare.com/games/ps4/knock_knock",
+      "title": "Knock Knock",
+      "type": "game-asset",
+      "url": "/artwork/clknockknock.webp"
+    },
+    "clrosegold": {
+      "assetSha256": "fb9ebd4797c700f4230f9f2a609fe66e2b5a4412e023e2e9396e98a3791bad4e",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Rose Gold game screenshot\" in Bing Images and taking result 2; the image was checked against the catalog title \"Rose Gold\" before use. Source page: https://www.youtube.com/watch?v=KplsiKweIhA",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Rose Gold game screenshot",
+      "source": "https://www.youtube.com/watch?v=KplsiKweIhA",
+      "title": "Rose Gold",
+      "type": "game-asset",
+      "url": "/artwork/clrosegold.webp"
+    },
+    "cltag": {
+      "assetSha256": "3281ebe36cc9ae30457a60346c968092ad3796345a6f1c59d5ef02b1aeb628cf",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Tag game screenshot\" in Bing Images and taking result 1; the image was checked against the catalog title \"Tag\" before use. Source page: https://tag-game.en.softonic.com/chrome/extension",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Tag game screenshot",
+      "source": "https://tag-game.en.softonic.com/chrome/extension",
+      "title": "Tag",
+      "type": "game-asset",
+      "url": "/artwork/cltag.webp"
+    },
+    "clslimelabratory": {
+      "assetSha256": "f1e043bd1aa1f4d1dad6c129ea9ce722f614674b43e6a89405c0ded3672835d5",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Slime Laboratory game screenshot\" in Bing Images and taking result 2; the image was checked against the catalog title \"Slime Laboratory\" before use. Source page: https://gamingkool.com/slime-laboratory/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Slime Laboratory game screenshot",
+      "source": "https://gamingkool.com/slime-laboratory/",
+      "title": "Slime Laboratory",
+      "type": "game-asset",
+      "url": "/artwork/clslimelabratory.webp"
+    },
+    "winterolympics": {
+      "assetSha256": "21e3b612912676980b1c9746c8b534e74b26573972b451a47191f3ebb8abdde9",
+      "collectionMethod": "internet-image-search",
+      "identityEvidence": "Found by searching \"Winter Olympics game screenshot\" in Bing Images and taking result 1; the image was checked against the catalog title \"Winter Olympics\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/155966-winter-olympics",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "reviewStatus": "verified",
+      "searchQuery": "Winter Olympics game screenshot",
+      "source": "https://gamesdb.launchbox-app.com/games/images/155966-winter-olympics",
+      "title": "Winter Olympics",
+      "type": "game-asset",
+      "url": "/artwork/winterolympics.webp"
     }
   }
 }

@@ -460,6 +460,18 @@ try {
   const apps = await page.locator('main section[aria-label="Apps"] img.geegle-art').count();
   check('Apps navigation still renders its cards', apps >= 5, `${apps} app cards`);
 
+  // The owner-supplied Soundboard cover must be the card's real artwork.
+  const soundboard = page.locator('main section[aria-label="Apps"] img[src="/artwork/soundboard.webp"]');
+  await page.waitForTimeout(600);
+  const soundboardState = await soundboard.first().evaluate(
+    (image) => ({ complete: image.complete, width: image.naturalWidth, visible: Number(getComputedStyle(image).opacity) })
+  ).catch(() => null);
+  check(
+    'Soundboard card displays the supplied cover artwork',
+    (await soundboard.count()) === 1 && soundboardState?.complete && soundboardState.width > 0 && soundboardState.visible === 1,
+    JSON.stringify(soundboardState)
+  );
+
   // ── Collapsible category sections ──────────────────────────────────────
   await page.getByRole('button', { name: /^games$/i }).click();
   await page.waitForTimeout(400);

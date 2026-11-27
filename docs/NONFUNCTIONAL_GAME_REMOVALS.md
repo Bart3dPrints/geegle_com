@@ -113,3 +113,16 @@ not hold. They stay in the catalog without artwork.
 | `clfnaf4halloween` | FNAF 4 Halloween | blank-after-observation | Still at its own start gate or loading state ("Downloading... 0% Extracting... 0%") when the window ended. |
 | `clfnafanimatronics` | FNAF Animatronics | blank-after-observation | The build asset returns HTTP 404; the game files are missing at the source. |
 
+
+## Run 1 (2026-11-27): no removals
+
+Run 1 removed no catalog entries. Nineteen previously unresolved titles gained
+verified artwork through deeper image search, and the remaining 31 were searched
+three times each (exact title, "box art", "game screenshot") without a match
+close enough to use. Missing artwork is not evidence that a game is broken.
+
+No wrapper was classified as nonfunctional in this run, so no entry was removed
+from search results, categories, favorites or recently played listings, and no
+cloud-save record was touched. The local HTML capture fallback for the 31
+titles remains outstanding; the seven-condition protocol above still applies
+before any future removal.
