@@ -2795,6 +2795,12 @@
     "status": "rejected",
     "title": "Factory Balls 2"
   },
+  "clfactoryballs3": {
+    "reason": "Play overlay on a blank page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Factory Balls 3"
+  },
   "clfallguys": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -3665,6 +3671,12 @@
     "status": "verified",
     "title": "Gun Spin"
   },
+  "clgunblood": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Gunblood"
+  },
   "clguncho": {
     "reason": "Captured title screen shows the actual game.",
     "reviewed": "2026-11-27",
@@ -3700,6 +3712,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Gun Night"
+  },
+  "clgxclient": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "GX Client"
   },
   "clgymstack": {
     "reason": "Captured title screen shows the actual game.",
@@ -4409,6 +4427,24 @@
     "status": "rejected",
     "title": "LEGO Batman 2: Superheroes"
   },
+  "cllegoindianajones": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "LEGO Indiana Jones"
+  },
+  "cllegoninjago": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "LEGO Ninjago"
+  },
+  "clletitconsume": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Let It Consume"
+  },
   "clleveldevil": {
     "reason": "Placeholder image literally labelled \"Icon\".",
     "reviewed": "2026-11-27",
@@ -4421,11 +4457,47 @@
     "status": "rejected",
     "title": "Lever Warriors"
   },
+  "cllightitup": {
+    "reason": "Near-empty frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Light It Up"
+  },
+  "cllittlealchemy2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Little Alchemy 2"
+  },
+  "cllockthedoor": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Lock the Door"
+  },
+  "cllosangelesshark": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Los Angeles Shark"
+  },
+  "cllse": {
+    "reason": "Placeholder video player, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "LSE"
+  },
   "clluckyblocks": {
     "reason": "Portal logo (Unblocked Games G+), not the game.",
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "Lucky Blocks"
+  },
+  "cllumberobby": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Lumber Obby"
   },
   "cllummm": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
@@ -4433,11 +4505,65 @@
     "status": "rejected",
     "title": "Lummm"
   },
+  "clmadalinstuntcars": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madalin Stunt Cars"
+  },
   "clmadalinstuntcarsmultiplayerfixed": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Madalin Stunt Cars Multiplayer"
+  },
+  "clmadnessaccelerant": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madness Accelerant"
+  },
+  "clmadnesscombatdefense": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madness Combat Defense"
+  },
+  "clmadnesscombatnexus": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madness Combat Nexus"
+  },
+  "clmadnesshydraulic": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madness Hydraulic"
+  },
+  "clmadnessinteractive": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madness Interactive"
+  },
+  "clmadnessretaliation": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madness Retaliation"
+  },
+  "clmadnesss2010": {
+    "reason": "Near-black frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Madness 2010"
+  },
+  "clmadskillsmotocross2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mad Skills Motocross 2"
   },
   "clmadstick": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -4445,17 +4571,101 @@
     "status": "verified",
     "title": "Mad Stick"
   },
+  "clmadstuntcars2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mad Stunt Cars 2"
+  },
+  "clmagetoweridle": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mage Tower Idle"
+  },
   "clmagictiles3": {
     "reason": "Logo belongs to an unrelated music company.",
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "Magic Tiles 3"
   },
+  "clmami": {
+    "reason": "Text-only mod intro, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Mami"
+  },
+  "clmanagod": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Managod"
+  },
+  "clmarbleracer-1": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Marble Racer"
+  },
+  "clmari0": {
+    "reason": "Loading text screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Mari0"
+  },
+  "clmario64webgl": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario 64 WebGL"
+  },
+  "clmariocombat": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario Combat"
+  },
+  "clmariolostlevels": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario Lost Levels"
+  },
   "clmariomadness": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Mario Madness"
+  },
+  "clmarvelvscapcomps1": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Marvel vs Capcom (PS1)"
+  },
+  "clmarvelvsstreetfighterjp": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Marvel vs Street Fighter JP"
+  },
+  "clmaskedforcesunlimited": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Masked Forces Unlimited"
+  },
+  "clmastermindworldconquerer": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mastermind World Conquerer"
+  },
+  "clmatrixrampage": {
+    "reason": "Loading bar with no game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Matrix Rampage"
   },
   "clmattv2": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -4468,6 +4678,150 @@
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "MCFP SF BHD"
+  },
+  "clmcraerally": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "McRae Rally"
+  },
+  "clmeatboyflash": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Meat Boy (Flash)"
+  },
+  "clmedievalshark": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Medieval Shark"
+  },
+  "clmedievil": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "MediEvil"
+  },
+  "clmegacd": {
+    "reason": "Non-identifying sketch, not this title's artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Megacd"
+  },
+  "clmegachess": {
+    "reason": "Scattered pieces with no board; not recognizable.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Mega Chess"
+  },
+  "clmegaclient": {
+    "reason": "License agreement page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Mega Client"
+  },
+  "clmegaman8": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Mega Man 8"
+  },
+  "clmegamanbasscftf": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man & Bass CFTF"
+  },
+  "clmegamanlegends": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Mega Man Legends"
+  },
+  "clmegamanlegends2": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Mega Man Legends 2"
+  },
+  "clmegamanx4": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Mega Man X4"
+  },
+  "clmegamanx5": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Mega Man X5"
+  },
+  "clmelonplayground": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Melon Playground"
+  },
+  "clmeowuwu": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Meowuwu"
+  },
+  "clmergeroundracers": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Merge Round Racers"
+  },
+  "clmetroidprimehunters": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Metroid Prime Hunters"
+  },
+  "clmiamishark": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Miami Shark"
+  },
+  "clmicrolife": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Micro Life"
+  },
+  "clmightyknight": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mighty Knight"
+  },
+  "clmightyknight2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mighty Knight 2"
+  },
+  "clminceraft-i-notmine_v6-1": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Minceraft I Not Mine V6"
+  },
+  "clmindwave": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Mind Wave"
+  },
+  "clminecaves": {
+    "reason": "Portal logo (KirO), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Mine Caves"
   },
   "clminecraftshooter": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
