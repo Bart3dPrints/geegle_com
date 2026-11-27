@@ -8585,11 +8585,53 @@
     "status": "verified",
     "title": "Mmsf 3 Ba"
   },
+  "clmmsf3rj": {
+    "reason": "Mega Man Star Force 3 Red Joker box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mmsf 3 Rj"
+  },
+  "clmmsfd": {
+    "reason": "Mega Man Star Force 2 Zerker x Saurian banner art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mmsfd"
+  },
+  "clmmsfl": {
+    "reason": "MSFL football gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mmsfl"
+  },
+  "clmmsfp": {
+    "reason": "MovieStarPlanet key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mmsfp"
+  },
   "clmmwilywars": {
     "reason": "Mega Man: The Wily Wars art.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Mm Wily Wars"
+  },
+  "clmo64-1": {
+    "reason": "Super Mario 64 gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mo 64"
+  },
+  "clmobcontrolhtml5": {
+    "reason": "Mob Control key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mob Control Html 5"
+  },
+  "clmobiusrevolution": {
+    "reason": "Dance Dance Revolution Mobius key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mobius Revolution"
   },
   "clmoemon-emerald-vanilla---v1-1-0": {
     "reason": "Moemon Emerald Version box art.",
@@ -8632,6 +8674,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Monster Derby"
+  },
+  "clmonsterswing": {
+    "reason": "Results were Monster Hunter Stories 2 art and a watermarked screen, not this title.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
   },
   "clmonstertracks": {
     "reason": "Monster Tracks key art; result 1 carried a site credit.",
@@ -8704,6 +8752,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Mortal Kombat Advance"
+  },
+  "clmortkom4": {
+    "reason": "Mortal Kombat 4 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mort Kom 4"
   },
   "clmotherload": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8939,6 +8993,12 @@
     "status": "verified",
     "title": "New Super Mario Bros"
   },
+  "clnewsupermarioworld2aroundtheworld": {
+    "reason": "New Super Mario World 2: Around The World box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "New Super Mario World 2"
+  },
   "clnewyorkshark": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -9094,6 +9154,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Nitrome Must Die"
+  },
+  "clnomoregameasdsadfagfggdfs": {
+    "reason": "No More Games scene art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "No More Games DS"
   },
   "clnoobminer": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -10331,6 +10397,12 @@
     "status": "verified",
     "title": "Pokemon Emerald Crest"
   },
+  "clpokemonemeraldimperium": {
+    "reason": "Pokemon Emerald Imperium box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Emerald Imperium"
+  },
   "clpokemonemeraldkaizo": {
     "reason": "Pokemon Emerald Kaizo box art.",
     "reviewed": "2026-11-27",
@@ -10361,11 +10433,23 @@
     "status": "verified",
     "title": "Pokemon Energized Emerald"
   },
+  "clpokemonevolvedsfdgsdfs": {
+    "reason": "Pokemon Evolved box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Evolved"
+  },
   "clpokemonfirered": {
     "reason": "Pokemon FireRed Version logo art.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pokemon FireRed"
+  },
+  "clpokemonfireredandleafgreenplusedition": {
+    "reason": "Pokemon FireRed and LeafGreen Plus Edition art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Firered and Leafgreen Plus Edition"
   },
   "clpokemonfireredrandomized": {
     "reason": "FireRed Extreme Randomizer logo art.",
@@ -10991,6 +11075,12 @@
     "status": "verified",
     "title": "Processor Tycoon"
   },
+  "clprofessorlaytonandthecuriousvillage": {
+    "reason": "Professor Layton and the Curious Village DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Professor Layton and the Curious Village"
+  },
   "clprowrestling": {
     "reason": "Results were Ultra Pro Wrestling and Pro Wrestling Action mobile games, not the NES title.",
     "reviewed": "2026-11-27",
@@ -11374,6 +11464,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Red Tie Runner"
+  },
+  "clredvsblue2": {
+    "reason": "Red vs Blue art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Red vs Blue 2"
+  },
+  "clredvsbluewar": {
+    "reason": "Red vs Blue Zone Wars key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Red vs Blue War"
   },
   "clreignofcentipede": {
     "reason": "Reign of Centipede gameplay.",
@@ -11789,17 +11891,41 @@
     "status": "verified",
     "title": "Sandboxels"
   },
+  "clsandsofthecoliseum": {
+    "reason": "Sands of the Coliseum key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sands of the Coliseum"
+  },
+  "clsandstone-1": {
+    "reason": "Sandstone castle map with its interface.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sandstone"
+  },
   "clsandtris": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Sandtris"
   },
+  "clsantarun": {
+    "reason": "Santa Run key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Santa Run"
+  },
   "clsanty": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Santy"
+  },
+  "clsaszombieassault2": {
+    "reason": "SAS: Zombie Assault 2 cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SAS Zombie Assault 2"
   },
   "clsatryn": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -11813,6 +11939,18 @@
     "status": "verified",
     "title": "Saul Goodman Run"
   },
+  "clsausageflip": {
+    "reason": "Sausage Flip logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sausage Flip"
+  },
+  "clsayorisnotebook": {
+    "reason": "Sayori's Notebook art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sayori's Notebook"
+  },
   "clscalethedepths": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -11825,11 +11963,65 @@
     "status": "verified",
     "title": "Scampton the Great Fight"
   },
+  "clscarletandviolet": {
+    "reason": "Pokemon Scarlet and Violet box art pair.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Scarlet and Violet"
+  },
+  "clscarletshift": {
+    "reason": "Scarlet Shift title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Scarlet Shift"
+  },
+  "clscarymazegame": {
+    "reason": "The Original Scary Maze Game title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Scary Maze Game"
+  },
+  "clscaryshawarma": {
+    "reason": "Scary Shawarma Shop key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Scary Shawarma"
+  },
   "clscaryteacher3d": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Scary Teacher 3D"
+  },
+  "clschoolboyrunaway": {
+    "reason": "Schoolboy Escape: Runaway key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Schoolboy Runaway"
+  },
+  "clscrapmetal3": {
+    "reason": "Scrap Metal 3 Infernal Trap key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Scrap Metal 3"
+  },
+  "clscrapyarddog": {
+    "reason": "Scrapyard Dog Atari 7800 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Scrap Yard Dog"
+  },
+  "clscratchoptions": {
+    "reason": "Scratch project options screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Scratch Options"
+  },
+  "clscribblenauts": {
+    "reason": "Scribblenauts Unlimited box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Scribblenauts"
   },
   "clscubabear": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -11837,11 +12029,47 @@
     "status": "verified",
     "title": "Scuba Bear"
   },
+  "clsd-thewar": {
+    "reason": "Results were a Wargame: Red Dragon thumbnail and SD Gundam games, not this title.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
+  "clsdf": {
+    "reason": "SDF logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SDF"
+  },
   "clseamongrel": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Sea Mongrel"
+  },
+  "clsecretofmana": {
+    "reason": "Secret of Mana logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Secret of Mana"
+  },
+  "clsega2gg": {
+    "reason": "Sonic 2 Game Gear box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sega 2 GG"
+  },
+  "clsegasonicthehedgehog": {
+    "reason": "SegaSonic the Hedgehog key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SegaSonic the Hedgehog"
+  },
+  "clself": {
+    "reason": "Refind Self key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Self"
   },
   "clsentryfortress": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -11855,11 +12083,41 @@
     "status": "verified",
     "title": "Sere Nitro Ve"
   },
+  "clserioussamadvance": {
+    "reason": "Serious Sam Advance GBA box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Serious Sam Advance"
+  },
+  "clservingupmadness": {
+    "reason": "Serving Up Madness title menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Serving Up Madness"
+  },
+  "clsevendays": {
+    "reason": "7 Days to Die art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Seven Days"
+  },
+  "clsfk": {
+    "reason": "SFK board game screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SFK"
+  },
   "clsfk2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "SFK 2"
+  },
+  "clsfklaststand": {
+    "reason": "The Last Stand art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SFK Last Stand"
   },
   "clsfkleague": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -11867,11 +12125,107 @@
     "status": "verified",
     "title": "SFK League"
   },
+  "clshadowcourier": {
+    "reason": "Shadow Courier gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Shadow Courier"
+  },
+  "clshadowdancer": {
+    "reason": "Shadow Dancer Genesis box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Shadow Dancer"
+  },
+  "clshadowdancersecret": {
+    "reason": "Shadow Dancer: The Secret of Shinobi box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Shadow Dancer Secret"
+  },
   "clshaggy--1": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Shaggy"
+  },
+  "clshantaegb": {
+    "reason": "Shantae Game Boy Color box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Shantae (GB)"
+  },
+  "clshapetransform": {
+    "reason": "Shape Transform Race logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Shape Transform"
+  },
+  "clshc1": {
+    "reason": "Stronghold Crusader castle gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SHC 1"
+  },
+  "clshc2": {
+    "reason": "Stronghold 2 castle gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SHC 2"
+  },
+  "clshc3": {
+    "reason": "Silent Hill 3 PlayStation 2 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SHC 3"
+  },
+  "clshift": {
+    "reason": "Shift Legacy Collection art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Shift"
+  },
+  "clshift2": {
+    "reason": "Shift 2 Unleashed key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Shift 2"
+  },
+  "clshift3": {
+    "reason": "Shift 3 menu screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Shift 3"
+  },
+  "clshiftatmidnight": {
+    "reason": "Shift at Midnight key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Shift at Midnight"
+  },
+  "clshinmegamitenseidevilsurvivor": {
+    "reason": "Shin Megami Tensei: Devil Survivor Overclocked art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Shin Megami Tensei: Devil Survivor"
+  },
+  "clshinobi": {
+    "reason": "Shinobi key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Shinobi"
+  },
+  "clshinobi3": {
+    "reason": "Shinobi III Genesis box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Shinobi 3"
+  },
+  "clshinobirevenge": {
+    "reason": "Shinobi Master System box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Shinobi Revenge"
   },
   "clshoppingcarthero": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -11891,11 +12245,29 @@
     "status": "verified",
     "title": "Shot Out 4"
   },
+  "clshredmill": {
+    "reason": "Shred Mill keyboard screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Shred Mill"
+  },
+  "clshrek-2": {
+    "reason": "Shrek 2 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Shrek 2"
+  },
   "clshrubnaut": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Shrub Naut"
+  },
+  "clshwultimatem": {
+    "reason": "Ultimatum Game screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SH Ultimate M"
   },
   "clsideeffects": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -11903,11 +12275,29 @@
     "status": "verified",
     "title": "Side Effects"
   },
+  "clsidepocket": {
+    "reason": "Side Pocket SNES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Side Pocket"
+  },
   "clsierra7": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Sierra 7"
+  },
+  "clsilenthill": {
+    "reason": "Silent Hill f key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Silent Hill"
+  },
+  "clsilenthillalt": {
+    "reason": "Silent Hill series art collage, kept distinct from the Silent Hill f entry.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Silent Hill (Alt)"
   },
   "clsilk": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -11915,17 +12305,65 @@
     "status": "verified",
     "title": "Silk"
   },
+  "clsilkmelody": {
+    "reason": "Silk Melody title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Silk Melody"
+  },
   "clsiloshowdow": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Silo Showdown"
   },
+  "clsilver": {
+    "reason": "Pokemon Silver Game Boy Color box art, kept distinct from the plain box.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Silver"
+  },
+  "clsimcity64": {
+    "reason": "SimCity 2000 Nintendo 64 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SimCity 64"
+  },
+  "clsimpsonsarcade": {
+    "reason": "The Simpsons Arcade Game logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Simpsons Arcade"
+  },
+  "clsinglefile": {
+    "reason": "Single File logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Single File"
+  },
   "clsixwaystodie": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Six Ways to Die"
+  },
+  "clskateit": {
+    "reason": "Skate It key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Skate It"
+  },
+  "clskateordie": {
+    "reason": "Skate or Die box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Skate or Die"
+  },
+  "clskibididibidygyattohiorizzingallovertheplacestillwatermang": {
+    "reason": "Stillwater game art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Skibi Didi Bid Yg Yat to Hi or Izz in Gall Over the Place Stillwater Mango Theory Fem Boy Drool"
   },
   "clskibidiinthebackrooms": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -11944,6 +12382,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Skinwalker"
+  },
+  "clskong": {
+    "reason": "Skong key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Skong"
+  },
+  "clskyfactory": {
+    "reason": "Sky Factory key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sky Factory"
   },
   "clskyrace-3d": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -11969,6 +12419,24 @@
     "status": "verified",
     "title": "Skywire 2"
   },
+  "clslalomnes": {
+    "reason": "Slalom NES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Slalom (NES)"
+  },
+  "clslenderman": {
+    "reason": "Slender figure art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Slender Man"
+  },
+  "clslendytubbies": {
+    "reason": "Slendytubbies 3 HD art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Slendytubbies"
+  },
   "clsliceitall": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -11980,6 +12448,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Slide in the Woods"
+  },
+  "clslimelabratory": {
+    "reason": "Results were Slime Laboratory 2 and 3 art, not the original title.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
+  "clslipways": {
+    "reason": "Slipways key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Slipways"
   },
   "clslitherio": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -12005,11 +12485,23 @@
     "status": "verified",
     "title": "Slope 3"
   },
+  "clslopeplus": {
+    "reason": "Slope Plus title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Slope Plus"
+  },
   "clslotornot": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Slot or Not"
+  },
+  "clslowroads": {
+    "reason": "SlowRoads.io logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Slow Roads"
   },
   "clsm63redux": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -12017,17 +12509,71 @@
     "status": "verified",
     "title": "Super Mario 63 Redux"
   },
+  "clsm64greenstars": {
+    "reason": "SM64 Green Stars gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SM64: Green Stars"
+  },
   "clsm64hiddenstars": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "SM64: Hidden Stars"
   },
+  "clsm64lastimpact": {
+    "reason": "SM64 Last Impact box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SM64: Last Impact"
+  },
+  "clsm64liminaldream": {
+    "reason": "SM64 Liminal Dream art with its title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SM64: Liminal Dream"
+  },
+  "clsm64oot": {
+    "reason": "SM64 OOT box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SM64: OOT"
+  },
+  "clsm64sapphire": {
+    "reason": "SM64 Sapphire box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SM64: Sapphire"
+  },
+  "clsmadvance2": {
+    "reason": "Super Mario Advance 2 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario Advance 2"
+  },
+  "clsmadvance3": {
+    "reason": "Yoshi's Island: Super Mario Advance 3 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario Advance 3"
+  },
+  "clsmashkarts": {
+    "reason": "Smash Karts key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Smash Karts"
+  },
   "clsmashkartsworking": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Smash Karts (Working)"
+  },
+  "clsmashremix": {
+    "reason": "Smash Remix Update 2.0.0 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Smash Remix"
   },
   "clsmbcrossover": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -12101,11 +12647,29 @@
     "status": "verified",
     "title": "Snowboard Obby"
   },
+  "clsnowrid": {
+    "reason": "Snow Rider 3D logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Snowrid"
+  },
+  "clsnowrideee": {
+    "reason": "Snow Rider 3D title art, kept distinct from the arcade entry.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Snow Ride Ee"
+  },
   "clsnowrider": {
     "reason": "Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Snow Rider"
+  },
+  "clsnowridergoodygumdrops": {
+    "reason": "Snow Rider Santa art, kept distinct from Snow Rider 3D.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Snow Rider Goody Gumdrops"
   },
   "clsnowriderrrr": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -12839,6 +13403,12 @@
     "status": "verified",
     "title": "Territory War 3"
   },
+  "clthanksforremindingmeihadtofixthis": {
+    "reason": "Results were a Steam developer console, a streamer photo and a Legion screen, not artwork for this entry.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
   "cltheclassroom": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -13151,6 +13721,12 @@
     "status": "verified",
     "title": "Ultimate Car Driving Simulator"
   },
+  "clumstickmangameidkiforgor": {
+    "reason": "Stickman gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Umstickman Game (I Forgot)"
+  },
   "cluncannycatgolf": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
@@ -13216,6 +13792,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Cluster Rush"
+  },
+  "cluvuvwevwevweonyetenvewveugwemubwemossas": {
+    "reason": "Uvuvwevwevwe title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Uvuvwevwevwe Onyetenvewve Ugwemubwem Ossas"
   },
   "cluwuclient": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -13571,6 +14153,12 @@
     "status": "verified",
     "title": "Minecraft Tower Defense"
   },
+  "nazi-zombies": {
+    "reason": "Nazi Zombies title screen with gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Nazi Zombies Portable"
+  },
   "pvzm": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
@@ -13588,6 +14176,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "R.E.P.O"
+  },
+  "riddleuneversityfix": {
+    "reason": "Riddle University gameplay with its logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Riddle University Fix"
   },
   "smash-hit-ripoff": {
     "reason": "Captured game screen shows the actual title.",

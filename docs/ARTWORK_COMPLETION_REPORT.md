@@ -15,24 +15,24 @@ Identity evidence and reuse basis are recorded separately on every record. Captu
 | Measure | Count |
 | --- | --- |
 | Catalog rows (unique IDs) | 2,710 |
-| Verified artwork | 2,210 |
+| Verified artwork | 2,305 |
 | Awaiting review | 0 |
-| Rejected (removed from the UI, queued for a new capture) | 59 |
+| Rejected (removed from the UI, queued for a new capture) | 63 |
 | Blocked | 0 |
 | Reopened after the blocked classification was rejected | 1,676 |
 | Render investigations from the earlier long-observation pass (that protocol was cancelled) | 590 |
 | ... that rendered an authentic frame | 551 |
 | ... that stopped at their own start gate | 6 |
 | ... that stayed blank for the whole observation | 26 |
-| Remaining unprocessed | 500 |
-| Actual verified coverage | 81.5% |
-| Total optimized asset size (verified images) | 56946 KiB |
+| Remaining unprocessed | 405 |
+| Actual verified coverage | 85.1% |
+| Total optimized asset size (verified images) | 59889 KiB |
 
 ## Verified artwork by acquisition method
 
 | Method | Count |
 | --- | --- |
-| game-asset | 1149 |
+| game-asset | 1244 |
 | gameplay-screenshot | 962 |
 | official-icon | 72 |
 | official-og | 27 |
@@ -84,7 +84,7 @@ No entry is left in a blocked state: the whole 1,676-entry blocked manifest was 
 The next unprocessed batch starts at `cladarkroom`:
 
 ```
-cladarkroom,clb3313v102,clblackout,clbloonspp3,clbloonstd2,clboxinglive2,clburritobison2,clclover,clcotlk,clcreepyinternetstories,clcvooc,cldonkeykong,cldoomps,cleaglercraftshadow,clenduro,clfamilyguycorrupted,clff2ws,clffaf,clfinalfantasy,clfinalfantasyviid2,clfinalfantasyviid3,clfireemblem,clfocus,clgameandwatchcollection,clgrannycreepy,clhighstakes,clicantbelievegoogleflaggedmeforthenameofthefilelol,clinsomniary,clknockknock,cllegostarwarsgba,clloz1,clmaddenfootball,clmami,clmariominusrabbids,clmarioparty,clmegaman,clmegamanbn6cf,clmeowuwu,clmmsf3rj,clmmsfd,clmmsfl,clmmsfp,clmo64-1,clmobcontrolhtml5,clmobiusrevolution,clmonsterswing,clmortkom4,clnewsupermarioworld2aroundtheworld,clnomoregameasdsadfagfggdfs,clnovaclient
+cladarkroom,clb3313v102,clblackout,clbloonspp3,clbloonstd2,clboxinglive2,clburritobison2,clclover,clcotlk,clcreepyinternetstories,clcvooc,cldonkeykong,cldoomps,cleaglercraftshadow,clenduro,clfamilyguycorrupted,clff2ws,clffaf,clfinalfantasy,clfinalfantasyviid2,clfinalfantasyviid3,clfireemblem,clfocus,clgameandwatchcollection,clgrannycreepy,clhighstakes,clicantbelievegoogleflaggedmeforthenameofthefilelol,clinsomniary,clknockknock,cllegostarwarsgba,clloz1,clmaddenfootball,clmami,clmariominusrabbids,clmarioparty,clmegaman,clmegamanbn6cf,clmeowuwu,clmonsterswing,clnovaclient,cloddfuture,cloutnumbered,clpersona,clpint,clpokered,clpokerowe,clprowrestling,clrayman,clrosegold,clsd-thewar
 ```
 
 Resume commands:

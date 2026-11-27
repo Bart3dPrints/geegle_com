@@ -186,5 +186,21 @@
   "clicantbelievegoogleflaggedmeforthenameofthefilelol": {
     "reason": "Results were file-verification tutorial thumbnails, not artwork for this entry.",
     "recorded": "2026-11-27"
+  },
+  "clmonsterswing": {
+    "reason": "Results were Monster Hunter Stories 2 art and a watermarked screen, not this title.",
+    "recorded": "2026-11-27"
+  },
+  "clthanksforremindingmeihadtofixthis": {
+    "reason": "Results were a Steam developer console, a streamer photo and a Legion screen, not artwork for this entry.",
+    "recorded": "2026-11-27"
+  },
+  "clsd-thewar": {
+    "reason": "Results were a Wargame: Red Dragon thumbnail and SD Gundam games, not this title.",
+    "recorded": "2026-11-27"
+  },
+  "clslimelabratory": {
+    "reason": "Results were Slime Laboratory 2 and 3 art, not the original title.",
+    "recorded": "2026-11-27"
   }
 }
