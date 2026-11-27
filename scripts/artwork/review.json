@@ -917,6 +917,12 @@
     "status": "verified",
     "title": "B 3313"
   },
+  "clb3313unabandoneda2": {
+    "reason": "B3313 Unabandoned title screen with its version label.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "B 3313 Unabandoned A2"
+  },
   "clbabeltower": {
     "reason": "Captured frame shows the actual game with identifying title or gameplay.",
     "reviewed": "2026-11-26",
@@ -1787,6 +1793,12 @@
     "status": "verified",
     "title": "Bounty of One"
   },
+  "clbowlalt": {
+    "reason": "Bowlalt's own bowling key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Bowlalt"
+  },
   "clbowmaster": {
     "reason": "Captured the Bowmaster character-select screen (YOU vs opponent).",
     "reviewed": "2026-11-27",
@@ -2369,6 +2381,12 @@
     "status": "verified",
     "title": "Clash of Vikings"
   },
+  "clclaymore": {
+    "reason": "Claymore HD key art with the character; results 1 and 2 carried platform and store branding.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Claymore"
+  },
   "clclayuncraft": {
     "reason": "Every qualifying frame carried a consent, age, profanity, legal or ad-block dialog over the content.",
     "reviewed": "2026-11-27",
@@ -2382,15 +2400,15 @@
     "title": "Cleanup IO"
   },
   "clclearvision": {
-    "reason": "Every qualifying frame was a publisher/engine splash or portal interstitial, not the game's own screen.",
+    "reason": "Clear Vision title art with the scope and stick figure.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Clear Vision"
   },
   "clclearvision2": {
-    "reason": "Every qualifying frame was still a loading screen (progress bar or \"Loading n/m\"), so nothing finished could be captured in the 12-second window.",
+    "reason": "Clear Vision 2 title art with the scope and figures.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Clear Vision 2"
   },
   "clclearvision3": {
@@ -2399,10 +2417,22 @@
     "status": "verified",
     "title": "Clear Vision 3"
   },
-  "clclmadnessambulation": {
-    "reason": "Every qualifying frame was an error page (\"Something went wrong\", a 404 loader), which is never acceptable artwork.",
+  "clclearvision4": {
+    "reason": "Clear Vision 4 key art with the sniper scope.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Clear Vision 4"
+  },
+  "clclearvision5": {
+    "reason": "Clear Vision 5 title art with the scope.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Clear Vision 5"
+  },
+  "clclmadnessambulation": {
+    "reason": "Madness Ambulation title art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Madness Ambulation"
   },
   "clclubbytheseal": {
@@ -2411,6 +2441,12 @@
     "status": "verified",
     "title": "Club by the Seal"
   },
+  "clclucluland": {
+    "reason": "Clu Clu Land box art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Clu Clu Land"
+  },
   "clclusterrush": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -2418,16 +2454,64 @@
     "title": "Cluster Rush"
   },
   "clcoalllcdemo": {
-    "reason": "The fetched asset is a generic engine/developer mascot, not identifiable artwork for Coal LLC Demo.",
+    "reason": "Coal LLC key art with its characters.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Coal LLC Demo"
   },
-  "clcodercraft": {
-    "reason": "Every qualifying frame carried a consent, age, profanity, legal or ad-block dialog over the content.",
+  "clcod4": {
+    "reason": "Call of Duty 4: Modern Warfare key art with the logo.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Call of Duty 4"
+  },
+  "clcodblackopp": {
+    "reason": "Call of Duty: Black Ops III key art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "COD Black Ops"
+  },
+  "clcoddefiance": {
+    "reason": "Defiance key art with its soldiers.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "COD Defiance"
+  },
+  "clcodenamegordon": {
+    "reason": "Codename: Gordon key art with Gordon and the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Codename Gordon"
+  },
+  "clcodeorgbutoffline": {
+    "reason": "Code.org Hour of Code puzzle screen with its game area.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Code.org But Offline"
+  },
+  "clcodercraft": {
+    "reason": "Code Craft in-game screen with its title and HUD; result 2 was the separate CodeCrafters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Coder Craft"
+  },
+  "clcodmodernwarfare": {
+    "reason": "Call of Duty: Modern Warfare key art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "COD Modern Warfare"
+  },
+  "clcodworldatwar": {
+    "reason": "Call of Duty: World at War key art with the soldier.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "COD World at War"
+  },
+  "clcoffeemaker": {
+    "reason": "Coffee Maker game scene with its machines.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Coffee Maker"
   },
   "clcoldfront": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2447,17 +2531,53 @@
     "status": "verified",
     "title": "Colorbox Mustard"
   },
+  "clcolorburst3d": {
+    "reason": "Color Burst 3D title art with its hand and blocks.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Color Burst 3D"
+  },
   "clcolormatch": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Color Match"
   },
+  "clcolorwatersort3d": {
+    "reason": "Color Water Sort 3D title art with its tubes; result 2 carried a gaming-site credit.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Color Water Sort 3D"
+  },
+  "clcombopool": {
+    "reason": "Combo Pool logo with its billiard balls.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Combo Pool"
+  },
   "clcommandandconquer": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Command & Conquer"
+  },
+  "clcommanderkeen4": {
+    "reason": "Commander Keen 4 title screen with Goodbye Galaxy.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Commander Keen 4"
+  },
+  "clcommanderkeen5": {
+    "reason": "Commander Keen 5 box art with The Armageddon Machine.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Commander Keen 5"
+  },
+  "clcommanderkeen6": {
+    "reason": "Commander Keen 6 box art with Aliens Ate My Babysitter.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Commander Keen 6"
   },
   "clconfrontingurself": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2471,6 +2591,24 @@
     "status": "verified",
     "title": "Confronting Yourself"
   },
+  "clconkersbadfurday": {
+    "reason": "Conker's Bad Fur Day box art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Conker's Bad Fur Day"
+  },
+  "clcontra": {
+    "reason": "Contra title screen montage from the NES game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Contra"
+  },
+  "clcontra3": {
+    "reason": "Contra III: The Alien Wars key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Contra 3"
+  },
   "clcookie-clicker": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -2483,17 +2621,47 @@
     "status": "verified",
     "title": "Cookie Clicker"
   },
-  "clcookieclickermodmenu": {
-    "reason": "Every qualifying frame was still a loading screen (progress bar or \"Loading n/m\"), so nothing finished could be captured in the 12-second window.",
+  "clcookieclickergood": {
+    "reason": "Cookie Clicker gameplay with its cookie and store panel.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Cookie Clicker Good"
+  },
+  "clcookieclickermodmenu": {
+    "reason": "Cookie Clicker gameplay with its mod-menu panels; result 1 was a Mod Review video banner.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Cookie Clicker Mod Menu"
+  },
+  "clcookingmama2": {
+    "reason": "Cooking Mama 2 box art with Dinner with Friends.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Cooking Mama 2"
+  },
+  "clcookingmama3": {
+    "reason": "Cooking Mama 3 box art with Shop & Chop.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Cooking Mama 3"
   },
   "clcoreball": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Core Ball"
+  },
+  "clcoryinthehouse": {
+    "reason": "Cory in the House DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Cory in the House"
+  },
+  "clcountmastersstickmangames": {
+    "reason": "Count Masters Stickman Games key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Count Masters Stickman"
   },
   "clcoverorange": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2544,9 +2712,9 @@
     "title": "Cover Orange Players Pack 2"
   },
   "clcoverorangeplayerspack3-1": {
-    "reason": "Every qualifying frame was an error page (\"Something went wrong\"), which is never acceptable artwork.",
+    "reason": "Cover Orange Players Pack 3 menu with its title and levels.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Cover Orange Players Pack 3"
   },
   "clcrankit": {
@@ -2562,27 +2730,39 @@
     "title": "Crankit!"
   },
   "clcrash2": {
-    "reason": "Every qualifying frame was still a loading screen (progress bar or \"Loading n/m\"), so nothing finished could be captured in the 12-second window.",
+    "reason": "Crash 2: Cortex Strikes Back box art without the platform band.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Crash 2"
   },
   "clcrash3": {
-    "reason": "Every qualifying frame was still a loading screen (progress bar or \"Loading n/m\"), so nothing finished could be captured in the 12-second window.",
+    "reason": "Crash Bandicoot: Warped title art with Crash.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Crash 3"
   },
   "clcrashbandicoot--1": {
-    "reason": "Every qualifying frame was still a loading screen (progress bar or \"Loading n/m\"), so nothing finished could be captured in the 12-second window.",
+    "reason": "Crash Bandicoot 4: It's About Time key art.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Crash Bandicoot"
   },
-  "clcrazycars": {
-    "reason": "Every qualifying frame carried a consent, age, profanity, legal or ad-block dialog over the content.",
+  "clcrashbandicoot2": {
+    "reason": "Crash Bandicoot: The Huge Adventure GBA cover art.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Crash Bandicoot: The Huge Adventure"
+  },
+  "clcrashteamracing": {
+    "reason": "Crash Team Racing Nitro-Fueled key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Crash Team Racing"
+  },
+  "clcrazycars": {
+    "reason": "Crazy Cars logo art with its car; result 1 carried a site watermark.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Crazy Cars"
   },
   "clcrazycattle3d": {
@@ -2597,6 +2777,18 @@
     "status": "verified",
     "title": "Crazy Chicken 3D"
   },
+  "clcrazyclimber": {
+    "reason": "Crazy Climber arcade screen with its logo and HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Crazy Climber"
+  },
+  "clcrazyfrogracer": {
+    "reason": "Crazy Frog Racer cover art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Crazy Frog Racer"
+  },
   "clcrazymotorcycle": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -2604,9 +2796,9 @@
     "title": "Crazy Motorcycle"
   },
   "clcrazypenguincatapult": {
-    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+    "reason": "Crazy Penguin Catapult key art with its penguin.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Crazy Penguin Catapult"
   },
   "clcrazyplanelanding": {
@@ -2614,6 +2806,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Crazy Plane Landing"
+  },
+  "clcrazytaxigba": {
+    "reason": "Crazy Taxi: Catch a Ride GBA box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Crazy Taxi GBA"
   },
   "clcreaturecardidle": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -3209,6 +3407,12 @@
     "status": "rejected",
     "title": "Eaglercraft Sky"
   },
+  "cleaglercrafttech": {
+    "reason": "Eaglercraft key art with its logo and character.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Eaglercraft Tech"
+  },
   "cleaglercraftx-188u29": {
     "reason": "Captured the Eaglercraft launcher profile screen.",
     "reviewed": "2026-11-27",
@@ -3581,6 +3785,18 @@
     "status": "verified",
     "title": "FFSonic 6.2"
   },
+  "clfifa2000-1": {
+    "reason": "FIFA 2000 Game Boy Color box art with the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FIFA 2000"
+  },
+  "clfifa99": {
+    "reason": "FIFA 99 box art with the EA Sports branding.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FIFA 99"
+  },
   "clfifainternationalsoccer": {
     "reason": "FIFA International Soccer SNES box art.",
     "reviewed": "2026-11-27",
@@ -3616,6 +3832,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FIFA Soccer 97"
+  },
+  "clfifastreet2": {
+    "reason": "FIFA Street 2 cover art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FIFA Street 2"
   },
   "clfinalearth2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -4307,6 +4529,12 @@
     "status": "verified",
     "title": "Gachaverse"
   },
+  "clgain-ground": {
+    "reason": "Gain Ground box art with its logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Gain Ground"
+  },
   "clgangstabean2": {
     "reason": "The frame is a publisher or engine splash, not the game's own screen.",
     "reviewed": "2026-11-27",
@@ -4673,6 +4901,12 @@
     "status": "verified",
     "title": "Hextris"
   },
+  "clhighspeed": {
+    "reason": "High Speed gameplay with its speedometer HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "High Speed"
+  },
   "clhighwayracer2": {
     "reason": "Captured menu shows the actual game.",
     "reviewed": "2026-11-27",
@@ -4750,6 +4984,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Hobo vs Zombies"
+  },
+  "clhoennslastwish": {
+    "reason": "Pokemon Hoenn's Last Wish box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hoenn's Last Wish"
   },
   "clholeio": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -4834,6 +5074,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Indian Truck Simulator"
+  },
+  "clinkwell--v1-04": {
+    "reason": "Inkwell title art with its character.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Inkwell (v1.04)"
   },
   "clinnkeeper": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
@@ -4943,6 +5189,12 @@
     "status": "verified",
     "title": "Johnny Upgrade"
   },
+  "cljump": {
+    "reason": "Jump Jump Jump title art with its logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Jump"
+  },
   "cljumpingshell": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
@@ -4990,6 +5242,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Kart Bros"
+  },
+  "clkengriffeyjr": {
+    "reason": "Ken Griffey Jr Presents Major League Baseball box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ken Griffey Jr. Baseball"
   },
   "clkilltheiceagebabyadventure": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -5105,6 +5363,18 @@
     "status": "verified",
     "title": "Learn to Fly 2 Hacked"
   },
+  "cllearntofly3debug": {
+    "reason": "Learn to Fly 3 upgrade screen from its debug build.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Learn to Fly 3 Debug"
+  },
+  "cllegacyofgoku": {
+    "reason": "Dragon Ball Z: The Legacy of Goku cover art without a platform band.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Legacy of Goku"
+  },
   "clletitconsume": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -5140,6 +5410,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Los Angeles Shark"
+  },
+  "cllse": {
+    "reason": "LSE gameplay with its dialogue box and HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "LSE"
   },
   "clmadalinstuntcars": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -5236,6 +5512,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Marble Racer"
+  },
+  "clmario-party-advance": {
+    "reason": "Mario Party Advance box art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario Party Advance"
   },
   "clmario64webgl": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -5380,6 +5662,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Mini Shooters"
+  },
+  "clmoemon-emerald-vanilla---v1-1-0": {
+    "reason": "Moemon Emerald Version box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Moemon Emerald Vanilla+"
   },
   "clmomoscrushers": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
@@ -5555,6 +5843,12 @@
     "status": "verified",
     "title": "Nickelodeon Super Brawl 2"
   },
+  "clnicktoonsfreezeframefrenzy": {
+    "reason": "Nicktoons Freeze Frame Frenzy box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Nicktoons Freeze Frame Frenzy"
+  },
   "clnightcatsurvival": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -5723,6 +6017,12 @@
     "status": "verified",
     "title": "Opposite Day"
   },
+  "clorangeroulette": {
+    "reason": "Orange Roulette title art with its character.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Orange Roulette"
+  },
   "clorbofcreation": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -5746,6 +6046,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Outhold"
+  },
+  "cloutrunarcade": {
+    "reason": "OutRun arcade screen with its logo and road.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Outrun Arcade"
+  },
+  "cloutrungenesis": {
+    "reason": "OutRun Genesis box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Outrun Genesis"
   },
   "cloverburden": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -5818,6 +6130,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Paper.io Mania"
+  },
+  "clpapermariopracticehack": {
+    "reason": "Paper Mario practice hack gameplay room; result 2 was a tutorial caption.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Paper Mario Practice Hack"
   },
   "clparkingfury": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -5969,6 +6287,30 @@
     "status": "verified",
     "title": "Plonky"
   },
+  "clpoke-mon-emerald-rush-edition--2-0": {
+    "reason": "Pokemon Emerald Rush Edition box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Emerald Rush Edition"
+  },
+  "clpoke-mon-trade-_stache--v1-1": {
+    "reason": "Pokemon Trade & Stache logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Trade & Stache"
+  },
+  "clpoke-mon-two--v1-1": {
+    "reason": "Pokemon TWO Version box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon TWO"
+  },
+  "clpoke-monstunningsteel": {
+    "reason": "Pokemon Stunning Steel logo art with Steelix.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Stunning Steel"
+  },
   "clpokeallin": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -6029,6 +6371,24 @@
     "status": "verified",
     "title": "Poke GS Chronicles"
   },
+  "clpokeheartgoldgenerations": {
+    "reason": "Pokemon HeartGold Generations logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Poke HeartGold Generations"
+  },
+  "clpokemonemeraldrouge": {
+    "reason": "Pokemon Emerald Rogue box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Emerald Rogue"
+  },
+  "clpokemonrocketedition": {
+    "reason": "Pokemon Rocket Edition box art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Rocket Edition"
+  },
   "clpokemontowerdefense": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -6070,6 +6430,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pokemon the Pit"
+  },
+  "clpokethetaemeraldex": {
+    "reason": "Pokemon Theta Emerald EX box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Poke Theta Emerald EX"
   },
   "clpoketourmaline": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6743,6 +7109,12 @@
     "status": "verified",
     "title": "Skyrace 3D"
   },
+  "clskyriders": {
+    "reason": "Sky Riders key art with its vehicle.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sky Riders"
+  },
   "clskywire": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -6923,6 +7295,30 @@
     "status": "verified",
     "title": "Solitaire"
   },
+  "clsonic---knuckles---sonic-the-hedgehog-3": {
+    "reason": "Sonic 3 & Knuckles key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic & Knuckles + Sonic 3"
+  },
+  "clsonic1scorerush": {
+    "reason": "Sonic 1 Score Rush title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic 1 Score Rush"
+  },
+  "clsonic1thesuperchallenges": {
+    "reason": "Sonic 1 The Super Challenges title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic 1 the Super Challenges"
+  },
+  "clsonic2scorerush": {
+    "reason": "Sonic 2 Score Rush title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic 2 Score Rush"
+  },
   "clsoniccdmobile": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
@@ -6934,6 +7330,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Sonic Razor"
+  },
+  "clsonicinsm64": {
+    "reason": "Sonic in SM64 gameplay showing Sonic in the castle grounds; result 2 was a different SM64 Coop thumbnail.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic in SM64"
+  },
+  "clsonicinsmw-1": {
+    "reason": "Sonic in SMW gameplay with the score HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic in SMW"
   },
   "clsonicmania": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6958,6 +7366,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Sort the Court"
+  },
+  "clsovereignoftheskys": {
+    "reason": "Pokemon Sovereign of the Skies box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sovereign of the Skys"
   },
   "clspacebarclicker": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7019,6 +7433,12 @@
     "status": "verified",
     "title": "SpongeBob Power Kart Grand Prix"
   },
+  "clsportsheadsicehockey": {
+    "reason": "Sports Heads Ice Hockey title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sports Heads Ice Hockey"
+  },
   "clsprunked": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -7042,6 +7462,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Squid Playground"
+  },
+  "clssf2tarcade": {
+    "reason": "Super Street Fighter II Turbo arcade screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Street Fighter 2T Arcade"
   },
   "clstackballio": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7216,6 +7642,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Storm the House 3"
+  },
+  "clstreetfighter2hfarcade-1": {
+    "reason": "Street Fighter II arcade cabinet on a clean background; result 1 carried a cabinet-brand credit.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Street Fighter 2 HF Arcade"
   },
   "clstreetfighterumuhsomething": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7607,6 +8039,12 @@
     "status": "verified",
     "title": "The Sodor Race"
   },
+  "clthesunforthevampire": {
+    "reason": "The Sun for the Vampire logo art with its vampire.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Sun for the Vampire"
+  },
   "cltheyarecoming": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -7834,6 +8272,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Two Ball 3D"
+  },
+  "clu-can-t-believe": {
+    "reason": "Uvuvwevwevwe Onyetenvewve weekly contest card.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Uvuvwevwevwe Onyetenvewve"
   },
   "clucds": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8206,6 +8650,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Code Editor"
+  },
+  "codeorg": {
+    "reason": "Code.org puzzle screen with its game sprites.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Code.org"
+  },
+  "colorbox-mustard": {
+    "reason": "Colorbox Mustard full-colour key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Colorbox Mustard"
   },
   "drive-mad": {
     "reason": "Captured title screen shows the actual game.",

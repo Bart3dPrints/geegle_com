@@ -15,24 +15,24 @@ Identity evidence and reuse basis are recorded separately on every record. Captu
 | Measure | Count |
 | --- | --- |
 | Catalog rows (unique IDs) | 2,710 |
-| Verified artwork | 1,283 |
+| Verified artwork | 1,371 |
 | Awaiting review | 0 |
-| Rejected (removed from the UI, queued for a new capture) | 97 |
+| Rejected (removed from the UI, queued for a new capture) | 85 |
 | Blocked | 0 |
 | Reopened after the blocked classification was rejected | 1,676 |
 | Ten-minute render investigations completed | 590 |
 | ... that rendered an authentic frame | 551 |
 | ... that stopped at their own start gate | 6 |
 | ... that stayed blank for the whole observation | 26 |
-| Remaining unprocessed | 1,427 |
-| Actual verified coverage | 47.3% |
-| Total optimized asset size (verified images) | 27833 KiB |
+| Remaining unprocessed | 1,339 |
+| Actual verified coverage | 50.6% |
+| Total optimized asset size (verified images) | 30809 KiB |
 
 ## Verified artwork by acquisition method
 
 | Method | Count |
 | --- | --- |
-| game-asset | 222 |
+| game-asset | 310 |
 | gameplay-screenshot | 962 |
 | official-icon | 72 |
 | official-og | 27 |
@@ -47,16 +47,16 @@ Rejection reasons recorded:
 
 - 13x Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.
 - 12x Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.
-- 11x Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.
+- 10x Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.
 - 7x The frame shows only the shared Friday Night Funkin base logo, which does not identify this specific mod.
-- 6x Every qualifying frame was still a loading screen (progress bar or "Loading n/m"), so nothing finished could be captured in the 12-second window.
 - 5x Every qualifying frame carried a consent, language, license or age dialog over the content.
-- 4x Every qualifying frame carried a consent, age, profanity, legal or ad-block dialog over the content.
 - 4x The frame is an empty background with no legible title or gameplay.
 - 4x The frame is a publisher or engine splash, not the game's own screen.
-- 3x Every qualifying frame was an error page ("Something went wrong"), which is never acceptable artwork.
-- 3x Every qualifying frame was an error page ("Something went wrong", a 404 loader), which is never acceptable artwork.
 - 3x Still a loading screen when the 15-second window ended.
+- 2x Every qualifying frame carried a consent, age, profanity, legal or ad-block dialog over the content.
+- 2x Frames showed only instructions or copyright text, not a title screen or recognizable gameplay.
+- 2x Every qualifying frame was an error page ("Something went wrong"), which is never acceptable artwork.
+- 2x Every qualifying frame was an error page ("Something went wrong", a 404 loader), which is never acceptable artwork.
 
 ## Service card artwork
 
@@ -84,7 +84,7 @@ No entry is left in a blocked state: the whole 1,676-entry blocked manifest was 
 The next unprocessed batch starts at `clFF3`:
 
 ```
-clFF3,clFNAF,clFNAF2,clFNAF3,clFNAF4,clGXclient,cladarkroom,claftertheweek,clai,clalienhominidgba,claltered-beast,clanemonesfall,clasdutydemands,clb3313unabandoneda2,clb3313v102,clbejeweledtwistds,clbejeweledtwistflash,clbfdibranches,clblackout,clbloonspp3,clbloonstd2,clbloonstd6scratch,clbmx2,clbowlalt,clboxinglive-2,clboxinglive2,clburritobison2,clchoroqwonderful,clclaymore,clclayuncraft,clclearvision,clclearvision2,clclearvision4,clclearvision5,clclimbforbrainrots,clclmadnessambulation,clclover,clclucluland,clcoalllcdemo,clcod4,clcodblackopp,clcoddefiance,clcodenamegordon,clcodeorgbutoffline,clcodercraft,clcodmodernwarfare,clcodworldatwar,clcoffeemaker,clcolorburst3d,clcolorwatersort3d
+clFF3,clFNAF,clFNAF2,clFNAF3,clFNAF4,clGXclient,cladarkroom,claftertheweek,clai,clalienhominidgba,claltered-beast,clanemonesfall,clasdutydemands,clb3313v102,clbejeweledtwistds,clbejeweledtwistflash,clbfdibranches,clblackout,clbloonspp3,clbloonstd2,clbloonstd6scratch,clbmx2,clboxinglive-2,clboxinglive2,clburritobison2,clchoroqwonderful,clclayuncraft,clclimbforbrainrots,clclover,clcookingmama,clcotlk,clcreeperworld2,clcreepyinternetstories,clcreepynightfunkin,clcrimsonmadness,clcrunchball3000,clcsds,clcsgoclicker,clctgpnitro,clcuttherope,clcuttheropeholiday,clcuttheropetimetravel,clcvooc,clcyberbungracing,cldaggerfall,cldanktomb,cldborigins,cldborigins2,cldbzattacksaiyans,cldbzdevolution
 ```
 
 Resume commands:
