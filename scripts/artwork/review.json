@@ -1,4 +1,10 @@
 {
+  "bowmasters": {
+    "reason": "Every frame in the ten-minute observation carried an in-game tutorial overlay (purple panel with OK) covering the play area; an overlay is not acceptable artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Bowmasters"
+  },
   "cheeserolling": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -12,9 +18,9 @@
     "title": "1 (Classic)"
   },
   "cl10bullets": {
-    "reason": "Captured frame is a generic play-button splash, not the game itself.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
+    "reason": "Ten-minute observation: the Ruffle build finished loading and showed the game's own title screen (10 BULLETS, A GAME BY MICHEL GERARD, PLAY / SPACEBAR), not a loading screen or generic portal splash.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "10 Bullets"
   },
   "cl10minutestildawn": {
@@ -24,9 +30,9 @@
     "title": "10 Minutes Till Dawn"
   },
   "cl10morebullets": {
-    "reason": "Captured frame is a generic play-button splash, not the game itself.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
+    "reason": "Ten-minute observation: after the Ruffle build finished loading, the game's own title menu appeared (10 MORE BULLETS, A GAME BY MICHEL GERARD, ARCADE MODE / 2 PLAYERS).",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "10 More Bullets"
   },
   "cl12minibattles": {
@@ -72,10 +78,10 @@
     "title": "20 Small Mazes"
   },
   "cl234playergame": {
-    "reason": "Portal logo (Two Player Games), not the game.",
+    "reason": "The only rendered frame is the portal's own game grid with a TwoPlayerGames banner and a 'quality setting' attention dialog; portal chrome and settings prompts are not acceptable artwork.",
     "reviewed": "2026-11-27",
     "status": "rejected",
-    "title": "2-3-4 Player Game"
+    "title": "234 Player Games"
   },
   "cl24playerGame": {
     "reason": "Captured frame is a third-party portal loading screen, not the game.",
@@ -94,18 +100,6 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "2D Shooting"
-  },
-  "cl3dash": {
-    "reason": "Blank blue capture with no game content.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "cl3dash"
-  },
-  "cl3dasheditor": {
-    "reason": "Watermarked generic sketch, not this title's artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "3 Dash Editor"
   },
   "cl3dpinballspacecadet": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -143,23 +137,11 @@
     "status": "verified",
     "title": "3 Pandas Night"
   },
-  "cl3slices2": {
-    "reason": "Captured frame is a Unity loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "cl3slices2"
-  },
   "cl4thandgoal": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "4th and Goal"
-  },
-  "cl500calibercontractz": {
-    "reason": "Content warning screen, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "500 Caliber Contractz"
   },
   "cl60secondsburgerrun": {
     "reason": "Captured title screen shows the actual game.",
@@ -167,23 +149,11 @@
     "status": "verified",
     "title": "60 Seconds Burger Run"
   },
-  "cl60secondssantarun": {
-    "reason": "Generic play-button splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "cl60secondssantarun"
-  },
   "cl8ballclassic": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "8 Ball Classic"
-  },
-  "cl8ballpool": {
-    "reason": "Shows a StarGames portal logo, not 8 Ball Pool.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "cl8ballpool"
   },
   "cl9007199254740992": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -202,12 +172,6 @@
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "cl99nightsft"
-  },
-  "cl99nightsitf": {
-    "reason": "Portal logo (Unblocked Games G+), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "99 Nights in the Forest"
   },
   "clADOFAI": {
     "reason": "Captured gameplay shows the actual game.",
@@ -239,53 +203,11 @@
     "status": "rejected",
     "title": "clBFDIbranches"
   },
-  "clFF3": {
-    "reason": "Emulator loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "clFF3"
-  },
-  "clFNAF": {
-    "reason": "Blank frame, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Five Nights at Freddy's"
-  },
-  "clFNAF2": {
-    "reason": "Blank frame, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Five Nights at Freddy's 2"
-  },
-  "clFNAF3": {
-    "reason": "Blank frame, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Five Nights at Freddy's 3"
-  },
-  "clFNAF4": {
-    "reason": "Blank frame, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Five Nights at Freddy's 4"
-  },
   "clGXClient": {
     "reason": "Captured frame is a generic resolution selector with no identifying game content.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "clGXClient"
-  },
-  "clGXclient": {
-    "reason": "Generic resolution selector with no identifying game content.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "GX Client"
-  },
-  "clabandoned3": {
-    "reason": "Publisher credit splash, not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Abandoned 3"
   },
   "clabsoluteMadness": {
     "reason": "Error page (\"Something went wrong\").",
@@ -299,41 +221,11 @@
     "status": "verified",
     "title": "Absolute Madness"
   },
-  "clacecombat2": {
-    "reason": "Emulator loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "clacecombat2"
-  },
-  "clacecombat3": {
-    "reason": "Emulator loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "clacecombat3"
-  },
-  "clachievementunlocked": {
-    "reason": "Captured frame is an achievement pop-up, not the game title screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "clachievementunlocked"
-  },
   "clachillies": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Achillies"
-  },
-  "clachillies2": {
-    "reason": "Loading screen, not the game title or gameplay.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Achillies 2"
-  },
-  "cladatewithdeath": {
-    "reason": "Developer credits and loading text, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "A Date with Death"
   },
   "cladofai": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -365,12 +257,6 @@
     "status": "verified",
     "title": "Agar.io Lite"
   },
-  "clageofwar": {
-    "reason": "Third-party \"foxx hackers\" play splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "clageofwar"
-  },
   "clageofwar2": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -389,23 +275,11 @@
     "status": "verified",
     "title": "Ahoy Survival"
   },
-  "clai": {
-    "reason": "Loading screen with no visible content.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "clai"
-  },
   "clairlinetycoonidle": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Airline Tycoon Idle"
-  },
-  "clalienhominid": {
-    "reason": "Shows a SYNJ portal banner, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "clalienhominid"
   },
   "clalienskyinvasion": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -539,18 +413,6 @@
     "status": "verified",
     "title": "Apes vs Helium"
   },
-  "clappleshooter": {
-    "reason": "Shows an OfficeGameSpot portal logo, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "clappleshooter"
-  },
-  "clappleworm": {
-    "reason": "Publisher splash (BubbleBox), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Apple Worm"
-  },
   "claquaparkio": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
@@ -568,12 +430,6 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Archipelago"
-  },
-  "clarchimedesclient": {
-    "reason": "Generic client pack selector with no game identity.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "clarchimedesclient"
   },
   "clarena": {
     "reason": "Captured frame shows the actual game with identifying title or gameplay.",
@@ -605,29 +461,11 @@
     "status": "verified",
     "title": "Arthur's Nightmare"
   },
-  "classessmentexamination": {
-    "reason": "Fullscreen prompt, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Assessment Examination"
-  },
-  "clasteroidsalt": {
-    "reason": "Emulator setup text with no identifying game content.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Asteroids Alt"
-  },
   "clastraWASM": {
     "reason": "Shows a Discord attachment page, not the game.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "clastraWASM"
-  },
-  "clastraclient": {
-    "reason": "WASM compiler page, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Astra Client"
   },
   "clastrawasm": {
     "reason": "Captured frame shows the actual game with identifying title or gameplay.",
@@ -665,12 +503,6 @@
     "status": "verified",
     "title": "Avia Masters"
   },
-  "claviamastersbuggy": {
-    "reason": "Image is effectively identical to the Avia Masters card; distinct title needs its own artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Avia Masters Buggy"
-  },
   "clawesomepirates": {
     "reason": "Captured frame shows the actual game with identifying title or gameplay.",
     "reviewed": "2026-11-26",
@@ -688,12 +520,6 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Awesome Tanks 2"
-  },
-  "claxisfootballleague": {
-    "reason": "Generic play button, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Axis Football League"
   },
   "clbabeltower": {
     "reason": "Captured frame shows the actual game with identifying title or gameplay.",
@@ -719,23 +545,11 @@
     "status": "verified",
     "title": "Back Rooms"
   },
-  "clbackrooms2d": {
-    "reason": "Content warning screen, not identifying gameplay.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "clbackrooms2d"
-  },
   "clbackyardbaseball": {
     "reason": "Captured frame shows the actual game with identifying title or gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Backyard Baseball"
-  },
-  "clbackyardsoccer": {
-    "reason": "Loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "clbackyardsoccer"
   },
   "clbaconmaydie": {
     "reason": "Captured frame shows the actual game with identifying title or gameplay.",
@@ -748,24 +562,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Bad Bodyguards"
-  },
-  "clbadicecream": {
-    "reason": "Blank capture with no game content.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "clbadicecream"
-  },
-  "clbadicecream2": {
-    "reason": "Blank capture with no game content.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "clbadicecream2"
-  },
-  "clbadicecream3": {
-    "reason": "Blank capture with no game content.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "clbadicecream3"
   },
   "clbadparenting": {
     "reason": "Captured frame shows the actual game with identifying title or gameplay.",
@@ -785,41 +581,11 @@
     "status": "verified",
     "title": "Bad Piggies Latest"
   },
-  "clbalatrogba": {
-    "reason": "Disclaimer page, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Bala Tro (GBA)"
-  },
-  "clbaldicaseoh": {
-    "reason": "Engine splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Bald Icase Oh"
-  },
   "clbaldidecomp": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Bald Ide Comp"
-  },
-  "clbaldiepstein": {
-    "reason": "Unrelated start-menu image.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Bald Iepstein"
-  },
-  "clbaldisbasics": {
-    "reason": "Jam splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Baldi's Basics"
-  },
-  "clbaldisbasicsremaster": {
-    "reason": "Loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Baldi's Basics Remaster"
   },
   "clbaldisfunnewschoolultimate": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -832,12 +598,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Ball Blast"
-  },
-  "clballsandbricks": {
-    "reason": "Video placeholder, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Balls and Bricks"
   },
   "clballsandbricksgood": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -857,12 +617,6 @@
     "status": "verified",
     "title": "Banana Simulator"
   },
-  "clbanditgunslingers": {
-    "reason": "Video placeholder, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Bandit Gunslingers"
-  },
   "clbankbreakout2": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -880,12 +634,6 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Barry Has A Secret"
-  },
-  "clbartblast": {
-    "reason": "Loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Bart Blast"
   },
   "clbaseballbros": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -922,12 +670,6 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Basket Bros"
-  },
-  "clbasketrandom": {
-    "reason": "Video placeholder, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Basket Random"
   },
   "clbasketslamdunk2": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -971,23 +713,11 @@
     "status": "verified",
     "title": "Beach Boxing Sim"
   },
-  "clbearbarians": {
-    "reason": "Shows artwork for an unrelated game (Warfare 1776).",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Bear Barians"
-  },
   "clbearsus": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Bearsus"
-  },
-  "clbejeweledtwistflash": {
-    "reason": "Error page (\"Something went wrong\").",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Be Jeweled Twist Flash"
   },
   "clbfdia5b": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -1000,18 +730,6 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Big Time Butter Baron"
-  },
-  "clbigflappytowertinysquare": {
-    "reason": "Shows a generic \"Evil Objective\" splash, not the title.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Big Flappy Tower Tiny Square"
-  },
-  "clbigneontowertinysquare": {
-    "reason": "Shows a generic \"Evil Objective\" splash, not the title.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Big Neon Tower Tiny Square"
   },
   "clbigshotboxing2": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1031,29 +749,11 @@
     "status": "verified",
     "title": "Binding of Isaac Sheep Time"
   },
-  "clbioevil4": {
-    "reason": "Non-identifying clock asset, not recognizable as the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Bio Evil 4"
-  },
   "clbitlife": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Bitlife"
-  },
-  "clbitlifeencrypted": {
-    "reason": "Document page, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Bit Life Encrypted"
-  },
-  "clbitplanes": {
-    "reason": "Web text page, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Bit Planes"
   },
   "clblackjack": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1073,12 +773,6 @@
     "status": "verified",
     "title": "Black Knight"
   },
-  "clblackout": {
-    "reason": "Press-enter gate, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Blackout"
-  },
   "clblacksmithlab": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -1096,12 +790,6 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Blaze Drifter"
-  },
-  "clbleachvsnaruto": {
-    "reason": "Generic play icon, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Bleach vs Naruto"
   },
   "clblightborne": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1169,71 +857,11 @@
     "status": "verified",
     "title": "Bloons 2"
   },
-  "clbloonspp1": {
-    "reason": "Identical Bloons wordmark shared with other Bloons entries; not this installment's own art.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Bloons PP 1"
-  },
-  "clbloonspp2": {
-    "reason": "Identical Bloons wordmark shared with other Bloons entries; not this installment's own art.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Bloons PP 2"
-  },
-  "clbloonspp3": {
-    "reason": "Error page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Bloons PP 3"
-  },
-  "clbloonspp4": {
-    "reason": "Developer logo splash, not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Bloons Player Pack 4"
-  },
-  "clbloonstd1": {
-    "reason": "Identical Bloons wordmark shared with other Bloons entries; not this installment's own art.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Bloons TD 1"
-  },
-  "clbloonstd2": {
-    "reason": "Identical Bloons wordmark shared with other Bloons entries; not this installment's own art.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Bloons TD 2"
-  },
   "clbloonstd3": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Bloons TD 3"
-  },
-  "clbloonstd4": {
-    "reason": "Video player overlay, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Bloons TD 4"
-  },
-  "clbloonstd5": {
-    "reason": "Error page (\"Something went wrong\").",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Bloons TD 5"
-  },
-  "clbloonstd6scratch": {
-    "reason": "JavaScript error page.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Bloons Td 6 Scratch"
-  },
-  "clbloxorz": {
-    "reason": "Third-party portal splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Bloxorz"
   },
   "clblumgirocket": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1277,24 +905,6 @@
     "status": "verified",
     "title": "Bollybeat"
   },
-  "clbombermanworld": {
-    "reason": "Loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Bomberman World"
-  },
-  "clbottlecracks": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Bottle Cracks"
-  },
-  "clbotwds": {
-    "reason": "Loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Botwds"
-  },
   "clbounceback": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -1325,29 +935,11 @@
     "status": "verified",
     "title": "Boxhead 2 Playrooms"
   },
-  "clboxinglive-2": {
-    "reason": "Portal loading screen with no game content.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Boxinglive 2"
-  },
-  "clboxinglive2": {
-    "reason": "Portal loading screen with no game content.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Boxing Live 2"
-  },
   "clbrainrot": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Brain Rot"
-  },
-  "clbrawlsimulator3d": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Brawl Simulator 3D"
   },
   "clbrawlstars": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -1391,23 +983,11 @@
     "status": "verified",
     "title": "Bubble Shooter Pirate"
   },
-  "clbubbletanks": {
-    "reason": "Error page (\"Something went wrong\").",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Bubble Tanks"
-  },
   "clbubbletanks2": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Bubble Tanks 2"
-  },
-  "clbubbletanks3": {
-    "reason": "Error page (\"Something went wrong\").",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Bubble Tanks 3"
   },
   "clbubbletankstd": {
     "reason": "Captured menu shows the actual game.",
@@ -1420,12 +1000,6 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Buckshot Roulette"
-  },
-  "clbulletforce": {
-    "reason": "Loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Bullet Force"
   },
   "clbunzobunny": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -1457,12 +1031,6 @@
     "status": "verified",
     "title": "Burrito Bison Revenge"
   },
-  "clbusterjam": {
-    "reason": "Loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Buster Jam"
-  },
   "clcactusmccoy-1": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -1481,23 +1049,11 @@
     "status": "verified",
     "title": "Call of Battle"
   },
-  "clcamilla": {
-    "reason": "Unrelated credit screen, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Camilla"
-  },
   "clcannonballs3d": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Cannonballs 3D"
-  },
-  "clcaptchaware": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Captcha Ware"
   },
   "clcapybaraclicker": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -1511,41 +1067,17 @@
     "status": "verified",
     "title": "Car Crash 3"
   },
-  "clcardrawing": {
-    "reason": "Generic \"Made with Unity\" splash.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Car Drawing"
-  },
-  "clcareatscar2deluxe": {
-    "reason": "Portal splash (\"My Real Games\"), not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Care at Scar 2 Deluxe"
-  },
   "clcarkingarena": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Car King Arena"
   },
-  "clcarmods": {
-    "reason": "Plain text page, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Carmods"
-  },
   "clcarrampvspolicechase": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Car Ramp vs Police Chase"
-  },
-  "clcartoonnetworktabletennis": {
-    "reason": "Screen shows a different title than this catalog entry.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Cartoon Network: Table Tennis Ultimate Tournament"
   },
   "clcartoonnetworktabletennisultimatetournament": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1558,12 +1090,6 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Castaway"
-  },
-  "clcastlevaniadawnofsorrow": {
-    "reason": "Loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Castlevania: Dawn of Sorrow"
   },
   "clcastlewarsmodern": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1588,30 +1114,6 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Cave Crawler"
-  },
-  "clcellardoor": {
-    "reason": "Error page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Cellar Door"
-  },
-  "clcelltosingularity": {
-    "reason": "Credits/porting splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Cell to Singularity"
-  },
-  "clchainofmemories": {
-    "reason": "Publisher logo splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Kingdom Hearts: Chain of Memories"
-  },
-  "clchaosfaction2": {
-    "reason": "Loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Chaos Faction 2"
   },
   "clcheckers": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1655,29 +1157,11 @@
     "status": "verified",
     "title": "Chicken CS"
   },
-  "clchickenscream": {
-    "reason": "Portal logo (Rocket Games), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Chicken Scream"
-  },
   "clchickenwar": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Chicken War"
-  },
-  "clchoppyorc": {
-    "reason": "Portal splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Choppy Orc"
-  },
-  "clchoroqwonderful": {
-    "reason": "Loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Ch Oro Qwonderful"
   },
   "clchuzzle": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1715,53 +1199,11 @@
     "status": "verified",
     "title": "Clash of Vikings"
   },
-  "clclayuncraft": {
-    "reason": "License agreement screen, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Clay Un Craft"
-  },
   "clcleanupio": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Cleanup IO"
-  },
-  "clclearvision": {
-    "reason": "Portal splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Clear Vision"
-  },
-  "clclearvision2": {
-    "reason": "Blank dark frame with unreadable text.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Clear Vision 2"
-  },
-  "clclearvision3": {
-    "reason": "Blank dark frame with unreadable text.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Clear Vision 3"
-  },
-  "clclearvision4": {
-    "reason": "Portal splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Clear Vision 4"
-  },
-  "clclearvision5": {
-    "reason": "Blank dark frame with unreadable text.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Clear Vision 5"
-  },
-  "clclimbforbrainrots": {
-    "reason": "Near-uniform placeholder or blank image.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Climb for Brain Rots"
   },
   "clclubbytheseal": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1780,24 +1222,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Coal LLC Demo"
-  },
-  "clcoddefiance": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "COD Defiance"
-  },
-  "clcodercraft": {
-    "reason": "License agreement screen, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Coder Craft"
-  },
-  "clcodmodernwarfare": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "COD Modern Warfare"
   },
   "clcoldfront": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1846,12 +1270,6 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Cookie Clicker"
-  },
-  "clcookieclickermodmenu": {
-    "reason": "Blank screen with no game content.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Cookie Clicker Mod Menu"
   },
   "clcoreball": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1907,47 +1325,11 @@
     "status": "verified",
     "title": "Cover Orange Players Pack 2"
   },
-  "clcoverorangeplayerspack3-1": {
-    "reason": "Error page (\"Something went wrong\").",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Cover Orange Players Pack 3"
-  },
-  "clcrankit": {
-    "reason": "Near-black scene with no visible game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Crankit"
-  },
   "clcrankitbang": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Crankit!"
-  },
-  "clcrash2": {
-    "reason": "Loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Crash 2"
-  },
-  "clcrash3": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Crash 3"
-  },
-  "clcrashbandicoot--1": {
-    "reason": "Loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Crash Bandicoot"
-  },
-  "clcrazycars": {
-    "reason": "Challenge page, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Crazy Cars"
   },
   "clcrazycattle3d": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -1967,12 +1349,6 @@
     "status": "verified",
     "title": "Crazy Motorcycle"
   },
-  "clcrazypenguincatapult": {
-    "reason": "Publisher splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Crazy Penguin Catapult"
-  },
   "clcrazyplanelanding": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -1985,47 +1361,17 @@
     "status": "verified",
     "title": "Creature Card Idle"
   },
-  "clcreeperworld2": {
-    "reason": "Portal splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Creeper World 2"
-  },
-  "clcrimsonmadness": {
-    "reason": "Blank gradient frame with no game content.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Crimson Madness"
-  },
   "clcrossyroad": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Crossy Road"
   },
-  "clcrunchball3000": {
-    "reason": "Loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Crunch Ball 3000"
-  },
   "clcs1-6": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "CS 1.6"
-  },
-  "clcs6": {
-    "reason": "Near-identical to the CS 1.6 card; a distinct title needs its own recognizable artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "CS 6"
-  },
-  "clcsgoclicker": {
-    "reason": "Consent dialog over a blank screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "CS:GO Clicker"
   },
   "clcurveball-1": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2057,12 +1403,6 @@
     "status": "verified",
     "title": "Dad N Me"
   },
-  "cldaggerfall": {
-    "reason": "Loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Daggerfall"
-  },
   "cldandysworldclicker": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -2075,18 +1415,6 @@
     "status": "verified",
     "title": "Dash Arena"
   },
-  "cldashio": {
-    "reason": "Watermarked generic banner art, not Dash.io.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Dashio"
-  },
-  "cldashmetry": {
-    "reason": "Loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Dashmetry"
-  },
   "cldatewithiraq": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -2098,18 +1426,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "DB Sniper"
-  },
-  "cldbzdevolution": {
-    "reason": "Third-party splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "DBZ Devolution"
-  },
-  "cldbzwarriors2": {
-    "reason": "Credits animation, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "DBZ Warriors 2"
   },
   "cldeadfrontieroutbreak": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2128,12 +1444,6 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Deadly Descent"
-  },
-  "cldeadseat": {
-    "reason": "Identical to another title's icon; not this title's own art.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Dead Seat"
   },
   "cldeadzed": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2159,18 +1469,6 @@
     "status": "verified",
     "title": "Death Run"
   },
-  "cldecision": {
-    "reason": "Error page (\"Something went wrong\").",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Decision"
-  },
-  "cldecision3": {
-    "reason": "Missing game file (404).",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Decision 3"
-  },
   "cldeepersleep": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -2182,12 +1480,6 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Deepest Sword"
-  },
-  "cldefendyourcastle": {
-    "reason": "Portal splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Defend Your Castle"
   },
   "cldefendyournuts": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2207,23 +1499,11 @@
     "status": "verified",
     "title": "Deltarune"
   },
-  "cldeltatraveler": {
-    "reason": "Loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Deltatraveler"
-  },
   "cldemolitionderbycrashracing": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Demolition Derby Crash Racing"
-  },
-  "cldemonbluff": {
-    "reason": "Portal splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Demon Bluff"
   },
   "cldiamondhollow": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2231,47 +1511,17 @@
     "status": "verified",
     "title": "Diamond Hollow"
   },
-  "cldiamondhollow2": {
-    "reason": "Portal logo, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Diamond Hollow 2"
-  },
   "cldieinthedungeon": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Die in the Dungeon"
   },
-  "cldigtochina": {
-    "reason": "Portal splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Dig to China"
-  },
-  "cldimensionalincident": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Dimensional Incident"
-  },
   "cldinorun": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Dino Run"
-  },
-  "cldinorunenterplanetd": {
-    "reason": "Screen shows a different game title than this entry.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Dino Run: Enter Planet D"
-  },
-  "cldinorunmarathonofdoom": {
-    "reason": "Advertisement overlay, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Dino Run: Marathon of Doom"
   },
   "cldoblox": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2315,12 +1565,6 @@
     "status": "verified",
     "title": "Don't Escape 3"
   },
-  "cldoodlejump": {
-    "reason": "Game-over screen, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Doodle Jump"
-  },
   "cldoodlejumpgoober": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -2357,59 +1601,17 @@
     "status": "verified",
     "title": "Doors Castle"
   },
-  "cldoswasmx": {
-    "reason": "Emulator documentation page, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "DOSWasmx"
-  },
   "cldouchebaglife": {
     "reason": "Captured title screen shows the actual game.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Douchebag Life"
   },
-  "cldouchebagworkout2": {
-    "reason": "Error page (\"Something went wrong\").",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Douchebag Workout 2"
-  },
-  "cldragonquest5ds": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Dragon Quest 5 DS"
-  },
-  "cldragonquestix": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Dragon Quest IX"
-  },
-  "cldragonxclient": {
-    "reason": "Generic client pack selector with no game identity.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Dragon X Client"
-  },
   "cldrawclimber": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Draw Climber"
-  },
-  "cldrawntolife": {
-    "reason": "Video splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Drawn to Life"
-  },
-  "cldrawntolife2": {
-    "reason": "Blank white frame.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Drawn to Life 2"
   },
   "cldrawtheline": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2435,59 +1637,11 @@
     "status": "verified",
     "title": "Drift Boss"
   },
-  "cldriftsimulator": {
-    "reason": "Shows a generic unblocked-games portal logo, not Drift Simulator.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Drift Simulator"
-  },
-  "cldrivemady": {
-    "reason": "Third-party splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Drive Mad Y"
-  },
   "cldriverussia": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Drive Russia"
-  },
-  "clducklfe5": {
-    "reason": "Language selector, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Duck Life 5"
-  },
-  "clducklife": {
-    "reason": "Loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Duck Life"
-  },
-  "clducklife2": {
-    "reason": "Loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Duck Life 2"
-  },
-  "clducklife3": {
-    "reason": "Loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Duck Life 3"
-  },
-  "clducklife4": {
-    "reason": "Loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Duck Life 4"
-  },
-  "clducklifebattle": {
-    "reason": "Language selector, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Duck Life Battle"
   },
   "clducklifespace": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2507,29 +1661,11 @@
     "status": "verified",
     "title": "Dud"
   },
-  "cldukenukem2": {
-    "reason": "License agreement page, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Duke Nukem 2"
-  },
-  "cldumbwaystodie": {
-    "reason": "Video player overlay, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Dumb Ways to Die"
-  },
   "cldumpling": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Dumpling"
-  },
-  "cldunebuggy": {
-    "reason": "Portal splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Dune Buggy"
   },
   "cldunedash": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2542,12 +1678,6 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Dungeon Deck"
-  },
-  "cldungeonraid": {
-    "reason": "Dark inventory screen with no identifying content.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Dungeon Raid"
   },
   "cldungeonsanddegenerategamblers": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2566,96 +1696,6 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Eaglercraft Alpha 1.2.6 Offline"
-  },
-  "cleaglercraft-beta-1-3-offline": {
-    "reason": "Options menu, not a title screen or gameplay.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Eaglercraft Beta 1.3 Offline"
-  },
-  "cleaglercraft-beta-13-offline": {
-    "reason": "Options menu, not a title screen or gameplay.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Eaglercraft Beta 1.3 Offline"
-  },
-  "cleaglercraft-indev-offline-1": {
-    "reason": "Options menu, not a title screen or gameplay.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Eaglercraft Indev Offline"
-  },
-  "cleaglercraft152": {
-    "reason": "Options menu, not a title screen or gameplay.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Eaglercraft 1.5.2"
-  },
-  "cleaglercraftl_19_v0_7_0_offline_signed-1": {
-    "reason": "Options menu, not a title screen or gameplay.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Eaglercraft 1.19 v0.7.0 Offline"
-  },
-  "cleaglercraftlite": {
-    "reason": "Third-party splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Eaglercraft Lite"
-  },
-  "cleaglercraftmagic": {
-    "reason": "License agreement page, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Eaglercraft Magic"
-  },
-  "cleaglercraftnebula": {
-    "reason": "License agreement page, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Eaglercraft Nebula"
-  },
-  "cleaglercraftshadow": {
-    "reason": "Publisher splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Eaglercraft Shadow"
-  },
-  "cleaglercraftsky": {
-    "reason": "Discord page, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Eaglercraft Sky"
-  },
-  "cleaglercrafttech": {
-    "reason": "Portal splash (Armor Games), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Eaglercraft Tech"
-  },
-  "cleaglercraftx-188u29": {
-    "reason": "Options menu, not a title screen or gameplay.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Eaglercraft X 1.8.8 U29"
-  },
-  "cleaglercraftx188-u29": {
-    "reason": "Options menu, not a title screen or gameplay.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Eaglercraft X 1.8.8 (U29)"
-  },
-  "cleaglercraftz_1112-1": {
-    "reason": "Options menu, not a title screen or gameplay.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Eaglercraft Z 1.12"
-  },
-  "cleaglerforge": {
-    "reason": "Mod manager screen, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "EaglerForge"
   },
   "cleagleride": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2698,30 +1738,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Ecco the Dolphin"
-  },
-  "cledelweiss": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Edelweiss"
-  },
-  "cleffinghail": {
-    "reason": "Tiny window on a blank field; not recognizable at card size.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Effing Hail"
-  },
-  "cleffingmachines": {
-    "reason": "Portal loading screen (Kongregate), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Effing Machines"
-  },
-  "cleffingworms": {
-    "reason": "Portal loading screen (Kongregate), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Effing Worms"
   },
   "cleffingzombies": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -2777,12 +1793,6 @@
     "status": "verified",
     "title": "Endacopia"
   },
-  "clendlesswar4": {
-    "reason": "Video player overlay, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Endless War 4"
-  },
   "clendlesswar5wow": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -2807,41 +1817,17 @@
     "status": "verified",
     "title": "Escalating Duel"
   },
-  "clescaperoad": {
-    "reason": "Portal splash (Games.co), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Escape Road"
-  },
-  "clescaperoad3": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Escape Road 3"
-  },
   "clescaperoadcity2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Escape Road City 2"
   },
-  "clescapeschoolduel": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Escape School Duel"
-  },
   "cleugeneslife": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Eugene's Life"
-  },
-  "cleurovisionsim": {
-    "reason": "Unrelated landing page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Eurovision Sim"
   },
   "clevilglitch": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -2873,47 +1859,11 @@
     "status": "verified",
     "title": "Extreme Run 3D"
   },
-  "clfactoryballs2": {
-    "reason": "Play overlay on a blank page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Factory Balls 2"
-  },
-  "clfactoryballs3": {
-    "reason": "Play overlay on a blank page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Factory Balls 3"
-  },
-  "clfactoryballs4": {
-    "reason": "Play overlay on a blank page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Factory Balls 4"
-  },
-  "clfairytalevsonepiece": {
-    "reason": "Play overlay on a blank page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Fairytale vs One Piece"
-  },
   "clfallguys": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Fall Guys"
-  },
-  "clfallout": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Fallout"
-  },
-  "clfamilyguycorrupted": {
-    "reason": "Abstract art unrelated to the title.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Family Guy Corrupted"
   },
   "clfancypantsadventure": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -2939,23 +1889,11 @@
     "status": "verified",
     "title": "Fashion Battle"
   },
-  "clfattygenius": {
-    "reason": "Publisher splash (GameDistribution), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Fatty Genius"
-  },
   "clfearassessment": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Fear Assessment"
-  },
-  "clfearstofathomhomealone": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Fears to Fathom: Home Alone"
   },
   "clfeedthevoid": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -2980,12 +1918,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Feed Us 5"
-  },
-  "clffaf": {
-    "reason": "Portal logo (Kiz10), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FFAF"
   },
   "clffsonic1": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -3023,29 +1955,11 @@
     "status": "verified",
     "title": "FFSonic 6.1"
   },
-  "clffsonic62": {
-    "reason": "Title shown belongs to a different game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FFSonic 6.2"
-  },
   "clfinalearth2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Final Earth 2"
-  },
-  "clfinalfantasyix": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Final Fantasy IX"
-  },
-  "clfinalninja": {
-    "reason": "Non-identifying scene with no recognizable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Final Ninja"
   },
   "clfindthealien": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -3053,29 +1967,11 @@
     "status": "verified",
     "title": "Find the Alien"
   },
-  "clfireblob": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Fire Blob"
-  },
   "clfireboyandwatergirl": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Fireboy and Watergirl"
-  },
-  "clfireboyandwatergirl2": {
-    "reason": "Portal logo (Agame), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Fireboy and Watergirl 2"
-  },
-  "clfireboyandwatergirl3": {
-    "reason": "Portal logo (Agame), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Fireboy and Watergirl 3"
   },
   "clfireboyandwatergirl5": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -3089,12 +1985,6 @@
     "status": "verified",
     "title": "Fish Eat Getting Big"
   },
-  "clfisquarium": {
-    "reason": "Store promo frame with buttons, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Fisquarium"
-  },
   "clfivenightsatbaldisredone": {
     "reason": "Captured menu shows the actual game.",
     "reviewed": "2026-11-27",
@@ -3106,18 +1996,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Five Nights at Epstein's"
-  },
-  "clfivenightsatshreks": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Five Nights at Shrek's"
-  },
-  "clfivenightsatyoshis": {
-    "reason": "Content warning gate, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Five Nights at Yoshi's"
   },
   "clflappybird": {
     "reason": "Captured gameplay shows the actual game.",
@@ -3155,12 +2033,6 @@
     "status": "verified",
     "title": "Fluidism"
   },
-  "clfnac1": {
-    "reason": "Console output, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNAC 1"
-  },
   "clfnac2": {
     "reason": "Captured settings screen from the actual game.",
     "reviewed": "2026-11-27",
@@ -3173,23 +2045,11 @@
     "status": "verified",
     "title": "FNAF 3 Remastered"
   },
-  "clfnaf4halloween": {
-    "reason": "Blank frame, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNAF 4 Halloween"
-  },
   "clfnaw": {
     "reason": "Captured menu from the actual game.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNAW"
-  },
-  "clfnfaethos": {
-    "reason": "Default engine menu shared across mods.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Aethos"
   },
   "clfnfagoti": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -3209,30 +2069,6 @@
     "status": "verified",
     "title": "FNF Animation"
   },
-  "clfnfannie": {
-    "reason": "Title shown belongs to a different game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Annie"
-  },
-  "clfnfbelowdepths": {
-    "reason": "Default engine menu shared across mods.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Below Depths"
-  },
-  "clfnfbfdi26": {
-    "reason": "Engine splash, not the mod artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: BFDI 26"
-  },
-  "clfnfbinarybreakdown": {
-    "reason": "Engine splash, not the mod artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Binary Breakdown"
-  },
   "clfnfblackbetrayal": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -3251,12 +2087,6 @@
     "status": "verified",
     "title": "FNF: Camellia Rude Blaster"
   },
-  "clfnfchara": {
-    "reason": "Engine splash, not the mod artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF Chara"
-  },
   "clfnfcitytales": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -3268,12 +2098,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: Classified"
-  },
-  "clfnfcrunchin": {
-    "reason": "Engine splash, not the mod artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Crunchin"
   },
   "clfnfdeciever": {
     "reason": "Captured mod menu with its own logo.",
@@ -3311,35 +2135,17 @@
     "status": "verified",
     "title": "FNF: Dustin"
   },
-  "clfnfdusttale": {
-    "reason": "Engine splash, not the mod artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Dusttale"
-  },
   "clfnffleetway": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: Fleetway"
   },
-  "clfnfflippedout": {
-    "reason": "Default engine menu shared across mods.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Flipped Out"
-  },
   "clfnffnaf1": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: FNAF 1"
-  },
-  "clfnffnaf2": {
-    "reason": "Engine splash, not the mod artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: FNAF 2"
   },
   "clfnffnaf3": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -3389,29 +2195,11 @@
     "status": "verified",
     "title": "FNF Hex"
   },
-  "clfnfholiday": {
-    "reason": "Engine splash, not the mod artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Holiday"
-  },
-  "clfnfhotline": {
-    "reason": "Default engine menu shared across mods.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Hotline"
-  },
   "clfnfhypnoslullaby": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: Hypno's Lullaby"
-  },
-  "clfnfimposter3": {
-    "reason": "Engine splash, not the mod artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Imposter 3"
   },
   "clfnfimposterv4": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -3443,12 +2231,6 @@
     "status": "verified",
     "title": "FNF: Jap Creepypasta"
   },
-  "clfnfmadnesspoop": {
-    "reason": "Non-identifying mod logo.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Madness Poop"
-  },
   "clfnfmaginagematches": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
@@ -3461,59 +2243,11 @@
     "status": "verified",
     "title": "FNF: Mario Madness D-Side"
   },
-  "clfnfmarioport": {
-    "reason": "Engine splash, not the mod artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Mario Port"
-  },
-  "clfnfmcmadness": {
-    "reason": "Default engine menu shared across mods.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: MC Madness"
-  },
   "clfnfmidfight": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: Mid Fight"
-  },
-  "clfnfmiku": {
-    "reason": "Engine credit splash, not the mod artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF Miku"
-  },
-  "clfnfmobmod": {
-    "reason": "Engine splash, not the mod artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Mob Mod"
-  },
-  "clfnfneo": {
-    "reason": "Default engine menu shared across mods.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF Neo"
-  },
-  "clfnfpiggyfield": {
-    "reason": "Press-enter gate, not the mod artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Piggy Field"
-  },
-  "clfnfpokepastaperdition": {
-    "reason": "Content warning gate, not the mod artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Pokepasta Perdition"
-  },
-  "clfnfqt": {
-    "reason": "Default engine menu shared across mods.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF QT"
   },
   "clfnfremnants": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -3526,24 +2260,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: Retrospecter"
-  },
-  "clfnfrevmixed": {
-    "reason": "Default engine menu shared across mods.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Rev Mixed"
-  },
-  "clfnfrewrite": {
-    "reason": "Default engine menu shared across mods.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Rewrite"
-  },
-  "clfnfrottensmoothie": {
-    "reason": "Artwork belongs to an unrelated franchise.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Rotten Smoothie"
   },
   "clfnfselfpaced": {
     "reason": "Captured mod artwork shows the actual title.",
@@ -3563,35 +2279,11 @@
     "status": "verified",
     "title": "FNF Shucks V2"
   },
-  "clfnfsky": {
-    "reason": "Default engine menu shared across mods.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF Sky"
-  },
   "clfnfsoft": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF Soft"
-  },
-  "clfnfsohv2": {
-    "reason": "Engine splash, not the mod artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: SOHV 2"
-  },
-  "clfnfsonicexe": {
-    "reason": "Content warning gate, not the mod artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Sonic.EXE"
-  },
-  "clfnfsonicexe4": {
-    "reason": "Engine splash, not the mod artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Sonic.EXE 4"
   },
   "clfnfstarlightmayhem": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -3622,12 +2314,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: Tricky"
-  },
-  "clfnftwiddlefinger": {
-    "reason": "Default engine menu shared across mods.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Twiddlefinger"
   },
   "clfnfundertale": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -3665,23 +2351,11 @@
     "status": "verified",
     "title": "FNF: Whitty"
   },
-  "clfnfzardy": {
-    "reason": "Default engine menu shared across mods.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FNF: Zardy"
-  },
   "clfolderdungeon": {
     "reason": "Captured gameplay shows the actual game.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Folder Dungeon"
-  },
-  "clfootballbros": {
-    "reason": "Artwork shows a different title than this entry.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Football Bros"
   },
   "clfootballlegends": {
     "reason": "Captured title screen shows the actual game.",
@@ -3689,23 +2363,11 @@
     "status": "verified",
     "title": "Football Legends"
   },
-  "clforknsausage": {
-    "reason": "Portal logo (SAWGAMES), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Fork n Sausage"
-  },
   "clfortzone": {
     "reason": "Captured title screen shows the actual game.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Fortzone"
-  },
-  "clfpa4p1": {
-    "reason": "Error page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "FPA 4 P1"
   },
   "clfpa4p2": {
     "reason": "Captured title screen shows the actual game.",
@@ -3718,12 +2380,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Free Rider"
-  },
-  "clfreerider3": {
-    "reason": "Portal logo (Kano Games), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Free Rider 3"
   },
   "clfunkinmix": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -3743,18 +2399,6 @@
     "status": "verified",
     "title": "Funny Battle 2"
   },
-  "clfunnymadracing": {
-    "reason": "Portal logo (Two Player Games), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Funny Mad Racing"
-  },
-  "clfunnyshooter2": {
-    "reason": "Image is effectively identical to the existing Funny Shooter 22 card; the previously verified artwork is kept.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Funny Shooter 2"
-  },
   "clfunnyshooter22": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
@@ -3767,29 +2411,11 @@
     "status": "verified",
     "title": "Fused 240"
   },
-  "clfzerox": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "F-Zero X"
-  },
   "clgachaverse": {
     "reason": "Captured game screen shows the actual title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Gachaverse"
-  },
-  "clgangstabean2": {
-    "reason": "Portal collage logo, not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Gangsta Bean 2"
-  },
-  "clgangsterbros": {
-    "reason": "Portal logo (Newgrounds), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Gangster Bros"
   },
   "clgarfcaughtinact": {
     "reason": "Captured title screen shows the actual game.",
@@ -3815,12 +2441,6 @@
     "status": "verified",
     "title": "Geometry Vibes"
   },
-  "clgeorgeandtheprinter": {
-    "reason": "Near-black scene with no visible game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "George and the Printer"
-  },
   "clgetawayshootout": {
     "reason": "Captured title screen shows the actual game.",
     "reviewed": "2026-11-27",
@@ -3844,12 +2464,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Get Yoked"
-  },
-  "clghosttrick": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Ghost Trick"
   },
   "clgimmietheairpod": {
     "reason": "Captured title screen shows the actual game.",
@@ -3875,12 +2489,6 @@
     "status": "verified",
     "title": "Goal South Africa"
   },
-  "clgobble": {
-    "reason": "Near-blank page with no game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Gobble"
-  },
   "clgoingballs": {
     "reason": "Captured gameplay shows the actual game.",
     "reviewed": "2026-11-27",
@@ -3892,12 +2500,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Gold Digger FRVR"
-  },
-  "clgoldensunnds": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Golden Sun NDS"
   },
   "clgoldminer": {
     "reason": "Captured title screen shows the actual game.",
@@ -3917,23 +2519,11 @@
     "status": "verified",
     "title": "Golf Orbit"
   },
-  "clgoodmonkeymart": {
-    "reason": "Fullscreen prompt page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Good Monkey Mart"
-  },
   "clgoogledino": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Google Dino"
-  },
-  "clgorillatag": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Gorilla Tag"
   },
   "clgrandactionsimulator-ny": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -3947,47 +2537,11 @@
     "status": "verified",
     "title": "Granddad"
   },
-  "clgrandescapeprison": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Grand Escape Prison"
-  },
-  "clgranny22": {
-    "reason": "Store badge, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Granny 22"
-  },
-  "clgranny3": {
-    "reason": "Portal logo (KIZ10), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Granny 3"
-  },
-  "clgrannycreepy": {
-    "reason": "Watermarked generic sketch, not this title's artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Granny Creepy"
-  },
   "clgrannynightmare": {
     "reason": "Captured gameplay shows the actual game.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Granny Nightmare"
-  },
-  "clgranturismo": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Gran Turismo"
-  },
-  "clgranturismo2": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Gran Turismo 2"
   },
   "clgrassmowing": {
     "reason": "Captured gameplay shows the actual game.",
@@ -4006,12 +2560,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Gravity Mod"
-  },
-  "clgrey-box-testing": {
-    "reason": "Test scene, not the released game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Grey Box Testing"
   },
   "clgrindcraft": {
     "reason": "Captured title screen shows the actual game.",
@@ -4043,18 +2591,6 @@
     "status": "verified",
     "title": "Grow Your Garden"
   },
-  "clgtaalty": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "GTA Alty"
-  },
-  "clgtachina": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "GTA China"
-  },
   "clguesstheiranswer": {
     "reason": "Captured gameplay shows the actual game.",
     "reviewed": "2026-11-27",
@@ -4078,30 +2614,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Guncho"
-  },
-  "clgunknight": {
-    "reason": "Advert inside the wrapper, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Gun Knight"
-  },
-  "clgunmayhem": {
-    "reason": "Publisher splash (Armor Games), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Gun Mayhem"
-  },
-  "clgunmayhem2goof": {
-    "reason": "Publisher splash (Armor Games), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Gun Mayhem 2 Goof"
-  },
-  "clgunmayhemredux": {
-    "reason": "Publisher splash (Armor Games), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Gun Mayhem Redux"
   },
   "clgunnight": {
     "reason": "Captured title screen shows the actual game.",
@@ -4132,12 +2644,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Hanger"
-  },
-  "clhanger2": {
-    "reason": "Coming-soon placeholder, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Hanger 2"
   },
   "clhappyroom": {
     "reason": "Captured gameplay shows the actual game.",
@@ -4181,12 +2687,6 @@
     "status": "verified",
     "title": "Helix Jump"
   },
-  "clhelltaker": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Helltaker"
-  },
   "clhelpnobrakes": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -4217,12 +2717,6 @@
     "status": "verified",
     "title": "Highway Racer 2"
   },
-  "clhighwaytraffic3d": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Highway Traffic 3D"
-  },
   "clhil-climbracing2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -4246,24 +2740,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Hipster Kickball"
-  },
-  "clhitsinglereal": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Hit Single Real"
-  },
-  "clhitstunfly": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Hitstun Fly"
-  },
-  "clhl2doom": {
-    "reason": "Loading progress screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "HL2 Doom"
   },
   "clhobo": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -4313,12 +2789,6 @@
     "status": "verified",
     "title": "Hobo vs Zombies"
   },
-  "clholebattle": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Hole Battle"
-  },
   "clholeio": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -4330,12 +2800,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Home Sheep Home"
-  },
-  "clhorrormickeymouse": {
-    "reason": "Engine splash, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Horror Mickey Mouse"
   },
   "clhotdogbush": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -4361,47 +2825,17 @@
     "status": "verified",
     "title": "Hover Racer Drive"
   },
-  "clhuggywuggypixel": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Huggy Wuggy Pixel"
-  },
   "clhungrylamu": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Hungry Lamu"
   },
-  "clhyppersandbox": {
-    "reason": "Publisher logo, not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Hypper Sandbox"
-  },
-  "clicantbelievegoogleflaggedmeforthenameofthefilelol": {
-    "reason": "Screen shown belongs to a different game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Icant Believe Google Flagged Me for the Name of the File LOL"
-  },
-  "clicedodo": {
-    "reason": "Error page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Icedodo"
-  },
   "clicefishing": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Ice Fishing"
-  },
-  "clicypurplehead": {
-    "reason": "Generic clock asset shared with other titles.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Icy Purple Head"
   },
   "clidlebreakout": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -4421,12 +2855,6 @@
     "status": "verified",
     "title": "Idle Football Manager"
   },
-  "clidleidlegamedev": {
-    "reason": "Loading overlay with no game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Idle Idle Game Dev"
-  },
   "clidleminertycoon": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -4439,23 +2867,11 @@
     "status": "verified",
     "title": "Impossible Quiz"
   },
-  "climpossiblequiz2": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Impossible Quiz 2"
-  },
   "clindiantrucksimiulator": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Indian Truck Simulator"
-  },
-  "clinkgame": {
-    "reason": "Non-identifying photograph, not game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Ink Game"
   },
   "clinnkeeper": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -4469,23 +2885,11 @@
     "status": "verified",
     "title": "Intellisphere"
   },
-  "clintospace": {
-    "reason": "Blank frame with no game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Into Space"
-  },
   "clintospace2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Into Space 2"
-  },
-  "clintospace3": {
-    "reason": "Publisher splash (Armor Games), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Into Space 3"
   },
   "cliqball": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -4505,23 +2909,11 @@
     "status": "verified",
     "title": "Irori"
   },
-  "clitgetssolonelyhere": {
-    "reason": "Tiny sprite on a blank field with no identifying content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "It Gets So Lonely Here"
-  },
   "cliwbtg": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "IWBTG"
-  },
-  "cljacksmithencryptedorsmthn": {
-    "reason": "Advert inside the wrapper, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Jack Smith Encrypted"
   },
   "cljailbreakobbbobob": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -4541,23 +2933,11 @@
     "status": "verified",
     "title": "Jazz Jackrabbit 2"
   },
-  "cljefflings": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Jefflings"
-  },
   "cljellydadhero": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Jelly Dad Hero"
-  },
-  "cljellydrift": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Jelly Drift"
   },
   "cljellymario": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -4583,12 +2963,6 @@
     "status": "verified",
     "title": "Jetrush"
   },
-  "cljetskiracing": {
-    "reason": "Portal logo (AZ Games), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Jet Ski Racing"
-  },
   "cljmocraft": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -4607,53 +2981,17 @@
     "status": "verified",
     "title": "Johnny Upgrade"
   },
-  "cljojobaps1": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "JoJo Baps 1"
-  },
-  "cljsvecx": {
-    "reason": "Emulator page, not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "JSVecx"
-  },
   "cljumpingshell": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Jumping Shell"
   },
-  "cljungledeerhunting": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Jungle Deer Hunting"
-  },
   "cljurassicpark": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Jurassic Park"
-  },
-  "cljustaplatformer": {
-    "reason": "License agreement page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Just a Platformer"
-  },
-  "cljustaplatformere": {
-    "reason": "License agreement page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Just a Platformer E"
-  },
-  "cljustaplatformere2": {
-    "reason": "Blank application shell, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Just a Platformer E2"
   },
   "cljustfalllol": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -4691,29 +3029,11 @@
     "status": "verified",
     "title": "Kart Bros"
   },
-  "clkeroseneclient": {
-    "reason": "License agreement page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Kerosene Client"
-  },
   "clkilltheiceagebabyadventure": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Kill the Ice Age Baby Adventure"
-  },
-  "clkingdomheartsdays": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Kingdom Hearts 358/2 Days"
-  },
-  "clkingdomheartsrecodedalt": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Kingdom Hearts Re:coded (Alt)"
   },
   "clkirbysoftandwet": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -4745,12 +3065,6 @@
     "status": "verified",
     "title": "Knightmare Tower"
   },
-  "clknockknock": {
-    "reason": "Near-black frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Knock Knock"
-  },
   "clkonkrio": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -4774,12 +3088,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Krillion"
-  },
-  "clks2teams": {
-    "reason": "Store badge, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "KS 2 Teams"
   },
   "cllambdaclient": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -4829,89 +3137,11 @@
     "status": "verified",
     "title": "Learn to Fly 2 Hacked"
   },
-  "cllearntofly3": {
-    "reason": "Advertisement overlay, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Learn to Fly 3"
-  },
-  "cllearntofly3debug": {
-    "reason": "Advertisement overlay, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Learn to Fly 3 Debug"
-  },
-  "cllearntoflyidle": {
-    "reason": "Error page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Learn to Fly Idle"
-  },
-  "cllearntoflyidlehack": {
-    "reason": "Portal splash (Kongregate), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Learn to Fly Idle Hack"
-  },
-  "cllegobatman": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "LEGO Batman"
-  },
-  "cllegobatman2superheroes": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "LEGO Batman 2: Superheroes"
-  },
-  "cllegoindianajones": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "LEGO Indiana Jones"
-  },
-  "cllegoindianajones2": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "LEGO Indiana Jones 2"
-  },
-  "cllegoninjago": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "LEGO Ninjago"
-  },
-  "cllegostarwars": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "LEGO Star Wars"
-  },
   "clletitconsume": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Let It Consume"
-  },
-  "clleveldevil": {
-    "reason": "Placeholder image literally labelled \"Icon\".",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Level Devil"
-  },
-  "clleverwarriors": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Lever Warriors"
-  },
-  "cllightitup": {
-    "reason": "Near-empty frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Light It Up"
   },
   "cllilrunmo": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -4942,30 +3172,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Los Angeles Shark"
-  },
-  "cllse": {
-    "reason": "Placeholder video player, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "LSE"
-  },
-  "clluckyblocks": {
-    "reason": "Portal logo (Unblocked Games G+), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Lucky Blocks"
-  },
-  "cllumberobby": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Lumber Obby"
-  },
-  "cllummm": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Lummm"
   },
   "clmadalinstuntcars": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -5021,12 +3227,6 @@
     "status": "verified",
     "title": "Madness Retaliation"
   },
-  "clmadnesss2010": {
-    "reason": "Near-black frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Madness 2010"
-  },
   "clmadnessstand": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -5057,18 +3257,6 @@
     "status": "verified",
     "title": "Mage Tower Idle"
   },
-  "clmagictiles3": {
-    "reason": "Logo belongs to an unrelated music company.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Magic Tiles 3"
-  },
-  "clmami": {
-    "reason": "Text-only mod intro, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Mami"
-  },
   "clmanagod": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -5080,12 +3268,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Marble Racer"
-  },
-  "clmari0": {
-    "reason": "Loading text screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Mari0"
   },
   "clmario64webgl": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -5111,18 +3293,6 @@
     "status": "verified",
     "title": "Mario Madness"
   },
-  "clmarvelvscapcomps1": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Marvel vs Capcom (PS1)"
-  },
-  "clmarvelvsstreetfighterjp": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Marvel vs Street Fighter JP"
-  },
   "clmaskedforcesunlimited": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -5135,29 +3305,11 @@
     "status": "verified",
     "title": "Mastermind World Conquerer"
   },
-  "clmatrixrampage": {
-    "reason": "Loading bar with no game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Matrix Rampage"
-  },
   "clmattv2": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Matt V2"
-  },
-  "clmcfpsfbhd": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "MCFP SF BHD"
-  },
-  "clmcraerally": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "McRae Rally"
   },
   "clmeatboyflash": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -5171,71 +3323,11 @@
     "status": "verified",
     "title": "Medieval Shark"
   },
-  "clmedievil": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "MediEvil"
-  },
-  "clmegacd": {
-    "reason": "Non-identifying sketch, not this title's artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Megacd"
-  },
-  "clmegachess": {
-    "reason": "Scattered pieces with no board; not recognizable.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Mega Chess"
-  },
-  "clmegaclient": {
-    "reason": "License agreement page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Mega Client"
-  },
-  "clmegaman8": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Mega Man 8"
-  },
   "clmegamanbasscftf": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Mega Man & Bass CFTF"
-  },
-  "clmegamanlegends": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Mega Man Legends"
-  },
-  "clmegamanlegends2": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Mega Man Legends 2"
-  },
-  "clmegamanx4": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Mega Man X4"
-  },
-  "clmegamanx5": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Mega Man X5"
-  },
-  "clmegamanx6": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Mega Man X6"
   },
   "clmelonplayground": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -5243,23 +3335,11 @@
     "status": "verified",
     "title": "Melon Playground"
   },
-  "clmeowuwu": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Meowuwu"
-  },
   "clmergeroundracers": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Merge Round Racers"
-  },
-  "clmetroidprimehunters": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Metroid Prime Hunters"
   },
   "clmiamishark": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -5290,18 +3370,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Minceraft I Not Mine V6"
-  },
-  "clmindwave": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Mind Wave"
-  },
-  "clminecaves": {
-    "reason": "Portal logo (KirO), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Mine Caves"
   },
   "clminecraft1-8-8": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -5345,59 +3413,17 @@
     "status": "verified",
     "title": "Mini Shooters"
   },
-  "clminitooth": {
-    "reason": "Placeholder video player, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Mini Tooth"
-  },
-  "clmiraginewar": {
-    "reason": "Portal splash (MoFunZone), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Mira Gin Ewar"
-  },
   "clmomoscrushers": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Momo Crushers"
   },
-  "clmonsterderby": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Monster Derby"
-  },
-  "clmonsterswing": {
-    "reason": "Engine splash, not the mod artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Monsters Wing"
-  },
-  "clmonstertracks": {
-    "reason": "Blank frame inside a tournament page.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Monster Tracks"
-  },
   "clmonstertruckcurfew": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Monster Truck Curfew"
-  },
-  "clmonstertruckportstunt": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Monster Truck Port Stunt"
-  },
-  "clmortkom4": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Mort Kom 4"
   },
   "clmotherload": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -5453,12 +3479,6 @@
     "status": "verified",
     "title": "Mountain Bike Racer"
   },
-  "clmrmine": {
-    "reason": "Terms page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Mr. Mine"
-  },
   "clmrracer": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -5476,12 +3496,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Mutilate a Doll"
-  },
-  "clmxoffroadmaster": {
-    "reason": "Portal logo (Two Player Games), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "MX Off Road Master"
   },
   "clmyteardrop": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -5513,12 +3527,6 @@
     "status": "verified",
     "title": "NBA Live 2000"
   },
-  "clnbalive2003": {
-    "reason": "Publisher splash (EA Sports), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "NBA Live 2003"
-  },
   "clnblox": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -5542,12 +3550,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "NES World Champion"
-  },
-  "clnetattack": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Net Attack"
   },
   "clneverendinglegacy": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -5573,23 +3575,11 @@
     "status": "verified",
     "title": "Next Door"
   },
-  "clngon-1": {
-    "reason": "Near-black frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "N-gon"
-  },
   "clnguidle": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "NGU Idle"
-  },
-  "clnhl98": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "NHL 98"
   },
   "clnickelodeonsuperbrawl2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -5615,18 +3605,6 @@
     "status": "verified",
     "title": "Nimrods"
   },
-  "clninjaobbyparkor": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Ninja Obby Parkour"
-  },
-  "clnitclient": {
-    "reason": "License agreement page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Nit Client"
-  },
   "clnitromemustdie": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -5644,18 +3622,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Not Your Pawn"
-  },
-  "clnovaclient": {
-    "reason": "Publisher logo (Mojang), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Nova Client"
-  },
-  "clnubbysnumberfactory": {
-    "reason": "Download prompt with no game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Nubby's Number Factory"
   },
   "clnullkevin": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -5686,12 +3652,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Obby: 99 Will Lose"
-  },
-  "clobby1jumpperclick": {
-    "reason": "Advert-laden page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Obby: 1 Jump Per Click"
   },
   "clobby456": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -5729,12 +3689,6 @@
     "status": "verified",
     "title": "Obby: Slide"
   },
-  "clobbyswing": {
-    "reason": "Store badge, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Obby: Swing"
-  },
   "clobbyyardsale": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -5746,24 +3700,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Obey the Game"
-  },
-  "cloddbotout": {
-    "reason": "Near-empty frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Odd Bot Out"
-  },
-  "cloddfuture": {
-    "reason": "Screen shown belongs to a different game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Odd Future"
-  },
-  "clofflineparadise": {
-    "reason": "Non-identifying sprite sheet on a dark background.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Offline Paradise"
   },
   "clohflip": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -5819,12 +3755,6 @@
     "status": "verified",
     "title": "Opposite Day"
   },
-  "clorangeroulette": {
-    "reason": "Near-black frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Orange Roulette"
-  },
   "clorbofcreation": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -5848,12 +3778,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Outhold"
-  },
-  "cloutnumbered": {
-    "reason": "Default engine menu shared across mods.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Outnumbered"
   },
   "cloverburden": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -5885,18 +3809,6 @@
     "status": "verified",
     "title": "Pac-Man World 3"
   },
-  "clpacmanworldpsx": {
-    "reason": "Publisher splash (Namco), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pac-Man World (PSX)"
-  },
-  "clpandameic2": {
-    "reason": "Play overlay on a blank page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Panda Mei C 2"
-  },
   "clpapabakeria": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -5920,96 +3832,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Papa Louie: When Burgers Attack"
-  },
-  "clpapalouiewhenpizzasattack": {
-    "reason": "Store promo banner for a different title, not this game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Papa Louie: When Pizzas Attack"
-  },
-  "clpapalouiewhensundaesattack": {
-    "reason": "Store promo banner for a different title, not this game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Papa Louie: When Sundaes Attack"
-  },
-  "clpapapizzagood": {
-    "reason": "Store promo banner for a different title, not this game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Papa's Pizzeria"
-  },
-  "clpapapizzamamamia": {
-    "reason": "Store promo banner for a different title, not this game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Papa's Pizzeria (Mama Mia)"
-  },
-  "clpapasburgeriiiaaaaa": {
-    "reason": "Store promo banner for a different title, not this game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Papa's Burgeria"
-  },
-  "clpapascheeseria": {
-    "reason": "Store promo banner for a different title, not this game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Papa's Cheeseria"
-  },
-  "clpapascupcakeria": {
-    "reason": "Store promo banner for a different title, not this game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Papa's Cupcakeria"
-  },
-  "clpapasfreezeria": {
-    "reason": "Store promo banner for a different title, not this game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Papa's Freezeria"
-  },
-  "clpapashotdoggeria": {
-    "reason": "Store promo banner for a different title, not this game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Papa's Hot Doggeria"
-  },
-  "clpapaspancakeria": {
-    "reason": "Store promo banner for a different title, not this game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Papa's Pancakeria"
-  },
-  "clpapaspastaria": {
-    "reason": "Store promo banner for a different title, not this game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Papa's Pastaria"
-  },
-  "clpapasscooperia": {
-    "reason": "Store promo banner for a different title, not this game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Papa's Scooperia"
-  },
-  "clpapassushiria": {
-    "reason": "Store promo banner for a different title, not this game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Papa's Sushiria"
-  },
-  "clpapastacomia": {
-    "reason": "Store promo banner for a different title, not this game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Papa's Taco Mia"
-  },
-  "clpapaswingeria": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Papa's Wingeria"
   },
   "clpaperio": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -6047,12 +3869,6 @@
     "status": "verified",
     "title": "Parking Fury 3"
   },
-  "clparkingrush": {
-    "reason": "Non-identifying letter icon, not recognizable as the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Parking Rush"
-  },
   "clpeacekeeper": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -6077,47 +3893,11 @@
     "status": "verified",
     "title": "Penguin Pass"
   },
-  "clpepsimanalt": {
-    "reason": "Near-black frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pepsi Man (Alt)"
-  },
   "clperfecthotel": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Perfect Hotel"
-  },
-  "clpersona2alt": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Persona 2 (Alt)"
-  },
-  "clpersonaalt": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Persona (Alt)"
-  },
-  "clpetworld": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pet World"
-  },
-  "clphasma": {
-    "reason": "Portal logo (Unblocked Games G+), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Phasma"
-  },
-  "clpibbyapocalypse": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pibby Apocalypse"
   },
   "clpiclient": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6131,23 +3911,11 @@
     "status": "verified",
     "title": "Pico-8"
   },
-  "clpico8edu": {
-    "reason": "Blank frame with no game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pico-8 Edu"
-  },
   "clpicohot": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Picohot"
-  },
-  "clpikwip": {
-    "reason": "Non-identifying abstract blocks, not game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pikwip"
   },
   "clpingpongchaos": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6160,12 +3928,6 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Pink Bike"
-  },
-  "clpint": {
-    "reason": "Near-empty frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pint"
   },
   "clpitof100trials": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6221,18 +3983,6 @@
     "status": "verified",
     "title": "Pixel Warfare"
   },
-  "clpizzapapa": {
-    "reason": "Store promo banner for a different title, not this game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pizza Papa"
-  },
-  "clplanetlife": {
-    "reason": "Near-black frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Planet Life"
-  },
   "clplangman": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -6245,47 +3995,17 @@
     "status": "verified",
     "title": "Plants vs. Zombies"
   },
-  "clplazmaburst": {
-    "reason": "Portal splash (Coolbuddy), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Plazma Burst"
-  },
-  "clplinko": {
-    "reason": "Near-empty frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Plinko"
-  },
   "clplonky": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Plonky"
   },
-  "clpogo3d": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Pogo 3D"
-  },
-  "clpokeacademylifeforever": {
-    "reason": "Tiny sprite on a blank field; not recognizable at card size.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Poke Academy Life Forever"
-  },
   "clpokeallin": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Poke All In"
-  },
-  "clpokeblack2alt": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pokemon Black 2 (Alt)"
   },
   "clpokeclassic": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6311,12 +4031,6 @@
     "status": "verified",
     "title": "Pokemon Dream Stone"
   },
-  "clpokeeliteredux": {
-    "reason": "Generic overworld tile with no identifying content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pokemon Elite Redux"
-  },
   "clpokeelysiuma": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -6328,30 +4042,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pokemon Elysium B"
-  },
-  "clpokeemeraldenhanced": {
-    "reason": "Generic overworld tile with no identifying content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pokemon Emerald Enhanced"
-  },
-  "clpokeemeraldexceeded": {
-    "reason": "Generic overworld tile with no identifying content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pokemon Emerald Exceeded"
-  },
-  "clpokeemeraldhorizons": {
-    "reason": "Generic overworld tile with no identifying content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pokemon Emerald Horizons"
-  },
-  "clpokeemeraldz": {
-    "reason": "Generic overworld tile with no identifying content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pokemon Emerald Z"
   },
   "clpokefiregold": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6365,23 +4055,11 @@
     "status": "verified",
     "title": "Pokemon Fused Dimension"
   },
-  "clpokegoldenshield": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pokemon Golden Shield"
-  },
   "clpokegschronicles": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Poke GS Chronicles"
-  },
-  "clpokeheartgoldgenerations": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Poke HeartGold Generations"
   },
   "clpokemontowerdefense": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6389,47 +4067,17 @@
     "status": "verified",
     "title": "Pokemon Tower Defense"
   },
-  "clpokemonvolume3": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pokemon Volume 3"
-  },
-  "clpokemonvolume4": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pokemon Volume 4"
-  },
   "clpokeodyssey": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pokemon Odyssey"
   },
-  "clpokepasta": {
-    "reason": "Near-black frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pokemon Pasta"
-  },
-  "clpokeperfectfirered": {
-    "reason": "Generic overworld tile with no identifying content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pokemon Perfect FireRed"
-  },
   "clpokepisces": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pokemon Pisces"
-  },
-  "clpokerechargedpink": {
-    "reason": "Generic overworld tile with no identifying content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pokemon Recharged Pink"
   },
   "clpokerechargedyellow": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6442,12 +4090,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pokemon Record Keepers"
-  },
-  "clpokerenegadeplat": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pokemon Renegade Platinum"
   },
   "clpokerocketedition": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6473,47 +4115,17 @@
     "status": "verified",
     "title": "Pokemon Unova Emerald"
   },
-  "clpokevoltwhite2redux": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pokemon Volt White 2 Redux"
-  },
-  "clpokewhite": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pokemon White"
-  },
-  "clpokewhite2alt": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pokemon White 2 (Alt)"
-  },
   "clpolicepursuit2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Police Pursuit 2"
   },
-  "clpolishedcrystal": {
-    "reason": "Generic overworld tile with no identifying content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pokemon Polished Crystal"
-  },
   "clpolytrackworksnow": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Polytrack (working)"
-  },
-  "clpomgetsinternet": {
-    "reason": "Transparent placeholder frame, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pom Gets Internet"
   },
   "clpoorbunny": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -6545,23 +4157,11 @@
     "status": "verified",
     "title": "Postal"
   },
-  "clpotatomanseeksthetroof": {
-    "reason": "Portal splash (Pogo), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Potato Man Seeks the Troof"
-  },
   "clpou": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pou"
-  },
-  "clpowerslave": {
-    "reason": "Error page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "PowerSlave"
   },
   "clprebronzeage": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6587,41 +4187,11 @@
     "status": "verified",
     "title": "Prestige Tree"
   },
-  "clprimary": {
-    "reason": "Publisher splash (Armor Games), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Primary"
-  },
   "clprismclient": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Prism Client"
-  },
-  "clprocessortycoon": {
-    "reason": "Near-black frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Processor Tycoon"
-  },
-  "clprofessorlaytonandthecuriousvillage": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Professor Layton and the Curious Village"
-  },
-  "clpumpkinrun": {
-    "reason": "Near-black frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Pumpkin Run"
-  },
-  "clpunchthetrump": {
-    "reason": "Unrelated splash with no game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Punch the Trump"
   },
   "clpuppethockey": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -6653,12 +4223,6 @@
     "status": "verified",
     "title": "PvZ 2: Gardenless"
   },
-  "clquake": {
-    "reason": "Error page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Quake"
-  },
   "clquantumclicker": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -6670,12 +4234,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "QWOP"
-  },
-  "clracemaster3d": {
-    "reason": "Portal logo (SAWGAMES), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Race Master 3D"
   },
   "clraftwars": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6694,12 +4252,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Ragdoll.io"
-  },
-  "clragdollachivement": {
-    "reason": "Watermarked generic sketch, not this title's artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Ragdoll Achievement"
   },
   "clragdollarchers": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6737,12 +4289,6 @@
     "status": "verified",
     "title": "Ragdoll Hit"
   },
-  "clrainbowsixalt": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Rainbow Six (Alt)"
-  },
   "clraldiscrackhouse": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -6773,23 +4319,11 @@
     "status": "verified",
     "title": "Raze 2"
   },
-  "clre3": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Resident Evil 3"
-  },
   "clreachthecore": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Reach the Core"
-  },
-  "clreacticore": {
-    "reason": "Instructional page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Reacticore"
   },
   "clrealflightsim": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6821,12 +4355,6 @@
     "status": "verified",
     "title": "Recoil"
   },
-  "clredball3": {
-    "reason": "Near-empty frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Red Ball 3"
-  },
   "clredball4": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
@@ -6857,18 +4385,6 @@
     "status": "verified",
     "title": "Red Tie Runner"
   },
-  "clredvsbluewar": {
-    "reason": "Publisher logo, not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Red vs Blue War"
-  },
-  "clreignofcentipede": {
-    "reason": "Portal logo (Max Games), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Reign of Centipede"
-  },
   "clrepobad": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -6881,35 +4397,11 @@
     "status": "verified",
     "title": "Resent Client"
   },
-  "clresidentevil": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Resident Evil"
-  },
-  "clresidentevil2d1": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Resident Evil 2D 1"
-  },
-  "clresidentevil2d2": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Resident Evil 2D 2"
-  },
   "clresizer": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Resizer"
-  },
-  "clresortempire": {
-    "reason": "Portal splash (GamesFree), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Resort Empire"
   },
   "clretrobowlcollege": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6922,24 +4414,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Retro Highway"
-  },
-  "clreturnman": {
-    "reason": "Portal logo (Arcade), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Return Man"
-  },
-  "clreturnman2": {
-    "reason": "Portal logo (Arcade), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Return Man 2"
-  },
-  "clreturntoriddleschool": {
-    "reason": "Near-black frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Return to Riddle School"
   },
   "clrevolutionidle": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6958,12 +4432,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Rh"
-  },
-  "clrhythymymheaven": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Rhythm Heaven (Alt)"
   },
   "clriddle": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7001,12 +4469,6 @@
     "status": "verified",
     "title": "Riddle Transfer"
   },
-  "clriddletransfer2": {
-    "reason": "Credits text screen, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Riddle Transfer 2"
-  },
   "clrisehigher": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -7025,12 +4487,6 @@
     "status": "verified",
     "title": "Road Fighter"
   },
-  "clroadoffury": {
-    "reason": "Error page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Road of Fury"
-  },
   "clrocketgoalio": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -7043,12 +4499,6 @@
     "status": "verified",
     "title": "Rocket Jump"
   },
-  "clrocketleague": {
-    "reason": "Instructional credits screen, not game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Rocket League"
-  },
   "clrocketsoccerderby": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -7060,24 +4510,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Rodha"
-  },
-  "clroguesoul": {
-    "reason": "Publisher purchase prompt, not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Rogue Soul"
-  },
-  "clroguesoul2": {
-    "reason": "Publisher purchase prompt, not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Rogue Soul 2"
-  },
-  "clrollerballer": {
-    "reason": "Near-empty frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Rollerballer"
   },
   "clrollingsky": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7114,12 +4546,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Room Clicker"
-  },
-  "clrosegold": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Rose Gold"
   },
   "clrotate": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7187,18 +4613,6 @@
     "status": "verified",
     "title": "Sandboxels"
   },
-  "clsandsofthecoliseum": {
-    "reason": "Near-black frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Sands of the Coliseum"
-  },
-  "clsandstone-1": {
-    "reason": "Near-black frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Sandstone"
-  },
   "clsandtris": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -7223,18 +4637,6 @@
     "status": "verified",
     "title": "Saul Goodman Run"
   },
-  "clsausageflip": {
-    "reason": "Portal wordmark (bestgames.com), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Sausage Flip"
-  },
-  "clsayorisnotebook": {
-    "reason": "Engine splash, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Sayori's Notebook"
-  },
   "clscalethedepths": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -7247,47 +4649,17 @@
     "status": "verified",
     "title": "Scampton the Great Fight"
   },
-  "clscaryshawarma": {
-    "reason": "Non-identifying text page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Scary Shawarma"
-  },
   "clscaryteacher3d": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Scary Teacher 3D"
   },
-  "clschoolboyrunaway": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Schoolboy Runaway"
-  },
-  "clscrapmetal3": {
-    "reason": "Engine splash (Unity), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Scrap Metal 3"
-  },
-  "clscratchoptions": {
-    "reason": "Launcher options page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Scratch Options"
-  },
   "clscubabear": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Scuba Bear"
-  },
-  "clsd-thewar": {
-    "reason": "Portal logo (Two Player Games), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "SD: The War"
   },
   "clseamongrel": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7307,29 +4679,11 @@
     "status": "verified",
     "title": "Sere Nitro Ve"
   },
-  "clsevendays": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Seven Days"
-  },
-  "clsfk": {
-    "reason": "Publisher splash (BigDino), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "SFK"
-  },
   "clsfk2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "SFK 2"
-  },
-  "clsfklaststand": {
-    "reason": "Blank frame with no game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "SFK Last Stand"
   },
   "clsfkleague": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7337,35 +4691,11 @@
     "status": "verified",
     "title": "SFK League"
   },
-  "clshadowcourier": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Shadow Courier"
-  },
   "clshaggy--1": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Shaggy"
-  },
-  "clshapetransform": {
-    "reason": "Page notice with no game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Shape Transform"
-  },
-  "clshiftatmidnight": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Shift at Midnight"
-  },
-  "clshinmegamitenseidevilsurvivor": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Shin Megami Tensei: Devil Survivor"
   },
   "clshoppingcarthero": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7403,41 +4733,17 @@
     "status": "verified",
     "title": "Sierra 7"
   },
-  "clsilenthillalt": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Silent Hill (Alt)"
-  },
   "clsilk": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Silk"
   },
-  "clsilkmelody": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Silk Melody"
-  },
   "clsiloshowdow": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Silo Showdown"
-  },
-  "clsilver": {
-    "reason": "Engine splash, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Silver"
-  },
-  "clsinglefile": {
-    "reason": "Non-identifying table interface, not game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Single File"
   },
   "clsixwaystodie": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7463,12 +4769,6 @@
     "status": "verified",
     "title": "Skinwalker"
   },
-  "clskyfactory": {
-    "reason": "Publisher logo (Mojang), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Sky Factory"
-  },
   "clskyrace-3d": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -7487,12 +4787,6 @@
     "status": "verified",
     "title": "Skywire 2"
   },
-  "clslendytubbies": {
-    "reason": "Text-only warning page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Slendytubbies"
-  },
   "clsliceitall": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -7504,12 +4798,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Slide in the Woods"
-  },
-  "clslimelabratory": {
-    "reason": "Publisher splash (Armor Games), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Slime Laboratory"
   },
   "clslitherio": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7541,12 +4829,6 @@
     "status": "verified",
     "title": "Slot or Not"
   },
-  "clslowroads": {
-    "reason": "Report page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Slow Roads"
-  },
   "clsm63redux": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -7559,41 +4841,11 @@
     "status": "verified",
     "title": "SM64: Hidden Stars"
   },
-  "clsm64land": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "SM64 Land"
-  },
-  "clsmashkarts": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Smash Karts"
-  },
   "clsmashkartsworking": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Smash Karts (Working)"
-  },
-  "clsmashremix2-0-1": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Smash Remix 2.0.1"
-  },
-  "clsmb12": {
-    "reason": "Login page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "SMB 12"
-  },
-  "clsmbc": {
-    "reason": "Text page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "SMBC"
   },
   "clsmbcrossover": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7667,18 +4919,6 @@
     "status": "verified",
     "title": "Snowboard Obby"
   },
-  "clsnowdrift": {
-    "reason": "Error page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Snowdrift"
-  },
-  "clsnowrideee": {
-    "reason": "Changelog text page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Snow Ride Ee"
-  },
   "clsnowrider": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
@@ -7690,30 +4930,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Snow Rider Rrr"
-  },
-  "clsnowroad": {
-    "reason": "Platform splash (GameJolt), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Snow Road"
-  },
-  "clsoccerbros": {
-    "reason": "Tiny generic ball on a blank field; not recognizable as the title.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Soccer Bros"
-  },
-  "clsoccerrandomgood": {
-    "reason": "Placeholder video player, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Soccer Random Good"
-  },
-  "clsodasimulator": {
-    "reason": "Text page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Soda Simulator"
   },
   "clsolarclient": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7733,41 +4949,17 @@
     "status": "verified",
     "title": "Solar Smash"
   },
-  "clsolatrobo": {
-    "reason": "Publisher splash, not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Solataire Bo"
-  },
   "clsolitaire": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Solitaire"
   },
-  "clsonic3dblast": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Sonic 3D Blast"
-  },
-  "clsoniccd": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Sonic CD"
-  },
   "clsoniccdmobile": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Sonic CD Mobile"
-  },
-  "clsoniceexeog": {
-    "reason": "Loading spinner with no game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Sonic.exe OG"
   },
   "clsonicerazor": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7787,12 +4979,6 @@
     "status": "verified",
     "title": "Sonic Mania Plus"
   },
-  "clsonicralt": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Sonic R (Alt)"
-  },
   "clsonicrevert": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -7805,29 +4991,11 @@
     "status": "verified",
     "title": "Sort the Court"
   },
-  "clsotn": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Castlevania: Symphony of the Night"
-  },
-  "clsovereignoftheskys": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Sovereign of the Skys"
-  },
   "clspacebarclicker": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Spacebar Clicker"
-  },
-  "clspacecompany": {
-    "reason": "Near-black screenshot with no identifying content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Space Company"
   },
   "clspaceiskey": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7877,47 +5045,17 @@
     "status": "verified",
     "title": "Speed Stars"
   },
-  "clspidermanps1": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Spider-Man (PS1)"
-  },
-  "clspiritsofhell": {
-    "reason": "Engine splash, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Spirits of Hell"
-  },
   "clspongebobpowerkartgrandprix": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "SpongeBob Power Kart Grand Prix"
   },
-  "clsportsheadsicehockey": {
-    "reason": "Blank frame with no game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Sports Heads Ice Hockey"
-  },
-  "clsprinter": {
-    "reason": "Generic play button, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Sprinter"
-  },
   "clsprunked": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Sprunked"
-  },
-  "clsprunki": {
-    "reason": "Error page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Sprunki"
   },
   "clsprunkiclicker": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7985,12 +5123,6 @@
     "status": "verified",
     "title": "Station Saturn"
   },
-  "clsteakandjake": {
-    "reason": "Near-empty frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Steak and Jake"
-  },
   "clstealbrainrot": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -8033,23 +5165,11 @@
     "status": "verified",
     "title": "Stick Fighter"
   },
-  "clstickjetchallenge": {
-    "reason": "Asset does not correspond to the game title.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Stick Jet Challenge"
-  },
   "clstickmanclash": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Stickman Clash"
-  },
-  "clstickmanduel": {
-    "reason": "License text page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Stickman Duel"
   },
   "clstickmangtacity": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8068,12 +5188,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Stickman Kombat 2D"
-  },
-  "clstickmanstealingdiamond": {
-    "reason": "Watermarked sketch, not this title's artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Henry Stickmin: Stealing the Diamond"
   },
   "clstickminairship": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8105,12 +5219,6 @@
     "status": "verified",
     "title": "Stick RPG Complete"
   },
-  "clstickslasher": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Stick Slasher"
-  },
   "clstickwar": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -8135,41 +5243,17 @@
     "status": "verified",
     "title": "Storm the House"
   },
-  "clstormthehouse2": {
-    "reason": "Error page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Storm the House 2"
-  },
   "clstormthehouse3": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Storm the House 3"
   },
-  "clstrangejournet": {
-    "reason": "Text page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Strange Journey"
-  },
-  "clstreangeropepolice": {
-    "reason": "Options screen with no game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Strange Rope Police"
-  },
   "clstreetfighterumuhsomething": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Street Fighter Umuh Something"
-  },
-  "clstrikeforceheroes": {
-    "reason": "Near-black frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Strike Force Heroes"
   },
   "clstrikeforceheroes2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8189,29 +5273,11 @@
     "status": "verified",
     "title": "Striker Dummies"
   },
-  "clstylesavvy": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Style Savvy"
-  },
-  "clsubwaysurfersbeijing": {
-    "reason": "Generic tip overlay shared across titles.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Subway Surfers: Beijing"
-  },
   "clsubwaysurfersberlin": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Subway Surfers: Berlin"
-  },
-  "clsubwaysurfersbuenosaires": {
-    "reason": "Generic tip overlay shared across titles.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Subway Surfers: Buenos Aires"
   },
   "clsubwaysurfershavana": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8225,53 +5291,11 @@
     "status": "verified",
     "title": "Subway Surfers: Houston"
   },
-  "clsubwaysurfersiceland": {
-    "reason": "Generic tip overlay shared across titles.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Subway Surfers: Iceland"
-  },
   "clsubwaysurferslondon": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Subway Surfers: London"
-  },
-  "clsubwaysurfersmexico": {
-    "reason": "Generic tip overlay shared across titles.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Subway Surfers: Mexico"
-  },
-  "clsubwaysurfersmiami": {
-    "reason": "Generic tip overlay shared across titles.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Subway Surfers: Miami"
-  },
-  "clsubwaysurfersmonaco": {
-    "reason": "Generic tip overlay shared across titles.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Subway Surfers: Monaco"
-  },
-  "clsubwaysurfersneworeleans": {
-    "reason": "Generic tip overlay shared across titles.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Subway Surfers: New Oreleans"
-  },
-  "clsubwaysurferssanfrancisco--1": {
-    "reason": "Generic tip overlay shared across titles.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Subway Surfers: San Francisco"
-  },
-  "clsubwaysurfersstpetersburg": {
-    "reason": "Generic tip overlay shared across titles.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Subway Surfers: St Petersburg"
   },
   "clsubwaysurferswinterholiday": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8279,29 +5303,11 @@
     "status": "verified",
     "title": "Subway Surfers: Winter Holiday"
   },
-  "clsubwaysurferszurich": {
-    "reason": "Generic tip overlay shared across titles.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Subway Surfers: Zurich"
-  },
-  "clsugarsugar": {
-    "reason": "Single weapon on black; not recognizable as the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Sugar Sugar"
-  },
   "clsugaryspire": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Sugary Spire"
-  },
-  "clsuika": {
-    "reason": "Engine splash (Unity), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Suika"
   },
   "clsummerrider": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8363,29 +5369,11 @@
     "status": "verified",
     "title": "Superhotline Miami"
   },
-  "clsuperhouseofdeadninjas": {
-    "reason": "Near-black frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Super House of Dead Ninjas"
-  },
-  "clsuperkidadventure": {
-    "reason": "Generic clock asset shared with another title.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Super Kid Adventure"
-  },
   "clsuperliquidsoccer": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Super Liquid Soccer"
-  },
-  "clsupermario63": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Super Mario 63"
   },
   "clsupermariobros": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8405,12 +5393,6 @@
     "status": "verified",
     "title": "Super Onion Boy 2"
   },
-  "clsuperpuzzlefighter2turboalt": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Super Puzzle Fighter 2 Turbo (Alt)"
-  },
   "clsupersantakicker": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
@@ -8429,24 +5411,6 @@
     "status": "verified",
     "title": "Super Smash Flash"
   },
-  "clsupersmashflash0-8": {
-    "reason": "Error page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Super Smash Flash 0.8"
-  },
-  "clsupersmashflash2": {
-    "reason": "Blank frame with a play button; not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Super Smash Flash 2"
-  },
-  "clsupersmashflash2butdifversion": {
-    "reason": "Blank frame with a play button; not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Super Smash Flash 2 (Alt Version)"
-  },
   "clsupitdept": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -8459,12 +5423,6 @@
     "status": "verified",
     "title": "Supreme Duelist"
   },
-  "clsupremeduelist2019": {
-    "reason": "Publisher logo, not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Supreme Duelist 2019"
-  },
   "clsurvevio": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -8476,12 +5434,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Survival Race V2"
-  },
-  "clsurvivorio": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Survivor.io"
   },
   "clsushicat": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8507,12 +5459,6 @@
     "status": "verified",
     "title": "Swerve"
   },
-  "clswingforbrainrots": {
-    "reason": "Shows an unrelated Classroom Center lunch icon.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Swing for Brain Rots"
-  },
   "clswitchblade": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -8531,29 +5477,11 @@
     "status": "verified",
     "title": "Swords and Sandals"
   },
-  "clswordsandsandals2": {
-    "reason": "Unrelated splash page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Swords and Sandals 2"
-  },
-  "clswordsandsouls": {
-    "reason": "Arcade warning splash, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Swords and Souls"
-  },
   "clsydneyshark": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Sydney Shark"
-  },
-  "cltabi": {
-    "reason": "Near-empty text frame, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Tabi"
   },
   "cltabletanks": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8585,29 +5513,11 @@
     "status": "verified",
     "title": "Tag CM"
   },
-  "cltailofthedragon": {
-    "reason": "Tiny icon on a blank field; no recognizable detail at card size.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Tail of the Dragon"
-  },
   "cltaisei": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Taisei"
-  },
-  "cltakeover": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Takeover"
-  },
-  "cltallio": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Tall.io"
   },
   "cltallmanrun": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8626,12 +5536,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Tank Pixel"
-  },
-  "cltanktrouble": {
-    "reason": "Error page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Tank Trouble"
   },
   "cltanukisunset": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8657,41 +5561,17 @@
     "status": "verified",
     "title": "Tasty Planet"
   },
-  "cltboidemo": {
-    "reason": "Screen shown belongs to a different game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "The Binding of Isaac Demo"
-  },
-  "cltboilambeternal": {
-    "reason": "Screen shown belongs to a different game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "The Binding of Isaac: Lamb Eternal"
-  },
   "cltelephonetrouble": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Telephone Trouble"
   },
-  "cltempleofboom": {
-    "reason": "Portal logo (Player.com), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Temple of Boom"
-  },
   "cltempoverdose": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Tempo Overdose"
-  },
-  "clteod": {
-    "reason": "Download/extract screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Teod"
   },
   "clterritorialio": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8717,29 +5597,11 @@
     "status": "verified",
     "title": "Territory War 3"
   },
-  "clthanksforremindingmeihadtofixthis": {
-    "reason": "Blank frame with a play button; not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Thanks for Reminding Mei Had to Fix This"
-  },
   "cltheclassroom": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "The Classroom"
-  },
-  "cltheclassroom2": {
-    "reason": "Portal logo (Flash Portal), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "The Classroom 2"
-  },
-  "cltheclassroom3": {
-    "reason": "Unrelated splash, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "The Classroom 3"
   },
   "clthedeepestsleep": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8771,47 +5633,17 @@
     "status": "verified",
     "title": "The Last Stand: Union City"
   },
-  "clthemaninthewindow": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "The Man in the Window"
-  },
-  "clthemeparkpsx": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Theme Park (PSX)"
-  },
-  "clthereisnofile": {
-    "reason": "Generic template site icon (cog with \"2\"), not this title\u2019s artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "There Is No File"
-  },
   "clthesodorrace": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "The Sodor Race"
   },
-  "clthesunforthevampire": {
-    "reason": "Portal logo (Kiz10), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "The Sun for the Vampire"
-  },
   "cltheyarecoming": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "They Are Coming"
-  },
-  "clthisistheonlylevel2": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "This Is the Only Level 2"
   },
   "clthisistheonlyleveltoo": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8866,12 +5698,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Tomb of the Mass"
-  },
-  "cltommorowandyesterday": {
-    "reason": "Instructional text screen, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Tomorrow and Yesterday"
   },
   "cltopspeedracing3d": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8951,12 +5777,6 @@
     "status": "verified",
     "title": "Tralalero Escape"
   },
-  "cltrappedwithjester": {
-    "reason": "Tiny sprite on a blank field; not recognizable as the title.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Trapped with Jester"
-  },
   "cltrapthecat": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -8986,42 +5806,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Trivia Crack"
-  },
-  "cltrollfacequest1": {
-    "reason": "Error page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Troll Face Quest 1"
-  },
-  "cltrollfacequest10": {
-    "reason": "Error page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Troll Face Quest 10"
-  },
-  "cltrollfacequest11": {
-    "reason": "Error page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Troll Face Quest 11"
-  },
-  "cltrollfacequest12": {
-    "reason": "Error page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Troll Face Quest 12"
-  },
-  "cltrollfacequest13": {
-    "reason": "Error page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Troll Face Quest 13"
-  },
-  "cltrollfacequest2": {
-    "reason": "Error page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Troll Face Quest 2"
   },
   "cltrucksim": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -9064,12 +5848,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Tunnel Rush (Better)"
-  },
-  "cltupertariotros": {
-    "reason": "Near-black frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Tupertariotros"
   },
   "clturbostars": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -9119,24 +5897,6 @@
     "status": "verified",
     "title": "Ultimate Car Driving Simulator"
   },
-  "clultrakill": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "ULTRAKILL"
-  },
-  "clumjammerlammy": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Um Jammer Lammy"
-  },
-  "clumstickmangameidkiforgor": {
-    "reason": "Screen shown belongs to a different application.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Umstickman Game (I Forgot)"
-  },
   "cluncannycatgolf": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
@@ -9154,18 +5914,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Undertale LB"
-  },
-  "clundertaler": {
-    "reason": "Error page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Undertale R"
-  },
-  "clundertaleyellow": {
-    "reason": "Effectively blank yellow crop with no identifying content.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Undertale Yellow"
   },
   "clunfairmarioworkquestionmark": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -9209,23 +5957,11 @@
     "status": "verified",
     "title": "Untitled Goose Game"
   },
-  "clupgradecomplete": {
-    "reason": "Near-blank page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Upgrade Complete"
-  },
   "clusterrush": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Cluster Rush"
-  },
-  "cluvuvwevwevweonyetenvewveugwemubwemossas": {
-    "reason": "Text-only warning page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Uvuvwevwevwe Onyetenvewve Ugwemubwem Ossas"
   },
   "cluwuclient": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -9233,23 +5969,11 @@
     "status": "verified",
     "title": "Uwu Client"
   },
-  "cluzg": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "UZG"
-  },
   "clvampiresurvivors": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Vampire Survivors"
-  },
-  "clvaportrails": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Vapor Trails"
   },
   "clvex": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -9323,12 +6047,6 @@
     "status": "verified",
     "title": "Warfare 1944"
   },
-  "clwartheknight": {
-    "reason": "Near-black frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "War the Knight"
-  },
   "clwavedash": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -9346,24 +6064,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "We Become What We Behold"
-  },
-  "clweltling": {
-    "reason": "Text-only warning page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Weltling"
-  },
-  "clwhackthetheif": {
-    "reason": "Portal logo (Box10), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Whack the Thief"
-  },
-  "clwhackyourcomputer": {
-    "reason": "Text page with a play control, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Whack Your Computer"
   },
   "clwheeliebike": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -9419,23 +6119,11 @@
     "status": "verified",
     "title": "Wheely 8"
   },
-  "clwindowsdoors": {
-    "reason": "Error page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Windows Doors"
-  },
   "clwinterfalling": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Winter Falling"
-  },
-  "clwipeout2097alt": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Wipeout 2097 (Alt)"
   },
   "clwordle": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -9455,12 +6143,6 @@
     "status": "verified",
     "title": "World's Hardest Game 3"
   },
-  "clworldshardestgame4": {
-    "reason": "Blank frame with a play button; not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "World's Hardest Game 4"
-  },
   "clwpnfire": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -9478,24 +6160,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Wurst Client"
-  },
-  "clwwfattitude": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "WWF Attitude"
-  },
-  "clwwfsmackdown2": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "WWF Smackdown 2"
-  },
-  "clxevent": {
-    "reason": "Engine splash, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Xevent"
   },
   "clxor": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -9515,29 +6179,11 @@
     "status": "verified",
     "title": "You vs 100 Skibidi"
   },
-  "clzeldaminishcap": {
-    "reason": "License text page, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Zelda: The Minish Cap"
-  },
   "clzetaclient": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Zeta Client"
-  },
-  "clzoinkz": {
-    "reason": "Near-black frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Zoinkz"
-  },
-  "clzombieexploder": {
-    "reason": "Portal logo (The Style Machine), not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Zombie Exploder"
   },
   "clzombieroad": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -9611,47 +6257,17 @@
     "status": "verified",
     "title": "EB Client WASM"
   },
-  "friday-night-funkin": {
-    "reason": "Near-empty dark menu with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Friday Night Funkin'"
-  },
-  "geometrydashlite": {
-    "reason": "Store listing screenshot, not the game artwork.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Geometry Dash Lite"
-  },
   "helios-offline--1": {
     "reason": "Captured the actual application interface this card launches.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Helios Offline"
   },
-  "lime": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Lime"
-  },
   "minecraft": {
     "reason": "Captured the actual game menu.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Minecraft 1.12.2"
-  },
-  "minecrafttowerdefense": {
-    "reason": "Near-black frame with no identifiable game content.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Minecraft Tower Defense"
-  },
-  "nazi-zombies": {
-    "reason": "Unrelated service page, not the game.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Nazi Zombies Portable"
   },
   "pvzm": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -9664,18 +6280,6 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Red vs Blue Fix"
-  },
-  "repo": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "R.E.P.O"
-  },
-  "riddleuneversityfix": {
-    "reason": "Loading screen, not rendered gameplay.",
-    "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "Riddle University Fix"
   },
   "smash-hit-ripoff": {
     "reason": "Captured game screen shows the actual title.",
@@ -9700,11 +6304,5 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Thief Puzzle"
-  },
-  "time-shooter-3": {
-    "reason": "Image matches the catalog title; the two entries are the same Time Shooter 3 game, so shared artwork is legitimate.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "Time Shooter 3: SWAT"
   }
 }

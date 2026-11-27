@@ -1,7 +1,9 @@
-// Proxy card: provider name, server selector and Open. No descriptions or
-// promotional text. Only the backup provider may show an Unverified badge.
+// Proxy card: provider screenshot (when the owner supplied one), provider name,
+// server selector and Open. No descriptions or promotional text. Only the
+// backup provider may show an Unverified badge.
 
 import type { ProxyService } from '../data/proxies';
+import { SERVICE_ARTWORK } from '../data/serviceArtwork';
 
 export function ProxyCard({
   service,
@@ -15,8 +17,20 @@ export function ProxyCard({
   onLaunch: (index: number) => void;
 }) {
   const endpoint = service.endpoints[selected] ?? service.endpoints[0];
+  const artwork = SERVICE_ARTWORK[service.id];
   return (
     <div className="card p-4">
+      {artwork && (
+        <img
+          src={artwork.url}
+          alt={artwork.alt}
+          width={640}
+          height={360}
+          loading="lazy"
+          decoding="async"
+          className="mb-3 aspect-video w-full rounded-lg border border-neutral-200 object-cover dark:border-neutral-800"
+        />
+      )}
       <div className="mb-3 flex items-center gap-2">
         <h3 className="text-sm font-semibold">{service.name}</h3>
         {service.id === 'backup' && endpoint && !endpoint.verified && (

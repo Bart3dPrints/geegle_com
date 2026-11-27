@@ -58,6 +58,11 @@ def main():
 
     next_batch = sorted(r["id"] for r in remaining)[:50]
     rejected_reasons = collections.Counter(v.get("reason") for v in rejected_decisions)
+    reopened = load(os.path.join(ART, "reopened.json"), {})
+    investigation = load(os.path.join(ART, "render-investigation.json"), {})
+
+    def investigated(status):
+        return sum(1 for v in investigation.values() if (v or {}).get("classification") == status)
 
     lines = []
     lines.append("# Artwork completion report")
@@ -91,6 +96,11 @@ def main():
     lines.append(f"| Awaiting review | {len(awaiting):,} |")
     lines.append(f"| Rejected (removed from the UI, queued for a new capture) | {len(rejected_decisions):,} |")
     lines.append(f"| Blocked | {len(blocked):,} |")
+    lines.append(f"| Reopened after the blocked classification was rejected | {len(reopened):,} |")
+    lines.append(f"| Ten-minute render investigations completed | {len(investigation):,} |")
+    lines.append(f"| ... that rendered an authentic frame | {investigated('rendered'):,} |")
+    lines.append(f"| ... that stopped at their own start gate | {investigated('start-gate-only'):,} |")
+    lines.append(f"| ... that stayed blank for the whole observation | {investigated('blank-after-observation'):,} |")
     lines.append(f"| Remaining unprocessed | {len(remaining):,} |")
     lines.append(f"| Actual verified coverage | {coverage:.1f}% |")
     lines.append(f"| Total optimized asset size (verified images) | {total_bytes / 1024:.0f} KiB |")
@@ -119,15 +129,33 @@ def main():
         for reason, count in rejected_reasons.most_common(12):
             lines.append(f"- {count}x {reason}")
         lines.append("")
+    lines.append("## Service card artwork")
+    lines.append("")
+    lines.append("The owner-supplied screenshots are converted to WebP and shown on the matching cards from "
+                 "`src/data/serviceArtwork.ts`; a card without a supplied screenshot keeps its text-only "
+                 "layout rather than borrowing another service's image.")
+    lines.append("")
+    lines.append("| Card | Image |")
+    lines.append("| --- | --- |")
+    lines.append("| Helios Proxy | `/artwork/services/helios.webp` |")
+    lines.append("| Arctic Proxy | `/artwork/services/arctic.webp` |")
+    lines.append("| Cherry Proxy | `/artwork/services/cherry.webp` |")
+    lines.append("| Achroma Proxy | `/artwork/services/achroma.webp` |")
+    lines.append("| Bull-33 | `/artwork/services/bull-33.webp` |")
+    lines.append("")
+    lines.append("Unassigned, deliberately: `xylora.webp` (the owner's Xylora screenshot, with no Xylora "
+                 "endpoint anywhere in the repository to attach it to) and "
+                 "`unidentified-dark-blue.webp` (a clock-and-icons desktop with no branding, so assigning it "
+                 "to a named service would be a guess). Astra Proxy was removed from the catalog and its "
+                 "search results; its Bull-33 endpoints moved to the Bull-33 card instead of being relabelled.")
+    lines.append("")
     lines.append("## Blocked")
     lines.append("")
-    lines.append("- **Service card artwork (Helios, Arctic, Cherri, Achroma, Xylora, Bull-33, and the "
-                 "unidentified dark-blue desktop service):** the owner-supplied screenshots named in the "
-                 "assignment are not present in the workspace or the conversation attachments, so they "
-                 "cannot be cropped without inventing artwork. Nothing was assigned. No proxy card layout "
-                 "or endpoint was changed. Provide the seven PNGs to complete this item.")
-    lines.append("- Titles whose build renders nothing capturable (dead embed, blocked CDN, authentication "
-                 "wall) stay `not-started` rather than receiving a placeholder.")
+    lines.append(f"No entry is left in a blocked state: the whole {len(reopened):,}-entry blocked manifest was "
+                 "reopened, and each entry now carries a rendering investigation instead of a permanent label.")
+    lines.append("- Titles whose build renders nothing capturable stay `not-started` rather than receiving a "
+                 "placeholder, and are only removed from the catalog once the full observation protocol is "
+                 "complete for them (see `docs/NONFUNCTIONAL_GAME_REMOVALS.md`).")
     lines.append("")
     lines.append("## Remaining work")
     lines.append("")

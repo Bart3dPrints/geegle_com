@@ -80,24 +80,16 @@ export const PROXY_SERVICES: ProxyService[] = [
     ],
   },
   {
-    id: 'astra',
-    name: 'Astra Proxy',
+    // Bull-33 endpoints were previously listed under an Astra card; Astra is no
+    // longer offered, and only the endpoints that identify themselves as Bull-33
+    // are kept here rather than relabelled as another provider.
+    id: 'bull-33',
+    name: 'Bull-33',
     endpoints: [
-      remote('Server 1', 'https://mega-math22.c00lcars.media/start'),
-      remote('Server 2', 'https://nova-hub84.c00lkiddtech.live/'),
-      remote('Server 3', 'https://pro-flame9.fixfixyoutube.com/'),
-      remote('Server 4', 'https://bright-gamer17.idkleanlearn.dpdns.org/'),
-      remote('Server 5', 'https://vivid-learn50.learninghub.fit/'),
-      remote('Server 6', 'https://dark-study97.lucario.site/'),
-      remote('Server 7', 'https://sharp-bear11.reroblox.com/'),
-      remote('Server 8', 'https://clever-spark19.six-seven.best/'),
-      remote('Server 9', 'https://turbo-hub67.ssquatch.lol/'),
-      remote('Server 10', 'https://elite-tiger63.studypath.academy/'),
-      remote('Server 11', 'https://bull33.gcranjit.com.np/'),
-      remote('Server 12', 'https://playbull.stockfun.net/'),
-      remote('Server 13', 'https://beautiful.thevoiceexchange.com/'),
-      remote('Server 14', 'https://bull-site.thevoiceexchange.com/'),
-      remote('Server 15', 'https://bull.education.veranda.co.id/'),
+      remote('Server 1', 'https://bull33.gcranjit.com.np/'),
+      remote('Server 2', 'https://playbull.stockfun.net/'),
+      remote('Server 3', 'https://bull-site.thevoiceexchange.com/'),
+      remote('Server 4', 'https://bull.education.veranda.co.id/'),
     ],
   },
   {

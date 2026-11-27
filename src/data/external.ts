@@ -18,7 +18,7 @@ import type { ProxyService } from './proxies';
  * - Arctic: hardcoded app loader chain (no URL input path).
  * - Soluos: React dashboard with no destination parameter.
  * - Helios: user-input search launcher.
- * - Achroma/Astra/Backup: static landing pages, no documented interface.
+ * - Achroma/Bull-33/Backup: static landing pages, no documented interface.
  */
 export const DESTINATION_PROVIDERS: ProxyService[] = [
   {

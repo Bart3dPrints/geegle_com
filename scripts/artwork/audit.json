@@ -42,6 +42,26 @@
       "width": 640
     },
     {
+      "bytes": 21292,
+      "colors": 17042,
+      "edges": 16.46,
+      "format": "WEBP",
+      "height": 360,
+      "id": "cl10bullets",
+      "phash": "4bb1f4e0731b99e7",
+      "problems": [],
+      "recordedTitle": "10 Bullets",
+      "sha256": "e67d4cdbffb083380f512bd110f1fa2a3a828568c761546c520988c935e2266f",
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cl10bullets.html",
+      "status": "ok",
+      "stddev": 77.82,
+      "tier": "screens",
+      "title": "10 Bullets",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl10bullets.webp",
+      "width": 640
+    },
+    {
       "bytes": 16826,
       "colors": 13001,
       "edges": 7.61,
@@ -59,6 +79,26 @@
       "title": "10 Minutes Till Dawn",
       "type": "gameplay-screenshot",
       "url": "/artwork/cl10minutestildawn.webp",
+      "width": 640
+    },
+    {
+      "bytes": 23804,
+      "colors": 19802,
+      "edges": 17.61,
+      "format": "WEBP",
+      "height": 360,
+      "id": "cl10morebullets",
+      "phash": "d7675dc486c5c1d1",
+      "problems": [],
+      "recordedTitle": "10 More Bullets",
+      "sha256": "da14c6c0e0ab1b0572e6b8ef6809ef2f85ed470106c65f4b6207c64a64a33254",
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cl10morebullets.html",
+      "status": "ok",
+      "stddev": 70.99,
+      "tier": "screens",
+      "title": "10 More Bullets",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl10morebullets.webp",
       "width": 640
     },
     {
@@ -20768,8 +20808,8 @@
     "broken": 0,
     "exactDuplicateGroups": 1,
     "nearDuplicateGroups": 9,
-    "ok": 1016,
-    "records": 1036,
+    "ok": 1018,
+    "records": 1038,
     "review": 20
   }
 }

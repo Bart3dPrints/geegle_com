@@ -1764,6 +1764,28 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/cl1.webp"
     },
+    "cl10bullets": {
+      "assetSha256": "e67d4cdbffb083380f512bd110f1fa2a3a828568c761546c520988c935e2266f",
+      "frame": "cl10bullets@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cl10bullets.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 4864,
+        "coverage": 0.796,
+        "dominant": 0.085,
+        "edges": 11.67,
+        "stddev": 81.55
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cl10bullets.html",
+      "title": "10 Bullets",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl10bullets.webp"
+    },
     "cl10minutestildawn": {
       "assetSha256": "5fa7e8adb342ae44e5a56e99b25b8e5760d83984796aded783655743e470ea1f",
       "frame": "cl10minutestildawn@2.png",
@@ -1781,6 +1803,28 @@
       "title": "10 Minutes Till Dawn",
       "type": "gameplay-screenshot",
       "url": "/artwork/cl10minutestildawn.webp"
+    },
+    "cl10morebullets": {
+      "assetSha256": "da14c6c0e0ab1b0572e6b8ef6809ef2f85ed470106c65f4b6207c64a64a33254",
+      "frame": "cl10morebullets@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cl10morebullets.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 646,
+        "coverage": 0.879,
+        "dominant": 0.136,
+        "edges": 10.96,
+        "stddev": 67.23
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cl10morebullets.html",
+      "title": "10 More Bullets",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl10morebullets.webp"
     },
     "cl12minibattles": {
       "assetSha256": "6b79e9c6d1b0e5595b42c7e8e642b9d1c3ff6543b3826d37db0afca2b84b79b0",

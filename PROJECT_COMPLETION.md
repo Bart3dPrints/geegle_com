@@ -923,3 +923,54 @@ after the play/content-warning gates were passed.
   `docs/ARTWORK_COMPLETION_REPORT.md`.
 - The seven service screenshots are still absent from the workspace, so no
   service card artwork was invented or reassigned.
+
+## Artwork completion, phase 3 — reopening the blocked entries
+
+The owner rejected the previous "blocked" result, so the whole 1,676-entry
+blocked manifest was reopened rather than treated as finished. Its old rule and
+reason are preserved per entry in `scripts/artwork/reopened.json`, `blocked.json`
+is empty, and the capture-based `rejected` decisions that made the pipeline skip
+those ids were cleared (571 of them, also preserved as evidence).
+
+The reopen is justified by measurement, not assumption: `cl10bullets` had been
+labelled `blank-render`, yet after a full ten-minute observation the Ruffle build
+finished and showed its own title screen. Ten entries have now been through the
+protocol in `scripts/artwork/investigate-render.mjs` — five rendered, two stopped
+at their own start gate, three stayed blank — which alone contradicts the old
+blanket label.
+
+| Measurement | Value |
+| --- | --- |
+| Catalog rows (unique IDs) | 2,710 |
+| Verified artwork | 1,038 (38.3%) |
+| Reopened blocked entries | 1,676 |
+| Ten-minute investigations completed | 10 |
+| New verified artwork from this pass | 2 (`cl10bullets`, `cl10morebullets`) |
+| Games removed as nonfunctional | 0 |
+| Service cards with owner-supplied artwork | 5 |
+
+### Service catalog corrections
+
+Helios, Arctic, Cherry, Achroma and Bull-33 now show the owner's own screenshots
+(`public/artwork/services/*.webp`, rendered by `src/components/ProxyCard.tsx` from
+`src/data/serviceArtwork.ts`). Astra Proxy is removed from the catalog, its search
+results and its navigation; its Bull-33 endpoints moved to a real Bull-33 card
+instead of being relabelled. `xylora.webp` and `unidentified-dark-blue.webp` are
+kept but deliberately unassigned: there is no Xylora endpoint in the repository,
+and the dark-blue screenshot carries no branding, so assigning either would be a
+guess. Krillion and Krillion (Backup) keep their separate, distinct artwork.
+
+### Not claimed
+
+- 1,672 catalog entries are still unprocessed. The required ten-minute
+  observation takes ten minutes per entry, so a full pass cannot finish in one
+  session; the queue, the evidence gathered so far and the exact resume command
+  are preserved in `scripts/artwork/reopened.json`,
+  `scripts/artwork/render-investigation.json` and
+  `docs/ARTWORK_COMPLETION_REPORT.md`.
+- No game was removed. The removal protocol requires a completed observation, a
+  clean retry and no obtainable artwork; nothing has met all seven conditions
+  yet, so `docs/NONFUNCTIONAL_GAME_REMOVALS.md` records zero removals instead of
+  converting old labels into deletions.
+- Coverage is 38.3%, not complete. "All entries classified" is explicitly not
+  accepted as completion.

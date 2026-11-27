@@ -59,12 +59,28 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/cl1.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "cl10bullets": {
+    "title": "10 Bullets",
+    "url": "/artwork/cl10bullets.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cl10bullets.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/cl10bullets.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
   "cl10minutestildawn": {
     "title": "10 Minutes Till Dawn",
     "url": "/artwork/cl10minutestildawn.webp",
     "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cl10minutestildawn.html",
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/cl10minutestildawn.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "cl10morebullets": {
+    "title": "10 More Bullets",
+    "url": "/artwork/cl10morebullets.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cl10morebullets.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/cl10morebullets.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
   "cl12minibattles": {

@@ -1,0 +1,620 @@
+{
+  "cl10bullets": {
+    "id": "cl10bullets",
+    "title": "10 Bullets",
+    "path": "/games/cl10bullets.html",
+    "launchUrl": "http://127.0.0.1:5173/games/cl10bullets.html",
+    "startedAt": "2026-11-27T16:15:51.098Z",
+    "observedSeconds": 604,
+    "classification": "rendered",
+    "initial": {
+      "title": "really cool flash game",
+      "text": "",
+      "canvases": [],
+      "iframes": [],
+      "buttons": [],
+      "ruffle": true,
+      "bodyChildren": 2,
+      "scrollHeight": 720
+    },
+    "final": null,
+    "frames": [
+      {
+        "file": "/tmp/artshots4/cl10bullets@1.png",
+        "at": "2026-11-27T16:16:55.222Z",
+        "bytes": 73553
+      },
+      {
+        "file": "/tmp/artshots4/cl10bullets@2.png",
+        "at": "2026-11-27T16:18:55.579Z",
+        "bytes": 75608
+      },
+      {
+        "file": "/tmp/artshots4/cl10bullets@3.png",
+        "at": "2026-11-27T16:20:55.961Z",
+        "bytes": 74708
+      }
+    ],
+    "consoleErrors": [
+      "Access to fetch at 'http://games.mochiads.com/c/p/10-bullets/bcf2c53a83a384721a5a483fcba365ad262448cd.swf' from origin 'http://127.0.0.1:5173' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_CONNECTION_RESET",
+      "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "Access to fetch at 'http://www.mochiads.com/static/lib/services/MochiLC.swf' from origin 'http://127.0.0.1:5173' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+      "Failed to load resource: net::ERR_FAILED",
+      "Access to fetch at 'http://www.mochiads.com/static/lib/services/services.swf?mochiad%5Foptions=null&api%5Fversion=3%2E9%2E4%20as3&listenLC=%5F%5Fms%5F1795796161751%5F23487' from origin 'http://127.0.0.1:5173' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the ",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+    ],
+    "failedRequests": [
+      "http://games.mochiads.com/c/p/10-bullets/bcf2c53a83a384721a5a483fcba365ad262448cd.swf :: net::ERR_FAILED",
+      "http://x.mochiads.com/srv/1/27d126bd52fe1d7d.swf?cacheBust=1795796153231 :: net::ERR_CONNECTION_RESET",
+      "http://g9dfbca87adcf42b6.api.playtomic.com/tracker/q.aspx?q=v/1&url=http://localhost/&swfid=6297&0.6231748978607357Z :: net::ERR_NAME_NOT_RESOLVED",
+      "http://core.mochibot.com/my/core.swf :: net::ERR_NAME_NOT_RESOLVED",
+      "http://www.mochiads.com/static/lib/services/MochiLC.swf :: net::ERR_FAILED",
+      "http://www.mochiads.com/static/lib/services/services.swf?mochiad%5Foptions=null&api%5Fversion=3%2E9%2E4%20as3&listenLC=%5F%5Fms%5F1795796161751%5F23487 :: net::ERR_FAILED",
+      "http://g9dfbca87adcf42b6.api.playtomic.com/tracker/q.aspx?q=t/y/1&url=localhost&swfid=6297&0.13257415452972054Z :: net::ERR_NAME_NOT_RESOLVED",
+      "http://g9dfbca87adcf42b6.api.playtomic.com/tracker/q.aspx?q=t/n/2&url=localhost&swfid=6297&0.056022290140390396Z :: net::ERR_NAME_NOT_RESOLVED",
+      "http://g9dfbca87adcf42b6.api.playtomic.com/tracker/q.aspx?q=t/n/3&url=localhost&swfid=6297&0.12164273206144571Z :: net::ERR_NAME_NOT_RESOLVED",
+      "http://g9dfbca87adcf42b6.api.playtomic.com/tracker/q.aspx?q=t/n/4&url=localhost&swfid=6297&0.07150001870468259Z :: net::ERR_NAME_NOT_RESOLVED",
+      "http://g9dfbca87adcf42b6.api.playtomic.com/tracker/q.aspx?q=t/n/5&url=localhost&swfid=6297&0.1118197557516396Z :: net::ERR_NAME_NOT_RESOLVED",
+      "http://g9dfbca87adcf42b6.api.playtomic.com/tracker/q.aspx?q=t/n/6&url=localhost&swfid=6297&0.06371164601296186Z :: net::ERR_NAME_NOT_RESOLVED",
+      "http://g9dfbca87adcf42b6.api.playtomic.com/tracker/q.aspx?q=t/n/7&url=localhost&swfid=6297&0.14445412904024124Z :: net::ERR_NAME_NOT_RESOLVED",
+      "http://g9dfbca87adcf42b6.api.playtomic.com/tracker/q.aspx?q=t/n/8&url=localhost&swfid=6297&0.09155137650668621Z :: net::ERR_NAME_NOT_RESOLVED",
+      "http://g9dfbca87adcf42b6.api.playtomic.com/tracker/q.aspx?q=t/n/9&url=localhost&swfid=6297&0.24539262522011995Z :: net::ERR_NAME_NOT_RESOLVED",
+      "http://g9dfbca87adcf42b6.api.playtomic.com/tracker/q.aspx?q=t/n/10&url=localhost&swfid=6297&0.7409030925482512Z :: net::ERR_NAME_NOT_RESOLVED",
+      "http://g9dfbca87adcf42b6.api.playtomic.com/tracker/q.aspx?q=t/n/11&url=localhost&swfid=6297&0.911667631007731Z :: net::ERR_NAME_NOT_RESOLVED",
+      "http://g9dfbca87adcf42b6.api.playtomic.com/tracker/q.aspx?q=t/n/12&url=localhost&swfid=6297&0.8115946114994586Z :: net::ERR_NAME_NOT_RESOLVED",
+      "http://g9dfbca87adcf42b6.api.playtomic.com/tracker/q.aspx?q=t/n/13&url=localhost&swfid=6297&0.3746905461885035Z :: net::ERR_NAME_NOT_RESOLVED",
+      "http://g9dfbca87adcf42b6.api.playtomic.com/tracker/q.aspx?q=t/n/14&url=localhost&swfid=6297&0.22245342331007123Z :: net::ERR_NAME_NOT_RESOLVED",
+      "http://g9dfbca87adcf42b6.api.playtomic.com/tracker/q.aspx?q=t/n/15&url=localhost&swfid=6297&0.31276841973885894Z :: net::ERR_NAME_NOT_RESOLVED",
+      "http://g9dfbca87adcf42b6.api.playtomic.com/tracker/q.aspx?q=t/n/16&url=localhost&swfid=6297&0.5348128392361104Z :: net::ERR_NAME_NOT_RESOLVED",
+      "http://g9dfbca87adcf42b6.api.playtomic.com/tracker/q.aspx?q=t/n/17&url=localhost&swfid=6297&0.6381273996084929Z :: net::ERR_NAME_NOT_RESOLVED",
+      "http://g9dfbca87adcf42b6.api.playtomic.com/tracker/q.aspx?q=t/n/18&url=localhost&swfid=6297&0.6729402341879904Z :: net::ERR_NAME_NOT_RESOLVED"
+    ],
+    "startControlClicked": false,
+    "initialShot": "/tmp/artshots4/cl10bullets@0.png",
+    "initialBytes": 6508,
+    "finalState": {
+      "title": "really cool flash game",
+      "text": "",
+      "canvases": [],
+      "iframes": [],
+      "buttons": [],
+      "ruffle": true,
+      "bodyChildren": 2,
+      "scrollHeight": 720
+    },
+    "finalShot": "/tmp/artshots4/cl10bullets@final.png",
+    "finalBytes": 74252,
+    "elapsedMs": 604328,
+    "endedAt": "2026-11-27T16:25:55.785Z",
+    "changed": true
+  },
+  "bowmasters": {
+    "id": "bowmasters",
+    "title": "Bowmasters",
+    "path": "/games/Bowmasters.html",
+    "launchUrl": "http://127.0.0.1:5173/games/Bowmasters.html",
+    "startedAt": "2026-11-27T16:15:51.098Z",
+    "observedSeconds": 604,
+    "classification": "rendered",
+    "initial": {
+      "title": "Bowmasters",
+      "text": "",
+      "canvases": [
+        "1706x960"
+      ],
+      "iframes": [],
+      "buttons": [],
+      "ruffle": false,
+      "bodyChildren": 1,
+      "scrollHeight": 720
+    },
+    "final": null,
+    "frames": [
+      {
+        "file": "/tmp/artshots4/bowmasters@1.png",
+        "at": "2026-11-27T16:16:56.366Z",
+        "bytes": 170811
+      },
+      {
+        "file": "/tmp/artshots4/bowmasters@2.png",
+        "at": "2026-11-27T16:18:56.741Z",
+        "bytes": 180442
+      },
+      {
+        "file": "/tmp/artshots4/bowmasters@3.png",
+        "at": "2026-11-27T16:20:57.141Z",
+        "bytes": 181723
+      }
+    ],
+    "consoleErrors": [],
+    "failedRequests": [],
+    "startControlClicked": false,
+    "initialShot": "/tmp/artshots4/bowmasters@0.png",
+    "initialBytes": 23168,
+    "finalState": {
+      "title": "Bowmasters",
+      "text": "",
+      "canvases": [
+        "1706x960"
+      ],
+      "iframes": [],
+      "buttons": [],
+      "ruffle": false,
+      "bodyChildren": 1,
+      "scrollHeight": 720
+    },
+    "finalShot": "/tmp/artshots4/bowmasters@final.png",
+    "finalBytes": 180375,
+    "elapsedMs": 604325,
+    "endedAt": "2026-11-27T16:25:56.895Z",
+    "changed": true
+  },
+  "cl100in1nes": {
+    "id": "cl100in1nes",
+    "title": "100 in 1 NES",
+    "path": "/games/cl100in1nes.html",
+    "launchUrl": "http://127.0.0.1:5173/games/cl100in1nes.html",
+    "startedAt": "2026-11-27T16:15:51.098Z",
+    "observedSeconds": 607,
+    "classification": "start-gate-only",
+    "initial": {
+      "title": "",
+      "text": "PLAY",
+      "canvases": [],
+      "iframes": [],
+      "buttons": [
+        "PLAY"
+      ],
+      "ruffle": false,
+      "bodyChildren": 2,
+      "scrollHeight": 748
+    },
+    "final": null,
+    "frames": [],
+    "consoleErrors": [],
+    "failedRequests": [
+      "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js :: net::ERR_BLOCKED_BY_ORB"
+    ],
+    "startControlClicked": true,
+    "initialShot": "/tmp/artshots4/cl100in1nes@0.png",
+    "initialBytes": 5108,
+    "finalState": {
+      "title": "",
+      "text": "",
+      "canvases": [],
+      "iframes": [],
+      "buttons": [
+        "PLAY"
+      ],
+      "ruffle": false,
+      "bodyChildren": 3,
+      "scrollHeight": 728
+    },
+    "finalShot": "/tmp/artshots4/cl100in1nes@final.png",
+    "finalBytes": 4250,
+    "elapsedMs": 607028,
+    "endedAt": "2026-11-27T16:25:58.527Z",
+    "changed": true
+  },
+  "cl100roomsofenemies": {
+    "id": "cl100roomsofenemies",
+    "title": "100 Rooms of Enemies",
+    "path": "/games/cl100RoomsOfEnemies.html",
+    "launchUrl": "http://127.0.0.1:5173/games/cl100RoomsOfEnemies.html",
+    "startedAt": "2026-11-27T16:15:51.098Z",
+    "observedSeconds": 607,
+    "classification": "start-gate-only",
+    "initial": {
+      "title": "",
+      "text": "PLAY",
+      "canvases": [],
+      "iframes": [],
+      "buttons": [
+        "PLAY"
+      ],
+      "ruffle": false,
+      "bodyChildren": 2,
+      "scrollHeight": 748
+    },
+    "final": null,
+    "frames": [],
+    "consoleErrors": [],
+    "failedRequests": [
+      "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js :: net::ERR_BLOCKED_BY_ORB"
+    ],
+    "startControlClicked": true,
+    "initialShot": "/tmp/artshots4/cl100roomsofenemies@0.png",
+    "initialBytes": 5108,
+    "finalState": {
+      "title": "",
+      "text": "",
+      "canvases": [],
+      "iframes": [],
+      "buttons": [
+        "PLAY"
+      ],
+      "ruffle": false,
+      "bodyChildren": 4,
+      "scrollHeight": 728
+    },
+    "finalShot": "/tmp/artshots4/cl100roomsofenemies@final.png",
+    "finalBytes": 4250,
+    "elapsedMs": 607024,
+    "endedAt": "2026-11-27T16:25:58.529Z",
+    "changed": true
+  },
+  "bank-robbery": {
+    "id": "bank-robbery",
+    "title": "Bank Robbery",
+    "path": "/games/Bank%20Robbery.html",
+    "launchUrl": "http://127.0.0.1:5173/games/Bank%20Robbery.html",
+    "startedAt": "2026-11-27T16:15:51.098Z",
+    "observedSeconds": 604,
+    "classification": "blank-after-observation",
+    "initial": {
+      "title": "",
+      "text": "✕ ✕",
+      "canvases": [
+        "1280x720"
+      ],
+      "iframes": [
+        "https://breadisgay.eduplace.net/e",
+        "https://breadisgay.eduplace.net/e"
+      ],
+      "buttons": [],
+      "ruffle": false,
+      "bodyChildren": 9,
+      "scrollHeight": 720
+    },
+    "final": null,
+    "frames": [],
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 403 ()",
+      "Failed to load resource: the server responded with a status of 403 ()"
+    ],
+    "failedRequests": [
+      "https://cdn.jsdelivr.net/gh/genizy/cg-rip@main/bank-robbery/Build/BankRobbery.wasm.part1 :: HTTP 403",
+      "https://cdn.jsdelivr.net/gh/genizy/cg-rip@main/bank-robbery/Build/BankRobbery.data.part1 :: HTTP 403",
+      "https://cdn.jsdelivr.net/gh/genizy/cg-rip@main/bank-robbery/Build/BankRobbery.loader.js :: net::ERR_BLOCKED_BY_ORB",
+      "https://breadisgay.eduplace.net/e :: net::ERR_ADDRESS_UNREACHABLE",
+      "https://breadisgay.eduplace.net/e :: net::ERR_ADDRESS_UNREACHABLE"
+    ],
+    "startControlClicked": false,
+    "initialShot": "/tmp/artshots4/bank-robbery@0.png",
+    "initialBytes": 4596,
+    "finalState": {
+      "title": "",
+      "text": "✕ ✕",
+      "canvases": [
+        "1280x720"
+      ],
+      "iframes": [
+        "https://breadisgay.eduplace.net/e",
+        "https://breadisgay.eduplace.net/e"
+      ],
+      "buttons": [],
+      "ruffle": false,
+      "bodyChildren": 9,
+      "scrollHeight": 720
+    },
+    "finalShot": "/tmp/artshots4/bank-robbery@final.png",
+    "finalBytes": 4596,
+    "elapsedMs": 604040,
+    "endedAt": "2026-11-27T16:26:08.205Z",
+    "changed": false
+  },
+  "cl10morebullets": {
+    "id": "cl10morebullets",
+    "title": "10 More Bullets",
+    "path": "/games/cl10morebullets.html",
+    "launchUrl": "http://127.0.0.1:5173/games/cl10morebullets.html",
+    "startedAt": "2026-11-27T16:25:55.903Z",
+    "observedSeconds": 604,
+    "classification": "rendered",
+    "initial": {
+      "title": "really cool flash game",
+      "text": "",
+      "canvases": [],
+      "iframes": [],
+      "buttons": [],
+      "ruffle": false,
+      "bodyChildren": 1,
+      "scrollHeight": 720
+    },
+    "final": null,
+    "frames": [
+      {
+        "file": "/tmp/artshots4/cl10morebullets@1.png",
+        "at": "2026-11-27T16:26:59.268Z",
+        "bytes": 35714
+      },
+      {
+        "file": "/tmp/artshots4/cl10morebullets@2.png",
+        "at": "2026-11-27T16:28:59.405Z",
+        "bytes": 39699
+      },
+      {
+        "file": "/tmp/artshots4/cl10morebullets@3.png",
+        "at": "2026-11-27T16:30:59.498Z",
+        "bytes": 41034
+      }
+    ],
+    "consoleErrors": [
+      "pageerror: SyntaxError: Unexpected end of input",
+      "Access to fetch at 'http://www.gringogames.com/api/v1/getPlayerId.php' from origin 'http://127.0.0.1:5173' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+      "Failed to load resource: net::ERR_FAILED"
+    ],
+    "failedRequests": [
+      "http://www.gringogames.com/api/v1/getPlayerId.php :: net::ERR_FAILED"
+    ],
+    "startControlClicked": false,
+    "initialShot": "/tmp/artshots4/cl10morebullets@0.png",
+    "initialBytes": 80839,
+    "finalState": {
+      "title": "really cool flash game",
+      "text": "",
+      "canvases": [],
+      "iframes": [],
+      "buttons": [],
+      "ruffle": false,
+      "bodyChildren": 1,
+      "scrollHeight": 720
+    },
+    "finalShot": "/tmp/artshots4/cl10morebullets@final.png",
+    "finalBytes": 38973,
+    "elapsedMs": 604106,
+    "endedAt": "2026-11-27T16:36:00.208Z",
+    "changed": true
+  },
+  "cl10yardfight": {
+    "id": "cl10yardfight",
+    "title": "10 Yard Fight",
+    "path": "/games/cl10yardfight.html",
+    "launchUrl": "http://127.0.0.1:5173/games/cl10yardfight.html",
+    "startedAt": "2026-11-27T16:25:56.991Z",
+    "observedSeconds": 604,
+    "classification": "blank-after-observation",
+    "initial": {
+      "title": "",
+      "text": "",
+      "canvases": [],
+      "iframes": [],
+      "buttons": [],
+      "ruffle": false,
+      "bodyChildren": 3,
+      "scrollHeight": 720
+    },
+    "final": null,
+    "frames": [],
+    "consoleErrors": [],
+    "failedRequests": [
+      "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js :: net::ERR_BLOCKED_BY_ORB"
+    ],
+    "startControlClicked": false,
+    "initialShot": "/tmp/artshots4/cl10yardfight@0.png",
+    "initialBytes": 4255,
+    "finalState": {
+      "title": "",
+      "text": "",
+      "canvases": [],
+      "iframes": [],
+      "buttons": [],
+      "ruffle": false,
+      "bodyChildren": 3,
+      "scrollHeight": 720
+    },
+    "finalShot": "/tmp/artshots4/cl10yardfight@final.png",
+    "finalBytes": 4255,
+    "elapsedMs": 604057,
+    "endedAt": "2026-11-27T16:36:01.148Z",
+    "changed": false
+  },
+  "cl1942nes": {
+    "id": "cl1942nes",
+    "title": "1942 (NES)",
+    "path": "/games/cl1942nes.html",
+    "launchUrl": "http://127.0.0.1:5173/games/cl1942nes.html",
+    "startedAt": "2026-11-27T16:25:58.535Z",
+    "observedSeconds": 604,
+    "classification": "blank-after-observation",
+    "initial": {
+      "title": "",
+      "text": "",
+      "canvases": [],
+      "iframes": [],
+      "buttons": [],
+      "ruffle": false,
+      "bodyChildren": 3,
+      "scrollHeight": 720
+    },
+    "final": null,
+    "frames": [],
+    "consoleErrors": [],
+    "failedRequests": [
+      "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js :: net::ERR_BLOCKED_BY_ORB"
+    ],
+    "startControlClicked": false,
+    "initialShot": "/tmp/artshots4/cl1942nes@0.png",
+    "initialBytes": 4255,
+    "finalState": {
+      "title": "",
+      "text": "",
+      "canvases": [],
+      "iframes": [],
+      "buttons": [],
+      "ruffle": false,
+      "bodyChildren": 3,
+      "scrollHeight": 720
+    },
+    "finalShot": "/tmp/artshots4/cl1942nes@final.png",
+    "finalBytes": 4255,
+    "elapsedMs": 604081,
+    "endedAt": "2026-11-27T16:36:02.703Z",
+    "changed": false
+  },
+  "cl13bones": {
+    "id": "cl13bones",
+    "title": "13 Bones",
+    "path": "/games/cl13bones.html",
+    "launchUrl": "http://127.0.0.1:5173/games/cl13bones.html",
+    "startedAt": "2026-11-27T16:25:58.534Z",
+    "observedSeconds": 605,
+    "classification": "rendered",
+    "initial": {
+      "title": "13 Bones",
+      "text": "",
+      "canvases": [
+        "1280x720"
+      ],
+      "iframes": [],
+      "buttons": [],
+      "ruffle": false,
+      "bodyChildren": 6,
+      "scrollHeight": 720
+    },
+    "final": null,
+    "frames": [
+      {
+        "file": "/tmp/artshots4/cl13bones@1.png",
+        "at": "2026-11-27T16:27:03.517Z",
+        "bytes": 10287
+      },
+      {
+        "file": "/tmp/artshots4/cl13bones@2.png",
+        "at": "2026-11-27T16:29:04.608Z",
+        "bytes": 10287
+      },
+      {
+        "file": "/tmp/artshots4/cl13bones@3.png",
+        "at": "2026-11-27T16:31:05.580Z",
+        "bytes": 10287
+      }
+    ],
+    "consoleErrors": [
+      "WARNING: 2D MSAA is not yet supported for GLES3.",
+      "   at: render_target_set_msaa (drivers/gles3/storage/texture_storage.cpp:2758)",
+      "ERROR: Screen space AA is currently unavailable on the Compatibility renderer.",
+      "   at: viewport_set_screen_space_aa (servers/rendering/renderer_viewport.cpp:1377)",
+      "Shared id: CRD_W003_h2 with res://data/cards/card_utility_3_h2.tres  res://data/cards/card_poker_3_H1.tres",
+      "ERROR: The banword list has been destroyed or modified.",
+      "   at: push_error (core/variant/variant_utility.cpp:1024)",
+      "pageerror: SecurityError: Failed to get a ServiceWorkerRegistration: The origin of the provided documentURL ('https://rawcdn.githack.com') does not match the current origin ('http://127.0.0.1:5173')."
+    ],
+    "failedRequests": [
+      "https://rawcdn.githack.com/shayderrr/portsv3/ef59d92e598f5baf31aacc8548ebcc455af63a4c/13bones/html-classic.itch.zone/html/16424331/13_bones_webgl/htmlgame.js :: net::ERR_BLOCKED_BY_ORB"
+    ],
+    "startControlClicked": false,
+    "initialShot": "/tmp/artshots4/cl13bones@0.png",
+    "initialBytes": 10287,
+    "finalState": {
+      "title": "13 Bones",
+      "text": "",
+      "canvases": [
+        "1280x720"
+      ],
+      "iframes": [],
+      "buttons": [],
+      "ruffle": false,
+      "bodyChildren": 6,
+      "scrollHeight": 720
+    },
+    "finalShot": "/tmp/artshots4/cl13bones@final.png",
+    "finalBytes": 10287,
+    "elapsedMs": 604588,
+    "endedAt": "2026-11-27T16:36:03.366Z",
+    "changed": false
+  },
+  "cl234playergame": {
+    "id": "cl234playergame",
+    "title": "2-3-4 Player Game",
+    "path": "/games/cl234playergame.html",
+    "launchUrl": "http://127.0.0.1:5173/games/cl234playergame.html",
+    "startedAt": "2026-11-27T16:26:08.211Z",
+    "observedSeconds": 604,
+    "classification": "rendered",
+    "initial": {
+      "title": "TwoPlayerGames 2 3 4 Player",
+      "text": "",
+      "canvases": [
+        "1280x720"
+      ],
+      "iframes": [
+        "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-8349441957149316&output=html&adk=1812271804&adf=3025194257&abgtt=12&lmt=1795641940&plat=1%3A16777216%2C2%3A16777216%2C3",
+        "https://www.google.com/recaptcha/api2/aframe",
+        "https://googleads.g.doubleclick.net/pagead/html/r20261118/r20190131/zrt_lookup.html",
+        "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-8349441957149316&output=html&h=720&adk=4154423664&adf=2831855370&abgtt=12&w=1280&lmt=1795641940&vpmute=0&to=gsc&channel",
+        "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-8349441957149316&output=html&h=720&adk=4154423664&adf=1621614491&abgtt=12&w=1280&lmt=1795641940&vpmute=0&to=gsc&channel"
+      ],
+      "buttons": [],
+      "ruffle": false,
+      "bodyChildren": 4,
+      "scrollHeight": 720
+    },
+    "final": null,
+    "frames": [
+      {
+        "file": "/tmp/artshots4/cl234playergame@1.png",
+        "at": "2026-11-27T16:27:12.824Z",
+        "bytes": 454016
+      },
+      {
+        "file": "/tmp/artshots4/cl234playergame@2.png",
+        "at": "2026-11-27T16:29:13.071Z",
+        "bytes": 456425
+      },
+      {
+        "file": "/tmp/artshots4/cl234playergame@3.png",
+        "at": "2026-11-27T16:31:13.313Z",
+        "bytes": 457879
+      }
+    ],
+    "consoleErrors": [
+      "[Ad Placement API] 'adConfig' was already called to set 'preloadAdBreaks' with value 'on'",
+      "warning: 2 FS.syncfs operations in flight at once, probably just doing extra work"
+    ],
+    "failedRequests": [],
+    "startControlClicked": false,
+    "initialShot": "/tmp/artshots4/cl234playergame@0.png",
+    "initialBytes": 103551,
+    "finalState": {
+      "title": "TwoPlayerGames 2 3 4 Player",
+      "text": "",
+      "canvases": [
+        "1280x720"
+      ],
+      "iframes": [
+        "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-8349441957149316&output=html&adk=1812271804&adf=3025194257&abgtt=12&lmt=1795641940&plat=1%3A16777216%2C2%3A16777216%2C3",
+        "https://www.google.com/recaptcha/api2/aframe",
+        "https://googleads.g.doubleclick.net/pagead/html/r20261118/r20190131/zrt_lookup.html"
+      ],
+      "buttons": [],
+      "ruffle": false,
+      "bodyChildren": 4,
+      "scrollHeight": 720
+    },
+    "finalShot": "/tmp/artshots4/cl234playergame@final.png",
+    "finalBytes": 457752,
+    "elapsedMs": 604225,
+    "endedAt": "2026-11-27T16:36:13.639Z",
+    "changed": true
+  }
+}
