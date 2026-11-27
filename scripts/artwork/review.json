@@ -923,6 +923,12 @@
     "status": "verified",
     "title": "B 3313 Unabandoned A2"
   },
+  "clb3313v102": {
+    "reason": "Internet image search returned only gameplay video thumbnails with FULL GAMEPLAY captions layered over them; no clean artwork exists in the first results.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
   "clbabeltower": {
     "reason": "Captured frame shows the actual game with identifying title or gameplay.",
     "reviewed": "2026-11-26",
@@ -1481,6 +1487,12 @@
     "status": "verified",
     "title": "Black Knight"
   },
+  "clblackout": {
+    "reason": "Results were a Kickstarter board game and an unrelated Switch horror title (Blackout: The Darkest Night); nothing identifies this catalog entry.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
   "clblacksmithlab": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -1607,6 +1619,12 @@
     "status": "verified",
     "title": "Bloons PP 2"
   },
+  "clbloonspp3": {
+    "reason": "Results were Bloons Pop Three, a different game from this Bloons Player Pack entry; using it would mislabel the card.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
   "clbloonspp4": {
     "reason": "Bloons Player Pack 4 title screen.",
     "reviewed": "2026-11-27",
@@ -1624,6 +1642,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Bloons TD 1"
+  },
+  "clbloonstd2": {
+    "reason": "Results were Bloons TD Battles 2, a different game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
   },
   "clbloonstd3": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1817,6 +1841,18 @@
     "status": "verified",
     "title": "Boxhead Nightmare"
   },
+  "clboxinglive-2": {
+    "reason": "Boxing Live Round 2 key art carrying the game's title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Boxinglive 2"
+  },
+  "clboxinglive2": {
+    "reason": "Every result carried a flash-portal watermark (plimpl.com or silvergames.com); no clean artwork available.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
   "clboxingrandom": {
     "reason": "Boxing Random in-game title art, clean.",
     "reviewed": "2026-11-27",
@@ -1972,6 +2008,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Burrito Bison"
+  },
+  "clburritobison2": {
+    "reason": "The only artwork matching Burrito Bison Revenge (this title's second game) carries a minigamesville.com watermark, and the clean images are the first game's art.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
   },
   "clburritobisonlaunchalibre": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2388,9 +2430,9 @@
     "title": "Claymore"
   },
   "clclayuncraft": {
-    "reason": "Every qualifying frame carried a consent, age, profanity, legal or ad-block dialog over the content.",
+    "reason": "Clay Un Craft in-game clay scene; results 1 and 2 were the separate ClayCraft Tycoon.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Clay Un Craft"
   },
   "clcleanupio": {
@@ -2429,11 +2471,23 @@
     "status": "verified",
     "title": "Clear Vision 5"
   },
+  "clclimbforbrainrots": {
+    "reason": "Climb for Brainrots key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Climb for Brain Rots"
+  },
   "clclmadnessambulation": {
     "reason": "Madness Ambulation title art with its characters.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Madness Ambulation"
+  },
+  "clclover": {
+    "reason": "Results were the So Clover! board game, not this title.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
   },
   "clclubbytheseal": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2633,6 +2687,12 @@
     "status": "verified",
     "title": "Cookie Clicker Mod Menu"
   },
+  "clcookingmama": {
+    "reason": "Cooking Mama app artwork with the game's title and utensils.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Cooking Mama"
+  },
   "clcookingmama2": {
     "reason": "Cooking Mama 2 box art with Dinner with Friends.",
     "reviewed": "2026-11-27",
@@ -2656,6 +2716,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Cory in the House"
+  },
+  "clcotlk": {
+    "reason": "No result identifiable as this title: the first results were game-portal logos and an unrelated product photo.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
   },
   "clcountmastersstickmangames": {
     "reason": "Count Masters Stickman Games key art.",
@@ -2820,10 +2886,28 @@
     "title": "Creature Card Idle"
   },
   "clcreeperworld2": {
-    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+    "reason": "Creeper World 2 key art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Creeper World 2"
+  },
+  "clcreepyinternetstories": {
+    "reason": "Results were video thumbnails and app-store screenshots with marketing captions rather than the game's own artwork.",
     "reviewed": "2026-11-27",
     "status": "rejected",
-    "title": "Creeper World 2"
+    "title": null
+  },
+  "clcreepynightfunkin": {
+    "reason": "Creepy Night Funkin' logo art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Creepy Night Funkin'"
+  },
+  "clcrimsonmadness": {
+    "reason": "Noxpheria Crimson Madness logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Crimson Madness"
   },
   "clcrossyroad": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2832,9 +2916,9 @@
     "title": "Crossy Road"
   },
   "clcrunchball3000": {
-    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reason": "Crunchball 3000 logo art.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Crunch Ball 3000"
   },
   "clcrystalcastles": {
@@ -2855,11 +2939,23 @@
     "status": "verified",
     "title": "CS 6"
   },
-  "clcsgoclicker": {
-    "reason": "Every qualifying frame carried a consent, language, license or age dialog over the content.",
+  "clcsds": {
+    "reason": "Counter-Strike DS gameplay with its HUD; the other results were a different Chaos Squad game and a hardware photo.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "CSDS"
+  },
+  "clcsgoclicker": {
+    "reason": "CS:GO Clicker logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "CS:GO Clicker"
+  },
+  "clctgpnitro": {
+    "reason": "CTGP Nitro box art with the Mario Kart DS artwork.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "CTGP Nitro"
   },
   "clcurveball-1": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2872,6 +2968,36 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Customer Support"
+  },
+  "clcuttherope": {
+    "reason": "Cut the Rope key art with Om Nom.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Cut the Rope"
+  },
+  "clcuttheropeholiday": {
+    "reason": "Cut the Rope Holiday Gift key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Cut the Rope Holiday"
+  },
+  "clcuttheropetimetravel": {
+    "reason": "Cut the Rope Time Travel key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Cut the Rope Time Travel"
+  },
+  "clcvooc": {
+    "reason": "No result identifiable as this title; the first results were unrelated cooking games.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
+  "clcyberbungracing": {
+    "reason": "Cyberbung Racing gameplay with its night-city race.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Cyberbung Racing"
   },
   "clcybersensation": {
     "reason": "Wrapper-declared artwork for this title (official og) matched the catalog name and was visually checked against it.",
@@ -2892,9 +3018,9 @@
     "title": "Dad N Me"
   },
   "cldaggerfall": {
-    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+    "reason": "The Elder Scrolls: Daggerfall box art with the logo.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Daggerfall"
   },
   "cldandysworldclicker": {
@@ -2902,6 +3028,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Dandy's World Clicker"
+  },
+  "cldanktomb": {
+    "reason": "Dank Tomb logo art with its tomb sprite.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dank Tomb"
   },
   "cldasharena": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2927,17 +3059,65 @@
     "status": "verified",
     "title": "Date with Iraq"
   },
+  "cldborigins": {
+    "reason": "Dragon Ball Origins box art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "DB Origins"
+  },
+  "cldborigins2": {
+    "reason": "Dragon Ball Origins 2 box art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "DB Origins 2"
+  },
   "cldbsniper": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "DB Sniper"
   },
-  "cldbzdevolution": {
-    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+  "cldbzattacksaiyans": {
+    "reason": "Dragon Ball Z: Attack of the Saiyans box art.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "DBZ Attack Saiyans"
+  },
+  "cldbzdevolution": {
+    "reason": "Dragon Ball Z Devolution logo art with its pixel Goku.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "DBZ Devolution"
+  },
+  "cldbzsuperwarriorssonic": {
+    "reason": "Dragon Ball Z: Legendary Super Warriors box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "DBZ Super Warriors"
+  },
+  "cldbzwarriors2": {
+    "reason": "Dragon Ball Z: Supersonic Warriors 2 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "DBZ Warriors 2"
+  },
+  "clddlc64": {
+    "reason": "DDLC 64 cover art with the club characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "DDLC 64"
+  },
+  "cldeadair": {
+    "reason": "Dead Air key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Deadair"
+  },
+  "cldeadestate": {
+    "reason": "Dead Estate key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dead Estate"
   },
   "cldeadfrontieroutbreak": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2956,6 +3136,18 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Deadly Descent"
+  },
+  "cldeadplate": {
+    "reason": "Dead Plate Extended Cut title screen with its menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dead Plate"
+  },
+  "cldeadseat": {
+    "reason": "The Deadseat title art with its table.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dead Seat"
   },
   "cldeadzed": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2981,17 +3173,35 @@
     "status": "verified",
     "title": "Death Run"
   },
-  "cldecision": {
-    "reason": "Every qualifying frame was an error page (\"Something went wrong\", a 404 loader), which is never acceptable artwork.",
+  "cldeblob2": {
+    "reason": "de Blob 2 key art with the logo.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "de Blob 2"
+  },
+  "cldecision": {
+    "reason": "Decision title screen with its menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Decision"
   },
-  "cldecision3": {
-    "reason": "Every qualifying frame was an error page (\"Something went wrong\", a 404 loader), which is never acceptable artwork.",
+  "cldecision2": {
+    "reason": "Decision: New City 2 key art with its characters.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Decision 2"
+  },
+  "cldecision3": {
+    "reason": "Decision III key art with its soldier.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Decision 3"
+  },
+  "cldecisionmedieval": {
+    "reason": "Decision Medieval gameplay with its title and UI.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Decision Medieval"
   },
   "cldeepersleep": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -3004,6 +3214,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Deepest Sword"
+  },
+  "cldefenderarcade": {
+    "reason": "Defender arcade marquee art with the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Defender Arcade"
   },
   "cldefendyourcastle": {
     "reason": "Captured the DEFEND YOUR CASTLE title art and its New Game menu.",
@@ -3030,10 +3246,16 @@
     "title": "Deltarune"
   },
   "cldeltatraveler": {
-    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reason": "deltatraveler logo art with its characters.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Deltatraveler"
+  },
+  "cldementium": {
+    "reason": "Dementium: The Ward box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dementium"
   },
   "cldemolitionderbycrashracing": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -3041,11 +3263,23 @@
     "status": "verified",
     "title": "Demolition Derby Crash Racing"
   },
-  "cldemonbluff": {
-    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+  "cldemonblade": {
+    "reason": "Demon Blade key art with its warrior.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Demon Blade"
+  },
+  "cldemonbluff": {
+    "reason": "Demon Bluff game screen with its characters and UI.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Demon Bluff"
+  },
+  "cldiablo": {
+    "reason": "Diablo gameplay screen with its logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Diablo"
   },
   "cldiamondhollow": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -3059,6 +3293,12 @@
     "status": "verified",
     "title": "Diamond Hollow 2"
   },
+  "cldiddykong-racing": {
+    "reason": "Diddy Kong Racing key art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Diddy Kong Racing"
+  },
   "cldieinthedungeon": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -3066,16 +3306,46 @@
     "title": "Die in the Dungeon"
   },
   "cldigdeep": {
-    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reason": "Dig Deep logo art with its character.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Dig Deep"
+  },
+  "cldigdug": {
+    "reason": "Dig Dug arcade gameplay with its score HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dig Dug"
+  },
+  "cldigdug2": {
+    "reason": "Dig Dug II gameplay with its title and score.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dig Dug 2"
+  },
+  "cldigdug26": {
+    "reason": "Dig Dug 26 gameplay with its score display.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dig Dug 26"
+  },
+  "cldigtochina": {
+    "reason": "Dig to China gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dig to China"
   },
   "cldimensionalincident": {
     "reason": "Captured the Dimension Incident title menu.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Dimensional Incident"
+  },
+  "cldinodudes": {
+    "reason": "Dino Dudes box art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dino Dudes"
   },
   "cldinorun": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -3094,6 +3364,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Dino Run: Marathon of Doom"
+  },
+  "cldiredecks": {
+    "reason": "Dire Decks game screen with its cards.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dire Decks"
+  },
+  "cldkccompetitioncart": {
+    "reason": "Donkey Kong Country Competition Cartridge box and cartridge.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "DK Competition Cart"
   },
   "cldknescollection-1": {
     "reason": "Donkey Kong Classics box art for this NES collection.",
@@ -3119,11 +3401,59 @@
     "status": "verified",
     "title": "Doge Miner"
   },
+  "cldokidokiliteratureclub": {
+    "reason": "Doki Doki Literature Club logo art with the club members.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Doki Doki Literature Club"
+  },
   "cldomeromantik": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Dome Romantik"
+  },
+  "cldonkeykong": {
+    "reason": "Results were Donkey Kong Country Returns, a different title; the arcade original is a separate catalog entry.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
+  "cldonkeykong64": {
+    "reason": "Donkey Kong 64 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Donkey Kong 64"
+  },
+  "cldonkeykong94": {
+    "reason": "Donkey Kong Game Boy title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Donkey Kong 94"
+  },
+  "cldonkeykongcountry": {
+    "reason": "Donkey Kong Country key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Donkey Kong Country"
+  },
+  "cldonkeykongcountry2": {
+    "reason": "Donkey Kong Country 2 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Donkey Kong Country 2"
+  },
+  "cldonkeykongcountry3": {
+    "reason": "Donkey Kong Country 3 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Donkey Kong Country 3"
+  },
+  "cldonkeykongnes": {
+    "reason": "Donkey Kong NES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Donkey Kong (NES)"
   },
   "cldontescape": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -3143,10 +3473,16 @@
     "status": "verified",
     "title": "Don't Escape 3"
   },
-  "cldoodlejump": {
-    "reason": "The only frame was a game-over sketch with no recognizable title or gameplay.",
+  "cldontyoulectureme": {
+    "reason": "Don't You Lecture Me game screen with its emoji panel.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Don't You Lecture Me"
+  },
+  "cldoodlejump": {
+    "reason": "Doodle Jump logo art with its character.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Doodle Jump"
   },
   "cldoodlejumpgoober": {
@@ -3154,6 +3490,18 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Doodle Jump Goober"
+  },
+  "cldoom": {
+    "reason": "DOOM key art with the Slayer and logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Doom"
+  },
+  "cldoom2": {
+    "reason": "DOOM II box art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Doom 2"
   },
   "cldoom2d": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -3173,6 +3521,30 @@
     "status": "verified",
     "title": "Doom 2 (DOS)"
   },
+  "cldoom3pack": {
+    "reason": "DOOM 3 Pack key art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Doom 3 Pack"
+  },
+  "cldoom64": {
+    "reason": "DOOM 64 box art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Doom 64"
+  },
+  "cldoomemscripten": {
+    "reason": "DOOM title menu screen from the Emscripten build.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Doom (Emscripten)"
+  },
+  "cldoomps": {
+    "reason": "Results were Doom Eternal, a different title from this PlayStation Doom build.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
   "cldoomzio": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -3191,11 +3563,35 @@
     "status": "verified",
     "title": "DOSWasmx"
   },
+  "cldoubledribble": {
+    "reason": "Double Dribble NES gameplay with its scoreboard.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Double Dribble"
+  },
   "cldouchebaglife": {
     "reason": "Captured title screen shows the actual game.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Douchebag Life"
+  },
+  "cldouchebagworkout2": {
+    "reason": "Douchebag Workout 2 title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Douchebag Workout 2"
+  },
+  "cldownthemountain": {
+    "reason": "Down the Mountain title art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Down the Mountain"
+  },
+  "cldragonballadvance": {
+    "reason": "Dragon Ball: Advanced Adventure box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dragonball Advance"
   },
   "cldragonballzthelegacyofgoku": {
     "reason": "Dragon Ball Z: The Legacy of Goku box art.",
@@ -3204,9 +3600,9 @@
     "title": "Dragon Ball Z: Legacy of Goku"
   },
   "cldragonquest5ds": {
-    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reason": "Dragon Quest V DS box art.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Dragon Quest 5 DS"
   },
   "cldragonquestix": {
@@ -3214,6 +3610,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Dragon Quest IX"
+  },
+  "cldragonwarriormonsters": {
+    "reason": "Dragon Warrior Monsters box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dragon Warrior Monsters"
   },
   "cldragonxclient": {
     "reason": "Captured the Dragon Client launcher profile screen.",
@@ -3226,6 +3628,18 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Draw Climber"
+  },
+  "cldrawntolife": {
+    "reason": "Drawn to Life DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Drawn to Life"
+  },
+  "cldrawntolife2": {
+    "reason": "Drawn to Life: The Next Chapter key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Drawn to Life 2"
   },
   "cldrawtheline": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -3251,11 +3665,23 @@
     "status": "verified",
     "title": "Drift Boss"
   },
+  "cldriftsimulator": {
+    "reason": "Drift Simulator gameplay with its drift-score HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Drift Simulator"
+  },
   "cldrivemady": {
     "reason": "Captured the Drive Mad / Fancade title card.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Drive Mad Y"
+  },
+  "cldrivenwild": {
+    "reason": "Driven Wild title art with its car.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Driven Wild"
   },
   "cldriverussia": {
     "reason": "Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
@@ -3263,17 +3689,65 @@
     "status": "verified",
     "title": "Drive Russia"
   },
-  "clducklfe5": {
-    "reason": "Every qualifying frame carried a consent, language, license or age dialog over the content.",
+  "cldrmario": {
+    "reason": "Dr. Mario Game Boy box art.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Dr. Mario"
+  },
+  "cldrweedgaster": {
+    "reason": "Dr. Weedgaster title screen with START.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dr. Weedgaster"
+  },
+  "cldubstep": {
+    "reason": "Dubstep music maker key art with its pad layout.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dubstep"
+  },
+  "clduckhunt": {
+    "reason": "Duck Hunt gameplay with its score HUD; result 2 carried a site badge.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Duck Hunt"
+  },
+  "clducklfe5": {
+    "reason": "Duck Life Treasure Hunt logo art for Duck Life 5.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Duck Life 5"
   },
-  "clducklife3": {
-    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+  "clducklife": {
+    "reason": "Duck Life title art with its duck.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Duck Life"
+  },
+  "clducklife2": {
+    "reason": "Duck Life 2 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Duck Life 2"
+  },
+  "clducklife3": {
+    "reason": "Duck Life 3 Evolution logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Duck Life 3"
+  },
+  "clducklife4": {
+    "reason": "Duck Life 4 logo art; result 2 carried a Classic badge.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Duck Life 4"
+  },
+  "clducklifebattle": {
+    "reason": "Duck Life Battle key art with its ducks.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Duck Life Battle"
   },
   "clducklifespace": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -3287,6 +3761,18 @@
     "status": "verified",
     "title": "Ducklings.io"
   },
+  "clducktales": {
+    "reason": "DuckTales NES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "DuckTales"
+  },
+  "clducktales2": {
+    "reason": "DuckTales 2 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "DuckTales 2"
+  },
   "cldud": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -3294,10 +3780,16 @@
     "title": "Dud"
   },
   "cldukenukem2": {
-    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reason": "Duke Nukem II key art with the logo.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Duke Nukem 2"
+  },
+  "cldukenukem3d": {
+    "reason": "Duke Nukem 3D 20th Anniversary World Tour key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Duke Nukem 3D"
   },
   "cldumbwaystodie": {
     "reason": "Captured the Dumb Ways to Die title screen with Start.",
@@ -3346,6 +3838,18 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Dunk Shot"
+  },
+  "clduskchild": {
+    "reason": "Dusk Child title card with the author credit.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dusk Child"
+  },
+  "cldyingdreams": {
+    "reason": "Dying Dreams logo art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dying Dreams"
   },
   "cleaglercraft-alpha-126-offline": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
