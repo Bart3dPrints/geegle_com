@@ -1,0 +1,2702 @@
+{
+  "cheeserolling": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Cheese Rolling"
+  },
+  "cl1": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "1 (Classic)"
+  },
+  "cl10bullets": {
+    "reason": "Captured frame is a generic play-button splash, not the game itself.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "10 Bullets"
+  },
+  "cl10minutestildawn": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "10 Minutes Till Dawn"
+  },
+  "cl10morebullets": {
+    "reason": "Captured frame is a generic play-button splash, not the game itself.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "10 More Bullets"
+  },
+  "cl12minibattles": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "12 Mini Battles"
+  },
+  "cl1on1soccer": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "1 on 1 Soccer"
+  },
+  "cl1v1lol": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "1v1.LOL"
+  },
+  "cl1v1tennis": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "1v1 Tennis"
+  },
+  "cl2048": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "2048"
+  },
+  "cl2048cupcakes": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "2048 Cupcakes"
+  },
+  "cl20smallmazes": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "20 Small Mazes"
+  },
+  "cl234playergame": {
+    "reason": "Third-party portal loading screen, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "2-3-4 Player Game"
+  },
+  "cl24playerGame": {
+    "reason": "Captured frame is a third-party portal loading screen, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "cl24playerGame"
+  },
+  "cl2doom": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "2 Doom"
+  },
+  "cl2dshooting": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "2D Shooting"
+  },
+  "cl3dash": {
+    "reason": "Blank blue capture with no game content.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "cl3dash"
+  },
+  "cl3dasheditor": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "3 Dash Editor"
+  },
+  "cl3dpinballspacecadet": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "3D Pinball: Space Cadet"
+  },
+  "cl3pandas": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "3 Pandas"
+  },
+  "cl3pandasbrazil": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "3 Pandas in Brazil"
+  },
+  "cl3pandasfantasy": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "3 Pandas Fantasy"
+  },
+  "cl3pandasjapan": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "3 Pandas in Japan"
+  },
+  "cl3pandasnight": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "3 Pandas Night"
+  },
+  "cl3slices2": {
+    "reason": "Captured frame is a Unity loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "cl3slices2"
+  },
+  "cl4thandgoal": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "4th and Goal"
+  },
+  "cl60secondssantarun": {
+    "reason": "Generic play-button splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "cl60secondssantarun"
+  },
+  "cl8ballclassic": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "8 Ball Classic"
+  },
+  "cl8ballpool": {
+    "reason": "Shows a StarGames portal logo, not 8 Ball Pool.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "cl8ballpool"
+  },
+  "cl9007199254740992": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "9007199254740992"
+  },
+  "cl99balls": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "99 Balls"
+  },
+  "cl99nightsft": {
+    "reason": "Captured frame is the generic \"Made with Unity\" splash.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "cl99nightsft"
+  },
+  "cl99nightsitf": {
+    "reason": "Generic \"Made with Unity\" splash.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "99 Nights in the Forest"
+  },
+  "clADarkRoom": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "A Dark Room"
+  },
+  "clADateWithDeath": {
+    "reason": "Captured frame shows developer credits and loading text, not the game title screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "A Date with Death"
+  },
+  "clBFDIBranches": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "BFDI Branches"
+  },
+  "clBFDIbranches": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "clBFDIbranches"
+  },
+  "clFF3": {
+    "reason": "Emulator loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "clFF3"
+  },
+  "clGXClient": {
+    "reason": "Captured frame is a generic resolution selector with no identifying game content.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "clGXClient"
+  },
+  "clGXclient": {
+    "reason": "Generic resolution selector with no identifying game content.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "GX Client"
+  },
+  "clabsoluteMadness": {
+    "reason": "Error page (\"Something went wrong\").",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "clabsoluteMadness"
+  },
+  "clabsolutemadness": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Absolute Madness"
+  },
+  "clacecombat2": {
+    "reason": "Emulator loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "clacecombat2"
+  },
+  "clacecombat3": {
+    "reason": "Emulator loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "clacecombat3"
+  },
+  "clachievementunlocked": {
+    "reason": "Captured frame is an achievement pop-up, not the game title screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "clachievementunlocked"
+  },
+  "clachillies2": {
+    "reason": "Loading screen, not the game title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Achillies 2"
+  },
+  "cladatewithdeath": {
+    "reason": "Developer credits and loading text, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "A Date with Death"
+  },
+  "cladventneon": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Advent Neon"
+  },
+  "cladventurecapitalist": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Adventure Capitalist"
+  },
+  "clagariolite": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Agar.io Lite"
+  },
+  "clageofwar": {
+    "reason": "Third-party \"foxx hackers\" play splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "clageofwar"
+  },
+  "clageofwar2": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Age of War 2"
+  },
+  "clagesofconflict": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Ages of Conflict"
+  },
+  "clahoysurvival": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Ahoy Survival"
+  },
+  "clai": {
+    "reason": "Loading screen with no visible content.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "clai"
+  },
+  "clairlinetycoonidle": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Airline Tycoon Idle"
+  },
+  "clalienhominid": {
+    "reason": "Shows a SYNJ portal banner, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "clalienhominid"
+  },
+  "clalienskyinvasion": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Alien Sky Invasion"
+  },
+  "clamaze": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Amaze"
+  },
+  "clambulancerush": {
+    "reason": "Shows a GameTop.com portal logo, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "clambulancerush"
+  },
+  "clambulencearush": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Ambulance Rush"
+  },
+  "clamidstthesky": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Amidst the Sky"
+  },
+  "clamigopancho": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Amigo Pancho"
+  },
+  "clamigopancho2": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Amigo Pancho 2"
+  },
+  "clamigopancho3": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Amigo Pancho 3"
+  },
+  "clamigopancho4": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Amigo Pancho 4"
+  },
+  "clamigopancho5": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Amigo Pancho 5"
+  },
+  "clamigopancho6": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Amigo Pancho 6"
+  },
+  "clamigopancho7": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Amigo Pancho 7"
+  },
+  "clamongus": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Among Us"
+  },
+  "clamorphous": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Amorphous"
+  },
+  "clancientsins": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Ancient Sins"
+  },
+  "clangrybirds": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Angry Birds"
+  },
+  "clangrybirds-space": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Angry Birds Space"
+  },
+  "clangrybirdsshowdown": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Angry Birds Showdown"
+  },
+  "clangrybirdsslingshotfrenzy": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Angry Birds Slingshot Frenzy"
+  },
+  "clantarttycoon": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Antart Tycoon"
+  },
+  "clantimatterdimensions": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Antimatter Dimensions"
+  },
+  "clapesvshelium": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Apes vs Helium"
+  },
+  "clappleshooter": {
+    "reason": "Shows an OfficeGameSpot portal logo, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "clappleshooter"
+  },
+  "claquaparkio": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "claquaparkio"
+  },
+  "clarcadevolley": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Arcade Volley"
+  },
+  "clarchesspelago": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Archipelago"
+  },
+  "clarchimedesclient": {
+    "reason": "Generic client pack selector with no game identity.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "clarchimedesclient"
+  },
+  "clarena": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Arena"
+  },
+  "clarenasloths": {
+    "reason": "Shows artwork for a different game (The Elder Scrolls: Blades).",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "clarenasloths"
+  },
+  "clarmormayhem2": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Armor Mayhem 2"
+  },
+  "clarsonate": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Arsonate"
+  },
+  "clarthursnightmare": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Arthur's Nightmare"
+  },
+  "clasteroidsalt": {
+    "reason": "Emulator setup text with no identifying game content.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Asteroids Alt"
+  },
+  "clastraWASM": {
+    "reason": "Shows a Discord attachment page, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "clastraWASM"
+  },
+  "clastraclient": {
+    "reason": "WASM compiler page, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Astra Client"
+  },
+  "clastrawasm": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Astra WASM"
+  },
+  "clastrosdreamland": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Astros Dreamland"
+  },
+  "clattackhole": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Attack Hole"
+  },
+  "clavalance": {
+    "reason": "Shows a game-portal homepage, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "clavalance"
+  },
+  "clavalanche": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Avalanche"
+  },
+  "claviamasters": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Avia Masters"
+  },
+  "claviamastersbuggy": {
+    "reason": "Image is effectively identical to the Avia Masters card; distinct title needs its own artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Avia Masters Buggy"
+  },
+  "clawesomepirates": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Awesome Pirates"
+  },
+  "clawesometanks": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Awesome Tanks"
+  },
+  "clawesometanks2": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Awesome Tanks 2"
+  },
+  "clbabeltower": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Babel Tower"
+  },
+  "clbabychiccoadventure": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Baby Chic Co Adventure"
+  },
+  "clbabysniperinvietnam": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Baby Sniper in Vietnam"
+  },
+  "clbackrooms": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Back Rooms"
+  },
+  "clbackrooms2d": {
+    "reason": "Content warning screen, not identifying gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "clbackrooms2d"
+  },
+  "clbackyardbaseball": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Backyard Baseball"
+  },
+  "clbackyardsoccer": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "clbackyardsoccer"
+  },
+  "clbaconmaydie": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bacon May Die"
+  },
+  "clbadicecream": {
+    "reason": "Blank capture with no game content.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "clbadicecream"
+  },
+  "clbadicecream2": {
+    "reason": "Blank capture with no game content.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "clbadicecream2"
+  },
+  "clbadicecream3": {
+    "reason": "Blank capture with no game content.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "clbadicecream3"
+  },
+  "clbadparenting": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bad Parenting"
+  },
+  "clbadpiggies": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bad Piggies"
+  },
+  "clbadpiggieslatest": {
+    "reason": "Captured frame shows the actual game with identifying title or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bad Piggies Latest"
+  },
+  "clbalatrogba": {
+    "reason": "Disclaimer page, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Bala Tro (GBA)"
+  },
+  "clbaldicaseoh": {
+    "reason": "Engine splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Bald Icase Oh"
+  },
+  "clbaldidecomp": {
+    "reason": "Credits splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Bald Ide Comp"
+  },
+  "clbaldiepstein": {
+    "reason": "Unrelated start-menu image.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Bald Iepstein"
+  },
+  "clbaldisbasics": {
+    "reason": "Jam splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Baldi's Basics"
+  },
+  "clbaldisbasicsremaster": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Baldi's Basics Remaster"
+  },
+  "clbaldisfunnewschoolultimate": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Baldi's Fun New School Ultimate"
+  },
+  "clballsandbricks": {
+    "reason": "Video placeholder, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Balls and Bricks"
+  },
+  "clballsandbricksgood": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Balls and Bricks Good"
+  },
+  "clballz": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Ballz"
+  },
+  "clbananasimulator": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Banana Simulator"
+  },
+  "clbanditgunslingers": {
+    "reason": "Video placeholder, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Bandit Gunslingers"
+  },
+  "clbankbreakout2": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bank Breakout 2"
+  },
+  "clbankrobbery2": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bank Robbery 2"
+  },
+  "clbarryhasasecret": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Barry Has A Secret"
+  },
+  "clbartblast": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Bart Blast"
+  },
+  "clbaseballbros": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Baseball Bros"
+  },
+  "clbasketballfrvr": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Basketball FRVR"
+  },
+  "clbasketballstars": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Basketball Stars"
+  },
+  "clbasketballsuperstars": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Basketball Superstars"
+  },
+  "clbasketbattle": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Basket Battle"
+  },
+  "clbasketbros": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Basket Bros"
+  },
+  "clbasketrandom": {
+    "reason": "Video placeholder, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Basket Random"
+  },
+  "clbasketslamdunk2": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Basket Slam Dunk 2"
+  },
+  "clbattlekarts": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Battle Karts"
+  },
+  "clbattles": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Battles"
+  },
+  "clbattlesim": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Battle Sim"
+  },
+  "clbazookaboy": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bazooka Boy"
+  },
+  "clbballlegend": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bball Legend"
+  },
+  "clbeachboxingsim": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Beach Boxing Sim"
+  },
+  "clbearbarians": {
+    "reason": "Shows artwork for an unrelated game (Warfare 1776).",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Bear Barians"
+  },
+  "clbearsus": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bearsus"
+  },
+  "clbejeweledtwistflash": {
+    "reason": "Error page (\"Something went wrong\").",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Be Jeweled Twist Flash"
+  },
+  "clbfdia5b": {
+    "reason": "Blurred backdrop with no identifying content.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "BFDI A5B"
+  },
+  "clbig_time_butter_baron": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Big Time Butter Baron"
+  },
+  "clbigflappytowertinysquare": {
+    "reason": "Shows a generic \"Evil Objective\" splash, not the title.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Big Flappy Tower Tiny Square"
+  },
+  "clbigneontowertinysquare": {
+    "reason": "Shows a generic \"Evil Objective\" splash, not the title.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Big Neon Tower Tiny Square"
+  },
+  "clbigshotboxing2": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Big Shot Boxing 2"
+  },
+  "clbigtowertinysquare": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Big Tower Tiny Square"
+  },
+  "clbindingofisaccsheeptime": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Binding of Isaac Sheep Time"
+  },
+  "clbitlife": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bitlife"
+  },
+  "clbitlifeencrypted": {
+    "reason": "Document page, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Bit Life Encrypted"
+  },
+  "clbitplanes": {
+    "reason": "Web text page, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Bit Planes"
+  },
+  "clblackjack": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Blackjack"
+  },
+  "clblackknight": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Black Knight"
+  },
+  "clblacksmithlab": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Blacksmith Lab"
+  },
+  "clblastronaut": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bl Astronaut"
+  },
+  "clblazedrifter": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Blaze Drifter"
+  },
+  "clblightborne": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Blightborne"
+  },
+  "clblockcraftparkour": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Block Craft Parkour"
+  },
+  "clblockpost": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Blockpost"
+  },
+  "clblockthepig": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Block the Pig"
+  },
+  "clblockydemolitionderby": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Blocky Demolition Derby"
+  },
+  "clblockysnakes": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Blocky Snakes"
+  },
+  "clblood": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Blood"
+  },
+  "clbloodtournament": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Blood Tournament"
+  },
+  "clbloons": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bloons"
+  },
+  "clbloons2": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bloons 2"
+  },
+  "clbloonspp1": {
+    "reason": "Identical Bloons wordmark shared with other Bloons entries; not this installment's own art.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Bloons PP 1"
+  },
+  "clbloonspp2": {
+    "reason": "Identical Bloons wordmark shared with other Bloons entries; not this installment's own art.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Bloons PP 2"
+  },
+  "clbloonstd1": {
+    "reason": "Identical Bloons wordmark shared with other Bloons entries; not this installment's own art.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Bloons TD 1"
+  },
+  "clbloonstd2": {
+    "reason": "Identical Bloons wordmark shared with other Bloons entries; not this installment's own art.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Bloons TD 2"
+  },
+  "clbloonstd3": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bloons TD 3"
+  },
+  "clbloonstd5": {
+    "reason": "Error page (\"Something went wrong\").",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Bloons TD 5"
+  },
+  "clbloonstd6scratch": {
+    "reason": "JavaScript error page.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Bloons Td 6 Scratch"
+  },
+  "clbloxorz": {
+    "reason": "Third-party portal splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Bloxorz"
+  },
+  "clblumgirocket": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Blumgi Rocket"
+  },
+  "clbntts": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bntts"
+  },
+  "clbobasimulator": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Boba Simulator"
+  },
+  "clbobtherobber": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bob the Robber"
+  },
+  "clbobtherobber2": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bob the Robber 2"
+  },
+  "clbobtherobber5": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bob the Robber 5"
+  },
+  "clbombermanworld": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Bomberman World"
+  },
+  "clbottlecracks": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Bottle Cracks"
+  },
+  "clbotwds": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Botwds"
+  },
+  "clbounceback": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bounce Back"
+  },
+  "clbouncybasketball": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bouncy Basketball"
+  },
+  "clbouncymotors": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bouncy Motors"
+  },
+  "clbountyofone": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bounty of One"
+  },
+  "clboxhead2playrooms": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Boxhead 2 Playrooms"
+  },
+  "clboxinglive-2": {
+    "reason": "Portal loading screen with no game content.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Boxinglive 2"
+  },
+  "clboxinglive2": {
+    "reason": "Portal loading screen with no game content.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Boxing Live 2"
+  },
+  "clbrainrot": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Brain Rot"
+  },
+  "clbrawlstars": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Brawl Stars"
+  },
+  "clbrotato": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Brotato"
+  },
+  "clbtd1": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bloons Tower Defense 1"
+  },
+  "clbubbleshooter": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bubble Shooter"
+  },
+  "clbubbleshooterpirate": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bubble Shooter Pirate"
+  },
+  "clbubbletanks": {
+    "reason": "Error page (\"Something went wrong\").",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Bubble Tanks"
+  },
+  "clbubbletanks2": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Bubble Tanks 2"
+  },
+  "clbubbletanks3": {
+    "reason": "Error page (\"Something went wrong\").",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Bubble Tanks 3"
+  },
+  "clbuckshotroulette": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Buckshot Roulette"
+  },
+  "clbulletforce": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Bullet Force"
+  },
+  "clburgerandfrights": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Burger and Frights"
+  },
+  "clburritobison": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Burrito Bison"
+  },
+  "clburritobisonlaunchalibre": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Burrito Bison Launcha Libre"
+  },
+  "clburritobisonrevenge": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Burrito Bison Revenge"
+  },
+  "clbusterjam": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Buster Jam"
+  },
+  "clcactusmccoy-1": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Cactus McCoy"
+  },
+  "clcactusmccoy2-1": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Cactus McCoy 2"
+  },
+  "clcallofbattle": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Call of Battle"
+  },
+  "clcannonballs3d": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Cannonballs 3D"
+  },
+  "clcarcrash3": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Car Crash 3"
+  },
+  "clcardrawing": {
+    "reason": "Generic \"Made with Unity\" splash.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Car Drawing"
+  },
+  "clcareatscar2deluxe": {
+    "reason": "Portal splash (\"My Real Games\"), not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Care at Scar 2 Deluxe"
+  },
+  "clcarkingarena": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Car King Arena"
+  },
+  "clcarmods": {
+    "reason": "Plain text page, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Carmods"
+  },
+  "clcarrampvspolicechase": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Car Ramp vs Police Chase"
+  },
+  "clcartoonnetworktabletennis": {
+    "reason": "Screen shows a different title than this catalog entry.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Cartoon Network: Table Tennis Ultimate Tournament"
+  },
+  "clcartoonnetworktabletennisultimatetournament": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Cartoon Network Table Tennis Ultimate Tournament"
+  },
+  "clcastaway": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Castaway"
+  },
+  "clcastlevaniadawnofsorrow": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Castlevania: Dawn of Sorrow"
+  },
+  "clcastlewarsmodern": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Castle Wars Modern"
+  },
+  "clcatmariogood": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Cat Mario Good"
+  },
+  "clcatslovecake2": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Cats Love Cake 2"
+  },
+  "clcavecrawler": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Cave Crawler"
+  },
+  "clcelltosingularity": {
+    "reason": "Credits/porting splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Cell to Singularity"
+  },
+  "clchainofmemories": {
+    "reason": "Publisher logo splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Kingdom Hearts: Chain of Memories"
+  },
+  "clchaosfaction2": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Chaos Faction 2"
+  },
+  "clcheckers": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Checkers"
+  },
+  "clcheesechompers3d": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Cheese Chompers 3D"
+  },
+  "clchess": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Chess"
+  },
+  "clchessclassic": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Chess Classic"
+  },
+  "clchibiknight": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Chibi Knight"
+  },
+  "clchickencs": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Chicken CS"
+  },
+  "clchickenscream": {
+    "reason": "Shows a generic game-portal logo, not Chicken Scream.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Chicken Scream"
+  },
+  "clchickenwar": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Chicken War"
+  },
+  "clchoppyorc": {
+    "reason": "Portal splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Choppy Orc"
+  },
+  "clchoroqwonderful": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Ch Oro Qwonderful"
+  },
+  "clchuzzle": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Chuzzle"
+  },
+  "clcircloo2": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "CircloO 2"
+  },
+  "clciviballs": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Civiballs"
+  },
+  "clciviballs2": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Civiballs 2"
+  },
+  "clclashnslash": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Clash N Slash"
+  },
+  "clclashofvikings": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Clash of Vikings"
+  },
+  "clclayuncraft": {
+    "reason": "License agreement screen, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Clay Un Craft"
+  },
+  "clcleanupio": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Cleanup IO"
+  },
+  "clclearvision": {
+    "reason": "Portal splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Clear Vision"
+  },
+  "clclearvision2": {
+    "reason": "Blank dark frame with unreadable text.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Clear Vision 2"
+  },
+  "clclearvision3": {
+    "reason": "Blank dark frame with unreadable text.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Clear Vision 3"
+  },
+  "clclearvision4": {
+    "reason": "Portal splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Clear Vision 4"
+  },
+  "clclearvision5": {
+    "reason": "Blank dark frame with unreadable text.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Clear Vision 5"
+  },
+  "clclimbforbrainrots": {
+    "reason": "Near-uniform placeholder or blank image.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Climb for Brain Rots"
+  },
+  "clclubbytheseal": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Club by the Seal"
+  },
+  "clclusterrush": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Cluster Rush"
+  },
+  "clcodercraft": {
+    "reason": "License agreement screen, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Coder Craft"
+  },
+  "clcoldfront": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Cold Front"
+  },
+  "clcolormatch": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Color Match"
+  },
+  "clcommandandconquer": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Command & Conquer"
+  },
+  "clconfrontingurself": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Confronting Ur Self"
+  },
+  "clconfrontingyourself": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Confronting Yourself"
+  },
+  "clcookie-clicker": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Cookie Clicker"
+  },
+  "clcookieclicker": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Cookie Clicker"
+  },
+  "clcookieclickermodmenu": {
+    "reason": "Blank screen with no game content.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Cookie Clicker Mod Menu"
+  },
+  "clcoreball": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Core Ball"
+  },
+  "clcoverorange": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Cover Orange"
+  },
+  "clcoverorange2": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Cover Orange 2"
+  },
+  "clcoverorangejourneyknights": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Cover Orange Journey Knights"
+  },
+  "clcoverorangejourneypirates": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Cover Orange Journey Pirates"
+  },
+  "clcoverorangejourneyspace": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Cover Orange Journey Space"
+  },
+  "clcoverorangeplayerspack": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Cover Orange Players Pack"
+  },
+  "clcoverorangeplayerspack2": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Cover Orange Players Pack 2"
+  },
+  "clcoverorangeplayerspack3-1": {
+    "reason": "Error page (\"Something went wrong\").",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Cover Orange Players Pack 3"
+  },
+  "clcrankitbang": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Crankit!"
+  },
+  "clcrash2": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Crash 2"
+  },
+  "clcrashbandicoot--1": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Crash Bandicoot"
+  },
+  "clcrazycars": {
+    "reason": "Challenge page, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Crazy Cars"
+  },
+  "clcrazycattle3d": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Crazy Cattle 3D"
+  },
+  "clcrazychicken3d": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Crazy Chicken 3D"
+  },
+  "clcrazymotorcycle": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Crazy Motorcycle"
+  },
+  "clcrazypenguincatapult": {
+    "reason": "Publisher splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Crazy Penguin Catapult"
+  },
+  "clcrazyplanelanding": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Crazy Plane Landing"
+  },
+  "clcreaturecardidle": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Creature Card Idle"
+  },
+  "clcreeperworld2": {
+    "reason": "Portal splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Creeper World 2"
+  },
+  "clcrimsonmadness": {
+    "reason": "Blank gradient frame with no game content.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Crimson Madness"
+  },
+  "clcrossyroad": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Crossy Road"
+  },
+  "clcrunchball3000": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Crunch Ball 3000"
+  },
+  "clcs1-6": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "CS 1.6"
+  },
+  "clcs6": {
+    "reason": "Near-identical to the CS 1.6 card; a distinct title needs its own recognizable artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "CS 6"
+  },
+  "clcsgoclicker": {
+    "reason": "Consent dialog over a blank screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "CS:GO Clicker"
+  },
+  "clcurveball-1": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Curve Ball"
+  },
+  "clcustomersupport": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Customer Support"
+  },
+  "clcybersensation": {
+    "reason": "Collage of unrelated thumbnails, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Cyber Sensation"
+  },
+  "cldadish": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Dadish"
+  },
+  "cldadnme": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Dad N Me"
+  },
+  "cldaggerfall": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Daggerfall"
+  },
+  "cldandysworldclicker": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Dandy's World Clicker"
+  },
+  "cldasharena": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Dash Arena"
+  },
+  "cldashio": {
+    "reason": "Watermarked generic banner art, not Dash.io.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Dashio"
+  },
+  "cldashmetry": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Dashmetry"
+  },
+  "cldatewithiraq": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Date with Iraq"
+  },
+  "cldbzdevolution": {
+    "reason": "Third-party splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "DBZ Devolution"
+  },
+  "cldbzwarriors2": {
+    "reason": "Credits animation, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "DBZ Warriors 2"
+  },
+  "cldeadfrontieroutbreak": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Dead Frontier Outbreak"
+  },
+  "cldeadfrontieroutbreak2": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Dead Frontier Outbreak 2"
+  },
+  "cldeadlydescent": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Deadly Descent"
+  },
+  "cldeadzed": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Dead Zed"
+  },
+  "cldeadzed2": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Dead Zed 2"
+  },
+  "cldeathchase": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Death Chase"
+  },
+  "cldeathrun": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Death Run"
+  },
+  "cldecision": {
+    "reason": "Error page (\"Something went wrong\").",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Decision"
+  },
+  "cldecision3": {
+    "reason": "Missing game file (404).",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Decision 3"
+  },
+  "cldeepersleep": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Deeper Sleep"
+  },
+  "cldeepestsword": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Deepest Sword"
+  },
+  "cldefendyourcastle": {
+    "reason": "Portal splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Defend Your Castle"
+  },
+  "cldefendyournuts": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Defend Your Nuts"
+  },
+  "cldeltarune": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Deltarune"
+  },
+  "cldeltatraveler": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Deltatraveler"
+  },
+  "cldemolitionderbycrashracing": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Demolition Derby Crash Racing"
+  },
+  "cldemonbluff": {
+    "reason": "Portal splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Demon Bluff"
+  },
+  "cldiamondhollow": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Diamond Hollow"
+  },
+  "cldiamondhollow2": {
+    "reason": "Portal logo, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Diamond Hollow 2"
+  },
+  "cldieinthedungeon": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Die in the Dungeon"
+  },
+  "cldigtochina": {
+    "reason": "Portal splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Dig to China"
+  },
+  "cldimensionalincident": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Dimensional Incident"
+  },
+  "cldinorun": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Dino Run"
+  },
+  "cldinorunenterplanetd": {
+    "reason": "Screen shows a different game title than this entry.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Dino Run: Enter Planet D"
+  },
+  "cldinorunmarathonofdoom": {
+    "reason": "Advertisement overlay, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Dino Run: Marathon of Doom"
+  },
+  "cldoblox": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Doblox"
+  },
+  "cldodecadragons": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Dodeca Dragons"
+  },
+  "cldogeminer": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Doge Miner"
+  },
+  "cldontescape": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Don't Escape"
+  },
+  "cldontescape2": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Don't Escape 2"
+  },
+  "cldontescape3": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Don't Escape 3"
+  },
+  "cldoodlejump": {
+    "reason": "Game-over screen, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Doodle Jump"
+  },
+  "cldoodlejumpgoober": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Doodle Jump Goober"
+  },
+  "cldoom2d": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Doom 2D"
+  },
+  "cldoom2ddos": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Doom 2D (DOS)"
+  },
+  "cldoom2dos": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Doom 2 (DOS)"
+  },
+  "cldoomzio": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Doomzio"
+  },
+  "cldoorscastle": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Doors Castle"
+  },
+  "cldoswasmx": {
+    "reason": "Emulator documentation page, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "DOSWasmx"
+  },
+  "cldouchebagworkout2": {
+    "reason": "Error page (\"Something went wrong\").",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Douchebag Workout 2"
+  },
+  "cldragonxclient": {
+    "reason": "Generic client pack selector with no game identity.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Dragon X Client"
+  },
+  "cldrawclimber": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Draw Climber"
+  },
+  "cldrawntolife": {
+    "reason": "Video splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Drawn to Life"
+  },
+  "cldrawntolife2": {
+    "reason": "Blank white frame.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Drawn to Life 2"
+  },
+  "cldrawtheline": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Draw the Line"
+  },
+  "cldreader": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Dreader"
+  },
+  "cldriftboss": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Drift Boss"
+  },
+  "cldriftsimulator": {
+    "reason": "Shows a generic unblocked-games portal logo, not Drift Simulator.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Drift Simulator"
+  },
+  "cldrivemady": {
+    "reason": "Third-party splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Drive Mad Y"
+  },
+  "cldriverussia": {
+    "reason": "Non-identifying photograph, not gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Drive Russia"
+  },
+  "clducklfe5": {
+    "reason": "Language selector, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Duck Life 5"
+  },
+  "clducklife": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Duck Life"
+  },
+  "clducklife2": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Duck Life 2"
+  },
+  "clducklife3": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Duck Life 3"
+  },
+  "clducklife4": {
+    "reason": "Loading screen.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Duck Life 4"
+  },
+  "clducklifebattle": {
+    "reason": "Language selector, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Duck Life Battle"
+  },
+  "clducklifespace": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Duck Life Space"
+  },
+  "clducklingsio": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Ducklings.io"
+  },
+  "cldud": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Dud"
+  },
+  "cldukenukem2": {
+    "reason": "License agreement page, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Duke Nukem 2"
+  },
+  "cldumpling": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Dumpling"
+  },
+  "cldunebuggy": {
+    "reason": "Portal splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Dune Buggy"
+  },
+  "cldunedash": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Dune Dash"
+  },
+  "cldungeondeck": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Dungeon Deck"
+  },
+  "cldungeonraid": {
+    "reason": "Dark inventory screen with no identifying content.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Dungeon Raid"
+  },
+  "cldungeonsanddegenerategamblers": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Dungeons and Degenerate Gamblers"
+  },
+  "cldunkshot": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Dunk Shot"
+  },
+  "cleaglercraft-alpha-126-offline": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Eaglercraft Alpha 1.2.6 Offline"
+  },
+  "cleaglercraft-beta-1-3-offline": {
+    "reason": "Options menu, not a title screen or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Eaglercraft Beta 1.3 Offline"
+  },
+  "cleaglercraft-beta-13-offline": {
+    "reason": "Options menu, not a title screen or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Eaglercraft Beta 1.3 Offline"
+  },
+  "cleaglercraft-indev-offline-1": {
+    "reason": "Options menu, not a title screen or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Eaglercraft Indev Offline"
+  },
+  "cleaglercraft152": {
+    "reason": "Options menu, not a title screen or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Eaglercraft 1.5.2"
+  },
+  "cleaglercraftl_19_v0_7_0_offline_signed-1": {
+    "reason": "Options menu, not a title screen or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Eaglercraft 1.19 v0.7.0 Offline"
+  },
+  "cleaglercraftlite": {
+    "reason": "Third-party splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Eaglercraft Lite"
+  },
+  "cleaglercraftmagic": {
+    "reason": "License agreement page, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Eaglercraft Magic"
+  },
+  "cleaglercraftnebula": {
+    "reason": "License agreement page, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Eaglercraft Nebula"
+  },
+  "cleaglercraftshadow": {
+    "reason": "Publisher splash, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Eaglercraft Shadow"
+  },
+  "cleaglercraftsky": {
+    "reason": "Discord page, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Eaglercraft Sky"
+  },
+  "cleaglercraftx-188u29": {
+    "reason": "Options menu, not a title screen or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Eaglercraft X 1.8.8 U29"
+  },
+  "cleaglercraftx188-u29": {
+    "reason": "Options menu, not a title screen or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Eaglercraft X 1.8.8 (U29)"
+  },
+  "cleaglercraftz_1112-1": {
+    "reason": "Options menu, not a title screen or gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Eaglercraft Z 1.12"
+  },
+  "cleaglerforge": {
+    "reason": "Mod manager screen, not the game.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "EaglerForge"
+  },
+  "cleagleride": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Eagle Ride"
+  },
+  "clearntodie": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Earn to Die"
+  },
+  "clearntodie2": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Earn to Die 2"
+  },
+  "clearthtaken": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Earth Taken"
+  },
+  "clearthtaken2": {
+    "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Earth Taken 2"
+  },
+  "cledelweiss": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Edelweiss"
+  },
+  "clescapeschoolduel": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Escape School Duel"
+  },
+  "clfeedthevoid": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Feed the Void"
+  },
+  "clfireblob": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Fire Blob"
+  },
+  "clfivenightsatshreks": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Five Nights at Shrek's"
+  },
+  "clfnfgodot": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "FNF: Godot"
+  },
+  "clfunnyshooter22": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Funny Shooter 22"
+  },
+  "clgeometryvibes": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Geometry Vibes"
+  },
+  "clhelltaker": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Helltaker"
+  },
+  "clhextris": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Hextris"
+  },
+  "clholebattle": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Hole Battle"
+  },
+  "clhuggywuggypixel": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Huggy Wuggy Pixel"
+  },
+  "cljefflings": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Jefflings"
+  },
+  "cljellymario": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Jelly Mario"
+  },
+  "clkanyezone": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Kanye Zone"
+  },
+  "clkartbros": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Kart Bros"
+  },
+  "clleverwarriors": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Lever Warriors"
+  },
+  "cllummm": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Lummm"
+  },
+  "clmcfpsfbhd": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "MCFP SF BHD"
+  },
+  "clmonsterderby": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Monster Derby"
+  },
+  "clmonstertruckportstunt": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Monster Truck Port Stunt"
+  },
+  "clnetattack": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Net Attack"
+  },
+  "clninjaobbyparkor": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Ninja Obby Parkour"
+  },
+  "clomegalayers": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Omega Layers"
+  },
+  "clonlyup": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Only Up"
+  },
+  "clovo2": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "OvO 2"
+  },
+  "clpaperio": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Paper.io"
+  },
+  "clpinkbike": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Pink Bike"
+  },
+  "clpixelclient": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Pixel Client"
+  },
+  "clpogo3d": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Pogo 3D"
+  },
+  "clrussiansandbox": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Russian Sandbox"
+  },
+  "clsandboxels": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Sandboxels"
+  },
+  "clsevendays": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Seven Days"
+  },
+  "clshadowcourier": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Shadow Courier"
+  },
+  "clsilk": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Silk"
+  },
+  "clsilkmelody": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Silk Melody"
+  },
+  "clskibidiinthebackrooms": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Skibidi in the Backrooms"
+  },
+  "clsmashkarts": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Smash Karts"
+  },
+  "clsoniccdmobile": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Sonic CD Mobile"
+  },
+  "clsonicmaniaplus": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Sonic Mania Plus"
+  },
+  "clstickslasher": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Stick Slasher"
+  },
+  "clsupercold": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Super Cold"
+  },
+  "clswingforbrainrots": {
+    "reason": "Shows an unrelated Classroom Center lunch icon.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Swing for Brain Rots"
+  },
+  "cltallio": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Tall.io"
+  },
+  "cltimeshooter2": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Time Shooter 2"
+  },
+  "cltimeshooter3": {
+    "reason": "Image matches the catalog title; the two entries are the same Time Shooter 3 game, so shared artwork is legitimate.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Time Shooter 3"
+  },
+  "clundertaleyellow": {
+    "reason": "Effectively blank yellow crop with no identifying content.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Undertale Yellow"
+  },
+  "cluzg": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "UZG"
+  },
+  "clvaportrails": {
+    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Vapor Trails"
+  },
+  "clvex4": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Vex 4"
+  },
+  "clvex5": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Vex 5"
+  },
+  "clwordle": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "Wordle"
+  },
+  "pvzm": {
+    "reason": "Image matches the catalog title and shows the game's own identity artwork.",
+    "reviewed": "2026-11-26",
+    "status": "verified",
+    "title": "PvZ Multiplayer"
+  },
+  "time-shooter-3": {
+    "reason": "Image matches the catalog title; the two entries are the same Time Shooter 3 game, so shared artwork is legitimate.",
+    "reviewed": "2026-11-26",
+    "status": "rejected",
+    "title": "Time Shooter 3: SWAT"
+  }
+}
