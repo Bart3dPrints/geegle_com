@@ -382,6 +382,26 @@
       "width": 640
     },
     {
+      "bytes": 34192,
+      "colors": 43611,
+      "edges": 20.97,
+      "format": "WEBP",
+      "height": 360,
+      "id": "cl60secondsburgerrun",
+      "phash": "0f6949694b272747",
+      "problems": [],
+      "recordedTitle": "60 Seconds Burger Run",
+      "sha256": "2c301785e3d0d4376583c1bcefebe4f4db3b698a5222b3a91c972737134d0946",
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cl60secondsburgerrun.html",
+      "status": "ok",
+      "stddev": 76.46,
+      "tier": "screens",
+      "title": "60 Seconds Burger Run",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl60secondsburgerrun.webp",
+      "width": 640
+    },
+    {
       "bytes": 12848,
       "colors": 26482,
       "edges": 9.93,
@@ -939,6 +959,26 @@
       "title": "Ancient Sins",
       "type": "gameplay-screenshot",
       "url": "/artwork/clancientsins.webp",
+      "width": 640
+    },
+    {
+      "bytes": 5288,
+      "colors": 7437,
+      "edges": 126.51,
+      "format": "WEBP",
+      "height": 360,
+      "id": "clanemonesfall",
+      "phash": "2f175f4d4d050519",
+      "problems": [],
+      "recordedTitle": "Anemone Fall",
+      "sha256": "fe11f31e101aa86980a67b36aab00f14d3362c983e5363cf615140af3aaf3b5f",
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clanemonesfall.html",
+      "status": "ok",
+      "stddev": 33.84,
+      "tier": "screens",
+      "title": "Anemone Fall",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clanemonesfall.webp",
       "width": 640
     },
     {
@@ -1622,6 +1662,26 @@
       "width": 640
     },
     {
+      "bytes": 8198,
+      "colors": 11122,
+      "edges": 4.76,
+      "format": "WEBP",
+      "height": 360,
+      "id": "clballblast",
+      "phash": "1717173737070737",
+      "problems": [],
+      "recordedTitle": "Ball Blast",
+      "sha256": "27597856a97c231be5f4bf547904becf23eb7101c84a9cf2957f163c7fbb2d6c",
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clballblast.html",
+      "status": "ok",
+      "stddev": 100.17,
+      "tier": "screens",
+      "title": "Ball Blast",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clballblast.webp",
+      "width": 640
+    },
+    {
       "bytes": 5172,
       "colors": 10157,
       "edges": 3.96,
@@ -2262,6 +2322,26 @@
       "width": 640
     },
     {
+      "bytes": 5784,
+      "colors": 10627,
+      "edges": 3.88,
+      "format": "WEBP",
+      "height": 360,
+      "id": "clblockblastv2",
+      "phash": "08b2333333327071",
+      "problems": [],
+      "recordedTitle": "Block Blast V2",
+      "sha256": "00b2e2ceb121da82978b9d16e83e8340e3534c952d069e313281418e487aa837",
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clblockblastv2.html",
+      "status": "ok",
+      "stddev": 24.28,
+      "tier": "screens",
+      "title": "Block Blast V2",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clblockblastv2.webp",
+      "width": 640
+    },
+    {
       "bytes": 19768,
       "colors": 45692,
       "edges": 13.02,
@@ -2779,6 +2859,26 @@
       "title": "Bloons Tower Defense 1",
       "type": "gameplay-screenshot",
       "url": "/artwork/clbtd1.webp",
+      "width": 640
+    },
+    {
+      "bytes": 8732,
+      "colors": 220,
+      "edges": 15.44,
+      "format": "WEBP",
+      "height": 360,
+      "id": "clbtts",
+      "phash": "6030b2f069f0dc69",
+      "problems": [],
+      "recordedTitle": "Btts",
+      "sha256": "43dc8898ee8df5995c6de5c10c6d4ceb249a1cbf4c964fbb2e2389760884f9cb",
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbtts.html",
+      "status": "ok",
+      "stddev": 74.78,
+      "tier": "screens",
+      "title": "Btts",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clbtts.webp",
       "width": 640
     },
     {
@@ -7390,8 +7490,8 @@
     "broken": 0,
     "exactDuplicateGroups": 0,
     "nearDuplicateGroups": 0,
-    "ok": 367,
-    "records": 369,
+    "ok": 372,
+    "records": 374,
     "review": 2
   }
 }

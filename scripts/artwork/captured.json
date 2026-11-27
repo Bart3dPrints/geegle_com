@@ -2052,6 +2052,28 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/cl4thandgoal.webp"
     },
+    "cl60secondsburgerrun": {
+      "assetSha256": "2c301785e3d0d4376583c1bcefebe4f4db3b698a5222b3a91c972737134d0946",
+      "frame": "cl60secondsburgerrun@4.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cl60secondsburgerrun.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 394,
+        "coverage": 0.251,
+        "dominant": 0.591,
+        "edges": 21.79,
+        "stddev": 83.25
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cl60secondsburgerrun.html",
+      "title": "60 Seconds Burger Run",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl60secondsburgerrun.webp"
+    },
     "cl8ballclassic": {
       "assetSha256": "c95e436beef7f85ecaa682b8390a05c4648437b8906d9d0cfc678657a248eb5e",
       "frame": "cl8ballclassic@2.png",
@@ -2519,6 +2541,28 @@
       "title": "Ancient Sins",
       "type": "gameplay-screenshot",
       "url": "/artwork/clancientsins.webp"
+    },
+    "clanemonesfall": {
+      "assetSha256": "fe11f31e101aa86980a67b36aab00f14d3362c983e5363cf615140af3aaf3b5f",
+      "frame": "clanemonesfall@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clanemonesfall.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 2201,
+        "coverage": 0.999,
+        "dominant": 0.078,
+        "edges": 95.53,
+        "stddev": 40.87
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clanemonesfall.html",
+      "title": "Anemone Fall",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clanemonesfall.webp"
     },
     "clangrybirds": {
       "assetSha256": "69e2945bbb1d88fd006a4e2c3669507f01c911ac9c56ed472f049a6a8fb90213",
@@ -3042,6 +3086,28 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clbaldisfunnewschoolultimate.webp"
     },
+    "clballblast": {
+      "assetSha256": "27597856a97c231be5f4bf547904becf23eb7101c84a9cf2957f163c7fbb2d6c",
+      "frame": "clballblast@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clballblast.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 4529,
+        "coverage": 0.565,
+        "dominant": 0.41,
+        "edges": 4.26,
+        "stddev": 41.83
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clballblast.html",
+      "title": "Ball Blast",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clballblast.webp"
+    },
     "clballsandbricksgood": {
       "assetSha256": "95ce9633ccbbcb9fd5c3e3415e1d33b4a491daa1915ebf78cc6c067521138162",
       "frame": "clballsandbricksgood@1.png",
@@ -3564,6 +3630,28 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clblightborne.webp"
     },
+    "clblockblastv2": {
+      "assetSha256": "00b2e2ceb121da82978b9d16e83e8340e3534c952d069e313281418e487aa837",
+      "frame": "clblockblastv2@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clblockblastv2.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched developer.apple.com page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 5669,
+        "coverage": 0.936,
+        "dominant": 0.127,
+        "edges": 2.56,
+        "stddev": 25.49
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clblockblastv2.html",
+      "title": "Block Blast V2",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clblockblastv2.webp"
+    },
     "clblockcraftparkour": {
       "assetSha256": "ccae34d8bd24c457f1e7010526479b39f4c246fa649771d548e951a453edc53a",
       "frame": "clblockcraftparkour@1.png",
@@ -3995,6 +4083,28 @@
       "title": "Bloons Tower Defense 1",
       "type": "gameplay-screenshot",
       "url": "/artwork/clbtd1.webp"
+    },
+    "clbtts": {
+      "assetSha256": "43dc8898ee8df5995c6de5c10c6d4ceb249a1cbf4c964fbb2e2389760884f9cb",
+      "frame": "clbtts@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbtts.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 238,
+        "coverage": 0.215,
+        "dominant": 0.78,
+        "edges": 18.34,
+        "stddev": 89.04
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbtts.html",
+      "title": "Btts",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clbtts.webp"
     },
     "clbubbleshooter": {
       "assetSha256": "95d1a06468a09daff015370399566760e28640885da7f9f548b4b56d12c3e84e",

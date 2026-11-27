@@ -2,11 +2,11 @@
   "generated": "scripts/artwork/build-progress.py",
   "summary": {
     "catalogEntries": 2710,
-    "verified": 369,
+    "verified": 374,
     "awaitingReview": 0,
     "rejected": 0,
     "blocked": 0,
-    "notStarted": 2341
+    "notStarted": 2336
   },
   "entries": [
     {
@@ -644,17 +644,18 @@
         "arcade"
       ],
       "path": "/games/cl60secondsburgerrun.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/gamelist1990/Interstellar@9318db26a2fdc0fc0b7ddaba17c08a027304277b/public/play/60-second-burger-run/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cl60secondsburgerrun.html",
+      "imagePath": "/artwork/cl60secondsburgerrun.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cl60secondsburgerrun.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "2c301785e3d0d4376583c1bcefebe4f4db3b698a5222b3a91c972737134d0946",
+      "visualVerification": "verified 2026-11-27: Captured title screen shows the actual game.",
       "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -3492,17 +3493,18 @@
         "arcade"
       ],
       "path": "/games/clballblast.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/youtube-playables@main/ball-blast/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clballblast.html",
+      "imagePath": "/artwork/clballblast.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clballblast.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "27597856a97c231be5f4bf547904becf23eb7101c84a9cf2957f163c7fbb2d6c",
+      "visualVerification": "verified 2026-11-27: Captured game screen shows the actual title.",
       "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -5020,17 +5022,18 @@
         "puzzle"
       ],
       "path": "/games/clblockblastv2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clblockblastv2.html",
+      "imagePath": "/artwork/clblockblastv2.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clblockblastv2.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "00b2e2ceb121da82978b9d16e83e8340e3534c952d069e313281418e487aa837",
+      "visualVerification": "verified 2026-11-27: Captured game screen shows the actual title.",
       "methodsInvestigated": [
-        "fetched developer.apple.com page metadata"
+        "fetched developer.apple.com page metadata",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -6371,17 +6374,18 @@
         "casual"
       ],
       "path": "/games/clbtts.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbtts.html",
+      "imagePath": "/artwork/clbtts.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbtts.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "43dc8898ee8df5995c6de5c10c6d4ceb249a1cbf4c964fbb2e2389760884f9cb",
+      "visualVerification": "verified 2026-11-27: Captured title screen shows the actual game.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -41257,17 +41261,18 @@
         "arcade"
       ],
       "path": "/games/clanemonesfall.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/shayderrr/funkinmods@main/forgot/game.fnfhub.net/23485/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clanemonesfall.html",
+      "imagePath": "/artwork/clanemonesfall.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clanemonesfall.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "fe11f31e101aa86980a67b36aab00f14d3362c983e5363cf615140af3aaf3b5f",
+      "visualVerification": "verified 2026-11-27: Captured game screen shows the actual title.",
       "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },

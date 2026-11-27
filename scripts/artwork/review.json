@@ -155,6 +155,18 @@
     "status": "verified",
     "title": "4th and Goal"
   },
+  "cl500calibercontractz": {
+    "reason": "Content warning screen, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "500 Caliber Contractz"
+  },
+  "cl60secondsburgerrun": {
+    "reason": "Captured title screen shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "60 Seconds Burger Run"
+  },
   "cl60secondssantarun": {
     "reason": "Generic play-button splash, not the game.",
     "reviewed": "2026-11-26",
@@ -238,6 +250,12 @@
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "GX Client"
+  },
+  "clabandoned3": {
+    "reason": "Publisher credit splash, not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Abandoned 3"
   },
   "clabsoluteMadness": {
     "reason": "Error page (\"Something went wrong\").",
@@ -437,6 +455,12 @@
     "status": "verified",
     "title": "Ancient Sins"
   },
+  "clanemonesfall": {
+    "reason": "Captured game screen shows the actual title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Anemone Fall"
+  },
   "clangrybirds": {
     "reason": "Captured frame shows the actual game with identifying title or gameplay.",
     "reviewed": "2026-11-26",
@@ -484,6 +508,12 @@
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "clappleshooter"
+  },
+  "clappleworm": {
+    "reason": "Publisher splash (BubbleBox), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Apple Worm"
   },
   "claquaparkio": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -538,6 +568,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Arthur's Nightmare"
+  },
+  "classessmentexamination": {
+    "reason": "Fullscreen prompt, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Assessment Examination"
   },
   "clasteroidsalt": {
     "reason": "Emulator setup text with no identifying game content.",
@@ -616,6 +652,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Awesome Tanks 2"
+  },
+  "claxisfootballleague": {
+    "reason": "Generic play button, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Axis Football League"
   },
   "clbabeltower": {
     "reason": "Captured frame shows the actual game with identifying title or gameplay.",
@@ -748,6 +790,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Baldi's Fun New School Ultimate"
+  },
+  "clballblast": {
+    "reason": "Captured game screen shows the actual title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ball Blast"
   },
   "clballsandbricks": {
     "reason": "Video placeholder, not the game.",
@@ -1001,11 +1049,23 @@
     "status": "verified",
     "title": "Blaze Drifter"
   },
+  "clbleachvsnaruto": {
+    "reason": "Generic play icon, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Bleach vs Naruto"
+  },
   "clblightborne": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Blightborne"
+  },
+  "clblockblastv2": {
+    "reason": "Captured game screen shows the actual title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Block Blast V2"
   },
   "clblockcraftparkour": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1072,6 +1132,12 @@
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Bloons PP 2"
+  },
+  "clbloonspp4": {
+    "reason": "Developer logo splash, not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Bloons Player Pack 4"
   },
   "clbloonstd1": {
     "reason": "Identical Bloons wordmark shared with other Bloons entries; not this installment's own art.",
@@ -1217,6 +1283,12 @@
     "status": "verified",
     "title": "Brain Rot"
   },
+  "clbrawlsimulator3d": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Brawl Simulator 3D"
+  },
   "clbrawlstars": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
@@ -1234,6 +1306,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Bloons Tower Defense 1"
+  },
+  "clbtts": {
+    "reason": "Captured title screen shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Btts"
   },
   "clbubbleshooter": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1331,11 +1409,23 @@
     "status": "verified",
     "title": "Call of Battle"
   },
+  "clcamilla": {
+    "reason": "Unrelated credit screen, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Camilla"
+  },
   "clcannonballs3d": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Cannonballs 3D"
+  },
+  "clcaptchaware": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Captcha Ware"
   },
   "clcapybaraclicker": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",

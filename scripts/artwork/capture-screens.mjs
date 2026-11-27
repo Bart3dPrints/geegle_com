@@ -46,6 +46,8 @@ function json(file, fallback) {
 const cleared = json(path.join(root, 'scripts/artwork-map.json'), { cleared: {} }).cleared ?? {};
 const captured = json(path.join(root, 'scripts/artwork/captured.json'), {});
 const known = new Set([...Object.keys(cleared), ...Object.keys(captured.assets ?? {}), ...Object.keys(captured.screens ?? {})]);
+const reviewDecisions = json(path.join(root, 'scripts/artwork/review.json'), {});
+const rejected = new Set(Object.entries(reviewDecisions).filter(([, v]) => v && v.status === 'rejected').map(([id]) => id));
 const staged = new Set(
   readdirSync(outDir)
     .filter((name) => name.endsWith('.png'))
@@ -59,7 +61,7 @@ for (const row of rows) {
   if (seen.has(row.id)) continue;
   seen.add(row.id);
   if (!localFilename(row.path)) continue;
-  if (!force && (known.has(row.id) || staged.has(row.id))) continue;
+  if (!force && (known.has(row.id) || staged.has(row.id) || rejected.has(row.id))) continue;
   if (onlyIds.length && !onlyIds.includes(row.id)) continue;
   todo.push(row);
 }

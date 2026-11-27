@@ -181,6 +181,7 @@ def main():
 
     titles = catalog_titles()
     research = load_json(os.path.join(ROOT, "scripts", "artwork", "research-log.json"), {})
+    decisions = load_json(os.path.join(ROOT, "scripts", "artwork", "review.json"), {})
     records = load_json(CAPTURED, {"assets": {}, "screens": {}})
     records.setdefault("assets", {})
     records.setdefault("screens", {})
@@ -202,6 +203,8 @@ def main():
     now = time.time()
     for game_id, files in sorted(grouped.items()):
         if game_id in records["screens"] or game_id in records["assets"]:
+            continue
+        if (decisions.get(game_id) or {}).get("status") == "rejected":
             continue
         if len(files) < args.min_frames:
             continue
