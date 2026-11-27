@@ -6881,11 +6881,119 @@
     "status": "verified",
     "title": "Skibidi in the Backrooms"
   },
+  "clskibidishooter": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Skibidi Shooter"
+  },
+  "clskinwalker": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Skinwalker"
+  },
+  "clskyfactory": {
+    "reason": "Publisher logo (Mojang), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Sky Factory"
+  },
+  "clskyrace-3d": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Skyrace 3D"
+  },
+  "clskywire": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Skywire"
+  },
+  "clskywire2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Skywire 2"
+  },
+  "clslendytubbies": {
+    "reason": "Text-only warning page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Slendytubbies"
+  },
+  "clsliceitall": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Slice It All"
+  },
+  "clslideinthewoods": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Slide in the Woods"
+  },
+  "clslimelabratory": {
+    "reason": "Publisher splash (Armor Games), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Slime Laboratory"
+  },
+  "clslitherio": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Slither.io"
+  },
+  "clslope": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Slope"
+  },
+  "clslope2player": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Slope 2 Player"
+  },
+  "clslope3": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Slope 3"
+  },
   "clslotornot": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Slot or Not"
+  },
+  "clslowroads": {
+    "reason": "Report page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Slow Roads"
+  },
+  "clsm63redux": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario 63 Redux"
+  },
+  "clsm64hiddenstars": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SM64: Hidden Stars"
+  },
+  "clsm64land": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "SM64 Land"
   },
   "clsmashkarts": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
@@ -6893,11 +7001,95 @@
     "status": "rejected",
     "title": "Smash Karts"
   },
+  "clsmashkartsworking": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Smash Karts (Working)"
+  },
+  "clsmb12": {
+    "reason": "Login page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "SMB 12"
+  },
+  "clsmbc": {
+    "reason": "Text page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "SMBC"
+  },
+  "clsmbgameover": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SMB Game Over"
+  },
   "clsmc": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "SMC"
+  },
+  "clsnailbob": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Snail Bob"
+  },
+  "clsnailbob2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Snail Bob 2"
+  },
+  "clsnailbob3": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Snail Bob 3"
+  },
+  "clsnailbob4space": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Snail Bob 4: Space"
+  },
+  "clsnailbob5lovestory": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Snail Bob 5: Love Story"
+  },
+  "clsnakeis": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Snake.is"
+  },
+  "clsnowballio": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Snowball.io"
+  },
+  "clsnowboardobby": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Snowboard Obby"
+  },
+  "clsnowdrift": {
+    "reason": "Error page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Snowdrift"
+  },
+  "clsnowrideee": {
+    "reason": "Changelog text page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Snow Ride Ee"
   },
   "clsnowrider": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -6905,11 +7097,41 @@
     "status": "verified",
     "title": "Snow Rider"
   },
+  "clsnowriderrrr": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Snow Rider Rrr"
+  },
+  "clsnowroad": {
+    "reason": "Platform splash (GameJolt), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Snow Road"
+  },
   "clsoccerbros": {
     "reason": "Tiny generic ball on a blank field; not recognizable as the title.",
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "Soccer Bros"
+  },
+  "clsoccerrandomgood": {
+    "reason": "Placeholder video player, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Soccer Random Good"
+  },
+  "clsodasimulator": {
+    "reason": "Text page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Soda Simulator"
+  },
+  "clsolarclient": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Solar Client"
   },
   "clsolarsandbox": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -6917,11 +7139,59 @@
     "status": "verified",
     "title": "Solar Sandbox"
   },
+  "clsolarsmash": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Solar Smash"
+  },
+  "clsolatrobo": {
+    "reason": "Publisher splash, not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Solataire Bo"
+  },
+  "clsolitaire": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Solitaire"
+  },
+  "clsonic3dblast": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Sonic 3D Blast"
+  },
+  "clsoniccd": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Sonic CD"
+  },
   "clsoniccdmobile": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Sonic CD Mobile"
+  },
+  "clsoniceexeog": {
+    "reason": "Loading spinner with no game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Sonic.exe OG"
+  },
+  "clsonicerazor": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Razor"
+  },
+  "clsonicmania": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Mania"
   },
   "clsonicmaniaplus": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -6929,11 +7199,101 @@
     "status": "verified",
     "title": "Sonic Mania Plus"
   },
+  "clsonicralt": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Sonic R (Alt)"
+  },
+  "clsonicrevert": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sonic Revert"
+  },
+  "clsortthecourt": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sort the Court"
+  },
+  "clsotn": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Castlevania: Symphony of the Night"
+  },
+  "clspacebarclicker": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Spacebar Clicker"
+  },
   "clspacecompany": {
     "reason": "Near-black screenshot with no identifying content.",
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "Space Company"
+  },
+  "clspaceiskey": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Space Is Key"
+  },
+  "clspaceiskey2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Space Is Key 2"
+  },
+  "clspaceiskeyxmas": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Space Is Key Xmas"
+  },
+  "clspacewarsbattleground": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Space Wars Battleground"
+  },
+  "clspecialmission": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Special Mission"
+  },
+  "clspeedperclick": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Speed Per Click"
+  },
+  "clspeedstars": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Speed Stars"
+  },
+  "clspiritsofhell": {
+    "reason": "Engine splash, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Spirits of Hell"
+  },
+  "clspongebobpowerkartgrandprix": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SpongeBob Power Kart Grand Prix"
+  },
+  "clsportsheadsicehockey": {
+    "reason": "Blank frame with no game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Sports Heads Ice Hockey"
   },
   "clsquidplayground": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
