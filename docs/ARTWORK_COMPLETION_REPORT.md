@@ -15,27 +15,27 @@ Identity evidence and reuse basis are recorded separately on every record. Captu
 | Measure | Count |
 | --- | --- |
 | Catalog rows (unique IDs) | 2,710 |
-| Verified artwork | 1,038 |
+| Verified artwork | 1,095 |
 | Awaiting review | 0 |
-| Rejected (removed from the UI, queued for a new capture) | 13 |
+| Rejected (removed from the UI, queued for a new capture) | 150 |
 | Blocked | 0 |
 | Reopened after the blocked classification was rejected | 1,676 |
-| Ten-minute render investigations completed | 10 |
-| ... that rendered an authentic frame | 5 |
-| ... that stopped at their own start gate | 2 |
-| ... that stayed blank for the whole observation | 3 |
-| Remaining unprocessed | 1,672 |
-| Actual verified coverage | 38.3% |
-| Total optimized asset size (verified images) | 20991 KiB |
+| Ten-minute render investigations completed | 590 |
+| ... that rendered an authentic frame | 551 |
+| ... that stopped at their own start gate | 6 |
+| ... that stayed blank for the whole observation | 26 |
+| Remaining unprocessed | 1,615 |
+| Actual verified coverage | 40.4% |
+| Total optimized asset size (verified images) | 22136 KiB |
 
 ## Verified artwork by acquisition method
 
 | Method | Count |
 | --- | --- |
-| game-asset | 35 |
-| gameplay-screenshot | 902 |
-| official-icon | 75 |
-| official-og | 26 |
+| game-asset | 34 |
+| gameplay-screenshot | 962 |
+| official-icon | 72 |
+| official-og | 27 |
 
 Identity verification and reuse clearance are tracked separately: every record names the exact source and why it depicts this title, and the reuse field states the basis (pinned license, or the game's own distribution shown on this platform).
 
@@ -45,18 +45,18 @@ The pre-existing set was audited rather than trusted. 35 of 73 records were reje
 
 Rejection reasons recorded:
 
-- 1x Every frame in the ten-minute observation carried an in-game tutorial overlay (purple panel with OK) covering the play area; an overlay is not acceptable artwork.
-- 1x The only rendered frame is the portal's own game grid with a TwoPlayerGames banner and a 'quality setting' attention dialog; portal chrome and settings prompts are not acceptable artwork.
-- 1x Captured frame is a third-party portal loading screen, not the game.
-- 1x Captured frame is the generic "Made with Unity" splash.
-- 1x Captured frame shows developer credits and loading text, not the game title screen.
-- 1x Loading screen.
-- 1x Captured frame is a generic resolution selector with no identifying game content.
-- 1x Error page ("Something went wrong").
-- 1x Shows a GameTop.com portal logo, not the game.
-- 1x Shows artwork for a different game (The Elder Scrolls: Blades).
-- 1x Shows a Discord attachment page, not the game.
-- 1x Shows a game-portal homepage, not the game.
+- 21x Every qualifying frame was still a loading screen (progress bar or "Loading n/m"), so nothing finished could be captured in the 12-second window.
+- 15x Every qualifying frame was a publisher/engine splash or portal interstitial, not the game's own screen.
+- 14x Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.
+- 13x Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.
+- 11x Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.
+- 10x Every qualifying frame carried a consent, age, profanity, legal or ad-block dialog over the content.
+- 7x Frames showed only instructions or copyright text, not a title screen or recognizable gameplay.
+- 7x Every qualifying frame was an error page ("Something went wrong"), which is never acceptable artwork.
+- 7x The frame shows only the shared Friday Night Funkin base logo, which does not identify this specific mod.
+- 6x Every qualifying frame carried a consent, language, license or age dialog over the content.
+- 4x Every qualifying frame was an error page ("Something went wrong", a 404 loader), which is never acceptable artwork.
+- 4x The frame is an empty background with no legible title or gameplay.
 
 ## Service card artwork
 
@@ -69,8 +69,10 @@ The owner-supplied screenshots are converted to WebP and shown on the matching c
 | Cherry Proxy | `/artwork/services/cherry.webp` |
 | Achroma Proxy | `/artwork/services/achroma.webp` |
 | Bull-33 | `/artwork/services/bull-33.webp` |
+| Soluos Proxy | `/artwork/services/soluos.webp` |
+| Xylora | `/artwork/services/xylora.webp` |
 
-Unassigned, deliberately: `xylora.webp` (the owner's Xylora screenshot, with no Xylora endpoint anywhere in the repository to attach it to) and `unidentified-dark-blue.webp` (a clock-and-icons desktop with no branding, so assigning it to a named service would be a guess). Astra Proxy was removed from the catalog and its search results; its Bull-33 endpoints moved to the Bull-33 card instead of being relabelled.
+The previously unidentified dark-blue screenshot was confirmed by the owner as Soluos and is now stored as `soluos.webp` and shown on the Soluos card. Xylora was missing from the catalog even though this repository already ships its wrapper (`public/games/xylora.html`), so the card was added with that supported local wrapper as its only endpoint. Astra Proxy was removed from the catalog and its search results; its Bull-33 endpoints moved to the Bull-33 card instead of being relabelled.
 
 ## Blocked
 
@@ -82,14 +84,14 @@ No entry is left in a blocked state: the whole 1,676-entry blocked manifest was 
 The next unprocessed batch starts at `bank-robbery`:
 
 ```
-bank-robbery,bowmasters,cl100in1nes,cl100roomsofenemies,cl10yardfight,cl13bones,cl1942nes,cl234playergame,cl3dash,cl3dasheditor,cl3slices2,cl40xescape,cl500calibercontractz,cl60secondssantarun,cl64in1nes,cl8ballpool,cl99nightsitf,clAltered Beast,clBMX2,clFF3,clFNAF,clFNAF2,clFNAF3,clFNAF4,clGXclient,cla-walk-in-the-forest--v1-0,clabandoned3,clacecombat2,clacecombat3,clacegangstertaxi,clachievementunlocked,clachillies2,clacko_s-mach-bike-challenge--v1-0,cladarkroom,cladatewithdeath,cladayintheoffice,cladvancewars,cladvancewars2,cladvancewarsdualstrike,claftertheweek,clageofwar,clagesofempire,clai,clakumanorgaiden,claladdinsnes,clalexkiddinmiracleworld,clalienhominid,clalienhominidgba,clalientransporter,clalienvspredator
+bank-robbery,bowmasters,cl100in1nes,cl100roomsofenemies,cl10yardfight,cl13bones,cl1942nes,cl234playergame,cl3slices2,cl40xescape,cl500calibercontractz,cl60secondssantarun,cl64in1nes,cl8ballpool,clAltered Beast,clBMX2,clFF3,clFNAF,clFNAF2,clFNAF3,clFNAF4,clGXclient,cla-walk-in-the-forest--v1-0,clacecombat2,clacecombat3,clacegangstertaxi,clachievementunlocked,clachillies2,clacko_s-mach-bike-challenge--v1-0,cladarkroom,cladatewithdeath,cladayintheoffice,cladvancewars,cladvancewars2,cladvancewarsdualstrike,claflac,claftertheweek,clagesofempire,clai,clakumanorgaiden,claladdinsnes,clalexkiddinmiracleworld,clalienhominid,clalienhominidgba,clalientransporter,clalienvspredator,clallbossesin1,clallocation,claltered-beast,clanemonesfall
 ```
 
 Resume commands:
 
 ```sh
-node scripts/artwork/capture-screens.mjs --out /tmp/artshots-large --concurrency 3
-python3 scripts/artwork/process-shots.py --staging /tmp/artshots-large
+GEEGLE_BASE=http://127.0.0.1:5173 node scripts/artwork/investigate-render.mjs --seconds 15 --concurrency 8 --limit 320 --out /tmp/artshots7
+python3 scripts/artwork/process-shots.py --staging /tmp/artshots7
 python3 scripts/artwork/audit-artwork.py
 python3 scripts/artwork/build-progress.py
 ```

@@ -39,6 +39,9 @@ const POLL = Number(arg('poll', '2000'));
 const CONCURRENCY = Math.max(1, Math.min(8, Number(arg('concurrency', '4'))));
 const FRAME_MIN_BYTES = Number(arg('frame-min-bytes', '3500'));
 const START_CLICK_EVERY = Number(arg('start-click-every', '60000'));
+// Watchdog: a wedged page must not stall the whole queue. When an entry
+// exceeds this, the browser is restarted and the entry is retried later.
+const ITEM_TIMEOUT_MS = Number(arg('item-timeout', '75000'));
 const limit = Number(arg('limit', '0'));
 const explicitIds = (arg('ids', '') || '').split(',').map((v) => v.trim()).filter(Boolean);
 
@@ -85,6 +88,11 @@ let browser = await chromium.launch(launchOptions);
 // A heavy build can wedge the shared browser. Relaunching per context keeps a
 // single bad game from failing the rest of the queue (and is not evidence that
 // the game itself is broken).
+async function resetBrowser() {
+  await browser.close().catch(() => {});
+  browser = await chromium.launch(launchOptions);
+}
+
 async function freshContext(options) {
   try {
     return await browser.newContext(options);
@@ -286,7 +294,19 @@ async function worker() {
   while (cursor < queue.length) {
     const id = queue[cursor++];
     try {
-      results.push(await investigate(id));
+      const pending = investigate(id).catch(() => null);
+      const outcome = await Promise.race([
+        pending,
+        new Promise((resolve) => setTimeout(() => resolve('__watchdog__'), ITEM_TIMEOUT_MS)),
+      ]);
+      if (outcome === '__watchdog__') {
+        await resetBrowser();
+        report[id] = { id, classification: 'timeout', error: 'watchdog: page stopped responding', at: new Date().toISOString() };
+        save();
+        results.push(report[id]);
+        continue;
+      }
+      results.push(outcome ?? report[id]);
     } catch (error) {
       report[id] = { id, classification: 'launched-error', error: String(error).slice(0, 300), at: new Date().toISOString() };
       save();

@@ -1259,6 +1259,12 @@
     "status": "verified",
     "title": "Brawl Stars"
   },
+  "clbridgerace": {
+    "reason": "Captured the Bridge Race multiplayer-mode menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Bridge Race"
+  },
   "clbrotato": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -1684,6 +1690,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Cold Pines"
+  },
+  "clcolorboxmustard": {
+    "reason": "Captured the Colorbox Mustard title menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Colorbox Mustard"
   },
   "clcolormatch": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2921,6 +2933,12 @@
     "status": "verified",
     "title": "FNAW"
   },
+  "clfnfaethos": {
+    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Aethos"
+  },
   "clfnfagoti": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
@@ -2938,6 +2956,30 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF Animation"
+  },
+  "clfnfannie": {
+    "reason": "The frame shows only the shared Friday Night Funkin base logo, which does not identify this specific mod.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Annie"
+  },
+  "clfnfbelowdepths": {
+    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Below Depths"
+  },
+  "clfnfbfdi26": {
+    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: BFDI 26"
+  },
+  "clfnfbinarybreakdown": {
+    "reason": "The frame shows only the shared Friday Night Funkin base logo, which does not identify this specific mod.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Binary Breakdown"
   },
   "clfnfblackbetrayal": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -2968,6 +3010,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: Classified"
+  },
+  "clfnfcory": {
+    "reason": "The frame is an empty background with no legible title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF Cory"
+  },
+  "clfnfcrunchin": {
+    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Crunchin"
   },
   "clfnfdeciever": {
     "reason": "Captured mod menu with its own logo.",
@@ -3005,17 +3059,35 @@
     "status": "verified",
     "title": "FNF: Dustin"
   },
+  "clfnfdusttale": {
+    "reason": "Captured the Friday Night Funkin DUSTTALE title screen with PRESS ENTER TO BEGIN.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Dusttale"
+  },
   "clfnffleetway": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: Fleetway"
   },
+  "clfnfflippedout": {
+    "reason": "The frame is an empty background with no legible title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Flipped Out"
+  },
   "clfnffnaf1": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: FNAF 1"
+  },
+  "clfnffnaf2": {
+    "reason": "The frame is an empty background with no legible title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: FNAF 2"
   },
   "clfnffnaf3": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
@@ -3059,11 +3131,29 @@
     "status": "verified",
     "title": "FNF Hank"
   },
+  "clfnfheartbreakhavoc": {
+    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Heartbreak Havoc"
+  },
+  "clfnfherobrine": {
+    "reason": "The frame shows only the shared Friday Night Funkin base logo, which does not identify this specific mod.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Herobrine"
+  },
   "clfnfhex": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF Hex"
+  },
+  "clfnfholiday": {
+    "reason": "The frame shows only the shared Friday Night Funkin base logo, which does not identify this specific mod.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Holiday"
   },
   "clfnfhypnoslullaby": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -3101,6 +3191,12 @@
     "status": "verified",
     "title": "FNF: Jap Creepypasta"
   },
+  "clfnfmadnesspoop": {
+    "reason": "Captured the Madness Poop mod title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Madness Poop"
+  },
   "clfnfmaginagematches": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
@@ -3119,6 +3215,54 @@
     "status": "verified",
     "title": "FNF: Mid Fight"
   },
+  "clfnfmiku": {
+    "reason": "Captured the Friday Night Funkin x Miku title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF Miku"
+  },
+  "clfnfmobmod": {
+    "reason": "The frame shows only the shared Friday Night Funkin base logo, which does not identify this specific mod.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Mob Mod"
+  },
+  "clfnfneo": {
+    "reason": "The frame is a washed-out near-white image; the title is not legible enough to verify.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF Neo"
+  },
+  "clfnfpiggyfield": {
+    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Piggy Field"
+  },
+  "clfnfplutoshi": {
+    "reason": "The frame shows only the shared Friday Night Funkin base logo, which does not identify this specific mod.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Plutosh"
+  },
+  "clfnfpokepastaperdition": {
+    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Pokepasta Perdition"
+  },
+  "clfnfporifera": {
+    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Porifera"
+  },
+  "clfnfqt": {
+    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF QT"
+  },
   "clfnfremnants": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
@@ -3130,6 +3274,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: Retrospecter"
+  },
+  "clfnfrevmixed": {
+    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Rev Mixed"
+  },
+  "clfnfrewrite": {
+    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Rewrite"
   },
   "clfnfselfpaced": {
     "reason": "Captured mod artwork shows the actual title.",
@@ -3149,11 +3305,35 @@
     "status": "verified",
     "title": "FNF Shucks V2"
   },
+  "clfnfsky": {
+    "reason": "The frame is a publisher or engine splash, not the game's own screen.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF Sky"
+  },
   "clfnfsoft": {
     "reason": "Wrapper-declared artwork for this title (official og) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF Soft"
+  },
+  "clfnfsohv2": {
+    "reason": "The frame shows only the shared Friday Night Funkin base logo, which does not identify this specific mod.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: SOHV 2"
+  },
+  "clfnfsonicexe": {
+    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Sonic.EXE"
+  },
+  "clfnfsonicexe4": {
+    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Sonic.EXE 4"
   },
   "clfnfstarlightmayhem": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
@@ -3221,11 +3401,23 @@
     "status": "verified",
     "title": "FNF: Whitty"
   },
+  "clfnfzardy": {
+    "reason": "Captured the FNF Zardy title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Zardy"
+  },
   "clfolderdungeon": {
     "reason": "Captured gameplay shows the actual game.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Folder Dungeon"
+  },
+  "clfootballbros": {
+    "reason": "Captured the Football Bros team-select screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Football Bros"
   },
   "clfootballlegends": {
     "reason": "Captured title screen shows the actual game.",
@@ -3239,6 +3431,12 @@
     "status": "verified",
     "title": "Fortzone"
   },
+  "clfpa4p1": {
+    "reason": "Every qualifying frame was an error page.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FPA 4 P1"
+  },
   "clfpa4p2": {
     "reason": "Captured title screen shows the actual game.",
     "reviewed": "2026-11-27",
@@ -3250,6 +3448,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Free Rider"
+  },
+  "clfreerider3": {
+    "reason": "The frame is a publisher or engine splash, not the game's own screen.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Free Rider 3"
   },
   "clfunkinmix": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
@@ -3281,11 +3485,29 @@
     "status": "verified",
     "title": "Fused 240"
   },
+  "clfzerox": {
+    "reason": "The frame is an empty background with no legible title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "F-Zero X"
+  },
   "clgachaverse": {
     "reason": "Captured game screen shows the actual title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Gachaverse"
+  },
+  "clgangstabean2": {
+    "reason": "The frame is a publisher or engine splash, not the game's own screen.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Gangsta Bean 2"
+  },
+  "clgangsterbros": {
+    "reason": "Captured the Gangster Bros title screen with Click to start.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Gangster Bros"
   },
   "clgarfcaughtinact": {
     "reason": "Captured title screen shows the actual game.",
@@ -3310,6 +3532,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Geometry Vibes"
+  },
+  "clgeorgeandtheprinter": {
+    "reason": "Captured George and the Printer gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "George and the Printer"
   },
   "clgetawayshootout": {
     "reason": "Captured title screen shows the actual game.",
@@ -3359,6 +3587,12 @@
     "status": "verified",
     "title": "Goal South Africa"
   },
+  "clgobble": {
+    "reason": "Captured the Gobble / Fancade title card.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Gobble"
+  },
   "clgoingballs": {
     "reason": "Captured gameplay shows the actual game.",
     "reviewed": "2026-11-27",
@@ -3370,6 +3604,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Gold Digger FRVR"
+  },
+  "clgoldensunnds": {
+    "reason": "Still a loading screen when the 15-second window ended.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Golden Sun NDS"
   },
   "clgoldminer": {
     "reason": "Captured title screen shows the actual game.",
@@ -3389,11 +3629,23 @@
     "status": "verified",
     "title": "Golf Orbit"
   },
+  "clgoodmonkeymart": {
+    "reason": "The only frame was a fullscreen button overlay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Good Monkey Mart"
+  },
   "clgoogledino": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Google Dino"
+  },
+  "clgorillatag": {
+    "reason": "The frame is a publisher or engine splash, not the game's own screen.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Gorilla Tag"
   },
   "clgrandactionsimulator-ny": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -3407,11 +3659,35 @@
     "status": "verified",
     "title": "Granddad"
   },
+  "clgranny22": {
+    "reason": "Captured the Granny 22 title screen with Play.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Granny 22"
+  },
+  "clgrannycreepy": {
+    "reason": "The frame is an in-game view covered by a play overlay, not a title screen or clean gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Granny Creepy"
+  },
   "clgrannynightmare": {
     "reason": "Captured gameplay shows the actual game.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Granny Nightmare"
+  },
+  "clgranturismo": {
+    "reason": "Still a loading screen when the 15-second window ended.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Gran Turismo"
+  },
+  "clgranturismo2": {
+    "reason": "Still a loading screen when the 15-second window ended.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Gran Turismo 2"
   },
   "clgrassmowing": {
     "reason": "Captured gameplay shows the actual game.",
@@ -3430,6 +3706,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Gravity Mod"
+  },
+  "clgrey-box-testing": {
+    "reason": "Captured the Grey-Box Testing title menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Grey Box Testing"
   },
   "clgrindcraft": {
     "reason": "Captured title screen shows the actual game.",

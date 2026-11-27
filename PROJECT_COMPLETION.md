@@ -974,3 +974,51 @@ guess. Krillion and Krillion (Backup) keep their separate, distinct artwork.
   converting old labels into deletions.
 - Coverage is 38.3%, not complete. "All entries classified" is explicitly not
   accepted as completion.
+
+## Phase 4 — short-window artwork pass and service corrections
+
+The owner cancelled the ten-minute observation requirement, so artwork capture
+now uses a 12–15 second window (`scripts/artwork/investigate-render.mjs`, default
+`--seconds 12`, plus a per-entry watchdog and automatic browser restart). The old
+harness was stopped; its results stay in
+`scripts/artwork/render-investigation.json`.
+
+| Measurement | Value |
+| --- | --- |
+| Catalog rows (unique IDs) | 2,710 |
+| Verified artwork | 1,095 (40.4%) |
+| Entries investigated in this pass | 590 |
+| Entries still unprocessed | 1,615 |
+| Games removed as nonfunctional | 0 |
+| Service cards with owner-supplied artwork | 7 of 7 |
+| Applications with verified artwork | 6 of 7 |
+
+### Service corrections
+
+- **Soluos:** the previously unidentified dark-blue screenshot is now
+  `public/artwork/services/soluos.webp` and is shown on the `soluos` card.
+- **Xylora:** the repository already ships a supported wrapper
+  (`public/games/xylora.html`), so a Xylora card was added with that wrapper as
+  its only endpoint and the owner's screenshot attached.
+- Helios, Arctic, Cherry, Achroma and Bull-33 keep their existing artwork. Astra
+  stays removed. All seven cards were checked in Chromium against the running
+  dev server: correct image-to-title pairing, all images decoded, no Astra.
+
+### Application artwork
+
+The Apps grid is audited separately from the games catalog. Official Krillion is
+now present in the Apps grid through its supported embed, with the official
+`krillion.cc` image, while Krillion (Backup) keeps the distinct
+`krillionunlimited.org` image. Everythingle, YouTube, Suggestions and Code Editor
+have verified artwork; Soundboard's only captured frame was an empty toolbar, so
+it still shows the neutral placeholder.
+
+### Not claimed
+
+- 1,615 entries remain unprocessed. Their queue is preserved in
+  `scripts/artwork/reopened.json` minus the ids in
+  `scripts/artwork/render-investigation.json`.
+- No game was removed. Of the 32 blank or start-gated observations, every one
+  traced to a browser-blocked loader, a CDN 403/404, a reset connection or an
+  unfinished download, so the failure is not attributable to the game.
+- Coverage is 40.4%, not complete.

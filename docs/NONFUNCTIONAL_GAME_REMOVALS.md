@@ -20,7 +20,7 @@ A game is removed only when **all** of these hold:
    environment (headless/WebGL/Unity/Ruffle/emulator interactions were ruled
    out first).
 
-## Current state: no game has completed the protocol yet
+## Current state: no game has completed the protocol yet (0 removals)
 
 No catalog entry has been removed in this pass, because at the time of this
 commit no entry had satisfied all seven conditions. The previous 1,676-entry
@@ -70,3 +70,46 @@ which point each removed game is listed here with:
 
 No entry in this file is provisional, and no removal was performed in bulk from
 the old blocker classification.
+
+## Blank observations in the short-window pass
+
+These entries produced no acceptable frame in the owner-approved 10–15 second window.
+
+They were **not** removed: in every case the observation shows a cause outside the game
+itself (a browser-blocked loader, a CDN error, a reset connection, or a download still in
+progress), so condition 7 — the failure is the game, not the capture environment — does
+not hold. They stay in the catalog without artwork.
+
+| Game ID | Title | Classification | Observed cause |
+| --- | --- | --- | --- |
+| `bank-robbery` | Bank Robbery | blank-after-observation | The build asset returns HTTP 403; the host refuses the download. |
+| `cl100in1nes` | 100 in 1 NES | start-gate-only | Still at its own start gate or loading state ("PLAY") when the window ended. |
+| `cl100roomsofenemies` | 100 Rooms of Enemies | start-gate-only | Still at its own start gate or loading state ("PLAY") when the window ended. |
+| `cl10yardfight` | 10 Yard Fight | blank-after-observation | No frame content and no error text; loaders never produced a frame. Cause not attributable to the game. |
+| `cl1942nes` | 1942 (NES) | blank-after-observation | No frame content and no error text; loaders never produced a frame. Cause not attributable to the game. |
+| `cl40xescape` | 40x Escape | blank-after-observation | No frame content and no error text; loaders never produced a frame. Cause not attributable to the game. |
+| `cl64in1nes` | 64 in 1 NES | start-gate-only | Still at its own start gate or loading state ("PLAY") when the window ended. |
+| `clAltered Beast` | Altered Beast | start-gate-only | Still at its own start gate or loading state ("PLAY") when the window ended. |
+| `clBMX2` | BMX 2 | start-gate-only | Still at its own start gate or loading state ("PLAY") when the window ended. |
+| `clFF3` | Final Fantasy III | blank-after-observation | Still at its own start gate or loading state ("Loading: 2/4 First-time loading may take longer...") when the window ended. |
+| `clFNAF` | Five Nights at Freddy's | blank-after-observation | Still at its own start gate or loading state ("Downloading... 0% Extracting... 0%") when the window ended. |
+| `clFNAF2` | Five Nights at Freddy's 2 | blank-after-observation | Still at its own start gate or loading state ("Downloading... 0% Extracting... 0%") when the window ended. |
+| `clFNAF3` | Five Nights at Freddy's 3 | blank-after-observation | Still at its own start gate or loading state ("Downloading... 0% Extracting... 0%") when the window ended. |
+| `clFNAF4` | Five Nights at Freddy's 4 | blank-after-observation | Still at its own start gate or loading state ("Downloading... 0% Extracting... 0%") when the window ended. |
+| `cla-walk-in-the-forest--v1-0` | A Walk in the Forest | start-gate-only | Still at its own start gate or loading state ("PLAY") when the window ended. |
+| `clacecombat2` | Ace Combat 2 | blank-after-observation | Still at its own start gate or loading state ("Loading: 2/17 First-time loading may take longer...") when the window ended. |
+| `clblackout` | Blackout | blank-after-observation | The build asset returns HTTP 404; the game files are missing at the source. |
+| `clblobsstory2` | Blob's Story 2 | blank-after-observation | No frame content and no error text; loaders never produced a frame. Cause not attributable to the game. |
+| `clbloonspp3` | Bloons PP 3 | blank-after-observation | Still at its own start gate or loading state ("]]>") when the window ended. |
+| `clbloonstd2` | Bloons TD 2 | blank-after-observation | Still at its own start gate or loading state ("]]>") when the window ended. |
+| `clbloonstd4` | Bloons TD 4 | blank-after-observation | Still at its own start gate or loading state ("]]>") when the window ended. |
+| `clboxinglive-2` | Boxinglive 2 | blank-after-observation | No frame content and no error text; loaders never produced a frame. Cause not attributable to the game. |
+| `clboxinglive2` | Boxing Live 2 | blank-after-observation | No frame content and no error text; loaders never produced a frame. Cause not attributable to the game. |
+| `clclearvision4` | Clear Vision 4 | blank-after-observation | No frame content and no error text; loaders never produced a frame. Cause not attributable to the game. |
+| `clclearvision5` | Clear Vision 5 | blank-after-observation | No frame content and no error text; loaders never produced a frame. Cause not attributable to the game. |
+| `clducklife` | Duck Life | blank-after-observation | Still at its own start gate or loading state ("]]>") when the window ended. |
+| `clfivenightsatshrekshotel` | Five Nights at Shrek's Hotel | blank-after-observation | The build asset returns HTTP 403; the host refuses the download. |
+| `clfnac1` | FNAC 1 | blank-after-observation | Still at its own start gate or loading state ("Downloading... 43% Extracting... 0%") when the window ended. |
+| `clfnaf4halloween` | FNAF 4 Halloween | blank-after-observation | Still at its own start gate or loading state ("Downloading... 0% Extracting... 0%") when the window ended. |
+| `clfnafanimatronics` | FNAF Animatronics | blank-after-observation | The build asset returns HTTP 404; the game files are missing at the source. |
+

@@ -92,8 +92,8 @@ test('the committed changelog holds the real merged history', () => {
     assert.ok(!/prompt|codebuff|\bAI\b|supabase\.co|service_role/i.test(entry.summary), `PR ${entry.pr} summary is safe`);
   }
   const latest = entries[0];
-  assert.equal(latest.pr, 12);
-  assert.deepEqual(formatEastern(latest.mergedAt), { date: 'November 26, 2026', time: '8:37 PM EST' });
+  assert.equal(latest.pr, 13);
+  assert.deepEqual(formatEastern(latest.mergedAt), { date: 'November 27, 2026', time: '12:03 PM EST' });
 });
 
 test('Changelog is the last Settings tab and its own component renders the list', () => {
