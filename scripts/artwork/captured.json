@@ -8173,72 +8173,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clhipsterkickball.webp"
     },
-    "clhitsinglereal": {
-      "assetSha256": "7235623cad2f2c3a791a7aa7b318353dfe0d4e2140be1a1d628d89cc025e6924",
-      "frame": "clhitsinglereal@2.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clhitsinglereal.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 187,
-        "coverage": 0.288,
-        "dominant": 0.939,
-        "edges": 5.11,
-        "stddev": 56.03
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clhitsinglereal.html",
-      "title": "Hit Single Real",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clhitsinglereal.webp"
-    },
-    "clhitstunfly": {
-      "assetSha256": "fa8755d1db1b6e4707e249c38448486076319b7686a00ee6c9cecc0b146fba21",
-      "frame": "clhitstunfly@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clhitstunfly.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 190,
-        "coverage": 0.031,
-        "dominant": 0.731,
-        "edges": 36.39,
-        "stddev": 100.77
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clhitstunfly.html",
-      "title": "Hitstun Fly",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clhitstunfly.webp"
-    },
-    "clhl2doom": {
-      "assetSha256": "1adfa457863a1e0578e29488558ff03ff4c6e3deafde99efba10fe9b0457a204",
-      "frame": "clhl2doom@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clhl2doom.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 242,
-        "coverage": 0.752,
-        "dominant": 0.928,
-        "edges": 2.77,
-        "stddev": 54.79
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clhl2doom.html",
-      "title": "HL2 Doom",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clhl2doom.webp"
-    },
     "clhobo": {
       "assetSha256": "fc60b70180303768d6700e2ceda8a25746188c58ed8a35b643e661ae69069134",
       "frame": "clhobo@3.png",
@@ -8460,29 +8394,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clhomesheephome.webp"
     },
-    "clhorrormickeymouse": {
-      "assetSha256": "675cdf7ef50dc274ea9b37c12c372bf1a81d34282dc0a3af61bfe7b632411061",
-      "frame": "clhorrormickeymouse@2.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clhorrormickeymouse.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "fetched cdn.jsdelivr.net page metadata",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 151,
-        "coverage": 0.448,
-        "dominant": 0.916,
-        "edges": 6.31,
-        "stddev": 64.22
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clhorrormickeymouse.html",
-      "title": "Horror Mickey Mouse",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clhorrormickeymouse.webp"
-    },
     "clhotdogbush": {
       "assetSha256": "3de5a6253087f2c5c02a213bf1859748127530046c356c224e8dd45a4bdb1bf9",
       "frame": "clhotdogbush@3.png",
@@ -8593,50 +8504,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clhungrylamu.webp"
     },
-    "clicantbelievegoogleflaggedmeforthenameofthefilelol": {
-      "assetSha256": "e896a7e8146381ffbe7027fd3e599063ddcfd649cd36859a6a3b979cdbd20335",
-      "frame": "clicantbelievegoogleflaggedmeforthenameofthefilelol@3.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clicantbelievegoogleflaggedmeforthenameofthefilelol.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 141,
-        "coverage": 0.974,
-        "dominant": 0.316,
-        "edges": 7.13,
-        "stddev": 107.45
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clicantbelievegoogleflaggedmeforthenameofthefilelol.html",
-      "title": "Icant Believe Google Flagged Me for the Name of the File LOL",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clicantbelievegoogleflaggedmeforthenameofthefilelol.webp"
-    },
-    "clicedodo": {
-      "assetSha256": "552d97a795e0694a0ba6413eced85e0fb7b3fe81bb00312fc984a4087dcf4f49",
-      "frame": "clicedodo@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clicedodo.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 309,
-        "coverage": 0.162,
-        "dominant": 0.889,
-        "edges": 25.15,
-        "stddev": 58.8
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clicedodo.html",
-      "title": "Icedodo",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clicedodo.webp"
-    },
     "clicefishing": {
       "assetSha256": "6e39e735d6d402a93f7d443a7de4562f14d90a119b7d295825d9643d4e429e1c",
       "frame": "clicefishing@1.png",
@@ -8726,28 +8593,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clidlefootballmanager.webp"
     },
-    "clidleidlegamedev": {
-      "assetSha256": "e3bee2ea7974339be14cc79a9e3afbe0a6325fda0486295c214dd9498b82a018",
-      "frame": "clidleidlegamedev@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clidleidlegamedev.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 1525,
-        "coverage": 0.613,
-        "dominant": 0.676,
-        "edges": 5.97,
-        "stddev": 30.47
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clidleidlegamedev.html",
-      "title": "Idle Idle Game Dev",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clidleidlegamedev.webp"
-    },
     "clidleminertycoon": {
       "assetSha256": "717ca83a71c7f2e0b3a6bb816b2d81ef97a37adb16e27c63d1ffbada52e60bbf",
       "frame": "clidleminertycoon@1.png",
@@ -8792,28 +8637,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/climpossiblequiz--1.webp"
     },
-    "climpossiblequiz2": {
-      "assetSha256": "479ca52aecebce4aa0af3add88e90b36d6a413616425b8b957666ab708d2c8a1",
-      "frame": "climpossiblequiz2@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/climpossiblequiz2.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 350,
-        "coverage": 0.661,
-        "dominant": 0.699,
-        "edges": 7.64,
-        "stddev": 82.38
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/climpossiblequiz2.html",
-      "title": "Impossible Quiz 2",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/climpossiblequiz2.webp"
-    },
     "clindiantrucksimiulator": {
       "assetSha256": "3b11a4879a43a1601b3386cfd5540a0fbd252602d0a22b84206a6f9dd53c141a",
       "frame": "clindiantrucksimiulator@1.png",
@@ -8837,28 +8660,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clindiantrucksimiulator.webp"
     },
-    "clintospace": {
-      "assetSha256": "3771d330ddc4b0df49929c194345f1f781f212b75fa0fac2a7760969963eb913",
-      "frame": "clintospace@3.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clintospace.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 2365,
-        "coverage": 0.974,
-        "dominant": 0.437,
-        "edges": 3.16,
-        "stddev": 91.37
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clintospace.html",
-      "title": "Into Space",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clintospace.webp"
-    },
     "clintospace2": {
       "assetSha256": "fb295b49f63661a8a960e86d5513274a4786f47653ae5a80a4b37f40eacd41fa",
       "frame": "clintospace2@3.png",
@@ -8880,28 +8681,6 @@
       "title": "Into Space 2",
       "type": "gameplay-screenshot",
       "url": "/artwork/clintospace2.webp"
-    },
-    "clintospace3": {
-      "assetSha256": "4db5f779216e351496043f24d9b89cef648114432d86bab48590197e938b2f09",
-      "frame": "clintospace3@4.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clintospace3.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 2084,
-        "coverage": 0.974,
-        "dominant": 0.595,
-        "edges": 2.9,
-        "stddev": 122.53
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clintospace3.html",
-      "title": "Into Space 3",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clintospace3.webp"
     },
     "cliqball": {
       "assetSha256": "06d3049875604ded0f2f647dc9a21af47ec0b32b380123b981aeffd4fabc126b",
@@ -8991,28 +8770,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/cliwbtg.webp"
     },
-    "cljacksmithencryptedorsmthn": {
-      "assetSha256": "3e51ca2e43c1dcb599f19554e2ea6910ab133235b76cd7ab79710f03045e4de2",
-      "frame": "cljacksmithencryptedorsmthn@3.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/cljacksmithencryptedorsmthn.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 209439,
-        "coverage": 0.724,
-        "dominant": 0.057,
-        "edges": 17.59,
-        "stddev": 84.52
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cljacksmithencryptedorsmthn.html",
-      "title": "Jack Smith Encrypted",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/cljacksmithencryptedorsmthn.webp"
-    },
     "cljailbreakobbbobob": {
       "assetSha256": "c15449fae660bfd0f06b1fbcb94b887557778870d8eceb2206abe2bede3dadd8",
       "frame": "cljailbreakobbbobob@3.png",
@@ -9078,28 +8835,6 @@
       "title": "Jelly Dad Hero",
       "type": "gameplay-screenshot",
       "url": "/artwork/cljellydadhero.webp"
-    },
-    "cljellydrift": {
-      "assetSha256": "88a27cacef10553f46c2482a92ab58b4ba48cb1462030b415bf2f551f32dd07c",
-      "frame": "cljellydrift@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/cljellydrift.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 190,
-        "coverage": 0.025,
-        "dominant": 0.783,
-        "edges": 29.46,
-        "stddev": 92.6
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cljellydrift.html",
-      "title": "Jelly Drift",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/cljellydrift.webp"
     },
     "cljellytruck": {
       "assetSha256": "f1547ed235b76a5a46021a8d5234fdf24c1d7de92cd062dd8b2868d27f166637",
@@ -9233,94 +8968,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/cljohnnyupgrade.webp"
     },
-    "cljojobaps1": {
-      "assetSha256": "a252076a26d6ba946300a579a831f9030d058e3fec02dd12f199a268d1e4b378",
-      "frame": "cljojobaps1@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/cljojobaps1.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 218,
-        "coverage": 0.017,
-        "dominant": 0.593,
-        "edges": 27.6,
-        "stddev": 65.04
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cljojobaps1.html",
-      "title": "JoJo Baps 1",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/cljojobaps1.webp"
-    },
-    "cljungledeerhunting": {
-      "assetSha256": "42cc7554be750ced68e80c5bcd5cf2e773859c85b0b7a5f11237f989c437aa99",
-      "frame": "cljungledeerhunting@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/cljungledeerhunting.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 173,
-        "coverage": 0.024,
-        "dominant": 0.796,
-        "edges": 39.81,
-        "stddev": 85.84
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cljungledeerhunting.html",
-      "title": "Jungle Deer Hunting",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/cljungledeerhunting.webp"
-    },
-    "cljustaplatformer": {
-      "assetSha256": "d3f177708b304b34f6238ff29bc86630e9f25f6a8b42389c8a4c746ad8a91c7f",
-      "frame": "cljustaplatformer@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/cljustaplatformer.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 97,
-        "coverage": 0.497,
-        "dominant": 0.812,
-        "edges": 3.38,
-        "stddev": 99.35
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cljustaplatformer.html",
-      "title": "Just a Platformer",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/cljustaplatformer.webp"
-    },
-    "cljustaplatformere": {
-      "assetSha256": "8b0774f973afd21c3736fdb96202bc79f869e6f7398a5554f98830f934e5319e",
-      "frame": "cljustaplatformere@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/cljustaplatformere.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 770,
-        "coverage": 1.0,
-        "dominant": 0.537,
-        "edges": 8.09,
-        "stddev": 79.11
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cljustaplatformere.html",
-      "title": "Just a Platformer E",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/cljustaplatformere.webp"
-    },
     "cljustfalllol": {
       "assetSha256": "539cd03bdea9bb3c52af00825237db9ca9fc806d78fa58c61fe505d8383a12cd",
       "frame": "cljustfalllol@1.png",
@@ -9388,28 +9035,6 @@
       "title": "Kapi",
       "type": "gameplay-screenshot",
       "url": "/artwork/clkapi.webp"
-    },
-    "clkeroseneclient": {
-      "assetSha256": "a889f7b0bf8cf89ea6606243132ccfc7b5f6acdd0fd7a33dcb8b351e9b9c5326",
-      "frame": "clkeroseneclient@2.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clkeroseneclient.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "no reachable remote distribution found",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 87,
-        "coverage": 0.621,
-        "dominant": 0.318,
-        "edges": 21.48,
-        "stddev": 39.18
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clkeroseneclient.html",
-      "title": "Kerosene Client",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clkeroseneclient.webp"
     },
     "clkilltheiceagebabyadventure": {
       "assetSha256": "ff9ec71b5911617ad92e0158eeaa161d5a8ca93b84b5133bd3588767b46c1fe1",

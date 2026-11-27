@@ -3725,11 +3725,137 @@
     "status": "rejected",
     "title": "Highway Traffic 3D"
   },
+  "clhil-climbracing2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hill Climb Racing 2"
+  },
+  "clhillclimbracinglite": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hill Climb Racing Lite"
+  },
+  "clhinohomo": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hi No Homo"
+  },
+  "clhipsterkickball": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hipster Kickball"
+  },
+  "clhitsinglereal": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Hit Single Real"
+  },
+  "clhl2doom": {
+    "reason": "Loading progress screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "HL2 Doom"
+  },
+  "clhobo": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "HOBO"
+  },
+  "clhobo2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "HOBO 2: Prison Brawl"
+  },
+  "clhobo3": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "HOBO 3: Wanted"
+  },
+  "clhobo4": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "HOBO 4: Total War"
+  },
+  "clhobo5": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "HOBO 5: Space Brawls"
+  },
+  "clhobo6": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "HOBO 6: Hell"
+  },
+  "clhobo7": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "HOBO 7: Heaven"
+  },
+  "clhobovszombies": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hobo vs Zombies"
+  },
   "clholebattle": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Hole Battle"
+  },
+  "clholeio": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hole.io"
+  },
+  "clhomesheephome": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Home Sheep Home"
+  },
+  "clhorrormickeymouse": {
+    "reason": "Engine splash, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Horror Mickey Mouse"
+  },
+  "clhotdogbush": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hot Dog Bush"
+  },
+  "clhotwax": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hotwax"
+  },
+  "clhouseofhazards": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "House of Hazards"
+  },
+  "clhoverracerdrive": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hover Racer Drive"
   },
   "clhuggywuggypixel": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
@@ -3737,11 +3863,83 @@
     "status": "rejected",
     "title": "Huggy Wuggy Pixel"
   },
+  "clhungrylamu": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hungry Lamu"
+  },
+  "clicantbelievegoogleflaggedmeforthenameofthefilelol": {
+    "reason": "Screen shown belongs to a different game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Icant Believe Google Flagged Me for the Name of the File LOL"
+  },
+  "clicedodo": {
+    "reason": "Error page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Icedodo"
+  },
+  "clicefishing": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ice Fishing"
+  },
   "clicypurplehead": {
     "reason": "Generic clock asset shared with other titles.",
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "Icy Purple Head"
+  },
+  "clidlebreakout": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Idle Breakout"
+  },
+  "clidledice": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Idle Dice"
+  },
+  "clidlefootballmanager": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Idle Football Manager"
+  },
+  "clidleidlegamedev": {
+    "reason": "Loading overlay with no game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Idle Idle Game Dev"
+  },
+  "clidleminertycoon": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Idle Miner Tycoon"
+  },
+  "climpossiblequiz--1": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Impossible Quiz"
+  },
+  "climpossiblequiz2": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Impossible Quiz 2"
+  },
+  "clindiantrucksimiulator": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Indian Truck Simulator"
   },
   "clinkgame": {
     "reason": "Non-identifying photograph, not game artwork.",
@@ -3761,11 +3959,71 @@
     "status": "verified",
     "title": "Intellisphere"
   },
+  "clintospace": {
+    "reason": "Blank frame with no game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Into Space"
+  },
+  "clintospace2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Into Space 2"
+  },
+  "clintospace3": {
+    "reason": "Publisher splash (Armor Games), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Into Space 3"
+  },
+  "cliqball": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "IQ Ball"
+  },
+  "clironsnout": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Iron Snout"
+  },
+  "clirori": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Irori"
+  },
   "clitgetssolonelyhere": {
     "reason": "Tiny sprite on a blank field with no identifying content.",
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "It Gets So Lonely Here"
+  },
+  "cliwbtg": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "IWBTG"
+  },
+  "cljacksmithencryptedorsmthn": {
+    "reason": "Advert inside the wrapper, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Jack Smith Encrypted"
+  },
+  "cljailbreakobbbobob": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Jailbreak Obby"
+  },
+  "cljazzjackrabbit": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Jazz Jackrabbit"
   },
   "cljazzjackrabbit2": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -3779,17 +4037,71 @@
     "status": "rejected",
     "title": "Jefflings"
   },
+  "cljellydadhero": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Jelly Dad Hero"
+  },
+  "cljellydrift": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Jelly Drift"
+  },
   "cljellymario": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Jelly Mario"
   },
+  "cljellytruck": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Jelly Truck"
+  },
+  "cljellytruckgood": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Jelly Truck Good"
+  },
+  "cljetrush": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Jetrush"
+  },
   "cljetskiracing": {
     "reason": "Portal logo (AZ Games), not the game.",
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "Jet Ski Racing"
+  },
+  "cljmocraft": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "JMO Craft"
+  },
+  "cljohnnytrigger": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Johnny Trigger"
+  },
+  "cljohnnyupgrade": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Johnny Upgrade"
+  },
+  "cljojobaps1": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "JoJo Baps 1"
   },
   "cljsvecx": {
     "reason": "Emulator page, not the game.",
@@ -3803,11 +4115,47 @@
     "status": "verified",
     "title": "Jumping Shell"
   },
+  "cljungledeerhunting": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Jungle Deer Hunting"
+  },
+  "cljustaplatformer": {
+    "reason": "License agreement page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Just a Platformer"
+  },
+  "cljustaplatformere": {
+    "reason": "License agreement page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Just a Platformer E"
+  },
+  "cljustfalllol": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Just Fall LOL"
+  },
+  "cljustinclient": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Justin Client"
+  },
   "clkanyezone": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Kanye Zone"
+  },
+  "clkapi": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kapi"
   },
   "clkaratebros": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -3820,6 +4168,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Kart Bros"
+  },
+  "clkeroseneclient": {
+    "reason": "License agreement page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Kerosene Client"
   },
   "clkourio": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
