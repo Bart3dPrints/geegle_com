@@ -467,6 +467,12 @@
     "status": "verified",
     "title": "AFLAC"
   },
+  "claftertheweek": {
+    "reason": "Friday Night Funkin: After the Week art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "After the Week"
+  },
   "clagariolite": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -504,9 +510,9 @@
     "title": "Ahoy Survival"
   },
   "clai": {
-    "reason": "Frames showed only instructions or copyright text, not a title screen or recognizable gameplay.",
+    "reason": "AI key art.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "AI"
   },
   "clairlinetycoonidle": {
@@ -539,6 +545,12 @@
     "status": "verified",
     "title": "Alien Hominid"
   },
+  "clalienhominidgba": {
+    "reason": "Alien Hominid GBA box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Alien Hominid GBA"
+  },
   "clalienskyinvasion": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -568,6 +580,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Allocation"
+  },
+  "claltered-beast": {
+    "reason": "Altered Beast Genesis box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Altered Beast"
   },
   "clamaze": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -652,6 +670,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Ancient Sins"
+  },
+  "clanemonesfall": {
+    "reason": "Anemones Fall art with its title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Anemone Fall"
   },
   "clangrybirds": {
     "reason": "Captured frame shows the actual game with identifying title or gameplay.",
@@ -808,6 +832,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Ascent"
+  },
+  "clasdutydemands": {
+    "reason": "As Duty Demands key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "As Duty Demands"
   },
   "clasmallworldcup": {
     "reason": "A Small World Cup title card with its player and ball.",
@@ -1361,10 +1391,16 @@
     "status": "verified",
     "title": "Bearsus"
   },
-  "clbejeweledtwistflash": {
-    "reason": "Every qualifying frame was an error page (\"Something went wrong\"), which is never acceptable artwork.",
+  "clbejeweledtwistds": {
+    "reason": "Bejeweled Twist DS box art.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Bejeweled Twist DS"
+  },
+  "clbejeweledtwistflash": {
+    "reason": "Bejeweled Twist gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Be Jeweled Twist Flash"
   },
   "clben10alienforce": {
@@ -1414,6 +1450,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "BFDI A5B"
+  },
+  "clbfdibranches": {
+    "reason": "BFDI Branches key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "BFDI Branches"
   },
   "clbig_time_butter_baron": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1698,9 +1740,9 @@
     "title": "Bloons TD 5"
   },
   "clbloonstd6scratch": {
-    "reason": "Every qualifying frame was an error page (\"Something went wrong\"), which is never acceptable artwork.",
+    "reason": "Bloons TD 6 Scratch key art.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Bloons Td 6 Scratch"
   },
   "clbloxorz": {
@@ -1720,6 +1762,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Blumgi Rocket"
+  },
+  "clbmx2": {
+    "reason": "Touchgrind BMX 2 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "BMX 2"
   },
   "clbntts": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2406,9 +2454,9 @@
     "title": "Choppy Orc"
   },
   "clchoroqwonderful": {
-    "reason": "Every qualifying frame was still a loading screen (progress bar or \"Loading n/m\"), so nothing finished could be captured in the 12-second window.",
+    "reason": "Choro Q Wonderful! key art.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Ch Oro Qwonderful"
   },
   "clchronotrigger": {
@@ -4277,6 +4325,36 @@
     "status": "verified",
     "title": "Extreme Run 3D"
   },
+  "clfactoryballs": {
+    "reason": "Factory Balls logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Factory Balls"
+  },
+  "clfactoryballs2": {
+    "reason": "Factory Balls 2 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Factory Balls 2"
+  },
+  "clfactoryballs3": {
+    "reason": "Factory Balls 3 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Factory Balls 3"
+  },
+  "clfactoryballs4": {
+    "reason": "Factory Balls 4 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Factory Balls 4"
+  },
+  "clfairytalevsonepiece": {
+    "reason": "Fairy Tale vs One Piece key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Fairytale vs One Piece"
+  },
   "clfallguys": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -4284,9 +4362,9 @@
     "title": "Fall Guys"
   },
   "clfallout": {
-    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reason": "Fallout key art with power armor.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Fallout"
   },
   "clfamidash": {
@@ -4420,6 +4498,12 @@
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": null
+  },
+  "clff3": {
+    "reason": "Final Fantasy III NES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Final Fantasy III"
   },
   "clff6": {
     "reason": "Final Fantasy VI cover art with the cast.",
@@ -5507,6 +5591,12 @@
     "status": "verified",
     "title": "Funny Shooter 22"
   },
+  "clfuschiax": {
+    "reason": "Fuchsia X art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Fu Schia X"
+  },
   "clfused240": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
@@ -6114,9 +6204,9 @@
     "title": "Gunstar Heroes"
   },
   "clgxclient": {
-    "reason": "Frames showed only instructions or copyright text, not a title screen or recognizable gameplay.",
+    "reason": "GX Client interface screenshot.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "GX Client"
   },
   "clgymstack": {
@@ -6533,6 +6623,12 @@
     "status": "verified",
     "title": "Hypper Sandbox"
   },
+  "clicantbelievegoogleflaggedmeforthenameofthefilelol": {
+    "reason": "Results were file-verification tutorial thumbnails, not artwork for this entry.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
   "clice-age-baby": {
     "reason": "Kill the Ice Age Baby Adventure key art.",
     "reviewed": "2026-11-27",
@@ -6748,6 +6844,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Jacksmith"
+  },
+  "cljacksmithencryptedorsmthn": {
+    "reason": "JackSmith title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Jack Smith Encrypted"
   },
   "cljailbreakobbbobob": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7006,6 +7108,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Ken Griffey Jr. Baseball"
+  },
+  "clkengriffeyjrpresentsmajorleaguebaseball": {
+    "reason": "Ken Griffey Jr. Presents Major League Baseball box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ken Griffey Jr Presents Major League Baseball"
   },
   "clkeroseneclient": {
     "reason": "Kerosene Client gameplay with its speedometer; result 2 was a price advert.",
@@ -7979,6 +8087,12 @@
     "status": "verified",
     "title": "MediEvil"
   },
+  "clmegacd": {
+    "reason": "Sega Mega-CD system art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Megacd"
+  },
   "clmegachess": {
     "reason": "MegaChess box art with its boards.",
     "reviewed": "2026-11-27",
@@ -8213,6 +8327,12 @@
     "status": "verified",
     "title": "Metal Slug Mission 2"
   },
+  "clmetalsonichyperdrive": {
+    "reason": "Metal Sonic Hyperdrive art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Metal Sonic Hyperdrive"
+  },
   "clmetroid": {
     "reason": "Metroid key art with Samus.",
     "reviewed": "2026-11-27",
@@ -8249,6 +8369,12 @@
     "status": "verified",
     "title": "Miami Shark"
   },
+  "clmickeymaniasnes": {
+    "reason": "Mickey Mania SNES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mickey Mania SNES"
+  },
   "clmicrolife": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -8260,6 +8386,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Micro Mages"
+  },
+  "clmidwaysgreatesthitsn64": {
+    "reason": "Midway's Greatest Hits N64 cartridge label.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Midways Greatest Hits N64"
   },
   "clmightyknight": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8314,6 +8446,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Minecraft Cases Im"
+  },
+  "clminecraftpocketedition": {
+    "reason": "Minecraft Pocket Edition logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Minecraft Pocket Edition"
   },
   "clminecraftshooter": {
     "reason": "Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
@@ -8380,6 +8518,78 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Missile Command"
+  },
+  "clmk4ampedup": {
+    "reason": "Mario Kart 4 Amped Up gameplay with its logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mk 4 Am Ped Up"
+  },
+  "clmkmythologiesn64": {
+    "reason": "Mortal Kombat Mythologies: Sub-Zero cartridge label.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mk Mythologies N64"
+  },
+  "clmktrilogyps1": {
+    "reason": "Mortal Kombat Trilogy PlayStation box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mk Trilogy Ps 1"
+  },
+  "clmmbn3b": {
+    "reason": "Mega Man Battle Network 3 Blue key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mmbn 3 B"
+  },
+  "clmmbn3w": {
+    "reason": "Mega Man Battle Network 3 White box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mmbn 3 W"
+  },
+  "clmmbn4bm": {
+    "reason": "Mega Man Battle Network 4 Blue Moon box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mmbn 4 Bm"
+  },
+  "clmmbn4rs": {
+    "reason": "Mega Man Battle Network 4 Red Sun key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mmbn 4 Rs"
+  },
+  "clmmbnws": {
+    "reason": "Mega Man Battle Network logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mmbnws"
+  },
+  "clmmsf2zxn": {
+    "reason": "Mega Man Star Force 2 Zerker x Ninja box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mmsf 2 Zx N"
+  },
+  "clmmsf2zxs": {
+    "reason": "Mega Man Star Force 2 Zerker x Saurian box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mmsf 2 Zx S"
+  },
+  "clmmsf3ba": {
+    "reason": "Mega Man Star Force 3 Black Ace box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mmsf 3 Ba"
+  },
+  "clmmwilywars": {
+    "reason": "Mega Man: The Wily Wars art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mm Wily Wars"
   },
   "clmoemon-emerald-vanilla---v1-1-0": {
     "reason": "Moemon Emerald Version box art.",
@@ -9148,6 +9358,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Paper Mario: The Origami King"
+  },
+  "clormmimastickwithclsoitcanberememberedoyeahclalienhominid": {
+    "reason": "Alien Hominid boss gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Alien Hominid (Classic)"
   },
   "clortalkombat4": {
     "reason": "Mortal Kombat 4 Nintendo 64 box art, kept distinct from the other entry.",
@@ -10601,6 +10817,12 @@
     "status": "verified",
     "title": "Police Pursuit 2"
   },
+  "clpolishedcrystal": {
+    "reason": "Pokemon Polished Crystal box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Polished Crystal"
+  },
   "clpolytrackworksnow": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -10853,17 +11075,83 @@
     "status": "verified",
     "title": "PyroToad"
   },
+  "clqbert": {
+    "reason": "Q*bert arcade art; result 1 was Q*bert Rebooted.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Q*bert"
+  },
+  "clqbertarcade": {
+    "reason": "Q*bert arcade gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Q*bert Arcade"
+  },
+  "clqtrewired": {
+    "reason": "QT Rewired badge art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "QT Rewired"
+  },
+  "clquake": {
+    "reason": "Quake gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Quake"
+  },
+  "clquake2": {
+    "reason": "Quake 2 gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Quake 2"
+  },
+  "clquake64": {
+    "reason": "Quake 64 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Quake 64"
+  },
   "clquantumclicker": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Quantum Clicker"
   },
+  "clquickieworld": {
+    "reason": "Quickie World 1 title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Quickie World"
+  },
   "clqwop": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "QWOP"
+  },
+  "clracemaster3d": {
+    "reason": "Race Master gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Race Master 3D"
+  },
+  "clracingarena": {
+    "reason": "Racing Arena gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Racing Arena"
+  },
+  "clradicalred": {
+    "reason": "Pokemon Radical Red box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Radical Red"
+  },
+  "clradracer": {
+    "reason": "Rad Racer gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rad Racer"
   },
   "clraftwars": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -10882,6 +11170,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Ragdoll.io"
+  },
+  "clragdollachivement": {
+    "reason": "Ragdoll Achievement menu art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ragdoll Achievement"
   },
   "clragdollarchers": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -10919,6 +11213,18 @@
     "status": "verified",
     "title": "Ragdoll Hit"
   },
+  "clrainbowsix": {
+    "reason": "Rainbow Six Siege operator art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rainbow Six"
+  },
+  "clrainbowsixalt": {
+    "reason": "Rainbow Six Shadow Vanguard art, kept distinct from Siege.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rainbow Six (Alt)"
+  },
   "clraldiscrackhouse": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -10937,6 +11243,18 @@
     "status": "verified",
     "title": "Ray 1"
   },
+  "clray2": {
+    "reason": "Ray 2 gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ray 2"
+  },
+  "clrayman": {
+    "reason": "Results were Rayman Legends box art and gameplay, not the original Rayman.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
   "clraze": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -10949,11 +11267,29 @@
     "status": "verified",
     "title": "Raze 2"
   },
+  "clraze3": {
+    "reason": "Raze 3 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Raze 3"
+  },
+  "clre3": {
+    "reason": "Resident Evil 3 key art with Nemesis.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Resident Evil 3"
+  },
   "clreachthecore": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Reach the Core"
+  },
+  "clreacticore": {
+    "reason": "Reacticore logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Reacticore"
   },
   "clrealflightsim": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -10985,6 +11321,30 @@
     "status": "verified",
     "title": "Recoil"
   },
+  "clredalert": {
+    "reason": "Red Alert gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Red Alert"
+  },
+  "clredball": {
+    "reason": "Red Ball gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Red Ball"
+  },
+  "clredball2": {
+    "reason": "Red Ball 2 title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Red Ball 2"
+  },
+  "clredball3": {
+    "reason": "Red Ball 3 gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Red Ball 3"
+  },
   "clredball4": {
     "reason": "Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
@@ -11015,6 +11375,12 @@
     "status": "verified",
     "title": "Red Tie Runner"
   },
+  "clreignofcentipede": {
+    "reason": "Reign of Centipede gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Reign of Centipede"
+  },
   "clrepobad": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -11027,11 +11393,47 @@
     "status": "verified",
     "title": "Resent Client"
   },
+  "clresidentevil": {
+    "reason": "Resident Evil key art with its cast; result 1 was Resident Evil 4.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Resident Evil"
+  },
+  "clresidentevil2": {
+    "reason": "Resident Evil 2 key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Resident Evil 2"
+  },
+  "clresidentevil2d1": {
+    "reason": "Resident Evil 2D gameplay with its inventory.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Resident Evil 2D 1"
+  },
+  "clresidentevil2d2": {
+    "reason": "Resident Evil 2D Reborn title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Resident Evil 2D 2"
+  },
   "clresizer": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Resizer"
+  },
+  "clresortempire": {
+    "reason": "Resort Empire logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Resort Empire"
+  },
+  "clretrobowl": {
+    "reason": "Retro Bowl field art with scoreboard.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Retro Bowl"
   },
   "clretrobowlcollege": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -11044,6 +11446,30 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Retro Highway"
+  },
+  "clretropingpong": {
+    "reason": "Retro Ping Pong gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Retro Ping Pong"
+  },
+  "clreturnman": {
+    "reason": "Return Man key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Return Man"
+  },
+  "clreturnman2": {
+    "reason": "Return Man 2 key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Return Man 2"
+  },
+  "clreturntoriddleschool": {
+    "reason": "Return to Riddle School title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Return to Riddle School"
   },
   "clrevolutionidle": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -11063,11 +11489,35 @@
     "status": "verified",
     "title": "Rh"
   },
+  "clrhythmheaven": {
+    "reason": "Rhythm Heaven Megamix key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rhythm Heaven"
+  },
+  "clrhythymymheaven": {
+    "reason": "Rhythm Heaven character art, kept distinct from the Megamix key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rhythm Heaven (Alt)"
+  },
+  "clricochetkills2": {
+    "reason": "Ricochet Kills 2 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ricochet Kills 2"
+  },
   "clriddle": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Riddle"
+  },
+  "clriddlemiddleschool": {
+    "reason": "Riddle Middle School scene.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Riddle Middle School"
   },
   "clriddleschool": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -11099,11 +11549,29 @@
     "status": "verified",
     "title": "Riddle Transfer"
   },
+  "clriddletransfer2": {
+    "reason": "Riddle Transfer 2 menu art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Riddle Transfer 2"
+  },
+  "clridgeracer": {
+    "reason": "Ridge Racer PlayStation box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ridge Racer"
+  },
   "clrisehigher": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Rise Higher"
+  },
+  "clristar": {
+    "reason": "Ristar logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ristar"
   },
   "clroadffury": {
     "reason": "Error page, not the game artwork.",
@@ -11117,6 +11585,30 @@
     "status": "verified",
     "title": "Road Fighter"
   },
+  "clroadoffury": {
+    "reason": "Road of Fury key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Road of Fury"
+  },
+  "clroadofthedead": {
+    "reason": "Road of the Dead art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Road of the Dead"
+  },
+  "clroadofthedead2": {
+    "reason": "Road of the Dead 2 key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Road of the Dead 2"
+  },
+  "clroadrunnernes": {
+    "reason": "Road Runner NES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Roadrunner (NES)"
+  },
   "clrocketgoalio": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -11128,6 +11620,24 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Rocket Jump"
+  },
+  "clrocketknight2--1": {
+    "reason": "Rocket Knight logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rocket Knight 2"
+  },
+  "clrocketknightadventures": {
+    "reason": "Rocket Knight Adventures Genesis box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rocket Knight Adventures"
+  },
+  "clrocketleague": {
+    "reason": "Rocket League key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rocket League"
   },
   "clrocketsoccerderby": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -11141,6 +11651,24 @@
     "status": "verified",
     "title": "Rodha"
   },
+  "clroguesoul": {
+    "reason": "Rogue Soul title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rogue Soul"
+  },
+  "clroguesoul2": {
+    "reason": "Rogue Soul II art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rogue Soul 2"
+  },
+  "clrollerballer": {
+    "reason": "RollerBaller art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rollerballer"
+  },
   "clrollingsky": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -11152,6 +11680,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Rolly Vortex"
+  },
+  "clrolypolymonster": {
+    "reason": "Roly Poly Monsters logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Roly Poly Monster"
   },
   "clrooftoprun": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -11177,6 +11711,12 @@
     "status": "verified",
     "title": "Room Clicker"
   },
+  "clrosegold": {
+    "reason": "Every result was a video thumbnail carrying playthrough or review text over the art.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
   "clrotate": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -11188,6 +11728,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Roulette Hero"
+  },
+  "clrouletteknight": {
+    "reason": "Roulette Knight key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Roulette Knight"
   },
   "clrun": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -13019,6 +13565,12 @@
     "status": "verified",
     "title": "Minecraft 1.12.2"
   },
+  "minecrafttowerdefense": {
+    "reason": "Minecraft Tower Defense box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Minecraft Tower Defense"
+  },
   "pvzm": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
@@ -13030,6 +13582,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Red vs Blue Fix"
+  },
+  "repo": {
+    "reason": "R.E.P.O. key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "R.E.P.O"
   },
   "smash-hit-ripoff": {
     "reason": "Captured game screen shows the actual title.",

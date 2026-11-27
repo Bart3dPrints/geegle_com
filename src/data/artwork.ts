@@ -603,6 +603,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Found by searching \"AFLAC game\" in Bing Images and taking result 3; the image was checked against the catalog title \"AFLAC\" before use. Source page: https://fbschedules.com/aflac-is-new-title-sponsor-of-kickoff-game/",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
+  "claftertheweek": {
+    "title": "After the Week",
+    "url": "/artwork/claftertheweek.webp",
+    "source": "https://fnf-games.io/friday-night-funkin-after-the-week",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"After the Week game\" in Bing Images and taking result 1; the image was checked against the catalog title \"After the Week\" before use. Source page: https://fnf-games.io/friday-night-funkin-after-the-week",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clagariolite": {
     "title": "Agar.io Lite",
     "url": "/artwork/clagariolite.webp",
@@ -651,6 +659,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clahoysurvival.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clai": {
+    "title": "AI",
+    "url": "/artwork/clai.webp",
+    "source": "https://storage.googleapis.com/danfmdbvpbieke/ai-in-video-games.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"AI game\" in Bing Images and taking result 1; the image was checked against the catalog title \"AI\" before use. Source page: https://storage.googleapis.com/danfmdbvpbieke/ai-in-video-games.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clairlinetycoonidle": {
     "title": "Airline Tycoon Idle",
     "url": "/artwork/clairlinetycoonidle.webp",
@@ -691,6 +707,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Found by searching \"Alien Hominid game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Alien Hominid\" before use. Source page: https://www.alienhominid.com/game/",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
+  "clalienhominidgba": {
+    "title": "Alien Hominid GBA",
+    "url": "/artwork/clalienhominidgba.webp",
+    "source": "https://www.webmulator.com/games/gameboy-advance/alien-hominid-gba",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Alien Hominid GBA game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Alien Hominid GBA\" before use. Source page: https://www.webmulator.com/games/gameboy-advance/alien-hominid-gba",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clalienskyinvasion": {
     "title": "Alien Sky Invasion",
     "url": "/artwork/clalienskyinvasion.webp",
@@ -729,6 +753,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "source": "https://howlongtobeat.com/game/79825",
     "type": "game-asset",
     "identityEvidence": "Found by searching \"Allocation game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Allocation\" before use. Source page: https://howlongtobeat.com/game/79825",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "claltered-beast": {
+    "title": "Altered Beast",
+    "url": "/artwork/claltered-beast.webp",
+    "source": "https://www.webmulator.com/games/sega-genesis/altered-beast",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Altered Beast game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Altered Beast\" before use. Source page: https://www.webmulator.com/games/sega-genesis/altered-beast",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clamaze": {
@@ -834,6 +866,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clancientsins.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clanemonesfall": {
+    "title": "Anemone Fall",
+    "url": "/artwork/clanemonesfall.webp",
+    "source": "https://www.youtube.com/watch?v=5rQcjBuumxg",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Anemone Fall game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Anemone Fall\" before use. Source page: https://www.youtube.com/watch?v=5rQcjBuumxg",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clangrybirds": {
     "title": "Angry Birds",
@@ -1033,6 +1073,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "source": "https://gamerant.com/the-ascent-best-builds/",
     "type": "game-asset",
     "identityEvidence": "Found by searching \"Ascent game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Ascent\" before use. Source page: https://gamerant.com/the-ascent-best-builds/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clasdutydemands": {
+    "title": "As Duty Demands",
+    "url": "/artwork/clasdutydemands.webp",
+    "source": "https://store.steampowered.com/app/4405230/As_Duty_Demands_Demo/?l=latam",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"As Duty Demands game\" in Bing Images and taking result 1; the image was checked against the catalog title \"As Duty Demands\" before use. Source page: https://store.steampowered.com/app/4405230/As_Duty_Demands_Demo/?l=latam",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clasmallworldcup": {
@@ -1747,6 +1795,22 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clbearsus.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clbejeweledtwistds": {
+    "title": "Bejeweled Twist DS",
+    "url": "/artwork/clbejeweledtwistds.webp",
+    "source": "https://www.lukiegames.com/Bejeweled-Twist-DS-Game",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Bejeweled Twist DS game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Bejeweled Twist DS\" before use. Source page: https://www.lukiegames.com/Bejeweled-Twist-DS-Game",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clbejeweledtwistflash": {
+    "title": "Be Jeweled Twist Flash",
+    "url": "/artwork/clbejeweledtwistflash.webp",
+    "source": "https://store.steampowered.com/app/3560/Bejeweled_Twist/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Be Jeweled Twist Flash game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Be Jeweled Twist Flash\" before use. Source page: https://store.steampowered.com/app/3560/Bejeweled_Twist/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clben10alienforce": {
     "title": "Ben 10 Alien Force",
     "url": "/artwork/clben10alienforce.webp",
@@ -1810,6 +1874,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "official-og",
     "identityEvidence": "Published by the distribution for BFDI A5B at https://coppersalts.github.io/HTML5b/visuals/bg/bg0002.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched cdn.jsdelivr.net page metadata).",
     "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request."
+  },
+  "clbfdibranches": {
+    "title": "BFDI Branches",
+    "url": "/artwork/clbfdibranches.webp",
+    "source": "https://www.youtube.com/watch?v=9ZUTXt6fz_8",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"BFDI Branches game\" in Bing Images and taking result 3; the image was checked against the catalog title \"BFDI Branches\" before use. Source page: https://www.youtube.com/watch?v=9ZUTXt6fz_8",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clbig_time_butter_baron": {
     "title": "Big Time Butter Baron",
@@ -2163,6 +2235,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Found by searching \"Bloons TD 5 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Bloons TD 5\" before use. Source page: https://www.nintendo.com/us/store/products/bloons-td-5-switch/",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
+  "clbloonstd6scratch": {
+    "title": "Bloons Td 6 Scratch",
+    "url": "/artwork/clbloonstd6scratch.webp",
+    "source": "https://www.brightestgames.com/game/bloons-td-6-scratch-edition",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Bloons Td 6 Scratch game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Bloons Td 6 Scratch\" before use. Source page: https://www.brightestgames.com/game/bloons-td-6-scratch-edition",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clbloxorz": {
     "title": "Bloxorz",
     "url": "/artwork/clbloxorz.webp",
@@ -2186,6 +2266,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clblumgirocket.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clbmx2": {
+    "title": "BMX 2",
+    "url": "/artwork/clbmx2.webp",
+    "source": "https://www.youtube.com/watch?v=SdpE8JTRcYo",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"BMX 2 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"BMX 2\" before use. Source page: https://www.youtube.com/watch?v=SdpE8JTRcYo",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clbntts": {
     "title": "Bntts",
@@ -3081,6 +3169,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "source": "https://classroom-connect.co.uk/game/bookworm/",
     "type": "game-asset",
     "identityEvidence": "Found by searching \"Choppy Orc game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Choppy Orc\" before use. Source page: https://classroom-connect.co.uk/game/bookworm/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clchoroqwonderful": {
+    "title": "Ch Oro Qwonderful",
+    "url": "/artwork/clchoroqwonderful.webp",
+    "source": "https://actua.blog/choroq-wonderful-un-patch-de-traduction-en-anglais-est-desormais-disponible/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Ch Oro Qwonderful game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Ch Oro Qwonderful\" before use. Source page: https://actua.blog/choroq-wonderful-un-patch-de-traduction-en-anglais-est-desormais-disponible/",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clchronotrigger": {
@@ -5507,6 +5603,46 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Published by the distribution for Extreme Run 3D at https://cdn.jsdelivr.net/gh/faralong/all@main/extremerun/logo.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; probed build asset paths).",
     "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request."
   },
+  "clfactoryballs": {
+    "title": "Factory Balls",
+    "url": "/artwork/clfactoryballs.webp",
+    "source": "https://gamesdb.launchbox-app.com/games/images/372930-factory-balls",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Factory Balls game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Factory Balls\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/372930-factory-balls",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clfactoryballs2": {
+    "title": "Factory Balls 2",
+    "url": "/artwork/clfactoryballs2.webp",
+    "source": "https://www.hoodamath.com/games/factoryballs2.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Factory Balls 2 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Factory Balls 2\" before use. Source page: https://www.hoodamath.com/games/factoryballs2.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clfactoryballs3": {
+    "title": "Factory Balls 3",
+    "url": "/artwork/clfactoryballs3.webp",
+    "source": "https://www.hoodamath.com/games/factoryballs3.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Factory Balls 3 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Factory Balls 3\" before use. Source page: https://www.hoodamath.com/games/factoryballs3.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clfactoryballs4": {
+    "title": "Factory Balls 4",
+    "url": "/artwork/clfactoryballs4.webp",
+    "source": "https://www.hoodamath.com/games/factoryballs4.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Factory Balls 4 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Factory Balls 4\" before use. Source page: https://www.hoodamath.com/games/factoryballs4.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clfairytalevsonepiece": {
+    "title": "Fairytale vs One Piece",
+    "url": "/artwork/clfairytalevsonepiece.webp",
+    "source": "https://vn.exp.gg/thong-tin/one-piece-vs-fairy-tail-1-0-1637109513/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Fairytale vs One Piece game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Fairytale vs One Piece\" before use. Source page: https://vn.exp.gg/thong-tin/one-piece-vs-fairy-tail-1-0-1637109513/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clfallguys": {
     "title": "Fall Guys",
     "url": "/artwork/clfallguys.webp",
@@ -5514,6 +5650,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clfallguys.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clfallout": {
+    "title": "Fallout",
+    "url": "/artwork/clfallout.webp",
+    "source": "https://utpaqp.edu.pe/explore/fallout-games-ranked",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Fallout game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Fallout\" before use. Source page: https://utpaqp.edu.pe/explore/fallout-games-ranked",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clfamidash": {
     "title": "Famidash",
@@ -5674,6 +5818,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clfeedus5.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clff3": {
+    "title": "Final Fantasy III",
+    "url": "/artwork/clff3.webp",
+    "source": "https://gamesdb.launchbox-app.com/games/images/7573-final-fantasy-iii",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Final Fantasy III game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Final Fantasy III\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/7573-final-fantasy-iii",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clff6": {
     "title": "FF6",
@@ -7075,6 +7227,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "The wrapper this repository distributes for Funny Shooter 22 declares this image as its own artwork (game-asset).",
     "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request."
   },
+  "clfuschiax": {
+    "title": "Fu Schia X",
+    "url": "/artwork/clfuschiax.webp",
+    "source": "http://www.fantasicawiki.com/wiki/Fuschia",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Fu Schia X game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Fu Schia X\" before use. Source page: http://www.fantasicawiki.com/wiki/Fuschia",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clfused240": {
     "title": "Fused 240",
     "url": "/artwork/clfused240.webp",
@@ -7865,6 +8025,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "source": "https://www.imdb.com/title/tt0489066/mediaviewer/rm2782543617/",
     "type": "game-asset",
     "identityEvidence": "Found by searching \"Gunstar Heroes game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Gunstar Heroes\" before use. Source page: https://www.imdb.com/title/tt0489066/mediaviewer/rm2782543617/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clgxclient": {
+    "title": "GX Client",
+    "url": "/artwork/clgxclient.webp",
+    "source": "https://www.opera.com/vi/gx",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"GX Client game\" in Bing Images and taking result 3; the image was checked against the catalog title \"GX Client\" before use. Source page: https://www.opera.com/vi/gx",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clgymstack": {
@@ -8683,6 +8851,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Found by searching \"Jacksmith game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Jacksmith\" before use. Source page: https://gamespec.tech/jacksmith-unblocked/",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
+  "cljacksmithencryptedorsmthn": {
+    "title": "Jack Smith Encrypted",
+    "url": "/artwork/cljacksmithencryptedorsmthn.webp",
+    "source": "https://www.coolmathgames.com/fr/0-jacksmith/1000",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Jack Smith Encrypted game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Jack Smith Encrypted\" before use. Source page: https://www.coolmathgames.com/fr/0-jacksmith/1000",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "cljailbreakobbbobob": {
     "title": "Jailbreak Obby",
     "url": "/artwork/cljailbreakobbbobob.webp",
@@ -9025,6 +9201,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "source": "https://www.youtube.com/watch?v=Fs00R8iX948",
     "type": "game-asset",
     "identityEvidence": "Found by searching \"Ken Griffey Jr. Baseball game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Ken Griffey Jr. Baseball\" before use. Source page: https://www.youtube.com/watch?v=Fs00R8iX948",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clkengriffeyjrpresentsmajorleaguebaseball": {
+    "title": "Ken Griffey Jr Presents Major League Baseball",
+    "url": "/artwork/clkengriffeyjrpresentsmajorleaguebaseball.webp",
+    "source": "https://www.game-boy-database.com/game-AKGP-980-AUS.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Ken Griffey Jr Presents Major League Baseball game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Ken Griffey Jr Presents Major League Baseball\" before use. Source page: https://www.game-boy-database.com/game-AKGP-980-AUS.html",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clkeroseneclient": {
@@ -10267,6 +10451,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Found by searching \"MediEvil game\" in Bing Images and taking result 2; the image was checked against the catalog title \"MediEvil\" before use. Source page: https://wallpaperaccess.com/medievil-game",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
+  "clmegacd": {
+    "title": "Megacd",
+    "url": "/artwork/clmegacd.webp",
+    "source": "https://www.cultureslate.com/explained/want-to-see-more-the-sega-mega-cd",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Megacd game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Megacd\" before use. Source page: https://www.cultureslate.com/explained/want-to-see-more-the-sega-mega-cd",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clmegachess": {
     "title": "Mega Chess",
     "url": "/artwork/clmegachess.webp",
@@ -10555,6 +10747,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Found by searching \"Metal Slug Mission 2 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Metal Slug Mission 2\" before use. Source page: https://altarofgaming.com/game/metal-slug-2nd-mission/",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
+  "clmetalsonichyperdrive": {
+    "title": "Metal Sonic Hyperdrive",
+    "url": "/artwork/clmetalsonichyperdrive.webp",
+    "source": "https://www.steamgriddb.com/game/5252932",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Metal Sonic Hyperdrive game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Metal Sonic Hyperdrive\" before use. Source page: https://www.steamgriddb.com/game/5252932",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clmetroid": {
     "title": "Metroid",
     "url": "/artwork/clmetroid.webp",
@@ -10603,6 +10803,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clmiamishark.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clmickeymaniasnes": {
+    "title": "Mickey Mania SNES",
+    "url": "/artwork/clmickeymaniasnes.webp",
+    "source": "https://www.nintendolife.com/games/snes/mickey_mania",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mickey Mania SNES game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Mickey Mania SNES\" before use. Source page: https://www.nintendolife.com/games/snes/mickey_mania",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clmicrolife": {
     "title": "Micro Life",
     "url": "/artwork/clmicrolife.webp",
@@ -10617,6 +10825,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "source": "https://store.playstation.com/en-us/pages/browse/214",
     "type": "game-asset",
     "identityEvidence": "Found by searching \"Micro Mages game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Micro Mages\" before use. Source page: https://store.playstation.com/en-us/pages/browse/214",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmidwaysgreatesthitsn64": {
+    "title": "Midways Greatest Hits N64",
+    "url": "/artwork/clmidwaysgreatesthitsn64.webp",
+    "source": "https://cavegamers.com/products/midways-greatest-arcade-hits-vol-1-n64-used",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Midways Greatest Hits N64 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Midways Greatest Hits N64\" before use. Source page: https://cavegamers.com/products/midways-greatest-arcade-hits-vol-1-n64-used",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clmightyknight": {
@@ -10690,6 +10906,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clminecraftcasesim.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clminecraftpocketedition": {
+    "title": "Minecraft Pocket Edition",
+    "url": "/artwork/clminecraftpocketedition.webp",
+    "source": "https://www.ign.com/games/minecraft-pocket-edition",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Minecraft Pocket Edition game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Minecraft Pocket Edition\" before use. Source page: https://www.ign.com/games/minecraft-pocket-edition",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clminecraftshooter": {
     "title": "Minecraft Shooter",
@@ -10777,6 +11001,102 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "source": "https://legeekretrogaming.com/systems/r_atarivcs_missilecommand.shtml",
     "type": "game-asset",
     "identityEvidence": "Found by searching \"Missile Command game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Missile Command\" before use. Source page: https://legeekretrogaming.com/systems/r_atarivcs_missilecommand.shtml",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmk4ampedup": {
+    "title": "Mk 4 Am Ped Up",
+    "url": "/artwork/clmk4ampedup.webp",
+    "source": "https://gamerant.com/best-mario-rom-hacks/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mk 4 Am Ped Up game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Mk 4 Am Ped Up\" before use. Source page: https://gamerant.com/best-mario-rom-hacks/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmkmythologiesn64": {
+    "title": "Mk Mythologies N64",
+    "url": "/artwork/clmkmythologiesn64.webp",
+    "source": "https://www.gamersgoretro.com/products/mortal-kombat-mythologies-sub-zero-n64",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mk Mythologies N64 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Mk Mythologies N64\" before use. Source page: https://www.gamersgoretro.com/products/mortal-kombat-mythologies-sub-zero-n64",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmktrilogyps1": {
+    "title": "Mk Trilogy Ps 1",
+    "url": "/artwork/clmktrilogyps1.webp",
+    "source": "https://www.etsy.com/listing/540840634/mortal-kombat-trilogy-ps1-great",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mk Trilogy Ps 1 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Mk Trilogy Ps 1\" before use. Source page: https://www.etsy.com/listing/540840634/mortal-kombat-trilogy-ps1-great",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmmbn3b": {
+    "title": "Mmbn 3 B",
+    "url": "/artwork/clmmbn3b.webp",
+    "source": "https://altarofgaming.com/game/mega-man-battle-network-3-blue-version/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mmbn 3 B game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Mmbn 3 B\" before use. Source page: https://altarofgaming.com/game/mega-man-battle-network-3-blue-version/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmmbn3w": {
+    "title": "Mmbn 3 W",
+    "url": "/artwork/clmmbn3w.webp",
+    "source": "https://www.mobygames.com/game/9609/mega-man-battle-network-3-white-version/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mmbn 3 W game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Mmbn 3 W\" before use. Source page: https://www.mobygames.com/game/9609/mega-man-battle-network-3-white-version/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmmbn4bm": {
+    "title": "Mmbn 4 Bm",
+    "url": "/artwork/clmmbn4bm.webp",
+    "source": "https://www.ign.com/games/mega-man-battle-network-4-blue-moon",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mmbn 4 Bm game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Mmbn 4 Bm\" before use. Source page: https://www.ign.com/games/mega-man-battle-network-4-blue-moon",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmmbn4rs": {
+    "title": "Mmbn 4 Rs",
+    "url": "/artwork/clmmbn4rs.webp",
+    "source": "https://www.nintendo.com/de-de/Spiele/Game-Boy-Advance/Mega-Man-Battle-Network-4-Red-Sun-1032958.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mmbn 4 Rs game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mmbn 4 Rs\" before use. Source page: https://www.nintendo.com/de-de/Spiele/Game-Boy-Advance/Mega-Man-Battle-Network-4-Red-Sun-1032958.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmmbnws": {
+    "title": "Mmbnws",
+    "url": "/artwork/clmmbnws.webp",
+    "source": "https://www.ign.com/games/mega-man-battle-network/trailers",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mmbnws game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Mmbnws\" before use. Source page: https://www.ign.com/games/mega-man-battle-network/trailers",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmmsf2zxn": {
+    "title": "Mmsf 2 Zx N",
+    "url": "/artwork/clmmsf2zxn.webp",
+    "source": "https://retroquest.com.br/produto/mega-man-star-force-2-zerker-x-ninja/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mmsf 2 Zx N game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Mmsf 2 Zx N\" before use. Source page: https://retroquest.com.br/produto/mega-man-star-force-2-zerker-x-ninja/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmmsf2zxs": {
+    "title": "Mmsf 2 Zx S",
+    "url": "/artwork/clmmsf2zxs.webp",
+    "source": "https://www.scifidimensions.com/what-is-the-meaning-behind-mega-man-star-force-2-zerker-x-saurian/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mmsf 2 Zx S game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mmsf 2 Zx S\" before use. Source page: https://www.scifidimensions.com/what-is-the-meaning-behind-mega-man-star-force-2-zerker-x-saurian/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmmsf3ba": {
+    "title": "Mmsf 3 Ba",
+    "url": "/artwork/clmmsf3ba.webp",
+    "source": "https://battlenetworkrta.fandom.com/wiki/Mega_Man_Star_Force_3",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mmsf 3 Ba game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mmsf 3 Ba\" before use. Source page: https://battlenetworkrta.fandom.com/wiki/Mega_Man_Star_Force_3",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmmwilywars": {
+    "title": "Mm Wily Wars",
+    "url": "/artwork/clmmwilywars.webp",
+    "source": "https://www.ign.com/games/mega-man-the-wily-wars",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mm Wily Wars game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Mm Wily Wars\" before use. Source page: https://www.ign.com/games/mega-man-the-wily-wars",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clmoemon-emerald-vanilla---v1-1-0": {
@@ -11786,6 +12106,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clorigamiking.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clormmimastickwithclsoitcanberememberedoyeahclalienhominid": {
+    "title": "Alien Hominid (Classic)",
+    "url": "/artwork/clormmimastickwithclsoitcanberememberedoyeahclalienhominid.webp",
+    "source": "https://comicbook.com/gaming/feature/alien-hominid-re-releases-history/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Alien Hominid (Classic) game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Alien Hominid (Classic)\" before use. Source page: https://comicbook.com/gaming/feature/alien-hominid-re-releases-history/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clortalkombat4": {
     "title": "Mortal Kombat 4 (Alt)",
@@ -13683,6 +14011,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clpolicepursuit2.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clpolishedcrystal": {
+    "title": "Pokemon Polished Crystal",
+    "url": "/artwork/clpolishedcrystal.webp",
+    "source": "https://gamesdb.launchbox-app.com/games/images/95866-pokmon-polished-crystal",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Polished Crystal game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Pokemon Polished Crystal\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/95866-pokmon-polished-crystal",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clpolytrackworksnow": {
     "title": "Polytrack (working)",
     "url": "/artwork/clpolytrackworksnow.webp",
@@ -14011,6 +14347,54 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Found by searching \"PyroToad game\" in Bing Images and taking result 1; the image was checked against the catalog title \"PyroToad\" before use. Source page: https://store.steampowered.com/app/4002180/Pyrotoad_Demo/",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
+  "clqbert": {
+    "title": "Q*bert",
+    "url": "/artwork/clqbert.webp",
+    "source": "https://bitvint.com/pages/q-bert",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Q*bert game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Q*bert\" before use. Source page: https://bitvint.com/pages/q-bert",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clqbertarcade": {
+    "title": "Q*bert Arcade",
+    "url": "/artwork/clqbertarcade.webp",
+    "source": "https://thekingofgrabs.com/2019/03/17/qbert-arcade/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Q*bert Arcade game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Q*bert Arcade\" before use. Source page: https://thekingofgrabs.com/2019/03/17/qbert-arcade/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clqtrewired": {
+    "title": "QT Rewired",
+    "url": "/artwork/clqtrewired.webp",
+    "source": "https://fnf-games.io/fnf-qt-rewired",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"QT Rewired game\" in Bing Images and taking result 1; the image was checked against the catalog title \"QT Rewired\" before use. Source page: https://fnf-games.io/fnf-qt-rewired",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clquake": {
+    "title": "Quake",
+    "url": "/artwork/clquake.webp",
+    "source": "https://store.playstation.com/en-us/product/UP1003-PPSA01880_00-PROJECTSILVER000?smcid=my-playstation:en-us:library-purchased:purchased:UP1003-PPSA01880_00-PROJECTSILVER000",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Quake game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Quake\" before use. Source page: https://store.playstation.com/en-us/product/UP1003-PPSA01880_00-PROJECTSILVER000?smcid=my-playstation:en-us:library-purchased:purchased:UP1003-PPSA01880_00-PROJECTSILVER000",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clquake2": {
+    "title": "Quake 2",
+    "url": "/artwork/clquake2.webp",
+    "source": "https://gameranx.com/features/id/473283/article/is-quake-2-remastered-on-game-pass/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Quake 2 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Quake 2\" before use. Source page: https://gameranx.com/features/id/473283/article/is-quake-2-remastered-on-game-pass/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clquake64": {
+    "title": "Quake 64",
+    "url": "/artwork/clquake64.webp",
+    "source": "https://www.steamgriddb.com/game/37048",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Quake 64 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Quake 64\" before use. Source page: https://www.steamgriddb.com/game/37048",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clquantumclicker": {
     "title": "Quantum Clicker",
     "url": "/artwork/clquantumclicker.webp",
@@ -14019,6 +14403,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clquantumclicker.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clquickieworld": {
+    "title": "Quickie World",
+    "url": "/artwork/clquickieworld.webp",
+    "source": "https://thegamesdb.net/game.php?id=112850",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Quickie World game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Quickie World\" before use. Source page: https://thegamesdb.net/game.php?id=112850",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clqwop": {
     "title": "QWOP",
     "url": "/artwork/clqwop.webp",
@@ -14026,6 +14418,38 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clqwop.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clracemaster3d": {
+    "title": "Race Master 3D",
+    "url": "/artwork/clracemaster3d.webp",
+    "source": "https://www.hitberrygames.com/post/race-master-3d-the-ultimate-browser-based-racing-adventure",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Race Master 3D game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Race Master 3D\" before use. Source page: https://www.hitberrygames.com/post/race-master-3d-the-ultimate-browser-based-racing-adventure",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clracingarena": {
+    "title": "Racing Arena",
+    "url": "/artwork/clracingarena.webp",
+    "source": "https://www.youtube.com/watch?v=Ae7E3mR3yns",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Racing Arena game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Racing Arena\" before use. Source page: https://www.youtube.com/watch?v=Ae7E3mR3yns",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clradicalred": {
+    "title": "Pokemon Radical Red",
+    "url": "/artwork/clradicalred.webp",
+    "source": "https://kakigames.com/games/nintendo-game-boy-advance/pokemon-radical-red-version/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Radical Red game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pokemon Radical Red\" before use. Source page: https://kakigames.com/games/nintendo-game-boy-advance/pokemon-radical-red-version/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clradracer": {
+    "title": "Rad Racer",
+    "url": "/artwork/clradracer.webp",
+    "source": "https://www.youtube.com/watch?v=-0jCU-_gJlU",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Rad Racer game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Rad Racer\" before use. Source page: https://www.youtube.com/watch?v=-0jCU-_gJlU",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clraftwars": {
     "title": "Raft Wars",
@@ -14050,6 +14474,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clragdoll-io.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clragdollachivement": {
+    "title": "Ragdoll Achievement",
+    "url": "/artwork/clragdollachivement.webp",
+    "source": "https://www.friv.com/z/games/ragdollachievement/game.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Ragdoll Achievement game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Ragdoll Achievement\" before use. Source page: https://www.friv.com/z/games/ragdollachievement/game.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clragdollarchers": {
     "title": "Ragdoll Archers",
@@ -14099,6 +14531,22 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clragollhit.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clrainbowsix": {
+    "title": "Rainbow Six",
+    "url": "/artwork/clrainbowsix.webp",
+    "source": "https://gamerant.com/hero-shooters-most-characters-ranked/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Rainbow Six game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Rainbow Six\" before use. Source page: https://gamerant.com/hero-shooters-most-characters-ranked/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clrainbowsixalt": {
+    "title": "Rainbow Six (Alt)",
+    "url": "/artwork/clrainbowsixalt.webp",
+    "source": "https://asheq.co.uk/rainbow-six-original-pc-tom-clancy-s-rainbow-six-collection-rainbow-six-collection/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Rainbow Six (Alt) game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Rainbow Six (Alt)\" before use. Source page: https://asheq.co.uk/rainbow-six-original-pc-tom-clancy-s-rainbow-six-collection-rainbow-six-collection/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clraldiscrackhouse": {
     "title": "Raldis Crack House",
     "url": "/artwork/clraldiscrackhouse.webp",
@@ -14123,6 +14571,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clray1.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clray2": {
+    "title": "Ray 2",
+    "url": "/artwork/clray2.webp",
+    "source": "https://www.inkl.com/news/how-rayman-2-offered-2d-gameplay-situations-in-a-3d-environment-to-deliver-the-best-of-both-worlds",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Ray 2 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Ray 2\" before use. Source page: https://www.inkl.com/news/how-rayman-2-offered-2d-gameplay-situations-in-a-3d-environment-to-deliver-the-best-of-both-worlds",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clraze": {
     "title": "Raze",
     "url": "/artwork/clraze.webp",
@@ -14139,6 +14595,22 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clraze2.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clraze3": {
+    "title": "Raze 3",
+    "url": "/artwork/clraze3.webp",
+    "source": "https://poki.com/en/g/raze-3",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Raze 3 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Raze 3\" before use. Source page: https://poki.com/en/g/raze-3",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clre3": {
+    "title": "Resident Evil 3",
+    "url": "/artwork/clre3.webp",
+    "source": "https://creabealounge.wordpress.com/2022/09/22/game-review-resident-evil-3/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Resident Evil 3 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Resident Evil 3\" before use. Source page: https://creabealounge.wordpress.com/2022/09/22/game-review-resident-evil-3/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clreachthecore": {
     "title": "Reach the Core",
     "url": "/artwork/clreachthecore.webp",
@@ -14146,6 +14618,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clreachthecore.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clreacticore": {
+    "title": "Reacticore",
+    "url": "/artwork/clreacticore.webp",
+    "source": "https://clickergamesaz.io/reacticore",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Reacticore game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Reacticore\" before use. Source page: https://clickergamesaz.io/reacticore",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clrealflightsim": {
     "title": "Real Flight Sim",
@@ -14187,6 +14667,38 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Published by the distribution for Recoil at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/recoil/webapp/cover.jpg, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
     "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request."
   },
+  "clredalert": {
+    "title": "Red Alert",
+    "url": "/artwork/clredalert.webp",
+    "source": "https://store.steampowered.com/app/17480/CommandConquer_Red_Alert_3/?l=russian",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Red Alert game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Red Alert\" before use. Source page: https://store.steampowered.com/app/17480/CommandConquer_Red_Alert_3/?l=russian",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clredball": {
+    "title": "Red Ball",
+    "url": "/artwork/clredball.webp",
+    "source": "https://mwm.ai/apps/red-ball-super-run/1479967132",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Red Ball game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Red Ball\" before use. Source page: https://mwm.ai/apps/red-ball-super-run/1479967132",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clredball2": {
+    "title": "Red Ball 2",
+    "url": "/artwork/clredball2.webp",
+    "source": "https://slopeio.org/red-ball-2",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Red Ball 2 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Red Ball 2\" before use. Source page: https://slopeio.org/red-ball-2",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clredball3": {
+    "title": "Red Ball 3",
+    "url": "/artwork/clredball3.webp",
+    "source": "https://www.youtube.com/watch?v=Cw7mwECymAE",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Red Ball 3 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Red Ball 3\" before use. Source page: https://www.youtube.com/watch?v=Cw7mwECymAE",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clredball4": {
     "title": "Red Ball 4",
     "url": "/artwork/clredball4.webp",
@@ -14227,6 +14739,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clredtierunner.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clreignofcentipede": {
+    "title": "Reign of Centipede",
+    "url": "/artwork/clreignofcentipede.webp",
+    "source": "https://zombiegameswalkthrough.blogspot.com/2012/09/walkthrough-reign-of-centipede.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Reign of Centipede game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Reign of Centipede\" before use. Source page: https://zombiegameswalkthrough.blogspot.com/2012/09/walkthrough-reign-of-centipede.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clrepobad": {
     "title": "Repo Bad",
     "url": "/artwork/clrepobad.webp",
@@ -14243,6 +14763,38 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clresentclient.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clresidentevil": {
+    "title": "Resident Evil",
+    "url": "/artwork/clresidentevil.webp",
+    "source": "https://www.playstation.com/en-gb/games/resident-evil-5/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Resident Evil game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Resident Evil\" before use. Source page: https://www.playstation.com/en-gb/games/resident-evil-5/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clresidentevil2": {
+    "title": "Resident Evil 2",
+    "url": "/artwork/clresidentevil2.webp",
+    "source": "https://www.playstation.com/en-us/games/resident-evil-2/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Resident Evil 2 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Resident Evil 2\" before use. Source page: https://www.playstation.com/en-us/games/resident-evil-2/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clresidentevil2d1": {
+    "title": "Resident Evil 2D 1",
+    "url": "/artwork/clresidentevil2d1.webp",
+    "source": "https://www.deviantart.com/akilab/art/Resident-Evil-2D-58972973",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Resident Evil 2D 1 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Resident Evil 2D 1\" before use. Source page: https://www.deviantart.com/akilab/art/Resident-Evil-2D-58972973",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clresidentevil2d2": {
+    "title": "Resident Evil 2D 2",
+    "url": "/artwork/clresidentevil2d2.webp",
+    "source": "https://www.youtube.com/watch?v=C2tD8X4pSmw",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Resident Evil 2D 2 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Resident Evil 2D 2\" before use. Source page: https://www.youtube.com/watch?v=C2tD8X4pSmw",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clresizer": {
     "title": "Resizer",
     "url": "/artwork/clresizer.webp",
@@ -14250,6 +14802,22 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clresizer.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clresortempire": {
+    "title": "Resort Empire",
+    "url": "/artwork/clresortempire.webp",
+    "source": "https://jayisgames.com/review/resort-empire.php",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Resort Empire game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Resort Empire\" before use. Source page: https://jayisgames.com/review/resort-empire.php",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clretrobowl": {
+    "title": "Retro Bowl",
+    "url": "/artwork/clretrobowl.webp",
+    "source": "https://github.com/topics/retro-bowl",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Retro Bowl game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Retro Bowl\" before use. Source page: https://github.com/topics/retro-bowl",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clretrobowlcollege": {
     "title": "Retro Bowl College",
@@ -14266,6 +14834,38 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clretrohighway.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clretropingpong": {
+    "title": "Retro Ping Pong",
+    "url": "/artwork/clretropingpong.webp",
+    "source": "https://www.coolmathgames.com/blog/how-to-play-retro-ping-pong-a-complete-guide",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Retro Ping Pong game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Retro Ping Pong\" before use. Source page: https://www.coolmathgames.com/blog/how-to-play-retro-ping-pong-a-complete-guide",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clreturnman": {
+    "title": "Return Man",
+    "url": "/artwork/clreturnman.webp",
+    "source": "https://speed-stars.co/return-man",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Return Man game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Return Man\" before use. Source page: https://speed-stars.co/return-man",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clreturnman2": {
+    "title": "Return Man 2",
+    "url": "/artwork/clreturnman2.webp",
+    "source": "https://martgames.io/return-man-2",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Return Man 2 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Return Man 2\" before use. Source page: https://martgames.io/return-man-2",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clreturntoriddleschool": {
+    "title": "Return to Riddle School",
+    "url": "/artwork/clreturntoriddleschool.webp",
+    "source": "https://www.steamgriddb.com/game/5294071",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Return to Riddle School game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Return to Riddle School\" before use. Source page: https://www.steamgriddb.com/game/5294071",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clrevolutionidle": {
     "title": "Revolution Idle",
@@ -14291,6 +14891,30 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clrh.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clrhythmheaven": {
+    "title": "Rhythm Heaven",
+    "url": "/artwork/clrhythmheaven.webp",
+    "source": "https://www.nintendo.com/store/products/rhythm-heaven-megamix-3ds/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Rhythm Heaven game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Rhythm Heaven\" before use. Source page: https://www.nintendo.com/store/products/rhythm-heaven-megamix-3ds/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clrhythymymheaven": {
+    "title": "Rhythm Heaven (Alt)",
+    "url": "/artwork/clrhythymymheaven.webp",
+    "source": "https://altarofgaming.com/game/rhythm-heaven/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Rhythm Heaven (Alt) game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Rhythm Heaven (Alt)\" before use. Source page: https://altarofgaming.com/game/rhythm-heaven/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clricochetkills2": {
+    "title": "Ricochet Kills 2",
+    "url": "/artwork/clricochetkills2.webp",
+    "source": "https://www.snokido.com/game/ricochet-kills-2",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Ricochet Kills 2 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Ricochet Kills 2\" before use. Source page: https://www.snokido.com/game/ricochet-kills-2",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clriddle": {
     "title": "Riddle",
     "url": "/artwork/clriddle.webp",
@@ -14298,6 +14922,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clriddle.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clriddlemiddleschool": {
+    "title": "Riddle Middle School",
+    "url": "/artwork/clriddlemiddleschool.webp",
+    "source": "https://riddleschool.fandom.com/wiki/Riddle_Middle_School",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Riddle Middle School game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Riddle Middle School\" before use. Source page: https://riddleschool.fandom.com/wiki/Riddle_Middle_School",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clriddleschool": {
     "title": "Riddle School",
@@ -14339,6 +14971,22 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clriddletransfer.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clriddletransfer2": {
+    "title": "Riddle Transfer 2",
+    "url": "/artwork/clriddletransfer2.webp",
+    "source": "https://glitchwave.com/game/riddle-transfer-2/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Riddle Transfer 2 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Riddle Transfer 2\" before use. Source page: https://glitchwave.com/game/riddle-transfer-2/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clridgeracer": {
+    "title": "Ridge Racer",
+    "url": "/artwork/clridgeracer.webp",
+    "source": "https://gamesdb.launchbox-app.com/games/images/11366",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Ridge Racer game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Ridge Racer\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/11366",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clrisehigher": {
     "title": "Rise Higher",
     "url": "/artwork/clrisehigher.webp",
@@ -14347,6 +14995,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clrisehigher.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clristar": {
+    "title": "Ristar",
+    "url": "/artwork/clristar.webp",
+    "source": "https://segagames.online/adventure/ristar.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Ristar game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Ristar\" before use. Source page: https://segagames.online/adventure/ristar.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clroadfighter": {
     "title": "Road Fighter",
     "url": "/artwork/clroadfighter.webp",
@@ -14354,6 +15010,38 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clroadfighter.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clroadoffury": {
+    "title": "Road of Fury",
+    "url": "/artwork/clroadoffury.webp",
+    "source": "https://www.gamepix.com/play/road-of-fury-desert-strike",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Road of Fury game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Road of Fury\" before use. Source page: https://www.gamepix.com/play/road-of-fury-desert-strike",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clroadofthedead": {
+    "title": "Road of the Dead",
+    "url": "/artwork/clroadofthedead.webp",
+    "source": "https://apppage.net/preview/com.EarthPeopleStudio.RoadoftheDead",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Road of the Dead game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Road of the Dead\" before use. Source page: https://apppage.net/preview/com.EarthPeopleStudio.RoadoftheDead",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clroadofthedead2": {
+    "title": "Road of the Dead 2",
+    "url": "/artwork/clroadofthedead2.webp",
+    "source": "https://armorgames.com/play/15688/?t=1561463983",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Road of the Dead 2 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Road of the Dead 2\" before use. Source page: https://armorgames.com/play/15688/?t=1561463983",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clroadrunnernes": {
+    "title": "Roadrunner (NES)",
+    "url": "/artwork/clroadrunnernes.webp",
+    "source": "https://www.webmulator.com/games/nintendo/road-runner",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Roadrunner (NES) game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Roadrunner (NES)\" before use. Source page: https://www.webmulator.com/games/nintendo/road-runner",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clrocketgoalio": {
     "title": "Rocket Goal.io",
@@ -14371,6 +15059,30 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clrocketjump.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clrocketknight2--1": {
+    "title": "Rocket Knight 2",
+    "url": "/artwork/clrocketknight2--1.webp",
+    "source": "https://www.fanatical.com/en/game/rocket-knight",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Rocket Knight 2 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Rocket Knight 2\" before use. Source page: https://www.fanatical.com/en/game/rocket-knight",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clrocketknightadventures": {
+    "title": "Rocket Knight Adventures",
+    "url": "/artwork/clrocketknightadventures.webp",
+    "source": "https://infinityretro.com/rocket-knight-adventures-review/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Rocket Knight Adventures game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Rocket Knight Adventures\" before use. Source page: https://infinityretro.com/rocket-knight-adventures-review/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clrocketleague": {
+    "title": "Rocket League",
+    "url": "/artwork/clrocketleague.webp",
+    "source": "https://www.epicgames.com/store/en-US/p/rocket-league",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Rocket League game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Rocket League\" before use. Source page: https://www.epicgames.com/store/en-US/p/rocket-league",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clrocketsoccerderby": {
     "title": "Rocket Soccer Derby",
     "url": "/artwork/clrocketsoccerderby.webp",
@@ -14387,6 +15099,30 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clrodha.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clroguesoul": {
+    "title": "Rogue Soul",
+    "url": "/artwork/clroguesoul.webp",
+    "source": "https://www.funnygames.org/game/rogue_soul_2.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Rogue Soul game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Rogue Soul\" before use. Source page: https://www.funnygames.org/game/rogue_soul_2.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clroguesoul2": {
+    "title": "Rogue Soul 2",
+    "url": "/artwork/clroguesoul2.webp",
+    "source": "https://www.gamenora.com/game/rogue-soul-2/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Rogue Soul 2 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Rogue Soul 2\" before use. Source page: https://www.gamenora.com/game/rogue-soul-2/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clrollerballer": {
+    "title": "Rollerballer",
+    "url": "/artwork/clrollerballer.webp",
+    "source": "https://www.dekudeals.com/items/rollerballer",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Rollerballer game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Rollerballer\" before use. Source page: https://www.dekudeals.com/items/rollerballer",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clrollingsky": {
     "title": "Rolling Sky",
     "url": "/artwork/clrollingsky.webp",
@@ -14402,6 +15138,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "official-icon",
     "identityEvidence": "Published by the distribution for Rolly Vortex at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@4533a55cb065e8df0208d9023236d5ee62dbf116/rolly%20vortex/icon-256.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
     "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request."
+  },
+  "clrolypolymonster": {
+    "title": "Roly Poly Monster",
+    "url": "/artwork/clrolypolymonster.webp",
+    "source": "https://www.youtube.com/watch?v=qwHkX-h7pJ8",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Roly Poly Monster game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Roly Poly Monster\" before use. Source page: https://www.youtube.com/watch?v=qwHkX-h7pJ8",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clrooftoprun": {
     "title": "Rooftop Run",
@@ -14450,6 +15194,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clroulettehero.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clrouletteknight": {
+    "title": "Roulette Knight",
+    "url": "/artwork/clrouletteknight.webp",
+    "source": "https://www.youtube.com/watch?v=0hvGWe34ldU",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Roulette Knight game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Roulette Knight\" before use. Source page: https://www.youtube.com/watch?v=0hvGWe34ldU",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clrun": {
     "title": "Run",
@@ -16907,6 +17659,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/minecraft.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "minecrafttowerdefense": {
+    "title": "Minecraft Tower Defense",
+    "url": "/artwork/minecrafttowerdefense.webp",
+    "source": "https://mcmodshub.com/mod/547000",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Minecraft Tower Defense game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Minecraft Tower Defense\" before use. Source page: https://mcmodshub.com/mod/547000",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "pvzm": {
     "title": "PvZ Multiplayer",
     "url": "/artwork/pvzm.webp",
@@ -16922,6 +17682,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/redvbluefix.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "repo": {
+    "title": "R.E.P.O",
+    "url": "/artwork/repo.webp",
+    "source": "https://wallpaperaccess.com/repo-game",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"R.E.P.O game\" in Bing Images and taking result 2; the image was checked against the catalog title \"R.E.P.O\" before use. Source page: https://wallpaperaccess.com/repo-game",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "smash-hit-ripoff": {
     "title": "Smash Hit Ripoff",

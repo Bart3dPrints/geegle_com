@@ -174,5 +174,17 @@
   "clprowrestling": {
     "reason": "Results were Ultra Pro Wrestling and Pro Wrestling Action mobile games, not the NES title.",
     "recorded": "2026-11-27"
+  },
+  "clrayman": {
+    "reason": "Results were Rayman Legends box art and gameplay, not the original Rayman.",
+    "recorded": "2026-11-27"
+  },
+  "clrosegold": {
+    "reason": "Every result was a video thumbnail carrying playthrough or review text over the art.",
+    "recorded": "2026-11-27"
+  },
+  "clicantbelievegoogleflaggedmeforthenameofthefilelol": {
+    "reason": "Results were file-verification tutorial thumbnails, not artwork for this entry.",
+    "recorded": "2026-11-27"
   }
 }

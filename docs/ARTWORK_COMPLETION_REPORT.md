@@ -15,24 +15,24 @@ Identity evidence and reuse basis are recorded separately on every record. Captu
 | Measure | Count |
 | --- | --- |
 | Catalog rows (unique IDs) | 2,710 |
-| Verified artwork | 2,114 |
+| Verified artwork | 2,210 |
 | Awaiting review | 0 |
-| Rejected (removed from the UI, queued for a new capture) | 62 |
+| Rejected (removed from the UI, queued for a new capture) | 59 |
 | Blocked | 0 |
 | Reopened after the blocked classification was rejected | 1,676 |
 | Render investigations from the earlier long-observation pass (that protocol was cancelled) | 590 |
 | ... that rendered an authentic frame | 551 |
 | ... that stopped at their own start gate | 6 |
 | ... that stayed blank for the whole observation | 26 |
-| Remaining unprocessed | 596 |
-| Actual verified coverage | 78.0% |
-| Total optimized asset size (verified images) | 54030 KiB |
+| Remaining unprocessed | 500 |
+| Actual verified coverage | 81.5% |
+| Total optimized asset size (verified images) | 56946 KiB |
 
 ## Verified artwork by acquisition method
 
 | Method | Count |
 | --- | --- |
-| game-asset | 1053 |
+| game-asset | 1149 |
 | gameplay-screenshot | 962 |
 | official-icon | 72 |
 | official-og | 27 |
@@ -45,8 +45,6 @@ The pre-existing set was audited rather than trusted. 35 of 73 records were reje
 
 Rejection reasons recorded:
 
-- 2x Frames showed only instructions or copyright text, not a title screen or recognizable gameplay.
-- 2x Every qualifying frame was an error page ("Something went wrong"), which is never acceptable artwork.
 - 1x Captured frame is a third-party portal loading screen, not the game.
 - 1x Captured frame is the generic "Made with Unity" splash.
 - 1x Captured frame shows developer credits and loading text, not the game title screen.
@@ -57,6 +55,8 @@ Rejection reasons recorded:
 - 1x Shows artwork for a different game (The Elder Scrolls: Blades).
 - 1x Shows a Discord attachment page, not the game.
 - 1x Shows a game-portal homepage, not the game.
+- 1x Internet image search returned only gameplay video thumbnails with FULL GAMEPLAY captions layered over them; no clean artwork exists in the first results.
+- 1x Results were a Kickstarter board game and an unrelated Switch horror title (Blackout: The Darkest Night); nothing identifies this catalog entry.
 
 ## Service card artwork
 
@@ -84,7 +84,7 @@ No entry is left in a blocked state: the whole 1,676-entry blocked manifest was 
 The next unprocessed batch starts at `cladarkroom`:
 
 ```
-cladarkroom,claftertheweek,clai,clalienhominidgba,claltered-beast,clanemonesfall,clasdutydemands,clb3313v102,clbejeweledtwistds,clbejeweledtwistflash,clbfdibranches,clblackout,clbloonspp3,clbloonstd2,clbloonstd6scratch,clbmx2,clboxinglive2,clburritobison2,clchoroqwonderful,clclover,clcotlk,clcreepyinternetstories,clcvooc,cldonkeykong,cldoomps,cleaglercraftshadow,clenduro,clfactoryballs,clfactoryballs2,clfactoryballs3,clfactoryballs4,clfairytalevsonepiece,clfallout,clfamilyguycorrupted,clff2ws,clff3,clffaf,clfinalfantasy,clfinalfantasyviid2,clfinalfantasyviid3,clfireemblem,clfocus,clfuschiax,clgameandwatchcollection,clgrannycreepy,clgxclient,clhighstakes,clicantbelievegoogleflaggedmeforthenameofthefilelol,clinsomniary,cljacksmithencryptedorsmthn
+cladarkroom,clb3313v102,clblackout,clbloonspp3,clbloonstd2,clboxinglive2,clburritobison2,clclover,clcotlk,clcreepyinternetstories,clcvooc,cldonkeykong,cldoomps,cleaglercraftshadow,clenduro,clfamilyguycorrupted,clff2ws,clffaf,clfinalfantasy,clfinalfantasyviid2,clfinalfantasyviid3,clfireemblem,clfocus,clgameandwatchcollection,clgrannycreepy,clhighstakes,clicantbelievegoogleflaggedmeforthenameofthefilelol,clinsomniary,clknockknock,cllegostarwarsgba,clloz1,clmaddenfootball,clmami,clmariominusrabbids,clmarioparty,clmegaman,clmegamanbn6cf,clmeowuwu,clmmsf3rj,clmmsfd,clmmsfl,clmmsfp,clmo64-1,clmobcontrolhtml5,clmobiusrevolution,clmonsterswing,clmortkom4,clnewsupermarioworld2aroundtheworld,clnomoregameasdsadfagfggdfs,clnovaclient
 ```
 
 Resume commands:
