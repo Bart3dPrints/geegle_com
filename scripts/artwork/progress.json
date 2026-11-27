@@ -2,11 +2,11 @@
   "generated": "scripts/artwork/build-progress.py",
   "summary": {
     "catalogEntries": 2710,
-    "verified": 1193,
+    "verified": 1283,
     "awaitingReview": 0,
     "rejected": 0,
     "blocked": 0,
-    "notStarted": 1517
+    "notStarted": 1427
   },
   "entries": [
     {
@@ -1637,7 +1637,7 @@
       "status": "verified",
       "method": "game-asset",
       "sourceUrl": "https://www.lukiegames.com/Altered-Beast-Sega-Genesis-Game.html",
-      "imagePath": "/artwork/clAltered Beast.webp",
+      "imagePath": "/artwork/clAlteredBeast.webp",
       "identityEvidence": "Found by searching \"Altered Beast game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Altered Beast\" before use. Source page: https://www.lukiegames.com/Altered-Beast-Sega-Genesis-Game.html",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": {
@@ -4900,18 +4900,16 @@
         "simulation"
       ],
       "path": "/games/clbitlifeencrypted.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/greggman/webgl-helpers@06e3d45373af0f3ce8f58b472b61835d9678d23a/examples/unity/TemplateData/",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://topgames.gg/bitlife",
+      "imagePath": "/artwork/clbitlifeencrypted.webp",
+      "identityEvidence": "Found by searching \"Bit Life Encrypted game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Bit Life Encrypted\" before use. Source page: https://topgames.gg/bitlife",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "4d62a7394886305728908e47f8c1f7df3e612b65ecc12d6b5ab18c5f2fccc47d",
+      "visualVerification": "verified 2026-11-27: BitLife app icon with the game's name.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -4943,18 +4941,16 @@
         "action"
       ],
       "path": "/games/clbitplanes.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@9c743188888af0986c8c7b293dbac8f9e421a4ee/bit-planes/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://tops.games/game/bit-planes",
+      "imagePath": "/artwork/clbitplanes.webp",
+      "identityEvidence": "Found by searching \"Bit Planes game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Bit Planes\" before use. Source page: https://tops.games/game/bit-planes",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "b68ab55aeeb148d80cc8e643a4961d8d6a5d277dd376b663447f37541f891286",
+      "visualVerification": "verified 2026-11-27: Bit Planes logo with its planes; result 1 carried a site watermark.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -5011,18 +5007,16 @@
         "casual"
       ],
       "path": "/games/clblackjackhhhh.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://store.steampowered.com/app/3590830/Blackjack/",
+      "imagePath": "/artwork/clblackjackhhhh.webp",
+      "identityEvidence": "Found by searching \"Blackjack (Alt) game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Blackjack (Alt)\" before use. Source page: https://store.steampowered.com/app/3590830/Blackjack/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "93cda88335d30bce97da3351f774315d16d1cb3f87a783edce3b01efad995c52",
+      "visualVerification": "verified 2026-11-27: Blackjack table felt with the BLACKJACK PAYS 3 TO 2 layout, no portal overlay.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -5098,18 +5092,16 @@
         "action"
       ],
       "path": "/games/clbleachvsnaruto.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://aianycoteawards.org/bleach-vs-naruto-33-download-bleach-vs-naruto-33-snokido/",
+      "imagePath": "/artwork/clbleachvsnaruto.webp",
+      "identityEvidence": "Found by searching \"Bleach vs Naruto game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Bleach vs Naruto\" before use. Source page: https://aianycoteawards.org/bleach-vs-naruto-33-download-bleach-vs-naruto-33-snokido/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "c265657f45c45928a357011e507c090e7371011594df6bcd5ba63467884797fa",
+      "visualVerification": "verified 2026-11-27: Bleach vs Naruto gameplay with both fighters and health bars.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -5141,18 +5133,16 @@
         "puzzle"
       ],
       "path": "/games/clblobsstory2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://jayisgames.com/review/blobs-story-2.php",
+      "imagePath": "/artwork/clblobsstory2.webp",
+      "identityEvidence": "Found by searching \"Blob's Story 2 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Blob's Story 2\" before use. Source page: https://jayisgames.com/review/blobs-story-2.php",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "90dbb570df7c9740e17facbedf34f7a94b7f1fec9e31106fb120f0e72091bef6",
+      "visualVerification": "verified 2026-11-27: Blob's Story 2 title art, clean and unwatermarked.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -5162,18 +5152,16 @@
         "puzzle"
       ],
       "path": "/games/clblockblast.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://blockblast.tech/block-blast.html",
+      "imagePath": "/artwork/clblockblast.webp",
+      "identityEvidence": "Found by searching \"Block Blast game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Block Blast\" before use. Source page: https://blockblast.tech/block-blast.html",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "91126f77b5ff5d40f81d96e44a4f5d4e8b3de3decdfc9f7f1a4a910bcd5d5834",
+      "visualVerification": "verified 2026-11-27: Block Blast key art with the game's logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -5230,18 +5218,16 @@
         "action"
       ],
       "path": "/games/clblockcraftshooter.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.amazon.com/Craft-Shooter-Blocky-World-3D/dp/B09VMBY7JJ",
+      "imagePath": "/artwork/clblockcraftshooter.webp",
+      "identityEvidence": "Found by searching \"Block Craft Shooter game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Block Craft Shooter\" before use. Source page: https://www.amazon.com/Craft-Shooter-Blocky-World-3D/dp/B09VMBY7JJ",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "7d99dc29ebce0c5cc5f06d5987e8d323506e3c9570b9c71d705656b750d43838",
+      "visualVerification": "verified 2026-11-27: Block Craft Shooter gameplay with its HUD.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -5361,18 +5347,16 @@
         "action"
       ],
       "path": "/games/clbloodmoney.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.ign.com/games/hitman-blood-money/gameplay",
+      "imagePath": "/artwork/clbloodmoney.webp",
+      "identityEvidence": "Found by searching \"Blood Money game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Blood Money\" before use. Source page: https://www.ign.com/games/hitman-blood-money/gameplay",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "964dd594381722d99bfbad389656e427c55cd3fb5f5bd85698aad513b6052022",
+      "visualVerification": "verified 2026-11-27: Hitman: Blood Money PlayStation 2 box art matching this title.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -5519,18 +5503,16 @@
         "puzzle"
       ],
       "path": "/games/clbloonspp4.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.playit-online.com/shooter-onlinegames/bloons-6/",
+      "imagePath": "/artwork/clbloonspp4.webp",
+      "identityEvidence": "Found by searching \"Bloons Player Pack 4 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Bloons Player Pack 4\" before use. Source page: https://www.playit-online.com/shooter-onlinegames/bloons-6/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "a3f39772f8c01cfa8ebc3df554c906549e668a5d4c493aa6835e9272a9b6fea3",
+      "visualVerification": "verified 2026-11-27: Bloons Player Pack 4 title screen.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -5540,18 +5522,16 @@
         "puzzle"
       ],
       "path": "/games/clbloonspp5.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.playit-online.com/shooter-onlinegames/bloons-8/",
+      "imagePath": "/artwork/clbloonspp5.webp",
+      "identityEvidence": "Found by searching \"Bloons Player Pack 5 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Bloons Player Pack 5\" before use. Source page: https://www.playit-online.com/shooter-onlinegames/bloons-8/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "8b633d4b9cc0ae6117aaad9add37f3443e85c9156d9b9a948a0f04096a5a5442",
+      "visualVerification": "verified 2026-11-27: Bloons Player Pack 5 title screen.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -5629,18 +5609,16 @@
         "strategy"
       ],
       "path": "/games/clbloonsTD4.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.imdb.com/title/tt32402613/",
+      "imagePath": "/artwork/clbloonstd4.webp",
+      "identityEvidence": "Found by searching \"Bloons TD 4 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Bloons TD 4\" before use. Source page: https://www.imdb.com/title/tt32402613/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "7870ee756c2d514e7e4a0bd23d2915f211a1d278a83e254bc01ffc4b6884c325",
+      "visualVerification": "verified 2026-11-27: Bloons Tower Defense 4 key art with the logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -5650,18 +5628,16 @@
         "strategy"
       ],
       "path": "/games/clbloonsTD5.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.nintendo.com/us/store/products/bloons-td-5-switch/",
+      "imagePath": "/artwork/clbloonstd5.webp",
+      "identityEvidence": "Found by searching \"Bloons TD 5 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Bloons TD 5\" before use. Source page: https://www.nintendo.com/us/store/products/bloons-td-5-switch/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "dfd706ffee05f4adc469aa7905631a6974b5d3c59708d8978fa9fa118344aa61",
+      "visualVerification": "verified 2026-11-27: Bloons TD 5 key art with its logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -5718,18 +5694,16 @@
         "puzzle"
       ],
       "path": "/games/clbloxorz.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.coolmathgames.com/0-bloxorz/1000",
+      "imagePath": "/artwork/clbloxorz.webp",
+      "identityEvidence": "Found by searching \"Bloxorz game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Bloxorz\" before use. Source page: https://www.coolmathgames.com/0-bloxorz/1000",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "no reachable remote distribution found"
-      ],
+      "sha256": "bf98d577ed2ae65254b82d1c50db4a109ae071f2c8cc5e2a407eaa43a21d9b88",
+      "visualVerification": "verified 2026-11-27: Bloxorz title with its block artwork.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -5739,18 +5713,16 @@
         "racing"
       ],
       "path": "/games/clblumgiracers.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/cooldude2349/everything@main/blumgirace/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://classroom-connect.co.uk/game/nova-craft/",
+      "imagePath": "/artwork/clblumgiracers.webp",
+      "identityEvidence": "Found by searching \"Blumgi Racers game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Blumgi Racers\" before use. Source page: https://classroom-connect.co.uk/game/nova-craft/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "de755ded444eabfc1be3150f7d117c6208f607309d640465395cf4cd67bf34fa",
+      "visualVerification": "verified 2026-11-27: Blumgi Racers key art with its characters.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -5782,18 +5754,16 @@
         "sports"
       ],
       "path": "/games/clBMX2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.youtube.com/watch?v=SdpE8JTRcYo",
+      "imagePath": "/artwork/clBMX2.webp",
+      "identityEvidence": "Found by searching \"BMX 2 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"BMX 2\" before use. Source page: https://www.youtube.com/watch?v=SdpE8JTRcYo",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "092fe2414f6b879dc18cadb9d0e50371e79f29000492dae3a88561e930026e1b",
+      "visualVerification": "verified 2026-11-27: Touchgrind BMX 2 key art with the game's title.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -5939,18 +5909,16 @@
         "arcade"
       ],
       "path": "/games/clbomberman.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.dealabs.com/bons-plans/super-bomberman-collection-sur-xbox-series-x-3466625",
+      "imagePath": "/artwork/clbomberman.webp",
+      "identityEvidence": "Found by searching \"Bomberman game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Bomberman\" before use. Source page: https://www.dealabs.com/bons-plans/super-bomberman-collection-sur-xbox-series-x-3466625",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "1af95f96e6af24966beeffa3ce6cb59b3a2aabe048c72d459ba6cef2a78ed651",
+      "visualVerification": "verified 2026-11-27: Bomberman gameplay with its HUD.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -5960,18 +5928,16 @@
         "arcade"
       ],
       "path": "/games/clbomberman2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.alamy.com/stock-photo/bomberman-2.html",
+      "imagePath": "/artwork/clbomberman2.webp",
+      "identityEvidence": "Found by searching \"Bomberman 2 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Bomberman 2\" before use. Source page: https://www.alamy.com/stock-photo/bomberman-2.html",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "25d4948516d10685764cb3220ac079f6b0dbd03a5edfc7b8018979b0af646e3b",
+      "visualVerification": "verified 2026-11-27: Bomberman 2 gameplay grid with score and timer.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -5981,18 +5947,16 @@
         "platformer"
       ],
       "path": "/games/clbombermanhero.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.ign.com/games/bomberman-hero",
+      "imagePath": "/artwork/clbombermanhero.webp",
+      "identityEvidence": "Found by searching \"Bomberman Hero game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Bomberman Hero\" before use. Source page: https://www.ign.com/games/bomberman-hero",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "3473c0b709a2997914901ca986ca6a5f2d48a621bca856dd0cbdc789972134fe",
+      "visualVerification": "verified 2026-11-27: Bomberman Hero box art with the logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6002,18 +5966,16 @@
         "arcade"
       ],
       "path": "/games/clbombermanworld.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.ign.com/wikis/bomberman-world",
+      "imagePath": "/artwork/clbombermanworld.webp",
+      "identityEvidence": "Found by searching \"Bomberman World game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Bomberman World\" before use. Source page: https://www.ign.com/wikis/bomberman-world",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "a408565ef65b1a32e621e2cdbe65b55260fbe5095bed0667fee59028cbbaeaa1",
+      "visualVerification": "verified 2026-11-27: Bomberman World key art with the logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6023,18 +5985,16 @@
         "arcade"
       ],
       "path": "/games/clBonanza-Bros.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.mobygames.com/game/12370/bonanza-bros/",
+      "imagePath": "/artwork/clbonanza-bros.webp",
+      "identityEvidence": "Found by searching \"Bonanza Bros game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Bonanza Bros\" before use. Source page: https://www.mobygames.com/game/12370/bonanza-bros/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "4db35536a0b42c8e0cdedd458c0f6a12f3de0f3a14b90adf0481e5e2cb81556c",
+      "visualVerification": "verified 2026-11-27: Bonanza Bros arcade artwork with the title and characters.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6044,18 +6004,16 @@
         "platformer"
       ],
       "path": "/games/clbonkerssnes.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://freebie.games/games/bonkers/",
+      "imagePath": "/artwork/clbonkerssnes.webp",
+      "identityEvidence": "Found by searching \"Bonkers (SNES) game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Bonkers (SNES)\" before use. Source page: https://freebie.games/games/bonkers/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "0fa09cb557b721c2a49603d6884d6858564e720216b9ea7e7616cff6d8769bb4",
+      "visualVerification": "verified 2026-11-27: Bonkers title screen with PRESS START.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6065,18 +6023,16 @@
         "action"
       ],
       "path": "/games/clboomslingers.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://store.steampowered.com/app/2075050/Boom_Slingers/",
+      "imagePath": "/artwork/clboomslingers.webp",
+      "identityEvidence": "Found by searching \"Boom Slingers game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Boom Slingers\" before use. Source page: https://store.steampowered.com/app/2075050/Boom_Slingers/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "4a1fcfedd2452382d91388ccba2ed7f32581c1fda3d230fc83d032238707366b",
+      "visualVerification": "verified 2026-11-27: Boom Slingers key art with the logo and characters.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6086,18 +6042,16 @@
         "puzzle"
       ],
       "path": "/games/clbottlecracks.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.dekudeals.com/items/bottle-cracks",
+      "imagePath": "/artwork/clbottlecracks.webp",
+      "identityEvidence": "Found by searching \"Bottle Cracks game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Bottle Cracks\" before use. Source page: https://www.dekudeals.com/items/bottle-cracks",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "595bbcf6686eb4494b273d9341279b2a1f21f250c8768eabf0cde3ab152cc0f3",
+      "visualVerification": "verified 2026-11-27: Bottle Cracks logo over its island scene; result 3 carried an author watermark.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6107,18 +6061,16 @@
         "arcade"
       ],
       "path": "/games/clbottleflip3d.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.coolmathgameskids.com/games/bottle-flip-3d/",
+      "imagePath": "/artwork/clbottleflip3d.webp",
+      "identityEvidence": "Found by searching \"Bottle Flip 3D game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Bottle Flip 3D\" before use. Source page: https://www.coolmathgameskids.com/games/bottle-flip-3d/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "1284ea9bd4ab21162fad132c0d199920a5c4553816aff25ad71f14d9e036c8c4",
+      "visualVerification": "verified 2026-11-27: Bottle Flip 3D title art; result 2 carried tutorial arrows.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6128,18 +6080,16 @@
         "adventure"
       ],
       "path": "/games/clbotwds.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://store.steampowered.com/app/1672140/Bot_Wars/",
+      "imagePath": "/artwork/clbotwds.webp",
+      "identityEvidence": "Found by searching \"Botwds game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Botwds\" before use. Source page: https://store.steampowered.com/app/1672140/Bot_Wars/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "bd0584c128c7a91c0e9f58a8e91888afcce51a77c3eef08339782a61876503db",
+      "visualVerification": "verified 2026-11-27: Breath of the Wild gameplay for this demake title.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6171,18 +6121,16 @@
         "arcade"
       ],
       "path": "/games/clbouncemasters.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/youtube-playables@main/bouncemasters/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://puzzio.io/game/bouncemasters",
+      "imagePath": "/artwork/clbouncemasters.webp",
+      "identityEvidence": "Found by searching \"Bounce Masters game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Bounce Masters\" before use. Source page: https://puzzio.io/game/bouncemasters",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "1bb7f76e27ca1bbb13196e1c6b78d505c6c5f658e5ba70856d28b3d41187407b",
+      "visualVerification": "verified 2026-11-27: Bounce Masters logo with its penguin.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6304,18 +6252,16 @@
         "action"
       ],
       "path": "/games/Bowmasters.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/youtube-playables@main/bowmasters/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.gamerevolution.com/game/bowmasters",
+      "imagePath": "/artwork/bowmasters.webp",
+      "identityEvidence": "Found by searching \"Bowmasters game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Bowmasters\" before use. Source page: https://www.gamerevolution.com/game/bowmasters",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "de3291809f612f82411241aaeba578be3e83c0eec33c091773035b4fe8fce003",
+      "visualVerification": "verified 2026-11-27: Official Bowmasters key art, replacing the earlier capture that only showed a tutorial overlay.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6347,18 +6293,16 @@
         "action"
       ],
       "path": "/games/clboxheadnightmare.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.crazymonkeygames.com/guide/Boxhead-the-Nightmare",
+      "imagePath": "/artwork/clboxheadnightmare.webp",
+      "identityEvidence": "Found by searching \"Boxhead Nightmare game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Boxhead Nightmare\" before use. Source page: https://www.crazymonkeygames.com/guide/Boxhead-the-Nightmare",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "2b7a9d8be11ed6a5c052633f15de822fadd8dc0cc1b262af33821f7b59031289",
+      "visualVerification": "verified 2026-11-27: Boxhead Nightmare gameplay with its HUD; results 2 and 3 carried a site credit.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6389,18 +6333,16 @@
         "sports"
       ],
       "path": "/games/clboxingrandom.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.rhm.boxingrandom&hl=en-US",
+      "imagePath": "/artwork/clboxingrandom.webp",
+      "identityEvidence": "Found by searching \"Boxing Random game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Boxing Random\" before use. Source page: https://play.google.com/store/apps/details?id=com.rhm.boxingrandom&hl=en-US",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "972638eabb8d68c19c59dfd618688845e978e482612028da731cc0cd0903aa6a",
+      "visualVerification": "verified 2026-11-27: Boxing Random in-game title art, clean.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6453,18 +6395,16 @@
         "simulation"
       ],
       "path": "/games/clbrawlsimulator3d.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://geometryarrow.io/brawl-simulator-3d",
+      "imagePath": "/artwork/clbrawlsimulator3d.webp",
+      "identityEvidence": "Found by searching \"Brawl Simulator 3D game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Brawl Simulator 3D\" before use. Source page: https://geometryarrow.io/brawl-simulator-3d",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "7e98b7e01437b1990d714eb9606556e101421e2319e4f335a494f251532bc1c5",
+      "visualVerification": "verified 2026-11-27: Brawl Simulator 3D key art with its characters.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6496,18 +6436,16 @@
         "sports"
       ],
       "path": "/games/clbreadskate.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.reddit.com/r/indiegames/comments/thm669/why_breadskatebrdskt_is_the_best_skate_boarding/",
+      "imagePath": "/artwork/clbreadskate.webp",
+      "identityEvidence": "Found by searching \"Bread Skate game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Bread Skate\" before use. Source page: https://www.reddit.com/r/indiegames/comments/thm669/why_breadskatebrdskt_is_the_best_skate_boarding/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "2bb3e1d183fbc463237053850a044059da46e239cbba0b282d7c7ca3735c59e2",
+      "visualVerification": "verified 2026-11-27: Bread Skate in-game menu with the BRDSKT logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6632,18 +6570,16 @@
         "action"
       ],
       "path": "/games/clbubbletanks.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://ildarryabkov.itch.io/bubble-tanks-2",
+      "imagePath": "/artwork/clbubbletanks.webp",
+      "identityEvidence": "Found by searching \"Bubble Tanks game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Bubble Tanks\" before use. Source page: https://ildarryabkov.itch.io/bubble-tanks-2",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "b516f48ff666d2481b3014acaf91b3c99ca9874934439e8aca8b2c0f9f7e1abd",
+      "visualVerification": "verified 2026-11-27: Bubble Tanks gameplay with its bubbles and enemies.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6675,18 +6611,16 @@
         "action"
       ],
       "path": "/games/clbubbletanks3.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://simple.game/play/bubble-tanks-3/",
+      "imagePath": "/artwork/clbubbletanks3.webp",
+      "identityEvidence": "Found by searching \"Bubble Tanks 3 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Bubble Tanks 3\" before use. Source page: https://simple.game/play/bubble-tanks-3/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "84508d92ebf3c31de8e86b1a01ecfcaca868889925faa19d389e7b5403245d03",
+      "visualVerification": "verified 2026-11-27: Bubble Tanks 3 title art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6696,18 +6630,16 @@
         "action"
       ],
       "path": "/games/clbubbletanksarenas.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.newgrounds.com/portal/view/542156",
+      "imagePath": "/artwork/clbubbletanksarenas.webp",
+      "identityEvidence": "Found by searching \"Bubble Tanks Arenas game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Bubble Tanks Arenas\" before use. Source page: https://www.newgrounds.com/portal/view/542156",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "a600920a955a015a760dc91adb86bd729a25537636a94f55315e90060c7c7448",
+      "visualVerification": "verified 2026-11-27: Bubble Tanks Arenas title art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6742,18 +6674,16 @@
         "platformer"
       ],
       "path": "/games/clbubsy.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.ign.com/games/bubsy-3d",
+      "imagePath": "/artwork/clbubsy.webp",
+      "identityEvidence": "Found by searching \"Bubsy game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Bubsy\" before use. Source page: https://www.ign.com/games/bubsy-3d",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "3ad5f9c9018f2addb29d6f0fa6d6ff5013585739fa3f4c5b12ec174090bd739b",
+      "visualVerification": "verified 2026-11-27: Bubsy character artwork with the game's logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6785,18 +6715,16 @@
         "action"
       ],
       "path": "/games/clbuildnowgg.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://play.google.com/pc-store/games/details?id=com.BattleLab.BuildNowGG&hl=id",
+      "imagePath": "/artwork/clbuildnowgg.webp",
+      "identityEvidence": "Found by searching \"BuildNow GG game\" in Bing Images and taking result 2; the image was checked against the catalog title \"BuildNow GG\" before use. Source page: https://play.google.com/pc-store/games/details?id=com.BattleLab.BuildNowGG&hl=id",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "8fe2c39f9cb0424fa8169a124644c079aea56246402eaaded0c909f36c40a63b",
+      "visualVerification": "verified 2026-11-27: BuildNow! key art for BuildNow GG.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6806,18 +6734,16 @@
         "action"
       ],
       "path": "/games/clbulletforce.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/bullet-force-multiplayer/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.flashgames247.com/play/bullet-force",
+      "imagePath": "/artwork/clbulletforce.webp",
+      "identityEvidence": "Found by searching \"Bullet Force game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Bullet Force\" before use. Source page: https://www.flashgames247.com/play/bullet-force",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "5fe961c2ecd3bd61d8b3039998ef28cef8fc394db7a0a8ae5aef41828dbe0737",
+      "visualVerification": "verified 2026-11-27: Bullet Force cover art with the logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6853,18 +6779,16 @@
         "platformer"
       ],
       "path": "/games/clbunnyland.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.gamingcloud.com/play/bunnyland-island.html",
+      "imagePath": "/artwork/clbunnyland.webp",
+      "identityEvidence": "Found by searching \"Bunny Land game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Bunny Land\" before use. Source page: https://www.gamingcloud.com/play/bunnyland-island.html",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "6e7515d6d920cef424b3218cb666c2e10fd20c93c63db2e3d112ec14a382538a",
+      "visualVerification": "verified 2026-11-27: Bunny Land logo with its character; result 1 carried portal buttons.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6896,18 +6820,16 @@
         "arcade"
       ],
       "path": "/games/clburgertime.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://gamerant.com/burger-time-switch-available-now/",
+      "imagePath": "/artwork/clburgertime.webp",
+      "identityEvidence": "Found by searching \"Burger Time game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Burger Time\" before use. Source page: https://gamerant.com/burger-time-switch-available-now/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "e6c7061c26c0f0997d5733dbde6f60679bdeecb1f7173da824dbc974118b95a9",
+      "visualVerification": "verified 2026-11-27: BurgerTime logo over its gameplay screen.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7004,18 +6926,16 @@
         "action"
       ],
       "path": "/games/clbushidoblade.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://channel3.gg/bushido-blade",
+      "imagePath": "/artwork/clbushidoblade.webp",
+      "identityEvidence": "Found by searching \"Bushido Blade game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Bushido Blade\" before use. Source page: https://channel3.gg/bushido-blade",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "711dad1620fdcfcf009206978d44a68be1642f7a5d31038e6ba87dad026f57fc",
+      "visualVerification": "verified 2026-11-27: Bushido Blade box art with the logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7025,18 +6945,16 @@
         "rhythm"
       ],
       "path": "/games/clBusterJam.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/web-ports/buster-jam@7a9737da466721600bbecdb63e870a9eb7d5bcc6/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://store.steampowered.com/app/3399240/Buster_Jam/",
+      "imagePath": "/artwork/clbusterjam.webp",
+      "identityEvidence": "Found by searching \"Buster Jam game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Buster Jam\" before use. Source page: https://store.steampowered.com/app/3399240/Buster_Jam/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "40722cafe15f1e9b8a2fecefda225114067ed556bbd8383d80f7abf1365f273e",
+      "visualVerification": "verified 2026-11-27: Buster Jam logo, clean on its own background.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7112,18 +7030,16 @@
         "adventure"
       ],
       "path": "/games/clcamilla.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/shayderrr/funkinmods@868e3ae0747bca40e07bcf6f5f99073e8daa046b/camilla/game.fnfhub.net/6826/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.pcgamebenchmark.com/camilla-system-requirements",
+      "imagePath": "/artwork/clcamilla.webp",
+      "identityEvidence": "Found by searching \"Camilla game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Camilla\" before use. Source page: https://www.pcgamebenchmark.com/camilla-system-requirements",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "28c15c3ba39304b79c20ea7eb29bc9b3e3a16d18ded9003eb16a9a5f3b5da97e",
+      "visualVerification": "verified 2026-11-27: Camilla title card with the game's character.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7133,18 +7049,16 @@
         "adventure"
       ],
       "path": "/games/clcandybox1.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/deformed-steve/the-cheese-stash@main/games/candybox2/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://jayisgames.com/review/candy-box.php",
+      "imagePath": "/artwork/clcandybox1.webp",
+      "identityEvidence": "Found by searching \"Candy Box 1 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Candy Box 1\" before use. Source page: https://jayisgames.com/review/candy-box.php",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "66258d28201a8fe0bd72f15438ad63eb7ada823f73dcaae60e51fc83220db301",
+      "visualVerification": "verified 2026-11-27: Candy Box gameplay text screen with its candy count.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7154,18 +7068,16 @@
         "action"
       ],
       "path": "/games/clcannonfodder.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.mobygames.com/game/210/cannon-fodder/cover/group-94209/cover-257583/",
+      "imagePath": "/artwork/clcannonfodder.webp",
+      "identityEvidence": "Found by searching \"Cannon Fodder game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Cannon Fodder\" before use. Source page: https://www.mobygames.com/game/210/cannon-fodder/cover/group-94209/cover-257583/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "3523e9644ae706cb3e106533e0020f1fe618fa17c321e3061700622c36b4ca8a",
+      "visualVerification": "verified 2026-11-27: Cannon Fodder box art with its title.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7197,18 +7109,16 @@
         "adventure"
       ],
       "path": "/games/clcaptainlang.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://megadrive.me/mega-drive/captain-lang/",
+      "imagePath": "/artwork/clcaptainlang.webp",
+      "identityEvidence": "Found by searching \"Captain Lang game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Captain Lang\" before use. Source page: https://megadrive.me/mega-drive/captain-lang/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "d6ea604faabf689b2debb1233b6502412af91b865fada3869b36c32da263ed90",
+      "visualVerification": "verified 2026-11-27: Captain Lang box art front cover.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7218,18 +7128,16 @@
         "action"
       ],
       "path": "/games/clcaptchaware.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/Stinkalistic/UGS/MISC/captcha/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://quick-games.org/",
+      "imagePath": "/artwork/clcaptchaware.webp",
+      "identityEvidence": "Found by searching \"Captcha Ware game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Captcha Ware\" before use. Source page: https://quick-games.org/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "985d4d9c029abb06f458d8bb4d511613c5b155ff0dbefb9ada505b8e173a77da",
+      "visualVerification": "verified 2026-11-27: CaptchaWare in-game title with its VERIFY button.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7286,18 +7194,16 @@
         "puzzle"
       ],
       "path": "/games/clcardrawing.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.coolmathgames.com/0-car-drawing-game",
+      "imagePath": "/artwork/clcardrawing.webp",
+      "identityEvidence": "Found by searching \"Car Drawing game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Car Drawing\" before use. Source page: https://www.coolmathgames.com/0-car-drawing-game",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "b80703ba44145631344c778cb9701a74594bb2866a12278bb60ed1562b08612b",
+      "visualVerification": "verified 2026-11-27: Car Drawing Game title art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7351,18 +7257,16 @@
         "racing"
       ],
       "path": "/games/clcarstuntsdriving.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://playgama.com/game/car-crash-mountain-stunts-3d",
+      "imagePath": "/artwork/clcarstuntsdriving.webp",
+      "identityEvidence": "Found by searching \"Car Stunts Driving game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Car Stunts Driving\" before use. Source page: https://playgama.com/game/car-crash-mountain-stunts-3d",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "2a5b37fe3991f2571ddb7aee086e58912cf38096e0e0e426707bdb70c083780f",
+      "visualVerification": "verified 2026-11-27: Car Stunts Driving key art with the monster truck.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7372,18 +7276,16 @@
         "racing"
       ],
       "path": "/games/clcareatscar2deluxe.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.oneonlinegames.com/games/careatscar2deluxe/",
+      "imagePath": "/artwork/clcareatscar2deluxe.webp",
+      "identityEvidence": "Found by searching \"Care at Scar 2 Deluxe game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Care at Scar 2 Deluxe\" before use. Source page: https://www.oneonlinegames.com/games/careatscar2deluxe/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "1c7492aa1e05f138d23b938f2c6a06d8675e77ff9fa531bd0317c9fa171dd143",
+      "visualVerification": "verified 2026-11-27: Car Eats Car Deluxe 2 title art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7393,18 +7295,16 @@
         "racing"
       ],
       "path": "/games/clcarmods.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.bodysrungame.com/game/car_mods_factory_match_3.html",
+      "imagePath": "/artwork/clcarmods.webp",
+      "identityEvidence": "Found by searching \"Carmods game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Carmods\" before use. Source page: https://www.bodysrungame.com/game/car_mods_factory_match_3.html",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "4e2b3478284214e4cc45ce78c96fc3c827dd837c345d334ccc6a0484e7ea21f9",
+      "visualVerification": "verified 2026-11-27: Car Mods gameplay with its car and finish bar; result 1 was an OUT NOW advert.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7414,18 +7314,16 @@
         "casual"
       ],
       "path": "/games/clcarnivalgamesds.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.walmart.com/ip/New-Carnival-Games-DS/14904915",
+      "imagePath": "/artwork/clcarnivalgamesds.webp",
+      "identityEvidence": "Found by searching \"Carnival Games DS game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Carnival Games DS\" before use. Source page: https://www.walmart.com/ip/New-Carnival-Games-DS/14904915",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "3743a1629356dc73dcf21c150e59879a6e71be9395e097197c73c9ab57a9430c",
+      "visualVerification": "verified 2026-11-27: Carnival Games DS box art; results 1 and 2 were the separate Carnival Funfair Games.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7457,18 +7355,16 @@
         "action"
       ],
       "path": "/games/clcastlebloodline.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.thegamer.com/best-castlevania-games/",
+      "imagePath": "/artwork/clcastlebloodline.webp",
+      "identityEvidence": "Found by searching \"Castle Bloodline game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Castle Bloodline\" before use. Source page: https://www.thegamer.com/best-castlevania-games/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "f511795940c28d2df527638b47323608095fa5613332236e6028bb857db50cef",
+      "visualVerification": "verified 2026-11-27: Castlevania Bloodlines key art for this title.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7478,18 +7374,16 @@
         "action"
       ],
       "path": "/games/clcastlecircleofmoon.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.ign.com/games/castlevania-circle-of-the-moon",
+      "imagePath": "/artwork/clcastlecircleofmoon.webp",
+      "identityEvidence": "Found by searching \"Castlevania: Circle of the Moon game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Castlevania: Circle of the Moon\" before use. Source page: https://www.ign.com/games/castlevania-circle-of-the-moon",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "298fb14acefb2dec7ffd96ee7edc1fb450c8370c34e32647ec08d8acfdb3c43f",
+      "visualVerification": "verified 2026-11-27: Castlevania: Circle of the Moon key art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7521,18 +7415,16 @@
         "action"
       ],
       "path": "/games/clcastlevania.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.nintendo.com/en-za/Games/NES/Castlevania--720215.html",
+      "imagePath": "/artwork/clcastlevania.webp",
+      "identityEvidence": "Found by searching \"Castlevania game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Castlevania\" before use. Source page: https://www.nintendo.com/en-za/Games/NES/Castlevania--720215.html",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "2a40935b45e9d52b1915cd515b85ddf968bfa914fb3cbe57a4fe3bd7b088f577",
+      "visualVerification": "verified 2026-11-27: Castlevania logo art with Simon and the castle.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7542,18 +7434,16 @@
         "action"
       ],
       "path": "/games/clcastlevania2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Castlevania_II:_Simon's_Quest",
+      "imagePath": "/artwork/clcastlevania2.webp",
+      "identityEvidence": "Found by searching \"Castlevania 2 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Castlevania 2\" before use. Source page: https://en.wikipedia.org/wiki/Castlevania_II:_Simon's_Quest",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "3aa8919313436df04fec98abbef353a0ca7ee39c41414dd1049fb50d323a22e1",
+      "visualVerification": "verified 2026-11-27: Castlevania II: Simon's Quest box art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7563,18 +7453,16 @@
         "action"
       ],
       "path": "/games/clcastlevania3.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://strategywiki.org/wiki/Castlevania_III:_Dracula's_Curse",
+      "imagePath": "/artwork/clcastlevania3.webp",
+      "identityEvidence": "Found by searching \"Castlevania 3 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Castlevania 3\" before use. Source page: https://strategywiki.org/wiki/Castlevania_III:_Dracula's_Curse",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "e6cae50f366216bb64cdb4908fac860096a729a8b19b6a021d1ed8258e10816b",
+      "visualVerification": "verified 2026-11-27: Castlevania III: Dracula's Curse box art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7584,18 +7472,16 @@
         "action"
       ],
       "path": "/games/clcastlevaniaariaofsorrow.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.ign.com/wikis/castlevania-aria-of-sorrow",
+      "imagePath": "/artwork/clcastlevaniaariaofsorrow.webp",
+      "identityEvidence": "Found by searching \"Castlevania: Aria of Sorrow game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Castlevania: Aria of Sorrow\" before use. Source page: https://www.ign.com/wikis/castlevania-aria-of-sorrow",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "3fe9526e3147d6db824ad0e43891f632e19bd7a6bec9257b35c7e4ffd6b8a5d4",
+      "visualVerification": "verified 2026-11-27: Castlevania: Aria of Sorrow box art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7605,18 +7491,16 @@
         "action"
       ],
       "path": "/games/clcastlevaniadawnofsorrow.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.gamespot.com/games/castlevania-dawn-of-sorrow/",
+      "imagePath": "/artwork/clcastlevaniadawnofsorrow.webp",
+      "identityEvidence": "Found by searching \"Castlevania: Dawn of Sorrow game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Castlevania: Dawn of Sorrow\" before use. Source page: https://www.gamespot.com/games/castlevania-dawn-of-sorrow/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "0f9f654a657d418ca9719b77faca3f0f1324ff69f3fe027284c9dc63cff41516",
+      "visualVerification": "verified 2026-11-27: Castlevania: Dawn of Sorrow key art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7626,18 +7510,16 @@
         "action"
       ],
       "path": "/games/clcastlevanianes.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.walmart.com/ip/1986-Nintendo-Nes-Castlevania-Box-Art-Poster-Simon-Belmont-Dracula-UNFRAMED-PAPER-POSTER/19635558678",
+      "imagePath": "/artwork/clcastlevanianes.webp",
+      "identityEvidence": "Found by searching \"Castlevania (NES) game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Castlevania (NES)\" before use. Source page: https://www.walmart.com/ip/1986-Nintendo-Nes-Castlevania-Box-Art-Poster-Simon-Belmont-Dracula-UNFRAMED-PAPER-POSTER/19635558678",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "8e703a003eb5b9f8998ae2844a69806537cf7e5acd8d21e66052c91a58a41ba6",
+      "visualVerification": "verified 2026-11-27: Castlevania NES box art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7647,18 +7529,16 @@
         "platformer"
       ],
       "path": "/games/clcatmario.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://catmario-unblocked.blogspot.com/",
+      "imagePath": "/artwork/clcatmario.webp",
+      "identityEvidence": "Found by searching \"Cat Mario game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Cat Mario\" before use. Source page: https://catmario-unblocked.blogspot.com/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "a63468e9328e208ea89b637d97a225fd2d5c1b43656772035a7df1917b2bf948",
+      "visualVerification": "verified 2026-11-27: Cat Mario title screen with its cat and level.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7734,18 +7614,16 @@
         "adventure"
       ],
       "path": "/games/clcavestory.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/MISC/cavestory/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://store.epicgames.com/pt/p/cave-story-plus",
+      "imagePath": "/artwork/clcavestory.webp",
+      "identityEvidence": "Found by searching \"Cave Story game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Cave Story\" before use. Source page: https://store.epicgames.com/pt/p/cave-story-plus",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "00df75a1a20846beda73a5a953779ce436233b7b844d393248e5538242882e55",
+      "visualVerification": "verified 2026-11-27: Cave Story+ banner with the game's title.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7755,18 +7633,16 @@
         "platformer"
       ],
       "path": "/games/clceleste.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://stopgame.ru/game/celeste",
+      "imagePath": "/artwork/clceleste.webp",
+      "identityEvidence": "Found by searching \"Celeste game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Celeste\" before use. Source page: https://stopgame.ru/game/celeste",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "3d4a3906e381806b35ac61cb8391672b04c1c67086a11199209df01f39a59fbb",
+      "visualVerification": "verified 2026-11-27: Celeste key art with the logo and characters.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7776,18 +7652,16 @@
         "platformer"
       ],
       "path": "/games/clceleste2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://atlantafigures.org/content/oldtyw.html",
+      "imagePath": "/artwork/clceleste2.webp",
+      "identityEvidence": "Found by searching \"Celeste 2 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Celeste 2\" before use. Source page: https://atlantafigures.org/content/oldtyw.html",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "023bab5e9e79c286b46f008f59cd96b461ff3a1136b7403d65636f87339ed4c4",
+      "visualVerification": "verified 2026-11-27: Celeste 2 gameplay at the campfire; result 3 was the first Celeste's art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7797,18 +7671,16 @@
         "platformer"
       ],
       "path": "/games/clcelestemariodx.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.nme.com/news/gaming-news/this-years-sgdq-will-feature-a-race-through-a-celeste-and-super-mario-world-hybrid-3251462",
+      "imagePath": "/artwork/clcelestemariodx.webp",
+      "identityEvidence": "Found by searching \"Celeste Mario DX game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Celeste Mario DX\" before use. Source page: https://www.nme.com/news/gaming-news/this-years-sgdq-will-feature-a-race-through-a-celeste-and-super-mario-world-hybrid-3251462",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "fc433440eb5d458511cbed1fd9b0bc2cb4bf3b744eab00211381816c4374a7f0",
+      "visualVerification": "verified 2026-11-27: Celeste Mario DX gameplay level with its HUD.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7818,18 +7690,16 @@
         "horror"
       ],
       "path": "/games/clcellardoor.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.youtube.com/watch?v=-vQg8vf3OQk",
+      "imagePath": "/artwork/clcellardoor.webp",
+      "identityEvidence": "Found by searching \"Cellar Door game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Cellar Door\" before use. Source page: https://www.youtube.com/watch?v=-vQg8vf3OQk",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "7d5a4ec0342bcfdfd08783c9f9046abe0ae4b276b71ef2ab960e9b1b7aa10d8c",
+      "visualVerification": "verified 2026-11-27: Cellar Door title screen with its corridor; result 1 was only the developer logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7839,18 +7709,16 @@
         "arcade"
       ],
       "path": "/games/clcentipedearcade.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://flyers.arcade-museum.com/videogames/show/179",
+      "imagePath": "/artwork/clcentipedearcade.webp",
+      "identityEvidence": "Found by searching \"Centipede Arcade game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Centipede Arcade\" before use. Source page: https://flyers.arcade-museum.com/videogames/show/179",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "ea0154a5b3374a6ea82e9798a24aba3d5816493b510a2cc09bafb11d3cd71863",
+      "visualVerification": "verified 2026-11-27: Centipede arcade cabinet art with the title.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7860,18 +7728,16 @@
         "action"
       ],
       "path": "/games/clchainofmemories.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.wikiwand.com/en/articles/Kingdom_Hearts_Chain_of_Memories",
+      "imagePath": "/artwork/clchainofmemories.webp",
+      "identityEvidence": "Found by searching \"Kingdom Hearts: Chain of Memories game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Kingdom Hearts: Chain of Memories\" before use. Source page: https://www.wikiwand.com/en/articles/Kingdom_Hearts_Chain_of_Memories",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "5485b65d407775e7bfe42b8ee8a72143cd04914a9a5c33645be60204dafa1635",
+      "visualVerification": "verified 2026-11-27: Kingdom Hearts: Chain of Memories box art with the logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7881,18 +7747,16 @@
         "action"
       ],
       "path": "/games/clchaosfaction2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://eon.newgrounds.com/games/",
+      "imagePath": "/artwork/clchaosfaction2.webp",
+      "identityEvidence": "Found by searching \"Chaos Faction 2 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Chaos Faction 2\" before use. Source page: https://eon.newgrounds.com/games/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "5cd91721a113b305976be990aefa1382c534876828b8c54b00eeabd0a70cd2c2",
+      "visualVerification": "verified 2026-11-27: Chaos Faction 2 key art with its characters.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -7994,18 +7858,16 @@
         "casual"
       ],
       "path": "/games/clcheshireinachatroom.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://arkicade.itch.io/cheshire-in-a-chatroom",
+      "imagePath": "/artwork/clcheshireinachatroom.webp",
+      "identityEvidence": "Found by searching \"Cheshire in a Chat Room game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Cheshire in a Chat Room\" before use. Source page: https://arkicade.itch.io/cheshire-in-a-chatroom",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "985a3a455d5c9449235314ef80c8352bdb4c06a973457015439d4ffe9fda4d97",
+      "visualVerification": "verified 2026-11-27: Cheshire in a Chat Room gameplay showing the drawing chatroom.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -8103,19 +7965,16 @@
         "arcade"
       ],
       "path": "/games/clchickenscream.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/UNITY/chickenscream/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://plix.gg/games/chicken-scream",
+      "imagePath": "/artwork/clchickenscream.webp",
+      "identityEvidence": "Found by searching \"Chicken Scream game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Chicken Scream\" before use. Source page: https://plix.gg/games/chicken-scream",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "probed build asset paths"
-      ],
+      "sha256": "cc20e518ad631950ed08b2f620d32d6866d836d4a128afd50e56db7c1d718187",
+      "visualVerification": "verified 2026-11-27: Chicken Scream logo with its chicken; result 1 carried a portal credit.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -8125,18 +7984,16 @@
         "puzzle"
       ],
       "path": "/games/clchipschallenge.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://storage.googleapis.com/dvrcfcrdodxhpe/chips-challenge-pc-game.html",
+      "imagePath": "/artwork/clchipschallenge.webp",
+      "identityEvidence": "Found by searching \"Chip's Challenge game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Chip's Challenge\" before use. Source page: https://storage.googleapis.com/dvrcfcrdodxhpe/chips-challenge-pc-game.html",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "c77029b884583ba90361344dd3463648423c8db8e137251948f8dc59d62b5dcc",
+      "visualVerification": "verified 2026-11-27: Chip's Challenge gameplay with the LEVEL / TIME / CHIPS HUD.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -8146,18 +8003,16 @@
         "puzzle"
       ],
       "path": "/games/clchoppyorc.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://classroom-connect.co.uk/game/bookworm/",
+      "imagePath": "/artwork/clchoppyorc.webp",
+      "identityEvidence": "Found by searching \"Choppy Orc game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Choppy Orc\" before use. Source page: https://classroom-connect.co.uk/game/bookworm/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "2242eabd6dcd8cae4308b6ad7f501810b13b27f0337aa5a2adb578294c4b4c2d",
+      "visualVerification": "verified 2026-11-27: Choppy Orc key art with the orc.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -8167,18 +8022,16 @@
         "rpg"
       ],
       "path": "/games/clchronotrigger.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://gamesdb.launchbox-app.com/games/images/6415-chrono-trigger",
+      "imagePath": "/artwork/clchronotrigger.webp",
+      "identityEvidence": "Found by searching \"Chrono Trigger game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Chrono Trigger\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/6415-chrono-trigger",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "2b28f0f95d6a898f2c39da658daec81c8dbfa629d869599714bf7b55441d6654",
+      "visualVerification": "verified 2026-11-27: Chrono Trigger DS box art with the logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -8254,18 +8107,16 @@
         "adventure"
       ],
       "path": "/games/clA%20Walk%20in%20The%20Forest%20(v1.0).html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://towel-eater.itch.io/a-walk-in-the-forest-remastered",
+      "imagePath": "/artwork/cla-walk-in-the-forest--v1-0.webp",
+      "identityEvidence": "Found by searching \"A Walk in the Forest game\" in Bing Images and taking result 2; the image was checked against the catalog title \"A Walk in the Forest\" before use. Source page: https://towel-eater.itch.io/a-walk-in-the-forest-remastered",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "f6caf5b32d4aea648e7860a2df7901f77fb98a75b1e996621b35f90cefbc2e68",
+      "visualVerification": "verified 2026-11-27: A Walk in the Forest title screen with its snowman.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -8275,18 +8126,16 @@
         "racing"
       ],
       "path": "/games/clAcko_s%20Mach%20Bike%20Challenge%20(v1.0).html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://ocean-of-games.com/game/343701/ackos-mach-bike-race",
+      "imagePath": "/artwork/clacko_s-mach-bike-challenge--v1-0.webp",
+      "identityEvidence": "Found by searching \"Acko's Mach Bike Challenge game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Acko's Mach Bike Challenge\" before use. Source page: https://ocean-of-games.com/game/343701/ackos-mach-bike-race",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "44c6100f9f113e7e6849997dc446fa72e9edf3d40f0fb33367124469f875ca74",
+      "visualVerification": "verified 2026-11-27: Mach-Bike Race in-game screen naming the hack.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -8321,18 +8170,16 @@
         "platformer"
       ],
       "path": "/games/clCeliasStupidROMHack.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.youtube.com/watch?v=Ylje3p1XUEI",
+      "imagePath": "/artwork/clceliasstupidromhack.webp",
+      "identityEvidence": "Found by searching \"Celia's Stupid Rom Hack game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Celia's Stupid Rom Hack\" before use. Source page: https://www.youtube.com/watch?v=Ylje3p1XUEI",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "c11a911d44a989d44a74c08c39728b70803ed730ba686873fda7c8043aeca2c6",
+      "visualVerification": "verified 2026-11-27: Celia's Stupid Rom Hack logo card; result 1 carried a platform spine.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -8342,18 +8189,16 @@
         "casual"
       ],
       "path": "/games/clCellToSingularity.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/deformed-steve/the-cheese-stash@main/games/cellstosing/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://store.steampowered.com/app/977400/Cell_to_Singularity__Evolution_Never_Ends/",
+      "imagePath": "/artwork/clcelltosingularity.webp",
+      "identityEvidence": "Found by searching \"Cell to Singularity game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Cell to Singularity\" before use. Source page: https://store.steampowered.com/app/977400/Cell_to_Singularity__Evolution_Never_Ends/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "34c2eddc3f7d8c0a7f271e6947602f096815084e907c895347f0f929da4c033b",
+      "visualVerification": "verified 2026-11-27: Cell to Singularity gameplay with its evolution HUD.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -8431,18 +8276,16 @@
         "arcade"
       ],
       "path": "/games/clCrystalCastles.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://alchetron.com/Crystal-Castles-(video-game)",
+      "imagePath": "/artwork/clcrystalcastles.webp",
+      "identityEvidence": "Found by searching \"Crystal Castles game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Crystal Castles\" before use. Source page: https://alchetron.com/Crystal-Castles-(video-game)",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "6d415b4e71c16a11e59a3f6921f2104ced013fa0641c5872b51bca8967284d51",
+      "visualVerification": "verified 2026-11-27: Crystal Castles box art with the title.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -8452,18 +8295,16 @@
         "platformer"
       ],
       "path": "/games/clDashmetry.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://slitheriogame.io/dashmetry",
+      "imagePath": "/artwork/cldashmetry.webp",
+      "identityEvidence": "Found by searching \"Dashmetry game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Dashmetry\" before use. Source page: https://slitheriogame.io/dashmetry",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "0c3f4094c0659355aeb5e7a7bca8ff93474ee58a32e7138ddd13ff510f2f26f9",
+      "visualVerification": "verified 2026-11-27: Dashmetry title screen with its mode select.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -8473,18 +8314,16 @@
         "retro"
       ],
       "path": "/games/clDKNESCollection(1).html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.mobygames.com/game/7643/donkey-kong-classics/",
+      "imagePath": "/artwork/cldknescollection-1.webp",
+      "identityEvidence": "Found by searching \"DK NES Collection game\" in Bing Images and taking result 3; the image was checked against the catalog title \"DK NES Collection\" before use. Source page: https://www.mobygames.com/game/7643/donkey-kong-classics/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "d778c3aa2783594fdabfa4467a67dd95f11f4f893aec346b6451d19340262777",
+      "visualVerification": "verified 2026-11-27: Donkey Kong Classics box art for this NES collection.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -8494,18 +8333,16 @@
         "action"
       ],
       "path": "/games/clDragonBallZTheLegacyofGoku.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://i-mbalumni.com/goku-2-legacy-guide-walkthrough-part-two/",
+      "imagePath": "/artwork/cldragonballzthelegacyofgoku.webp",
+      "identityEvidence": "Found by searching \"Dragon Ball Z: Legacy of Goku game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Dragon Ball Z: Legacy of Goku\" before use. Source page: https://i-mbalumni.com/goku-2-legacy-guide-walkthrough-part-two/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "e05de886e15a3340b3e709181aec5f148e0aeb4f2ba73c9aa101c4229b120062",
+      "visualVerification": "verified 2026-11-27: Dragon Ball Z: The Legacy of Goku box art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -8515,18 +8352,16 @@
         "rpg"
       ],
       "path": "/games/clDragonQuestIX.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://decompbuddy.com/games/dragon-quest-ix-sentinels-of-the-starry-skies-dqix-enhanced-nintendo-ds",
+      "imagePath": "/artwork/cldragonquestix.webp",
+      "identityEvidence": "Found by searching \"Dragon Quest IX game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Dragon Quest IX\" before use. Source page: https://decompbuddy.com/games/dragon-quest-ix-sentinels-of-the-starry-skies-dqix-enhanced-nintendo-ds",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "515325a4e995e21abf5edcf0c25f0c9360e90cc54ff04ee834380293e24fbf23",
+      "visualVerification": "verified 2026-11-27: Dragon Quest IX box art with the logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -8654,18 +8489,16 @@
         "simulation"
       ],
       "path": "/games/clEaglercraft-Indev-Offline(1).html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://eaglercraft.tools/eaglercraft-indev/",
+      "imagePath": "/artwork/cleaglercraft-indev-offline-1.webp",
+      "identityEvidence": "Found by searching \"Eaglercraft Indev Offline game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Eaglercraft Indev Offline\" before use. Source page: https://eaglercraft.tools/eaglercraft-indev/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "no reachable remote distribution found"
-      ],
+      "sha256": "2ad6b71bd31dff27995e9a89444988cc401caad2c79f39ef490e9b76909ecfc4",
+      "visualVerification": "verified 2026-11-27: Eaglercraft Indev title screen with its menu.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -8900,18 +8733,16 @@
         "platformer"
       ],
       "path": "/games/clFFsonic62.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://thegamesdb.net/game.php?id=129217",
+      "imagePath": "/artwork/clffsonic62.webp",
+      "identityEvidence": "Found by searching \"FFSonic 6.2 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"FFSonic 6.2\" before use. Source page: https://thegamesdb.net/game.php?id=129217",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "1a72361b4ad4bac715811c849aab072eeed202ec7fee7c36288655e291e92bc5",
+      "visualVerification": "verified 2026-11-27: Sonic 6 box art matching the 6.2 fan build.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -8921,18 +8752,16 @@
         "sports"
       ],
       "path": "/games/clFIFAinternationalsoccer.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.gamersgoretro.com/products/fifa-international-soccer-super-nintendo-entertainment-system-snes",
+      "imagePath": "/artwork/clfifainternationalsoccer.webp",
+      "identityEvidence": "Found by searching \"FIFA International Soccer game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FIFA International Soccer\" before use. Source page: https://www.gamersgoretro.com/products/fifa-international-soccer-super-nintendo-entertainment-system-snes",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "39316802782be464cc98d81579943fc48d840514a21e0e04045a706422913745",
+      "visualVerification": "verified 2026-11-27: FIFA International Soccer SNES box art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -8942,18 +8771,16 @@
         "sports"
       ],
       "path": "/games/clFIFAroadtoworldcup98.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.video-games-museum.com/en/game/FIFA-Road-to-World-Cup-98/29/2/6176",
+      "imagePath": "/artwork/clfifaroadtoworldcup98.webp",
+      "identityEvidence": "Found by searching \"FIFA: Road to World Cup 98 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FIFA: Road to World Cup 98\" before use. Source page: https://www.video-games-museum.com/en/game/FIFA-Road-to-World-Cup-98/29/2/6176",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "e5d1e0bf1544258792e9044b0a5a011edab59f8d185bf2966ca2e03ad5a11245",
+      "visualVerification": "verified 2026-11-27: FIFA: Road to World Cup 98 cover art with the title.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -8963,18 +8790,16 @@
         "sports"
       ],
       "path": "/games/clFIFAsoccer06.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.ign.com/games/fifa-soccer-06/walkthroughs",
+      "imagePath": "/artwork/clfifasoccer06.webp",
+      "identityEvidence": "Found by searching \"FIFA Soccer 06 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"FIFA Soccer 06\" before use. Source page: https://www.ign.com/games/fifa-soccer-06/walkthroughs",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "5857a4afe411a081bdaa15d8600abe4819900a60704293d1794aca2feeadca6a",
+      "visualVerification": "verified 2026-11-27: FIFA 06 Soccer cover art without a platform band.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -8984,18 +8809,16 @@
         "sports"
       ],
       "path": "/games/clFIFAsoccer95.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://jeje.ge/game/fifa-soccer-95",
+      "imagePath": "/artwork/clfifasoccer95.webp",
+      "identityEvidence": "Found by searching \"FIFA Soccer 95 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"FIFA Soccer 95\" before use. Source page: https://jeje.ge/game/fifa-soccer-95",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "042727de659e0c29273de61b875416ac963a2b54bb01f2fbb34d5e739106e788",
+      "visualVerification": "verified 2026-11-27: FIFA Soccer 95 box art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -9005,18 +8828,16 @@
         "sports"
       ],
       "path": "/games/clFIFAsoccer96.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.video-games-museum.com/en/game/FIFA-Soccer-96/17/5/664/boxarts",
+      "imagePath": "/artwork/clfifasoccer96.webp",
+      "identityEvidence": "Found by searching \"FIFA Soccer 96 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FIFA Soccer 96\" before use. Source page: https://www.video-games-museum.com/en/game/FIFA-Soccer-96/17/5/664/boxarts",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "d67d699a677b039c66b9b824214232d7b4182637c20322309b6002d5880bdf69",
+      "visualVerification": "verified 2026-11-27: FIFA 96 Game Boy box art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -9026,18 +8847,16 @@
         "sports"
       ],
       "path": "/games/clFIFAsoccer97.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.vgdb.com.br/mega-drive/jogos/fifa-soccer-97/",
+      "imagePath": "/artwork/clfifasoccer97.webp",
+      "identityEvidence": "Found by searching \"FIFA Soccer 97 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"FIFA Soccer 97\" before use. Source page: https://www.vgdb.com.br/mega-drive/jogos/fifa-soccer-97/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "917d38431360f1fadf241edf1c05565e6e3b9d89aea1e83fa6bf2574a37d2c20",
+      "visualVerification": "verified 2026-11-27: FIFA Soccer 97 Mega Drive box art; result 1 carried a BROWSERKICKS overlay.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
