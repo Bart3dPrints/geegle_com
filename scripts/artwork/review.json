@@ -7007,6 +7007,12 @@
     "status": "verified",
     "title": "Smash Karts (Working)"
   },
+  "clsmashremix2-0-1": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Smash Remix 2.0.1"
+  },
   "clsmb12": {
     "reason": "Login page, not the game artwork.",
     "reviewed": "2026-11-27",
@@ -7018,6 +7024,12 @@
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "SMBC"
+  },
+  "clsmbcrossover": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SMB Crossover"
   },
   "clsmbgameover": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7295,11 +7307,47 @@
     "status": "rejected",
     "title": "Sports Heads Ice Hockey"
   },
+  "clsprinter": {
+    "reason": "Generic play button, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Sprinter"
+  },
+  "clsprunked": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sprunked"
+  },
+  "clsprunki": {
+    "reason": "Error page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Sprunki"
+  },
+  "clsprunkiclicker": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sprunki Clicker"
+  },
+  "clsprunkipyramixed": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sprunki Pyramixed"
+  },
   "clsquidplayground": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Squid Playground"
+  },
+  "clstackballio": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Stack Ball.io"
   },
   "clstacktris": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -7307,11 +7355,113 @@
     "status": "verified",
     "title": "Stacktris"
   },
+  "clstackydash": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Stacky Dash"
+  },
+  "clstarlike": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Star Like"
+  },
+  "clstateio": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "State.io"
+  },
+  "clstation141": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Station 141"
+  },
+  "clstationmeltdown": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Station Meltdown"
+  },
+  "clstationsaturn": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Station Saturn"
+  },
+  "clsteakandjake": {
+    "reason": "Near-empty frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Steak and Jake"
+  },
+  "clstealbrainrot": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Steal Brainrot"
+  },
+  "clstealthassassin": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Stealth Assassin"
+  },
+  "clstealthmaster": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Stealth Master"
+  },
+  "clsteepdescent": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Steep Descent"
+  },
+  "clstickarchersbattle": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Stick Archers Battle"
+  },
+  "clstickdefenders": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Stick Defenders"
+  },
+  "clstickfighter": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Stick Fighter"
+  },
   "clstickjetchallenge": {
     "reason": "Asset does not correspond to the game title.",
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "Stick Jet Challenge"
+  },
+  "clstickmanclash": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Stickman Clash"
+  },
+  "clstickmanduel": {
+    "reason": "License text page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Stickman Duel"
+  },
+  "clstickmangtacity": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Stickman GTA City"
   },
   "clstickmankingdomclash": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -7319,11 +7469,221 @@
     "status": "verified",
     "title": "Stickman Kingdom Clash"
   },
+  "clstickmankombat2d": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Stickman Kombat 2D"
+  },
+  "clstickmanstealingdiamond": {
+    "reason": "Watermarked sketch, not this title's artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Henry Stickmin: Stealing the Diamond"
+  },
+  "clstickminairship": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Henry Stickmin: Infiltrating the Airship"
+  },
+  "clstickminbreakingbank": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Henry Stickmin: Breaking the Bank"
+  },
+  "clstickminescapingprison": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Henry Stickmin: Escaping the Prison"
+  },
+  "clstickminfleecomplex": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Henry Stickmin: Fleeing the Complex"
+  },
+  "clstickrpgcomplete": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Stick RPG Complete"
+  },
   "clstickslasher": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Stick Slasher"
+  },
+  "clstickwar": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Stick War"
+  },
+  "clstickwithit": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Stick With It"
+  },
+  "clstormthehouse": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Storm the House"
+  },
+  "clstormthehouse2": {
+    "reason": "Error page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Storm the House 2"
+  },
+  "clstormthehouse3": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Storm the House 3"
+  },
+  "clstrangejournet": {
+    "reason": "Text page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Strange Journey"
+  },
+  "clstreangeropepolice": {
+    "reason": "Options screen with no game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Strange Rope Police"
+  },
+  "clstreetfighterumuhsomething": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Street Fighter Umuh Something"
+  },
+  "clstrikeforceheroes": {
+    "reason": "Near-black frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Strike Force Heroes"
+  },
+  "clstrikeforceheroes2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Strike Force Heroes 2"
+  },
+  "clstrikeforceheroes3": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Strike Force Heroes 3"
+  },
+  "clstrikerdummies": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Striker Dummies"
+  },
+  "clstylesavvy": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Style Savvy"
+  },
+  "clsubwaysurfersbeijing": {
+    "reason": "Generic tip overlay shared across titles.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Subway Surfers: Beijing"
+  },
+  "clsubwaysurfersberlin": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Subway Surfers: Berlin"
+  },
+  "clsubwaysurfersbuenosaires": {
+    "reason": "Generic tip overlay shared across titles.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Subway Surfers: Buenos Aires"
+  },
+  "clsubwaysurfershavana": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Subway Surfers: Havana"
+  },
+  "clsubwaysurfershouston": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Subway Surfers: Houston"
+  },
+  "clsubwaysurfersiceland": {
+    "reason": "Generic tip overlay shared across titles.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Subway Surfers: Iceland"
+  },
+  "clsubwaysurferslondon": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Subway Surfers: London"
+  },
+  "clsubwaysurfersmexico": {
+    "reason": "Generic tip overlay shared across titles.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Subway Surfers: Mexico"
+  },
+  "clsubwaysurfersmiami": {
+    "reason": "Generic tip overlay shared across titles.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Subway Surfers: Miami"
+  },
+  "clsubwaysurfersmonaco": {
+    "reason": "Generic tip overlay shared across titles.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Subway Surfers: Monaco"
+  },
+  "clsubwaysurfersneworeleans": {
+    "reason": "Generic tip overlay shared across titles.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Subway Surfers: New Oreleans"
+  },
+  "clsubwaysurferssanfrancisco--1": {
+    "reason": "Generic tip overlay shared across titles.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Subway Surfers: San Francisco"
+  },
+  "clsubwaysurferswinterholiday": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Subway Surfers: Winter Holiday"
+  },
+  "clsubwaysurferszurich": {
+    "reason": "Generic tip overlay shared across titles.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Subway Surfers: Zurich"
+  },
+  "clsugarsugar": {
+    "reason": "Single weapon on black; not recognizable as the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Sugar Sugar"
   },
   "clsupercold": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",

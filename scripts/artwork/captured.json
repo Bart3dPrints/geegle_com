@@ -14776,6 +14776,28 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clsmashkartsworking.webp"
     },
+    "clsmbcrossover": {
+      "assetSha256": "0437cd7495b39a1e24cd442868cf6e98a1f361e6b900fbd02c72e45a76a98a5a",
+      "frame": "clsmbcrossover@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clsmbcrossover.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 5208,
+        "coverage": 0.974,
+        "dominant": 0.733,
+        "edges": 6.66,
+        "stddev": 65.36
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clsmbcrossover.html",
+      "title": "SMB Crossover",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clsmbcrossover.webp"
+    },
     "clsmbgameover": {
       "assetSha256": "91d8251cdb0fafc31a8f73c4ce1ba9c16568bdfc62e0f0cf3c71f18dbc7022b0",
       "frame": "clsmbgameover@3.png",
@@ -15349,28 +15371,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clspongebobpowerkartgrandprix.webp"
     },
-    "clsprinter": {
-      "assetSha256": "af5b5538ddeadb5e0cc857f0fc0366d3d75dcf22c9031d693c5688b782c13318",
-      "frame": "clsprinter@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clsprinter.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 1406,
-        "coverage": 0.143,
-        "dominant": 0.331,
-        "edges": 5.52,
-        "stddev": 42.27
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clsprinter.html",
-      "title": "Sprinter",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clsprinter.webp"
-    },
     "clsprunked": {
       "assetSha256": "d0bf8a0fa45301b84dd147e0f441b563585e64652c3f3ff82a05f994c9ac41a4",
       "frame": "clsprunked@6.png",
@@ -15392,28 +15392,6 @@
       "title": "Sprunked",
       "type": "gameplay-screenshot",
       "url": "/artwork/clsprunked.webp"
-    },
-    "clsprunki": {
-      "assetSha256": "b93218fd58fdf02cfb91b3c3f2a12c77460513be2db7a59b42a235e9ed413835",
-      "frame": "clsprunki@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clsprunki.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 192,
-        "coverage": 0.026,
-        "dominant": 0.904,
-        "edges": 14.93,
-        "stddev": 58.25
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clsprunki.html",
-      "title": "Sprunki",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clsprunki.webp"
     },
     "clsprunkiclicker": {
       "assetSha256": "d9019ed2f3734ffbdf7e2ba1086bc6c31dd99420fb14fc93d20b9ce82959706a",
@@ -15613,28 +15591,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clstationsaturn.webp"
     },
-    "clsteakandjake": {
-      "assetSha256": "25543429fb2644aae58d0226cebf4193a29c149f77dcfe05705e5b5b975567bf",
-      "frame": "clsteakandjake@7.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clsteakandjake.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 492,
-        "coverage": 0.99,
-        "dominant": 0.939,
-        "edges": 2.52,
-        "stddev": 47.37
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clsteakandjake.html",
-      "title": "Steak and Jake",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clsteakandjake.webp"
-    },
     "clstealbrainrot": {
       "assetSha256": "7e213a695dd1a71a6ffb9317e66d81d96a283a627e1c46f6834e84c8d0bb2b44",
       "frame": "clstealbrainrot@1.png",
@@ -15812,28 +15768,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clstickmanclash.webp"
     },
-    "clstickmanduel": {
-      "assetSha256": "440fc11faabfb985526bde0978cd8064fd160cecf9f7ba83e8a4afdfd21e41ef",
-      "frame": "clstickmanduel@4.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clstickmanduel.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 6603,
-        "coverage": 0.68,
-        "dominant": 0.115,
-        "edges": 15.48,
-        "stddev": 64.68
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clstickmanduel.html",
-      "title": "Stickman Duel",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clstickmanduel.webp"
-    },
     "clstickmangtacity": {
       "assetSha256": "9f6f9e7406758ef810254a7f7ab18c3062ddc2c5108b1513f3812d8505d2bbd6",
       "frame": "clstickmangtacity@4.png",
@@ -15877,28 +15811,6 @@
       "title": "Stickman Kombat 2D",
       "type": "gameplay-screenshot",
       "url": "/artwork/clstickmankombat2d.webp"
-    },
-    "clstickmanstealingdiamond": {
-      "assetSha256": "af7c4de0c5d249ef16d260d261f08d3e8563c818996db739525e315479a81654",
-      "frame": "clstickmanstealingdiamond@7.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clstickmanstealingdiamond.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 1248,
-        "coverage": 0.974,
-        "dominant": 0.302,
-        "edges": 11.87,
-        "stddev": 101.4
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clstickmanstealingdiamond.html",
-      "title": "Henry Stickmin: Stealing the Diamond",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clstickmanstealingdiamond.webp"
     },
     "clstickminairship": {
       "assetSha256": "d3fe58bdc592b5282c1e2f928af830bf313efc7aace41f15ec0c67ae1aba7989",
@@ -16076,28 +15988,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clstormthehouse.webp"
     },
-    "clstormthehouse2": {
-      "assetSha256": "0bd7925a414119479c01e5a0d4c4d16a592c5123f1a1bc8a83f3a998b237e127",
-      "frame": "clstormthehouse2@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clstormthehouse2.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 1948,
-        "coverage": 0.886,
-        "dominant": 0.014,
-        "edges": 4.34,
-        "stddev": 20.93
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clstormthehouse2.html",
-      "title": "Storm the House 2",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clstormthehouse2.webp"
-    },
     "clstormthehouse3": {
       "assetSha256": "79544d21fa1a0d7223fa664f7171227b604c2dfa074d5f1e57253ac04514a79d",
       "frame": "clstormthehouse3@7.png",
@@ -16120,50 +16010,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clstormthehouse3.webp"
     },
-    "clstrangejournet": {
-      "assetSha256": "dadd0ee9ff0284854d4ab30e38cf54b6cf635c78e130164d9e96751793c079b4",
-      "frame": "clstrangejournet@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clstrangejournet.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 215,
-        "coverage": 0.017,
-        "dominant": 0.593,
-        "edges": 27.39,
-        "stddev": 64.78
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clstrangejournet.html",
-      "title": "Strange Journey",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clstrangejournet.webp"
-    },
-    "clstreangeropepolice": {
-      "assetSha256": "b04f4f978d8ce1f195bb65095022fe7b56e909d0fc0ce15b19d0734efa46e1ac",
-      "frame": "clstreangeropepolice@3.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clstreangeropepolice.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 18139,
-        "coverage": 1.0,
-        "dominant": 0.135,
-        "edges": 20.14,
-        "stddev": 34.32
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clstreangeropepolice.html",
-      "title": "Strange Rope Police",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clstreangeropepolice.webp"
-    },
     "clstreetfighterumuhsomething": {
       "assetSha256": "921a3db8470d08f05d53ae46d2eafa39d5c033b99176f76c46fb47c99826b16b",
       "frame": "clstreetfighterumuhsomething@7.png",
@@ -16185,28 +16031,6 @@
       "title": "Street Fighter Umuh Something",
       "type": "gameplay-screenshot",
       "url": "/artwork/clstreetfighterumuhsomething.webp"
-    },
-    "clstrikeforceheroes": {
-      "assetSha256": "0ed091da459243f887464531d8a9023eab2fb4110aca0ae3a66e072545f12a54",
-      "frame": "clstrikeforceheroes@7.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clstrikeforceheroes.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 18427,
-        "coverage": 0.817,
-        "dominant": 0.365,
-        "edges": 2.72,
-        "stddev": 28.09
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clstrikeforceheroes.html",
-      "title": "Strike Force Heroes",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clstrikeforceheroes.webp"
     },
     "clstrikeforceheroes2": {
       "assetSha256": "1ab03db2dd8e26078a6b9a1f5ca9c128a6d4e73702f7f3946283e41b9a89ad5d",
@@ -16274,50 +16098,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clstrikerdummies.webp"
     },
-    "clstylesavvy": {
-      "assetSha256": "cc6e85c4b96a23cca270be906dae3ff5b59f882db4017a81934b6dc7cdbfc646",
-      "frame": "clstylesavvy@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clstylesavvy.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 218,
-        "coverage": 0.017,
-        "dominant": 0.593,
-        "edges": 27.43,
-        "stddev": 64.81
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clstylesavvy.html",
-      "title": "Style Savvy",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clstylesavvy.webp"
-    },
-    "clsubwaysurfersbeijing": {
-      "assetSha256": "3800a6231d27426a390b0cf4f7da85286ef59cf1079d699c3d0cbab0e3f0f7f2",
-      "frame": "clsubwaysurfersbeijing@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clsubwaysurfersbeijing.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 22646,
-        "coverage": 0.985,
-        "dominant": 0.179,
-        "edges": 4.75,
-        "stddev": 102.11
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clsubwaysurfersbeijing.html",
-      "title": "Subway Surfers: Beijing",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clsubwaysurfersbeijing.webp"
-    },
     "clsubwaysurfersberlin": {
       "assetSha256": "3e1edaafedcee1835f6f490b381d6630870762949e9b83c8e180414ef6a3e576",
       "frame": "clsubwaysurfersberlin@1.png",
@@ -16339,28 +16119,6 @@
       "title": "Subway Surfers: Berlin",
       "type": "gameplay-screenshot",
       "url": "/artwork/clsubwaysurfersberlin.webp"
-    },
-    "clsubwaysurfersbuenosaires": {
-      "assetSha256": "ddee5201e85b1cb3e8db2691a8afd0a8389d4f93580c77d6686dcc2cd6d31b09",
-      "frame": "clsubwaysurfersbuenosaires@2.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clsubwaysurfersbuenosaires.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 22714,
-        "coverage": 0.985,
-        "dominant": 0.179,
-        "edges": 4.7,
-        "stddev": 102.34
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clsubwaysurfersbuenosaires.html",
-      "title": "Subway Surfers: Buenos Aires",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clsubwaysurfersbuenosaires.webp"
     },
     "clsubwaysurfershavana": {
       "assetSha256": "7d67d1c2bd8ce57be08f212bbfebeb868b317b7e1097aeb8f4f8b053e31e8ed1",
@@ -16406,28 +16164,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clsubwaysurfershouston.webp"
     },
-    "clsubwaysurfersiceland": {
-      "assetSha256": "8dee86d6ade3e7de1ae9938be3e8bbcc692eebf299c84012707c03ba0deb0012",
-      "frame": "clsubwaysurfersiceland@7.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clsubwaysurfersiceland.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 87872,
-        "coverage": 1.0,
-        "dominant": 0.007,
-        "edges": 8.75,
-        "stddev": 50.95
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clsubwaysurfersiceland.html",
-      "title": "Subway Surfers: Iceland",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clsubwaysurfersiceland.webp"
-    },
     "clsubwaysurferslondon": {
       "assetSha256": "c289f6c615e6efdff0112d7c1977a6d773d515316da0d6c19e00752162ca6403",
       "frame": "clsubwaysurferslondon@9.png",
@@ -16450,116 +16186,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clsubwaysurferslondon.webp"
     },
-    "clsubwaysurfersmexico": {
-      "assetSha256": "1db24fdf19f6e41323563cf43b45823aae11386c6e7d1bc977dce6eeddb2560e",
-      "frame": "clsubwaysurfersmexico@6.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clsubwaysurfersmexico.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 23866,
-        "coverage": 0.967,
-        "dominant": 0.182,
-        "edges": 4.83,
-        "stddev": 103.0
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clsubwaysurfersmexico.html",
-      "title": "Subway Surfers: Mexico",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clsubwaysurfersmexico.webp"
-    },
-    "clsubwaysurfersmiami": {
-      "assetSha256": "bda7b5ddfc5055b14ee456784cde691b7655716d6c302096a18ef18cec59b3ac",
-      "frame": "clsubwaysurfersmiami@5.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clsubwaysurfersmiami.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 117625,
-        "coverage": 1.0,
-        "dominant": 0.007,
-        "edges": 8.7,
-        "stddev": 50.94
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clsubwaysurfersmiami.html",
-      "title": "Subway Surfers: Miami",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clsubwaysurfersmiami.webp"
-    },
-    "clsubwaysurfersmonaco": {
-      "assetSha256": "a5ab4b90c747c1ec12f831850aba82714a31fca29f04cf9eabd785dc4adcd4b6",
-      "frame": "clsubwaysurfersmonaco@3.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clsubwaysurfersmonaco.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 87653,
-        "coverage": 1.0,
-        "dominant": 0.007,
-        "edges": 8.59,
-        "stddev": 50.88
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clsubwaysurfersmonaco.html",
-      "title": "Subway Surfers: Monaco",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clsubwaysurfersmonaco.webp"
-    },
-    "clsubwaysurfersneworeleans": {
-      "assetSha256": "adedcc50244afbcc728f8a5c644cc92903774dc4e0f231047b2e0243d02611b5",
-      "frame": "clsubwaysurfersneworeleans@3.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clsubwaysurfersneworeleans.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 87899,
-        "coverage": 1.0,
-        "dominant": 0.007,
-        "edges": 8.47,
-        "stddev": 50.87
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clsubwaysurfersneworeleans.html",
-      "title": "Subway Surfers: New Oreleans",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clsubwaysurfersneworeleans.webp"
-    },
-    "clsubwaysurferssanfrancisco--1": {
-      "assetSha256": "eac2e52646059f893be088e2c7183985ad5e3d96f5529337fc8d07b0f2a8776c",
-      "frame": "clsubwaysurferssanfrancisco--1@4.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clsubwaysurferssanfrancisco--1.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 87728,
-        "coverage": 1.0,
-        "dominant": 0.007,
-        "edges": 8.54,
-        "stddev": 50.88
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clsubwaysurferssanfrancisco--1.html",
-      "title": "Subway Surfers: San Francisco",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clsubwaysurferssanfrancisco--1.webp"
-    },
     "clsubwaysurferswinterholiday": {
       "assetSha256": "f205a1afb9531de30b447d3f04a8456290f3a90a87e850f3aade656926a8e13d",
       "frame": "clsubwaysurferswinterholiday@5.png",
@@ -16581,50 +16207,6 @@
       "title": "Subway Surfers: Winter Holiday",
       "type": "gameplay-screenshot",
       "url": "/artwork/clsubwaysurferswinterholiday.webp"
-    },
-    "clsubwaysurferszurich": {
-      "assetSha256": "9bc68c5bb5ffd4ff9ef7f49ab309aa5d3d1a630c95fdd376160d0ff3456b8df7",
-      "frame": "clsubwaysurferszurich@2.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clsubwaysurferszurich.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 87525,
-        "coverage": 1.0,
-        "dominant": 0.007,
-        "edges": 8.21,
-        "stddev": 50.8
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clsubwaysurferszurich.html",
-      "title": "Subway Surfers: Zurich",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clsubwaysurferszurich.webp"
-    },
-    "clsugarsugar": {
-      "assetSha256": "48ea1bdbfbddbb63db99f9d25088d8569d132cc4111b04b6b28e985524c9d74d",
-      "frame": "clsugarsugar@8.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clsugarsugar.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 157,
-        "coverage": 0.066,
-        "dominant": 0.823,
-        "edges": 6.53,
-        "stddev": 70.06
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clsugarsugar.html",
-      "title": "Sugar Sugar",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clsugarsugar.webp"
     },
     "clsuika": {
       "assetSha256": "78121d3ae34f526ba73d33ea3afc581a54e10082fb6a1572cb68a028fc47e77d",
@@ -17594,6 +17176,28 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/cltankpixel.webp"
     },
+    "cltanktrouble": {
+      "assetSha256": "100dad814e57fb93f34ce3d8a20c3462fa521ec62b7ecd46711a71dbc2d037bb",
+      "frame": "cltanktrouble@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltanktrouble.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 1979,
+        "coverage": 0.974,
+        "dominant": 0.012,
+        "edges": 4.26,
+        "stddev": 24.31
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltanktrouble.html",
+      "title": "Tank Trouble",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltanktrouble.webp"
+    },
     "cltanukisunset": {
       "assetSha256": "8f5eafdf88ab7b1bba013103e77578d3b2cbaf2d22da10bb93c446766148db16",
       "frame": "cltanukisunset@6.png",
@@ -17703,6 +17307,1859 @@
       "title": "The Binding of Isaac: Lamb Eternal",
       "type": "gameplay-screenshot",
       "url": "/artwork/cltboilambeternal.webp"
+    },
+    "cltelephonetrouble": {
+      "assetSha256": "9e9104c8f7a6bf9892178b7e735dae5382c7ec52cbcbff4b1fb0cfdef2a86bf5",
+      "frame": "cltelephonetrouble@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltelephonetrouble.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 671,
+        "coverage": 1.0,
+        "dominant": 0.217,
+        "edges": 27.73,
+        "stddev": 64.31
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltelephonetrouble.html",
+      "title": "Telephone Trouble",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltelephonetrouble.webp"
+    },
+    "cltempleofboom": {
+      "assetSha256": "bf0b7f28d635b3e75c579a8c182b95107b485b2a5cb6188cea5afeedf740d8ba",
+      "frame": "cltempleofboom@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltempleofboom.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 88,
+        "coverage": 0.273,
+        "dominant": 0.91,
+        "edges": 7.19,
+        "stddev": 36.24
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltempleofboom.html",
+      "title": "Temple of Boom",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltempleofboom.webp"
+    },
+    "clteod": {
+      "assetSha256": "dfa3b80c605864e8ec1455847deb9a992a2e2ca7a79357c60ee70503a647562c",
+      "frame": "clteod@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clteod.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 194,
+        "coverage": 0.038,
+        "dominant": 0.764,
+        "edges": 13.77,
+        "stddev": 41.0
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clteod.html",
+      "title": "Teod",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clteod.webp"
+    },
+    "clterritorialio": {
+      "assetSha256": "9388720115814ce06db570d699b93b7b643da53cd874ecf2b7e2ae364d2a9113",
+      "frame": "clterritorialio@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clterritorialio.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "no reachable remote distribution found",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 11659,
+        "coverage": 1.0,
+        "dominant": 0.075,
+        "edges": 12.22,
+        "stddev": 42.85
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clterritorialio.html",
+      "title": "Territorial.io",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clterritorialio.webp"
+    },
+    "clterritorywar": {
+      "assetSha256": "08d81e224416a64f8a23740fb7375e49091bba2c62e62c059c3285557f4932a8",
+      "frame": "clterritorywar@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clterritorywar.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 86698,
+        "coverage": 0.974,
+        "dominant": 0.523,
+        "edges": 19.49,
+        "stddev": 76.73
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clterritorywar.html",
+      "title": "Territory War",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clterritorywar.webp"
+    },
+    "clterritorywar2": {
+      "assetSha256": "85917266b2a0335d08cf7661c51717c7c598638d7c064d9f4a5da965d388be00",
+      "frame": "clterritorywar2@6.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clterritorywar2.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 81351,
+        "coverage": 0.99,
+        "dominant": 0.147,
+        "edges": 25.3,
+        "stddev": 85.18
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clterritorywar2.html",
+      "title": "Territory War 2",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clterritorywar2.webp"
+    },
+    "clterritorywar3": {
+      "assetSha256": "742df785e7fdb6a0987bd06136ed59382c766ba91b9016a31187288ff877763f",
+      "frame": "clterritorywar3@6.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clterritorywar3.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 41399,
+        "coverage": 0.888,
+        "dominant": 0.136,
+        "edges": 10.05,
+        "stddev": 71.89
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clterritorywar3.html",
+      "title": "Territory War 3",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clterritorywar3.webp"
+    },
+    "clthanksforremindingmeihadtofixthis": {
+      "assetSha256": "7f405668a8a1718cd3dec455fcc2dd58306b939b54776497479bc3222d71732a",
+      "frame": "clthanksforremindingmeihadtofixthis@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clthanksforremindingmeihadtofixthis.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 646,
+        "coverage": 0.752,
+        "dominant": 0.153,
+        "edges": 11.28,
+        "stddev": 72.31
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clthanksforremindingmeihadtofixthis.html",
+      "title": "Thanks for Reminding Mei Had to Fix This",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clthanksforremindingmeihadtofixthis.webp"
+    },
+    "cltheclassroom": {
+      "assetSha256": "282d6e83c77254318897ddc672a42cb48c28f107b2566292d68f539ad671793e",
+      "frame": "cltheclassroom@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltheclassroom.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 8046,
+        "coverage": 0.974,
+        "dominant": 0.877,
+        "edges": 4.23,
+        "stddev": 26.63
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltheclassroom.html",
+      "title": "The Classroom",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltheclassroom.webp"
+    },
+    "cltheclassroom2": {
+      "assetSha256": "593ac8b3eca6631f40f4c21fcbde9f4ad3277fb4a30963355ba087461aee3623",
+      "frame": "cltheclassroom2@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltheclassroom2.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 241,
+        "coverage": 0.087,
+        "dominant": 0.704,
+        "edges": 15.67,
+        "stddev": 74.33
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltheclassroom2.html",
+      "title": "The Classroom 2",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltheclassroom2.webp"
+    },
+    "cltheclassroom3": {
+      "assetSha256": "0107838b713448acbb1e9f4e0e4a2379e14abaf6bf1f661a5d823786fa7eca7e",
+      "frame": "cltheclassroom3@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltheclassroom3.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 3971,
+        "coverage": 0.974,
+        "dominant": 0.573,
+        "edges": 3.01,
+        "stddev": 74.56
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltheclassroom3.html",
+      "title": "The Classroom 3",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltheclassroom3.webp"
+    },
+    "clthedeepestsleep": {
+      "assetSha256": "539d71be1136bf4299824a598fd6bae99e9e041cbc7315787de8c1b4f3f6cdcd",
+      "frame": "clthedeepestsleep@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clthedeepestsleep.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 878,
+        "coverage": 0.731,
+        "dominant": 0.434,
+        "edges": 8.57,
+        "stddev": 35.85
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clthedeepestsleep.html",
+      "title": "The Deepest Sleep",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clthedeepestsleep.webp"
+    },
+    "clthedude": {
+      "assetSha256": "1fb2b6e87106835accff92a75a01c16722a7cda1fe1520e74c51e245f18a3da9",
+      "frame": "clthedude@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clthedude.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 11869,
+        "coverage": 0.179,
+        "dominant": 0.732,
+        "edges": 10.2,
+        "stddev": 50.64
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clthedude.html",
+      "title": "The Dude",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clthedude.webp"
+    },
+    "cltheenchantedcave2": {
+      "assetSha256": "7b8119074e672c1d9f942f7110794c5ee31344e93e1f5819a47565e2b560817a",
+      "frame": "cltheenchantedcave2@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltheenchantedcave2.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 3917,
+        "coverage": 0.974,
+        "dominant": 0.039,
+        "edges": 9.94,
+        "stddev": 38.48
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltheenchantedcave2.html",
+      "title": "The Enchanted Cave 2",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltheenchantedcave2.webp"
+    },
+    "cltheimpossiblegame": {
+      "assetSha256": "7cfdbd4540e2842cec37030bf7aa0cbd218a12fac48f1501eb54afaf74bdb590",
+      "frame": "cltheimpossiblegame@8.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltheimpossiblegame.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 1169,
+        "coverage": 0.824,
+        "dominant": 0.102,
+        "edges": 3.87,
+        "stddev": 43.79
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltheimpossiblegame.html",
+      "title": "The Impossible Game",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltheimpossiblegame.webp"
+    },
+    "clthelaststandunioncity--1": {
+      "assetSha256": "1c795fd031665ac4c4946cd74582224dc366832d269ff0ff709e4ae63c66f361",
+      "frame": "clthelaststandunioncity--1@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clthelaststandunioncity--1.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 147308,
+        "coverage": 0.938,
+        "dominant": 0.177,
+        "edges": 13.45,
+        "stddev": 85.19
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clthelaststandunioncity--1.html",
+      "title": "The Last Stand: Union City",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clthelaststandunioncity--1.webp"
+    },
+    "clthemaninthewindow": {
+      "assetSha256": "c9450dadc2e42bcc484318c166953c5ab1155569df2796c306c92ed3f472df6d",
+      "frame": "clthemaninthewindow@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clthemaninthewindow.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 217,
+        "coverage": 0.093,
+        "dominant": 0.94,
+        "edges": 8.54,
+        "stddev": 45.73
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clthemaninthewindow.html",
+      "title": "The Man in the Window",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clthemaninthewindow.webp"
+    },
+    "clthemeparkpsx": {
+      "assetSha256": "f8d49ca265f3a5d1d95ce2cfc7fd51ab1c317a1a403fa357f41d5aba2a26bc9a",
+      "frame": "clthemeparkpsx@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clthemeparkpsx.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 215,
+        "coverage": 0.017,
+        "dominant": 0.593,
+        "edges": 27.05,
+        "stddev": 64.33
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clthemeparkpsx.html",
+      "title": "Theme Park (PSX)",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clthemeparkpsx.webp"
+    },
+    "clthesodorrace": {
+      "assetSha256": "1380d27d31ab0ac26ed7b1796db255a1b57ebe53f7ee88e55d873f88579f0d6d",
+      "frame": "clthesodorrace@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clthesodorrace.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 1848,
+        "coverage": 0.974,
+        "dominant": 0.269,
+        "edges": 10.58,
+        "stddev": 67.37
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clthesodorrace.html",
+      "title": "The Sodor Race",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clthesodorrace.webp"
+    },
+    "clthesunforthevampire": {
+      "assetSha256": "6ffde8d5be0aa7ad7780f2cc4bd89ee6d7e7c974534eb71d4f9aad56f7a97e9e",
+      "frame": "clthesunforthevampire@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clthesunforthevampire.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 128816,
+        "coverage": 0.74,
+        "dominant": 0.043,
+        "edges": 30.56,
+        "stddev": 57.58
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clthesunforthevampire.html",
+      "title": "The Sun for the Vampire",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clthesunforthevampire.webp"
+    },
+    "cltheyarecoming": {
+      "assetSha256": "2ab14b06a631fcdf94ae7eca1e0839afa4a8e0bd737a72ab9d1c3a404c90adef",
+      "frame": "cltheyarecoming@8.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltheyarecoming.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 3008,
+        "coverage": 0.804,
+        "dominant": 0.505,
+        "edges": 5.45,
+        "stddev": 41.48
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltheyarecoming.html",
+      "title": "They Are Coming",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltheyarecoming.webp"
+    },
+    "clthisistheonlylevel2": {
+      "assetSha256": "513dbd9fd21ceae0bd4b99c7977de6e2f113906395fc13617285fa670377b3f6",
+      "frame": "clthisistheonlylevel2@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clthisistheonlylevel2.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 63,
+        "coverage": 0.804,
+        "dominant": 0.699,
+        "edges": 7.8,
+        "stddev": 89.73
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clthisistheonlylevel2.html",
+      "title": "This Is the Only Level 2",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clthisistheonlylevel2.webp"
+    },
+    "clthisistheonlyleveltoo": {
+      "assetSha256": "11934e5afe233a1b32f3712a3d30a337ef0f8d60980cd190aca9da02453557e1",
+      "frame": "clthisistheonlyleveltoo@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clthisistheonlyleveltoo.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 437,
+        "coverage": 0.974,
+        "dominant": 0.128,
+        "edges": 4.88,
+        "stddev": 43.12
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clthisistheonlyleveltoo.html",
+      "title": "This Is the Only Level Too",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clthisistheonlyleveltoo.webp"
+    },
+    "clthrowapotatoagain": {
+      "assetSha256": "288a19f090a68aa45e5413e1dc1b7faf5b4f547e3734cdc4ca50eba93d712b3c",
+      "frame": "clthrowapotatoagain@2.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clthrowapotatoagain.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 1234,
+        "coverage": 0.893,
+        "dominant": 0.86,
+        "edges": 6.66,
+        "stddev": 53.29
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clthrowapotatoagain.html",
+      "title": "Throw a Potato Again",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clthrowapotatoagain.webp"
+    },
+    "cltimewarriors": {
+      "assetSha256": "2be392b6aa1f8d0dc59f6252fcfb760524ba9486a3eb1c238c9792265eb522e8",
+      "frame": "cltimewarriors@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltimewarriors.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 15266,
+        "coverage": 1.0,
+        "dominant": 0.709,
+        "edges": 9.57,
+        "stddev": 25.14
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltimewarriors.html",
+      "title": "Time Warriors",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltimewarriors.webp"
+    },
+    "cltinyfishing": {
+      "assetSha256": "0c6d56b977240f7fa6d95c53783eda18216ccb9c75ad8157ec36edc5f7e06e82",
+      "frame": "cltinyfishing@2.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltinyfishing.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 9783,
+        "coverage": 0.594,
+        "dominant": 0.886,
+        "edges": 4.35,
+        "stddev": 30.89
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltinyfishing.html",
+      "title": "Tiny Fishing",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltinyfishing.webp"
+    },
+    "cltoasterball": {
+      "assetSha256": "c24b06e1954e3c0d30fc33a3ede5002bd01f983518c34fe829068655002c213c",
+      "frame": "cltoasterball@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltoasterball.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 10188,
+        "coverage": 0.567,
+        "dominant": 0.244,
+        "edges": 5.49,
+        "stddev": 46.31
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltoasterball.html",
+      "title": "Toaster Ball",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltoasterball.webp"
+    },
+    "cltombofthemass": {
+      "assetSha256": "23765fce9c7af3eb73e6e462b8bf9ab46c3f4817d37eb2272a07d76872656323",
+      "frame": "cltombofthemass@2.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltombofthemass.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 91,
+        "coverage": 0.979,
+        "dominant": 0.817,
+        "edges": 3.09,
+        "stddev": 69.37
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltombofthemass.html",
+      "title": "Tomb of the Mass",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltombofthemass.webp"
+    },
+    "cltommorowandyesterday": {
+      "assetSha256": "4380b2278c544b1a3743084b16a4281f8338c754feb7964be5faac91eec73f6f",
+      "frame": "cltommorowandyesterday@6.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltommorowandyesterday.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 6321,
+        "coverage": 0.368,
+        "dominant": 0.071,
+        "edges": 10.61,
+        "stddev": 47.42
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltommorowandyesterday.html",
+      "title": "Tomorrow and Yesterday",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltommorowandyesterday.webp"
+    },
+    "cltopspeedracing3d": {
+      "assetSha256": "2d6bfa5c337ae7322edd9f29c36190c66ca55342ad359f981fcaa8ee44ce9556",
+      "frame": "cltopspeedracing3d@2.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltopspeedracing3d.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 125153,
+        "coverage": 1.0,
+        "dominant": 0.006,
+        "edges": 19.56,
+        "stddev": 66.59
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltopspeedracing3d.html",
+      "title": "Top Speed Racing 3D",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltopspeedracing3d.webp"
+    },
+    "cltosstheturtle": {
+      "assetSha256": "57c11dd1047195272b765df03ccf4b636060a46b12a30d746913f37324e0e358",
+      "frame": "cltosstheturtle@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltosstheturtle.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 41343,
+        "coverage": 0.974,
+        "dominant": 0.052,
+        "edges": 15.15,
+        "stddev": 71.21
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltosstheturtle.html",
+      "title": "Toss the Turtle",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltosstheturtle.webp"
+    },
+    "cltotm": {
+      "assetSha256": "d298b8f9abe785a36e76813615cb1f1c882bbd1f43c548cac3a98543e056de12",
+      "frame": "cltotm@4.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltotm.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 91,
+        "coverage": 0.979,
+        "dominant": 0.817,
+        "edges": 3.11,
+        "stddev": 69.44
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltotm.html",
+      "title": "Tomb of the Mask",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltotm.webp"
+    },
+    "cltouhou": {
+      "assetSha256": "8aba3c9b7488945d5d1e49e2468c60881930836eb1a5625ceda79597046c7fba",
+      "frame": "cltouhou@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltouhou.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 1371,
+        "coverage": 0.641,
+        "dominant": 0.543,
+        "edges": 7.25,
+        "stddev": 125.12
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltouhou.html",
+      "title": "Touhou",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltouhou.webp"
+    },
+    "cltouhou2": {
+      "assetSha256": "850fe2745eaf33bf130b3b07fa74e7dfb1c2083a2aa45b52fcb543b414c6c6ae",
+      "frame": "cltouhou2@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltouhou2.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 1399,
+        "coverage": 0.907,
+        "dominant": 0.551,
+        "edges": 30.44,
+        "stddev": 88.27
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltouhou2.html",
+      "title": "Touhou 2",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltouhou2.webp"
+    },
+    "cltouhou3": {
+      "assetSha256": "8cd6d9c7cd3352323a5ba2d22dd94a84ea34375b86948d53ac88ca8f67ca7baa",
+      "frame": "cltouhou3@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltouhou3.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 1393,
+        "coverage": 0.904,
+        "dominant": 0.541,
+        "edges": 17.47,
+        "stddev": 66.73
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltouhou3.html",
+      "title": "Touhou 3",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltouhou3.webp"
+    },
+    "cltouhou4": {
+      "assetSha256": "6bcb999b14cef674d92fcba1d87b2c5c4dd9d1e55b295989bb12cd6a2cad9da5",
+      "frame": "cltouhou4@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltouhou4.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 1392,
+        "coverage": 0.907,
+        "dominant": 0.551,
+        "edges": 8.67,
+        "stddev": 112.96
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltouhou4.html",
+      "title": "Touhou 4",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltouhou4.webp"
+    },
+    "cltouhou5": {
+      "assetSha256": "85aea0608e8547aa4607b9736972ac6f75e685434117cec391d0a78e7ef231e2",
+      "frame": "cltouhou5@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltouhou5.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 1400,
+        "coverage": 0.907,
+        "dominant": 0.551,
+        "edges": 14.02,
+        "stddev": 104.27
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltouhou5.html",
+      "title": "Touhou 5",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltouhou5.webp"
+    },
+    "cltowercrash3d": {
+      "assetSha256": "291132cb7d4b22134fe92d8f1ae81fa6d141ffc5ad6b8df12210c8fa9279e52f",
+      "frame": "cltowercrash3d@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltowercrash3d.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 47999,
+        "coverage": 1.0,
+        "dominant": 0.021,
+        "edges": 7.0,
+        "stddev": 29.18
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltowercrash3d.html",
+      "title": "Tower Crash 3D",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltowercrash3d.webp"
+    },
+    "cltownscraper": {
+      "assetSha256": "6f5cdbb4ea6b378c0e5ce60e0bb8a2f37dc31fa0a36c022001f0d5ef0f5dc67c",
+      "frame": "cltownscraper@2.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltownscraper.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 56406,
+        "coverage": 1.0,
+        "dominant": 0.002,
+        "edges": 7.86,
+        "stddev": 27.53
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltownscraper.html",
+      "title": "Townscaper",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltownscraper.webp"
+    },
+    "cltrace": {
+      "assetSha256": "e3f62f4a472924a705f58326f3f3aaef6ce6238f81a55b5e7328385473681cf6",
+      "frame": "cltrace@6.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltrace.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 15120,
+        "coverage": 1.0,
+        "dominant": 0.031,
+        "edges": 5.01,
+        "stddev": 51.64
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltrace.html",
+      "title": "Trace",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltrace.webp"
+    },
+    "cltrafficjam3d": {
+      "assetSha256": "a94d7d92780b21a0e99ccd93c8e5185897cdb03a37332c78fab88b8d15b975d2",
+      "frame": "cltrafficjam3d@5.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltrafficjam3d.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 23837,
+        "coverage": 1.0,
+        "dominant": 0.072,
+        "edges": 11.15,
+        "stddev": 51.6
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltrafficjam3d.html",
+      "title": "Traffic Jam 3D",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltrafficjam3d.webp"
+    },
+    "cltralalerotralalaescapetungtungtungsahur": {
+      "assetSha256": "8897f96abd49b41928324fcd61ca3b5e59e6ac1c972227b2ee52cf6c7a741be3",
+      "frame": "cltralalerotralalaescapetungtungtungsahur@4.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltralalerotralalaescapetungtungtungsahur.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 165189,
+        "coverage": 0.751,
+        "dominant": 0.001,
+        "edges": 18.44,
+        "stddev": 44.27
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltralalerotralalaescapetungtungtungsahur.html",
+      "title": "Tralalero Escape",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltralalerotralalaescapetungtungtungsahur.webp"
+    },
+    "cltrapthecat": {
+      "assetSha256": "533d00e85a814d81dc32f5f22b42c9cc4ad53dd0c2d6403d7531da9f7852a6b2",
+      "frame": "cltrapthecat@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltrapthecat.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "no reachable remote distribution found",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 685,
+        "coverage": 0.464,
+        "dominant": 0.545,
+        "edges": 7.14,
+        "stddev": 37.74
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltrapthecat.html",
+      "title": "Trap the Cat",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltrapthecat.webp"
+    },
+    "cltrechoroustrialspart2": {
+      "assetSha256": "dc9392f093ab515aa2109de1fd1f21cd9201ab69d0df280126e6242699bcd4c1",
+      "frame": "cltrechoroustrialspart2@4.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltrechoroustrialspart2.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 400,
+        "coverage": 0.934,
+        "dominant": 0.213,
+        "edges": 9.47,
+        "stddev": 33.15
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltrechoroustrialspart2.html",
+      "title": "Treacherous Trials Part 2",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltrechoroustrialspart2.webp"
+    },
+    "cltriachnid": {
+      "assetSha256": "4ed926e558a647392603d54598ce91ddbd94ea83f3b70ad3a0f6ca6f74d7cfa5",
+      "frame": "cltriachnid@6.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltriachnid.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 2743,
+        "coverage": 0.99,
+        "dominant": 0.165,
+        "edges": 5.41,
+        "stddev": 50.31
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltriachnid.html",
+      "title": "Triachnid",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltriachnid.webp"
+    },
+    "cltriviacrack": {
+      "assetSha256": "b825edebfeb32117db126962f3cfe832cc5e6a49f21bc48166ce54c66c1257b0",
+      "frame": "cltriviacrack@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltriviacrack.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 48416,
+        "coverage": 1.0,
+        "dominant": 0.628,
+        "edges": 7.87,
+        "stddev": 88.26
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltriviacrack.html",
+      "title": "Trivia Crack",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltriviacrack.webp"
+    },
+    "cltrollfacequest1": {
+      "assetSha256": "e4b7bb754d4c1f500e51a3252034f0d29019128c9cd7b5166fbe559ece7a5d04",
+      "frame": "cltrollfacequest1@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltrollfacequest1.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 2109,
+        "coverage": 0.972,
+        "dominant": 0.019,
+        "edges": 5.06,
+        "stddev": 23.89
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltrollfacequest1.html",
+      "title": "Troll Face Quest 1",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltrollfacequest1.webp"
+    },
+    "cltrucksim": {
+      "assetSha256": "0a039066094428f6227ec7acfad403bc0b0b5df32ef3778a54e8e67170c3e1bd",
+      "frame": "cltrucksim@2.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltrucksim.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 120027,
+        "coverage": 1.0,
+        "dominant": 0.121,
+        "edges": 21.24,
+        "stddev": 72.43
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltrucksim.html",
+      "title": "Truck Sim",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltrucksim.webp"
+    },
+    "cltubejumpers": {
+      "assetSha256": "26b426f7d47158f5ea69baccab801c3978718685c47092ce866deec30a45ded6",
+      "frame": "cltubejumpers@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltubejumpers.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 1287,
+        "coverage": 0.983,
+        "dominant": 0.494,
+        "edges": 5.71,
+        "stddev": 56.06
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltubejumpers.html",
+      "title": "Tube Jumpers",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltubejumpers.webp"
+    },
+    "cltuff_client_offline_wasm": {
+      "assetSha256": "c7c455cbe1190d3030d8077cd242fb76624dd70c57392468dc87fc738c3bcd88",
+      "frame": "cltuff_client_offline_wasm@2.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltuff_client_offline_wasm.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "no reachable remote distribution found",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 33510,
+        "coverage": 1.0,
+        "dominant": 0.026,
+        "edges": 8.35,
+        "stddev": 49.25
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltuff_client_offline_wasm.html",
+      "title": "Tuff Client (WASM)",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltuff_client_offline_wasm.webp"
+    },
+    "cltuff_client_offline_wasm-1": {
+      "assetSha256": "6963ad2f7a7f4813aaa633c266d135c0ad4e5dbaba383ba57e5edd2511baad2f",
+      "frame": "cltuff_client_offline_wasm-1@2.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltuff_client_offline_wasm-1.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "no reachable remote distribution found",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 33412,
+        "coverage": 1.0,
+        "dominant": 0.028,
+        "edges": 8.04,
+        "stddev": 49.21
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltuff_client_offline_wasm-1.html",
+      "title": "Tuff Client Offline WASM",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltuff_client_offline_wasm-1.webp"
+    },
+    "cltungtunghorror": {
+      "assetSha256": "6340b47371f4533898b8931747bedacfe146e5d2df47026ec66fa2681efe5819",
+      "frame": "cltungtunghorror@2.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltungtunghorror.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 32329,
+        "coverage": 0.926,
+        "dominant": 0.017,
+        "edges": 5.4,
+        "stddev": 27.17
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltungtunghorror.html",
+      "title": "Tung Tung Horror",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltungtunghorror.webp"
+    },
+    "cltunnelrushbetter": {
+      "assetSha256": "96638364ce04062d5d2c6b1c8819bbe91a92ea1270b5263a533c8877dbc8c42f",
+      "frame": "cltunnelrushbetter@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltunnelrushbetter.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 26005,
+        "coverage": 0.943,
+        "dominant": 0.152,
+        "edges": 5.18,
+        "stddev": 34.71
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltunnelrushbetter.html",
+      "title": "Tunnel Rush (Better)",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltunnelrushbetter.webp"
+    },
+    "cltupertariotros": {
+      "assetSha256": "e19c1c358e4967438f23fc997f1c2d39db2b29a6d796713f626c85646af029d7",
+      "frame": "cltupertariotros@6.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltupertariotros.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 54,
+        "coverage": 0.99,
+        "dominant": 0.947,
+        "edges": 2.72,
+        "stddev": 50.62
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltupertariotros.html",
+      "title": "Tupertariotros",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltupertariotros.webp"
+    },
+    "clturbostars": {
+      "assetSha256": "3a390f8dbd9ea74b4dd8f94af301b2d19b9fb844a444c4f270d0b98d6244f21b",
+      "frame": "clturbostars@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clturbostars.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched rawcdn.githack.com page metadata",
+        "probed build asset paths",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 2893,
+        "coverage": 0.762,
+        "dominant": 0.279,
+        "edges": 3.5,
+        "stddev": 30.29
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clturbostars.html",
+      "title": "Turbostars",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clturbostars.webp"
+    },
+    "cltwinshot--1": {
+      "assetSha256": "d79222d013201d02ef84c44cbf63d971dc0c2d6c626f76e81db7937a02c7d3e5",
+      "frame": "cltwinshot--1@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltwinshot--1.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 19054,
+        "coverage": 0.752,
+        "dominant": 0.07,
+        "edges": 11.85,
+        "stddev": 31.33
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltwinshot--1.html",
+      "title": "Twin Shot",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltwinshot--1.webp"
+    },
+    "cltwoball3d": {
+      "assetSha256": "5af929fe7f657b7222d81b326ba169aa291ed42ea8f66eefb453468cbe3fd4c4",
+      "frame": "cltwoball3d@4.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cltwoball3d.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 68476,
+        "coverage": 1.0,
+        "dominant": 0.109,
+        "edges": 15.28,
+        "stddev": 63.01
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cltwoball3d.html",
+      "title": "Two Ball 3D",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cltwoball3d.webp"
+    },
+    "clucds": {
+      "assetSha256": "6a766e8356bd8caa6f4abb23c092b8af64d3ec988771c30dcb0032edba549d95",
+      "frame": "clucds@2.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clucds.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 125834,
+        "coverage": 1.0,
+        "dominant": 0.006,
+        "edges": 19.59,
+        "stddev": 66.63
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clucds.html",
+      "title": "UCDS",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clucds.webp"
+    },
+    "cluckyblockobbyeuophratesriver": {
+      "assetSha256": "f86e618f4c024ddf2ce3e18a09913ddb409c111a425af4ef3bbb182e3435b699",
+      "frame": "cluckyblockobbyeuophratesriver@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cluckyblockobbyeuophratesriver.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 4050,
+        "coverage": 0.787,
+        "dominant": 0.808,
+        "edges": 4.87,
+        "stddev": 29.9
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cluckyblockobbyeuophratesriver.html",
+      "title": "Lucky Block Obby: Euphrates River",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cluckyblockobbyeuophratesriver.webp"
+    },
+    "clultimateassassian2": {
+      "assetSha256": "1b4621b1e41ccc584cef66eb74c0dabd465db57336097c4afcd9b3c00ef340cc",
+      "frame": "clultimateassassian2@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clultimateassassian2.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 55,
+        "coverage": 0.974,
+        "dominant": 0.755,
+        "edges": 2.77,
+        "stddev": 107.77
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clultimateassassian2.html",
+      "title": "Ultimate Assassin 2",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clultimateassassian2.webp"
+    },
+    "clultimateassassian3": {
+      "assetSha256": "71ea7d3b5433b539fa630c23873a68324dbeeef22be573de5b3f4df74fa49fc6",
+      "frame": "clultimateassassian3@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clultimateassassian3.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 34,
+        "coverage": 0.974,
+        "dominant": 0.755,
+        "edges": 3.16,
+        "stddev": 101.2
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clultimateassassian3.html",
+      "title": "Ultimate Assassin 3",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clultimateassassian3.webp"
+    },
+    "clultimatecardrivingsimulator": {
+      "assetSha256": "7a6b70edadd38668ca009a4c78654c00882f38028fa9095e29d22e0bf1cdbdc4",
+      "frame": "clultimatecardrivingsimulator@2.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clultimatecardrivingsimulator.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 60587,
+        "coverage": 1.0,
+        "dominant": 0.004,
+        "edges": 11.83,
+        "stddev": 27.37
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clultimatecardrivingsimulator.html",
+      "title": "Ultimate Car Driving Simulator",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clultimatecardrivingsimulator.webp"
+    },
+    "clultrakill": {
+      "assetSha256": "f22133929295cba87b2a2c1e7c12f35a2e1ee330bf0a29fd102db712d2727534",
+      "frame": "clultrakill@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clultrakill.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 173,
+        "coverage": 0.018,
+        "dominant": 0.782,
+        "edges": 41.11,
+        "stddev": 89.12
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clultrakill.html",
+      "title": "ULTRAKILL",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clultrakill.webp"
+    },
+    "clumjammerlammy": {
+      "assetSha256": "07e9eb8ede4af56185512769eb762f633479367c704653b8622172ac39d94482",
+      "frame": "clumjammerlammy@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clumjammerlammy.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 218,
+        "coverage": 0.017,
+        "dominant": 0.568,
+        "edges": 28.57,
+        "stddev": 65.87
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clumjammerlammy.html",
+      "title": "Um Jammer Lammy",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clumjammerlammy.webp"
+    },
+    "clumstickmangameidkiforgor": {
+      "assetSha256": "5a7bf34c63e7a72c88ade1a3bc7d6df5ef78ddc38454a6534574aeacde288cca",
+      "frame": "clumstickmangameidkiforgor@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clumstickmangameidkiforgor.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 4400,
+        "coverage": 0.974,
+        "dominant": 0.806,
+        "edges": 7.51,
+        "stddev": 80.61
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clumstickmangameidkiforgor.html",
+      "title": "Umstickman Game (I Forgot)",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clumstickmangameidkiforgor.webp"
+    },
+    "clunderneath": {
+      "assetSha256": "966b43f079b81d3f368a311eb72a30504eb92d819b49bff6cd5462001d185b58",
+      "frame": "clunderneath@2.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clunderneath.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 2664,
+        "coverage": 0.752,
+        "dominant": 0.283,
+        "edges": 6.83,
+        "stddev": 72.74
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clunderneath.html",
+      "title": "Underneath",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clunderneath.webp"
+    },
+    "clundertalelb": {
+      "assetSha256": "29547de9e1749acd49bf29d16e22c20d8782961e70d1d94f212e542f55609872",
+      "frame": "clundertalelb@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clundertalelb.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "probed build asset paths",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 441,
+        "coverage": 0.333,
+        "dominant": 0.625,
+        "edges": 9.03,
+        "stddev": 53.48
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clundertalelb.html",
+      "title": "Undertale LB",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clundertalelb.webp"
+    },
+    "clunfairmarioworkquestionmark": {
+      "assetSha256": "f5d53fe0d9d43ba1ea741bc2f55080ac27b76988c6292f7d703fea78aaf1c893",
+      "frame": "clunfairmarioworkquestionmark@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clunfairmarioworkquestionmark.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 6361,
+        "coverage": 0.974,
+        "dominant": 0.469,
+        "edges": 7.52,
+        "stddev": 48.82
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clunfairmarioworkquestionmark.html",
+      "title": "Unfair Mario Work",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clunfairmarioworkquestionmark.webp"
+    },
+    "clunfairundyne": {
+      "assetSha256": "ccf0390cc2c06e745f7407e5e284ed0c210f2ec895ee56614500a139af67bd77",
+      "frame": "clunfairundyne@4.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clunfairundyne.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 200,
+        "coverage": 0.292,
+        "dominant": 0.891,
+        "edges": 7.65,
+        "stddev": 76.59
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clunfairundyne.html",
+      "title": "Unfair Undyne",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clunfairundyne.webp"
+    },
+    "cluno": {
+      "assetSha256": "787e14169422fa5603ec6ce2840c4a71b173a3fbc10be998b548c3d11df6e1d5",
+      "frame": "cluno@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cluno.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 40949,
+        "coverage": 0.974,
+        "dominant": 0.621,
+        "edges": 7.94,
+        "stddev": 60.5
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cluno.html",
+      "title": "UNO",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cluno.webp"
+    },
+    "clunonomercy": {
+      "assetSha256": "7eb896f980e85f41b3b97f36e13865ba4201c64c8bddb1f67dede76fe6013ede",
+      "frame": "clunonomercy@8.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clunonomercy.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "no reachable remote distribution found",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 69669,
+        "coverage": 0.716,
+        "dominant": 0.389,
+        "edges": 11.05,
+        "stddev": 109.88
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clunonomercy.html",
+      "title": "UNO No Mercy",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clunonomercy.webp"
+    },
+    "cluntime": {
+      "assetSha256": "26aceaf353cffdcc87e5a02e80e7e9bf88b0295d13d70a55723dbdc9576de957",
+      "frame": "cluntime@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cluntime.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 9036,
+        "coverage": 0.881,
+        "dominant": 0.072,
+        "edges": 2.75,
+        "stddev": 21.88
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cluntime.html",
+      "title": "Untime",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cluntime.webp"
+    },
+    "cluntitledgoosegame": {
+      "assetSha256": "af8679b1a1351b753dffcbe2a398c1fb72d2272004ea0c087114844376506840",
+      "frame": "cluntitledgoosegame@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cluntitledgoosegame.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 679,
+        "coverage": 0.26,
+        "dominant": 0.763,
+        "edges": 9.78,
+        "stddev": 56.85
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cluntitledgoosegame.html",
+      "title": "Untitled Goose Game",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cluntitledgoosegame.webp"
+    },
+    "clupgradecomplete": {
+      "assetSha256": "7a062f3d5c475f9a7a267ff719a833efcc1498c31b411ddae6e917dc710c3c81",
+      "frame": "clupgradecomplete@8.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clupgradecomplete.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 156,
+        "coverage": 0.974,
+        "dominant": 0.891,
+        "edges": 4.19,
+        "stddev": 45.64
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clupgradecomplete.html",
+      "title": "Upgrade Complete",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clupgradecomplete.webp"
+    },
+    "clusterrush": {
+      "assetSha256": "d59b763a623189df2dfdbf93266ae09986fb0c7470ab4004651945a2f772bb0d",
+      "frame": "clusterrush@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clusterrush.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched stuk.github.io page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 91,
+        "coverage": 0.563,
+        "dominant": 0.76,
+        "edges": 4.16,
+        "stddev": 21.46
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clusterrush.html",
+      "title": "Cluster Rush",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clusterrush.webp"
+    },
+    "cluvuvwevwevweonyetenvewveugwemubwemossas": {
+      "assetSha256": "93b19783528bef1a5fa1ab353986637f83a2fd0293357f5e37866ae6dcbf45a3",
+      "frame": "cluvuvwevwevweonyetenvewveugwemubwemossas@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cluvuvwevwevweonyetenvewveugwemubwemossas.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 267,
+        "coverage": 0.529,
+        "dominant": 0.911,
+        "edges": 11.16,
+        "stddev": 58.86
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cluvuvwevwevweonyetenvewveugwemubwemossas.html",
+      "title": "Uvuvwevwevwe Onyetenvewve Ugwemubwem Ossas",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cluvuvwevwevweonyetenvewveugwemubwemossas.webp"
+    },
+    "cluwuclient": {
+      "assetSha256": "2e037aae86cf3724824fd6f08c6090ba55cc885c1276bc7ee1c78c5fb2c1cb6b",
+      "frame": "cluwuclient@2.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cluwuclient.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "no reachable remote distribution found",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 95,
+        "coverage": 0.507,
+        "dominant": 0.221,
+        "edges": 13.52,
+        "stddev": 45.25
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cluwuclient.html",
+      "title": "Uwu Client",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cluwuclient.webp"
+    },
+    "clvex": {
+      "assetSha256": "242682b74d87dd3d01142867d25f6292c3030aa47937fb34361a13cb8009fa8d",
+      "frame": "clvex@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clvex.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 230599,
+        "coverage": 0.974,
+        "dominant": 0.346,
+        "edges": 19.61,
+        "stddev": 74.51
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clvex.html",
+      "title": "Vex",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clvex.webp"
+    },
+    "clvincentmansionofthedead": {
+      "assetSha256": "09b35e7f785b8d0d9cab41eb0863382bf605a8f1179b0ad5db3d13bc4c58ca38",
+      "frame": "clvincentmansionofthedead@7.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clvincentmansionofthedead.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 9595,
+        "coverage": 0.968,
+        "dominant": 0.24,
+        "edges": 5.88,
+        "stddev": 62.69
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clvincentmansionofthedead.html",
+      "title": "Vincent Mansion of the Dead",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clvincentmansionofthedead.webp"
+    },
+    "clvisitor": {
+      "assetSha256": "568425f0403d1d05e4a0ae5e3aedc48de970cdc629dfff260851670fefff6249",
+      "frame": "clvisitor@6.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clvisitor.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 3176,
+        "coverage": 0.99,
+        "dominant": 0.817,
+        "edges": 6.17,
+        "stddev": 84.17
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clvisitor.html",
+      "title": "Visitor",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clvisitor.webp"
+    },
+    "clvolleyrandom": {
+      "assetSha256": "ab39019d0d6b2e38aabdecda32e134a6cc89f3a434b5df550c426deb5d9b85d7",
+      "frame": "clvolleyrandom@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clvolleyrandom.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 356,
+        "coverage": 0.99,
+        "dominant": 0.176,
+        "edges": 6.33,
+        "stddev": 44.93
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clvolleyrandom.html",
+      "title": "Volley Random",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clvolleyrandom.webp"
+    },
+    "clvollyballchallenge": {
+      "assetSha256": "de12b0d6c964d8dac5c7d008c16c26ec0927c21c2b1646323cedad3cfdafc100",
+      "frame": "clvollyballchallenge@2.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clvollyballchallenge.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 16518,
+        "coverage": 1.0,
+        "dominant": 0.14,
+        "edges": 10.05,
+        "stddev": 61.94
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clvollyballchallenge.html",
+      "title": "Volleyball Challenge",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clvollyballchallenge.webp"
+    },
+    "clvortex": {
+      "assetSha256": "3165049c858fd1a388c12cbdf7a955d099b75f2ba197d07b75a395464878384c",
+      "frame": "clvortex@6.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clvortex.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 649,
+        "coverage": 1.0,
+        "dominant": 0.793,
+        "edges": 9.36,
+        "stddev": 89.86
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clvortex.html",
+      "title": "Vortex",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clvortex.webp"
+    },
+    "clvsagore": {
+      "assetSha256": "1c7962a947ba39b479b17e04e44fb1bf7270a4c45a32904a8c3187669efbc7e8",
+      "frame": "clvsagore@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clvsagore.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 1460,
+        "coverage": 0.992,
+        "dominant": 0.276,
+        "edges": 7.37,
+        "stddev": 50.24
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clvsagore.html",
+      "title": "VS Agore",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clvsagore.webp"
     }
   }
 }
