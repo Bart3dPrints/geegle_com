@@ -4,7 +4,7 @@
 // suppresses it permanently.
 
 import { useEffect, useRef, useState } from 'react';
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 
 export const LIBRARY_NOTICE_TEXT = 'Please wait if you see nothing upon clicking on a Game/Proxy.';
 export const LIBRARY_NOTICE_CHECKBOX = "Don't remind me again";
@@ -20,6 +20,7 @@ export function LibraryNotice({
   onDismissForever: () => void;
 }) {
   const [remember, setRemember] = useState(false);
+  const reduceMotion = useReducedMotion();
   const dialogRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -62,9 +63,10 @@ export function LibraryNotice({
         aria-modal="true"
         aria-labelledby="library-notice-text"
         className="card w-full max-w-md p-6"
-        initial={{ opacity: 0, y: 6 }}
+        initial={reduceMotion ? false : { opacity: 0, y: 6 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.16, ease: 'easeOut' }}
+        exit={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 6 }}
+        transition={{ duration: reduceMotion ? 0 : 0.16, ease: 'easeOut' }}
       >
         <p id="library-notice-text" className="mb-5 text-sm">
           {LIBRARY_NOTICE_TEXT}

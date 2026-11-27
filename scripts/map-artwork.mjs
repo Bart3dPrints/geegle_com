@@ -15,7 +15,7 @@ import { createHash } from 'node:crypto';
 
 const root = new URL('../', import.meta.url);
 const fields = ['title', 'url', 'source', 'type', 'identityEvidence', 'reuseEvidence'];
-const types = new Set(['official-og', 'official-icon', 'game-asset', 'gameplay-screenshot']);
+const types = new Set(['official-og', 'official-icon', 'game-asset', 'gameplay-screenshot', 'owner-supplied']);
 
 async function verify(entries, tier) {
   for (const [id, record] of Object.entries(entries)) {

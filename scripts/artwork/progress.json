@@ -2,11 +2,11 @@
   "generated": "scripts/artwork/build-progress.py",
   "summary": {
     "catalogEntries": 2710,
-    "verified": 2653,
+    "verified": 2678,
     "awaitingReview": 0,
     "rejected": 0,
     "blocked": 0,
-    "notStarted": 57
+    "notStarted": 32
   },
   "entries": [
     {
@@ -2966,18 +2966,19 @@
         "platformer"
       ],
       "path": "/games/clb3313v102.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://b3313.fandom.com/wiki/B3313",
+      "imagePath": "/artwork/clb3313v102.webp",
+      "identityEvidence": "Found by searching \"B3313 v1.02 logo\" in Bing Images and taking result 2; the image was checked against the catalog title \"B3313 v1.02\" before use. Source page: https://b3313.fandom.com/wiki/B3313",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "8b4e3d087e254a63fa2dcee19cfa5baee67ae890754d0f3793491b395525fcf5",
+      "visualVerification": "verified 2026-11-27: B3313 logo used by the project itself, matching this build without walkthrough captions.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -5507,18 +5508,19 @@
         "strategy"
       ],
       "path": "/games/clbloonspp3.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://browsercraft.com/game/bloons-player-pack-3",
+      "imagePath": "/artwork/clbloonspp3.webp",
+      "identityEvidence": "Found by searching \"Bloons PP 3 box art\" in Bing Images and taking result 2; the image was checked against the catalog title \"Bloons PP 3\" before use. Source page: https://browsercraft.com/game/bloons-player-pack-3",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "636c3125594301ebc4658f3fc436140ccbdb272fe23418c9c3c23a791bdfe872",
+      "visualVerification": "verified 2026-11-27: Bing Images box art for the third Bloons Player Pack; the art reads PLAYER PACK 3, matching this catalog entry rather than Bloons Pop Three.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -6398,18 +6400,19 @@
         "sports"
       ],
       "path": "/games/clboxinglive2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.noflashgame.com/html5-25/boxing-live-2-unblocked-2002/",
+      "imagePath": "/artwork/clboxinglive2.webp",
+      "identityEvidence": "Found by searching \"Boxing Live 2 box art\" in Bing Images and taking result 1; the image was checked against the catalog title \"Boxing Live 2\" before use. Source page: https://www.noflashgame.com/html5-25/boxing-live-2-unblocked-2002/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "7d14f101287a89caebaca04a38decf1dca6461a8b5b3dceb85da4b958e7f3e2b",
+      "visualVerification": "verified 2026-11-27: Title screen of Boxing Live Round 2, the second Boxing Live game; the screen names the game and shows its boxers.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -14024,18 +14027,16 @@
         "arcade"
       ],
       "path": "/games/cldonkeykong.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.mobygames.com/game/574/donkey-kong/screenshots/",
+      "imagePath": "/artwork/cldonkeykong.webp",
+      "identityEvidence": "Found by searching \"Donkey Kong game screenshot\" in Bing Images and taking result 3; the image was checked against the catalog title \"Donkey Kong\" before use. Source page: https://www.mobygames.com/game/574/donkey-kong/screenshots/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "b60afc8b6d5c41f9c1056109d9e5170b06062b6f7ad763b059065d19f1437837",
+      "visualVerification": "verified 2026-11-27: Classic Donkey Kong arcade gameplay with the girder and barrel stage, matching the original arcade entry rather than Donkey Kong Country.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -14485,18 +14486,19 @@
         "action"
       ],
       "path": "/games/cldoomps.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.technopat.net/sosyal/blog/deneyimlerim-3-doom-doom-ii-2024-paketi.7295/",
+      "imagePath": "/artwork/cldoomps.webp",
+      "identityEvidence": "Found by searching \"Doom PS box art\" in Bing Images and taking result 3; the image was checked against the catalog title \"Doom PS\" before use. Source page: https://www.technopat.net/sosyal/blog/deneyimlerim-3-doom-doom-ii-2024-paketi.7295/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "e915660702eaaf09b77ce3e7e17f3f4d783650f3873b355dea3f9db26451756d",
+      "visualVerification": "verified 2026-11-27: PlayStation Doom cover art carrying the PlayStation mark and the Doom logo, matching the PlayStation build this entry serves.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -15750,18 +15752,16 @@
         "simulation"
       ],
       "path": "/games/cleaglercraftshadow.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.youtube.com/shorts/4wcz_nGSEyo",
+      "imagePath": "/artwork/cleaglercraftshadow.webp",
+      "identityEvidence": "Found by searching \"Eaglercraft Shadow game screenshot\" in Bing Images and taking result 1; the image was checked against the catalog title \"Eaglercraft Shadow\" before use. Source page: https://www.youtube.com/shorts/4wcz_nGSEyo",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "no reachable remote distribution found"
-      ],
+      "sha256": "4e322d19f518e5161de654fda9af6e968e958063fe8cabc69d16b9b599675f74",
+      "visualVerification": "verified 2026-11-27: Eaglercraft client welcome screen naming Eaglercraft and its version, matching this client entry.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -16598,18 +16598,19 @@
         "racing"
       ],
       "path": "/games/clenduro.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.retroartgames.com.br/produtos/enduro/",
+      "imagePath": "/artwork/clenduro.webp",
+      "identityEvidence": "Found by searching \"Enduro box art\" in Bing Images and taking result 2; the image was checked against the catalog title \"Enduro\" before use. Source page: https://www.retroartgames.com.br/produtos/enduro/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "797871b843be987595d4bdeb2411c4fb122e027612750cf255bd11989e21623a",
+      "visualVerification": "verified 2026-11-27: Atari 2600 Enduro box front with the Enduro logo and racing car, matching the catalog title.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -17513,18 +17514,19 @@
         "rpg"
       ],
       "path": "/games/clff2ws.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://archive.org/details/final_fantasy_ii_red_wonderswan_color_box_art",
+      "imagePath": "/artwork/clff2ws.webp",
+      "identityEvidence": "Found by searching \"FF 2 WS box art\" in Bing Images and taking result 1; the image was checked against the catalog title \"FF 2 WS\" before use. Source page: https://archive.org/details/final_fantasy_ii_red_wonderswan_color_box_art",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "74beadc96e4ca2d419e9d41e526a8fe1efeca89e07a7ab1cbe88530ba67ad43d",
+      "visualVerification": "verified 2026-11-27: Final Fantasy II WonderSwan Color box front, matching the WS build this entry serves.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -17738,18 +17740,19 @@
         "rpg"
       ],
       "path": "/games/clfinalfantasy.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://gamesdb.launchbox-app.com/games/images/2701-final-fantasy",
+      "imagePath": "/artwork/clfinalfantasy.webp",
+      "identityEvidence": "Found by searching \"Final Fantasy box art\" in Bing Images and taking result 2; the image was checked against the catalog title \"Final Fantasy\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/2701-final-fantasy",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "bfd58e993bd646efd1b936444ae8ac22c4a0e0259b238e2b94f2477be9d6967f",
+      "visualVerification": "verified 2026-11-27: Original NES Final Fantasy box art with the Nintendo seal, matching this entry rather than a later remake.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -17938,18 +17941,19 @@
         "rpg"
       ],
       "path": "/games/clfinalfantasyVIId2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.deviantart.com/mockingraffy/art/Final-fantasy-vii-logo-920407814",
+      "imagePath": "/artwork/clfinalfantasyviid2.webp",
+      "identityEvidence": "Found by searching \"Final Fantasy VII D2 logo\" in Bing Images and taking result 2; the image was checked against the catalog title \"Final Fantasy VII D2\" before use. Source page: https://www.deviantart.com/mockingraffy/art/Final-fantasy-vii-logo-920407814",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "00e5ba9921d238e1b1a874b1765fab13dcd780b508337d1336d374abf4bc4491",
+      "visualVerification": "verified 2026-11-27: Final Fantasy VII logo on black, identifying the game this second-disc build belongs to.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -17959,18 +17963,19 @@
         "rpg"
       ],
       "path": "/games/clfinalfantasyVIId3.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://logos-world.net/final-fantasy-7-logo/",
+      "imagePath": "/artwork/clfinalfantasyviid3.webp",
+      "identityEvidence": "Found by searching \"Final Fantasy VII D3 logo\" in Bing Images and taking result 1; the image was checked against the catalog title \"Final Fantasy VII D3\" before use. Source page: https://logos-world.net/final-fantasy-7-logo/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "c6e9b07f3c1877d7905c95be190f2d75caf977ad696f0cbccd7b41f1370263ed",
+      "visualVerification": "verified 2026-11-27: Final Fantasy VII logo on a green field, identifying the game this third-disc build belongs to.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21668,18 +21673,19 @@
         "arcade"
       ],
       "path": "/games/clgameandwatchcollection.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://nintendo.miraheze.org/wiki/Game_&_Watch_Collection",
+      "imagePath": "/artwork/clgameandwatchcollection.webp",
+      "identityEvidence": "Found by searching \"Game & Watch Collection box art\" in Bing Images and taking result 1; the image was checked against the catalog title \"Game & Watch Collection\" before use. Source page: https://nintendo.miraheze.org/wiki/Game_&_Watch_Collection",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "4b50ba9ce3b58f69dafbde3ae6ad8957c4c57737c1192a79e5cd87822ca6e563",
+      "visualVerification": "verified 2026-11-27: Nintendo DS Game & Watch Collection box front, matching the DS collection this entry serves.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -27728,18 +27734,16 @@
         "adventure"
       ],
       "path": "/games/clknockknock.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.pushsquare.com/games/ps4/knock_knock",
+      "imagePath": "/artwork/clknockknock.webp",
+      "identityEvidence": "Found by searching \"Knock Knock game screenshot\" in Bing Images and taking result 1; the image was checked against the catalog title \"Knock Knock\" before use. Source page: https://www.pushsquare.com/games/ps4/knock_knock",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "67207744ad97837e6a18917cc2c963a9330bcb9fbc5f6d78a199354338d3e4c8",
+      "visualVerification": "verified 2026-11-27: Knock Knock gameplay showing its characters and the game's own site name, matching the horror game rather than a board game.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -28332,18 +28336,19 @@
         "action"
       ],
       "path": "/games/cllegostarwarsgba.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://visualboyadvance.org/gba-roms",
+      "imagePath": "/artwork/cllegostarwarsgba.webp",
+      "identityEvidence": "Found by searching \"LEGO Star Wars (GBA) logo\" in Bing Images and taking result 2; the image was checked against the catalog title \"LEGO Star Wars (GBA)\" before use. Source page: https://visualboyadvance.org/gba-roms",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "d51081437b9a481a6add603f605a448d59c63f973780ff33901ca221272f1ee0",
+      "visualVerification": "verified 2026-11-27: LEGO Star Wars: The Video Game Game Boy Advance box art, matching this GBA build rather than LEGO Star Wars II.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -30264,18 +30269,19 @@
         "casual"
       ],
       "path": "/games/clmarioparty.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.reddit.com/r/NintendoSwitchBoxArt/comments/o87mle/mario_party_superstar_cover_the_front_cover_is/",
+      "imagePath": "/artwork/clmarioparty.webp",
+      "identityEvidence": "Found by searching \"Mario Party box art\" in Bing Images and taking result 3; the image was checked against the catalog title \"Mario Party\" before use. Source page: https://www.reddit.com/r/NintendoSwitchBoxArt/comments/o87mle/mario_party_superstar_cover_the_front_cover_is/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "e8bb6094d37f4fadad4be726d89d2719d828cf23d5b43453534aa47e855f888c",
+      "visualVerification": "verified 2026-11-27: Nintendo 64 Mario Party box art, matching this entry rather than a later Mario Party game.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -31161,18 +31167,19 @@
         "strategy"
       ],
       "path": "/games/clmegamanbn6cf.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.steamgriddb.com/logo/22775",
+      "imagePath": "/artwork/clmegamanbn6cf.webp",
+      "identityEvidence": "Found by searching \"Mega Man BN 6 CF logo\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mega Man BN 6 CF\" before use. Source page: https://www.steamgriddb.com/logo/22775",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "be3ef5eb65a69bc1516302648acdcbc375cf8eda120f46fbd5292b0f65299a63",
+      "visualVerification": "verified 2026-11-27: Mega Man Battle Network 6 Cybeast Falzar logo, matching the CF build this entry serves rather than Gregar.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -31446,18 +31453,19 @@
         "platformer"
       ],
       "path": "/games/clmegaman.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://famiboards.com/threads/nintendo-direct-speculation-st10-everybody-1-2-switch-directs-switch-2-direct-april-2nd-6am-pst-9am-et-new-staff-post-please-read.12257/page-407",
+      "imagePath": "/artwork/clmegaman.webp",
+      "identityEvidence": "Found by searching \"Mega Man box art\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mega Man\" before use. Source page: https://famiboards.com/threads/nintendo-direct-speculation-st10-everybody-1-2-switch-directs-switch-2-direct-april-2nd-6am-pst-9am-et-new-staff-post-please-read.12257/page-407",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "8e7d1163c5d02986baa650a7143fd58cd0c1b9675e557c3f2dbbc12e92d4025e",
+      "visualVerification": "verified 2026-11-27: Original NES Mega Man box art with the Capcom and Nintendo marks, matching this entry rather than a sequel.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -34178,18 +34186,19 @@
         "simulation"
       ],
       "path": "/games/clnovaclient.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "no reachable remote distribution found"
-      ],
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.figma.com/community/tag/nova/files",
+      "imagePath": "/artwork/clnovaclient.webp",
+      "identityEvidence": "Found by searching \"Nova Client logo\" in Bing Images and taking result 2; the image was checked against the catalog title \"Nova Client\" before use. Source page: https://www.figma.com/community/tag/nova/files",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "0ccd48099375225be8f79ac5d6aa8c84792c4312f483a603791ab3ca1b1a5e60",
+      "visualVerification": "verified 2026-11-27: Nova Client launcher screen showing the client name and version, matching this client entry.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -36499,18 +36508,19 @@
         "adventure"
       ],
       "path": "/games/clpersona.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "http://strategywiki.org/wiki/Shin_Megami_Tensei:_Persona",
+      "imagePath": "/artwork/clpersona.webp",
+      "identityEvidence": "Found by searching \"Persona box art\" in Bing Images and taking result 2; the image was checked against the catalog title \"Persona\" before use. Source page: http://strategywiki.org/wiki/Shin_Megami_Tensei:_Persona",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "6fdc281b960ceb4a83eace2be02d70d22d5d55000978302daf18a2c8238ae2cb",
+      "visualVerification": "verified 2026-11-27: Original Persona PlayStation cover with the Persona wordmark, matching this entry rather than Persona 5.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -40948,18 +40958,19 @@
         "sports"
       ],
       "path": "/games/clprowrestling.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.mobygames.com/game/8057/pro-wrestling/covers/",
+      "imagePath": "/artwork/clprowrestling.webp",
+      "identityEvidence": "Found by searching \"Pro Wrestling box art\" in Bing Images and taking result 1; the image was checked against the catalog title \"Pro Wrestling\" before use. Source page: https://www.mobygames.com/game/8057/pro-wrestling/covers/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "94535ce863cd0b2f6d0c98f0e753c75a5a48a13165235bd2e16151433114a936",
+      "visualVerification": "verified 2026-11-27: NES Pro Wrestling box art with the Nintendo seal, matching the original title.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -42016,18 +42027,19 @@
         "platformer"
       ],
       "path": "/games/clrayman.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.video-games-museum.com/en/game/Rayman/31/2/12004/boxarts",
+      "imagePath": "/artwork/clrayman.webp",
+      "identityEvidence": "Found by searching \"Rayman box art\" in Bing Images and taking result 2; the image was checked against the catalog title \"Rayman\" before use. Source page: https://www.video-games-museum.com/en/game/Rayman/31/2/12004/boxarts",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "e6757aa3c89879019ac16c4b6dce4ce7bade2bf07502a01470511431916db7e3",
+      "visualVerification": "verified 2026-11-27: Original Rayman PlayStation box art with the Rayman logo, matching this entry rather than a later Rayman game.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -43783,18 +43795,16 @@
         "adventure"
       ],
       "path": "/games/clrosegold.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.youtube.com/watch?v=KplsiKweIhA",
+      "imagePath": "/artwork/clrosegold.webp",
+      "identityEvidence": "Found by searching \"Rose Gold game screenshot\" in Bing Images and taking result 2; the image was checked against the catalog title \"Rose Gold\" before use. Source page: https://www.youtube.com/watch?v=KplsiKweIhA",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "fb9ebd4797c700f4230f9f2a609fe66e2b5a4412e023e2e9396e98a3791bad4e",
+      "visualVerification": "verified 2026-11-27: Pokemon Rose Gold title screen with the ROM hack's name and starter, matching this entry.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -48186,18 +48196,16 @@
         "platformer"
       ],
       "path": "/games/clslimelabratory.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/jackilyna/html2canvas@886eb08b82fdb8227b9d36f4132eb01329217c76/examples/",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://gamingkool.com/slime-laboratory/",
+      "imagePath": "/artwork/clslimelabratory.webp",
+      "identityEvidence": "Found by searching \"Slime Laboratory game screenshot\" in Bing Images and taking result 2; the image was checked against the catalog title \"Slime Laboratory\" before use. Source page: https://gamingkool.com/slime-laboratory/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "f1e043bd1aa1f4d1dad6c129ea9ce722f614674b43e6a89405c0ded3672835d5",
+      "visualVerification": "verified 2026-11-27: Slime Laboratory gameplay with the game's name in its own HUD and the green slime character.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -55491,18 +55499,16 @@
         "multiplayer"
       ],
       "path": "/games/cltag-.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://tag-game.en.softonic.com/chrome/extension",
+      "imagePath": "/artwork/cltag.webp",
+      "identityEvidence": "Found by searching \"Tag game screenshot\" in Bing Images and taking result 1; the image was checked against the catalog title \"Tag\" before use. Source page: https://tag-game.en.softonic.com/chrome/extension",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "no reachable remote distribution found"
-      ],
+      "sha256": "3281ebe36cc9ae30457a60346c968092ad3796345a6f1c59d5ef02b1aeb628cf",
+      "visualVerification": "verified 2026-11-27: TAG title screen with its player-count menu, matching the arcade-style Tag game.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -60183,7 +60189,10 @@
       "imagePath": "/artwork/clwarioland1.webp",
       "identityEvidence": "Found by searching \"Wario Land 1 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Wario Land 1\" before use. Source page: https://mario.fandom.com/de/wiki/Wario_Land-Serie",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "f201bb742e8d7f4034a05076dc4aff5256e46d8d62c532b166f6464019f40059",
       "visualVerification": "verified 2026-11-27: Wario Land: Super Mario Land 3 box art; results 1 and 2 were other Wario titles.",
       "methodsInvestigated": [],
@@ -60202,7 +60211,10 @@
       "imagePath": "/artwork/clwarioland3.webp",
       "identityEvidence": "Found by searching \"Wario Land 3 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Wario Land 3\" before use. Source page: https://www.imdb.com/title/tt0283676/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "46cfa617d8492a17600bad9a3f4074cba0209e234ce576f3cc67f9b91ec4377a",
       "visualVerification": "verified 2026-11-27: Wario Land 3 art without the platform band.",
       "methodsInvestigated": [],
@@ -60221,7 +60233,10 @@
       "imagePath": "/artwork/clwarioland4.webp",
       "identityEvidence": "Found by searching \"Wario Land 4 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Wario Land 4\" before use. Source page: https://famiboards.com/threads/the-2025-completed-games-thread.12088/page-7",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "a80a97a83e4c6b16a9bb1b540dd77ba83aaffc130e14a566e4e4ab8c7146181d",
       "visualVerification": "verified 2026-11-27: Wario Land 4 key art.",
       "methodsInvestigated": [],
@@ -60240,7 +60255,10 @@
       "imagePath": "/artwork/clwariowarediy.webp",
       "identityEvidence": "Found by searching \"WarioWare DIY game\" in Bing Images and taking result 2; the image was checked against the catalog title \"WarioWare DIY\" before use. Source page: https://www.nintendo.com/en-gb/Games/Nintendo-DS/WarioWare-Do-It-Yourself-273542.html",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "00280314a690f0f8c9fe8f54d018c478aa397364185934c87df4b7972961e7b2",
       "visualVerification": "verified 2026-11-27: WarioWare D.I.Y. banner art.",
       "methodsInvestigated": [],
@@ -60259,7 +60277,10 @@
       "imagePath": "/artwork/clwariowareinc.webp",
       "identityEvidence": "Found by searching \"WarioWare Inc game\" in Bing Images and taking result 3; the image was checked against the catalog title \"WarioWare Inc\" before use. Source page: https://www.nintendo.com/en-gb/Games/Game-Boy-Advance/WarioWare-Inc-Minigame-Mania-267607.html?ref=pelitietofi",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "18df053f417fc5af4b9903270b35299a841e757a20967e2afcaac8646a7bcd78",
       "visualVerification": "verified 2026-11-27: WarioWare Inc: Minigame Mania art.",
       "methodsInvestigated": [],
@@ -60278,7 +60299,10 @@
       "imagePath": "/artwork/clwaterpoolio.webp",
       "identityEvidence": "Found by searching \"Water Pool.io game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Water Pool.io\" before use. Source page: https://puzzio.io/game/water-pool-heroes-io",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "3278ea90aa150751bcffc8388bb6f0d169229187d964c655dbac2f36fb2d8c44",
       "visualVerification": "verified 2026-11-27: Water Pool Heroes.io logo art.",
       "methodsInvestigated": [],
@@ -60297,7 +60321,10 @@
       "imagePath": "/artwork/clwaterworks.webp",
       "identityEvidence": "Found by searching \"Waterworks game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Waterworks\" before use. Source page: https://ubgames.uk/games-a-z/w",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "221f7a14e62f2a61546856559d225c47b5ff2e07945344364fc73c51d7f71fbc",
       "visualVerification": "verified 2026-11-27: Water Works logo art.",
       "methodsInvestigated": [],
@@ -60341,7 +60368,10 @@
       "imagePath": "/artwork/clwaverace64.webp",
       "identityEvidence": "Found by searching \"Wave Race 64 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Wave Race 64\" before use. Source page: https://www.ign.com/games/wave-race-64",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "507deabc5eedf4bbbaff28965f40e4dc13d409e54d6e798c75250f4c62cae720",
       "visualVerification": "verified 2026-11-27: Wave Race 64 box art.",
       "methodsInvestigated": [],
@@ -60385,7 +60415,10 @@
       "imagePath": "/artwork/clwbml.webp",
       "identityEvidence": "Found by searching \"WBML game\" in Bing Images and taking result 1; the image was checked against the catalog title \"WBML\" before use. Source page: https://www.playretrogames.com/5739-wheel-of-fortune",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "698f8a3ce080daa1c7e8edc00bcb1f736bec93d3c1d9ecf5195ff9cae5796524",
       "visualVerification": "verified 2026-11-27: WBML gameplay with its HUD.",
       "methodsInvestigated": [],
@@ -60429,7 +60462,10 @@
       "imagePath": "/artwork/clwermhole.webp",
       "identityEvidence": "Found by searching \"Wormhole game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Wormhole\" before use. Source page: https://store.steampowered.com/app/2671590/WORMHOLE/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "8724c371c4b454046f72c5695fe3fd05523dfe6cf6fe71566bb6554370675086",
       "visualVerification": "verified 2026-11-27: Wormhole arcade board art.",
       "methodsInvestigated": [],
@@ -60448,7 +60484,10 @@
       "imagePath": "/artwork/clwebdashers.webp",
       "identityEvidence": "Found by searching \"Webdashers game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Webdashers\" before use. Source page: https://browsergamesnow.com/es/games/web-dashers",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "76eec28d63d6f9a8a813e087f94d3fec242db4b09d130363b3d084a49f14afba",
       "visualVerification": "verified 2026-11-27: Web Dashers title menu.",
       "methodsInvestigated": [],
@@ -60467,7 +60506,10 @@
       "imagePath": "/artwork/clwebfishing.webp",
       "identityEvidence": "Found by searching \"Web Fishing game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Web Fishing\" before use. Source page: https://store.steampowered.com/app/3146520/WEBFISHING/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "ca450ce06d2c4a96eb5e240267c985102c79879112d08def21fe11130383b584",
       "visualVerification": "verified 2026-11-27: Webfishing logo art.",
       "methodsInvestigated": [],
@@ -60507,7 +60549,10 @@
       "imagePath": "/artwork/clwhackthetheif.webp",
       "identityEvidence": "Found by searching \"Whack the Thief game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Whack the Thief\" before use. Source page: https://apkpure.com/id/whack-the-thief/com.box10.dontwhackthethief/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "8936aa54ccb44c6b203d66284420e6d5e74cb345e6155f67d6c919dacf329e92",
       "visualVerification": "verified 2026-11-27: Whack the Thief art.",
       "methodsInvestigated": [],
@@ -60526,7 +60571,10 @@
       "imagePath": "/artwork/clwhackyourboss.webp",
       "identityEvidence": "Found by searching \"Whack Your Boss game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Whack Your Boss\" before use. Source page: https://www.numuki.com/game/whack-your-boss/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "bb3593f0604d53023d9618e2a2c1b3d1378ccef60f426ad3e2b575fbbc363154",
       "visualVerification": "verified 2026-11-27: Whack Your Boss scene art.",
       "methodsInvestigated": [],
@@ -60545,7 +60593,10 @@
       "imagePath": "/artwork/clwhackyourcomputer.webp",
       "identityEvidence": "Found by searching \"Whack Your Computer game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Whack Your Computer\" before use. Source page: https://ocean-of-games.com/game/356717/whack-your-computer",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "61e53c04b158424e0dcb9c6388d81d51c5d8f638dc0da029cd05508662ca1bef",
       "visualVerification": "verified 2026-11-27: Whack Your Computer scene art.",
       "methodsInvestigated": [],
@@ -60564,7 +60615,10 @@
       "imagePath": "/artwork/clwhatamarioworld.webp",
       "identityEvidence": "Found by searching \"What a Mario World game\" in Bing Images and taking result 1; the image was checked against the catalog title \"What a Mario World\" before use. Source page: https://www.ign.com/games/super-mario-world/gameplay",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "04c944910f54fdfb5b9e60d3bc852090bd6d10f9e1a41b8375835e4bae116920",
       "visualVerification": "verified 2026-11-27: Super Mario World art for this build.",
       "methodsInvestigated": [],
@@ -60808,7 +60862,10 @@
       "imagePath": "/artwork/clwilywars--1.webp",
       "identityEvidence": "Found by searching \"Mega Man: The Wily Wars game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Mega Man: The Wily Wars\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/2167-mega-man-the-wily-wars",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "ec4d8c5f0c5f88c159a06959771e90d9680c47f39d28f8aa59c0b8a55d3dc1dc",
       "visualVerification": "verified 2026-11-27: Mega Man: The Wily Wars box art, kept distinct from the wide key art.",
       "methodsInvestigated": [],
@@ -60827,7 +60884,10 @@
       "imagePath": "/artwork/clwindowsdoors.webp",
       "identityEvidence": "Found by searching \"Windows Doors game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Windows Doors\" before use. Source page: https://www.windowscentral.com/doors-windows-phone-solve-puzzle-and-unlock-passage",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "94a87b8c755dae771f1e2714df0cb0088e6a540b8fb8442884d0148f3f503cd8",
       "visualVerification": "verified 2026-11-27: Doors gameplay menu.",
       "methodsInvestigated": [],
@@ -60865,18 +60925,16 @@
         "sports"
       ],
       "path": "/games/winterolympics.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://gamesdb.launchbox-app.com/games/images/155966-winter-olympics",
+      "imagePath": "/artwork/winterolympics.webp",
+      "identityEvidence": "Found by searching \"Winter Olympics game screenshot\" in Bing Images and taking result 1; the image was checked against the catalog title \"Winter Olympics\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/155966-winter-olympics",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "21e3b612912676980b1c9746c8b534e74b26573972b451a47191f3ebb8abdde9",
+      "visualVerification": "verified 2026-11-27: Winter Olympics title screen with the event list, matching the classic game rather than ceremony photographs.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -60892,7 +60950,10 @@
       "imagePath": "/artwork/clwipeout2097.webp",
       "identityEvidence": "Found by searching \"Wipeout 2097 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Wipeout 2097\" before use. Source page: https://wipeout.fandom.com/wiki/Wipeout_2097",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "f081fc208da36794dc0064af3f8b45319c55cc63cf1485af8e54b1efd66ae419",
       "visualVerification": "verified 2026-11-27: Wipeout 2097 PAL box art, kept distinct from the Japanese release.",
       "methodsInvestigated": [],
@@ -60911,7 +60972,10 @@
       "imagePath": "/artwork/clwipeout2097alt.webp",
       "identityEvidence": "Found by searching \"Wipeout 2097 (Alt) game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Wipeout 2097 (Alt)\" before use. Source page: https://strategywiki.org/wiki/Wipeout_2097",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "5b48ffe08bbc12d6404ffd5e20a1f084be65f7e7a6ea2ee0294c69818048f5ef",
       "visualVerification": "verified 2026-11-27: Wipeout 2097 box art, kept distinct from the PAL cover.",
       "methodsInvestigated": [],
@@ -60930,7 +60994,10 @@
       "imagePath": "/artwork/clwitchcrafttd.webp",
       "identityEvidence": "Found by searching \"Witchcraft TD game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Witchcraft TD\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/404615-witchcraft-td",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "b8d121a4b0c03b6254829569dc3ce91238a99bfcbf6fd21908a855c7f595afc0",
       "visualVerification": "verified 2026-11-27: WitchCraft TD cart art.",
       "methodsInvestigated": [],
@@ -60949,7 +61016,10 @@
       "imagePath": "/artwork/wolfchild.webp",
       "identityEvidence": "Found by searching \"Wolf Child game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Wolf Child\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/24659-wolfchild",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "486d8692e297d1b9de196c33f6ab3f7645b725649b3e5fd9f247b120dad8d550",
       "visualVerification": "verified 2026-11-27: WolfChild SNES box art.",
       "methodsInvestigated": [],
@@ -60968,7 +61038,10 @@
       "imagePath": "/artwork/clwolfenstein.webp",
       "identityEvidence": "Found by searching \"Wolfenstein game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Wolfenstein\" before use. Source page: https://www.ign.com/wikis/wolfenstein",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "395e154b515f4ce0b2dc96c2d8e91ec14b42cd3695efd544449481a6036acb13",
       "visualVerification": "verified 2026-11-27: Wolfenstein Xbox 360 cover art; result 1 was The New Colossus.",
       "methodsInvestigated": [],
@@ -60987,7 +61060,10 @@
       "imagePath": "/artwork/clwolfenstein3d.webp",
       "identityEvidence": "Found by searching \"Wolfenstein 3D game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Wolfenstein 3D\" before use. Source page: https://wolfenstein.fandom.com/wiki/Wolfenstein_3D_Classic",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "cbda55e81fe98c6c96f53c957511afe45c588ab6da6e14d35d1e5da42fed92a0",
       "visualVerification": "verified 2026-11-27: Wolfenstein 3-D box art.",
       "methodsInvestigated": [],
@@ -61006,7 +61082,10 @@
       "imagePath": "/artwork/clwonderboy3.webp",
       "identityEvidence": "Found by searching \"Wonder Boy 3 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Wonder Boy 3\" before use. Source page: https://segabits.com/blog/2016/06/02/wonder-boy-iii-the-dragons-trap-remake-revealed/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "c1a146fff263ebb8f39c036cf0b857c3e24f107693fceae11978c3807dc14486",
       "visualVerification": "verified 2026-11-27: Wonder Boy: The Dragon's Trap logo art.",
       "methodsInvestigated": [],
@@ -61025,7 +61104,10 @@
       "imagePath": "/artwork/clwonderboyarcade.webp",
       "identityEvidence": "Found by searching \"Wonder Boy Arcade game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Wonder Boy Arcade\" before use. Source page: https://www.nintendolife.com/games/arcade/wonder_boy",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "b08378b000c85eef9b8c3c4b5847127d7032c13c64d6fce65e9786c173a38f58",
       "visualVerification": "verified 2026-11-27: Wonder Boy arcade gameplay.",
       "methodsInvestigated": [],
@@ -61044,7 +61126,10 @@
       "imagePath": "/artwork/clwoodworm.webp",
       "identityEvidence": "Found by searching \"Woodworm game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Woodworm\" before use. Source page: https://www.5mgsite.com/post/woodworm-download-game",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "dbb3778e9fb744d8173be04ee24357eee3edc41d443eedb8a0632d3e27ebebd5",
       "visualVerification": "verified 2026-11-27: Wood Worm PICO-8 cart art.",
       "methodsInvestigated": [],
@@ -61085,7 +61170,10 @@
       "imagePath": "/artwork/clworldcup98.webp",
       "identityEvidence": "Found by searching \"World Cup 98 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"World Cup 98\" before use. Source page: https://www.kodromagazine.com/fifa-98-road-to-world-cup/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "305f75a5144bcb23d58554a68ddf032e948cc8276081f70e25250d96e5e31e39",
       "visualVerification": "verified 2026-11-27: World Cup 98 PlayStation box art.",
       "methodsInvestigated": [],
@@ -61104,7 +61192,10 @@
       "imagePath": "/artwork/clworldshardestgame.webp",
       "identityEvidence": "Found by searching \"World's Hardest Game game\" in Bing Images and taking result 3; the image was checked against the catalog title \"World's Hardest Game\" before use. Source page: https://poki.com/zh/g/worlds-hardest-game",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "e843bba149be255d45ea411d77693cc599cabfde571dcf56feae9457165ab9ae",
       "visualVerification": "verified 2026-11-27: The World's Hardest Game level art.",
       "methodsInvestigated": [],
@@ -61173,7 +61264,10 @@
       "imagePath": "/artwork/clworldshardestgame4.webp",
       "identityEvidence": "Found by searching \"World's Hardest Game 4 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"World's Hardest Game 4\" before use. Source page: https://worldshardest-game.com/worlds-hardest-game-4/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "f05dfa7478ef2be914d6733ff8a372b9b75dae530c5d16bb9fee1d055901dbce",
       "visualVerification": "verified 2026-11-27: World's Hardest Game 4 title art.",
       "methodsInvestigated": [],
@@ -61242,7 +61336,10 @@
       "imagePath": "/artwork/clwreckingcrew.webp",
       "identityEvidence": "Found by searching \"Wrecking Crew game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Wrecking Crew\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/303-wrecking-crew",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "f389705e18317da43da1d38f816ac480f0c5ea4eb2221ef8616e059b83cb3dd7",
       "visualVerification": "verified 2026-11-27: Wrecking Crew NES box art.",
       "methodsInvestigated": [],
@@ -61286,7 +61383,10 @@
       "imagePath": "/artwork/clwwfattitude.webp",
       "identityEvidence": "Found by searching \"WWF Attitude game\" in Bing Images and taking result 3; the image was checked against the catalog title \"WWF Attitude\" before use. Source page: https://www.lukiegames.com/WWF-Attitude-Sony-Playstation-Game.html",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "65981f0672b958b15352bca07ba4f85d9dcdae2c288cf956134f7c1374f4dbc4",
       "visualVerification": "verified 2026-11-27: WWF Attitude PlayStation box art.",
       "methodsInvestigated": [],
@@ -61305,7 +61405,10 @@
       "imagePath": "/artwork/clwwfsmackdown2.webp",
       "identityEvidence": "Found by searching \"WWF Smackdown 2 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"WWF Smackdown 2\" before use. Source page: https://www.pushsquare.com/games/ps1/wwf_smackdown_2_know_your_role",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "200bfc091e35057a0e824451e08db243f828fafa0c5183c9a81d389bf9a29abd",
       "visualVerification": "verified 2026-11-27: WWF SmackDown! 2 cover art.",
       "methodsInvestigated": [],
@@ -61324,7 +61427,10 @@
       "imagePath": "/artwork/clxmenvsstreetfighter.webp",
       "identityEvidence": "Found by searching \"X-Men vs Street Fighter game\" in Bing Images and taking result 1; the image was checked against the catalog title \"X-Men vs Street Fighter\" before use. Source page: https://www.nintendolife.com/games/arcade/x-men_vs_street_fighter",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "291053fbd06e26c92d2370c96ae86e8f1d348934bdd548711729ac69f524560a",
       "visualVerification": "verified 2026-11-27: X-Men vs Street Fighter arcade marquee art.",
       "methodsInvestigated": [],
@@ -61343,7 +61449,10 @@
       "imagePath": "/artwork/clxmenchildrenoftheatomarcade.webp",
       "identityEvidence": "Found by searching \"X-Men: Children of the Atom game\" in Bing Images and taking result 1; the image was checked against the catalog title \"X-Men: Children of the Atom\" before use. Source page: https://www.thevideogamecompany.com/products/x-men-children-of-the-atom-sony-playstation-1-ps1",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "62ed99eebe7e6c40dcfbcd14a5eabc1e96dcb0748a48caffcf53e179a79432c8",
       "visualVerification": "verified 2026-11-27: X-Men: Children of the Atom PlayStation box art.",
       "methodsInvestigated": [],
@@ -61362,7 +61471,10 @@
       "imagePath": "/artwork/clxevent.webp",
       "identityEvidence": "Found by searching \"Xevent game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Xevent\" before use. Source page: https://www.fridaynightfunkin.net/fnf-the-x-event/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "0f362ee6b90764b66588bf2039c23d2e5464f3fb58c45a20472dd835550c4886",
       "visualVerification": "verified 2026-11-27: Friday Night Funkin' XEVENT title art.",
       "methodsInvestigated": [],
@@ -61381,7 +61493,10 @@
       "imagePath": "/artwork/clxevious.webp",
       "identityEvidence": "Found by searching \"Xevious game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Xevious\" before use. Source page: https://clouddosage.com/games/xevious/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "3e8c3f38cb685003c8d2befa4e918b68aab6a319db8d3cd25167132aa1d19085",
       "visualVerification": "verified 2026-11-27: Xevious gameplay with its title.",
       "methodsInvestigated": [],
@@ -61400,7 +61515,10 @@
       "imagePath": "/artwork/clxmenarcade.webp",
       "identityEvidence": "Found by searching \"X-Men Arcade game\" in Bing Images and taking result 1; the image was checked against the catalog title \"X-Men Arcade\" before use. Source page: https://www.empocorp.com/entertainment/x-men-arcade-game-1992-free-download.html",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "8977551322d1923a36ea8bfb4272725e34fca26b65937f01673f1abd81fd723f",
       "visualVerification": "verified 2026-11-27: X-Men arcade cabinet.",
       "methodsInvestigated": [],
@@ -61444,7 +61562,10 @@
       "imagePath": "/artwork/clyanderesimulator.webp",
       "identityEvidence": "Found by searching \"Yandere Simulator game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Yandere Simulator\" before use. Source page: https://apkpure.com/de/yandere-school-simulation-game/com.yanderefantasy.yanderesimulationaigirlfriend",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "b06f9824b2ea82533e2ea15776a80a92b0721b16d18d828238a552b21e039bf3",
       "visualVerification": "verified 2026-11-27: Yandere Simulator key art.",
       "methodsInvestigated": [],
@@ -61463,7 +61584,10 @@
       "imagePath": "/artwork/clyarsrevenge.webp",
       "identityEvidence": "Found by searching \"Yar's Revenge game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Yar's Revenge\" before use. Source page: https://www.ign.com/games/yars-revenge-1981/walkthroughs",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "d1eaa1c7fdac1657cc244b21bcb273246aa655e61e17a76e081c6c97e47f989d",
       "visualVerification": "verified 2026-11-27: Yars' Revenge art.",
       "methodsInvestigated": [],
@@ -61482,7 +61606,10 @@
       "imagePath": "/artwork/clyellow.webp",
       "identityEvidence": "Found by searching \"Yellow game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Yellow\" before use. Source page: https://storage.googleapis.com/didueedskejpue/what-is-the-baby-in-yellow-game.html",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "c05e98088bcf4ad010862bf421f91b1a5b66abb974296424e069e7bcd3d61e47",
       "visualVerification": "verified 2026-11-27: The Baby In Yellow gameplay.",
       "methodsInvestigated": [],
@@ -61526,7 +61653,10 @@
       "imagePath": "/artwork/clyoshisstrangequest.webp",
       "identityEvidence": "Found by searching \"Yoshi's Strange Quest game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Yoshi's Strange Quest\" before use. Source page: https://status.technobezz.com/yoshis-strange-quest",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "654750279468c4c2e8dce461aafa6246c70afefe3b1c22f9b50c0f09aad0df00",
       "visualVerification": "verified 2026-11-27: Yoshi's Strange Quest box art.",
       "methodsInvestigated": [],
@@ -61545,7 +61675,10 @@
       "imagePath": "/artwork/clyouarelucky.webp",
       "identityEvidence": "Found by searching \"You Are Lucky game\" in Bing Images and taking result 2; the image was checked against the catalog title \"You Are Lucky\" before use. Source page: https://jayisgames.com/review/you-are-lucky.php",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "428d9f308a7d8cd37d31c59c9b556e57d8f4a823c4ab448e987bd44e567b1cb5",
       "visualVerification": "verified 2026-11-27: You are Lucky! logo art.",
       "methodsInvestigated": [],
@@ -61589,7 +61722,10 @@
       "imagePath": "/artwork/clyourturntodie.webp",
       "identityEvidence": "Found by searching \"Your Turn to Die game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Your Turn to Die\" before use. Source page: https://store.steampowered.com/news/app/2067780/view/3666529090612312583",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "a76af9b149532d86a33e6a20985580d335263fafb371c69f021388ec6501ef55",
       "visualVerification": "verified 2026-11-27: Your Turn to Die key art with its cast.",
       "methodsInvestigated": [],
@@ -61608,7 +61744,10 @@
       "imagePath": "/artwork/clyumenikki.webp",
       "identityEvidence": "Found by searching \"Yume Nikki game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Yume Nikki\" before use. Source page: https://gamesystemrequirements.com/game/yume-nikki",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "03ceddabc669bea529bf758dfe3daa60897749d7b19f5c722c1a33c6d3ddb2d8",
       "visualVerification": "verified 2026-11-27: Yume Nikki title art.",
       "methodsInvestigated": [],
@@ -61627,7 +61766,10 @@
       "imagePath": "/artwork/clzdoom.webp",
       "identityEvidence": "Found by searching \"ZDoom game\" in Bing Images and taking result 2; the image was checked against the catalog title \"ZDoom\" before use. Source page: https://forum.zdoom.org/viewtopic.php?t=60089",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "95c5748aec415ba39b0d83abc3b6c6acffdd6e068f361698634fcb1c6a9895da",
       "visualVerification": "verified 2026-11-27: Doom gameplay with its HUD.",
       "methodsInvestigated": [],
@@ -61646,7 +61788,10 @@
       "imagePath": "/artwork/clzelda2thelegendoflink.webp",
       "identityEvidence": "Found by searching \"Zelda 2: The Legend of Link game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Zelda 2: The Legend of Link\" before use. Source page: https://www.nintendo.com/us/explore/characters/zelda/history/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "70becf0537a02d71cf66f6bd7740c67b96a78fbc86e58216a2d7f26393f4df90",
       "visualVerification": "verified 2026-11-27: Zelda II: The Adventure of Link box art.",
       "methodsInvestigated": [],
@@ -61665,7 +61810,10 @@
       "imagePath": "/artwork/clzeldaindigoch2.webp",
       "identityEvidence": "Found by searching \"Zelda Indigoch 2 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Zelda Indigoch 2\" before use. Source page: https://thegamesdb.net/game.php?id=130635",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "63949416c1202526d9c2b819d83d9600c75e9a7fb2f33e586a35f7ddf13f511c",
       "visualVerification": "verified 2026-11-27: Zelda Indigo Chapter 2 logo art.",
       "methodsInvestigated": [],
@@ -61684,7 +61832,10 @@
       "imagePath": "/artwork/clzeldaminishcap.webp",
       "identityEvidence": "Found by searching \"Zelda: The Minish Cap game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Zelda: The Minish Cap\" before use. Source page: https://www.nintendo.com/en-gb/Games/Game-Boy-Advance/The-Legend-of-Zelda-The-Minish-Cap-267486.html",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "19e261d676cb7a4b384d37fc39d1d2720d82c891ed8556e8d941ce61bf0775e7",
       "visualVerification": "verified 2026-11-27: The Minish Cap key art.",
       "methodsInvestigated": [],
@@ -61703,7 +61854,10 @@
       "imagePath": "/artwork/clzenword.webp",
       "identityEvidence": "Found by searching \"Zen Word game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Zen Word\" before use. Source page: https://play.google.com/store/apps/details?id=kidultlovin.word.zen&hl=en-US",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "8bde9aafba4017aa341931856774e162dc7b8d783a966ead80eca1f06e4b1dcc",
       "visualVerification": "verified 2026-11-27: Zen Word logo art.",
       "methodsInvestigated": [],
@@ -61747,7 +61901,10 @@
       "imagePath": "/artwork/clzoinkz.webp",
       "identityEvidence": "Found by searching \"Zoinkz game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Zoinkz\" before use. Source page: https://www.hackedfreegames.com/game/4251/zoikz-defender",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "72d89522fadd077699969e9a0348be8238120e8c4568ed750a5e28d5211a9c1c",
       "visualVerification": "verified 2026-11-27: Zoinkz title art.",
       "methodsInvestigated": [],
@@ -61766,7 +61923,10 @@
       "imagePath": "/artwork/clzombieexploder.webp",
       "identityEvidence": "Found by searching \"Zombie Exploder game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Zombie Exploder\" before use. Source page: https://apkpure.com/zombie-exploder/com.minko.zombie",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "70b82d981c6ec1a2b194549fffc97cf7fadd31b16a8508d04b3681ed21898183",
       "visualVerification": "verified 2026-11-27: Zombie Exploder store art.",
       "methodsInvestigated": [],
@@ -61835,7 +61995,10 @@
       "imagePath": "/artwork/clzombiesatemyneighboors.webp",
       "identityEvidence": "Found by searching \"Zombies Ate My Neighbors game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Zombies Ate My Neighbors\" before use. Source page: https://freebie.games/games/zombies-ate-my-neighbors/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "b2c8cecca0781e8dc554ed82bd8274fed5089c07ee1237de5ebcac3ea289c4c0",
       "visualVerification": "verified 2026-11-27: Zombies Ate My Neighbors SNES box art.",
       "methodsInvestigated": [],
@@ -61954,7 +62117,10 @@
       "imagePath": "/artwork/clzrist.webp",
       "identityEvidence": "Found by searching \"Zrist game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Zrist\" before use. Source page: https://keygames.com/game/zrist-dx/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "bf729353c8802f0c557f938b66b1ae92ad4b51eac934ee9773dfff29f4b0d987",
       "visualVerification": "verified 2026-11-27: Zrist DX logo art.",
       "methodsInvestigated": [],

@@ -92,8 +92,18 @@ test('the committed changelog holds the real merged history', () => {
     assert.ok(!/prompt|codebuff|\bAI\b|supabase\.co|service_role/i.test(entry.summary), `PR ${entry.pr} summary is safe`);
   }
   const latest = entries[0];
-  assert.equal(latest.pr, 13);
-  assert.deepEqual(formatEastern(latest.mergedAt), { date: 'November 27, 2026', time: '12:03 PM EST' });
+  assert.equal(latest.pr, 14);
+  assert.deepEqual(formatEastern(latest.mergedAt), { date: 'November 27, 2026', time: '4:38 PM EST' });
+  assert.ok(!entries.some((entry) => entry.pr === 15), 'an unmerged pull request is not listed');
+});
+
+test('the Changelog offers both sort directions and no sorting explanation', () => {
+  const component = readFileSync('src/components/Changelog.tsx', 'utf8');
+  assert.match(component, /<option value="newest">Newest first<\/option>/);
+  assert.match(component, /<option value="oldest">Oldest first<\/option>/);
+  assert.match(component, /useState<SortOrder>\('newest'\)/, 'newest first is the default');
+  assert.ok(!/Times are Eastern/.test(component), 'the explanatory line is gone');
+  assert.ok(!/Newest first\. Times/.test(component));
 });
 
 test('Changelog is the last Settings tab and its own component renders the list', () => {
@@ -103,7 +113,7 @@ test('Changelog is the last Settings tab and its own component renders the list'
   const labels = [...tabs.matchAll(/label: '([^']+)'/g)].map((match) => match[1]);
   assert.equal(labels.at(-1), 'Changelog');
   assert.ok(labels.length >= 4, 'existing tabs are preserved');
-  assert.deepEqual(labels.slice(0, 3), ['Theme', 'Preferences', 'Tab appearance']);
+  assert.deepEqual(labels.slice(0, 3), ['Theme', 'Appearance', 'Preferences']);
 
   const component = readFileSync('src/components/Changelog.tsx', 'utf8');
   assert.match(component, /formatEastern/);

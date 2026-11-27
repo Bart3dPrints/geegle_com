@@ -1,6 +1,6 @@
-// Regression guards for the library header: the account dropdown holds exactly
-// one action ("Sign out"), Settings stays a separate header button, and the
-// wordmark keeps its larger licensed typeface.
+// Regression guards for the library header: the account dropdown holds
+// Preferences and Sign out (in that order), Settings stays a separate header
+// button, and the wordmark keeps its larger licensed typeface.
 
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
@@ -16,19 +16,23 @@ function accountMenuBlock() {
   return app.slice(start, app.indexOf('</motion.div>', start));
 }
 
-test('the account dropdown has exactly one action', () => {
+test('the account dropdown has exactly two actions', () => {
   const block = accountMenuBlock();
   const items = block.match(/role="menuitem"/g) ?? [];
-  assert.equal(items.length, 1);
+  assert.equal(items.length, 2);
 });
 
-test('the only dropdown action is "Sign out" with that capitalisation', () => {
+test('Preferences opens account settings above "Sign out"', () => {
   const block = accountMenuBlock();
-  assert.match(block, />\s*Sign out\s*</);
+  const preferences = block.indexOf('Preferences');
+  const signOut = block.indexOf('Sign out');
+  assert.ok(preferences > 0, 'Preferences is offered');
+  assert.ok(signOut > preferences, 'Sign out stays last');
+  assert.match(block, /setSettingsTab\('preferences'\)/);
   assert.ok(!/Log out/.test(block), 'the dropdown must not keep the old logout wording');
 });
 
-test('the dropdown carries no Settings entry and no username line', () => {
+test('the dropdown carries no duplicate Settings entry and no username line', () => {
   const block = accountMenuBlock();
   assert.ok(!/>\s*Settings\s*</.test(block), 'Settings belongs to the header, not the dropdown');
   assert.ok(!/auth\.username/.test(block), 'the dropdown must not repeat the username');
