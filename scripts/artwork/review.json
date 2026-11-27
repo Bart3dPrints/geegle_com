@@ -15641,11 +15641,53 @@
     "status": "verified",
     "title": "Warfare 1944"
   },
+  "clwarioland1": {
+    "reason": "Wario Land: Super Mario Land 3 box art; results 1 and 2 were other Wario titles.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wario Land 1"
+  },
+  "clwarioland3": {
+    "reason": "Wario Land 3 art without the platform band.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wario Land 3"
+  },
+  "clwarioland4": {
+    "reason": "Wario Land 4 key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wario Land 4"
+  },
+  "clwariowarediy": {
+    "reason": "WarioWare D.I.Y. banner art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "WarioWare DIY"
+  },
+  "clwariowareinc": {
+    "reason": "WarioWare Inc: Minigame Mania art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "WarioWare Inc"
+  },
   "clwartheknight": {
     "reason": "War of the Knights key art.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "War the Knight"
+  },
+  "clwaterpoolio": {
+    "reason": "Water Pool Heroes.io logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Water Pool.io"
+  },
+  "clwaterworks": {
+    "reason": "Water Works logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Waterworks"
   },
   "clwavedash": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -15653,17 +15695,77 @@
     "status": "verified",
     "title": "Wave Dash"
   },
+  "clwaverace64": {
+    "reason": "Wave Race 64 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wave Race 64"
+  },
   "clwaverun": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Wave Run"
   },
+  "clwbml": {
+    "reason": "WBML gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "WBML"
+  },
+  "clwebdashers": {
+    "reason": "Web Dashers title menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Webdashers"
+  },
   "clwebecomewhatwebehold": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "We Become What We Behold"
+  },
+  "clwebfishing": {
+    "reason": "Webfishing logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Web Fishing"
+  },
+  "clweltling": {
+    "reason": "Results were a Roblox icon, a wrestling dashboard and Wrestling Empire gameplay, not this title.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
+  "clwermhole": {
+    "reason": "Wormhole arcade board art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wormhole"
+  },
+  "clwhackthetheif": {
+    "reason": "Whack the Thief art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Whack the Thief"
+  },
+  "clwhackyourboss": {
+    "reason": "Whack Your Boss scene art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Whack Your Boss"
+  },
+  "clwhackyourcomputer": {
+    "reason": "Whack Your Computer scene art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Whack Your Computer"
+  },
+  "clwhatamarioworld": {
+    "reason": "Super Mario World art for this build.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "What a Mario World"
   },
   "clwheeliebike": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
@@ -15719,17 +15821,89 @@
     "status": "verified",
     "title": "Wheely 8"
   },
+  "clwilywars--1": {
+    "reason": "Mega Man: The Wily Wars box art, kept distinct from the wide key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man: The Wily Wars"
+  },
+  "clwindowsdoors": {
+    "reason": "Doors gameplay menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Windows Doors"
+  },
   "clwinterfalling": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Winter Falling"
   },
+  "clwipeout2097": {
+    "reason": "Wipeout 2097 PAL box art, kept distinct from the Japanese release.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wipeout 2097"
+  },
+  "clwipeout2097alt": {
+    "reason": "Wipeout 2097 box art, kept distinct from the PAL cover.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wipeout 2097 (Alt)"
+  },
+  "clwitchcrafttd": {
+    "reason": "WitchCraft TD cart art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Witchcraft TD"
+  },
+  "clwolfenstein": {
+    "reason": "Wolfenstein Xbox 360 cover art; result 1 was The New Colossus.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wolfenstein"
+  },
+  "clwolfenstein3d": {
+    "reason": "Wolfenstein 3-D box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wolfenstein 3D"
+  },
+  "clwonderboy3": {
+    "reason": "Wonder Boy: The Dragon's Trap logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wonder Boy 3"
+  },
+  "clwonderboyarcade": {
+    "reason": "Wonder Boy arcade gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wonder Boy Arcade"
+  },
+  "clwoodworm": {
+    "reason": "Wood Worm PICO-8 cart art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Woodworm"
+  },
   "clwordle": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Wordle"
+  },
+  "clworldcup98": {
+    "reason": "World Cup 98 PlayStation box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "World Cup 98"
+  },
+  "clworldshardestgame": {
+    "reason": "The World's Hardest Game level art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "World's Hardest Game"
   },
   "clworldshardestgame2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -15743,6 +15917,12 @@
     "status": "verified",
     "title": "World's Hardest Game 3"
   },
+  "clworldshardestgame4": {
+    "reason": "World's Hardest Game 4 title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "World's Hardest Game 4"
+  },
   "clwpnfire": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -15755,11 +15935,59 @@
     "status": "verified",
     "title": "Wrassling"
   },
+  "clwreckingcrew": {
+    "reason": "Wrecking Crew NES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wrecking Crew"
+  },
   "clwurstclient": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Wurst Client"
+  },
+  "clwwfattitude": {
+    "reason": "WWF Attitude PlayStation box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "WWF Attitude"
+  },
+  "clwwfsmackdown2": {
+    "reason": "WWF SmackDown! 2 cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "WWF Smackdown 2"
+  },
+  "clxevent": {
+    "reason": "Friday Night Funkin' XEVENT title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Xevent"
+  },
+  "clxevious": {
+    "reason": "Xevious gameplay with its title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Xevious"
+  },
+  "clxmenarcade": {
+    "reason": "X-Men arcade cabinet.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "X-Men Arcade"
+  },
+  "clxmenchildrenoftheatomarcade": {
+    "reason": "X-Men: Children of the Atom PlayStation box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "X-Men: Children of the Atom"
+  },
+  "clxmenvsstreetfighter": {
+    "reason": "X-Men vs Street Fighter arcade marquee art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "X-Men vs Street Fighter"
   },
   "clxor": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -15767,11 +15995,47 @@
     "status": "verified",
     "title": "XOR"
   },
+  "clyanderesimulator": {
+    "reason": "Yandere Simulator key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Yandere Simulator"
+  },
+  "clyarsrevenge": {
+    "reason": "Yars' Revenge art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Yar's Revenge"
+  },
+  "clyellow": {
+    "reason": "The Baby In Yellow gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Yellow"
+  },
   "clyohohoio": {
     "reason": "Wrapper-declared artwork for this title (official og) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Yohoho.io"
+  },
+  "clyoshisstrangequest": {
+    "reason": "Yoshi's Strange Quest box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Yoshi's Strange Quest"
+  },
+  "clyouarelucky": {
+    "reason": "You are Lucky! logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "You Are Lucky"
+  },
+  "clyourturntodie": {
+    "reason": "Your Turn to Die key art with its cast.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Your Turn to Die"
   },
   "clyouvs100skibidi-1": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -15779,11 +16043,59 @@
     "status": "verified",
     "title": "You vs 100 Skibidi"
   },
+  "clyumenikki": {
+    "reason": "Yume Nikki title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Yume Nikki"
+  },
+  "clzdoom": {
+    "reason": "Doom gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "ZDoom"
+  },
+  "clzelda2thelegendoflink": {
+    "reason": "Zelda II: The Adventure of Link box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Zelda 2: The Legend of Link"
+  },
+  "clzeldaindigoch2": {
+    "reason": "Zelda Indigo Chapter 2 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Zelda Indigoch 2"
+  },
+  "clzeldaminishcap": {
+    "reason": "The Minish Cap key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Zelda: The Minish Cap"
+  },
+  "clzenword": {
+    "reason": "Zen Word logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Zen Word"
+  },
   "clzetaclient": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Zeta Client"
+  },
+  "clzoinkz": {
+    "reason": "Zoinkz title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Zoinkz"
+  },
+  "clzombieexploder": {
+    "reason": "Zombie Exploder store art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Zombie Exploder"
   },
   "clzombieroad": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -15796,6 +16108,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Zombie Rush"
+  },
+  "clzombiesatemyneighboors": {
+    "reason": "Zombies Ate My Neighbors SNES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Zombies Ate My Neighbors"
   },
   "clzombopaclypse2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -15820,6 +16138,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Zombotron Reboot"
+  },
+  "clzrist": {
+    "reason": "Zrist DX logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Zrist"
   },
   "clzuma": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -16000,6 +16324,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Unown King"
+  },
+  "winterolympics": {
+    "reason": "Results were Olympic ceremony, skiing and curling photographs rather than game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
+  "wolfchild": {
+    "reason": "WolfChild SNES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wolf Child"
   },
   "youtube": {
     "reason": "Official YouTube logo from youtube.com branding asset, matching the YouTube app card.",

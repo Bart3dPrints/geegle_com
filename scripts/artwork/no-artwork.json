@@ -214,5 +214,13 @@
   "clvolleyball": {
     "reason": "Results were stock photographs of volleyball matches, not artwork for a game.",
     "recorded": "2026-11-27"
+  },
+  "clweltling": {
+    "reason": "Results were a Roblox icon, a wrestling dashboard and Wrestling Empire gameplay, not this title.",
+    "recorded": "2026-11-27"
+  },
+  "winterolympics": {
+    "reason": "Results were Olympic ceremony, skiing and curling photographs rather than game artwork.",
+    "recorded": "2026-11-27"
   }
 }

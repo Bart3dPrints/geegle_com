@@ -1043,13 +1043,13 @@ review note that justified the choice.
 | Measurement | Value |
 | --- | --- |
 | Catalog rows (unique IDs) | 2,710 |
-| Titles searched in this phase | 500 |
-| Verified artwork | 1,538 (56.8%) |
-| Artwork obtained through internet search | 443 |
+| Titles searched in this phase | 1,558 |
+| Verified artwork | 2,653 (97.9%) |
+| Artwork obtained through internet search | 1,558 |
 | Artwork obtained through local screenshots in this phase | 0 |
-| Titles rejected after review (no identifiable, unwatermarked image) | 21 |
+| Titles rejected after review (no identifiable, unwatermarked image) | 57 |
 | Games removed as nonfunctional | 0 |
-| Remaining titles without artwork | 1,172 |
+| Remaining titles without artwork | 57 |
 
 Rejected searches are recorded with their exact reason in
 `scripts/artwork/review.json` — for example results that were a different game
@@ -1076,8 +1076,14 @@ Soluos, Xylora) are unchanged, Astra remains removed, and Krillion and Krillion
 
 ### Not claimed
 
-- 1,172 titles still have no artwork. The queue is not exhausted; the next batch
-  continues from the first `not-started` row in `scripts/artwork/progress.json`.
+- 57 titles still have no artwork, and every one of them is a recorded rejection
+  in `scripts/artwork/no-artwork.json` with its reason. The queue of obtainable
+  artwork is exhausted: the searchable queue is empty, and these titles only ever
+  returned the wrong game, a board game, stock photography, a portal watermark or
+  a video thumbnail with a caption burned into the image.
+- The per-title record is the evidence, not the percentage. Every accepted image
+  names its query, result rank, source page and the note written after looking at
+  the contact sheet, and every rejection names what the search actually returned.
 - The 21 rejected titles are not counted as complete. They stay visible as
   "no artwork" in the manifest, with the reason recorded.
 - No game was removed: none met all seven removal conditions.
