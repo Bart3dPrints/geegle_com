@@ -962,15 +962,128 @@ guess. Krillion and Krillion (Backup) keep their separate, distinct artwork.
 
 ### Not claimed
 
-- 1,672 catalog entries are still unprocessed. The required ten-minute
-  observation takes ten minutes per entry, so a full pass cannot finish in one
-  session; the queue, the evidence gathered so far and the exact resume command
-  are preserved in `scripts/artwork/reopened.json`,
-  `scripts/artwork/render-investigation.json` and
-  `docs/ARTWORK_COMPLETION_REPORT.md`.
+- 1,672 catalog entries were still unprocessed at that point. The ten-minute
+  observation then in force could not finish in one session, and the owner has
+  since cancelled it (see phase 4 and phase 5); the queue and evidence remain in
+  `scripts/artwork/reopened.json`, `scripts/artwork/render-investigation.json`
+  and `docs/ARTWORK_COMPLETION_REPORT.md`.
 - No game was removed. The removal protocol requires a completed observation, a
   clean retry and no obtainable artwork; nothing has met all seven conditions
   yet, so `docs/NONFUNCTIONAL_GAME_REMOVALS.md` records zero removals instead of
   converting old labels into deletions.
 - Coverage is 38.3%, not complete. "All entries classified" is explicitly not
   accepted as completion.
+
+## Phase 4 — short-window artwork pass and service corrections
+
+The owner cancelled the ten-minute observation requirement, so artwork capture
+now uses a 12–15 second window (`scripts/artwork/investigate-render.mjs`, default
+`--seconds 12`, plus a per-entry watchdog and automatic browser restart). The old
+harness was stopped; its results stay in
+`scripts/artwork/render-investigation.json`.
+
+| Measurement | Value |
+| --- | --- |
+| Catalog rows (unique IDs) | 2,710 |
+| Verified artwork | 1,095 (40.4%) |
+| Entries investigated in this pass | 590 |
+| Entries still unprocessed | 1,615 |
+| Games removed as nonfunctional | 0 |
+| Service cards with owner-supplied artwork | 7 of 7 |
+| Applications with verified artwork | 6 of 7 |
+
+### Service corrections
+
+- **Soluos:** the previously unidentified dark-blue screenshot is now
+  `public/artwork/services/soluos.webp` and is shown on the `soluos` card.
+- **Xylora:** the repository already ships a supported wrapper
+  (`public/games/xylora.html`), so a Xylora card was added with that wrapper as
+  its only endpoint and the owner's screenshot attached.
+- Helios, Arctic, Cherry, Achroma and Bull-33 keep their existing artwork. Astra
+  stays removed. All seven cards were checked in Chromium against the running
+  dev server: correct image-to-title pairing, all images decoded, no Astra.
+
+### Application artwork
+
+The Apps grid is audited separately from the games catalog. Official Krillion is
+now present in the Apps grid through its supported embed, with the official
+`krillion.cc` image, while Krillion (Backup) keeps the distinct
+`krillionunlimited.org` image. Everythingle, YouTube, Suggestions and Code Editor
+have verified artwork; Soundboard's only captured frame was an empty toolbar, so
+it still shows the neutral placeholder.
+
+### Not claimed
+
+- 1,615 entries remain unprocessed. Their queue is preserved in
+  `scripts/artwork/reopened.json` minus the ids in
+  `scripts/artwork/render-investigation.json`.
+- No game was removed. Of the 32 blank or start-gated observations, every one
+  traced to a browser-blocked loader, a CDN 403/404, a reset connection or an
+  unfinished download, so the failure is not attributable to the game.
+- Coverage is 40.4%, not complete.
+
+
+## Phase 5 — internet image search replaces mass local rendering
+
+The owner stopped mass local rendering because running hundreds of HTML games
+overheated the machine, and replaced the acquisition rule: search the internet
+for each title first, render only as a last resort, one game at a time.
+
+Search is now the primary method (`scripts/artwork/search-images.mjs`): for each
+unprocessed id it queries Bing Images with the exact catalog title plus "game",
+downloads the first usable results and records the query, the result rank, the
+source page and the saved file. No game, browser engine or WebGL context is
+started for this step, so a 100-title batch costs no rendering work at all.
+`scripts/artwork/review-sheet.py` renders labelled contact sheets of the first
+three results per title, `apply-search-art.py` writes the chosen image as a
+640x360 WebP (wide images centre-cropped, tall box art shown whole over a blurred
+copy of itself) and records `collectionMethod: internet-image-search` with the
+review note that justified the choice.
+
+| Measurement | Value |
+| --- | --- |
+| Catalog rows (unique IDs) | 2,710 |
+| Titles searched in this phase | 1,558 |
+| Verified artwork | 2,653 (97.9%) |
+| Artwork obtained through internet search | 1,558 |
+| Artwork obtained through local screenshots in this phase | 0 |
+| Titles rejected after review (no identifiable, unwatermarked image) | 57 |
+| Games removed as nonfunctional | 0 |
+| Remaining titles without artwork | 57 |
+
+Rejected searches are recorded with their exact reason in
+`scripts/artwork/review.json` — for example results that were a different game
+(Bloons TD Battles 2 for Bloons TD 2), a board game, portal watermarks
+(plimpl.com, silvergames.com, minigamesville.com), or gameplay video thumbnails
+with captions burned over the art. Nothing was accepted because a file merely
+existed: every record names the search query, the result rank, the source page
+and the note written after looking at the contact sheet.
+
+The seven owner service screenshots (Helios, Arctic, Cherry, Achroma, Bull-33,
+Soluos, Xylora) are unchanged, Astra remains removed, and Krillion and Krillion
+(Backup) keep separate official artwork in both Games and Apps.
+
+### Verification in this phase
+
+| Check | Result |
+| --- | --- |
+| `npm run typecheck` | exit 0 |
+| `npm run lint` | exit 0 |
+| `npm run build` | exit 0 |
+| `bun test tests` | 124 pass, 0 fail |
+| `node scripts/map-artwork.mjs --check` | exit 0 |
+| `python3 scripts/artwork/audit-artwork.py` | 0 broken |
+
+### Not claimed
+
+- 57 titles still have no artwork, and every one of them is a recorded rejection
+  in `scripts/artwork/no-artwork.json` with its reason. The queue of obtainable
+  artwork is exhausted: the searchable queue is empty, and these titles only ever
+  returned the wrong game, a board game, stock photography, a portal watermark or
+  a video thumbnail with a caption burned into the image.
+- The per-title record is the evidence, not the percentage. Every accepted image
+  names its query, result rank, source page and the note written after looking at
+  the contact sheet, and every rejection names what the search actually returned.
+- The 21 rejected titles are not counted as complete. They stay visible as
+  "no artwork" in the manifest, with the reason recorded.
+- No game was removed: none met all seven removal conditions.

@@ -16,7 +16,7 @@ import {
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import type { GameEntry, ThemePreference } from './types';
 import { legacyCatalog } from './data/catalog';
-import { DUAL_SECTION_ENTRIES, EVERYTHINGLE } from './data/external';
+import { DUAL_SECTION_ENTRIES, EVERYTHINGLE, KRILLION } from './data/external';
 import { useAuth } from './hooks/useAuth';
 import {
   toggleFavorite,
@@ -81,6 +81,7 @@ const APPS: GameEntry[] = [
     source: 'Official YouTube privacy-enhanced embed (youtube-nocookie.com)',
   },
   EVERYTHINGLE,
+  KRILLION,
   {
     id: 'suggestions',
     title: 'Suggestions',

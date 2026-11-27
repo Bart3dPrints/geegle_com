@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-// Ten-minute rendering investigation for blocked catalog entries.
+// Short rendering investigation for catalog entries without artwork.
 //
-// The previous capture pass classified more than a thousand entries as
-// "blank-render" after looking at one early frame. This harness follows the
-// owner's protocol instead:
+// The owner cancelled the ten-minute observation requirement: artwork now uses
+// a 10-15 second window, so SECONDS defaults to 12. The harness still records
+// the same evidence per entry:
 //
 //   Step A  launch the served build, record state, timestamp, console errors,
 //           failed requests and engine/canvas information
@@ -34,11 +34,14 @@ const ROOT = path.resolve(new URL('../..', import.meta.url).pathname);
 const BASE = process.env.GEEGLE_BASE ?? 'http://127.0.0.1:4180';
 const OUT = path.resolve(arg('out', '/tmp/artshots4'));
 const REPORT = path.resolve(arg('report', path.join(ROOT, 'scripts/artwork/render-investigation.json')));
-const SECONDS = Number(arg('seconds', '600'));
-const POLL = Number(arg('poll', '15000'));
+const SECONDS = Number(arg('seconds', '12'));
+const POLL = Number(arg('poll', '2000'));
 const CONCURRENCY = Math.max(1, Math.min(8, Number(arg('concurrency', '4'))));
-const FRAME_MIN_BYTES = Number(arg('frame-min-bytes', '9000'));
+const FRAME_MIN_BYTES = Number(arg('frame-min-bytes', '3500'));
 const START_CLICK_EVERY = Number(arg('start-click-every', '60000'));
+// Watchdog: a wedged page must not stall the whole queue. When an entry
+// exceeds this, the browser is restarted and the entry is retried later.
+const ITEM_TIMEOUT_MS = Number(arg('item-timeout', '75000'));
 const limit = Number(arg('limit', '0'));
 const explicitIds = (arg('ids', '') || '').split(',').map((v) => v.trim()).filter(Boolean);
 
@@ -66,7 +69,7 @@ function save() {
   writeFileSync(REPORT, JSON.stringify(report, null, 2) + '\n');
 }
 
-const browser = await chromium.launch({
+const launchOptions = {
   headless: process.env.HEADED ? false : true,
   args: [
     '--use-gl=angle',
@@ -78,7 +81,27 @@ const browser = await chromium.launch({
     '--disable-renderer-backgrounding',
     '--disable-backgrounding-occluded-windows',
   ],
-});
+};
+
+let browser = await chromium.launch(launchOptions);
+
+// A heavy build can wedge the shared browser. Relaunching per context keeps a
+// single bad game from failing the rest of the queue (and is not evidence that
+// the game itself is broken).
+async function resetBrowser() {
+  await browser.close().catch(() => {});
+  browser = await chromium.launch(launchOptions);
+}
+
+async function freshContext(options) {
+  try {
+    return await browser.newContext(options);
+  } catch {
+    await browser.close().catch(() => {});
+    browser = await chromium.launch(launchOptions);
+    return browser.newContext(options);
+  }
+}
 
 // Wrappers call into a host API that only exists inside the Geegle player. A
 // stub keeps the served page from throwing before its own engine starts; it
@@ -150,7 +173,7 @@ async function investigate(id) {
     id,
     title: row?.title ?? null,
     path: row?.path ?? null,
-    launchUrl: row ? BASE + row.path : null,
+    launchUrl: row ? (/^https?:\/\//.test(row.path) ? row.path : BASE + row.path) : null,
     startedAt: new Date().toISOString(),
     observedSeconds: 0,
     classification: null,
@@ -169,7 +192,7 @@ async function investigate(id) {
     return entry;
   }
 
-  const context = await browser.newContext({ viewport: { width: 1280, height: 720 } });
+  const context = await freshContext({ viewport: { width: 1280, height: 720 } });
   await context.addInitScript(HOST_STUB);
   const page = await context.newPage();
   page.on('console', (message) => {
@@ -199,10 +222,12 @@ async function investigate(id) {
   entry.initialBytes = initialBuffer ? initialBuffer.length : 0;
 
   const endAt = started + SECONDS * 1000;
-  const frameTimes = [Math.min(60000, SECONDS * 1000 / 4), Math.min(180000, SECONDS * 1000 / 2), Math.min(300000, (SECONDS * 1000 * 3) / 4)]
-    .map((ms) => started + ms);
+  // Three frames spread across the window, so a settling build is captured
+  // after its loader has finished rather than mid-load.
+  const frameTimes = [0.4, 0.65, 0.9]
+    .map((fraction) => started + SECONDS * 1000 * fraction);
   let nextFrame = 0;
-  let nextClick = started + 2000;
+  let nextClick = started + 1500;
   let lastProbe = entry.initial;
 
   while (Date.now() < endAt) {
@@ -269,7 +294,19 @@ async function worker() {
   while (cursor < queue.length) {
     const id = queue[cursor++];
     try {
-      results.push(await investigate(id));
+      const pending = investigate(id).catch(() => null);
+      const outcome = await Promise.race([
+        pending,
+        new Promise((resolve) => setTimeout(() => resolve('__watchdog__'), ITEM_TIMEOUT_MS)),
+      ]);
+      if (outcome === '__watchdog__') {
+        await resetBrowser();
+        report[id] = { id, classification: 'timeout', error: 'watchdog: page stopped responding', at: new Date().toISOString() };
+        save();
+        results.push(report[id]);
+        continue;
+      }
+      results.push(outcome ?? report[id]);
     } catch (error) {
       report[id] = { id, classification: 'launched-error', error: String(error).slice(0, 300), at: new Date().toISOString() };
       save();

@@ -93,6 +93,13 @@ export const PROXY_SERVICES: ProxyService[] = [
     ],
   },
   {
+    // Xylora ships its own wrapper in this repository, which embeds the
+    // provider's page; the card launches that supported wrapper.
+    id: 'xylora',
+    name: 'Xylora',
+    endpoints: [local('Server 1', '/games/xylora.html')],
+  },
+  {
     id: 'backup',
     name: 'Backup Proxies',
     endpoints: [

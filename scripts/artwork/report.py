@@ -77,11 +77,13 @@ def main():
                  "`artworkFor()` record, so a verified image appears everywhere the title appears. "
                  "No catalog ID, launch path, save key or layout was changed.")
     lines.append("")
-    lines.append("Acquisition order, enforced per title: (1) authentic icon or official social image "
-                 "declared by the game's own distribution; (2) authentic logo/game asset from that build; "
-                 "(3) authentic gameplay artwork; (4) a captured title screen or recognizable gameplay "
-                 "frame from the actual build this repository serves, with engine splashes, loading screens, "
-                 "error pages, ads and generic play splashes rejected.")
+    lines.append("Acquisition order, enforced per title: (1) an independent internet image search for the "
+                 "exact title (plus developer or alternate name when needed), preferring a logo, then an "
+                 "icon, then a title screen or gameplay image; (2) an authentic icon or official social image "
+                 "declared by the game's own distribution; (3) a captured title screen or gameplay frame from "
+                 "the actual build this repository serves, run one at a time as a last resort. Engine splashes, "
+                 "loading screens, error pages, ads, watermarks, portal branding and generic play splashes are "
+                 "rejected in every case.")
     lines.append("")
     lines.append("Identity evidence and reuse basis are recorded separately on every record. Captured "
                  "frames carry no license claim; they are the game's own screen shown on the same platform "
@@ -97,7 +99,8 @@ def main():
     lines.append(f"| Rejected (removed from the UI, queued for a new capture) | {len(rejected_decisions):,} |")
     lines.append(f"| Blocked | {len(blocked):,} |")
     lines.append(f"| Reopened after the blocked classification was rejected | {len(reopened):,} |")
-    lines.append(f"| Ten-minute render investigations completed | {len(investigation):,} |")
+    lines.append(f"| Render investigations from the earlier long-observation pass (that protocol was "
+                 f"cancelled) | {len(investigation):,} |")
     lines.append(f"| ... that rendered an authentic frame | {investigated('rendered'):,} |")
     lines.append(f"| ... that stopped at their own start gate | {investigated('start-gate-only'):,} |")
     lines.append(f"| ... that stayed blank for the whole observation | {investigated('blank-after-observation'):,} |")
@@ -142,12 +145,15 @@ def main():
     lines.append("| Cherry Proxy | `/artwork/services/cherry.webp` |")
     lines.append("| Achroma Proxy | `/artwork/services/achroma.webp` |")
     lines.append("| Bull-33 | `/artwork/services/bull-33.webp` |")
+    lines.append("| Soluos Proxy | `/artwork/services/soluos.webp` |")
+    lines.append("| Xylora | `/artwork/services/xylora.webp` |")
     lines.append("")
-    lines.append("Unassigned, deliberately: `xylora.webp` (the owner's Xylora screenshot, with no Xylora "
-                 "endpoint anywhere in the repository to attach it to) and "
-                 "`unidentified-dark-blue.webp` (a clock-and-icons desktop with no branding, so assigning it "
-                 "to a named service would be a guess). Astra Proxy was removed from the catalog and its "
-                 "search results; its Bull-33 endpoints moved to the Bull-33 card instead of being relabelled.")
+    lines.append("The previously unidentified dark-blue screenshot was confirmed by the owner as Soluos and is "
+                 "now stored as `soluos.webp` and shown on the Soluos card. Xylora was missing from the "
+                 "catalog even though this repository already ships its wrapper "
+                 "(`public/games/xylora.html`), so the card was added with that supported local wrapper as "
+                 "its only endpoint. Astra Proxy was removed from the catalog and its search results; its "
+                 "Bull-33 endpoints moved to the Bull-33 card instead of being relabelled.")
     lines.append("")
     lines.append("## Blocked")
     lines.append("")
@@ -169,8 +175,8 @@ def main():
         lines.append("Resume commands:")
         lines.append("")
         lines.append("```sh")
-        lines.append("node scripts/artwork/capture-screens.mjs --out /tmp/artshots-large --concurrency 3")
-        lines.append("python3 scripts/artwork/process-shots.py --staging /tmp/artshots-large")
+        lines.append("GEEGLE_BASE=http://127.0.0.1:5173 node scripts/artwork/investigate-render.mjs --seconds 15 --concurrency 8 --limit 320 --out /tmp/artshots7")
+        lines.append("python3 scripts/artwork/process-shots.py --staging /tmp/artshots7")
         lines.append("python3 scripts/artwork/audit-artwork.py")
         lines.append("python3 scripts/artwork/build-progress.py")
         lines.append("```")
