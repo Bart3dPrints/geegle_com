@@ -9379,12 +9379,84 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Found by searching \"Learn to Fly Idle game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Learn to Fly Idle\" before use. Source page: https://gamingkool.com/learn-to-fly-idle/",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
+  "cllearntoflyidlehack": {
+    "title": "Learn to Fly Idle Hack",
+    "url": "/artwork/cllearntoflyidlehack.webp",
+    "source": "https://www.hackedfreegames.com/game/6160/learn-to-fly-idle",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Learn to Fly Idle Hack game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Learn to Fly Idle Hack\" before use. Source page: https://www.hackedfreegames.com/game/6160/learn-to-fly-idle",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "cllegacyofgoku": {
     "title": "Legacy of Goku",
     "url": "/artwork/cllegacyofgoku.webp",
     "source": "https://www.ign.com/games/dragon-ball-z-the-legacy-of-goku",
     "type": "game-asset",
     "identityEvidence": "Found by searching \"Legacy of Goku game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Legacy of Goku\" before use. Source page: https://www.ign.com/games/dragon-ball-z-the-legacy-of-goku",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "cllegobatman": {
+    "title": "LEGO Batman",
+    "url": "/artwork/cllegobatman.webp",
+    "source": "https://gamerant.com/lego-batman-legacy-of-the-dark-knight-gameshare/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"LEGO Batman game\" in Bing Images and taking result 1; the image was checked against the catalog title \"LEGO Batman\" before use. Source page: https://gamerant.com/lego-batman-legacy-of-the-dark-knight-gameshare/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "cllegobatman2superheroes": {
+    "title": "LEGO Batman 2: Superheroes",
+    "url": "/artwork/cllegobatman2superheroes.webp",
+    "source": "https://gameup.ir/game/LegoBatman2/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"LEGO Batman 2: Superheroes game\" in Bing Images and taking result 2; the image was checked against the catalog title \"LEGO Batman 2: Superheroes\" before use. Source page: https://gameup.ir/game/LegoBatman2/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "cllegoindianajones": {
+    "title": "LEGO Indiana Jones",
+    "url": "/artwork/cllegoindianajones.webp",
+    "source": "https://www.walmart.com/ip/Lego-Indiana-Jones-The-Original-Adventures-Xbox-360/29385929",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"LEGO Indiana Jones game\" in Bing Images and taking result 3; the image was checked against the catalog title \"LEGO Indiana Jones\" before use. Source page: https://www.walmart.com/ip/Lego-Indiana-Jones-The-Original-Adventures-Xbox-360/29385929",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "cllegoindianajones2": {
+    "title": "LEGO Indiana Jones 2",
+    "url": "/artwork/cllegoindianajones2.webp",
+    "source": "https://www.gog.com/en/game/lego_indiana_jones_2_the_adventure_continues",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"LEGO Indiana Jones 2 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"LEGO Indiana Jones 2\" before use. Source page: https://www.gog.com/en/game/lego_indiana_jones_2_the_adventure_continues",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "cllegoninjago": {
+    "title": "LEGO Ninjago",
+    "url": "/artwork/cllegoninjago.webp",
+    "source": "https://www.playstation.com/en-us/games/lego-ninjago-movie-video-game/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"LEGO Ninjago game\" in Bing Images and taking result 2; the image was checked against the catalog title \"LEGO Ninjago\" before use. Source page: https://www.playstation.com/en-us/games/lego-ninjago-movie-video-game/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "cllegostarwars": {
+    "title": "LEGO Star Wars",
+    "url": "/artwork/cllegostarwars.webp",
+    "source": "http://lego.wikia.com/wiki/Lego_Star_Wars:_The_Video_Game",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"LEGO Star Wars game\" in Bing Images and taking result 3; the image was checked against the catalog title \"LEGO Star Wars\" before use. Source page: http://lego.wikia.com/wiki/Lego_Star_Wars:_The_Video_Game",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "cllegostarwars2gba": {
+    "title": "LEGO Star Wars 2 (GBA)",
+    "url": "/artwork/cllegostarwars2gba.webp",
+    "source": "https://www.dkoldies.com/lego-star-wars-ii-game-boy-advance/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"LEGO Star Wars 2 (GBA) game\" in Bing Images and taking result 2; the image was checked against the catalog title \"LEGO Star Wars 2 (GBA)\" before use. Source page: https://www.dkoldies.com/lego-star-wars-ii-game-boy-advance/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "cllemmings": {
+    "title": "Lemmings",
+    "url": "/artwork/cllemmings.webp",
+    "source": "https://www.ign.com/games/lemmings-psp",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Lemmings game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Lemmings\" before use. Source page: https://www.ign.com/games/lemmings-psp",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clletitconsume": {
@@ -9395,6 +9467,46 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clletitconsume.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clletsgoeevee": {
+    "title": "Let's Go Eevee",
+    "url": "/artwork/clletsgoeevee.webp",
+    "source": "https://techmarket.bg/product/pokemon-lets-go-eevee-nintendo-switch/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Let's Go Eevee game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Let's Go Eevee\" before use. Source page: https://techmarket.bg/product/pokemon-lets-go-eevee-nintendo-switch/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clletsgopikachu": {
+    "title": "Let's Go Pikachu",
+    "url": "/artwork/clletsgopikachu.webp",
+    "source": "https://nxnative.net/games/pokemon-lets-go-pikachu",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Let's Go Pikachu game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Let's Go Pikachu\" before use. Source page: https://nxnative.net/games/pokemon-lets-go-pikachu",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clleveldevil": {
+    "title": "Level Devil",
+    "url": "/artwork/clleveldevil.webp",
+    "source": "https://www.pigame.cc/game/level-devil-2-players",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Level Devil game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Level Devil\" before use. Source page: https://www.pigame.cc/game/level-devil-2-players",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clleverwarriors": {
+    "title": "Lever Warriors",
+    "url": "/artwork/clleverwarriors.webp",
+    "source": "https://rawg.io/games/lever-warriors",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Lever Warriors game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Lever Warriors\" before use. Source page: https://rawg.io/games/lever-warriors",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "cllightitup": {
+    "title": "Light It Up",
+    "url": "/artwork/cllightitup.webp",
+    "source": "https://www.nintendo.com/us/store/products/light-it-up-switch/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Light It Up game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Light It Up\" before use. Source page: https://www.nintendo.com/us/store/products/light-it-up-switch/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "cllilrunmo": {
     "title": "Lil Runmo",
     "url": "/artwork/cllilrunmo.webp",
@@ -9402,6 +9514,30 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/cllilrunmo.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "cllinerider": {
+    "title": "Line Rider",
+    "url": "/artwork/cllinerider.webp",
+    "source": "https://popthatrocks.com/exploring-the-physics-of-line-rider-gameplay/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Line Rider game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Line Rider\" before use. Source page: https://popthatrocks.com/exploring-the-physics-of-line-rider-gameplay/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "cllinksawakeningdx": {
+    "title": "The Legend of Zelda: Link's Awakening DX",
+    "url": "/artwork/cllinksawakeningdx.webp",
+    "source": "https://www.imdb.com/title/tt9614534/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"The Legend of Zelda: Link's Awakening DX game\" in Bing Images and taking result 2; the image was checked against the catalog title \"The Legend of Zelda: Link's Awakening DX\" before use. Source page: https://www.imdb.com/title/tt9614534/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "cllinktothepast": {
+    "title": "The Legend of Zelda: A Link to the Past",
+    "url": "/artwork/cllinktothepast.webp",
+    "source": "https://wccftech.com/unofficial-native-the-legend-of-zelda-a-link-to-the-past-pc/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"The Legend of Zelda: A Link to the Past game\" in Bing Images and taking result 3; the image was checked against the catalog title \"The Legend of Zelda: A Link to the Past\" before use. Source page: https://wccftech.com/unofficial-native-the-legend-of-zelda-a-link-to-the-past-pc/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "cllittlealchemy2": {
     "title": "Little Alchemy 2",
@@ -9411,6 +9547,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/cllittlealchemy2.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "cllittlerunmo": {
+    "title": "Little Runmo",
+    "url": "/artwork/cllittlerunmo.webp",
+    "source": "https://narcushero.itch.io/little-runmo-the-game",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Little Runmo game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Little Runmo\" before use. Source page: https://narcushero.itch.io/little-runmo-the-game",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "cllockthedoor": {
     "title": "Lock the Door",
     "url": "/artwork/cllockthedoor.webp",
@@ -9418,6 +9562,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/cllockthedoor.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clloderunner": {
+    "title": "Lode Runner",
+    "url": "/artwork/clloderunner.webp",
+    "source": "https://play.google.com/store/apps/details?id=com.gmboy.loderunnerclassic",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Lode Runner game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Lode Runner\" before use. Source page: https://play.google.com/store/apps/details?id=com.gmboy.loderunnerclassic",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "cllonewolf": {
     "title": "Lone Wolf",
@@ -9443,12 +9595,76 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Found by searching \"Hollow Knight (Alt) game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Hollow Knight (Alt)\" before use. Source page: https://www.reddit.com/r/HollowKnight/comments/ow5xvg/im_gonna_have_to_take_a_break_from_this_game_for/",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
+  "cllozlinkawakening": {
+    "title": "The Legend of Zelda: Link's Awakening",
+    "url": "/artwork/cllozlinkawakening.webp",
+    "source": "https://www.actugaming.net/jeux/the-legend-of-zelda-links-awakening/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"The Legend of Zelda: Link's Awakening game\" in Bing Images and taking result 2; the image was checked against the catalog title \"The Legend of Zelda: Link's Awakening\" before use. Source page: https://www.actugaming.net/jeux/the-legend-of-zelda-links-awakening/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "cllozminishcap": {
+    "title": "The Legend of Zelda: The Minish Cap",
+    "url": "/artwork/cllozminishcap.webp",
+    "source": "https://gameshopenter.com/co/shop/the-legend-of-zelda-the-minish-cap-game-boy-advance--GBA-179000794307",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"The Legend of Zelda: The Minish Cap game\" in Bing Images and taking result 1; the image was checked against the catalog title \"The Legend of Zelda: The Minish Cap\" before use. Source page: https://gameshopenter.com/co/shop/the-legend-of-zelda-the-minish-cap-game-boy-advance--GBA-179000794307",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "cllozoracleofseasons": {
+    "title": "The Legend of Zelda: Oracle of Seasons",
+    "url": "/artwork/cllozoracleofseasons.webp",
+    "source": "https://screenrant.com/legend-of-zelda-master-collection-oracle-games-new-releases-confirmed/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"The Legend of Zelda: Oracle of Seasons game\" in Bing Images and taking result 1; the image was checked against the catalog title \"The Legend of Zelda: Oracle of Seasons\" before use. Source page: https://screenrant.com/legend-of-zelda-master-collection-oracle-games-new-releases-confirmed/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "cllozphantomhourglass": {
+    "title": "The Legend of Zelda: Phantom Hourglass",
+    "url": "/artwork/cllozphantomhourglass.webp",
+    "source": "http://www.vandal.net/juegos/nds/the-legend-of-zelda-phantom-hourglass/5395",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"The Legend of Zelda: Phantom Hourglass game\" in Bing Images and taking result 1; the image was checked against the catalog title \"The Legend of Zelda: Phantom Hourglass\" before use. Source page: http://www.vandal.net/juegos/nds/the-legend-of-zelda-phantom-hourglass/5395",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "cllse": {
     "title": "LSE",
     "url": "/artwork/cllse.webp",
     "source": "https://forum.weightgaming.com/t/lse-r-gameplay-tips-hints/16898?page=5",
     "type": "game-asset",
     "identityEvidence": "Found by searching \"LSE game\" in Bing Images and taking result 3; the image was checked against the catalog title \"LSE\" before use. Source page: https://forum.weightgaming.com/t/lse-r-gameplay-tips-hints/16898?page=5",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clluckyblocks": {
+    "title": "Lucky Blocks",
+    "url": "/artwork/clluckyblocks.webp",
+    "source": "https://play.google.com/store/apps/details?id=tates.lucky.block&hl=en-US",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Lucky Blocks game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Lucky Blocks\" before use. Source page: https://play.google.com/store/apps/details?id=tates.lucky.block&hl=en-US",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "cllumberobby": {
+    "title": "Lumber Obby",
+    "url": "/artwork/cllumberobby.webp",
+    "source": "https://www.youtube.com/watch?v=B5rp_Dh_dyE",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Lumber Obby game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Lumber Obby\" before use. Source page: https://www.youtube.com/watch?v=B5rp_Dh_dyE",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "cllummm": {
+    "title": "Lummm",
+    "url": "/artwork/cllummm.webp",
+    "source": "https://store.steampowered.com/app/3031050/Lumme/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Lummm game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Lummm\" before use. Source page: https://store.steampowered.com/app/3031050/Lumme/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmachrider": {
+    "title": "Mach Rider",
+    "url": "/artwork/clmachrider.webp",
+    "source": "https://altarofgaming.com/game/mach-rider/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mach Rider game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Mach Rider\" before use. Source page: https://altarofgaming.com/game/mach-rider/",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clmadalinstuntcars": {
@@ -9459,6 +9675,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clmadalinstuntcars.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clmadalinstuntcarsgood": {
+    "title": "Madalin Stunt Cars Good",
+    "url": "/artwork/clmadalinstuntcarsgood.webp",
+    "source": "https://yupgames.io/g/madalin-stunt-cars-2",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Madalin Stunt Cars Good game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Madalin Stunt Cars Good\" before use. Source page: https://yupgames.io/g/madalin-stunt-cars-2",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clmadalinstuntcarsmultiplayerfixed": {
     "title": "Madalin Stunt Cars Multiplayer",
     "url": "/artwork/clmadalinstuntcarsmultiplayerfixed.webp",
@@ -9466,6 +9690,94 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "official-og",
     "identityEvidence": "Published by the distribution for Madalin Stunt Cars Multiplayer at https://www.madalingames.com/wp-content/uploads/2023/04/madalin-cars-multiplayer-1280.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched www.madalingames.com page metadata).",
     "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request."
+  },
+  "clmadden93": {
+    "title": "Madden 93",
+    "url": "/artwork/clmadden93.webp",
+    "source": "https://thegamesdb.net/game.php?id=115333",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Madden 93 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Madden 93\" before use. Source page: https://thegamesdb.net/game.php?id=115333",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmadden94": {
+    "title": "Madden 94",
+    "url": "/artwork/clmadden94.webp",
+    "source": "https://freebie.games/games/madden-nfl-94-snes/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Madden 94 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Madden 94\" before use. Source page: https://freebie.games/games/madden-nfl-94-snes/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmadden95": {
+    "title": "Madden 95",
+    "url": "/artwork/clmadden95.webp",
+    "source": "https://cavegamers.com/products/used-madden-95-football-game-boy-video-games",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Madden 95 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Madden 95\" before use. Source page: https://cavegamers.com/products/used-madden-95-football-game-boy-video-games",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmadden96": {
+    "title": "Madden 96",
+    "url": "/artwork/clmadden96.webp",
+    "source": "https://www.mobygames.com/game/22870/madden-nfl-96/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Madden 96 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Madden 96\" before use. Source page: https://www.mobygames.com/game/22870/madden-nfl-96/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmadden99": {
+    "title": "Madden 99",
+    "url": "/artwork/clmadden99.webp",
+    "source": "https://alchetron.com/Madden-NFL-99",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Madden 99 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Madden 99\" before use. Source page: https://alchetron.com/Madden-NFL-99",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmaddenfootball64": {
+    "title": "Madden Football 64",
+    "url": "/artwork/clmaddenfootball64.webp",
+    "source": "https://www.mobygames.com/game/5431/madden-football-64/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Madden Football 64 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Madden Football 64\" before use. Source page: https://www.mobygames.com/game/5431/madden-football-64/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmaddennfl": {
+    "title": "Madden NFL",
+    "url": "/artwork/clmaddennfl.webp",
+    "source": "https://mashable.com/review/madden-nfl-25-ps5-review-first-impressions-mashable",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Madden NFL game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Madden NFL\" before use. Source page: https://mashable.com/review/madden-nfl-25-ps5-review-first-impressions-mashable",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmaddennfl2000": {
+    "title": "Madden NFL 2000",
+    "url": "/artwork/clmaddennfl2000.webp",
+    "source": "https://en.wikipedia.org/wiki/Madden_NFL_2000",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Madden NFL 2000 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Madden NFL 2000\" before use. Source page: https://en.wikipedia.org/wiki/Madden_NFL_2000",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmaddennfl2001": {
+    "title": "Madden NFL 2001",
+    "url": "/artwork/clmaddennfl2001.webp",
+    "source": "https://www.imdb.com/title/tt0289297/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Madden NFL 2001 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Madden NFL 2001\" before use. Source page: https://www.imdb.com/title/tt0289297/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmaddennfl2002": {
+    "title": "Madden NFL 2002",
+    "url": "/artwork/clmaddennfl2002.webp",
+    "source": "https://strategywiki.org/wiki/Madden_NFL_2002",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Madden NFL 2002 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Madden NFL 2002\" before use. Source page: https://strategywiki.org/wiki/Madden_NFL_2002",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmaddy98": {
+    "title": "Madden 98",
+    "url": "/artwork/clmaddy98.webp",
+    "source": "https://gamesdb.launchbox-app.com/games/images/3629-madden-nfl-98",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Madden 98 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Madden 98\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/3629-madden-nfl-98",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clmadnessaccelerant": {
     "title": "Madness Accelerant",
@@ -9491,6 +9803,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clmadnesscombatnexus.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clmadnessgemini": {
+    "title": "Madness Gemini",
+    "url": "/artwork/clmadnessgemini.webp",
+    "source": "https://www.youtube.com/watch?v=kX3MdwVuLnA",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Madness Gemini game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Madness Gemini\" before use. Source page: https://www.youtube.com/watch?v=kX3MdwVuLnA",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clmadnesshydraulic": {
     "title": "Madness Hydraulic",
     "url": "/artwork/clmadnesshydraulic.webp",
@@ -9515,6 +9835,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clmadnessoffcolor.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clmadnesspremediation": {
+    "title": "Madness Premediation",
+    "url": "/artwork/clmadnesspremediation.webp",
+    "source": "https://bomtoons.newgrounds.com/games/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Madness Premediation game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Madness Premediation\" before use. Source page: https://bomtoons.newgrounds.com/games/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clmadnessretaliation": {
     "title": "Madness Retaliation",
     "url": "/artwork/clmadnessretaliation.webp",
@@ -9522,6 +9850,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clmadnessretaliation.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clmadnesss2010": {
+    "title": "Madness 2010",
+    "url": "/artwork/clmadnesss2010.webp",
+    "source": "https://www.newgrounds.com/portal/view/548862",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Madness 2010 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Madness 2010\" before use. Source page: https://www.newgrounds.com/portal/view/548862",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clmadnessstand": {
     "title": "Madness Stand",
@@ -9563,6 +9899,30 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clmagetoweridle.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clmagictiles3": {
+    "title": "Magic Tiles 3",
+    "url": "/artwork/clmagictiles3.webp",
+    "source": "https://dinosaurgame-free.io/magic-tiles-3",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Magic Tiles 3 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Magic Tiles 3\" before use. Source page: https://dinosaurgame-free.io/magic-tiles-3",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmajorasmask": {
+    "title": "Zelda: Majora's Mask",
+    "url": "/artwork/clmajorasmask.webp",
+    "source": "https://www.ign.com/games/the-legend-of-zelda-majoras-mask",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Zelda: Majora's Mask game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Zelda: Majora's Mask\" before use. Source page: https://www.ign.com/games/the-legend-of-zelda-majoras-mask",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmakesureitsclosed": {
+    "title": "Make Sure It's Closed",
+    "url": "/artwork/clmakesureitsclosed.webp",
+    "source": "https://www.youtube.com/watch?v=7hJmCQT29tA",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Make Sure It's Closed game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Make Sure It's Closed\" before use. Source page: https://www.youtube.com/watch?v=7hJmCQT29tA",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clmanagod": {
     "title": "Managod",
     "url": "/artwork/clmanagod.webp",
@@ -9579,12 +9939,28 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clmarbleracer-1.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clmari0": {
+    "title": "Mari0",
+    "url": "/artwork/clmari0.webp",
+    "source": "https://osxdaily.com/2012/03/06/portal-super-mario-bros-mari0/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mari0 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mari0\" before use. Source page: https://osxdaily.com/2012/03/06/portal-super-mario-bros-mari0/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clmario-party-advance": {
     "title": "Mario Party Advance",
     "url": "/artwork/clmario-party-advance.webp",
     "source": "https://www.vgchartz.com/game/3717/mario-party-advance/",
     "type": "game-asset",
     "identityEvidence": "Found by searching \"Mario Party Advance game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mario Party Advance\" before use. Source page: https://www.vgchartz.com/game/3717/mario-party-advance/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmario3": {
+    "title": "Mario 3",
+    "url": "/artwork/clmario3.webp",
+    "source": "https://strategywiki.org/wiki/Super_Mario_Bros._3",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mario 3 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mario 3\" before use. Source page: https://strategywiki.org/wiki/Super_Mario_Bros._3",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clmario64webgl": {
@@ -9595,6 +9971,30 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clmario64webgl.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clmarioandluigisuperstarsaga": {
+    "title": "Mario & Luigi: Superstar Saga",
+    "url": "/artwork/clmarioandluigisuperstarsaga.webp",
+    "source": "https://www.nintendo.com/en-gb/Games/Game-Boy-Advance/Mario-Luigi-Superstar-Saga-267024.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mario & Luigi: Superstar Saga game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Mario & Luigi: Superstar Saga\" before use. Source page: https://www.nintendo.com/en-gb/Games/Game-Boy-Advance/Mario-Luigi-Superstar-Saga-267024.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmariobrosnes": {
+    "title": "Mario Bros (NES)",
+    "url": "/artwork/clmariobrosnes.webp",
+    "source": "https://www.nintendo.com/en-gb/Games/NES/Mario-Bros-768392.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mario Bros (NES) game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Mario Bros (NES)\" before use. Source page: https://www.nintendo.com/en-gb/Games/NES/Mario-Bros-768392.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmariobuilder64-1": {
+    "title": "Mario Builder 64",
+    "url": "/artwork/clmariobuilder64-1.webp",
+    "source": "https://gamesdb.launchbox-app.com/games/images/400538-mario-builder-64",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mario Builder 64 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mario Builder 64\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/400538-mario-builder-64",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clmariocombat": {
     "title": "Mario Combat",
     "url": "/artwork/clmariocombat.webp",
@@ -9602,6 +10002,46 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clmariocombat.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clmariogolf": {
+    "title": "Mario Golf",
+    "url": "/artwork/clmariogolf.webp",
+    "source": "https://www.imdb.com/title/tt0292096/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mario Golf game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Mario Golf\" before use. Source page: https://www.imdb.com/title/tt0292096/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmarioismissingdoneright": {
+    "title": "Mario Is Missing Done Right",
+    "url": "/artwork/clmarioismissingdoneright.webp",
+    "source": "https://gamesdb.launchbox-app.com/games/images/98808-mario-is-missing-done-right",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mario Is Missing Done Right game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mario Is Missing Done Right\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/98808-mario-is-missing-done-right",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmariokart64": {
+    "title": "Mario Kart 64",
+    "url": "/artwork/clmariokart64.webp",
+    "source": "https://www.nintendo.com/en-za/Games/Nintendo-64/Mario-Kart-64-269558.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mario Kart 64 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Mario Kart 64\" before use. Source page: https://www.nintendo.com/en-za/Games/Nintendo-64/Mario-Kart-64-269558.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmariokartds": {
+    "title": "Mario Kart DS",
+    "url": "/artwork/clmariokartds.webp",
+    "source": "https://www.mariowiki.com/Mario_Kart_DS",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mario Kart DS game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mario Kart DS\" before use. Source page: https://www.mariowiki.com/Mario_Kart_DS",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmariokartsupercircuit": {
+    "title": "Mario Kart: Super Circuit",
+    "url": "/artwork/clmariokartsupercircuit.webp",
+    "source": "https://www.nintendo.com/en-gb/Games/Game-Boy-Advance/Mario-Kart-Super-Circuit-266980.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mario Kart: Super Circuit game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mario Kart: Super Circuit\" before use. Source page: https://www.nintendo.com/en-gb/Games/Game-Boy-Advance/Mario-Kart-Super-Circuit-266980.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clmariolostlevels": {
     "title": "Mario Lost Levels",
@@ -9619,6 +10059,110 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Published by the distribution for Mario Madness at https://cdn.jsdelivr.net/gh/mll-enh/diesmosfilehost@8679c0fe47a99f5657f04958fd06c5abdaa4a6b9/MM/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched game3.glov3.me page metadata).",
     "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request."
   },
+  "clmariomakersnes": {
+    "title": "Mario Maker (NES)",
+    "url": "/artwork/clmariomakersnes.webp",
+    "source": "https://roguewatson.com/2015/12/18/my-top-ten-games-of-2015-6/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mario Maker (NES) game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mario Maker (NES)\" before use. Source page: https://roguewatson.com/2015/12/18/my-top-ten-games-of-2015-6/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmariopaint": {
+    "title": "Mario Paint",
+    "url": "/artwork/clmariopaint.webp",
+    "source": "https://storage.googleapis.com/dwvvbjebabhiqe/super-mario-paint-splash-nintendo-switch.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mario Paint game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mario Paint\" before use. Source page: https://storage.googleapis.com/dwvvbjebabhiqe/super-mario-paint-splash-nintendo-switch.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmarioparty2": {
+    "title": "Mario Party 2",
+    "url": "/artwork/clmarioparty2.webp",
+    "source": "https://www.lukiegames.com/Mario-Party-2-Nintendo-64-N64-Game.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mario Party 2 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Mario Party 2\" before use. Source page: https://www.lukiegames.com/Mario-Party-2-Nintendo-64-N64-Game.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmarioparty3": {
+    "title": "Mario Party 3",
+    "url": "/artwork/clmarioparty3.webp",
+    "source": "https://bleedingcool.com/games/mario-party-3-is-coming-to-nintendo-switch-online-expansion-pack/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mario Party 3 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Mario Party 3\" before use. Source page: https://bleedingcool.com/games/mario-party-3-is-coming-to-nintendo-switch-online-expansion-pack/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmariopartyds": {
+    "title": "Mario Party DS",
+    "url": "/artwork/clmariopartyds.webp",
+    "source": "https://www.nintendo.com/en-gb/Games/Nintendo-DS/Mario-Party-DS-271540.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mario Party DS game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Mario Party DS\" before use. Source page: https://www.nintendo.com/en-gb/Games/Nintendo-DS/Mario-Party-DS-271540.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmariosmysterymeat": {
+    "title": "Mario's Mystery Meat",
+    "url": "/artwork/clmariosmysterymeat.webp",
+    "source": "https://thegamesdb.net/game.php?id=116599",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mario's Mystery Meat game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Mario's Mystery Meat\" before use. Source page: https://thegamesdb.net/game.php?id=116599",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmariotennis": {
+    "title": "Mario Tennis",
+    "url": "/artwork/clmariotennis.webp",
+    "source": "https://www.nintendo.com/en-gb/Games/Nintendo-Switch-games/Mario-Tennis-Aces-1325791.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mario Tennis game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Mario Tennis\" before use. Source page: https://www.nintendo.com/en-gb/Games/Nintendo-Switch-games/Mario-Tennis-Aces-1325791.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmariotennisgb": {
+    "title": "Mario Tennis (GB)",
+    "url": "/artwork/clmariotennisgb.webp",
+    "source": "https://www.mariowiki.com/Mario_Tennis_(Game_Boy_Color)",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mario Tennis (GB) game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mario Tennis (GB)\" before use. Source page: https://www.mariowiki.com/Mario_Tennis_(Game_Boy_Color)",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmariovsluigi": {
+    "title": "Mario vs Luigi",
+    "url": "/artwork/clmariovsluigi.webp",
+    "source": "https://lutris.net/games/nsmb-mario-vs-luigi-online/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mario vs Luigi game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mario vs Luigi\" before use. Source page: https://lutris.net/games/nsmb-mario-vs-luigi-online/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmarvelsuperheroesarcade": {
+    "title": "Marvel Super Heroes Arcade",
+    "url": "/artwork/clmarvelsuperheroesarcade.webp",
+    "source": "https://forums.marvelousnews.com/forums/topic/2169843-arcade1up-marvel-super-heroes-arcade-machine-unboxing-and-review/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Marvel Super Heroes Arcade game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Marvel Super Heroes Arcade\" before use. Source page: https://forums.marvelousnews.com/forums/topic/2169843-arcade1up-marvel-super-heroes-arcade-machine-unboxing-and-review/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmarvelvscapcomps1": {
+    "title": "Marvel vs Capcom (PS1)",
+    "url": "/artwork/clmarvelvscapcomps1.webp",
+    "source": "https://superretro.com.au/products/marvel-vs-capcom-ps1",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Marvel vs Capcom (PS1) game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Marvel vs Capcom (PS1)\" before use. Source page: https://superretro.com.au/products/marvel-vs-capcom-ps1",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmarvelvsstreetfighter": {
+    "title": "Marvel vs Street Fighter",
+    "url": "/artwork/clmarvelvsstreetfighter.webp",
+    "source": "https://www.capcom-games.com/marvel-vs-capcom-fc/en-us/title/marvel-vs-sf/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Marvel vs Street Fighter game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Marvel vs Street Fighter\" before use. Source page: https://www.capcom-games.com/marvel-vs-capcom-fc/en-us/title/marvel-vs-sf/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmarvelvsstreetfighterjp": {
+    "title": "Marvel vs Street Fighter JP",
+    "url": "/artwork/clmarvelvsstreetfighterjp.webp",
+    "source": "https://gamesdb.launchbox-app.com/games/images/31042-marvel-super-heroes-vs-street-fighter",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Marvel vs Street Fighter JP game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Marvel vs Street Fighter JP\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/31042-marvel-super-heroes-vs-street-fighter",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clmaskedforcesunlimited": {
     "title": "Masked Forces Unlimited",
     "url": "/artwork/clmaskedforcesunlimited.webp",
@@ -9635,6 +10179,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clmastermindworldconquerer.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clmatrixrampage": {
+    "title": "Matrix Rampage",
+    "url": "/artwork/clmatrixrampage.webp",
+    "source": "https://www.youtube.com/watch?v=fhh-DDiPvbw",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Matrix Rampage game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Matrix Rampage\" before use. Source page: https://www.youtube.com/watch?v=fhh-DDiPvbw",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clmattv2": {
     "title": "Matt V2",
     "url": "/artwork/clmattv2.webp",
@@ -9642,6 +10194,46 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "official-icon",
     "identityEvidence": "Published by the distribution for Matt V2 at https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/matt-v2/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
     "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request."
+  },
+  "clmauimallard": {
+    "title": "Maui Mallard",
+    "url": "/artwork/clmauimallard.webp",
+    "source": "https://www.lukiegames.com/Maui-Mallard-in-Cold-Shadow-GameBoy.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Maui Mallard game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Maui Mallard\" before use. Source page: https://www.lukiegames.com/Maui-Mallard-in-Cold-Shadow-GameBoy.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmaxpayne": {
+    "title": "Max Payne",
+    "url": "/artwork/clmaxpayne.webp",
+    "source": "http://www.hdwallpapers.in/max_payne_3_game-wallpapers.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Max Payne game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Max Payne\" before use. Source page: http://www.hdwallpapers.in/max_payne_3_game-wallpapers.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmcfpsfbhd": {
+    "title": "MCFP SF BHD",
+    "url": "/artwork/clmcfpsfbhd.webp",
+    "source": "https://www.youtube.com/watch?v=6RSl4Qf5E8Q",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"MCFP SF BHD game\" in Bing Images and taking result 1; the image was checked against the catalog title \"MCFP SF BHD\" before use. Source page: https://www.youtube.com/watch?v=6RSl4Qf5E8Q",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmcraerally": {
+    "title": "McRae Rally",
+    "url": "/artwork/clmcraerally.webp",
+    "source": "https://www.lukiegames.com/Colin-McRae-Rally-Sony-Playstation-Game.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"McRae Rally game\" in Bing Images and taking result 3; the image was checked against the catalog title \"McRae Rally\" before use. Source page: https://www.lukiegames.com/Colin-McRae-Rally-Sony-Playstation-Game.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmeatboy": {
+    "title": "Meatboy",
+    "url": "/artwork/clmeatboy.webp",
+    "source": "https://store.epicgames.com/es-MX/p/super-meat-boy-forever-mobile-ios-190ae0",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Meatboy game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Meatboy\" before use. Source page: https://store.epicgames.com/es-MX/p/super-meat-boy-forever-mobile-ios-190ae0",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clmeatboyflash": {
     "title": "Meat Boy (Flash)",
@@ -9651,6 +10243,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clmeatboyflash.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clmedalofhonor-1": {
+    "title": "Medal of Honor",
+    "url": "/artwork/clmedalofhonor-1.webp",
+    "source": "https://www.giantbomb.com/medal-of-honor/3030-29336/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Medal of Honor game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Medal of Honor\" before use. Source page: https://www.giantbomb.com/medal-of-honor/3030-29336/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clmedievalshark": {
     "title": "Medieval Shark",
     "url": "/artwork/clmedievalshark.webp",
@@ -9659,6 +10259,102 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clmedievalshark.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clmedievil": {
+    "title": "MediEvil",
+    "url": "/artwork/clmedievil.webp",
+    "source": "https://wallpaperaccess.com/medievil-game",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"MediEvil game\" in Bing Images and taking result 2; the image was checked against the catalog title \"MediEvil\" before use. Source page: https://wallpaperaccess.com/medievil-game",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmegachess": {
+    "title": "Mega Chess",
+    "url": "/artwork/clmegachess.webp",
+    "source": "https://boardgamegeek.com/boardgame/4572/megachess",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mega Chess game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Mega Chess\" before use. Source page: https://boardgamegeek.com/boardgame/4572/megachess",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmegaclient": {
+    "title": "Mega Client",
+    "url": "/artwork/clmegaclient.webp",
+    "source": "https://www.youtube.com/watch?v=oqiFBPN1vKc",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mega Client game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mega Client\" before use. Source page: https://www.youtube.com/watch?v=oqiFBPN1vKc",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmegaman2": {
+    "title": "Mega Man 2",
+    "url": "/artwork/clmegaman2.webp",
+    "source": "https://www.ign.com/games/mega-man-2/walkthroughs",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mega Man 2 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mega Man 2\" before use. Source page: https://www.ign.com/games/mega-man-2/walkthroughs",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmegaman2gba": {
+    "title": "Mega Man 2 (GBA)",
+    "url": "/artwork/clmegaman2gba.webp",
+    "source": "https://www.mobygames.com/game/22301/mega-man-ii/cover/group-29449/cover-77923/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mega Man 2 (GBA) game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Mega Man 2 (GBA)\" before use. Source page: https://www.mobygames.com/game/22301/mega-man-ii/cover/group-29449/cover-77923/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmegaman3": {
+    "title": "Mega Man 3",
+    "url": "/artwork/clmegaman3.webp",
+    "source": "https://www.vgdb.com.br/nes-nintendo-entertainment-system/jogos/mega-man-3/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mega Man 3 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mega Man 3\" before use. Source page: https://www.vgdb.com.br/nes-nintendo-entertainment-system/jogos/mega-man-3/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmegaman4": {
+    "title": "Mega Man 4",
+    "url": "/artwork/clmegaman4.webp",
+    "source": "https://www.imdb.com/title/tt0206932/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mega Man 4 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Mega Man 4\" before use. Source page: https://www.imdb.com/title/tt0206932/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmegaman5": {
+    "title": "Mega Man 5",
+    "url": "/artwork/clmegaman5.webp",
+    "source": "https://www.mobygames.com/game/5108/mega-man-5/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mega Man 5 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mega Man 5\" before use. Source page: https://www.mobygames.com/game/5108/mega-man-5/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmegaman5gb": {
+    "title": "Mega Man 5 (GB)",
+    "url": "/artwork/clmegaman5gb.webp",
+    "source": "https://mariogames.io/mega-man-5-gb",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mega Man 5 (GB) game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mega Man 5 (GB)\" before use. Source page: https://mariogames.io/mega-man-5-gb",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmegaman6": {
+    "title": "Mega Man 6",
+    "url": "/artwork/clmegaman6.webp",
+    "source": "https://www.imdb.com/title/tt0263727/mediaviewer/rm2404812290/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mega Man 6 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Mega Man 6\" before use. Source page: https://www.imdb.com/title/tt0263727/mediaviewer/rm2404812290/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmegaman7": {
+    "title": "Mega Man 7",
+    "url": "/artwork/clmegaman7.webp",
+    "source": "https://gamesdb.launchbox-app.com/games/images/277-mega-man-7",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mega Man 7 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Mega Man 7\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/277-mega-man-7",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmegaman8": {
+    "title": "Mega Man 8",
+    "url": "/artwork/clmegaman8.webp",
+    "source": "https://www.imdb.com/title/tt0302786/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mega Man 8 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Mega Man 8\" before use. Source page: https://www.imdb.com/title/tt0302786/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clmegamanbasscftf": {
     "title": "Mega Man & Bass CFTF",
     "url": "/artwork/clmegamanbasscftf.webp",
@@ -9666,6 +10362,38 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clmegamanbasscftf.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clmegamanbattlechipchallenge": {
+    "title": "Mega Man Battle Chip Challenge",
+    "url": "/artwork/clmegamanbattlechipchallenge.webp",
+    "source": "https://www.nintendo.com/nl-nl/Games/Game-Boy-Advance/Mega-Man-Battle-Chip-Challenge-909673.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mega Man Battle Chip Challenge game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Mega Man Battle Chip Challenge\" before use. Source page: https://www.nintendo.com/nl-nl/Games/Game-Boy-Advance/Mega-Man-Battle-Chip-Challenge-909673.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmegamanbn5tc": {
+    "title": "Mega Man BN 5 TC",
+    "url": "/artwork/clmegamanbn5tc.webp",
+    "source": "https://www.webmulator.com/games/gameboy-advance/megaman-battle-network-5-team-colonel",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mega Man BN 5 TC game\" in Bing Images and taking result 5; the image was checked against the catalog title \"Mega Man BN 5 TC\" before use. Source page: https://www.webmulator.com/games/gameboy-advance/megaman-battle-network-5-team-colonel",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmegamanbn5tp": {
+    "title": "Mega Man BN 5 TP",
+    "url": "/artwork/clmegamanbn5tp.webp",
+    "source": "https://megaman.fandom.com/wiki/Mega_Man_Battle_Network_5",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mega Man BN 5 TP game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mega Man BN 5 TP\" before use. Source page: https://megaman.fandom.com/wiki/Mega_Man_Battle_Network_5",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmegamanbn6cg": {
+    "title": "Mega Man BN 6 CG",
+    "url": "/artwork/clmegamanbn6cg.webp",
+    "source": "https://megaman.miraheze.org/wiki/Mega_Man_Battle_Network_6",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mega Man BN 6 CG game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mega Man BN 6 CG\" before use. Source page: https://megaman.miraheze.org/wiki/Mega_Man_Battle_Network_6",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clmelonplayground": {
     "title": "Melon Playground",
@@ -13842,6 +14570,22 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "official-og",
     "identityEvidence": "Open Graph image served by krillion.cc itself, the official game this catalog embeds at /games/krillion.html. Shows the Krillion wordmark and tagline.",
     "reuseEvidence": "Artwork published by the service's own site for this application and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request."
+  },
+  "lime": {
+    "title": "Lime",
+    "url": "/artwork/lime.webp",
+    "source": "https://www.youtube.com/watch?v=tyyfn9ws_GI",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Lime game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Lime\" before use. Source page: https://www.youtube.com/watch?v=tyyfn9ws_GI",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "lucid": {
+    "title": "Lucid",
+    "url": "/artwork/lucid.webp",
+    "source": "https://www.gematsu.com/2025/09/lucid-launches-in-q1-2026",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Lucid game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Lucid\" before use. Source page: https://www.gematsu.com/2025/09/lucid-launches-in-q1-2026",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "minecraft": {
     "title": "Minecraft 1.12.2",

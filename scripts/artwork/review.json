@@ -7277,11 +7277,71 @@
     "status": "verified",
     "title": "Learn to Fly Idle"
   },
+  "cllearntoflyidlehack": {
+    "reason": "Learn to Fly Idle hack screen with its menu; result 2 carried a caption.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Learn to Fly Idle Hack"
+  },
   "cllegacyofgoku": {
     "reason": "Dragon Ball Z: The Legacy of Goku cover art without a platform band.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Legacy of Goku"
+  },
+  "cllegobatman": {
+    "reason": "LEGO Batman key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "LEGO Batman"
+  },
+  "cllegobatman2superheroes": {
+    "reason": "LEGO Batman 2: DC Super Heroes key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "LEGO Batman 2: Superheroes"
+  },
+  "cllegoindianajones": {
+    "reason": "LEGO Indiana Jones: The Original Adventures cover art; results 1 and 2 were the sequel.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "LEGO Indiana Jones"
+  },
+  "cllegoindianajones2": {
+    "reason": "LEGO Indiana Jones 2 key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "LEGO Indiana Jones 2"
+  },
+  "cllegoninjago": {
+    "reason": "The LEGO Ninjago Movie Videogame key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "LEGO Ninjago"
+  },
+  "cllegostarwars": {
+    "reason": "LEGO Star Wars: The Video Game cover art; results 1 and 2 were later LEGO Star Wars titles.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "LEGO Star Wars"
+  },
+  "cllegostarwars2gba": {
+    "reason": "LEGO Star Wars II GBA box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "LEGO Star Wars 2 (GBA)"
+  },
+  "cllegostarwarsgba": {
+    "reason": "Search results for this GBA build were all LEGO Star Wars II box art; the original's GBA cover was not among the first results.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
+  "cllemmings": {
+    "reason": "Lemmings key art with its lemming and logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Lemmings"
   },
   "clletitconsume": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7289,11 +7349,59 @@
     "status": "verified",
     "title": "Let It Consume"
   },
+  "clletsgoeevee": {
+    "reason": "Pokemon Let's Go, Eevee! box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Let's Go Eevee"
+  },
+  "clletsgopikachu": {
+    "reason": "Let's Go Pikachu key art with Pikachu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Let's Go Pikachu"
+  },
+  "clleveldevil": {
+    "reason": "Level Devil title screen with its menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Level Devil"
+  },
+  "clleverwarriors": {
+    "reason": "Lever Warriors title menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Lever Warriors"
+  },
+  "cllightitup": {
+    "reason": "Light It Up title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Light It Up"
+  },
   "cllilrunmo": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Lil Runmo"
+  },
+  "cllinerider": {
+    "reason": "Line Rider canvas with its rider and track.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Line Rider"
+  },
+  "cllinksawakeningdx": {
+    "reason": "Link's Awakening DX box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Legend of Zelda: Link's Awakening DX"
+  },
+  "cllinktothepast": {
+    "reason": "A Link to the Past logo art over the map.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Legend of Zelda: A Link to the Past"
   },
   "cllittlealchemy2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7301,11 +7409,23 @@
     "status": "verified",
     "title": "Little Alchemy 2"
   },
+  "cllittlerunmo": {
+    "reason": "Little Runmo: The Game key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Little Runmo"
+  },
   "cllockthedoor": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Lock the Door"
+  },
+  "clloderunner": {
+    "reason": "Lode Runner Classic logo art with gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Lode Runner"
   },
   "cllonewolf": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7325,11 +7445,65 @@
     "status": "verified",
     "title": "Hollow Knight (Alt)"
   },
+  "clloz1": {
+    "reason": "Results were Breath of the Wild key art and its box, not the NES entry this catalog row serves.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
+  "cllozlinkawakening": {
+    "reason": "Link's Awakening Switch key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Legend of Zelda: Link's Awakening"
+  },
+  "cllozminishcap": {
+    "reason": "The Minish Cap box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Legend of Zelda: The Minish Cap"
+  },
+  "cllozoracleofseasons": {
+    "reason": "Oracle of Seasons box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Legend of Zelda: Oracle of Seasons"
+  },
+  "cllozphantomhourglass": {
+    "reason": "Phantom Hourglass DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Legend of Zelda: Phantom Hourglass"
+  },
   "cllse": {
     "reason": "LSE gameplay with its dialogue box and HUD.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "LSE"
+  },
+  "clluckyblocks": {
+    "reason": "Lucky Block 3D artwork; result 3 carried an income overlay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Lucky Blocks"
+  },
+  "cllumberobby": {
+    "reason": "Lumber Obby gameplay without a site watermark.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Lumber Obby"
+  },
+  "cllummm": {
+    "reason": "Lummm level artwork.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Lummm"
+  },
+  "clmachrider": {
+    "reason": "Mach Rider key art with its bike.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mach Rider"
   },
   "clmadalinstuntcars": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7337,11 +7511,89 @@
     "status": "verified",
     "title": "Madalin Stunt Cars"
   },
+  "clmadalinstuntcarsgood": {
+    "reason": "Madalin Stunt Cars key art for this build.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madalin Stunt Cars Good"
+  },
   "clmadalinstuntcarsmultiplayerfixed": {
     "reason": "Wrapper-declared artwork for this title (official og) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Madalin Stunt Cars Multiplayer"
+  },
+  "clmadden93": {
+    "reason": "John Madden Football '93 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madden 93"
+  },
+  "clmadden94": {
+    "reason": "Madden NFL 94 gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madden 94"
+  },
+  "clmadden95": {
+    "reason": "Madden 95 Game Boy box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madden 95"
+  },
+  "clmadden96": {
+    "reason": "Madden 96 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madden 96"
+  },
+  "clmadden99": {
+    "reason": "Madden NFL 99 PlayStation box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madden 99"
+  },
+  "clmaddenfootball": {
+    "reason": "Results were Madden 25 and 26, not the Madden Football this entry serves.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
+  "clmaddenfootball64": {
+    "reason": "Madden Football 64 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madden Football 64"
+  },
+  "clmaddennfl": {
+    "reason": "Madden 25 key art with its player.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madden NFL"
+  },
+  "clmaddennfl2000": {
+    "reason": "Madden 2000 PS1 cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madden NFL 2000"
+  },
+  "clmaddennfl2001": {
+    "reason": "Madden 2001 PS2 cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madden NFL 2001"
+  },
+  "clmaddennfl2002": {
+    "reason": "Madden 2002 PS2 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madden NFL 2002"
+  },
+  "clmaddy98": {
+    "reason": "Madden 98 SNES cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madden 98"
   },
   "clmadnessaccelerant": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7361,6 +7613,12 @@
     "status": "verified",
     "title": "Madness Combat Nexus"
   },
+  "clmadnessgemini": {
+    "reason": "Madness Gemini gameplay with its HP bars.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madness Gemini"
+  },
   "clmadnesshydraulic": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -7379,11 +7637,23 @@
     "status": "verified",
     "title": "Madness Off Color"
   },
+  "clmadnesspremediation": {
+    "reason": "Madness Premeditation title card.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madness Premediation"
+  },
   "clmadnessretaliation": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Madness Retaliation"
+  },
+  "clmadnesss2010": {
+    "reason": "Madness 2010: Funhouse key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madness 2010"
   },
   "clmadnessstand": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7415,6 +7685,30 @@
     "status": "verified",
     "title": "Mage Tower Idle"
   },
+  "clmagictiles3": {
+    "reason": "Magic Tiles 3 logo art with its keys.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Magic Tiles 3"
+  },
+  "clmajorasmask": {
+    "reason": "Majora's Mask logo art with Link.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Zelda: Majora's Mask"
+  },
+  "clmakesureitsclosed": {
+    "reason": "Make Sure It's Closed horror scene with its creature.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Make Sure It's Closed"
+  },
+  "clmami": {
+    "reason": "No result clearly identifies this entry; the results were Hotline Mami and an unrelated Japanese visual novel.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
   "clmanagod": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -7427,11 +7721,23 @@
     "status": "verified",
     "title": "Marble Racer"
   },
+  "clmari0": {
+    "reason": "Mari0 gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mari0"
+  },
   "clmario-party-advance": {
     "reason": "Mario Party Advance box art with the logo.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Mario Party Advance"
+  },
+  "clmario3": {
+    "reason": "Super Mario Bros. 3 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario 3"
   },
   "clmario64webgl": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7439,11 +7745,59 @@
     "status": "verified",
     "title": "Mario 64 WebGL"
   },
+  "clmarioandluigisuperstarsaga": {
+    "reason": "Mario & Luigi: Superstar Saga logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario & Luigi: Superstar Saga"
+  },
+  "clmariobrosnes": {
+    "reason": "Mario Bros. arcade title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario Bros (NES)"
+  },
+  "clmariobuilder64-1": {
+    "reason": "Mario Builder 64 title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario Builder 64"
+  },
   "clmariocombat": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Mario Combat"
+  },
+  "clmariogolf": {
+    "reason": "Mario Golf key art with Mario and Toadstool.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario Golf"
+  },
+  "clmarioismissingdoneright": {
+    "reason": "Mario Is Missing Done Right box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario Is Missing Done Right"
+  },
+  "clmariokart64": {
+    "reason": "Mario Kart 64 key art with its racers.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario Kart 64"
+  },
+  "clmariokartds": {
+    "reason": "Mario Kart DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario Kart DS"
+  },
+  "clmariokartsupercircuit": {
+    "reason": "Mario Kart: Super Circuit key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario Kart: Super Circuit"
   },
   "clmariolostlevels": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7457,6 +7811,96 @@
     "status": "verified",
     "title": "Mario Madness"
   },
+  "clmariomakersnes": {
+    "reason": "Super Mario Maker NES editor screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario Maker (NES)"
+  },
+  "clmariominusrabbids": {
+    "reason": "Results were the retail Mario + Rabbids titles, not this fan game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
+  "clmariopaint": {
+    "reason": "Mario Paint canvas screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario Paint"
+  },
+  "clmarioparty": {
+    "reason": "Results were Super Mario Party and Jamboree, not the N64 Mario Party this entry serves.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
+  "clmarioparty2": {
+    "reason": "Mario Party 2 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario Party 2"
+  },
+  "clmarioparty3": {
+    "reason": "Mario Party 3 logo art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario Party 3"
+  },
+  "clmariopartyds": {
+    "reason": "Mario Party DS key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario Party DS"
+  },
+  "clmariosmysterymeat": {
+    "reason": "Mario's Mystery Meat title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario's Mystery Meat"
+  },
+  "clmariotennis": {
+    "reason": "Mario Tennis Aces key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario Tennis"
+  },
+  "clmariotennisgb": {
+    "reason": "Mario Tennis Game Boy Color box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario Tennis (GB)"
+  },
+  "clmariovsluigi": {
+    "reason": "Mario vs Luigi gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario vs Luigi"
+  },
+  "clmarvelsuperheroesarcade": {
+    "reason": "Marvel Super Heroes arcade cabinet with its screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Marvel Super Heroes Arcade"
+  },
+  "clmarvelvscapcomps1": {
+    "reason": "Marvel vs Capcom PlayStation cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Marvel vs Capcom (PS1)"
+  },
+  "clmarvelvsstreetfighter": {
+    "reason": "Marvel Super Heroes vs Street Fighter arcade title card.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Marvel vs Street Fighter"
+  },
+  "clmarvelvsstreetfighterjp": {
+    "reason": "Marvel Super Heroes vs Street Fighter Saturn box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Marvel vs Street Fighter JP"
+  },
   "clmaskedforcesunlimited": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -7469,11 +7913,47 @@
     "status": "verified",
     "title": "Mastermind World Conquerer"
   },
+  "clmatrixrampage": {
+    "reason": "Matrix Rampage title screen with its menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Matrix Rampage"
+  },
   "clmattv2": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Matt V2"
+  },
+  "clmauimallard": {
+    "reason": "Maui Mallard in Cold Shadow box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Maui Mallard"
+  },
+  "clmaxpayne": {
+    "reason": "Max Payne 3 key art with Max.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Max Payne"
+  },
+  "clmcfpsfbhd": {
+    "reason": "MCFP SF BHD key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "MCFP SF BHD"
+  },
+  "clmcraerally": {
+    "reason": "Colin McRae Rally PlayStation box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "McRae Rally"
+  },
+  "clmeatboy": {
+    "reason": "Super Meat Boy Forever key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Meatboy"
   },
   "clmeatboyflash": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -7481,17 +7961,125 @@
     "status": "verified",
     "title": "Meat Boy (Flash)"
   },
+  "clmedalofhonor-1": {
+    "reason": "Medal of Honor cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Medal of Honor"
+  },
   "clmedievalshark": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Medieval Shark"
   },
+  "clmedievil": {
+    "reason": "MediEvil logo art with Sir Dan.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "MediEvil"
+  },
+  "clmegachess": {
+    "reason": "MegaChess box art with its boards.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Chess"
+  },
+  "clmegaclient": {
+    "reason": "Mega Client gameplay with its overlay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Client"
+  },
+  "clmegaman2": {
+    "reason": "Mega Man 2 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man 2"
+  },
+  "clmegaman2gba": {
+    "reason": "Mega Man II box art for this build.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man 2 (GBA)"
+  },
+  "clmegaman3": {
+    "reason": "Mega Man 3 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man 3"
+  },
+  "clmegaman4": {
+    "reason": "Mega Man 4 cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man 4"
+  },
+  "clmegaman5": {
+    "reason": "Mega Man 5 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man 5"
+  },
+  "clmegaman5gb": {
+    "reason": "Mega Man V Game Boy box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man 5 (GB)"
+  },
+  "clmegaman6": {
+    "reason": "Mega Man 6 cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man 6"
+  },
+  "clmegaman7": {
+    "reason": "Mega Man 7 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man 7"
+  },
+  "clmegaman8": {
+    "reason": "Mega Man 8 key art without a platform band.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man 8"
+  },
   "clmegamanbasscftf": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Mega Man & Bass CFTF"
+  },
+  "clmegamanbattlechipchallenge": {
+    "reason": "Mega Man Battle Chip Challenge key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man Battle Chip Challenge"
+  },
+  "clmegamanbn5tc": {
+    "reason": "Mega Man Battle Network 5 Team Colonel box art, kept distinct from the Protoman release.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man BN 5 TC"
+  },
+  "clmegamanbn5tp": {
+    "reason": "Mega Man Battle Network 5 Team Protoman box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man BN 5 TP"
+  },
+  "clmegamanbn6cf": {
+    "reason": "Every first result for this build was Cybeast Gregar artwork; the Cybeast Falzar cover was not among them, so using it would mislabel the card.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
+  "clmegamanbn6cg": {
+    "reason": "Mega Man Battle Network 6 Cybeast Gregar box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man BN 6 CG"
   },
   "clmelonplayground": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -10618,6 +11206,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Helios Offline"
+  },
+  "lime": {
+    "reason": "Lime game screens on their background; result 3 was a promo banner.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Lime"
+  },
+  "lucid": {
+    "reason": "Lucid key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Lucid"
   },
   "minecraft": {
     "reason": "Captured the actual game menu.",

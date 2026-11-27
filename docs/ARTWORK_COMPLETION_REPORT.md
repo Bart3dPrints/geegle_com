@@ -15,24 +15,24 @@ Identity evidence and reuse basis are recorded separately on every record. Captu
 | Measure | Count |
 | --- | --- |
 | Catalog rows (unique IDs) | 2,710 |
-| Verified artwork | 1,732 |
+| Verified artwork | 1,825 |
 | Awaiting review | 0 |
-| Rejected (removed from the UI, queued for a new capture) | 45 |
+| Rejected (removed from the UI, queued for a new capture) | 52 |
 | Blocked | 0 |
 | Reopened after the blocked classification was rejected | 1,676 |
 | Render investigations from the earlier long-observation pass (that protocol was cancelled) | 590 |
 | ... that rendered an authentic frame | 551 |
 | ... that stopped at their own start gate | 6 |
 | ... that stayed blank for the whole observation | 26 |
-| Remaining unprocessed | 978 |
-| Actual verified coverage | 63.9% |
-| Total optimized asset size (verified images) | 41895 KiB |
+| Remaining unprocessed | 885 |
+| Actual verified coverage | 67.3% |
+| Total optimized asset size (verified images) | 44965 KiB |
 
 ## Verified artwork by acquisition method
 
 | Method | Count |
 | --- | --- |
-| game-asset | 671 |
+| game-asset | 764 |
 | gameplay-screenshot | 962 |
 | official-icon | 72 |
 | official-og | 27 |

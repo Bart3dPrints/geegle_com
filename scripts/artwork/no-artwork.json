@@ -106,5 +106,33 @@
   "clknockknock": {
     "reason": "Results were a physical Knock Knock board game and its packaging, not this title.",
     "recorded": "2026-11-27"
+  },
+  "clloz1": {
+    "reason": "Results were Breath of the Wild key art and its box, not the NES entry this catalog row serves.",
+    "recorded": "2026-11-27"
+  },
+  "clmaddenfootball": {
+    "reason": "Results were Madden 25 and 26, not the Madden Football this entry serves.",
+    "recorded": "2026-11-27"
+  },
+  "clmami": {
+    "reason": "No result clearly identifies this entry; the results were Hotline Mami and an unrelated Japanese visual novel.",
+    "recorded": "2026-11-27"
+  },
+  "clmariominusrabbids": {
+    "reason": "Results were the retail Mario + Rabbids titles, not this fan game.",
+    "recorded": "2026-11-27"
+  },
+  "clmarioparty": {
+    "reason": "Results were Super Mario Party and Jamboree, not the N64 Mario Party this entry serves.",
+    "recorded": "2026-11-27"
+  },
+  "cllegostarwarsgba": {
+    "reason": "Search results for this GBA build were all LEGO Star Wars II box art; the original's GBA cover was not among the first results.",
+    "recorded": "2026-11-27"
+  },
+  "clmegamanbn6cf": {
+    "reason": "Every first result for this build was Cybeast Gregar artwork; the Cybeast Falzar cover was not among them, so using it would mislabel the card.",
+    "recorded": "2026-11-27"
   }
 }
