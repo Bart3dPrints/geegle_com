@@ -7235,6 +7235,12 @@
     "status": "rejected",
     "title": "Castlevania: Symphony of the Night"
   },
+  "clsovereignoftheskys": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Sovereign of the Skys"
+  },
   "clspacebarclicker": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -7667,6 +7673,12 @@
     "status": "rejected",
     "title": "Subway Surfers: San Francisco"
   },
+  "clsubwaysurfersstpetersburg": {
+    "reason": "Generic tip overlay shared across titles.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Subway Surfers: St Petersburg"
+  },
   "clsubwaysurferswinterholiday": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -7685,11 +7697,77 @@
     "status": "rejected",
     "title": "Sugar Sugar"
   },
+  "clsuika": {
+    "reason": "Engine splash (Unity), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Suika"
+  },
+  "clsummerrider": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Summer Rider"
+  },
+  "clsupercarrush": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Supercar Rush"
+  },
+  "clsuperchibiknight": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Chibi Knight"
+  },
   "clsupercold": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Super Cold"
+  },
+  "clsuperdarkdeception": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Dark Deception"
+  },
+  "clsuperdromebugs-1": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Drome Bugs"
+  },
+  "clsuperfallingfred": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Falling Fred"
+  },
+  "clsuperfighters": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Fighters"
+  },
+  "clsuperhot": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Superhot"
+  },
+  "clsuperhotlinemiami": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Superhotline Miami"
+  },
+  "clsuperhouseofdeadninjas": {
+    "reason": "Near-black frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Super House of Dead Ninjas"
   },
   "clsuperkidadventure": {
     "reason": "Generic clock asset shared with another title.",
@@ -7697,17 +7775,125 @@
     "status": "rejected",
     "title": "Super Kid Adventure"
   },
+  "clsuperliquidsoccer": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Liquid Soccer"
+  },
+  "clsupermario63": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Super Mario 63"
+  },
+  "clsupermariobros": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario Bros"
+  },
+  "clsuperoliverworld": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Oliver World"
+  },
+  "clsuperpuzzlefighter2turboalt": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Super Puzzle Fighter 2 Turbo (Alt)"
+  },
   "clsupersantakicker": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Super Santa Kicker"
   },
+  "clsupersantakicker2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Santa Kicker 2"
+  },
+  "clsupersmashflash": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Smash Flash"
+  },
+  "clsupersmashflash0-8": {
+    "reason": "Error page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Super Smash Flash 0.8"
+  },
+  "clsupersmashflash2": {
+    "reason": "Blank frame with a play button; not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Super Smash Flash 2"
+  },
+  "clsupersmashflash2butdifversion": {
+    "reason": "Blank frame with a play button; not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Super Smash Flash 2 (Alt Version)"
+  },
+  "clsupitdept": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sup It Dept"
+  },
+  "clsupremeduelist": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Supreme Duelist"
+  },
   "clsupremeduelist2019": {
     "reason": "Publisher logo, not the game.",
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "Supreme Duelist 2019"
+  },
+  "clsurvevio": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Surviv.io"
+  },
+  "clsurvivalracev2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Survival Race V2"
+  },
+  "clsurvivorio": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Survivor.io"
+  },
+  "clsushicat": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sushi Cat"
+  },
+  "clsushicat2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sushi Cat 2"
+  },
+  "clsushiunroll": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sushi Unroll"
   },
   "clswerve": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -7721,6 +7907,72 @@
     "status": "rejected",
     "title": "Swing for Brain Rots"
   },
+  "clswitchblade": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Switchblade"
+  },
+  "clswordfight": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sword Fight"
+  },
+  "clswordsandsandals": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Swords and Sandals"
+  },
+  "clswordsandsandals2": {
+    "reason": "Unrelated splash page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Swords and Sandals 2"
+  },
+  "clswordsandsouls": {
+    "reason": "Arcade warning splash, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Swords and Souls"
+  },
+  "clsydneyshark": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sydney Shark"
+  },
+  "cltabi": {
+    "reason": "Near-empty text frame, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Tabi"
+  },
+  "cltabletanks": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Table Tanks"
+  },
+  "cltabletennisworldtour": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Table Tennis World Tour"
+  },
+  "cltacostand": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Taco Stand"
+  },
+  "cltagc3": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tag C3"
+  },
   "cltagcm": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
@@ -7733,17 +7985,125 @@
     "status": "rejected",
     "title": "Tail of the Dragon"
   },
+  "cltaisei": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Taisei"
+  },
+  "cltakeover": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Takeover"
+  },
   "cltallio": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Tall.io"
   },
+  "cltallmanrun": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tall Man Run"
+  },
+  "cltankmayhem": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tank Mayhem"
+  },
+  "cltankpixel": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tank Pixel"
+  },
+  "cltanktrouble": {
+    "reason": "Error page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Tank Trouble"
+  },
+  "cltanukisunset": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tanuki Sunset"
+  },
+  "cltanukisunsetuhhhhhhhh": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tanuki Sunset (Alt)"
+  },
   "cltaproad": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Tap Road"
+  },
+  "cltastyplanet": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tasty Planet"
+  },
+  "cltboidemo": {
+    "reason": "Screen shown belongs to a different game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "The Binding of Isaac Demo"
+  },
+  "cltboilambeternal": {
+    "reason": "Screen shown belongs to a different game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "The Binding of Isaac: Lamb Eternal"
+  },
+  "cltelephonetrouble": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Telephone Trouble"
+  },
+  "cltempleofboom": {
+    "reason": "Portal logo (Player.com), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Temple of Boom"
+  },
+  "clteod": {
+    "reason": "Download/extract screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Teod"
+  },
+  "clterritorialio": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Territorial.io"
+  },
+  "clterritorywar": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Territory War"
+  },
+  "clterritorywar2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Territory War 2"
+  },
+  "clterritorywar3": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Territory War 3"
   },
   "cltimeshooter2": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
