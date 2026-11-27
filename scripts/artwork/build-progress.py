@@ -65,6 +65,7 @@ def main():
     captured = load("captured.json", {"assets": {}, "screens": {}}) or {"assets": {}, "screens": {}}
     review = load("review.json", {}) or {}
     blocked = load("blocked.json", {}) or {}
+    research = load("research-log.json", {}) or {}
     audit = load("audit.json", {}) or {}
     audit_rows = {row["id"]: row for row in audit.get("rows", [])}
 
@@ -94,6 +95,7 @@ def main():
             "dimensions": None,
             "sha256": None,
             "visualVerification": "not reviewed",
+            "methodsInvestigated": [],
             "blocker": None,
         }
         if record:
@@ -104,6 +106,7 @@ def main():
                 identityEvidence=record.get("identityEvidence"),
                 reuseEvidence=record.get("reuseEvidence"),
                 sha256=record.get("assetSha256"),
+                methodsInvestigated=record.get("methodsInvestigated") or [],
             )
             info = audit_rows.get(game_id)
             if info and info.get("width"):
@@ -121,6 +124,11 @@ def main():
         elif game_id in blocked:
             row["status"] = "blocked"
             row["blocker"] = blocked[game_id].get("reason")
+        else:
+            entry = research.get(game_id) or {}
+            row["methodsInvestigated"] = list(entry.get("methods") or [])
+            if entry.get("sources"):
+                row["sourceUrl"] = entry["sources"][0]
         rows.append(row)
 
     summary = {

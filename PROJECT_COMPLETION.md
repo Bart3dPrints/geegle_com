@@ -874,3 +874,38 @@ authentication behavior was changed. One coherent branch and pull request.
 - Favorites and Recently Played were not exercised with a signed-in account in
   this pass; they render through the same `GameArt` component as the library.
 - Coverage is not universal and is not claimed to be.
+
+## Artwork completion, phase 2 — internet research first
+
+Resumed after PR #11 merged, on `feature/geegle-artwork-completion`. The
+acquisition order is now enforced in code rather than described in a comment:
+`scripts/artwork/research-assets.mjs` visits every remaining title's live
+distribution pages and their build paths, probes conventional published assets
+(`logo.png`, `icon*.png`, `cover.png`, `og.png`, …) and records, per catalog ID,
+which methods were attempted and which URLs answered. Only titles with no
+obtainable published image fall through to `capture-screens.mjs`, and every
+record now carries `methodsInvestigated`.
+
+| Check | Result |
+| --- | --- |
+| `python3 scripts/artwork/build-progress.py` | 2,710 entries, 452 verified, 16.7% |
+| `python3 scripts/artwork/audit-artwork.py` | 0 broken, 0 exact-duplicate groups |
+| `node scripts/map-artwork.mjs --check` | exit 0 |
+| `npm run typecheck` / `npm run lint` / `npm run build` | exit 0 |
+| `bun test tests` | see run below |
+
+Research covered all 2,435 remaining entries; 258 had a published icon, logo or
+game asset, and 98 of those survived visual review after rejecting portal logos
+(Two Player Games, Unblocked Games G+, Kiz10, Agame, SAWGAMES, Newgrounds),
+store badges, publisher splashes, watermarked sketches and shared engine
+splashes. Captures added a further 83 verified title screens and gameplay frames
+after the play/content-warning gates were passed.
+
+### Not claimed
+
+- 2,175 entries remain unprocessed and 83 captured frames await review. Capture
+  was stopped by the execution budget of the session, not because the queue was
+  empty; the exact remaining list and resume commands are in
+  `docs/ARTWORK_COMPLETION_REPORT.md`.
+- The seven service screenshots are still absent from the workspace, so no
+  service card artwork was invented or reassigned.

@@ -46,6 +46,8 @@ function json(file, fallback) {
 const cleared = json(path.join(root, 'scripts/artwork-map.json'), { cleared: {} }).cleared ?? {};
 const captured = json(path.join(root, 'scripts/artwork/captured.json'), {});
 const known = new Set([...Object.keys(cleared), ...Object.keys(captured.assets ?? {}), ...Object.keys(captured.screens ?? {})]);
+const reviewDecisions = json(path.join(root, 'scripts/artwork/review.json'), {});
+const rejected = new Set(Object.entries(reviewDecisions).filter(([, v]) => v && v.status === 'rejected').map(([id]) => id));
 const staged = new Set(
   readdirSync(outDir)
     .filter((name) => name.endsWith('.png'))
@@ -59,7 +61,7 @@ for (const row of rows) {
   if (seen.has(row.id)) continue;
   seen.add(row.id);
   if (!localFilename(row.path)) continue;
-  if (!force && (known.has(row.id) || staged.has(row.id))) continue;
+  if (!force && (known.has(row.id) || staged.has(row.id) || rejected.has(row.id))) continue;
   if (onlyIds.length && !onlyIds.includes(row.id)) continue;
   todo.push(row);
 }
@@ -88,8 +90,23 @@ async function framesFor(row) {
   try {
     await page.goto(BASE + row.path, { waitUntil: 'load', timeout: 20000 });
     await page.waitForTimeout(waitFirst);
+    // Dismiss content warnings and "press any key" gates before the first frame.
+    for (const key of ['Escape', 'Enter', 'Space']) {
+      await page.keyboard.press(key).catch(() => {});
+      await page.waitForTimeout(800);
+    }
     frames.push(await page.screenshot({ type: 'png' }));
-    // Pass an engine splash or a "tap/play to start" gate.
+    // Many games gate the title behind an explicit play/start control.
+    for (const selector of ['button:has-text("PLAY")', 'button:has-text("Play")', 'text=PLAY', 'text=Play', 'text=START']) {
+      const control = page.locator(selector).first();
+      if (await control.count()) {
+        await control.click({ timeout: 2000 }).catch(() => {});
+        await page.waitForTimeout(2500);
+        frames.push(await page.screenshot({ type: 'png' }));
+        break;
+      }
+    }
+    // Pass an engine splash or a "tap to start" gate.
     for (let step = 0; step < 3; step += 1) {
       await page.mouse.click(640, 360).catch(() => {});
       await page.waitForTimeout(2500);
