@@ -162,5 +162,17 @@
   "clpint": {
     "reason": "Results were Spray Paint Simulator, a paper-painting photo and a watermarked Painter Game page.",
     "recorded": "2026-11-27"
+  },
+  "clpokered": {
+    "reason": "Results were online poker tables and casino photography, not artwork for this title.",
+    "recorded": "2026-11-27"
+  },
+  "clpokerowe": {
+    "reason": "Results were online poker tables and a casino photo, not artwork for this title.",
+    "recorded": "2026-11-27"
+  },
+  "clprowrestling": {
+    "reason": "Results were Ultra Pro Wrestling and Pro Wrestling Action mobile games, not the NES title.",
+    "recorded": "2026-11-27"
   }
 }

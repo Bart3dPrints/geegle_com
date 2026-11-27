@@ -9857,6 +9857,12 @@
     "status": "verified",
     "title": "Poke All In"
   },
+  "clpokeambrosia": {
+    "reason": "Pokemon Ambrosia Version box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Ambrosia"
+  },
   "clpokebattlefact": {
     "reason": "PokeFight battle screen.",
     "reviewed": "2026-11-27",
@@ -9868,6 +9874,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pokemon Black"
+  },
+  "clpokeblack2": {
+    "reason": "Pokemon Black 2 DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Black 2"
   },
   "clpokeblack2alt": {
     "reason": "Pokemon Black 2 title screen.",
@@ -9983,6 +9995,12 @@
     "status": "verified",
     "title": "Pokemon Emerald Rogue"
   },
+  "clpokeemeraldrogueex": {
+    "reason": "Pokemon Emerald Rogue EX title grid.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Emerald Rogue EX"
+  },
   "clpokeemeraldz": {
     "reason": "Pokemon Emerald Z title screen.",
     "reviewed": "2026-11-27",
@@ -10012,6 +10030,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pokemon Fused Dimension"
+  },
+  "clpokefusion3": {
+    "reason": "Pokemon Fusion 3 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Fusion 3"
   },
   "clpokegaia": {
     "reason": "Pokemon Gaia Version title art.",
@@ -10061,11 +10085,131 @@
     "status": "verified",
     "title": "Pokemon Mega Moemon"
   },
+  "clpokemonamnesia": {
+    "reason": "Pokemon Amnesia art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Amnesia"
+  },
+  "clpokemonclover": {
+    "reason": "Pokemon Clover box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Clover"
+  },
+  "clpokemoncrystal": {
+    "reason": "Pokemon Crystal Version box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Crystal"
+  },
+  "clpokemonemerald": {
+    "reason": "Pokemon Emerald Version box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Emerald"
+  },
+  "clpokemonemeraldcrest": {
+    "reason": "Pokemon Emerald Crest box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Emerald Crest"
+  },
+  "clpokemonemeraldkaizo": {
+    "reason": "Pokemon Emerald Kaizo box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Emerald Kaizo"
+  },
+  "clpokemonemeraldmini": {
+    "reason": "Pokemon Emerald Mini box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Emerald Mini"
+  },
   "clpokemonemeraldrouge": {
     "reason": "Pokemon Emerald Rogue box art.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pokemon Emerald Rogue"
+  },
+  "clpokemonemeraldseaglass": {
+    "reason": "Pokemon Emerald Seaglass key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Emerald Seaglass"
+  },
+  "clpokemonenergizedemerald": {
+    "reason": "Pokemon Energized Emerald box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Energized Emerald"
+  },
+  "clpokemonfirered": {
+    "reason": "Pokemon FireRed Version logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon FireRed"
+  },
+  "clpokemonfireredrandomized": {
+    "reason": "FireRed Extreme Randomizer logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon FireRed Randomized"
+  },
+  "clpokemongold": {
+    "reason": "Pokemon Gold Version box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Gold"
+  },
+  "clpokemonkaizoironfirered": {
+    "reason": "Kaizo Ironmon FireRed banner art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Kaizo Iron FireRed"
+  },
+  "clpokemonlazarus": {
+    "reason": "Pokemon Lazarus art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Lazarus"
+  },
+  "clpokemonleafgreen": {
+    "reason": "Pokemon LeafGreen Version art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon LeafGreen"
+  },
+  "clpokemonmodernemerald": {
+    "reason": "Pokemon Modern Emerald title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Modern Emerald"
+  },
+  "clpokemonmysterydungeon": {
+    "reason": "Pokemon Mystery Dungeon: Explorers of Sky DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Mystery Dungeon"
+  },
+  "clpokemonperfectemerald5-5": {
+    "reason": "Pokemon Perfect Emerald box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Perfect Emerald 5.5"
+  },
+  "clpokemonquetzal": {
+    "reason": "Pokemon Quetzal box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Quetzal"
+  },
+  "clpokemonroaringred": {
+    "reason": "Pokemon Roaring Red title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Roaring Red"
   },
   "clpokemonrocketedition": {
     "reason": "Pokemon Rocket Edition box art with the logo.",
@@ -10073,11 +10217,125 @@
     "status": "verified",
     "title": "Pokemon Rocket Edition"
   },
+  "clpokemonruby": {
+    "reason": "Pokemon Ruby Version logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Ruby"
+  },
+  "clpokemonsaiph": {
+    "reason": "Pokemon Saiph box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Saiph"
+  },
+  "clpokemonsaiph2": {
+    "reason": "Pokemon Saiph 2 box art; result 2 carried Portuguese promo text.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Saiph 2"
+  },
+  "clpokemonsapphire": {
+    "reason": "Pokemon Sapphire Version logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Sapphire"
+  },
+  "clpokemonshinsigma": {
+    "reason": "Pokemon Shin Sigma key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Shin Sigma"
+  },
+  "clpokemonsilver": {
+    "reason": "Pokemon Silver Version box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Silver"
+  },
+  "clpokemonslgreen": {
+    "reason": "Pokemon LeafGreen GBA box art, kept distinct from the plain key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Leaf Green (S)"
+  },
+  "clpokemonsmred": {
+    "reason": "Pokemon Mystery Dungeon Red Rescue Team box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Mystery Red"
+  },
+  "clpokemonsnap": {
+    "reason": "Pokemon Snap collage key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Snap"
+  },
+  "clpokemonsors": {
+    "reason": "Pokemon Sors logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Sors"
+  },
+  "clpokemonsors2": {
+    "reason": "Pokemon Sors 2 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Sors 2"
+  },
+  "clpokemonstadium": {
+    "reason": "Pokemon Stadium title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Stadium"
+  },
+  "clpokemonstadium2": {
+    "reason": "Pokemon Stadium 2 key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Stadium 2"
+  },
   "clpokemontowerdefense": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pokemon Tower Defense"
+  },
+  "clpokemonultimatefusion": {
+    "reason": "Pokemon Ultimate Fusion box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Ultimate Fusion"
+  },
+  "clpokemonunbound": {
+    "reason": "Pokemon Unbound Version box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Unbound"
+  },
+  "clpokemonvolume1": {
+    "reason": "Game Boy Advance Video Pokemon Volume 1 cart art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Volume 1"
+  },
+  "clpokemonvolume2": {
+    "reason": "Game Boy Advance Video Pokemon Volume 2 cart art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Volume 2"
+  },
+  "clpokemonvolume3": {
+    "reason": "Game Boy Advance Video Pokemon Volume 3 cart art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Volume 3"
+  },
+  "clpokemonvolume4": {
+    "reason": "Game Boy Advance Video Pokemon Volume 4 cart art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Volume 4"
   },
   "clpokemoonemerald": {
     "reason": "Pokemon Moon Emerald title art.",
@@ -10097,17 +10355,89 @@
     "status": "verified",
     "title": "Pokemon Mystery Dungeon: Explorers of Sky"
   },
+  "clpokenameless": {
+    "reason": "Pokemon Nameless box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Nameless"
+  },
   "clpokeodyssey": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pokemon Odyssey"
   },
+  "clpokepasta": {
+    "reason": "Bulbasaur pasta dish art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Pasta"
+  },
+  "clpokepath": {
+    "reason": "PokePath route screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Path"
+  },
+  "clpokepearl": {
+    "reason": "Pokemon Pearl Version DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Pearl"
+  },
+  "clpokeperfectfirered": {
+    "reason": "Pokemon Perfect FireRed logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Perfect FireRed"
+  },
+  "clpokepicross": {
+    "reason": "Pokemon Picross Game Boy Color box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Picross"
+  },
   "clpokepisces": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pokemon Pisces"
+  },
+  "clpokeplatinum": {
+    "reason": "Pokemon Platinum Version DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Platinum"
+  },
+  "clpokeplatinumrandomized": {
+    "reason": "Pokemon Platinum Randomized title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Platinum Randomized"
+  },
+  "clpokepureblue": {
+    "reason": "Pokemon Pure Blue box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Pure Blue"
+  },
+  "clpokepuregreen": {
+    "reason": "Pokemon Pure Green Version box art, the only result with the correct spelling.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Pure Green"
+  },
+  "clpokepurered": {
+    "reason": "Pokemon Pure Red box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Pure Red"
+  },
+  "clpokerechargedpink": {
+    "reason": "Pokemon Recharged Pink art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Recharged Pink"
   },
   "clpokerechargedyellow": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -10121,11 +10451,71 @@
     "status": "verified",
     "title": "Pokemon Record Keepers"
   },
+  "clpokered": {
+    "reason": "Results were online poker tables and casino photography, not artwork for this title.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
+  "clpokerenegadeplat": {
+    "reason": "Pokemon Renegade Platinum box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Renegade Platinum"
+  },
   "clpokerocketedition": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pokemon Rocket Edition"
+  },
+  "clpokerowe": {
+    "reason": "Results were online poker tables and a casino photo, not artwork for this title.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
+  "clpokeruby": {
+    "reason": "Pokemon Ruby Version logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Ruby"
+  },
+  "clpokerunandbun": {
+    "reason": "Pokemon Run & Bun title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Run and Bun"
+  },
+  "clpokescorchedsilver": {
+    "reason": "Pokemon Scorched Silver box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Scorched Silver"
+  },
+  "clpokescrambledscarlet": {
+    "reason": "Pokemon Scrambled Scarlet box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Scrambled Scarlet"
+  },
+  "clpokesunsky": {
+    "reason": "Pokemon Sun Sky box art; result 3 was plain Pokemon Sun.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Sun Sky"
+  },
+  "clpoketcg1": {
+    "reason": "Pokemon Trading Card Game Game Boy Color box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon TCG 1"
+  },
+  "clpoketcg2": {
+    "reason": "Pokemon Trading Card Game 2 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon TCG 2"
   },
   "clpokethepit": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -10139,17 +10529,71 @@
     "status": "verified",
     "title": "Poke Theta Emerald EX"
   },
+  "clpoketoomanytypes2": {
+    "reason": "Pokemon Too Many Types Part 2 banner art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Too Many Types 2"
+  },
   "clpoketourmaline": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pokemon Tourmaline"
   },
+  "clpokeultraviolet": {
+    "reason": "Pokemon Ultraviolet Version art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Ultraviolet"
+  },
   "clpokeunovaemerald": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pokemon Unova Emerald"
+  },
+  "clpokevega": {
+    "reason": "Pokemon Vega box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Vega"
+  },
+  "clpokevoltwhite2redux": {
+    "reason": "Pokemon Volt White 2 Redux box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Volt White 2 Redux"
+  },
+  "clpokevoyager": {
+    "reason": "Pokemon Voyager Version box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Voyager"
+  },
+  "clpokewhite": {
+    "reason": "Pokemon White Version logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon White"
+  },
+  "clpokewhite2": {
+    "reason": "Pokemon White 2 DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon White 2"
+  },
+  "clpokewhite2alt": {
+    "reason": "Pokemon White 2 art, kept distinct from the box used by the other entry.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon White 2 (Alt)"
+  },
+  "clpokeyellow": {
+    "reason": "Pokemon Yellow box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Yellow"
   },
   "clpolicepursuit2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -10163,11 +10607,47 @@
     "status": "verified",
     "title": "Polytrack (working)"
   },
+  "clpomgetsinternet": {
+    "reason": "Pom scene from this game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pom Gets Internet"
+  },
   "clpoorbunny": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Poor Bunny"
+  },
+  "clpopeyepapi": {
+    "reason": "Popeye arcade scene art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Popeye Papi"
+  },
+  "clporklike": {
+    "reason": "Porklike title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Porklike"
+  },
+  "clportal": {
+    "reason": "Portal logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Portal"
+  },
+  "clportal2d": {
+    "reason": "Portal 2D gameplay with its title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Portal 2D"
+  },
+  "clportaldefendersfastbreak": {
+    "reason": "Portal Defenders: Fast Break key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Portal Defenders: Fast Break"
   },
   "clportaldefenderstd": {
     "reason": "Captured title screen shows the actual game.",
@@ -10181,6 +10661,18 @@
     "status": "verified",
     "title": "Portal Flash"
   },
+  "clporter": {
+    "reason": "Porter gameplay scene.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Porter"
+  },
+  "clportraitofruin": {
+    "reason": "Castlevania: Portrait of Ruin key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Castlevania: Portrait of Ruin"
+  },
   "clpossessquest": {
     "reason": "Captured gameplay shows the actual game.",
     "reviewed": "2026-11-27",
@@ -10193,17 +10685,47 @@
     "status": "verified",
     "title": "Postal"
   },
+  "clpotatomanseeksthetroof": {
+    "reason": "Potatoman Seeks the Troof title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Potato Man Seeks the Troof"
+  },
   "clpou": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pou"
   },
+  "clpou-1": {
+    "reason": "Pou logo art with its character.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pou"
+  },
+  "clpowerslave": {
+    "reason": "PowerSlave cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "PowerSlave"
+  },
+  "clpraxisfighterx": {
+    "reason": "Praxis Fighter X cart label.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Praxis Fighter X"
+  },
   "clprebronzeage": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pre Bronze Age"
+  },
+  "clprecisionclient": {
+    "reason": "Precision Client key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Precision Client"
   },
   "clprecivilationbronzeage": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -10223,11 +10745,65 @@
     "status": "verified",
     "title": "Prestige Tree"
   },
+  "clprimary": {
+    "reason": "Primary Games logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Primary"
+  },
+  "clprismarine": {
+    "reason": "Prismarine Minecraft scene.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Prismarine"
+  },
   "clprismclient": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Prism Client"
+  },
+  "clprocessortycoon": {
+    "reason": "Processor Tycoon flowchart screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Processor Tycoon"
+  },
+  "clprowrestling": {
+    "reason": "Results were Ultra Pro Wrestling and Pro Wrestling Action mobile games, not the NES title.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
+  "clpuckman": {
+    "reason": "Pac-Man maze art; results 1 and 2 carried the Doodlebug watermark.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Puckman"
+  },
+  "clpullfrog": {
+    "reason": "Pullfrog logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pull Frog"
+  },
+  "clpumpkinrun": {
+    "reason": "Pumpkin Run title art; result 1 carried a studio watermark.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pumpkin Run"
+  },
+  "clpunchout": {
+    "reason": "Punch-Out!! art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Punch-Out!!"
+  },
+  "clpunchthetrump": {
+    "reason": "Punch the Trump gameplay screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Punch the Trump"
   },
   "clpuppethockey": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
@@ -10247,17 +10823,35 @@
     "status": "verified",
     "title": "Push Your Luck"
   },
+  "clpuyopuyofever": {
+    "reason": "Puyo Puyo Fever key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Puyo Puyo Fever"
+  },
   "clpvz": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Plants vs. Zombies"
   },
+  "clpvz2": {
+    "reason": "Plants vs. Zombies 2 key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Plants vs. Zombies 2"
+  },
   "clpvz2gardenless": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "PvZ 2: Gardenless"
+  },
+  "clpyrotoad": {
+    "reason": "PyroToad gameplay with its title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "PyroToad"
   },
   "clquantumclicker": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
