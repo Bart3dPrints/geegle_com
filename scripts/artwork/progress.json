@@ -2,11 +2,11 @@
   "generated": "scripts/artwork/build-progress.py",
   "summary": {
     "catalogEntries": 2710,
-    "verified": 1038,
+    "verified": 1054,
     "awaitingReview": 0,
     "rejected": 0,
     "blocked": 0,
-    "notStarted": 1672
+    "notStarted": 1656
   },
   "entries": [
     {
@@ -66,7 +66,10 @@
       "imagePath": "/artwork/cl10bullets.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/cl10bullets.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "e67d4cdbffb083380f512bd110f1fa2a3a828568c761546c520988c935e2266f",
       "visualVerification": "verified 2026-11-27: Ten-minute observation: the Ruffle build finished loading and showed the game's own title screen (10 BULLETS, A GAME BY MICHEL GERARD, PLAY / SPACEBAR), not a loading screen or generic portal splash.",
       "methodsInvestigated": [
@@ -88,7 +91,10 @@
       "imagePath": "/artwork/cl10morebullets.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/cl10morebullets.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "da14c6c0e0ab1b0572e6b8ef6809ef2f85ed470106c65f4b6207c64a64a33254",
       "visualVerification": "verified 2026-11-27: Ten-minute observation: after the Ruffle build finished loading, the game's own title menu appeared (10 MORE BULLETS, A GAME BY MICHEL GERARD, ARCADE MODE / 2 PLAYERS).",
       "methodsInvestigated": [
@@ -384,19 +390,20 @@
         "platformer"
       ],
       "path": "/games/cl3dash.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/3dash@76613c9a94533ef9e6ba0e266ae18613700e3d02/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cl3dash.html",
+      "imagePath": "/artwork/cl3dash.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cl3dash.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "73a1c0c9cec0262cf3e1b2216c3e5b3191f9b28ef487fcbd4921984a78dc5925",
+      "visualVerification": "verified 2026-11-27: Captured gameplay: sky course with the runner and its trail, plus the in-game pause control.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched cdn.jsdelivr.net page metadata",
-        "probed build asset paths"
+        "probed build asset paths",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -407,18 +414,19 @@
         "platformer"
       ],
       "path": "/games/cl3dasheditor.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/shayderrr/portsv2@main/3dasheditor/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cl3dasheditor.html",
+      "imagePath": "/artwork/cl3dasheditor.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cl3dasheditor.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "eabbbba75f5c6f78db9a296d92649b7cb38790d9753787692740431778897d40",
+      "visualVerification": "verified 2026-11-27: Captured the editor/level-select screen with its Levels 1-9 grid.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
-        "probed build asset paths"
+        "probed build asset paths",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -800,18 +808,19 @@
         "adventure"
       ],
       "path": "/games/cl99nightsitf.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/99itf@main/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cl99nightsitf.html",
+      "imagePath": "/artwork/cl99nightsitf.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cl99nightsitf.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "c58cd3cfc3f8f8a11faeb3ccb37b0d55a24242649b0ca7a6cfcd3526a34b2898",
+      "visualVerification": "verified 2026-11-27: Captured gameplay: 3D forest camp with the Day counter HUD.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
-        "probed build asset paths"
+        "probed build asset paths",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -913,17 +922,18 @@
         "puzzle"
       ],
       "path": "/games/clabandoned3.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clabandoned3.html",
+      "imagePath": "/artwork/clabandoned3.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clabandoned3.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "f1a79ed58118e5d0853b47ac265c42179d1019cac1962b9d21456096234c1e84",
+      "visualVerification": "verified 2026-11-27: Captured the game's own ABANDONED III title screen and its Start New Game menu.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -1236,21 +1246,17 @@
         "casual"
       ],
       "path": "/games/claflac.html",
-      "status": "verified",
-      "method": "official-icon",
-      "sourceUrl": "https://game.fnfhub.net/24921/favicon.png",
-      "imagePath": "/artwork/claflac.webp",
-      "identityEvidence": "Published by the distribution for AFLAC at https://game.fnfhub.net/24921/favicon.png, found by fetching that distribution's own pages/assets (fetched game.fnfhub.net page metadata).",
-      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
-      "dimensions": {
-        "width": 161,
-        "height": 173
-      },
-      "sha256": "b02c083dc84370113482b1f778e9e352c1fd1d18c9ca08598f69aee361defda9",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": "https://game.fnfhub.net/24921/",
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
+      "dimensions": null,
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "fetched game.fnfhub.net page metadata",
-        "title-screen capture (fallback)"
+        "fetched game.fnfhub.net page metadata"
       ],
       "blocker": null
     },
@@ -1283,17 +1289,18 @@
         "strategy"
       ],
       "path": "/games/clageofwar.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/artyomriseofnations/gs-swf@6ed8a67a935c49240d2a6dc1e8d4fc8466a28aca/",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clageofwar.html",
+      "imagePath": "/artwork/clageofwar.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clageofwar.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "e7ecd037d2a788d7bfb3bd76011c180bffd940050d2bf62fd4525133ed1c6dec",
+      "visualVerification": "verified 2026-11-27: Captured the Age of War title art with its Play button.",
       "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -2200,7 +2207,7 @@
         "height": 512
       },
       "sha256": "f278a8c51b529a2917c22f987d857cace82e612e9bc3fc7db799d012eba907dc",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official og) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched igroutka.ru page metadata",
         "title-screen capture (fallback)"
@@ -2278,17 +2285,18 @@
         "simulation"
       ],
       "path": "/games/clarchimedesclient.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clarchimedesclient.html",
+      "imagePath": "/artwork/clarchimedesclient.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clarchimedesclient.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "6d6ce8d3910038cb3a64e88756125aa03869c65bc756f7b97825fc661f4ebb95",
+      "visualVerification": "verified 2026-11-27: Captured the Archimedes Client pack-selection screen with its Launch control.",
       "methodsInvestigated": [
-        "no reachable remote distribution found"
+        "no reachable remote distribution found",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -2687,17 +2695,18 @@
         "simulation"
       ],
       "path": "/games/claviamastersbuggy.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/claviamastersbuggy.html",
+      "imagePath": "/artwork/claviamastersbuggy.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/claviamastersbuggy.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "7a9b6a5e6d1b84bf089e448fbab4fc7045d7d5ff5c39118ce19835a595bd8b8f",
+      "visualVerification": "verified 2026-11-27: Captured the Aviamasters title art with its Click to start prompt.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -2816,17 +2825,18 @@
         "sports"
       ],
       "path": "/games/claxisfootballleague.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/claxisfootballleague.html",
+      "imagePath": "/artwork/claxisfootballleague.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/claxisfootballleague.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "86e2e3d48b124fdff7b7716481a2f08c5bc40e2f9c9f7c48f4c5182845f0a348",
+      "visualVerification": "verified 2026-11-27: Captured the Axis Football League title and menu screen.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -3158,21 +3168,17 @@
         "action"
       ],
       "path": "/games/clbadbodyguards.html",
-      "status": "verified",
-      "method": "official-icon",
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/MISC/badbodyguards/index.icon.png",
-      "imagePath": "/artwork/clbadbodyguards.webp",
-      "identityEvidence": "Published by the distribution for Bad Bodyguards at https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/MISC/badbodyguards/index.icon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
-      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
-      "dimensions": {
-        "width": 64,
-        "height": 64
-      },
-      "sha256": "540f6437f2c091ae900591e775b1a9bc407f9d6a3ca8208facf5484993a535ab",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": "https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/MISC/badbodyguards/index.html",
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
+      "dimensions": null,
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "title-screen capture (fallback)"
+        "fetched cdn.jsdelivr.net page metadata"
       ],
       "blocker": null
     },
@@ -3428,7 +3434,7 @@
         "height": 256
       },
       "sha256": "5113da4ab476c77cb6fd486b78682d52513df102a3c77be3b91950e9f76afa90",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -3573,17 +3579,18 @@
         "arcade"
       ],
       "path": "/games/clballsandbricks.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://imasdk.googleapis.com/js/core/bridge3.629.1_en.html#goog_1001383176",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clballsandbricks.html",
+      "imagePath": "/artwork/clballsandbricks.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clballsandbricks.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "e3a6616f6b90edfd92aa7cf6d4cb67fac22e83c2a6ede228e36fab85b4f56c6c",
+      "visualVerification": "verified 2026-11-27: Captured the Balls and Bricks title art.",
       "methodsInvestigated": [
-        "fetched imasdk.googleapis.com page metadata"
+        "fetched imasdk.googleapis.com page metadata",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -4307,17 +4314,18 @@
         "action"
       ],
       "path": "/games/clbearbarians.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbearbarians.html",
+      "imagePath": "/artwork/clbearbarians.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbearbarians.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "0acdf86bff630d1dc66156d2a52e4358885f791eb855d127c84e179fc2119f6d",
+      "visualVerification": "verified 2026-11-27: Captured the Bearbarians title art with its Play button.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -4530,7 +4538,7 @@
         "height": 360
       },
       "sha256": "8ab14a09c807e7c7ab4481cc4194481cde2cd9c1b1b7019d94fc58e3154cf654",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official og) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched cdn.jsdelivr.net page metadata",
@@ -4545,17 +4553,18 @@
         "platformer"
       ],
       "path": "/games/clbigflappytowertinysquare.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/flappy-tower/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbigflappytowertinysquare.html",
+      "imagePath": "/artwork/clbigflappytowertinysquare.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbigflappytowertinysquare.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "1c015d0a7c5acc5de731521a0d61b6652cb87e38700ac124be31e859e070a516",
+      "visualVerification": "verified 2026-11-27: Captured the game's own opening story screen, readable as Big Tower Tiny Square.",
       "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -4587,17 +4596,18 @@
         "platformer"
       ],
       "path": "/games/clbigneontowertinysquare.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbigneontowertinysquare.html",
+      "imagePath": "/artwork/clbigneontowertinysquare.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbigneontowertinysquare.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "c653cb977b64a1f20b31adf410773e1092853e3e03967f6ec96424ceab4a7b09",
+      "visualVerification": "verified 2026-11-27: Captured the Big Neon Tower Tiny Square logo screen.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -5307,17 +5317,18 @@
         "strategy"
       ],
       "path": "/games/clbloonspp1.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbloonspp1.html",
+      "imagePath": "/artwork/clbloonspp1.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbloonspp1.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "8e8144541579554e6cf4c5731465bdadf5fa1767052589a800dde000ba6fcfc5",
+      "visualVerification": "verified 2026-11-27: Captured gameplay: balloon level with the monkey and darts.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -5328,17 +5339,18 @@
         "strategy"
       ],
       "path": "/games/clbloonspp2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbloonspp2.html",
+      "imagePath": "/artwork/clbloonspp2.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbloonspp2.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "79f888461a519f966c4faf63596ef4bd055d34cc813f28f65cd2856b329604a1",
+      "visualVerification": "verified 2026-11-27: Captured gameplay from the same Bloons pack, level clearly in play.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -5412,17 +5424,18 @@
         "strategy"
       ],
       "path": "/games/clbloonsTD1.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbloonstd1.html",
+      "imagePath": "/artwork/clbloonstd1.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbloonstd1.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "d1565401dbf33010b25b63646efae40a041161c84ded8af19b557d37da754254",
+      "visualVerification": "verified 2026-11-27: Captured the BLOONS TOWER DEFENSE title screen.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -5771,7 +5784,7 @@
         "height": 210
       },
       "sha256": "bce2b0aa46ecfcfd53c62c0400537997823b2117f14dab848ce1f5dd4c67d593",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched rawcdn.githack.com page metadata",
         "probed build asset paths",
@@ -6105,17 +6118,18 @@
         "action"
       ],
       "path": "/games/clbowmaster.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/youtube-playables@main/bowmasters/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbowmaster.html",
+      "imagePath": "/artwork/clbowmaster.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbowmaster.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "b4677e40b96d597ca00323ca9a5b5a8ca193574b3dd39d81694ee8213d4906f3",
+      "visualVerification": "verified 2026-11-27: Captured the Bowmaster character-select screen (YOU vs opponent).",
       "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -6676,7 +6690,7 @@
         "height": 162
       },
       "sha256": "a27efb191084706412abd4cffe371e177b2eb978f4ae339ac8336e3007f39cb3",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched game.fnfhub.net page metadata",
@@ -7088,7 +7102,7 @@
         "height": 64
       },
       "sha256": "68e0df844c3a0c9d75560229511d91a5eaced77cb3fde88f1d7e48a36f268895",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -8134,17 +8148,18 @@
         "sports"
       ],
       "path": "/games/clCartoonNetworkTableTennisUltimateTournament.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@15e2f1ef1cdb3e96610c02c454d29b19c9392f70/table%20tennis%20cn/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcartoonnetworktabletennis.html",
+      "imagePath": "/artwork/clcartoonnetworktabletennis.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcartoonnetworktabletennis.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "694351ea8c90008a97a045e219505fb4f03636c38ccb4e65d2e18fbc4e1f92f9",
+      "visualVerification": "verified 2026-11-27: Captured the Cartoon Network Ultimate Tournament title art.",
       "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -9933,7 +9948,7 @@
         "height": 432
       },
       "sha256": "fea541167110855633db21246267a25e2300953d83ab4fbbbdcd3a01eda4e947",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -10186,17 +10201,18 @@
         "action"
       ],
       "path": "/games/clclearvision3.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clclearvision3.html",
+      "imagePath": "/artwork/clclearvision3.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clclearvision3.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "766377ac69fb00c0fb0e1df5a522dd25aef2c6238e1812818de5e420c195021f",
+      "visualVerification": "verified 2026-11-27: Captured the Clear Vision: This Edition title screen.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -10358,21 +10374,17 @@
         "simulation"
       ],
       "path": "/games/clcoalllcdemo.html",
-      "status": "verified",
-      "method": "official-icon",
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/Stinkalistic/SWAGgames@main/coalllc/index.icon.png",
-      "imagePath": "/artwork/clcoalllcdemo.webp",
-      "identityEvidence": "Published by the distribution for Coal LLC Demo at https://cdn.jsdelivr.net/gh/Stinkalistic/SWAGgames@main/coalllc/index.icon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
-      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
-      "dimensions": {
-        "width": 128,
-        "height": 128
-      },
-      "sha256": "0b2e255e66704f03a6a1761ea325fd8db05dd4b6d698f7b6c7d4d4a8643e37ec",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": "https://cdn.jsdelivr.net/gh/Stinkalistic/SWAGgames@main/coalllc/index.html",
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
+      "dimensions": null,
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "title-screen capture (fallback)"
+        "fetched cdn.jsdelivr.net page metadata"
       ],
       "blocker": null
     },
@@ -11371,18 +11383,19 @@
         "puzzle"
       ],
       "path": "/games/clcrankit.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/gzuidhof/coi-serviceworker@latest/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcrankit.html",
+      "imagePath": "/artwork/clcrankit.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcrankit.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "c4862eb473c84ab0d39630d32acd54a5e246efddc0d20a5eab681069366394d9",
+      "visualVerification": "verified 2026-11-27: Captured in-game CRANK IT! tunnel view.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
-        "fetched cdn.jsdelivr.net page metadata"
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -12130,7 +12143,7 @@
         "height": 360
       },
       "sha256": "beaa8821789901312a15f287c2e16dba83636ddbe616d7107d28f350106812b0",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official og) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched gamaverse.com page metadata",
@@ -14370,7 +14383,7 @@
         "height": 128
       },
       "sha256": "e4ebc6c542a1892755e89574d7ea9603cfbdca5b4d3a2cd1121a855c43453163",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -14506,7 +14519,7 @@
         "height": 256
       },
       "sha256": "94c67297a783e14fccd1d653c06634f85e88bc8c99aa92f4fa9fc0f4a97d75b3",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "probed build asset paths",
@@ -15749,7 +15762,7 @@
         "height": 478
       },
       "sha256": "87a6cb54760a8e333a040f9cc9fc0709464f70c9eaf41dc51c3e3d24a31aa857",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -16108,7 +16121,7 @@
         "height": 256
       },
       "sha256": "ea69037cf6f2add9a85b93da34fcd5ad3db68ee018d1700299a613edc9250806",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -16451,7 +16464,7 @@
         "height": 163
       },
       "sha256": "58db125352bdb61915a76a618345e67e8be5106dc78afd1eda2a3e87d18b0f6b",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "probed build asset paths",
@@ -16788,7 +16801,7 @@
         "height": 256
       },
       "sha256": "1e212b0e1439f47a0f0ddc3294981b5d06bf9ee5cec6d33ff2a21427925524fa",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -17526,22 +17539,18 @@
         "puzzle"
       ],
       "path": "/games/clfireboyandwatergirl5.html",
-      "status": "verified",
-      "method": "game-asset",
-      "sourceUrl": "https://ssl.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_74x24dp.png",
-      "imagePath": "/artwork/clfireboyandwatergirl5.webp",
-      "identityEvidence": "Published by the distribution for Fireboy and Watergirl 5 at https://ssl.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_74x24dp.png, found by fetching that distribution's own pages/assets (fetched script.google.com page metadata; fetched script.google.com page metadata).",
-      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
-      "dimensions": {
-        "width": 141,
-        "height": 47
-      },
-      "sha256": "cff65704a25a19679d7fb303a303fdcdc0dbb20a4f6288800d5d2754b28c5959",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": "https://script.google.com/macros/s/AKfycbyJNOLNn5Ls2FUk3P-yVVB0pztdV0Ln-9Y63pMkV8_EehcgTlZ79f4xnOWRW2OgVlmn/exec",
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
+      "dimensions": null,
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
         "fetched script.google.com page metadata",
-        "fetched script.google.com page metadata",
-        "title-screen capture (fallback)"
+        "fetched script.google.com page metadata"
       ],
       "blocker": null
     },
@@ -17627,7 +17636,7 @@
         "height": 256
       },
       "sha256": "d85cea33209a4057d59e4a0698e89a1c632d77b4a34b125e0f3069a614700ecd",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -18021,7 +18030,7 @@
         "height": 192
       },
       "sha256": "ae67c1a48b14488648529f3ac5c53c4841ddfb35f2129952cbaf03b30eaf267b",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -18142,7 +18151,7 @@
         "height": 192
       },
       "sha256": "2df54ab62ade527112c93ed7290dd3611b7798454a8b68009ef8176255638bac",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -18189,7 +18198,7 @@
         "height": 192
       },
       "sha256": "84336f6ae92f1fa560989c31c1089bb1439c1a0322c2a4d39866033d55a098f0",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -18526,7 +18535,7 @@
         "height": 168
       },
       "sha256": "549a4773d126f95fe1e52537bbedd5015adb234371e53ec3c2f1bcaf5f25acea",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -18640,7 +18649,7 @@
         "height": 130
       },
       "sha256": "583d8121fe30b56e04965c61b2b710d9fa7ca9d6a9da9b006373739cc89fb0e8",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -18711,7 +18720,7 @@
         "height": 162
       },
       "sha256": "64c8519d72714966af6c822a90556ef118dd6d4be93d1e92f40a50e2743f8bc2",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched game.fnfhub.net page metadata",
@@ -18830,7 +18839,7 @@
         "height": 157
       },
       "sha256": "3be264d5aa5a7a730cb3c7b39b82a818df6790f3da3dedd1b869cb9de9778b2b",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched game3.glov3.me page metadata",
@@ -19022,7 +19031,7 @@
         "height": 131
       },
       "sha256": "72b1902d794b05bb9462dda4746fc4a99078c04e685c1e97a17eda37466d6c64",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -19178,7 +19187,7 @@
         "height": 178
       },
       "sha256": "48c1707d9d95319fd98ac47e46623adf75262f9b92e9fe5ac0f1a18e9f335d66",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -19345,7 +19354,7 @@
         "height": 151
       },
       "sha256": "6664ca47f9758d7537b2a52c922e54fe63f6e80450a6346d90c4ab9cd422d743",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched game.fnfhub.net page metadata",
@@ -19547,7 +19556,7 @@
         "height": 166
       },
       "sha256": "a2443770cd670856451ffa641cde9eb840df256ef41de7554b191b929ed4310b",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -19708,7 +19717,7 @@
         "height": 189
       },
       "sha256": "c0c50722dc9493872ef195ab2d8bc9766b8b6b9452107cace25705496f51e6bc",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched game.fnfhub.net page metadata",
@@ -19800,7 +19809,7 @@
         "height": 167
       },
       "sha256": "3c1d4afb0b3a00dd01a4c9914d4e0e915975345f453b2a3a646752a503f3feb1",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -19825,7 +19834,7 @@
         "height": 151
       },
       "sha256": "c97f4f27062e8127d473b0f093001519b68550e6a7ce595516ee0cad8b390c09",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched game.fnfhub.net page metadata",
         "title-screen capture (fallback)"
@@ -19875,7 +19884,7 @@
         "height": 360
       },
       "sha256": "4a1786a2827f31f2a08879940df97a7a0c65dee8f8d3e397c2a172e8bc457d02",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official og) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched gamasexual.com page metadata",
@@ -19922,7 +19931,7 @@
         "height": 165
       },
       "sha256": "5913f08008499b2a1b1947141c48e1396808487bda64ac9df3d4f04a7801f1f6",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -20102,7 +20111,7 @@
         "height": 360
       },
       "sha256": "433cf39f860e37194a22be2285a17346e6106d1cc3c3b513675a3b9952d2da4d",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official og) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched gamaverse.com page metadata",
@@ -20241,7 +20250,7 @@
         "height": 179
       },
       "sha256": "006db8a9f4b055ccc456c8746ac516bac4873dec9a774cd2227a6235bebe08a4",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched game3.glov3.me page metadata",
@@ -20313,7 +20322,7 @@
         "height": 360
       },
       "sha256": "9a101228d876fd9f64d610cd457a1de3d2ee75cf2d86ad70e3a3913838577df7",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official og) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched gamasexual.com page metadata",
@@ -20339,7 +20348,7 @@
         "height": 184
       },
       "sha256": "8a105ecf32129e1900c50287a31749ead47749ae5a7e86b5d7e75ecc34181139",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -20364,7 +20373,7 @@
         "height": 168
       },
       "sha256": "4f5a86d2a53b31aa6098169375a10eb3165516e03cb7f02be5a4e623804fee39",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -20389,7 +20398,7 @@
         "height": 174
       },
       "sha256": "94da3a3ea599f79f5efbabb8299518310a4654f3b7039eb2140c1ac901e68354",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -20772,7 +20781,7 @@
         "height": 56
       },
       "sha256": "8040d407d0e2eeae2e6921f91e0e4b7a1bf2a506da8628556ee595de7f2b8315",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "probed build asset paths",
@@ -20798,7 +20807,7 @@
         "height": 320
       },
       "sha256": "ef31190f82e6b01b45d0d93d632f3de255b3fb27df4df8c12ae2876dca6f7c72",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "probed build asset paths",
@@ -20889,7 +20898,7 @@
         "height": 256
       },
       "sha256": "459bda0e217a0691598c96d5304b1fa4e91c49632c4add8f4ae2a97550cdcfe5",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -21351,7 +21360,7 @@
         "height": 512
       },
       "sha256": "05f5d445695ad5777edb4680bd5431d5a21871f9988920580ec5b0185ec5da05",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -21895,7 +21904,7 @@
         "height": 172
       },
       "sha256": "8b0a20f0237e0bcf7e02631fd399c43989f05e3a2eb600cc4e5e44029307cfe6",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "probed build asset paths",
@@ -22591,7 +22600,7 @@
         "height": 244
       },
       "sha256": "5c2c728af09d58af57b89b36a57f4a6764df22638ec32865dd338d8f1d59a4af",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -23464,7 +23473,7 @@
         "height": 256
       },
       "sha256": "1f5206bbcda0dc4bf016d421e6703a789644181fde612ad076b6c9931ef3a51a",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -23874,7 +23883,7 @@
         "height": 320
       },
       "sha256": "c151c87c5c127d2f983178e72478d376f78873f95a9394a15789455e4147d990",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "probed build asset paths",
@@ -24989,7 +24998,7 @@
         "height": 256
       },
       "sha256": "e7028056aa1b5ec9f9d5e13f99f3a6c990bf3008c836a2b70f0dede6bfae075a",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -25104,7 +25113,7 @@
         "height": 384
       },
       "sha256": "9ff99db1e059a474c85d26c9e151d538f9854011e8aa104d50b08e7aad9764c9",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched www.google-analytics.com page metadata",
         "title-screen capture (fallback)"
@@ -25535,7 +25544,7 @@
         "height": 29
       },
       "sha256": "b3d686123830c813f2a965aa1ec69bbae95fe574acfaf0ebe5956d8fa61df9b3",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched rawcdn.githack.com page metadata",
         "title-screen capture (fallback)"
@@ -25990,7 +25999,7 @@
         "height": 192
       },
       "sha256": "6aab96d5f7f94b3040127b34cb21456f877c009fd827312d4d33bb4af6b15d7b",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -26329,7 +26338,7 @@
         "height": 512
       },
       "sha256": "4b63fbf3957065cd94688ff5133b42e23257666f7c4e08d3007e44eac3aeee1f",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "probed build asset paths",
@@ -26973,7 +26982,7 @@
         "height": 162
       },
       "sha256": "da1a70ea6cf0e38221a3799319a75b620993efd688bdbf355f38bded9ee87486",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -28108,7 +28117,7 @@
         "height": 336
       },
       "sha256": "9202586dcb96e37349686091fe40f01d24f5de48fecd5a28af3abb2efa3237bb",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official og) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched krillion.cc page metadata",
         "title-screen capture (fallback)"
@@ -28123,16 +28132,18 @@
         "casual"
       ],
       "path": "https://krillionunlimited.org/",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "official-og",
+      "sourceUrl": "https://krillionunlimited.org/og.png",
+      "imagePath": "/artwork/clkrillion-backup.webp",
+      "identityEvidence": "Open Graph image served by krillionunlimited.org, the independent fan-made site this catalog links as the backup. Distinct from the official krillion.cc image and labelled Krillion Unlimited.",
+      "reuseEvidence": "Artwork published by the service's own site for this application and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [],
+      "sha256": "fb2b30868b812ed06a470262b50b1b487c98f9b681469385d357854d87d43ccb",
+      "visualVerification": "verified 2026-11-27: Owner-visible backup card artwork is the Open Graph image served by krillionunlimited.org, distinct from the official krillion.cc image.",
+      "methodsInvestigated": [
+        "fetched provider page metadata (official image)"
+      ],
       "blocker": null
     },
     {
@@ -28220,7 +28231,7 @@
         "height": 360
       },
       "sha256": "af6bf795ca523cd61d592526004edd12cfe750b83f98bde594ffdc8810890747",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official og) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched www.madalingames.com page metadata",
@@ -28271,7 +28282,7 @@
         "height": 57
       },
       "sha256": "3c1e49ea9fd3266cbb11b1393b31861c7dc15ef335dee7db9f90ace9c08afbb3",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "probed build asset paths",
@@ -29282,7 +29293,7 @@
         "height": 183
       },
       "sha256": "a8fbcfb9a07c10c919c098a50b3e674f352ebb5be3216c79744445c556c1b439",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched game3.glov3.me page metadata",
@@ -29694,7 +29705,7 @@
         "height": 164
       },
       "sha256": "b806af31e8fb75c6cf53717ba0aa9a0c272bf3ed19836981f858e3315f7a9bce",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -31175,7 +31186,7 @@
         "height": 128
       },
       "sha256": "dfa1e356d4ed91fb6411dc138ea44322cc17824bd91870e693d253708a8be14c",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -31305,7 +31316,7 @@
         "height": 120
       },
       "sha256": "634b27afd21d439240bd8e57958a836a1c42a4d155a52d35261eb4aec5660840",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -32468,7 +32479,7 @@
         "height": 62
       },
       "sha256": "c68f0eef13281437cc32d9ecfbec0aa9a284e29a02c8f7947d9ec3076ece3c7f",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched cdn.jsdelivr.net page metadata",
@@ -33345,7 +33356,7 @@
         "height": 640
       },
       "sha256": "d8e54fbbf63d18541879da70727c12dd2c891b1229da527527307c72e4ab0c13",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "probed build asset paths",
@@ -33518,7 +33529,7 @@
         "height": 200
       },
       "sha256": "244f1f1c48de5bf1f5102357a5c1c00bb75bc79808e2a5dc66e200e3790bda6d",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched cdn.jsdelivr.net page metadata",
@@ -33748,7 +33759,7 @@
         "height": 180
       },
       "sha256": "e3c784fa51b69d930ccd2c69bc844e765887e95eb0158f2fee1fe8fd99b02a14",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -36445,7 +36456,7 @@
         "height": 128
       },
       "sha256": "fd871d1c198d4f503c635cd399a6afc20c5cd066e596b44a8fe2bd81f3b15aa7",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -39201,7 +39212,7 @@
         "height": 192
       },
       "sha256": "b107f333ae167b2c8a09edcb209250204b847ff554e61104bb266a24ab763e39",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -39448,7 +39459,7 @@
         "height": 336
       },
       "sha256": "5d4512450d1a4e28982f8506556b3cc8ef6a203f17820f5cb2088eac4b3ec2ec",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official og) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -39892,7 +39903,7 @@
         "height": 256
       },
       "sha256": "f743cc1c4e8e38b3f0882512798a826b7657eebf2a6d288cfc48f066f5a018c2",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -41048,7 +41059,7 @@
         "height": 256
       },
       "sha256": "9fc77e308d6d96636c482e3c23a6c26210277512670a2c656a20fa6a9cbc4260",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -41136,7 +41147,7 @@
         "height": 137
       },
       "sha256": "f21c159a270daa62b1e786ec693e98f3cbd9b0f5d4d9a205e69f35b19739dbee",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "probed build asset paths",
@@ -41665,7 +41676,7 @@
         "height": 356
       },
       "sha256": "646017f2e52bf52471f62bcc2595b686a77795b02650f50939e6c7fe2af7ed06",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official og) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched www.snokido.com page metadata",
@@ -42328,7 +42339,7 @@
         "height": 253
       },
       "sha256": "94ffaad34b10f3affbbd0dec7f823207c88fb38ff48c13a3a66f9d4982ea03f0",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -42687,7 +42698,7 @@
         "height": 145
       },
       "sha256": "2680eb2a26f4199171e9e38b694a8c69783317b82abc5c9eea8c619c3e4f1d9f",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "probed build asset paths",
@@ -42988,17 +42999,18 @@
         "arcade"
       ],
       "path": "/games/clbaldiepstein.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/ports@main/jeffrey-epsteins-basics-in-education-and-kidnapping/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbaldiepstein.html",
+      "imagePath": "/artwork/clbaldiepstein.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbaldiepstein.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "eb9ef688f6023f748880441bdcb2d91411fbe5f9726e7225cbc51b88d972d074",
+      "visualVerification": "verified 2026-11-27: Captured the mod's own START MENU title screen.",
       "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -43410,7 +43422,7 @@
         "height": 192
       },
       "sha256": "da22ebd8bd606be903624735c48c140fb47b661438f0ee48f9dd64d1dffeb364",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched game.fnfhub.net page metadata",
@@ -43425,21 +43437,17 @@
         "arcade"
       ],
       "path": "/games/clGXclient.html",
-      "status": "verified",
-      "method": "gameplay-screenshot",
-      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clgxclient.html",
-      "imagePath": "/artwork/clgxclient.webp",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clgxclient.html after it rendered its own screen in Chromium.",
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": {
-        "width": 640,
-        "height": 360
-      },
-      "sha256": "7087afb38f66cea7a662fd32900292873d14427856bfc35e3b346bf4c60ea892",
-      "visualVerification": "verified 2026-11-27: Captured from the game this repository serves, showing its own title or gameplay.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": null,
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
+      "dimensions": null,
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "no reachable remote distribution found",
-        "title-screen capture (last resort)"
+        "no reachable remote distribution found"
       ],
       "blocker": null
     },
@@ -43735,7 +43743,7 @@
         "height": 128
       },
       "sha256": "3dacda16548bed7f1c8e77fbef5db6d2014bad7ba902635c0dcdeb1137e455b2",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "probed build asset paths",
@@ -44724,7 +44732,7 @@
         "height": 128
       },
       "sha256": "e26b908ba7e4cd5bfe8010e314692b3cb26cca80d98cf54b015aed854c355939",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -44774,7 +44782,7 @@
         "height": 256
       },
       "sha256": "e822e111860764d3026a6d1082a6e78ecf71e115f749eb00d93e20e2fe953559",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "probed build asset paths",
@@ -46326,7 +46334,7 @@
         "height": 512
       },
       "sha256": "42fde3c9eae69fea61d17b6618b488ab50c0c3c1e046be23d409a40cc3933c13",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -46967,7 +46975,7 @@
         "height": 254
       },
       "sha256": "19a5e35ade8004245400021fe4bb10d18c724bd6530cfe6f3f05ceb09970037e",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -47444,7 +47452,7 @@
         "height": 507
       },
       "sha256": "1f3f538ec23de0c73adc2f0bab1f14727cb149a5c6df5f27d417d73ddc9ffbe5",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -47793,7 +47801,7 @@
         "height": 340
       },
       "sha256": "1bd44657546f2209b461849b761f9e88d812348132cc728235fdd340a046c2ed",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "probed build asset paths",
@@ -48085,7 +48093,7 @@
         "height": 178
       },
       "sha256": "6ab1ddae7f9b685773aa3a920b21f7fac89664f8e4af3fc6a1d29cb9939cb314",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -49945,7 +49953,7 @@
         "height": 128
       },
       "sha256": "6a858011a4f1cb3116c3aa510024d9bb3f9987b342fba18916eac76656efcbd2",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched cdn.jsdelivr.net page metadata",
@@ -49996,7 +50004,7 @@
         "height": 256
       },
       "sha256": "0223da7cb4f6329794cdc74d50a502e2629fb010da22760cef2a8922d13c5735",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -53012,7 +53020,7 @@
         "height": 360
       },
       "sha256": "34858491f8ac4374e42c7ca2152e05abcdb1f255968ddb5628594e3924971be5",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official og) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched gamaverse.com page metadata",
@@ -53563,7 +53571,7 @@
         "height": 630
       },
       "sha256": "e0655b371f00d802311d62bd592369afc4e6812a6653a35944da94bea6c86312",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched s3-eu-west-1.amazonaws.com page metadata",
         "probed build asset paths",
@@ -53963,7 +53971,7 @@
         "height": 350
       },
       "sha256": "81e18cc21db38cf5481e4bc5b0c4f5c8e8a0937f6c1f2f46b799901e7bb3325d",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official og) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched www.coolmathgames.com page metadata",
         "title-screen capture (fallback)"
@@ -54306,7 +54314,7 @@
         "height": 160
       },
       "sha256": "494e55db54b06a6d520ba01bf46c4a70ec403e69e404118574f2f41311cb3107",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -55501,7 +55509,7 @@
         "height": 376
       },
       "sha256": "d723c7dedf7f2ff394e6184fd2d472f05863b2d63ef40210bd55ce30e82c564b",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "probed build asset paths",
@@ -56848,7 +56856,7 @@
         "height": 120
       },
       "sha256": "1a9d685d88156fd2e31b27c61dc2abc6e698efed93cfe474dd4962e7278106cf",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -57288,7 +57296,7 @@
         "height": 512
       },
       "sha256": "b88dd3f0830132537def6e7ff054eb824ddde16cc32e2ffd00e7067dc4bcc9cb",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -57498,7 +57506,7 @@
         "height": 192
       },
       "sha256": "b6f18c50c8800e3e292b6dbc0ddb8a7004268c8a79e60491a644b4c780054a26",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -57799,7 +57807,7 @@
         "height": 192
       },
       "sha256": "bcea17ecc88327c69dbfc628613948d32fa4f3d379a6b22e65746b8a764abed3",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -58312,7 +58320,7 @@
         "height": 164
       },
       "sha256": "44e3499d7c099c0342ff23f8a84b38751d5268163eb1540be48158f7e33157e8",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -58930,7 +58938,7 @@
         "height": 128
       },
       "sha256": "7e4bc0a3c45f3626df256c42fd6ce81a45bae1be83238fbcea4509f6a4ac60bb",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"
@@ -59898,7 +59906,7 @@
         "height": 336
       },
       "sha256": "5182a8345c14a7604c84ebf77e26251b182401b4f02f1f2f59b9d2683adb7b88",
-      "visualVerification": "verified 2026-11-27: Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+      "visualVerification": "verified 2026-11-27: Wrapper-declared artwork for this title (official og) matched the catalog name and was visually checked against it.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (fallback)"

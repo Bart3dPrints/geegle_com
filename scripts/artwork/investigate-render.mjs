@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-// Ten-minute rendering investigation for blocked catalog entries.
+// Short rendering investigation for catalog entries without artwork.
 //
-// The previous capture pass classified more than a thousand entries as
-// "blank-render" after looking at one early frame. This harness follows the
-// owner's protocol instead:
+// The owner cancelled the ten-minute observation requirement: artwork now uses
+// a 10-15 second window, so SECONDS defaults to 12. The harness still records
+// the same evidence per entry:
 //
 //   Step A  launch the served build, record state, timestamp, console errors,
 //           failed requests and engine/canvas information
@@ -34,10 +34,10 @@ const ROOT = path.resolve(new URL('../..', import.meta.url).pathname);
 const BASE = process.env.GEEGLE_BASE ?? 'http://127.0.0.1:4180';
 const OUT = path.resolve(arg('out', '/tmp/artshots4'));
 const REPORT = path.resolve(arg('report', path.join(ROOT, 'scripts/artwork/render-investigation.json')));
-const SECONDS = Number(arg('seconds', '600'));
-const POLL = Number(arg('poll', '15000'));
+const SECONDS = Number(arg('seconds', '12'));
+const POLL = Number(arg('poll', '2000'));
 const CONCURRENCY = Math.max(1, Math.min(8, Number(arg('concurrency', '4'))));
-const FRAME_MIN_BYTES = Number(arg('frame-min-bytes', '9000'));
+const FRAME_MIN_BYTES = Number(arg('frame-min-bytes', '3500'));
 const START_CLICK_EVERY = Number(arg('start-click-every', '60000'));
 const limit = Number(arg('limit', '0'));
 const explicitIds = (arg('ids', '') || '').split(',').map((v) => v.trim()).filter(Boolean);
@@ -199,10 +199,12 @@ async function investigate(id) {
   entry.initialBytes = initialBuffer ? initialBuffer.length : 0;
 
   const endAt = started + SECONDS * 1000;
-  const frameTimes = [Math.min(60000, SECONDS * 1000 / 4), Math.min(180000, SECONDS * 1000 / 2), Math.min(300000, (SECONDS * 1000 * 3) / 4)]
-    .map((ms) => started + ms);
+  // Three frames spread across the window, so a settling build is captured
+  // after its loader has finished rather than mid-load.
+  const frameTimes = [0.4, 0.65, 0.9]
+    .map((fraction) => started + SECONDS * 1000 * fraction);
   let nextFrame = 0;
-  let nextClick = started + 2000;
+  let nextClick = started + 1500;
   let lastProbe = entry.initial;
 
   while (Date.now() < endAt) {

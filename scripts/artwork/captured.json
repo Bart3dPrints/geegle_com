@@ -1,19 +1,5 @@
 {
   "assets": {
-    "claflac": {
-      "assetSha256": "b02c083dc84370113482b1f778e9e352c1fd1d18c9ca08598f69aee361defda9",
-      "identityEvidence": "Published by the distribution for AFLAC at https://game.fnfhub.net/24921/favicon.png, found by fetching that distribution's own pages/assets (fetched game.fnfhub.net page metadata).",
-      "methodsInvestigated": [
-        "fetched game.fnfhub.net page metadata",
-        "title-screen capture (fallback)"
-      ],
-      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "source": "https://game.fnfhub.net/24921/favicon.png",
-      "title": "AFLAC",
-      "type": "official-icon",
-      "url": "/artwork/claflac.webp"
-    },
     "clangrybirdsslingshotfrenzy": {
       "assetSha256": "21aea6e8e0ae09d02b7228d75899f9eaccb19bac91b55eb14013337bf5f4f982",
       "identityEvidence": "The wrapper this repository distributes for Angry Birds Slingshot Frenzy declares this image as its own artwork (official-icon).",
@@ -45,20 +31,6 @@
       "title": "Astros Dreamland",
       "type": "official-icon",
       "url": "/artwork/clastrosdreamland.webp"
-    },
-    "clbadbodyguards": {
-      "assetSha256": "540f6437f2c091ae900591e775b1a9bc407f9d6a3ca8208facf5484993a535ab",
-      "identityEvidence": "Published by the distribution for Bad Bodyguards at https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/MISC/badbodyguards/index.icon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "title-screen capture (fallback)"
-      ],
-      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/MISC/badbodyguards/index.icon.png",
-      "title": "Bad Bodyguards",
-      "type": "official-icon",
-      "url": "/artwork/clbadbodyguards.webp"
     },
     "clbaldidecomp": {
       "assetSha256": "5113da4ab476c77cb6fd486b78682d52513df102a3c77be3b91950e9f76afa90",
@@ -168,20 +140,6 @@
       "title": "Capybara Clicker",
       "type": "official-icon",
       "url": "/artwork/clcapybaraclicker.webp"
-    },
-    "clcoalllcdemo": {
-      "assetSha256": "0b2e255e66704f03a6a1761ea325fd8db05dd4b6d698f7b6c7d4d4a8643e37ec",
-      "identityEvidence": "Published by the distribution for Coal LLC Demo at https://cdn.jsdelivr.net/gh/Stinkalistic/SWAGgames@main/coalllc/index.icon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "title-screen capture (fallback)"
-      ],
-      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/SWAGgames@main/coalllc/index.icon.png",
-      "title": "Coal LLC Demo",
-      "type": "official-icon",
-      "url": "/artwork/clcoalllcdemo.webp"
     },
     "clcrazycattle3d": {
       "assetSha256": "0914234441b463261ea157164b0dfa1054045f0fa0919e96f045db9095b8cace",
@@ -328,21 +286,6 @@
       "title": "Feed the Void",
       "type": "official-icon",
       "url": "/artwork/clfeedthevoid.webp"
-    },
-    "clfireboyandwatergirl5": {
-      "assetSha256": "cff65704a25a19679d7fb303a303fdcdc0dbb20a4f6288800d5d2754b28c5959",
-      "identityEvidence": "Published by the distribution for Fireboy and Watergirl 5 at https://ssl.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_74x24dp.png, found by fetching that distribution's own pages/assets (fetched script.google.com page metadata; fetched script.google.com page metadata).",
-      "methodsInvestigated": [
-        "fetched script.google.com page metadata",
-        "fetched script.google.com page metadata",
-        "title-screen capture (fallback)"
-      ],
-      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "source": "https://ssl.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_74x24dp.png",
-      "title": "Fireboy and Watergirl 5",
-      "type": "game-asset",
-      "url": "/artwork/clfireboyandwatergirl5.webp"
     },
     "clfisheatgettingbig": {
       "assetSha256": "d85cea33209a4057d59e4a0698e89a1c632d77b4a34b125e0f3069a614700ecd",
@@ -957,6 +900,19 @@
       "title": "Krillion",
       "type": "official-og",
       "url": "/artwork/clkrillion.webp"
+    },
+    "clkrillion-backup": {
+      "assetSha256": "fb2b30868b812ed06a470262b50b1b487c98f9b681469385d357854d87d43ccb",
+      "identityEvidence": "Open Graph image served by krillionunlimited.org, the independent fan-made site this catalog links as the backup. Distinct from the official krillion.cc image and labelled Krillion Unlimited.",
+      "methodsInvestigated": [
+        "fetched provider page metadata (official image)"
+      ],
+      "reuseEvidence": "Artwork published by the service's own site for this application and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "verified",
+      "source": "https://krillionunlimited.org/og.png",
+      "title": "Krillion (Backup)",
+      "type": "official-og",
+      "url": "/artwork/clkrillion-backup.webp"
     },
     "clmadalinstuntcarsmultiplayerfixed": {
       "assetSha256": "af6bf795ca523cd61d592526004edd12cfe750b83f98bde594ffdc8810890747",
@@ -1717,6 +1673,32 @@
       "type": "official-og",
       "url": "/artwork/clyohohoio.webp"
     },
+    "everythingle": {
+      "assetSha256": "8e702adf18648c3c0806abae13631c4afd423c0b8653b73757b1b3ae07f65b07",
+      "identityEvidence": "512px application icon served by everythingle.com, the puzzle site this catalog embeds.",
+      "methodsInvestigated": [
+        "fetched provider page metadata (official image)"
+      ],
+      "reuseEvidence": "Artwork published by the service's own site for this application and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "verified",
+      "source": "https://everythingle.com/icon-512.png",
+      "title": "Everythingle",
+      "type": "official-icon",
+      "url": "/artwork/everythingle.webp"
+    },
+    "krillion": {
+      "assetSha256": "e51dad0a53ebb1f7e95eeb7f1626440a1bbeafd33fed42d729fb9cc3ff792dea",
+      "identityEvidence": "Open Graph image served by krillion.cc itself, the official game this catalog embeds at /games/krillion.html. Shows the Krillion wordmark and tagline.",
+      "methodsInvestigated": [
+        "fetched provider page metadata (official image)"
+      ],
+      "reuseEvidence": "Artwork published by the service's own site for this application and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "verified",
+      "source": "https://krillion.cc/opengraph-image.png?opengraph-image.2nlv12kzc_1ph.png",
+      "title": "Krillion",
+      "type": "official-og",
+      "url": "/artwork/krillion.webp"
+    },
     "pvzm": {
       "assetSha256": "f2d60881795af775ad245c787ab349cd1634adfe736c8b2284369bc2bb413180",
       "identityEvidence": "The wrapper this repository distributes for PvZ Multiplayer declares this image as its own artwork (official-og).",
@@ -1970,6 +1952,53 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/cl2dshooting.webp"
     },
+    "cl3dash": {
+      "assetSha256": "73a1c0c9cec0262cf3e1b2216c3e5b3191f9b28ef487fcbd4921984a78dc5925",
+      "frame": "cl3dash@2.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cl3dash.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 489,
+        "coverage": 0.425,
+        "dominant": 0.276,
+        "edges": 3.73,
+        "stddev": 21.96
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cl3dash.html",
+      "title": "3 Dash",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl3dash.webp"
+    },
+    "cl3dasheditor": {
+      "assetSha256": "eabbbba75f5c6f78db9a296d92649b7cb38790d9753787692740431778897d40",
+      "frame": "cl3dasheditor@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cl3dasheditor.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 14462,
+        "coverage": 1.0,
+        "dominant": 0.152,
+        "edges": 9.12,
+        "stddev": 45.24
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cl3dasheditor.html",
+      "title": "3 Dash Editor",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl3dasheditor.webp"
+    },
     "cl3dpinballspacecadet": {
       "assetSha256": "87962ebaf9dd96e70bc7612c2413365ea67c2c20d5beee381ed7d49899ba424a",
       "frame": "cl3dpinballspacecadet@1.png",
@@ -2172,6 +2201,29 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/cl99balls.webp"
     },
+    "cl99nightsitf": {
+      "assetSha256": "c58cd3cfc3f8f8a11faeb3ccb37b0d55a24242649b0ca7a6cfcd3526a34b2898",
+      "frame": "cl99nightsitf@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cl99nightsitf.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 36849,
+        "coverage": 1.0,
+        "dominant": 0.03,
+        "edges": 7.77,
+        "stddev": 50.36
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cl99nightsitf.html",
+      "title": "99 Nights in the Forest",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cl99nightsitf.webp"
+    },
     "clADOFAI": {
       "asset": "clADOFAI.webp",
       "assetSha256": "70eb4cdb8dac40c31c5cb713c28d5d40cd74bb82b46a11f520fe2ab70a3d60ae",
@@ -2212,6 +2264,28 @@
       "title": "BFDI Branches",
       "type": "gameplay-screenshot",
       "url": "/artwork/clBFDIBranches.webp"
+    },
+    "clabandoned3": {
+      "assetSha256": "f1a79ed58118e5d0853b47ac265c42179d1019cac1962b9d21456096234c1e84",
+      "frame": "clabandoned3@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clabandoned3.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 20096,
+        "coverage": 0.734,
+        "dominant": 0.498,
+        "edges": 4.57,
+        "stddev": 47.76
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clabandoned3.html",
+      "title": "Abandoned 3",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clabandoned3.webp"
     },
     "clabsolutemadness": {
       "assetSha256": "fea478042c92c6ca564fc3eb6457a48618c98669d5bf859edc8c67d17caa2722",
@@ -2329,6 +2403,28 @@
       "title": "Agar.io Lite",
       "type": "gameplay-screenshot",
       "url": "/artwork/clagariolite.webp"
+    },
+    "clageofwar": {
+      "assetSha256": "e7ecd037d2a788d7bfb3bd76011c180bffd940050d2bf62fd4525133ed1c6dec",
+      "frame": "clageofwar@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clageofwar.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 122,
+        "coverage": 0.129,
+        "dominant": 0.85,
+        "edges": 10.19,
+        "stddev": 54.68
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clageofwar.html",
+      "title": "Age of War",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clageofwar.webp"
     },
     "clageofwar2": {
       "assetSha256": "e483cdb0570299223d55ed40506feea272351a2f82d550a55852a28812592277",
@@ -2798,6 +2894,28 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clarchesspelago.webp"
     },
+    "clarchimedesclient": {
+      "assetSha256": "6d6ce8d3910038cb3a64e88756125aa03869c65bc756f7b97825fc661f4ebb95",
+      "frame": "clarchimedesclient@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clarchimedesclient.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "no reachable remote distribution found",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 195,
+        "coverage": 0.163,
+        "dominant": 0.912,
+        "edges": 10.91,
+        "stddev": 65.58
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clarchimedesclient.html",
+      "title": "Archimedes Client",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clarchimedesclient.webp"
+    },
     "clarena": {
       "assetSha256": "cce5b007041c91a214d3aa7954a4ccd2fee115ed2169dc9f25a6193bebdb16fc",
       "frame": "clarena@2.png",
@@ -2942,6 +3060,28 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/claviamasters.webp"
     },
+    "claviamastersbuggy": {
+      "assetSha256": "7a9b6a5e6d1b84bf089e448fbab4fc7045d7d5ff5c39118ce19835a595bd8b8f",
+      "frame": "claviamastersbuggy@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/claviamastersbuggy.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 16249,
+        "coverage": 0.542,
+        "dominant": 0.89,
+        "edges": 4.71,
+        "stddev": 43.81
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/claviamastersbuggy.html",
+      "title": "Avia Masters Buggy",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/claviamastersbuggy.webp"
+    },
     "clawesomepirates": {
       "assetSha256": "99df135ee2570a6eabb2cfd2da7570246dda98d65f1605bdb95231f3fa033f77",
       "frame": "clawesomepirates@3.png",
@@ -2995,6 +3135,28 @@
       "title": "Awesome Tanks 2",
       "type": "gameplay-screenshot",
       "url": "/artwork/clawesometanks2.webp"
+    },
+    "claxisfootballleague": {
+      "assetSha256": "86e2e3d48b124fdff7b7716481a2f08c5bc40e2f9c9f7c48f4c5182845f0a348",
+      "frame": "claxisfootballleague@2.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/claxisfootballleague.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 66051,
+        "coverage": 0.643,
+        "dominant": 0.02,
+        "edges": 14.12,
+        "stddev": 53.18
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/claxisfootballleague.html",
+      "title": "Axis Football League",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/claxisfootballleague.webp"
     },
     "clbabeltower": {
       "assetSha256": "c1c07403775de12accf45e10312f42b25cd9c7911b90079e36c3ac25e1de623b",
@@ -3158,6 +3320,28 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clbadpiggieslatest.webp"
     },
+    "clbaldiepstein": {
+      "assetSha256": "eb9ef688f6023f748880441bdcb2d91411fbe5f9726e7225cbc51b88d972d074",
+      "frame": "clbaldiepstein@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbaldiepstein.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 4768,
+        "coverage": 0.788,
+        "dominant": 0.419,
+        "edges": 12.97,
+        "stddev": 101.47
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbaldiepstein.html",
+      "title": "Bald Iepstein",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clbaldiepstein.webp"
+    },
     "clbaldisfunnewschoolultimate": {
       "assetSha256": "28e70d7cee0da6d15f2e4328d36cb8df968497501053b6f3369455df51e6fbe4",
       "frame": "clbaldisfunnewschoolultimate@3.png",
@@ -3197,6 +3381,28 @@
       "title": "Ball Blast",
       "type": "gameplay-screenshot",
       "url": "/artwork/clballblast.webp"
+    },
+    "clballsandbricks": {
+      "assetSha256": "e3a6616f6b90edfd92aa7cf6d4cb67fac22e83c2a6ede228e36fab85b4f56c6c",
+      "frame": "clballsandbricks@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clballsandbricks.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched imasdk.googleapis.com page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 260,
+        "coverage": 0.379,
+        "dominant": 0.631,
+        "edges": 6.99,
+        "stddev": 52.83
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clballsandbricks.html",
+      "title": "Balls and Bricks",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clballsandbricks.webp"
     },
     "clballsandbricksgood": {
       "assetSha256": "95ce9633ccbbcb9fd5c3e3415e1d33b4a491daa1915ebf78cc6c067521138162",
@@ -3504,6 +3710,28 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clbeachboxingsim.webp"
     },
+    "clbearbarians": {
+      "assetSha256": "0acdf86bff630d1dc66156d2a52e4358885f791eb855d127c84e179fc2119f6d",
+      "frame": "clbearbarians@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbearbarians.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 80734,
+        "coverage": 0.786,
+        "dominant": 0.026,
+        "edges": 30.02,
+        "stddev": 62.56
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbearbarians.html",
+      "title": "Bear Barians",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clbearbarians.webp"
+    },
     "clbearsus": {
       "assetSha256": "aa24238534fc8fca6268f472c089ffd21908569bee36dd42951d22616f450458",
       "frame": "clbearsus@1.png",
@@ -3539,6 +3767,50 @@
       "title": "Big Time Butter Baron",
       "type": "gameplay-screenshot",
       "url": "/artwork/clbig_time_butter_baron.webp"
+    },
+    "clbigflappytowertinysquare": {
+      "assetSha256": "1c015d0a7c5acc5de731521a0d61b6652cb87e38700ac124be31e859e070a516",
+      "frame": "clbigflappytowertinysquare@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbigflappytowertinysquare.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 1403,
+        "coverage": 0.061,
+        "dominant": 0.257,
+        "edges": 14.34,
+        "stddev": 27.22
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbigflappytowertinysquare.html",
+      "title": "Big Flappy Tower Tiny Square",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clbigflappytowertinysquare.webp"
+    },
+    "clbigneontowertinysquare": {
+      "assetSha256": "c653cb977b64a1f20b31adf410773e1092853e3e03967f6ec96424ceab4a7b09",
+      "frame": "clbigneontowertinysquare@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbigneontowertinysquare.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 1584,
+        "coverage": 0.246,
+        "dominant": 0.682,
+        "edges": 9.28,
+        "stddev": 41.91
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbigneontowertinysquare.html",
+      "title": "Big Neon Tower Tiny Square",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clbigneontowertinysquare.webp"
     },
     "clbigshotboxing2": {
       "assetSha256": "bd69004117d2822888ccbddfa67925d18e8f9dcf9f90f6dce12a2f8f7fca230f",
@@ -3926,6 +4198,72 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clbloons2.webp"
     },
+    "clbloonspp1": {
+      "assetSha256": "8e8144541579554e6cf4c5731465bdadf5fa1767052589a800dde000ba6fcfc5",
+      "frame": "clbloonspp1@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbloonspp1.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 26336,
+        "coverage": 0.974,
+        "dominant": 0.304,
+        "edges": 3.73,
+        "stddev": 48.16
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbloonspp1.html",
+      "title": "Bloons PP 1",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clbloonspp1.webp"
+    },
+    "clbloonspp2": {
+      "assetSha256": "79f888461a519f966c4faf63596ef4bd055d34cc813f28f65cd2856b329604a1",
+      "frame": "clbloonspp2@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbloonspp2.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 39401,
+        "coverage": 0.974,
+        "dominant": 0.3,
+        "edges": 3.14,
+        "stddev": 48.21
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbloonspp2.html",
+      "title": "Bloons PP 2",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clbloonspp2.webp"
+    },
+    "clbloonstd1": {
+      "assetSha256": "d1565401dbf33010b25b63646efae40a041161c84ded8af19b557d37da754254",
+      "frame": "clbloonstd1@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbloonstd1.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 12184,
+        "coverage": 0.752,
+        "dominant": 0.003,
+        "edges": 8.13,
+        "stddev": 49.17
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbloonstd1.html",
+      "title": "Bloons TD 1",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clbloonstd1.webp"
+    },
     "clbloonstd3": {
       "assetSha256": "c9eebeccc638cc731164ca854cde0fc6a723cca23a6170bc4a1d5dbae4e369c8",
       "frame": "clbloonstd3@4.png",
@@ -4123,6 +4461,28 @@
       "title": "Bounty of One",
       "type": "gameplay-screenshot",
       "url": "/artwork/clbountyofone.webp"
+    },
+    "clbowmaster": {
+      "assetSha256": "b4677e40b96d597ca00323ca9a5b5a8ca193574b3dd39d81694ee8213d4906f3",
+      "frame": "clbowmaster@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbowmaster.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 8047,
+        "coverage": 0.97,
+        "dominant": 0.288,
+        "edges": 9.44,
+        "stddev": 66.1
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbowmaster.html",
+      "title": "Bow Master",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clbowmaster.webp"
     },
     "clboxhead2playrooms": {
       "assetSha256": "b90a56a95b8719c55d6961695fb048f770e36dc143ef229d5c6ee34cba3cf99d",
@@ -4514,6 +4874,28 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clcarrampvspolicechase.webp"
     },
+    "clcartoonnetworktabletennis": {
+      "assetSha256": "694351ea8c90008a97a045e219505fb4f03636c38ccb4e65d2e18fbc4e1f92f9",
+      "frame": "clcartoonnetworktabletennis@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcartoonnetworktabletennis.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 170706,
+        "coverage": 1.0,
+        "dominant": 0.053,
+        "edges": 20.05,
+        "stddev": 87.33
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcartoonnetworktabletennis.html",
+      "title": "Cartoon Network: Table Tennis Ultimate Tournament",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clcartoonnetworktabletennis.webp"
+    },
     "clcartoonnetworktabletennisultimatetournament": {
       "assetSha256": "cbc3c419b5e49b255636044220c2d7c27e35b5ee4831ec1a3091aa120c0b022b",
       "frame": "clcartoonnetworktabletennisultimatetournament@1.png",
@@ -4897,6 +5279,28 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clcleanupio.webp"
     },
+    "clclearvision3": {
+      "assetSha256": "766377ac69fb00c0fb0e1df5a522dd25aef2c6238e1812818de5e420c195021f",
+      "frame": "clclearvision3@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clclearvision3.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 3941,
+        "coverage": 0.974,
+        "dominant": 0.124,
+        "edges": 5.42,
+        "stddev": 54.21
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clclearvision3.html",
+      "title": "Clear Vision 3",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clclearvision3.webp"
+    },
     "clclubbytheseal": {
       "assetSha256": "24092361162ac7069c2d28a6dd3afea62f1f580d09dba018d30db0556afab61d",
       "frame": "clclubbytheseal@4.png",
@@ -5247,6 +5651,29 @@
       "title": "Cover Orange Players Pack 2",
       "type": "gameplay-screenshot",
       "url": "/artwork/clcoverorangeplayerspack2.webp"
+    },
+    "clcrankit": {
+      "assetSha256": "c4862eb473c84ab0d39630d32acd54a5e246efddc0d20a5eab681069366394d9",
+      "frame": "clcrankit@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcrankit.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 722,
+        "coverage": 1.0,
+        "dominant": 0.531,
+        "edges": 7.6,
+        "stddev": 20.67
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcrankit.html",
+      "title": "Crankit",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clcrankit.webp"
     },
     "clcrankitbang": {
       "assetSha256": "31b715c72ebf9f5e460ab914689f07b8bf0f090719f17bd2a9b8fdb176349844",
@@ -8772,28 +9199,6 @@
       "title": "Gun Night",
       "type": "gameplay-screenshot",
       "url": "/artwork/clgunnight.webp"
-    },
-    "clgxclient": {
-      "assetSha256": "7087afb38f66cea7a662fd32900292873d14427856bfc35e3b346bf4c60ea892",
-      "frame": "clgxclient@5.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clgxclient.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "no reachable remote distribution found",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 240,
-        "coverage": 0.574,
-        "dominant": 0.09,
-        "edges": 7.78,
-        "stddev": 32.98
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clgxclient.html",
-      "title": "GX Client",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clgxclient.webp"
     },
     "clgymstack": {
       "assetSha256": "1ff82e186060b1ae4cf4e7ac72d41161a608a3b250622b39f4864b1f4e879b56",

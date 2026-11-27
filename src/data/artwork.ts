@@ -147,6 +147,22 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/cl2dshooting.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "cl3dash": {
+    "title": "3 Dash",
+    "url": "/artwork/cl3dash.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cl3dash.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/cl3dash.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "cl3dasheditor": {
+    "title": "3 Dash Editor",
+    "url": "/artwork/cl3dasheditor.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cl3dasheditor.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/cl3dasheditor.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
   "cl3dpinballspacecadet": {
     "title": "3D Pinball: Space Cadet",
     "url": "/artwork/cl3dpinballspacecadet.webp",
@@ -235,6 +251,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/cl99balls.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "cl99nightsitf": {
+    "title": "99 Nights in the Forest",
+    "url": "/artwork/cl99nightsitf.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cl99nightsitf.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/cl99nightsitf.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
   "clADOFAI": {
     "title": "A Dance of Fire and Ice",
     "url": "/artwork/clADOFAI.webp",
@@ -249,6 +273,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clBFDIBranches.html",
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clBFDIBranches.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clabandoned3": {
+    "title": "Abandoned 3",
+    "url": "/artwork/clabandoned3.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clabandoned3.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/clabandoned3.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
   "clabsolutemadness": {
@@ -291,20 +323,20 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/cladventurecapitalist.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
-  "claflac": {
-    "title": "AFLAC",
-    "url": "/artwork/claflac.webp",
-    "source": "https://game.fnfhub.net/24921/favicon.png",
-    "type": "official-icon",
-    "identityEvidence": "Published by the distribution for AFLAC at https://game.fnfhub.net/24921/favicon.png, found by fetching that distribution's own pages/assets (fetched game.fnfhub.net page metadata).",
-    "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request."
-  },
   "clagariolite": {
     "title": "Agar.io Lite",
     "url": "/artwork/clagariolite.webp",
     "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clagariolite.html",
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clagariolite.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clageofwar": {
+    "title": "Age of War",
+    "url": "/artwork/clageofwar.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clageofwar.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/clageofwar.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
   "clageofwar2": {
@@ -531,6 +563,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clarchesspelago.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clarchimedesclient": {
+    "title": "Archimedes Client",
+    "url": "/artwork/clarchimedesclient.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clarchimedesclient.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/clarchimedesclient.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
   "clarena": {
     "title": "Arena",
     "url": "/artwork/clarena.webp",
@@ -603,6 +643,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/claviamasters.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "claviamastersbuggy": {
+    "title": "Avia Masters Buggy",
+    "url": "/artwork/claviamastersbuggy.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/claviamastersbuggy.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/claviamastersbuggy.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
   "clawesomepirates": {
     "title": "Awesome Pirates",
     "url": "/artwork/clawesomepirates.webp",
@@ -625,6 +673,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clawesometanks2.html",
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clawesometanks2.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "claxisfootballleague": {
+    "title": "Axis Football League",
+    "url": "/artwork/claxisfootballleague.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/claxisfootballleague.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/claxisfootballleague.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
   "clbabeltower": {
@@ -675,14 +731,6 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clbaconmaydie.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
-  "clbadbodyguards": {
-    "title": "Bad Bodyguards",
-    "url": "/artwork/clbadbodyguards.webp",
-    "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/MISC/badbodyguards/index.icon.png",
-    "type": "official-icon",
-    "identityEvidence": "Published by the distribution for Bad Bodyguards at https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/MISC/badbodyguards/index.icon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
-    "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request."
-  },
   "clbadparenting": {
     "title": "Bad Parenting",
     "url": "/artwork/clbadparenting.webp",
@@ -715,6 +763,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Published by the distribution for Bald Ide Comp at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@104c364f36401fd94165923f6b5a76c113e3540e/baldi%20decomp/TemplateData/AppIcon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
     "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request."
   },
+  "clbaldiepstein": {
+    "title": "Bald Iepstein",
+    "url": "/artwork/clbaldiepstein.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbaldiepstein.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/clbaldiepstein.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
   "clbaldisfunnewschoolultimate": {
     "title": "Baldi's Fun New School Ultimate",
     "url": "/artwork/clbaldisfunnewschoolultimate.webp",
@@ -729,6 +785,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clballblast.html",
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clballblast.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clballsandbricks": {
+    "title": "Balls and Bricks",
+    "url": "/artwork/clballsandbricks.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clballsandbricks.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/clballsandbricks.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
   "clballsandbricksgood": {
@@ -883,6 +947,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clbeachboxingsim.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clbearbarians": {
+    "title": "Bear Barians",
+    "url": "/artwork/clbearbarians.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbearbarians.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/clbearbarians.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
   "clbearsus": {
     "title": "Bearsus",
     "url": "/artwork/clbearsus.webp",
@@ -905,6 +977,22 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbig_time_butter_baron.html",
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clbig_time_butter_baron.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clbigflappytowertinysquare": {
+    "title": "Big Flappy Tower Tiny Square",
+    "url": "/artwork/clbigflappytowertinysquare.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbigflappytowertinysquare.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/clbigflappytowertinysquare.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clbigneontowertinysquare": {
+    "title": "Big Neon Tower Tiny Square",
+    "url": "/artwork/clbigneontowertinysquare.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbigneontowertinysquare.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/clbigneontowertinysquare.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
   "clbigshotboxing2": {
@@ -1075,6 +1163,30 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clbloons2.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clbloonspp1": {
+    "title": "Bloons PP 1",
+    "url": "/artwork/clbloonspp1.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbloonspp1.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/clbloonspp1.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clbloonspp2": {
+    "title": "Bloons PP 2",
+    "url": "/artwork/clbloonspp2.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbloonspp2.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/clbloonspp2.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clbloonstd1": {
+    "title": "Bloons TD 1",
+    "url": "/artwork/clbloonstd1.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbloonstd1.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/clbloonstd1.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
   "clbloonstd3": {
     "title": "Bloons TD 3",
     "url": "/artwork/clbloonstd3.webp",
@@ -1169,6 +1281,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbountyofone.html",
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clbountyofone.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clbowmaster": {
+    "title": "Bow Master",
+    "url": "/artwork/clbowmaster.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbowmaster.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/clbowmaster.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
   "clboxhead2playrooms": {
@@ -1371,6 +1491,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clcarrampvspolicechase.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clcartoonnetworktabletennis": {
+    "title": "Cartoon Network: Table Tennis Ultimate Tournament",
+    "url": "/artwork/clcartoonnetworktabletennis.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcartoonnetworktabletennis.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/clcartoonnetworktabletennis.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
   "clcartoonnetworktabletennisultimatetournament": {
     "title": "Cartoon Network Table Tennis Ultimate Tournament",
     "url": "/artwork/clcartoonnetworktabletennisultimatetournament.webp",
@@ -1539,6 +1667,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clcleanupio.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clclearvision3": {
+    "title": "Clear Vision 3",
+    "url": "/artwork/clclearvision3.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clclearvision3.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/clclearvision3.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
   "clclubbytheseal": {
     "title": "Club by the Seal",
     "url": "/artwork/clclubbytheseal.webp",
@@ -1554,14 +1690,6 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clclusterrush.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
-  },
-  "clcoalllcdemo": {
-    "title": "Coal LLC Demo",
-    "url": "/artwork/clcoalllcdemo.webp",
-    "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/SWAGgames@main/coalllc/index.icon.png",
-    "type": "official-icon",
-    "identityEvidence": "Published by the distribution for Coal LLC Demo at https://cdn.jsdelivr.net/gh/Stinkalistic/SWAGgames@main/coalllc/index.icon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
-    "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request."
   },
   "clcoldfront": {
     "title": "Cold Front",
@@ -1697,6 +1825,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcoverorangeplayerspack2.html",
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clcoverorangeplayerspack2.html after it rendered its own screen in Chromium.",
+    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clcrankit": {
+    "title": "Crankit",
+    "url": "/artwork/clcrankit.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcrankit.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "Captured from the actual game this repository serves at /games/clcrankit.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
   "clcrankitbang": {
@@ -2563,14 +2699,6 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clfireboyandwatergirl.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
-  "clfireboyandwatergirl5": {
-    "title": "Fireboy and Watergirl 5",
-    "url": "/artwork/clfireboyandwatergirl5.webp",
-    "source": "https://ssl.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_74x24dp.png",
-    "type": "game-asset",
-    "identityEvidence": "Published by the distribution for Fireboy and Watergirl 5 at https://ssl.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_74x24dp.png, found by fetching that distribution's own pages/assets (fetched script.google.com page metadata; fetched script.google.com page metadata).",
-    "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request."
-  },
   "clfisheatgettingbig": {
     "title": "Fish Eat Getting Big",
     "url": "/artwork/clfisheatgettingbig.webp",
@@ -3427,14 +3555,6 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clgunnight.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
-  "clgxclient": {
-    "title": "GX Client",
-    "url": "/artwork/clgxclient.webp",
-    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clgxclient.html",
-    "type": "gameplay-screenshot",
-    "identityEvidence": "Captured from the actual game this repository serves at /games/clgxclient.html after it rendered its own screen in Chromium.",
-    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
-  },
   "clgymstack": {
     "title": "Gym Stack",
     "url": "/artwork/clgymstack.webp",
@@ -4042,6 +4162,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "official-og",
     "identityEvidence": "Published by the distribution for Krillion at https://krillion.cc/opengraph-image.png?opengraph-image.2nlv12kzc_1ph.png, found by fetching that distribution's own pages/assets (fetched krillion.cc page metadata).",
     "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request."
+  },
+  "clkrillion-backup": {
+    "title": "Krillion (Backup)",
+    "url": "/artwork/clkrillion-backup.webp",
+    "source": "https://krillionunlimited.org/og.png",
+    "type": "official-og",
+    "identityEvidence": "Open Graph image served by krillionunlimited.org, the independent fan-made site this catalog links as the backup. Distinct from the official krillion.cc image and labelled Krillion Unlimited.",
+    "reuseEvidence": "Artwork published by the service's own site for this application and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request."
   },
   "cllambdaclient": {
     "title": "Lambda Client",
@@ -8259,6 +8387,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/eb-client-v1-0-0r2-wasm.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "everythingle": {
+    "title": "Everythingle",
+    "url": "/artwork/everythingle.webp",
+    "source": "https://everythingle.com/icon-512.png",
+    "type": "official-icon",
+    "identityEvidence": "512px application icon served by everythingle.com, the puzzle site this catalog embeds.",
+    "reuseEvidence": "Artwork published by the service's own site for this application and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request."
+  },
   "helios-offline--1": {
     "title": "Helios Offline",
     "url": "/artwork/helios-offline--1.webp",
@@ -8266,6 +8402,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/helios-offline--1.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "krillion": {
+    "title": "Krillion",
+    "url": "/artwork/krillion.webp",
+    "source": "https://krillion.cc/opengraph-image.png?opengraph-image.2nlv12kzc_1ph.png",
+    "type": "official-og",
+    "identityEvidence": "Open Graph image served by krillion.cc itself, the official game this catalog embeds at /games/krillion.html. Shows the Krillion wordmark and tagline.",
+    "reuseEvidence": "Artwork published by the service's own site for this application and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request."
   },
   "minecraft": {
     "title": "Minecraft 1.12.2",
