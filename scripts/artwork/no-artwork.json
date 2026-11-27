@@ -1,0 +1,86 @@
+{
+  "clb3313v102": {
+    "reason": "Internet image search returned only gameplay video thumbnails with FULL GAMEPLAY captions layered over them; no clean artwork exists in the first results.",
+    "recorded": "2026-11-27"
+  },
+  "clblackout": {
+    "reason": "Results were a Kickstarter board game and an unrelated Switch horror title (Blackout: The Darkest Night); nothing identifies this catalog entry.",
+    "recorded": "2026-11-27"
+  },
+  "clbloonspp3": {
+    "reason": "Results were Bloons Pop Three, a different game from this Bloons Player Pack entry; using it would mislabel the card.",
+    "recorded": "2026-11-27"
+  },
+  "clboxinglive2": {
+    "reason": "Every result carried a flash-portal watermark (plimpl.com or silvergames.com); no clean artwork available.",
+    "recorded": "2026-11-27"
+  },
+  "clbloonstd2": {
+    "reason": "Results were Bloons TD Battles 2, a different game.",
+    "recorded": "2026-11-27"
+  },
+  "clcotlk": {
+    "reason": "No result identifiable as this title: the first results were game-portal logos and an unrelated product photo.",
+    "recorded": "2026-11-27"
+  },
+  "clburritobison2": {
+    "reason": "The only artwork matching Burrito Bison Revenge (this title's second game) carries a minigamesville.com watermark, and the clean images are the first game's art.",
+    "recorded": "2026-11-27"
+  },
+  "clcreepyinternetstories": {
+    "reason": "Results were video thumbnails and app-store screenshots with marketing captions rather than the game's own artwork.",
+    "recorded": "2026-11-27"
+  },
+  "cldonkeykong": {
+    "reason": "Results were Donkey Kong Country Returns, a different title; the arcade original is a separate catalog entry.",
+    "recorded": "2026-11-27"
+  },
+  "clclover": {
+    "reason": "Results were the So Clover! board game, not this title.",
+    "recorded": "2026-11-27"
+  },
+  "clcvooc": {
+    "reason": "No result identifiable as this title; the first results were unrelated cooking games.",
+    "recorded": "2026-11-27"
+  },
+  "cldoomps": {
+    "reason": "Results were Doom Eternal, a different title from this PlayStation Doom build.",
+    "recorded": "2026-11-27"
+  },
+  "cleaglercraftshadow": {
+    "reason": "Results were a specific hosted world and embedding-page screenshots for another player's world, not artwork for this build.",
+    "recorded": "2026-11-27"
+  },
+  "clenduro": {
+    "reason": "Results were stock motocross photographs, not the game's own artwork.",
+    "recorded": "2026-11-27"
+  },
+  "clfamilyguycorrupted": {
+    "reason": "Every result was a video thumbnail with burned-in captions (NEW CORRUPTED CHARACTERS, FIXED CHARTS, CORRUPTED GLITCH EFFECT).",
+    "recorded": "2026-11-27"
+  },
+  "clff2ws": {
+    "reason": "Results were the Final Fantasy I cartridge and title art, not the WonderSwan Final Fantasy II this entry serves.",
+    "recorded": "2026-11-27"
+  },
+  "clffaf": {
+    "reason": "No result identifiable as this title; the first results were unrelated Five Nights at Freddy's products.",
+    "recorded": "2026-11-27"
+  },
+  "clfinalfantasy": {
+    "reason": "Results were Final Fantasy VII Remake and XV, later titles; none represents the original game this entry serves.",
+    "recorded": "2026-11-27"
+  },
+  "clfinalfantasyviid2": {
+    "reason": "Results were retail Final Fantasy VII products, not artwork for this build.",
+    "recorded": "2026-11-27"
+  },
+  "clfinalfantasyviid3": {
+    "reason": "Results were the retail Final Fantasy VII Remake key art and a captioned video frame.",
+    "recorded": "2026-11-27"
+  },
+  "clfireemblem": {
+    "reason": "Results were later Fire Emblem titles (Fortune's Weave, Engage); none represents this generic entry.",
+    "recorded": "2026-11-27"
+  }
+}

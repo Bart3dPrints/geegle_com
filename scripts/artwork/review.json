@@ -305,6 +305,36 @@
     "status": "verified",
     "title": "BMX 2"
   },
+  "clFF3": {
+    "reason": "Final Fantasy III logo art with the moogle.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Final Fantasy III"
+  },
+  "clFNAF": {
+    "reason": "Five Nights at Freddy's key art with the animatronics and logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Five Nights at Freddy's"
+  },
+  "clFNAF2": {
+    "reason": "Five Nights at Freddy's 2 gameplay with its title logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Five Nights at Freddy's 2"
+  },
+  "clFNAF3": {
+    "reason": "Five Nights at Freddy's 3 key art with Springtrap.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Five Nights at Freddy's 3"
+  },
+  "clFNAF4": {
+    "reason": "Five Nights at Freddy's 4 key art with Freddy.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Five Nights at Freddy's 4"
+  },
   "clGXClient": {
     "reason": "Captured frame is a generic resolution selector with no identifying game content.",
     "reviewed": "2026-11-26",
@@ -3851,6 +3881,12 @@
     "status": "verified",
     "title": "Dying Dreams"
   },
+  "cldynamiteheaddy": {
+    "reason": "Dynamite Headdy box art with the title and SEGA Game Gear branding.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dynamite Headdy"
+  },
   "cleaglercraft-alpha-126-offline": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -3876,9 +3912,9 @@
     "title": "Eaglercraft Indev Offline"
   },
   "cleaglercraft152": {
-    "reason": "Every qualifying frame carried a consent, language, license or age dialog over the content.",
+    "reason": "Eaglercraft app icon with its character; results 1 and 2 were marketing pages with buttons.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Eaglercraft 1.5.2"
   },
   "cleaglercraftl_19_v0_7_0_offline_signed-1": {
@@ -3888,27 +3924,33 @@
     "title": "Eaglercraft 1.19 v0.7.0 Offline"
   },
   "cleaglercraftlite": {
-    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+    "reason": "Eaglercraft app icon with the game's title.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Eaglercraft Lite"
   },
-  "cleaglercraftnebula": {
-    "reason": "Every qualifying frame carried a consent, language, license or age dialog over the content.",
+  "cleaglercraftmagic": {
+    "reason": "Eaglercraft app icon for this build.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Eaglercraft Magic"
+  },
+  "cleaglercraftnebula": {
+    "reason": "Eaglercraft app icon with its world art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Eaglercraft Nebula"
   },
   "cleaglercraftshadow": {
-    "reason": "Every qualifying frame carried a consent, language, license or age dialog over the content.",
+    "reason": "Results were a specific hosted world and embedding-page screenshots for another player's world, not artwork for this build.",
     "reviewed": "2026-11-27",
     "status": "rejected",
-    "title": "Eaglercraft Shadow"
+    "title": null
   },
   "cleaglercraftsky": {
-    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+    "reason": "Eaglercraft app icon with its sky world art.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Eaglercraft Sky"
   },
   "cleaglercrafttech": {
@@ -3959,6 +4001,24 @@
     "status": "verified",
     "title": "Earn to Die 2"
   },
+  "clearthbound": {
+    "reason": "EarthBound logo art with Ness and the party.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Earthbound"
+  },
+  "clearthbound3": {
+    "reason": "MOTHER 3 key art, the game this entry serves; result 1 was a captioned gameplay video.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Earthbound 3"
+  },
+  "clearthboundsnes": {
+    "reason": "EarthBound SNES cover art, centred without the box border.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Earthbound (SNES)"
+  },
   "clearthtaken": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -3976,6 +4036,24 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Earth Taken 3"
+  },
+  "clearthwormgg": {
+    "reason": "Earthworm Jim key art with the logo for the Game Gear build.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Earthworm Jim"
+  },
+  "clearthwormjim--1": {
+    "reason": "Earthworm Jim box art, kept visually distinct from the Game Gear entry.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Earthworm Jim"
+  },
+  "clearthwormjim2--1": {
+    "reason": "Earthworm Jim 2 Genesis box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Earthworm Jim 2"
   },
   "cleccothedolphin": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -3996,15 +4074,15 @@
     "title": "Effing Hail"
   },
   "cleffingmachines": {
-    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reason": "Effing Machines logo art.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Effing Machines"
   },
   "cleffingworms": {
-    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reason": "Effing Worms logo with its worm.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Effing Worms"
   },
   "cleffingzombies": {
@@ -4037,6 +4115,12 @@
     "status": "verified",
     "title": "Electric Man 2"
   },
+  "clelevatoraction": {
+    "reason": "Elevator Action title card with the building.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Elevator Action"
+  },
   "clelytraflight": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -4067,6 +4151,12 @@
     "status": "verified",
     "title": "Endless War 4"
   },
+  "clendlesswar5": {
+    "reason": "Endless War 5 logo over its battlefield artwork.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Endless War 5"
+  },
   "clendlesswar5wow": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -4078,6 +4168,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Endless War 7"
+  },
+  "clenduro": {
+    "reason": "Results were stock motocross photographs, not the game's own artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
   },
   "clepicbattlefantasy5": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -4098,9 +4194,9 @@
     "title": "Escape Road"
   },
   "clescaperoad3": {
-    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reason": "Escape Road 3 key art with its characters.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Escape Road 3"
   },
   "clescaperoadcity2": {
@@ -4115,6 +4211,18 @@
     "status": "verified",
     "title": "Escape School Duel"
   },
+  "clet": {
+    "reason": "E.T. Game Boy Advance box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Et"
+  },
+  "cletrianoddyssey": {
+    "reason": "Etrian Odyssey HD key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Etrian Odyssey"
+  },
   "cleugeneslife": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -4122,9 +4230,9 @@
     "title": "Eugene's Life"
   },
   "cleurovisionsim": {
-    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+    "reason": "EuroVision Simulator title screen with its menu.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Eurovision Sim"
   },
   "clevilglitch": {
@@ -4138,6 +4246,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Evolution"
+  },
+  "clexcitebike": {
+    "reason": "Excitebike key art with the rider and NES branding.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Excitebike"
+  },
+  "clexcitebike64": {
+    "reason": "Excitebike 64 box art with the rider.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Excitebike 64"
   },
   "clexitpath": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -4169,6 +4289,48 @@
     "status": "rejected",
     "title": "Fallout"
   },
+  "clfamidash": {
+    "reason": "FamiDash cover art with its cube logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Famidash"
+  },
+  "clfamidash1-2-8": {
+    "reason": "FamiDash title screen with its level artwork.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Famidash 1.2.8"
+  },
+  "clfamidashalbum1-2-8": {
+    "reason": "FamiDash Album title screen; result 2 was only the cartridge.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Famidash Album 1.2.8"
+  },
+  "clfamidashbsides1-2-8": {
+    "reason": "FamiDash B-Sides title card.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Famidash B-Sides 1.2.8"
+  },
+  "clfamidashcsides1-2-8": {
+    "reason": "FamiDash C-Sides title card.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Famidash C-Sides 1.2.8"
+  },
+  "clfamidashdsides1-2-8": {
+    "reason": "FamiDash D-Sides title card.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Famidash D-Sides 1.2.8"
+  },
+  "clfamilyguycorrupted": {
+    "reason": "Every result was a video thumbnail with burned-in captions (NEW CORRUPTED CHARACTERS, FIXED CHARTS, CORRUPTED GLITCH EFFECT).",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
   "clfancypantsadventure": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -4176,9 +4338,9 @@
     "title": "Fancy Pants Adventure"
   },
   "clfancypantsadventure2": {
-    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+    "reason": "The Fancy Pants Adventures World 2 logo art.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Fancy Pants Adventure 2"
   },
   "clfancypantsadventure3": {
@@ -4193,6 +4355,12 @@
     "status": "verified",
     "title": "Fancy Snowboarding"
   },
+  "clfantasyzone": {
+    "reason": "Fantasy Zone key art with its ship.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Fantasy Zone"
+  },
   "clfashionbattle": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -4200,9 +4368,9 @@
     "title": "Fashion Battle"
   },
   "clfattygenius": {
-    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+    "reason": "Fatty Genius title screen with its character.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Fatty Genius"
   },
   "clfearassessment": {
@@ -4212,9 +4380,9 @@
     "title": "Fear Assessment"
   },
   "clfearstofathomhomealone": {
-    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reason": "Fears to Fathom: Home Alone poster art with the title.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Fears to Fathom: Home Alone"
   },
   "clfeedthevoid": {
@@ -4229,6 +4397,12 @@
     "status": "verified",
     "title": "Feed Us"
   },
+  "clfeedus2": {
+    "reason": "Feed Us 2 logo over its scene.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Feed Us 2"
+  },
   "clfeedus3": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -4241,11 +4415,29 @@
     "status": "verified",
     "title": "Feed Us 5"
   },
-  "clffaf": {
-    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+  "clff2ws": {
+    "reason": "Results were the Final Fantasy I cartridge and title art, not the WonderSwan Final Fantasy II this entry serves.",
     "reviewed": "2026-11-27",
     "status": "rejected",
-    "title": "FFAF"
+    "title": null
+  },
+  "clff6": {
+    "reason": "Final Fantasy VI cover art with the cast.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FF6"
+  },
+  "clffaf": {
+    "reason": "No result identifiable as this title; the first results were unrelated Five Nights at Freddy's products.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
+  "clffmysticquest": {
+    "reason": "Final Fantasy Mystic Quest cover art without the SNES band of result 3.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FF Mystic Quest"
   },
   "clffsonic1": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -4288,6 +4480,30 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FFSonic 6.2"
+  },
+  "clfifa07": {
+    "reason": "FIFA 07 GameCube cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FIFA 07"
+  },
+  "clfifa10": {
+    "reason": "FIFA 10 cover art without a platform band.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FIFA 10"
+  },
+  "clfifa11": {
+    "reason": "FIFA 11 key art with its two players.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FIFA 11"
+  },
+  "clfifa2000": {
+    "reason": "FIFA 2000 Game Boy Color box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FIFA 2000"
   },
   "clfifa2000-1": {
     "reason": "FIFA 2000 Game Boy Color box art with the title.",
@@ -4349,11 +4565,65 @@
     "status": "verified",
     "title": "Final Earth 2"
   },
-  "clfinalfantasyix": {
-    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+  "clfinalfantasy": {
+    "reason": "Results were Final Fantasy VII Remake and XV, later titles; none represents the original game this entry serves.",
     "reviewed": "2026-11-27",
     "status": "rejected",
+    "title": null
+  },
+  "clfinalfantasy2nes": {
+    "reason": "Final Fantasy II box art with the Firion artwork.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Final Fantasy 2 (NES)"
+  },
+  "clfinalfantasy3nes": {
+    "reason": "Final Fantasy III box art with the Nintendo seal.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Final Fantasy 3 (NES)"
+  },
+  "clfinalfantasyii": {
+    "reason": "Final Fantasy II logo art; result 2 carried a platform band.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Final Fantasy II"
+  },
+  "clfinalfantasyix": {
+    "reason": "Final Fantasy IX gameplay scene with its cast.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Final Fantasy IX"
+  },
+  "clfinalfantasylegend2": {
+    "reason": "Final Fantasy Legend II box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Final Fantasy Legend 2"
+  },
+  "clfinalfantasyvi": {
+    "reason": "Final Fantasy VI logo art with Terra.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Final Fantasy VI"
+  },
+  "clfinalfantasyvii": {
+    "reason": "Final Fantasy VII key art with Cloud on the white background.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Final Fantasy VII"
+  },
+  "clfinalfantasyviid2": {
+    "reason": "Results were retail Final Fantasy VII products, not artwork for this build.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
+  "clfinalfantasyviid3": {
+    "reason": "Results were the retail Final Fantasy VII Remake key art and a captioned video frame.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
   },
   "clfinalninja": {
     "reason": "Captured the Final Ninja logo title screen.",
@@ -4392,16 +4662,34 @@
     "title": "Fireboy and Watergirl 3"
   },
   "clfireboyandwatergirl5": {
-    "reason": "The fetched asset is the Google logo (ssl.gstatic.com branding image), not this game's artwork.",
+    "reason": "Fireboy and Watergirl 5 Elements logo art with both characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Fireboy and Watergirl 5"
+  },
+  "clfireboyandwatergirl6": {
+    "reason": "Fireboy and Watergirl 6 Fairy Tales key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Fireboy and Watergirl 6"
+  },
+  "clfireemblem": {
+    "reason": "Results were later Fire Emblem titles (Fortune's Weave, Engage); none represents this generic entry.",
     "reviewed": "2026-11-27",
     "status": "rejected",
-    "title": "Fireboy and Watergirl 5"
+    "title": null
   },
   "clfisheatgettingbig": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Fish Eat Getting Big"
+  },
+  "clfisquarium": {
+    "reason": "Fisquarium gameplay with its fish and HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Fisquarium"
   },
   "clfivenightsatbaldisredone": {
     "reason": "Captured menu shows the actual game.",
@@ -4414,6 +4702,24 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Five Nights at Epstein's"
+  },
+  "clfivenightsatshreks": {
+    "reason": "Five Nights at Shrek's gameplay with the office view.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Five Nights at Shrek's"
+  },
+  "clfivenightsatshrekshotel": {
+    "reason": "Five Nights at Shrek's Hotel exterior view with Shrek.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Five Nights at Shrek's Hotel"
+  },
+  "clfivenightsatyoshis": {
+    "reason": "Five Nights at Yoshi's gameplay scene with Yoshi.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Five Nights at Yoshi's"
   },
   "clflappybird": {
     "reason": "Captured gameplay shows the actual game.",
@@ -4451,6 +4757,12 @@
     "status": "verified",
     "title": "Fluidism"
   },
+  "clfnac1": {
+    "reason": "FNAC 1 gameplay with its night-vision UI.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNAC 1"
+  },
   "clfnac2": {
     "reason": "Captured settings screen from the actual game.",
     "reviewed": "2026-11-27",
@@ -4463,6 +4775,48 @@
     "status": "verified",
     "title": "FNAF 3 Remastered"
   },
+  "clfnaf4halloween": {
+    "reason": "FNAF 4 Halloween Edition art with Nightmare Fredbear.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNAF 4 Halloween"
+  },
+  "clfnafanimatronics": {
+    "reason": "FNAF Animatronics group key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNAF Animatronics"
+  },
+  "clfnafps": {
+    "reason": "Five Nights at Freddy's Core Collection PS4 cover, the console release this entry serves.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNAF PS"
+  },
+  "clfnafshooter": {
+    "reason": "FNaF Shooter key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNAF Shooter"
+  },
+  "clfnafsl": {
+    "reason": "Five Nights at Freddy's: Sister Location key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNAF Sister Location"
+  },
+  "clfnafucn": {
+    "reason": "Ultimate Custom Night poster with its character grid.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNAF UCN"
+  },
+  "clfnafworldd": {
+    "reason": "FNAF World key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNAF World"
+  },
   "clfnaw": {
     "reason": "Captured menu from the actual game.",
     "reviewed": "2026-11-27",
@@ -4470,9 +4824,9 @@
     "title": "FNAW"
   },
   "clfnfaethos": {
-    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reason": "FNF: Aethos gameplay with its characters and arrows.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF: Aethos"
   },
   "clfnfagoti": {
@@ -4494,27 +4848,27 @@
     "title": "FNF Animation"
   },
   "clfnfannie": {
-    "reason": "The frame shows only the shared Friday Night Funkin base logo, which does not identify this specific mod.",
+    "reason": "FNF x Annie full-week key art.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF: Annie"
   },
   "clfnfbelowdepths": {
-    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reason": "FNF Sonic Below the Depths key art.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF: Below Depths"
   },
   "clfnfbfdi26": {
-    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reason": "BFDI 26 title screen with PRESS ENTER TO CONTINUE.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF: BFDI 26"
   },
   "clfnfbinarybreakdown": {
-    "reason": "The frame shows only the shared Friday Night Funkin base logo, which does not identify this specific mod.",
+    "reason": "FNF: Binary Breakdown gameplay with its arrows.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF: Binary Breakdown"
   },
   "clfnfblackbetrayal": {
@@ -4535,6 +4889,12 @@
     "status": "verified",
     "title": "FNF: Camellia Rude Blaster"
   },
+  "clfnfcandycarrier": {
+    "reason": "FNF: Candy Carrier gameplay with its chart; result 1 carried a banner caption.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Candy Carrier"
+  },
   "clfnfcitytales": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -4547,6 +4907,12 @@
     "status": "verified",
     "title": "FNF: Classified"
   },
+  "clfnfcorrosion": {
+    "reason": "FNF: Corrosion V2 key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Corrosion"
+  },
   "clfnfcory": {
     "reason": "The frame is an empty background with no legible title or gameplay.",
     "reviewed": "2026-11-27",
@@ -4554,9 +4920,9 @@
     "title": "FNF Cory"
   },
   "clfnfcrunchin": {
-    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reason": "FNF: Crunchin key art with its characters.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF: Crunchin"
   },
   "clfnfdeciever": {
@@ -4608,9 +4974,9 @@
     "title": "FNF: Fleetway"
   },
   "clfnfflippedout": {
-    "reason": "The frame is an empty background with no legible title or gameplay.",
+    "reason": "FNF: Flipped Out press-enter screen; result 1 carried a DEMO badge.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF: Flipped Out"
   },
   "clfnffnaf1": {
@@ -4620,9 +4986,9 @@
     "title": "FNF: FNAF 1"
   },
   "clfnffnaf2": {
-    "reason": "The frame is an empty background with no legible title or gameplay.",
+    "reason": "FNF: FNAF 2 logo art with its characters.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF: FNAF 2"
   },
   "clfnffnaf3": {
@@ -4668,15 +5034,15 @@
     "title": "FNF Hank"
   },
   "clfnfheartbreakhavoc": {
-    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reason": "FNF: Heartbreak Havoc key art with its characters.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF: Heartbreak Havoc"
   },
   "clfnfherobrine": {
-    "reason": "The frame shows only the shared Friday Night Funkin base logo, which does not identify this specific mod.",
+    "reason": "FNF vs Herobrine Remake key art.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF: Herobrine"
   },
   "clfnfhex": {
@@ -4690,6 +5056,12 @@
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "FNF: Holiday"
+  },
+  "clfnfhorkglorpgloop": {
+    "reason": "FNF: Horkglor RPG Loop key art with its title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Horkglor RPG Loop"
   },
   "clfnfhypnoslullaby": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -4744,6 +5116,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: Mario Madness D-Side"
+  },
+  "clfnfmcmadness": {
+    "reason": "FNF: MC Madness gameplay with its combo HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: MC Madness"
   },
   "clfnfmidfight": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
