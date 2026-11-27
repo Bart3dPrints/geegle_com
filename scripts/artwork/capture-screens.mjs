@@ -90,6 +90,11 @@ async function framesFor(row) {
   try {
     await page.goto(BASE + row.path, { waitUntil: 'load', timeout: 20000 });
     await page.waitForTimeout(waitFirst);
+    // Dismiss content warnings and "press any key" gates before the first frame.
+    for (const key of ['Escape', 'Enter', 'Space']) {
+      await page.keyboard.press(key).catch(() => {});
+      await page.waitForTimeout(800);
+    }
     frames.push(await page.screenshot({ type: 'png' }));
     // Many games gate the title behind an explicit play/start control.
     for (const selector of ['button:has-text("PLAY")', 'button:has-text("Play")', 'text=PLAY', 'text=Play', 'text=START']) {
