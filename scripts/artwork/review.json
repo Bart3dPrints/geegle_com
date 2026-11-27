@@ -3575,17 +3575,131 @@
     "status": "verified",
     "title": "Grow Your Garden"
   },
+  "clguesstheiranswer": {
+    "reason": "Captured gameplay shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Guess Their Answer"
+  },
+  "clgun-spin": {
+    "reason": "Captured title screen shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Gun Spin"
+  },
+  "clguncho": {
+    "reason": "Captured title screen shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Guncho"
+  },
+  "clgunknight": {
+    "reason": "Advert inside the wrapper, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Gun Knight"
+  },
+  "clgunmayhem": {
+    "reason": "Publisher splash (Armor Games), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Gun Mayhem"
+  },
+  "clgunmayhem2goof": {
+    "reason": "Publisher splash (Armor Games), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Gun Mayhem 2 Goof"
+  },
+  "clgunmayhemredux": {
+    "reason": "Publisher splash (Armor Games), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Gun Mayhem Redux"
+  },
+  "clgunnight": {
+    "reason": "Captured title screen shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Gun Night"
+  },
+  "clgymstack": {
+    "reason": "Captured title screen shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Gym Stack"
+  },
+  "clhacx": {
+    "reason": "Captured game artwork matches the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "HACX"
+  },
+  "clhanger": {
+    "reason": "Captured title screen shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hanger"
+  },
+  "clhanger2": {
+    "reason": "Coming-soon placeholder, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Hanger 2"
+  },
+  "clhappyroom": {
+    "reason": "Captured gameplay shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Happy Room"
+  },
   "clhardwaretycoon": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Hardware Tycoon"
   },
+  "clhauntedschool": {
+    "reason": "Captured menu shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Haunted School"
+  },
+  "clhauntthehouse": {
+    "reason": "Captured title screen shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Haunt the House"
+  },
+  "clhei-t": {
+    "reason": "Captured title screen shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Heist"
+  },
+  "clhelios-offline--1": {
+    "reason": "Captured the actual application interface this card launches.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Helios Offline"
+  },
+  "clhelixjump": {
+    "reason": "Captured gameplay shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Helix Jump"
+  },
   "clhelltaker": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Helltaker"
+  },
+  "clheretic": {
+    "reason": "Captured title screen shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Heretic"
   },
   "clhero3flyingrobot": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -3598,6 +3712,18 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Hextris"
+  },
+  "clhighwayracer2": {
+    "reason": "Captured menu shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Highway Racer 2"
+  },
+  "clhighwaytraffic3d": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Highway Traffic 3D"
   },
   "clholebattle": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
