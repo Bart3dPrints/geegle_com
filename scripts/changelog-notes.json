@@ -1,12 +1,13 @@
 {
   "1": "Geegle's foundation: accounts and cloud saves backed by Supabase, plus the start of the neutral design system.",
+  "10": "The original game catalogue is restored, missing series play again, and guest reminders can now be turned off permanently.",
+  "11": "Game cards now show real artwork taken from the games themselves, so far more titles are recognisable instead of showing a placeholder.",
+  "12": "More game cards now show artwork researched from each game's own published icon, logo or screenshot before any capture was attempted.",
   "2": "Cloud saves for supported games, a much larger game catalogue, and settings for theme and tab appearance.",
   "3": "A simpler landing page and library: one navigation row, alphabetical sections, neutral styling, and the current Geegle title and footer.",
   "4": "Library search with ranked suggestions, the library and proxy notices, and more compact game controls.",
   "5": "Sticky header search, cleaner root-URL navigation, and fixes for production sign-up and session handling.",
   "6": "Username-only accounts can now sign up on the live site, and a deploy check catches a misconfigured backend.",
   "7": "Database fixes for registration, case-insensitive duplicate usernames and save revisions, with tighter permissions.",
-  "8": "Game saving fixed in three clicker games, cloud-save accuracy corrected, and the larger Geegle wordmark with a single Sign out action.",
-  "10": "The original game catalogue is restored, missing series play again, and guest reminders can now be turned off permanently.",
-  "11": "Game cards now show real artwork taken from the games themselves, so far more titles are recognisable instead of showing a placeholder."
+  "8": "Game saving fixed in three clicker games, cloud-save accuracy corrected, and the larger Geegle wordmark with a single Sign out action."
 }

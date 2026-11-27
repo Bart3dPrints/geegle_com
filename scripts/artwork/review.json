@@ -209,6 +209,12 @@
     "status": "rejected",
     "title": "99 Nights in the Forest"
   },
+  "clADOFAI": {
+    "reason": "Captured gameplay shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "A Dance of Fire and Ice"
+  },
   "clADarkRoom": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
@@ -2681,6 +2687,12 @@
     "status": "verified",
     "title": "Endacopia"
   },
+  "clendlesswar4": {
+    "reason": "Video player overlay, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Endless War 4"
+  },
   "clendlesswar5wow": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -3041,6 +3053,12 @@
     "status": "verified",
     "title": "FNF: Agoti"
   },
+  "clfnfakage": {
+    "reason": "Captured mod artwork shows the actual title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Akage"
+  },
   "clfnfanimation": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
@@ -3202,6 +3220,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF Wednesday Infidelity"
+  },
+  "clfolderdungeon": {
+    "reason": "Captured gameplay shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Folder Dungeon"
   },
   "clfootballbros": {
     "reason": "Artwork shows a different title than this entry.",
@@ -3395,11 +3419,77 @@
     "status": "verified",
     "title": "GL Fighters"
   },
+  "clgoalsouthafrica": {
+    "reason": "Captured title screen shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Goal South Africa"
+  },
+  "clgobble": {
+    "reason": "Near-blank page with no game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Gobble"
+  },
+  "clgoingballs": {
+    "reason": "Captured gameplay shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Going Balls"
+  },
+  "clgolddiggerfrvr": {
+    "reason": "Captured gameplay shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Gold Digger FRVR"
+  },
+  "clgoldensunnds": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Golden Sun NDS"
+  },
+  "clgoldminer": {
+    "reason": "Captured title screen shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Gold Miner"
+  },
   "clgolfbattle": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Golf Battle"
+  },
+  "clgolforbit": {
+    "reason": "Captured gameplay shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Golf Orbit"
+  },
+  "clgoodmonkeymart": {
+    "reason": "Fullscreen prompt page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Good Monkey Mart"
+  },
+  "clgorillatag": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Gorilla Tag"
+  },
+  "clgranddad": {
+    "reason": "Captured title screen shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Granddad"
+  },
+  "clgrandescapeprison": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Grand Escape Prison"
   },
   "clgranny22": {
     "reason": "Store badge, not the game artwork.",
@@ -3413,11 +3503,77 @@
     "status": "rejected",
     "title": "Granny 3"
   },
+  "clgrannycreepy": {
+    "reason": "Watermarked generic sketch, not this title's artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Granny Creepy"
+  },
+  "clgrannynightmare": {
+    "reason": "Captured gameplay shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Granny Nightmare"
+  },
+  "clgranturismo": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Gran Turismo"
+  },
+  "clgranturismo2": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Gran Turismo 2"
+  },
+  "clgrassmowing": {
+    "reason": "Captured gameplay shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Grass Mowing"
+  },
+  "clgravity": {
+    "reason": "Captured title screen shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Gravity"
+  },
+  "clgravitymod": {
+    "reason": "Captured gameplay shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Gravity Mod"
+  },
+  "clgrey-box-testing": {
+    "reason": "Test scene, not the released game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Grey Box Testing"
+  },
+  "clgrindcraft": {
+    "reason": "Captured title screen shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Grindcraft"
+  },
   "clgrn": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Grn"
+  },
+  "clgrowagarden": {
+    "reason": "Captured gameplay shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Grow a Garden"
+  },
+  "clgrowyourgarden": {
+    "reason": "Captured gameplay shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Grow Your Garden"
   },
   "clhardwaretycoon": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
