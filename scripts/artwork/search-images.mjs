@@ -41,10 +41,12 @@ const progress = JSON.parse(fs.readFileSync(PROGRESS, 'utf8'))
 // not searched again; their reason lives in scripts/artwork/no-artwork.json.
 const SKIP_FILE = path.join(ROOT, 'scripts', 'artwork', 'no-artwork.json')
 const skip = fs.existsSync(SKIP_FILE) ? Object.keys(JSON.parse(fs.readFileSync(SKIP_FILE, 'utf8'))) : []
+const SUFFIX = opt('query-suffix', 'game')
 let queue = progress.entries.filter((e) => e.status === 'not-started' && !skip.includes(e.id))
 if (WANTED) {
   const set = new Set(WANTED)
-  queue = queue.filter((e) => set.has(e.id))
+  // An explicit --ids run may re-search an id that already has artwork.
+  queue = progress.entries.filter((e) => set.has(e.id))
 }
 queue = queue.slice(0, LIMIT)
 
@@ -111,7 +113,7 @@ async function download(url, file, referer) {
 async function handle(entry) {
   const dir = path.join(OUT, entry.id)
   fs.mkdirSync(dir, { recursive: true })
-  const query = `${entry.title} game`
+  const query = `${entry.title} ${SUFFIX}`
   let found
   try {
     found = await search(query)
@@ -145,7 +147,7 @@ async function worker() {
     try {
       await handle(entry)
     } catch (err) {
-      index[entry.id] = { title: entry.title, query: `${entry.title} game`, error: String(err), candidates: [] }
+      index[entry.id] = { title: entry.title, query, error: String(err), candidates: [] }
     }
     done += 1
     if (done % 10 === 0) {

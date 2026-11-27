@@ -7991,6 +7991,12 @@
     "status": "verified",
     "title": "Mega Client"
   },
+  "clmegaman": {
+    "reason": "Results were Mega Man 2, Mega Man X and Mega Man V artwork, not the original NES entry.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
   "clmegaman2": {
     "reason": "Mega Man 2 box art.",
     "reviewed": "2026-11-27",
@@ -8081,17 +8087,161 @@
     "status": "verified",
     "title": "Mega Man BN 6 CG"
   },
+  "clmegamanlegends": {
+    "reason": "Mega Man Legends PlayStation box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man Legends"
+  },
+  "clmegamanlegends2": {
+    "reason": "Mega Man Legends 2 cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man Legends 2"
+  },
+  "clmegamanx": {
+    "reason": "Mega Man X box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man X"
+  },
+  "clmegamanx2": {
+    "reason": "Mega Man X2 cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man X2"
+  },
+  "clmegamanx3": {
+    "reason": "Mega Man X3 cover art without the platform band.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man X3"
+  },
+  "clmegamanx4": {
+    "reason": "Mega Man X4 cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man X4"
+  },
+  "clmegamanx5": {
+    "reason": "Mega Man X5 key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man X5"
+  },
+  "clmegamanx6": {
+    "reason": "Mega Man X6 key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man X6"
+  },
+  "clmegamanzero": {
+    "reason": "Mega Man Zero key art with Zero.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man Zero"
+  },
+  "clmegamanzx": {
+    "reason": "Mega Man ZX DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Man ZX"
+  },
+  "clmegaminer": {
+    "reason": "Mega Miner key art with its character.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mega Miner"
+  },
   "clmelonplayground": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Melon Playground"
   },
+  "clmeowuwu": {
+    "reason": "Results were Meowu Island and Meow Meow Life, not this title.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
   "clmergeroundracers": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Merge Round Racers"
+  },
+  "clmetalgear": {
+    "reason": "Metal Gear Solid Master Collection art that includes the original Metal Gear cover.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Metal Gear"
+  },
+  "clmetalgearsolid": {
+    "reason": "Metal Gear Solid key art with Snake.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Metal Gear Solid"
+  },
+  "clmetalslug": {
+    "reason": "Metal Slug arcade gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Metal Slug"
+  },
+  "clmetalslug2": {
+    "reason": "Metal Slug 2 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Metal Slug 2"
+  },
+  "clmetalslugadvance": {
+    "reason": "Metal Slug Advance box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Metal Slug Advance"
+  },
+  "clmetalslugmission1": {
+    "reason": "Metal Slug 1st Mission key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Metal Slug Mission 1"
+  },
+  "clmetalslugmission2": {
+    "reason": "Metal Slug 2nd Mission key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Metal Slug Mission 2"
+  },
+  "clmetroid": {
+    "reason": "Metroid key art with Samus.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Metroid"
+  },
+  "clmetroid2": {
+    "reason": "Metroid II: Return of Samus box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Metroid 2"
+  },
+  "clmetroidfusion": {
+    "reason": "Metroid Fusion key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Metroid Fusion"
+  },
+  "clmetroidprimehunters": {
+    "reason": "Metroid Prime Hunters key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Metroid Prime Hunters"
+  },
+  "clmetroidzeromission": {
+    "reason": "Metroid: Zero Mission key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Metroid: Zero Mission"
   },
   "clmiamishark": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8105,6 +8255,12 @@
     "status": "verified",
     "title": "Micro Life"
   },
+  "clmicromages": {
+    "reason": "Micro Mages title art; result 3 carried a trailer caption.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Micro Mages"
+  },
   "clmightyknight": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -8117,11 +8273,35 @@
     "status": "verified",
     "title": "Mighty Knight 2"
   },
+  "clmimic": {
+    "reason": "Five Nights at Freddy's: Secret of the Mimic key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mimic"
+  },
   "clminceraft-i-notmine_v6-1": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Minceraft I Not Mine V6"
+  },
+  "clmindscape": {
+    "reason": "MindScape title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mindscape"
+  },
+  "clmindwave": {
+    "reason": "Mind Wave visual-novel scene.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mind Wave"
+  },
+  "clminecaves": {
+    "reason": "Mine Caves gameplay with its title; result 2 carried a play overlay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mine Caves"
   },
   "clminecraft1-8-8": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8159,11 +8339,47 @@
     "status": "verified",
     "title": "Minhero"
   },
+  "clminicrossword": {
+    "reason": "Mini Crossword tile art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mini Crossword"
+  },
+  "clminiflips": {
+    "reason": "Mini Flips logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mini Flips"
+  },
+  "clminimart": {
+    "reason": "Mini Mart key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mini Mart"
+  },
   "clminishooters": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Mini Shooters"
+  },
+  "clminitooth": {
+    "reason": "Mini Tooth stage with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mini Tooth"
+  },
+  "clmiraginewar": {
+    "reason": "Mirage War battle with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mira Gin Ewar"
+  },
+  "clmisslecommand": {
+    "reason": "Missile Command box art; result 1 carried an atari watermark.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Missile Command"
   },
   "clmoemon-emerald-vanilla---v1-1-0": {
     "reason": "Moemon Emerald Version box art.",
@@ -8171,17 +8387,113 @@
     "status": "verified",
     "title": "Moemon Emerald Vanilla+"
   },
+  "clmomimsleeping": {
+    "reason": "Mom, I'm Sleeping! scene.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mom I'm Sleeping"
+  },
   "clmomoscrushers": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Momo Crushers"
   },
+  "clmoneyrush": {
+    "reason": "Money Rush key art with its coins.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Money Rush"
+  },
+  "clmonkeymart": {
+    "reason": "Monkey Mart key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Monkey Mart"
+  },
+  "clmonkeymartenc": {
+    "reason": "Monkey Mart key art for this build.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Monkey Mart Enc"
+  },
+  "clmonsterderby": {
+    "reason": "Monster Derby gameplay with its HUD; result 2 was a stock photo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Monster Derby"
+  },
+  "clmonstertracks": {
+    "reason": "Monster Tracks key art; result 1 carried a site credit.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Monster Tracks"
+  },
   "clmonstertruckcurfew": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Monster Truck Curfew"
+  },
+  "clmonstertruckportstunt": {
+    "reason": "Monster Truck Port Stunt key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Monster Truck Port Stunt"
+  },
+  "clmoonemeraldextremerandomizer": {
+    "reason": "Pokemon Moon Emerald Extreme Randomizer logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Moon Emerald Extreme Randomizer"
+  },
+  "clmortalkombat": {
+    "reason": "Mortal Kombat key art with its fighters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mortal Kombat"
+  },
+  "clmortalkombat2": {
+    "reason": "Mortal Kombat II Genesis box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mortal Kombat 2"
+  },
+  "clmortalkombat2a": {
+    "reason": "Mortal Kombat II SNES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mortal Kombat 2 (Alt)"
+  },
+  "clmortalkombat3": {
+    "reason": "Ultimate Mortal Kombat 3 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mortal Kombat 3"
+  },
+  "clmortalkombat3a": {
+    "reason": "Mortal Kombat 3 box art, kept distinct from the Ultimate release.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mortal Kombat 3 (Alt)"
+  },
+  "clmortalkombat4": {
+    "reason": "Mortal Kombat 4 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mortal Kombat 4"
+  },
+  "clmortalkombata": {
+    "reason": "Mortal Kombat arcade gameplay with its logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mortal Kombat (Alt)"
+  },
+  "clmortalkombatadvance": {
+    "reason": "Mortal Kombat Advance GBA box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mortal Kombat Advance"
   },
   "clmotherload": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8237,11 +8549,35 @@
     "status": "verified",
     "title": "Mountain Bike Racer"
   },
+  "clmrdriller": {
+    "reason": "Mr. Driller Drill Land key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mr. Driller"
+  },
+  "clmrdriller2": {
+    "reason": "Mr. Driller 2 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mr. Driller 2"
+  },
+  "clmrmine": {
+    "reason": "Mr. Mine key art with its miners.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mr. Mine"
+  },
   "clmrracer": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Mr. Racer"
+  },
+  "clmspacman--1": {
+    "reason": "Ms. Pac-Man key art with its maze.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ms. Pac-Man"
   },
   "clmultitask": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8255,11 +8591,41 @@
     "status": "verified",
     "title": "Mutilate a Doll"
   },
+  "clmvpbaseball": {
+    "reason": "MVP Baseball 2005 cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "MVP Baseball"
+  },
+  "clmxoffroadmaster": {
+    "reason": "MX Offroad Master key art with its rider.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "MX Off Road Master"
+  },
+  "clmyfriendpedro": {
+    "reason": "My Friend Pedro logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "My Friend Pedro"
+  },
+  "clmyfriendpedroarena": {
+    "reason": "My Arena logo art for this build.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "My Friend Pedro Arena"
+  },
   "clmyteardrop": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "My Teardrop"
+  },
+  "clnarc": {
+    "reason": "NARC PlayStation 2 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Narc"
   },
   "clnatsuki64": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8279,11 +8645,35 @@
     "status": "verified",
     "title": "Nautilus OS"
   },
+  "clnbahangtime": {
+    "reason": "NBA Hang Time box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "NBA Hangtime"
+  },
+  "clnbajam": {
+    "reason": "NBA Jam arcade gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "NBA Jam"
+  },
+  "clnbajamte": {
+    "reason": "NBA Jam Tournament Edition box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "NBA Jam TE"
+  },
   "clnbalive2000": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "NBA Live 2000"
+  },
+  "clnbalive2003": {
+    "reason": "NBA Live 2003 cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "NBA Live 2003"
   },
   "clnblox": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8309,17 +8699,35 @@
     "status": "verified",
     "title": "NES World Champion"
   },
+  "clnetattack": {
+    "reason": "Net Attack key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Net Attack"
+  },
   "clneverendinglegacy": {
     "reason": "Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Neverending Legacy"
   },
+  "clnewersmbds": {
+    "reason": "Newer Super Mario Bros. DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Newer SMB DS"
+  },
   "clnewgroundsrumble": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Newgrounds Rumble"
+  },
+  "clnewsupermariobros": {
+    "reason": "New Super Mario Bros. DS box art, found with a refined box-art query so it stays distinct from the fan-game entry.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "New Super Mario Bros"
   },
   "clnewyorkshark": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8333,11 +8741,71 @@
     "status": "verified",
     "title": "Next Door"
   },
+  "clnflblitz": {
+    "reason": "NFL Blitz key art with its player.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "NFL Blitz"
+  },
+  "clnfscarbonowncity": {
+    "reason": "Need for Speed Carbon Own the City cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "NFS Carbon Own City"
+  },
+  "clnfsmostwanted": {
+    "reason": "Need for Speed Most Wanted key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "NFS Most Wanted"
+  },
+  "clnfsporcheunleashed": {
+    "reason": "Need for Speed Porsche Unleashed PlayStation box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "NFS Porsche Unleashed"
+  },
+  "clnfsunderground": {
+    "reason": "Need for Speed Underground PlayStation 2 box art, kept distinct from Underground 2.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "NFS Underground"
+  },
+  "clnfsunderground2": {
+    "reason": "Need for Speed Underground 2 cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "NFS Underground 2"
+  },
+  "clngon-1": {
+    "reason": "N-gon title art with its pendulum.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "N-gon"
+  },
   "clnguidle": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "NGU Idle"
+  },
+  "clnhl2002": {
+    "reason": "NHL 2002 GBA box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "NHL 2002"
+  },
+  "clnhl98": {
+    "reason": "NHL 98 cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "NHL 98"
+  },
+  "clnhlhitz2003": {
+    "reason": "NHL Hitz 2003 GBA box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "NHL Hitz 2003"
   },
   "clnickelodeonsuperbrawl2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8363,11 +8831,53 @@
     "status": "verified",
     "title": "Nightclub Showdown"
   },
+  "clnightfire": {
+    "reason": "007 Nightfire GameCube box art; result 1 carried a 4K overlay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Nightfire"
+  },
+  "clnightshade": {
+    "reason": "Nightshade key art with its cast.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Nightshade"
+  },
   "clnimrods": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Nimrods"
+  },
+  "clninjabrawl": {
+    "reason": "Ninja Brawl store art with its slogan.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ninja Brawl"
+  },
+  "clninjaobbyparkor": {
+    "reason": "Ninja Obby Parkour key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ninja Obby Parkour"
+  },
+  "clnintendogslab": {
+    "reason": "Nintendogs Lab & Friends DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Nintendogs Lab"
+  },
+  "clnintendoworldcup": {
+    "reason": "Nintendo World Cup box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Nintendo World Cup"
+  },
+  "clnitclient": {
+    "reason": "Nit Client gameplay scene.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Nit Client"
   },
   "clnitromemustdie": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8386,6 +8896,36 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Not Your Pawn"
+  },
+  "clnovaclient": {
+    "reason": "Every result was a promotional banner or tutorial thumbnail with burned-in text, not artwork for this client.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
+  "clnplus": {
+    "reason": "N+ logo art with its stick figure.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "N+"
+  },
+  "clnsmbuds": {
+    "reason": "New Super Mario Bros. DS gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "NSMBUDS"
+  },
+  "clnsmbwds": {
+    "reason": "Newer Super Mario Bros. DS box art with its spine.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "NSMBWDS"
+  },
+  "clnubbysnumberfactory": {
+    "reason": "Nubby-Mart game screen with its title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Nubby's Number Factory"
   },
   "clnullkevin": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8416,6 +8956,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Obby: 99 Will Lose"
+  },
+  "clobby1jumpperclick": {
+    "reason": "Obby: 1 Jump Per Click key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Obby: 1 Jump Per Click"
   },
   "clobby456": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8453,6 +8999,12 @@
     "status": "verified",
     "title": "Obby: Slide"
   },
+  "clobbyswing": {
+    "reason": "Obby: Swing key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Obby: Swing"
+  },
   "clobbyyardsale": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -8464,6 +9016,30 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Obey the Game"
+  },
+  "clocarinaoftime": {
+    "reason": "Ocarina of Time 3D key art with Link on horseback.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Zelda: Ocarina of Time"
+  },
+  "cloddbotout": {
+    "reason": "Odd Bot Out logo art; result 1 carried a site credit.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Odd Bot Out"
+  },
+  "cloddfuture": {
+    "reason": "Results were Old Future and the Odd Future music group, not this game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
+  "clofflineparadise": {
+    "reason": "Paradise platformer gameplay; result 1 was a store advert.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Offline Paradise"
   },
   "clohflip": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8495,6 +9071,12 @@
     "status": "verified",
     "title": "One Bit Adventure"
   },
+  "clonepiece": {
+    "reason": "One Piece Odyssey key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "One Piece"
+  },
   "clonepiecefighting": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -8513,11 +9095,29 @@
     "status": "verified",
     "title": "Only Up"
   },
+  "clootmasterquest": {
+    "reason": "Ocarina of Time Master Quest key art with both Links.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Zelda: Ocarina of Time Master Quest"
+  },
+  "cloperius": {
+    "reason": "Operius gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Operius"
+  },
   "cloppositeday": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Opposite Day"
+  },
+  "clopposumcountry": {
+    "reason": "Opossum Country Game Boy Color box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Opposum Country"
   },
   "clorangeroulette": {
     "reason": "Orange Roulette title art with its character.",

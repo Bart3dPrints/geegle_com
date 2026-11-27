@@ -134,5 +134,21 @@
   "clmegamanbn6cf": {
     "reason": "Every first result for this build was Cybeast Gregar artwork; the Cybeast Falzar cover was not among them, so using it would mislabel the card.",
     "recorded": "2026-11-27"
+  },
+  "clmegaman": {
+    "reason": "Results were Mega Man 2, Mega Man X and Mega Man V artwork, not the original NES entry.",
+    "recorded": "2026-11-27"
+  },
+  "clmeowuwu": {
+    "reason": "Results were Meowu Island and Meow Meow Life, not this title.",
+    "recorded": "2026-11-27"
+  },
+  "clnovaclient": {
+    "reason": "Every result was a promotional banner or tutorial thumbnail with burned-in text, not artwork for this client.",
+    "recorded": "2026-11-27"
+  },
+  "cloddfuture": {
+    "reason": "Results were Old Future and the Odd Future music group, not this game.",
+    "recorded": "2026-11-27"
   }
 }
