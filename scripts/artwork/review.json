@@ -2807,6 +2807,12 @@
     "status": "rejected",
     "title": "Factory Balls 4"
   },
+  "clfairytalevsonepiece": {
+    "reason": "Play overlay on a blank page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Fairytale vs One Piece"
+  },
   "clfallguys": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -4451,6 +4457,12 @@
     "status": "rejected",
     "title": "LEGO Ninjago"
   },
+  "cllegostarwars": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "LEGO Star Wars"
+  },
   "clletitconsume": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -5237,11 +5249,59 @@
     "status": "verified",
     "title": "Obby: Only Up"
   },
+  "clobbyrainbowtower": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Obby: Rainbow Tower"
+  },
+  "clobbyslide": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Obby: Slide"
+  },
   "clobbyswing": {
     "reason": "Store badge, not the game artwork.",
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "Obby: Swing"
+  },
+  "clobbyyardsale": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ob by Yard Sale"
+  },
+  "clobeythegame": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Obey the Game"
+  },
+  "cloddbotout": {
+    "reason": "Near-empty frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Odd Bot Out"
+  },
+  "cloddfuture": {
+    "reason": "Screen shown belongs to a different game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Odd Future"
+  },
+  "clofflineparadise": {
+    "reason": "Non-identifying sprite sheet on a dark background.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Offline Paradise"
+  },
+  "clohflip": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ohflip"
   },
   "clomegalayers": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -5249,11 +5309,29 @@
     "status": "verified",
     "title": "Omega Layers"
   },
+  "clomeganuggetclicker": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Omega Nugget Clicker"
+  },
   "clomnipresent": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Omnipresent"
+  },
+  "clonepiecefighting": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "One Piece Fighting"
+  },
+  "cloneshotold": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "One Shot Old"
   },
   "clonlyup": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -5261,11 +5339,185 @@
     "status": "verified",
     "title": "Only Up"
   },
+  "cloppositeday": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Opposite Day"
+  },
+  "clorangeroulette": {
+    "reason": "Near-black frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Orange Roulette"
+  },
+  "clorbofcreation": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Orb of Creation"
+  },
+  "clorigamiking": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Paper Mario: The Origami King"
+  },
+  "clouthold": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Outhold"
+  },
+  "cloverburden": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Overburden"
+  },
   "clovo2": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "OvO 2"
+  },
+  "clovofixed": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "OvO Fixed"
+  },
+  "clpacmansuperfast": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pac-Man: Super Fast"
+  },
+  "clpacmanworld3": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pac-Man World 3"
+  },
+  "clpacmanworldpsx": {
+    "reason": "Publisher splash (Namco), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pac-Man World (PSX)"
+  },
+  "clpandameic2": {
+    "reason": "Play overlay on a blank page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Panda Mei C 2"
+  },
+  "clpapabakeria": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Papa's Bakeria"
+  },
+  "clpapadonut": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Papa's Donut"
+  },
+  "clpapalouienighthunt2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Papa Louie: Night Hunt 2"
+  },
+  "clpapalouiewhenburgersattack": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Papa Louie: When Burgers Attack"
+  },
+  "clpapalouiewhenpizzasattack": {
+    "reason": "Store promo banner for a different title, not this game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Papa Louie: When Pizzas Attack"
+  },
+  "clpapalouiewhensundaesattack": {
+    "reason": "Store promo banner for a different title, not this game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Papa Louie: When Sundaes Attack"
+  },
+  "clpapapizzagood": {
+    "reason": "Store promo banner for a different title, not this game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Papa's Pizzeria"
+  },
+  "clpapapizzamamamia": {
+    "reason": "Store promo banner for a different title, not this game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Papa's Pizzeria (Mama Mia)"
+  },
+  "clpapasburgeriiiaaaaa": {
+    "reason": "Store promo banner for a different title, not this game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Papa's Burgeria"
+  },
+  "clpapascheeseria": {
+    "reason": "Store promo banner for a different title, not this game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Papa's Cheeseria"
+  },
+  "clpapascupcakeria": {
+    "reason": "Store promo banner for a different title, not this game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Papa's Cupcakeria"
+  },
+  "clpapasfreezeria": {
+    "reason": "Store promo banner for a different title, not this game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Papa's Freezeria"
+  },
+  "clpapashotdoggeria": {
+    "reason": "Store promo banner for a different title, not this game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Papa's Hot Doggeria"
+  },
+  "clpapaspancakeria": {
+    "reason": "Store promo banner for a different title, not this game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Papa's Pancakeria"
+  },
+  "clpapaspastaria": {
+    "reason": "Store promo banner for a different title, not this game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Papa's Pastaria"
+  },
+  "clpapasscooperia": {
+    "reason": "Store promo banner for a different title, not this game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Papa's Scooperia"
+  },
+  "clpapassushiria": {
+    "reason": "Store promo banner for a different title, not this game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Papa's Sushiria"
+  },
+  "clpapastacomia": {
+    "reason": "Store promo banner for a different title, not this game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Papa's Taco Mia"
   },
   "clpaperio": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -5273,17 +5525,113 @@
     "status": "verified",
     "title": "Paper.io"
   },
+  "clpaperio3d": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Paper.io 3D"
+  },
+  "clpaperiomania": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Paper.io Mania"
+  },
+  "clparkingfury": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Parking Fury"
+  },
+  "clparkingfury2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Parking Fury 2"
+  },
+  "clparkingfury3": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Parking Fury 3"
+  },
   "clparkingrush": {
     "reason": "Non-identifying letter icon, not recognizable as the game.",
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "Parking Rush"
   },
+  "clpeacekeeper": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Peace Keeper"
+  },
+  "clpeggle": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Peggle"
+  },
+  "clpenaltykicks": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Penalty Kicks"
+  },
+  "clpenguinpass": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Penguin Pass"
+  },
+  "clperfecthotel": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Perfect Hotel"
+  },
+  "clpersona2alt": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Persona 2 (Alt)"
+  },
+  "clpersonaalt": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Persona (Alt)"
+  },
+  "clpetworld": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pet World"
+  },
   "clphasma": {
     "reason": "Portal logo (Unblocked Games G+), not the game.",
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "Phasma"
+  },
+  "clpiclient": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pi Client"
+  },
+  "clpico8": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pico-8"
+  },
+  "clpico8edu": {
+    "reason": "Blank frame with no game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pico-8 Edu"
   },
   "clpinkbike": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
