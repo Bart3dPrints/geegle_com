@@ -9131,11 +9131,35 @@
     "status": "verified",
     "title": "Orb of Creation"
   },
+  "clordinarysonicromhack": {
+    "reason": "An Ordinary Sonic Rom Hack title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ordinary Sonic Rom Hack"
+  },
+  "cloregontrail": {
+    "reason": "The Oregon Trail key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Oregon Trail"
+  },
   "clorigamiking": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Paper Mario: The Origami King"
+  },
+  "clortalkombat4": {
+    "reason": "Mortal Kombat 4 Nintendo 64 box art, kept distinct from the other entry.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mortal Kombat 4 (Alt)"
+  },
+  "closu": {
+    "reason": "osu! gameplay with its hit circles.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Osu"
   },
   "clourpleguy": {
     "reason": "Captured mod artwork shows the actual title.",
@@ -9148,6 +9172,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Outhold"
+  },
+  "cloutnumbered": {
+    "reason": "Results were a book cover, a board game and a different game's screen, not this title.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
   },
   "cloutrunarcade": {
     "reason": "OutRun arcade screen with its logo and road.",
@@ -9167,17 +9197,41 @@
     "status": "verified",
     "title": "Overburden"
   },
+  "clovo": {
+    "reason": "OvO logo art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "OvO"
+  },
   "clovo2": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "OvO 2"
   },
+  "clovodimensions": {
+    "reason": "OvO Dimensions key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "OvO Dimensions"
+  },
   "clovofixed": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "OvO Fixed"
+  },
+  "clpacman": {
+    "reason": "Pac-Man maze gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pac-Man"
+  },
+  "clpacmana": {
+    "reason": "Pac-Man maze art with the character roster.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pac-Man (Alt)"
   },
   "clpacmansuperfast": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -9190,6 +9244,24 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pac-Man World 3"
+  },
+  "clpacmanworldg": {
+    "reason": "Pac-Man World GBA box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pac-Man World G"
+  },
+  "clpacmanworldpsx": {
+    "reason": "Pac-Man World PlayStation box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pac-Man World (PSX)"
+  },
+  "clpandameic2": {
+    "reason": "Panda Mei C 2 scene.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Panda Mei C 2"
   },
   "clpapabakeria": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -9215,6 +9287,102 @@
     "status": "verified",
     "title": "Papa Louie: When Burgers Attack"
   },
+  "clpapalouiewhenpizzasattack": {
+    "reason": "Papa Louie: When Pizzas Attack! key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Papa Louie: When Pizzas Attack"
+  },
+  "clpapalouiewhensundaesattack": {
+    "reason": "Papa Louie 3: When Sundaes Attack! key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Papa Louie: When Sundaes Attack"
+  },
+  "clpapapizzagood": {
+    "reason": "Papa's Pizzeria Deluxe key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Papa's Pizzeria"
+  },
+  "clpapapizzagoody": {
+    "reason": "Papa's Pizzeria Deluxe art with the characters outside the shop.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Papa's Pizzeria (Good)"
+  },
+  "clpapapizzamamamia": {
+    "reason": "Papa's Pizzeria pizza-building screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Papa's Pizzeria (Mama Mia)"
+  },
+  "clpapasburgeriiiaaaaa": {
+    "reason": "Papa's Burgeria art with its two characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Papa's Burgeria"
+  },
+  "clpapascheeseria": {
+    "reason": "Papa's Cheeseria logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Papa's Cheeseria"
+  },
+  "clpapascupcakeria": {
+    "reason": "Papa's Cupcakeria key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Papa's Cupcakeria"
+  },
+  "clpapasfreezeria": {
+    "reason": "Papa's Freezeria Deluxe key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Papa's Freezeria"
+  },
+  "clpapashotdoggeria": {
+    "reason": "Papa's Hot Doggeria key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Papa's Hot Doggeria"
+  },
+  "clpapaspancakeria": {
+    "reason": "Papa's Pancakeria art with its character.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Papa's Pancakeria"
+  },
+  "clpapaspastaria": {
+    "reason": "Papa's Pastaria logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Papa's Pastaria"
+  },
+  "clpapasscooperia": {
+    "reason": "Papa's Scooperia sundae art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Papa's Scooperia"
+  },
+  "clpapassushiria": {
+    "reason": "Papa's Sushiria logo art with sushi.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Papa's Sushiria"
+  },
+  "clpapastacomia": {
+    "reason": "Papa's Taco Mia! HD key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Papa's Taco Mia"
+  },
+  "clpapaswingeria": {
+    "reason": "Papa's Wingeria storefront art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Papa's Wingeria"
+  },
   "clpaperio": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
@@ -9233,11 +9401,41 @@
     "status": "verified",
     "title": "Paper.io Mania"
   },
+  "clpapermario": {
+    "reason": "Paper Mario Nintendo 64 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Paper Mario"
+  },
+  "clpapermariodse": {
+    "reason": "Paper Mario DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Paper Mario DSE"
+  },
   "clpapermariopracticehack": {
     "reason": "Paper Mario practice hack gameplay room; result 2 was a tutorial caption.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Paper Mario Practice Hack"
+  },
+  "clpapermariopromode": {
+    "reason": "Paper Mario Pro Mode title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Paper Mario Promo de"
+  },
+  "clpapermariottyd": {
+    "reason": "Paper Mario: The Thousand-Year Door GameCube box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Paper Mario: TTYD"
+  },
+  "clparappatherapper": {
+    "reason": "PaRappa the Rapper art with its logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Parappa the Rapper"
   },
   "clparkingfury": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -9256,6 +9454,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Parking Fury 3"
+  },
+  "clparkingrush": {
+    "reason": "Parking Rush key art with its cars.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Parking Rush"
+  },
+  "clpartnersintime": {
+    "reason": "Mario & Luigi: Partners in Time box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario & Luigi: Partners in Time"
   },
   "clpeacekeeper": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -9281,11 +9491,119 @@
     "status": "verified",
     "title": "Penguin Pass"
   },
+  "clpepsiman": {
+    "reason": "Pepsi Man PlayStation cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pepsi Man"
+  },
+  "clpepsimanalt": {
+    "reason": "Pepsi Man gameplay, kept distinct from the cover used by the other entry.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pepsi Man (Alt)"
+  },
+  "clpereelous": {
+    "reason": "Pereelous title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Per Eelo Us"
+  },
+  "clperfectdark": {
+    "reason": "Perfect Dark key art with Joanna Dark.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Perfect Dark"
+  },
   "clperfecthotel": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Perfect Hotel"
+  },
+  "clpersona": {
+    "reason": "Results were Persona 5 Royal and a platform promo banner, not the original Persona.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
+  "clpersona2": {
+    "reason": "Persona 2: Innocent Sin cover art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Persona 2"
+  },
+  "clpersona2alt": {
+    "reason": "Persona 2 key art, kept distinct from the other entries.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Persona 2 (Alt)"
+  },
+  "clpersonaalt": {
+    "reason": "Persona character art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Persona (Alt)"
+  },
+  "clpetworld": {
+    "reason": "Pet World 3D key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pet World"
+  },
+  "clphantasystar": {
+    "reason": "Phantasy Star Sega box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Phantasy Star"
+  },
+  "clphantasystar2": {
+    "reason": "Phantasy Star II box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Phantasy Star 2"
+  },
+  "clphantasystar3": {
+    "reason": "Phantasy Star III Genesis box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Phantasy Star 3"
+  },
+  "clphantasystar4": {
+    "reason": "Phantasy Star IV Mega Drive box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Phantasy Star 4"
+  },
+  "clphasma": {
+    "reason": "Phasmophobia ghost key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Phasma"
+  },
+  "clpheonixjusticeforall": {
+    "reason": "Ace Attorney: Justice for All box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Phoenix Wright: Justice for All"
+  },
+  "clpheonixrightaceattorny": {
+    "reason": "Ace Attorney Trilogy key art with Phoenix and Edgeworth.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Phoenix Wright: Ace Attorney"
+  },
+  "clpheonixtrialsandyear": {
+    "reason": "Ace Attorney: Trials and Tribulations box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Phoenix Wright: Trials and Tribulations"
+  },
+  "clpibbyapocalypse": {
+    "reason": "Pibby Apocalypse logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pibby Apocalypse"
   },
   "clpiclient": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -9299,11 +9617,65 @@
     "status": "verified",
     "title": "Pico-8"
   },
+  "clpico8edu": {
+    "reason": "PICO-8 Education Edition art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pico-8 Edu"
+  },
+  "clpicodriller": {
+    "reason": "Pico Driller gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pico Driller"
+  },
   "clpicohot": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Picohot"
+  },
+  "clpicolife": {
+    "reason": "Pico's Life title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pico Life"
+  },
+  "clpiconightpunkin": {
+    "reason": "Pico Night Punkin logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pico Night Punkin"
+  },
+  "clpicosschool": {
+    "reason": "Pico's School classroom art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pico's School"
+  },
+  "clpicovsbeardx": {
+    "reason": "Pico vs. Bear DX title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pico vs. Beard X"
+  },
+  "clpiecesofcake": {
+    "reason": "Pieces of Cake puzzle art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pieces of Cake"
+  },
+  "clpikwip": {
+    "reason": "Pikwip key art without the award badge.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pikwip"
+  },
+  "clpinballnes": {
+    "reason": "Pinball NES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pinball (NES)"
   },
   "clpingpongchaos": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -9316,6 +9688,18 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Pink Bike"
+  },
+  "clpint": {
+    "reason": "Results were Spray Paint Simulator, a paper-painting photo and a watermarked Painter Game page.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
+  "clpitfall": {
+    "reason": "Pitfall! Atari cartridge art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pitfall"
   },
   "clpitof100trials": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -9371,6 +9755,30 @@
     "status": "verified",
     "title": "Pixel Warfare"
   },
+  "clpizzapapa": {
+    "reason": "Papa's Pizzeria Deluxe art with its character.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pizza Papa"
+  },
+  "clpizzatower": {
+    "reason": "Pizza Tower stage with its logo and HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pizza Tower"
+  },
+  "clpkmnarutoans": {
+    "reason": "Naruto game art with its character portraits.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "PKM Naruto ANS"
+  },
+  "clplanetlife": {
+    "reason": "Super Planet Life key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Planet Life"
+  },
   "clplangman": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -9383,11 +9791,35 @@
     "status": "verified",
     "title": "Plants vs. Zombies"
   },
+  "clplantsvszombiesnds": {
+    "reason": "Plants vs. Zombies DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Plants vs. Zombies (NDS)"
+  },
+  "clplazmaburst": {
+    "reason": "Plazma Burst 2 key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Plazma Burst"
+  },
+  "clplinko": {
+    "reason": "Plinko mobile key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Plinko"
+  },
   "clplonky": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Plonky"
+  },
+  "clpogo3d": {
+    "reason": "Pogo 3D gameplay with its logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pogo 3D"
   },
   "clpoke-mon-emerald-rush-edition--2-0": {
     "reason": "Pokemon Emerald Rush Edition box art.",
@@ -9413,11 +9845,53 @@
     "status": "verified",
     "title": "Pokemon Stunning Steel"
   },
+  "clpokeacademylifeforever": {
+    "reason": "Pokemon Academy Life Forever! key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Poke Academy Life Forever"
+  },
   "clpokeallin": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Poke All In"
+  },
+  "clpokebattlefact": {
+    "reason": "PokeFight battle screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Poke Battle Fact"
+  },
+  "clpokeblack": {
+    "reason": "Pokemon Black Version DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Black"
+  },
+  "clpokeblack2alt": {
+    "reason": "Pokemon Black 2 title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Black 2 (Alt)"
+  },
+  "clpokeblackalt": {
+    "reason": "Pokemon Black art, kept distinct from the box used by the other entry.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Black (Alt)"
+  },
+  "clpokeblazeblack2redux": {
+    "reason": "Pokemon Blaze Black 2 Redux box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Blaze Black 2 Redux"
+  },
+  "clpokeblue": {
+    "reason": "Pokemon Blue Version box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Blue"
   },
   "clpokeclassic": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -9431,17 +9905,35 @@
     "status": "verified",
     "title": "Pokemon Crown"
   },
+  "clpokecrystaladvanceredux": {
+    "reason": "Pokemon Crystal Advance Redux key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Crystal Advance Redux"
+  },
   "clpokecrystalclear": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pokemon Crystal Clear"
   },
+  "clpokediamond": {
+    "reason": "Pokemon Diamond Version DS box art; results 2 and 3 were the Brilliant Diamond remake.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Diamond"
+  },
   "clpokedreamstone": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pokemon Dream Stone"
+  },
+  "clpokeeliteredux": {
+    "reason": "Pokemon Elite Redux banner art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Elite Redux"
   },
   "clpokeelysiuma": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -9455,11 +9947,65 @@
     "status": "verified",
     "title": "Pokemon Elysium B"
   },
+  "clpokeemeraldenhanced": {
+    "reason": "Pokemon Emerald Enhanced art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Emerald Enhanced"
+  },
+  "clpokeemeraldexceeded": {
+    "reason": "Pokemon Exceeded Version 8.3 title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Emerald Exceeded"
+  },
+  "clpokeemeraldhorizons": {
+    "reason": "Pokemon Emerald Horizons title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Emerald Horizons"
+  },
+  "clpokeemeraldimperium": {
+    "reason": "Pokemon Emerald Imperium box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Emerald Imperium"
+  },
+  "clpokeemeraldrandom": {
+    "reason": "Pokemon Emerald Extreme Randomizer logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Emerald Random"
+  },
+  "clpokeemeraldrogue": {
+    "reason": "Pokemon Emerald Rogue box art collage.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Emerald Rogue"
+  },
+  "clpokeemeraldz": {
+    "reason": "Pokemon Emerald Z title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Emerald Z"
+  },
   "clpokefiregold": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pokemon FireGold"
+  },
+  "clpokeflora": {
+    "reason": "Pokemon Flora Sky Version box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Flora"
+  },
+  "clpokefrlgplus": {
+    "reason": "FireRed gameplay for this hack.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon FRLG Plus"
   },
   "clpokefuseddimension": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -9467,17 +10013,53 @@
     "status": "verified",
     "title": "Pokemon Fused Dimension"
   },
+  "clpokegaia": {
+    "reason": "Pokemon Gaia Version title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Gaia"
+  },
+  "clpokegoldenshield": {
+    "reason": "Pokemon Golden Shield logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Golden Shield"
+  },
   "clpokegschronicles": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Poke GS Chronicles"
   },
+  "clpokeheartgold": {
+    "reason": "Pokemon HeartGold Version DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon HeartGold"
+  },
   "clpokeheartgoldgenerations": {
     "reason": "Pokemon HeartGold Generations logo art.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Poke HeartGold Generations"
+  },
+  "clpokelightplatinum": {
+    "reason": "Pokemon Light Platinum box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Light Platinum"
+  },
+  "clpokeliquidcrysta": {
+    "reason": "Pokemon Liquid Crystal Version art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Liquid Crystal"
+  },
+  "clpokemegamoemon": {
+    "reason": "Mega Moemon FireRed box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Mega Moemon"
   },
   "clpokemonemeraldrouge": {
     "reason": "Pokemon Emerald Rogue box art.",
@@ -9496,6 +10078,24 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pokemon Tower Defense"
+  },
+  "clpokemoonemerald": {
+    "reason": "Pokemon Moon Emerald title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Moon Emerald"
+  },
+  "clpokemoongalaxy": {
+    "reason": "Pokemon Moon Galaxy box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Moon Galaxy"
+  },
+  "clpokemysteryexplorersofsky": {
+    "reason": "Pokemon Mystery Dungeon: Explorers of Sky key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Mystery Dungeon: Explorers of Sky"
   },
   "clpokeodyssey": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",

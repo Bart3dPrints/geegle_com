@@ -11763,6 +11763,22 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clorbofcreation.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clordinarysonicromhack": {
+    "title": "Ordinary Sonic Rom Hack",
+    "url": "/artwork/clordinarysonicromhack.webp",
+    "source": "https://www.steamgriddb.com/game/5463190",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Ordinary Sonic Rom Hack game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Ordinary Sonic Rom Hack\" before use. Source page: https://www.steamgriddb.com/game/5463190",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "cloregontrail": {
+    "title": "Oregon Trail",
+    "url": "/artwork/cloregontrail.webp",
+    "source": "https://appfile.net/the-oregon-trail/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Oregon Trail game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Oregon Trail\" before use. Source page: https://appfile.net/the-oregon-trail/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clorigamiking": {
     "title": "Paper Mario: The Origami King",
     "url": "/artwork/clorigamiking.webp",
@@ -11770,6 +11786,22 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clorigamiking.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clortalkombat4": {
+    "title": "Mortal Kombat 4 (Alt)",
+    "url": "/artwork/clortalkombat4.webp",
+    "source": "https://gamesdb.launchbox-app.com/games/images/1115-mortal-kombat-4",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mortal Kombat 4 (Alt) game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Mortal Kombat 4 (Alt)\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/1115-mortal-kombat-4",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "closu": {
+    "title": "Osu",
+    "url": "/artwork/closu.webp",
+    "source": "https://www.dexerto.com/gaming/db/game/osu/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Osu game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Osu\" before use. Source page: https://www.dexerto.com/gaming/db/game/osu/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clourpleguy": {
     "title": "Ourple Guy",
@@ -11811,6 +11843,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/cloverburden.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clovo": {
+    "title": "OvO",
+    "url": "/artwork/clovo.webp",
+    "source": "https://www.hoodamath.com/games/ovo.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"OvO game\" in Bing Images and taking result 2; the image was checked against the catalog title \"OvO\" before use. Source page: https://www.hoodamath.com/games/ovo.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clovo2": {
     "title": "OvO 2",
     "url": "/artwork/clovo2.webp",
@@ -11819,6 +11859,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "The wrapper this repository distributes for OvO 2 declares this image as its own artwork (official-icon).",
     "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request."
   },
+  "clovodimensions": {
+    "title": "OvO Dimensions",
+    "url": "/artwork/clovodimensions.webp",
+    "source": "https://minigamesville.com/game/ovo-dimensions/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"OvO Dimensions game\" in Bing Images and taking result 1; the image was checked against the catalog title \"OvO Dimensions\" before use. Source page: https://minigamesville.com/game/ovo-dimensions/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clovofixed": {
     "title": "OvO Fixed",
     "url": "/artwork/clovofixed.webp",
@@ -11826,6 +11874,22 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clovofixed.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clpacman": {
+    "title": "Pac-Man",
+    "url": "/artwork/clpacman.webp",
+    "source": "https://www.cnn.com/style/article/pac-man-40-anniversary-history/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pac-Man game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Pac-Man\" before use. Source page: https://www.cnn.com/style/article/pac-man-40-anniversary-history/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpacmana": {
+    "title": "Pac-Man (Alt)",
+    "url": "/artwork/clpacmana.webp",
+    "source": "https://outrungaming.com/what-year-video-game-classics-came-out/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pac-Man (Alt) game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pac-Man (Alt)\" before use. Source page: https://outrungaming.com/what-year-video-game-classics-came-out/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clpacmansuperfast": {
     "title": "Pac-Man: Super Fast",
@@ -11842,6 +11906,30 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clpacmanworld3.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clpacmanworldg": {
+    "title": "Pac-Man World G",
+    "url": "/artwork/clpacmanworldg.webp",
+    "source": "https://www.gamersgoretro.com/products/pac-man-world-game-boy-advance-gba",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pac-Man World G game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pac-Man World G\" before use. Source page: https://www.gamersgoretro.com/products/pac-man-world-game-boy-advance-gba",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpacmanworldpsx": {
+    "title": "Pac-Man World (PSX)",
+    "url": "/artwork/clpacmanworldpsx.webp",
+    "source": "https://www.lukiegames.com/Pacman-World-Sony-Playstation-Game.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pac-Man World (PSX) game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pac-Man World (PSX)\" before use. Source page: https://www.lukiegames.com/Pacman-World-Sony-Playstation-Game.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpandameic2": {
+    "title": "Panda Mei C 2",
+    "url": "/artwork/clpandameic2.webp",
+    "source": "https://orishany.itch.io/mei-vs-pandas",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Panda Mei C 2 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Panda Mei C 2\" before use. Source page: https://orishany.itch.io/mei-vs-pandas",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clpapabakeria": {
     "title": "Papa's Bakeria",
@@ -11875,6 +11963,134 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clpapalouiewhenburgersattack.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clpapalouiewhenpizzasattack": {
+    "title": "Papa Louie: When Pizzas Attack",
+    "url": "/artwork/clpapalouiewhenpizzasattack.webp",
+    "source": "https://www.imdb.com/title/tt13936932/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Papa Louie: When Pizzas Attack game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Papa Louie: When Pizzas Attack\" before use. Source page: https://www.imdb.com/title/tt13936932/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpapalouiewhensundaesattack": {
+    "title": "Papa Louie: When Sundaes Attack",
+    "url": "/artwork/clpapalouiewhensundaesattack.webp",
+    "source": "https://www.flipline.com/games/papalouie3/screenshots.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Papa Louie: When Sundaes Attack game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Papa Louie: When Sundaes Attack\" before use. Source page: https://www.flipline.com/games/papalouie3/screenshots.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpapapizzagood": {
+    "title": "Papa's Pizzeria",
+    "url": "/artwork/clpapapizzagood.webp",
+    "source": "https://bonus-action.com/news/papas-pizzeria-deluxe-is-coming-to-steam-bringing-the-nostalgia-hit-we-all-need/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Papa's Pizzeria game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Papa's Pizzeria\" before use. Source page: https://bonus-action.com/news/papas-pizzeria-deluxe-is-coming-to-steam-bringing-the-nostalgia-hit-we-all-need/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpapapizzagoody": {
+    "title": "Papa's Pizzeria (Good)",
+    "url": "/artwork/clpapapizzagoody.webp",
+    "source": "https://steamdb.info/app/3259470/info/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Papa's Pizzeria (Good) game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Papa's Pizzeria (Good)\" before use. Source page: https://steamdb.info/app/3259470/info/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpapapizzamamamia": {
+    "title": "Papa's Pizzeria (Mama Mia)",
+    "url": "/artwork/clpapapizzamamamia.webp",
+    "source": "https://www.youtube.com/watch?v=omraeOjZwIM",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Papa's Pizzeria (Mama Mia) game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Papa's Pizzeria (Mama Mia)\" before use. Source page: https://www.youtube.com/watch?v=omraeOjZwIM",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpapasburgeriiiaaaaa": {
+    "title": "Papa's Burgeria",
+    "url": "/artwork/clpapasburgeriiiaaaaa.webp",
+    "source": "https://www.girlgames4u.com/game/papas-burgeria",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Papa's Burgeria game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Papa's Burgeria\" before use. Source page: https://www.girlgames4u.com/game/papas-burgeria",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpapascheeseria": {
+    "title": "Papa's Cheeseria",
+    "url": "/artwork/clpapascheeseria.webp",
+    "source": "https://gamingkool.com/papas-cheeseria/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Papa's Cheeseria game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Papa's Cheeseria\" before use. Source page: https://gamingkool.com/papas-cheeseria/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpapascupcakeria": {
+    "title": "Papa's Cupcakeria",
+    "url": "/artwork/clpapascupcakeria.webp",
+    "source": "https://playercounter.com/papas-cupcakeria-unblocked-game/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Papa's Cupcakeria game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Papa's Cupcakeria\" before use. Source page: https://playercounter.com/papas-cupcakeria-unblocked-game/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpapasfreezeria": {
+    "title": "Papa's Freezeria",
+    "url": "/artwork/clpapasfreezeria.webp",
+    "source": "https://gameluster.com/review-papas-freezeria-deluxe-sundae-fundae/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Papa's Freezeria game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Papa's Freezeria\" before use. Source page: https://gameluster.com/review-papas-freezeria-deluxe-sundae-fundae/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpapashotdoggeria": {
+    "title": "Papa's Hot Doggeria",
+    "url": "/artwork/clpapashotdoggeria.webp",
+    "source": "https://www.culinaryschools.org/kids-games/papas-hot-doggeria/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Papa's Hot Doggeria game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Papa's Hot Doggeria\" before use. Source page: https://www.culinaryschools.org/kids-games/papas-hot-doggeria/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpapaspancakeria": {
+    "title": "Papa's Pancakeria",
+    "url": "/artwork/clpapaspancakeria.webp",
+    "source": "https://minigamesville.com/game/papas-pancakeria-2/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Papa's Pancakeria game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Papa's Pancakeria\" before use. Source page: https://minigamesville.com/game/papas-pancakeria-2/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpapaspastaria": {
+    "title": "Papa's Pastaria",
+    "url": "/artwork/clpapaspastaria.webp",
+    "source": "https://www.culinaryschools.org/kids-games/papas-pastaria/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Papa's Pastaria game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Papa's Pastaria\" before use. Source page: https://www.culinaryschools.org/kids-games/papas-pastaria/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpapasscooperia": {
+    "title": "Papa's Scooperia",
+    "url": "/artwork/clpapasscooperia.webp",
+    "source": "https://www.hoodamath.com/games/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Papa's Scooperia game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Papa's Scooperia\" before use. Source page: https://www.hoodamath.com/games/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpapassushiria": {
+    "title": "Papa's Sushiria",
+    "url": "/artwork/clpapassushiria.webp",
+    "source": "https://www.hoodamath.com/games/papassushiria.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Papa's Sushiria game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Papa's Sushiria\" before use. Source page: https://www.hoodamath.com/games/papassushiria.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpapastacomia": {
+    "title": "Papa's Taco Mia",
+    "url": "/artwork/clpapastacomia.webp",
+    "source": "https://www.gamesunblocked.org/papas-taco-mia/113320320/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Papa's Taco Mia game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Papa's Taco Mia\" before use. Source page: https://www.gamesunblocked.org/papas-taco-mia/113320320/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpapaswingeria": {
+    "title": "Papa's Wingeria",
+    "url": "/artwork/clpapaswingeria.webp",
+    "source": "https://www.gamesmys.com/papa-s-wingeria-to-go/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Papa's Wingeria game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Papa's Wingeria\" before use. Source page: https://www.gamesmys.com/papa-s-wingeria-to-go/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clpaperio": {
     "title": "Paper.io",
     "url": "/artwork/clpaperio.webp",
@@ -11899,12 +12115,52 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clpaperiomania.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clpapermario": {
+    "title": "Paper Mario",
+    "url": "/artwork/clpapermario.webp",
+    "source": "https://www.ign.com/games/paper-mario-the-thousand-year-door-remake",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Paper Mario game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Paper Mario\" before use. Source page: https://www.ign.com/games/paper-mario-the-thousand-year-door-remake",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpapermariodse": {
+    "title": "Paper Mario DSE",
+    "url": "/artwork/clpapermariodse.webp",
+    "source": "https://x.com/vgboxartdaily/status/1800739807590515000",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Paper Mario DSE game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Paper Mario DSE\" before use. Source page: https://x.com/vgboxartdaily/status/1800739807590515000",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clpapermariopracticehack": {
     "title": "Paper Mario Practice Hack",
     "url": "/artwork/clpapermariopracticehack.webp",
     "source": "https://weihnachtsmarkt-box.de/super-paper-mario-practice-codes/",
     "type": "game-asset",
     "identityEvidence": "Found by searching \"Paper Mario Practice Hack game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Paper Mario Practice Hack\" before use. Source page: https://weihnachtsmarkt-box.de/super-paper-mario-practice-codes/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpapermariopromode": {
+    "title": "Paper Mario Promo de",
+    "url": "/artwork/clpapermariopromode.webp",
+    "source": "https://backloggd.com/games/paper-mario-pro-mode/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Paper Mario Promo de game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Paper Mario Promo de\" before use. Source page: https://backloggd.com/games/paper-mario-pro-mode/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpapermariottyd": {
+    "title": "Paper Mario: TTYD",
+    "url": "/artwork/clpapermariottyd.webp",
+    "source": "https://gameshopenter.com/jp/shop/paper-mario-the-thousand-year-door-gamecube--GCN-2264A4",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Paper Mario: TTYD game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Paper Mario: TTYD\" before use. Source page: https://gameshopenter.com/jp/shop/paper-mario-the-thousand-year-door-gamecube--GCN-2264A4",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clparappatherapper": {
+    "title": "Parappa the Rapper",
+    "url": "/artwork/clparappatherapper.webp",
+    "source": "https://www.playstation.com/en-gb/games/parappa-the-rapper-remastered/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Parappa the Rapper game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Parappa the Rapper\" before use. Source page: https://www.playstation.com/en-gb/games/parappa-the-rapper-remastered/",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clparkingfury": {
@@ -11930,6 +12186,22 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clparkingfury3.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clparkingrush": {
+    "title": "Parking Rush",
+    "url": "/artwork/clparkingrush.webp",
+    "source": "https://koolkatgames.com/2025/05/05/parking-rush/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Parking Rush game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Parking Rush\" before use. Source page: https://koolkatgames.com/2025/05/05/parking-rush/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpartnersintime": {
+    "title": "Mario & Luigi: Partners in Time",
+    "url": "/artwork/clpartnersintime.webp",
+    "source": "https://gameshopenter.com/fr/jeux-jrpg",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Mario & Luigi: Partners in Time game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Mario & Luigi: Partners in Time\" before use. Source page: https://gameshopenter.com/fr/jeux-jrpg",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clpeacekeeper": {
     "title": "Peace Keeper",
@@ -11963,6 +12235,38 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clpenguinpass.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clpepsiman": {
+    "title": "Pepsi Man",
+    "url": "/artwork/clpepsiman.webp",
+    "source": "https://hive.blog/hive-140217/@luigibross/pepsi-man-iconic-advertising-game",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pepsi Man game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pepsi Man\" before use. Source page: https://hive.blog/hive-140217/@luigibross/pepsi-man-iconic-advertising-game",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpepsimanalt": {
+    "title": "Pepsi Man (Alt)",
+    "url": "/artwork/clpepsimanalt.webp",
+    "source": "https://www.pinterest.ca/pin/141933825729324160/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pepsi Man (Alt) game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Pepsi Man (Alt)\" before use. Source page: https://www.pinterest.ca/pin/141933825729324160/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpereelous": {
+    "title": "Per Eelo Us",
+    "url": "/artwork/clpereelous.webp",
+    "source": "https://store.steampowered.com/app/3719900/Pereelous/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Per Eelo Us game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Per Eelo Us\" before use. Source page: https://store.steampowered.com/app/3719900/Pereelous/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clperfectdark": {
+    "title": "Perfect Dark",
+    "url": "/artwork/clperfectdark.webp",
+    "source": "https://www.videogameschronicle.com/news/perfect-dark-has-been-fully-decompiled-making-pc-ports-and-mods-possible/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Perfect Dark game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Perfect Dark\" before use. Source page: https://www.videogameschronicle.com/news/perfect-dark-has-been-fully-decompiled-making-pc-ports-and-mods-possible/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clperfecthotel": {
     "title": "Perfect Hotel",
     "url": "/artwork/clperfecthotel.webp",
@@ -11970,6 +12274,110 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clperfecthotel.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clpersona2": {
+    "title": "Persona 2",
+    "url": "/artwork/clpersona2.webp",
+    "source": "https://www.imdb.com/title/tt0323623/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Persona 2 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Persona 2\" before use. Source page: https://www.imdb.com/title/tt0323623/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpersona2alt": {
+    "title": "Persona 2 (Alt)",
+    "url": "/artwork/clpersona2alt.webp",
+    "source": "https://gamehistory.org/gallery/persona-2-hi-res-artwork/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Persona 2 (Alt) game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Persona 2 (Alt)\" before use. Source page: https://gamehistory.org/gallery/persona-2-hi-res-artwork/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpersonaalt": {
+    "title": "Persona (Alt)",
+    "url": "/artwork/clpersonaalt.webp",
+    "source": "https://www.dualshockers.com/metaphor-refantazio-demo-details/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Persona (Alt) game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Persona (Alt)\" before use. Source page: https://www.dualshockers.com/metaphor-refantazio-demo-details/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpetworld": {
+    "title": "Pet World",
+    "url": "/artwork/clpetworld.webp",
+    "source": "https://www.browsercam.com/pet-world-my-animal-shelter-pc/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pet World game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Pet World\" before use. Source page: https://www.browsercam.com/pet-world-my-animal-shelter-pc/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clphantasystar": {
+    "title": "Phantasy Star",
+    "url": "/artwork/clphantasystar.webp",
+    "source": "https://www.giantbomb.com/phantasy-star/3030-7400/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Phantasy Star game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Phantasy Star\" before use. Source page: https://www.giantbomb.com/phantasy-star/3030-7400/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clphantasystar2": {
+    "title": "Phantasy Star 2",
+    "url": "/artwork/clphantasystar2.webp",
+    "source": "https://gamesdb.launchbox-app.com/games/images/655-phantasy-star-ii",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Phantasy Star 2 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Phantasy Star 2\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/655-phantasy-star-ii",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clphantasystar3": {
+    "title": "Phantasy Star 3",
+    "url": "/artwork/clphantasystar3.webp",
+    "source": "https://www.pricecharting.com/game/sega-genesis/phantasy-star-iii-generations-of-doom",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Phantasy Star 3 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Phantasy Star 3\" before use. Source page: https://www.pricecharting.com/game/sega-genesis/phantasy-star-iii-generations-of-doom",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clphantasystar4": {
+    "title": "Phantasy Star 4",
+    "url": "/artwork/clphantasystar4.webp",
+    "source": "https://gamesdb.launchbox-app.com/games/images/123-phantasy-star-iv",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Phantasy Star 4 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Phantasy Star 4\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/123-phantasy-star-iv",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clphasma": {
+    "title": "Phasma",
+    "url": "/artwork/clphasma.webp",
+    "source": "https://opencritic.com/game/17566/phasmophobia",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Phasma game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Phasma\" before use. Source page: https://opencritic.com/game/17566/phasmophobia",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpheonixjusticeforall": {
+    "title": "Phoenix Wright: Justice for All",
+    "url": "/artwork/clpheonixjusticeforall.webp",
+    "source": "https://www.amazon.co.uk/Phoenix-Wright-Ace-Attorney-Nintendo/dp/B000JLL3UQ",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Phoenix Wright: Justice for All game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Phoenix Wright: Justice for All\" before use. Source page: https://www.amazon.co.uk/Phoenix-Wright-Ace-Attorney-Nintendo/dp/B000JLL3UQ",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpheonixrightaceattorny": {
+    "title": "Phoenix Wright: Ace Attorney",
+    "url": "/artwork/clpheonixrightaceattorny.webp",
+    "source": "https://www.allkeyshop.com/blog/en-gb/buy-phoenix-wright-ace-attorney-trilogy-cd-key-compare-prices/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Phoenix Wright: Ace Attorney game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Phoenix Wright: Ace Attorney\" before use. Source page: https://www.allkeyshop.com/blog/en-gb/buy-phoenix-wright-ace-attorney-trilogy-cd-key-compare-prices/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpheonixtrialsandyear": {
+    "title": "Phoenix Wright: Trials and Tribulations",
+    "url": "/artwork/clpheonixtrialsandyear.webp",
+    "source": "https://stash.games/games/phoenix-wright-ace-attorney-trials-and-tribulations",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Phoenix Wright: Trials and Tribulations game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Phoenix Wright: Trials and Tribulations\" before use. Source page: https://stash.games/games/phoenix-wright-ace-attorney-trials-and-tribulations",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpibbyapocalypse": {
+    "title": "Pibby Apocalypse",
+    "url": "/artwork/clpibbyapocalypse.webp",
+    "source": "https://www.fridaynightfunkin.net/fnf-pibby-apocalypse/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pibby Apocalypse game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Pibby Apocalypse\" before use. Source page: https://www.fridaynightfunkin.net/fnf-pibby-apocalypse/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clpiclient": {
     "title": "Pi Client",
@@ -11987,6 +12395,22 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clpico8.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clpico8edu": {
+    "title": "Pico-8 Edu",
+    "url": "/artwork/clpico8edu.webp",
+    "source": "https://wiki.gamedevalliance.fr/pico-8/education-edition/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pico-8 Edu game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pico-8 Edu\" before use. Source page: https://wiki.gamedevalliance.fr/pico-8/education-edition/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpicodriller": {
+    "title": "Pico Driller",
+    "url": "/artwork/clpicodriller.webp",
+    "source": "https://pex-labs.com/blog/top8",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pico Driller game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Pico Driller\" before use. Source page: https://pex-labs.com/blog/top8",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clpicohot": {
     "title": "Picohot",
     "url": "/artwork/clpicohot.webp",
@@ -11994,6 +12418,62 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clpicohot.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clpicolife": {
+    "title": "Pico Life",
+    "url": "/artwork/clpicolife.webp",
+    "source": "https://www.bilibili.com/video/BV1k54y137s5/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pico Life game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Pico Life\" before use. Source page: https://www.bilibili.com/video/BV1k54y137s5/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpiconightpunkin": {
+    "title": "Pico Night Punkin",
+    "url": "/artwork/clpiconightpunkin.webp",
+    "source": "https://www.snokido.com/game/pico-night-punkin",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pico Night Punkin game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pico Night Punkin\" before use. Source page: https://www.snokido.com/game/pico-night-punkin",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpicosschool": {
+    "title": "Pico's School",
+    "url": "/artwork/clpicosschool.webp",
+    "source": "https://www.imdb.com/title/tt39128278/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pico's School game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pico's School\" before use. Source page: https://www.imdb.com/title/tt39128278/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpicovsbeardx": {
+    "title": "Pico vs. Beard X",
+    "url": "/artwork/clpicovsbeardx.webp",
+    "source": "https://playminigames.net/game/pico-vs-bear-dx",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pico vs. Beard X game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pico vs. Beard X\" before use. Source page: https://playminigames.net/game/pico-vs-bear-dx",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpiecesofcake": {
+    "title": "Pieces of Cake",
+    "url": "/artwork/clpiecesofcake.webp",
+    "source": "https://www.taptap.io/app/253624",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pieces of Cake game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pieces of Cake\" before use. Source page: https://www.taptap.io/app/253624",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpikwip": {
+    "title": "Pikwip",
+    "url": "/artwork/clpikwip.webp",
+    "source": "https://crazygames-poki.com/multi-player/pik-wip",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pikwip game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Pikwip\" before use. Source page: https://crazygames-poki.com/multi-player/pik-wip",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpinballnes": {
+    "title": "Pinball (NES)",
+    "url": "/artwork/clpinballnes.webp",
+    "source": "https://strategywiki.org/wiki/Pinball_(NES)",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pinball (NES) game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Pinball (NES)\" before use. Source page: https://strategywiki.org/wiki/Pinball_(NES)",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clpingpongchaos": {
     "title": "Ping Pong Chaos",
@@ -12010,6 +12490,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "official-og",
     "identityEvidence": "The wrapper this repository distributes for Pink Bike declares this image as its own artwork (official-og).",
     "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request."
+  },
+  "clpitfall": {
+    "title": "Pitfall",
+    "url": "/artwork/clpitfall.webp",
+    "source": "https://www.ign.com/games/pitfall/walkthroughs",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pitfall game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pitfall\" before use. Source page: https://www.ign.com/games/pitfall/walkthroughs",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clpitof100trials": {
     "title": "Pit of 100 Trials",
@@ -12083,6 +12571,38 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clpixelwarfare.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clpizzapapa": {
+    "title": "Pizza Papa",
+    "url": "/artwork/clpizzapapa.webp",
+    "source": "https://www.ign.com/games/papas-pizzeria-deluxe",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pizza Papa game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Pizza Papa\" before use. Source page: https://www.ign.com/games/papas-pizzeria-deluxe",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpizzatower": {
+    "title": "Pizza Tower",
+    "url": "/artwork/clpizzatower.webp",
+    "source": "https://www.hahagames.com/game/pizza-tower",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pizza Tower game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Pizza Tower\" before use. Source page: https://www.hahagames.com/game/pizza-tower",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpkmnarutoans": {
+    "title": "PKM Naruto ANS",
+    "url": "/artwork/clpkmnarutoans.webp",
+    "source": "https://34gameshop.vn/naruto-ultimate-ninja-storm-connections-dia-game-ps5/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"PKM Naruto ANS game\" in Bing Images and taking result 3; the image was checked against the catalog title \"PKM Naruto ANS\" before use. Source page: https://34gameshop.vn/naruto-ultimate-ninja-storm-connections-dia-game-ps5/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clplanetlife": {
+    "title": "Planet Life",
+    "url": "/artwork/clplanetlife.webp",
+    "source": "https://www.northplay.co/games",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Planet Life game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Planet Life\" before use. Source page: https://www.northplay.co/games",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clplangman": {
     "title": "Plangman",
     "url": "/artwork/clplangman.webp",
@@ -12099,6 +12619,30 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clplantsvszombies.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clplantsvszombiesnds": {
+    "title": "Plants vs. Zombies (NDS)",
+    "url": "/artwork/clplantsvszombiesnds.webp",
+    "source": "https://www.thevideogamecompany.com/products/plants-vs-zombies-nintendo-ds",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Plants vs. Zombies (NDS) game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Plants vs. Zombies (NDS)\" before use. Source page: https://www.thevideogamecompany.com/products/plants-vs-zombies-nintendo-ds",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clplazmaburst": {
+    "title": "Plazma Burst",
+    "url": "/artwork/clplazmaburst.webp",
+    "source": "https://apkpure.com/plazma-burst-3/com.gramstudios.Plazma_Burst_3",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Plazma Burst game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Plazma Burst\" before use. Source page: https://apkpure.com/plazma-burst-3/com.gramstudios.Plazma_Burst_3",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clplinko": {
+    "title": "Plinko",
+    "url": "/artwork/clplinko.webp",
+    "source": "https://portal.inmet.gov.br/store/apps/details/?id=plinko-2-0-apk",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Plinko game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Plinko\" before use. Source page: https://portal.inmet.gov.br/store/apps/details/?id=plinko-2-0-apk",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clplonky": {
     "title": "Plonky",
     "url": "/artwork/clplonky.webp",
@@ -12106,6 +12650,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "official-icon",
     "identityEvidence": "Published by the distribution for Plonky at https://cdn.jsdelivr.net/gh/faralong/all@main/plonkyy/icons/icon-128.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
     "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request."
+  },
+  "clpogo3d": {
+    "title": "Pogo 3D",
+    "url": "/artwork/clpogo3d.webp",
+    "source": "https://www.newgrounds.com/portal/view/842442",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pogo 3D game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Pogo 3D\" before use. Source page: https://www.newgrounds.com/portal/view/842442",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clpoke-mon-emerald-rush-edition--2-0": {
     "title": "Pokemon Emerald Rush Edition",
@@ -12139,6 +12691,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Found by searching \"Pokemon Stunning Steel game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pokemon Stunning Steel\" before use. Source page: https://www.webmulator.com/games/gameboy-advance/trollz-hair-affair",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
+  "clpokeacademylifeforever": {
+    "title": "Poke Academy Life Forever",
+    "url": "/artwork/clpokeacademylifeforever.webp",
+    "source": "https://www.youtube.com/watch?v=0FzEVM6gCTQ",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Poke Academy Life Forever game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Poke Academy Life Forever\" before use. Source page: https://www.youtube.com/watch?v=0FzEVM6gCTQ",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clpokeallin": {
     "title": "Poke All In",
     "url": "/artwork/clpokeallin.webp",
@@ -12146,6 +12706,54 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clpokeallin.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clpokebattlefact": {
+    "title": "Poke Battle Fact",
+    "url": "/artwork/clpokebattlefact.webp",
+    "source": "https://noahbruno.github.io/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Poke Battle Fact game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Poke Battle Fact\" before use. Source page: https://noahbruno.github.io/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpokeblack": {
+    "title": "Pokemon Black",
+    "url": "/artwork/clpokeblack.webp",
+    "source": "https://gamesdb.launchbox-app.com/games/images/2248-pokmon-black-version",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Black game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Pokemon Black\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/2248-pokmon-black-version",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpokeblack2alt": {
+    "title": "Pokemon Black 2 (Alt)",
+    "url": "/artwork/clpokeblack2alt.webp",
+    "source": "https://www.mobygames.com/game/59629/pokemon-black-version-2/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Black 2 (Alt) game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Pokemon Black 2 (Alt)\" before use. Source page: https://www.mobygames.com/game/59629/pokemon-black-version-2/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpokeblackalt": {
+    "title": "Pokemon Black (Alt)",
+    "url": "/artwork/clpokeblackalt.webp",
+    "source": "https://unblockedgames.blogbucket.org/retro-classic-video-games/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Black (Alt) game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pokemon Black (Alt)\" before use. Source page: https://unblockedgames.blogbucket.org/retro-classic-video-games/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpokeblazeblack2redux": {
+    "title": "Pokemon Blaze Black 2 Redux",
+    "url": "/artwork/clpokeblazeblack2redux.webp",
+    "source": "https://thegamesdb.net/game.php?id=105449",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Blaze Black 2 Redux game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Pokemon Blaze Black 2 Redux\" before use. Source page: https://thegamesdb.net/game.php?id=105449",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpokeblue": {
+    "title": "Pokemon Blue",
+    "url": "/artwork/clpokeblue.webp",
+    "source": "https://www.bol.com/nl/p/pokemon-blue/9200000079825463/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Blue game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Pokemon Blue\" before use. Source page: https://www.bol.com/nl/p/pokemon-blue/9200000079825463/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clpokeclassic": {
     "title": "Pokemon Classic",
@@ -12163,6 +12771,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clpokecrown.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clpokecrystaladvanceredux": {
+    "title": "Pokemon Crystal Advance Redux",
+    "url": "/artwork/clpokecrystaladvanceredux.webp",
+    "source": "https://www.pokeharbor.com/2021/01/pokemon-crystal-advance-redux/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Crystal Advance Redux game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pokemon Crystal Advance Redux\" before use. Source page: https://www.pokeharbor.com/2021/01/pokemon-crystal-advance-redux/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clpokecrystalclear": {
     "title": "Pokemon Crystal Clear",
     "url": "/artwork/clpokecrystalclear.webp",
@@ -12171,6 +12787,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clpokecrystalclear.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clpokediamond": {
+    "title": "Pokemon Diamond",
+    "url": "/artwork/clpokediamond.webp",
+    "source": "https://www.mobygames.com/game/175275/pokemon-brilliant-diamond/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Diamond game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Pokemon Diamond\" before use. Source page: https://www.mobygames.com/game/175275/pokemon-brilliant-diamond/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clpokedreamstone": {
     "title": "Pokemon Dream Stone",
     "url": "/artwork/clpokedreamstone.webp",
@@ -12178,6 +12802,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clpokedreamstone.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clpokeeliteredux": {
+    "title": "Pokemon Elite Redux",
+    "url": "/artwork/clpokeeliteredux.webp",
+    "source": "https://gamesdb.launchbox-app.com/games/images/373576-pokemon-elite-redux",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Elite Redux game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Pokemon Elite Redux\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/373576-pokemon-elite-redux",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clpokeelysiuma": {
     "title": "Pokemon Elysium A",
@@ -12195,6 +12827,62 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clpokeelysiumb.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clpokeemeraldenhanced": {
+    "title": "Pokemon Emerald Enhanced",
+    "url": "/artwork/clpokeemeraldenhanced.webp",
+    "source": "https://thegamesdb.net/game.php?id=130333",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Emerald Enhanced game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Pokemon Emerald Enhanced\" before use. Source page: https://thegamesdb.net/game.php?id=130333",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpokeemeraldexceeded": {
+    "title": "Pokemon Emerald Exceeded",
+    "url": "/artwork/clpokeemeraldexceeded.webp",
+    "source": "https://bitjuegos.com/juego/pokemon-emerald-exceeded3-online",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Emerald Exceeded game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Pokemon Emerald Exceeded\" before use. Source page: https://bitjuegos.com/juego/pokemon-emerald-exceeded3-online",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpokeemeraldhorizons": {
+    "title": "Pokemon Emerald Horizons",
+    "url": "/artwork/clpokeemeraldhorizons.webp",
+    "source": "https://gamingnewslab.com/esports/top-10-best-gba-pokemon-rom-hacks-to-play-in-2024/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Emerald Horizons game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pokemon Emerald Horizons\" before use. Source page: https://gamingnewslab.com/esports/top-10-best-gba-pokemon-rom-hacks-to-play-in-2024/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpokeemeraldimperium": {
+    "title": "Pokemon Emerald Imperium",
+    "url": "/artwork/clpokeemeraldimperium.webp",
+    "source": "https://gbacodes.com/pokemon-emerald-imperium/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Emerald Imperium game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Pokemon Emerald Imperium\" before use. Source page: https://gbacodes.com/pokemon-emerald-imperium/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpokeemeraldrandom": {
+    "title": "Pokemon Emerald Random",
+    "url": "/artwork/clpokeemeraldrandom.webp",
+    "source": "https://www.y9freegames.com/game/pokemon-emerald-extreme-randomizer/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Emerald Random game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Pokemon Emerald Random\" before use. Source page: https://www.y9freegames.com/game/pokemon-emerald-extreme-randomizer/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpokeemeraldrogue": {
+    "title": "Pokemon Emerald Rogue",
+    "url": "/artwork/clpokeemeraldrogue.webp",
+    "source": "https://backloggd.com/games/pokemon-emerald-rogue--1/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Emerald Rogue game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Pokemon Emerald Rogue\" before use. Source page: https://backloggd.com/games/pokemon-emerald-rogue--1/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpokeemeraldz": {
+    "title": "Pokemon Emerald Z",
+    "url": "/artwork/clpokeemeraldz.webp",
+    "source": "https://www.youtube.com/watch?v=YOOPx9xHVyg",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Emerald Z game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pokemon Emerald Z\" before use. Source page: https://www.youtube.com/watch?v=YOOPx9xHVyg",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clpokefiregold": {
     "title": "Pokemon FireGold",
     "url": "/artwork/clpokefiregold.webp",
@@ -12202,6 +12890,22 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clpokefiregold.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clpokeflora": {
+    "title": "Pokemon Flora",
+    "url": "/artwork/clpokeflora.webp",
+    "source": "https://retrogamesnexus.com/games/pokemon-flora-sky-main-version",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Flora game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pokemon Flora\" before use. Source page: https://retrogamesnexus.com/games/pokemon-flora-sky-main-version",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpokefrlgplus": {
+    "title": "Pokemon FRLG Plus",
+    "url": "/artwork/clpokefrlgplus.webp",
+    "source": "https://www.vice.com/en/article/pokemon-firered-leafgreen-10-things-new-players-should-know/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon FRLG Plus game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Pokemon FRLG Plus\" before use. Source page: https://www.vice.com/en/article/pokemon-firered-leafgreen-10-things-new-players-should-know/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clpokefuseddimension": {
     "title": "Pokemon Fused Dimension",
@@ -12211,6 +12915,22 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clpokefuseddimension.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clpokegaia": {
+    "title": "Pokemon Gaia",
+    "url": "/artwork/clpokegaia.webp",
+    "source": "https://rankpaper.com/best-pokemon-fan-games/",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Gaia game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Pokemon Gaia\" before use. Source page: https://rankpaper.com/best-pokemon-fan-games/",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpokegoldenshield": {
+    "title": "Pokemon Golden Shield",
+    "url": "/artwork/clpokegoldenshield.webp",
+    "source": "https://www.emulatorhacks.com/2026/05/pokemon-golden-shield-nds.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Golden Shield game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pokemon Golden Shield\" before use. Source page: https://www.emulatorhacks.com/2026/05/pokemon-golden-shield-nds.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clpokegschronicles": {
     "title": "Poke GS Chronicles",
     "url": "/artwork/clpokegschronicles.webp",
@@ -12219,12 +12939,44 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clpokegschronicles.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
+  "clpokeheartgold": {
+    "title": "Pokemon HeartGold",
+    "url": "/artwork/clpokeheartgold.webp",
+    "source": "https://gamesdb.launchbox-app.com/games/images/2246",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon HeartGold game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pokemon HeartGold\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/2246",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
   "clpokeheartgoldgenerations": {
     "title": "Poke HeartGold Generations",
     "url": "/artwork/clpokeheartgoldgenerations.webp",
     "source": "https://www.rankone.global/game/pokemon-heartgold-generations/360245",
     "type": "game-asset",
     "identityEvidence": "Found by searching \"Poke HeartGold Generations game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Poke HeartGold Generations\" before use. Source page: https://www.rankone.global/game/pokemon-heartgold-generations/360245",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpokelightplatinum": {
+    "title": "Pokemon Light Platinum",
+    "url": "/artwork/clpokelightplatinum.webp",
+    "source": "https://www.webmulator.com/games/gameboy-advance/pokemon-light-platinum",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Light Platinum game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pokemon Light Platinum\" before use. Source page: https://www.webmulator.com/games/gameboy-advance/pokemon-light-platinum",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpokeliquidcrysta": {
+    "title": "Pokemon Liquid Crystal",
+    "url": "/artwork/clpokeliquidcrysta.webp",
+    "source": "https://thegamesdb.net/game.php?id=64949",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Liquid Crystal game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Pokemon Liquid Crystal\" before use. Source page: https://thegamesdb.net/game.php?id=64949",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpokemegamoemon": {
+    "title": "Pokemon Mega Moemon",
+    "url": "/artwork/clpokemegamoemon.webp",
+    "source": "https://retrogamesnexus.com/games/mega-moemon-firered",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Mega Moemon game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pokemon Mega Moemon\" before use. Source page: https://retrogamesnexus.com/games/mega-moemon-firered",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clpokemonemeraldrouge": {
@@ -12250,6 +13002,30 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clpokemontowerdefense.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clpokemoonemerald": {
+    "title": "Pokemon Moon Emerald",
+    "url": "/artwork/clpokemoonemerald.webp",
+    "source": "https://www.youtube.com/watch?v=8WRX9DCgNv0",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Moon Emerald game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Pokemon Moon Emerald\" before use. Source page: https://www.youtube.com/watch?v=8WRX9DCgNv0",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpokemoongalaxy": {
+    "title": "Pokemon Moon Galaxy",
+    "url": "/artwork/clpokemoongalaxy.webp",
+    "source": "https://www.youtube.com/watch?v=zO_LmSqgm8s",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Moon Galaxy game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Pokemon Moon Galaxy\" before use. Source page: https://www.youtube.com/watch?v=zO_LmSqgm8s",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clpokemysteryexplorersofsky": {
+    "title": "Pokemon Mystery Dungeon: Explorers of Sky",
+    "url": "/artwork/clpokemysteryexplorersofsky.webp",
+    "source": "https://www.nintendo.com/en-za/Games/Nintendo-DS/Pokemon-Mystery-Dungeon-Explorers-of-Sky-272409.html",
+    "type": "game-asset",
+    "identityEvidence": "Found by searching \"Pokemon Mystery Dungeon: Explorers of Sky game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Pokemon Mystery Dungeon: Explorers of Sky\" before use. Source page: https://www.nintendo.com/en-za/Games/Nintendo-DS/Pokemon-Mystery-Dungeon-Explorers-of-Sky-272409.html",
+    "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clpokeodyssey": {
     "title": "Pokemon Odyssey",

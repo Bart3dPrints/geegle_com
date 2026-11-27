@@ -150,5 +150,17 @@
   "cloddfuture": {
     "reason": "Results were Old Future and the Odd Future music group, not this game.",
     "recorded": "2026-11-27"
+  },
+  "cloutnumbered": {
+    "reason": "Results were a book cover, a board game and a different game's screen, not this title.",
+    "recorded": "2026-11-27"
+  },
+  "clpersona": {
+    "reason": "Results were Persona 5 Royal and a platform promo banner, not the original Persona.",
+    "recorded": "2026-11-27"
+  },
+  "clpint": {
+    "reason": "Results were Spray Paint Simulator, a paper-painting photo and a watermarked Painter Game page.",
+    "recorded": "2026-11-27"
   }
 }
