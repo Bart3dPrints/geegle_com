@@ -90,6 +90,9 @@ async function framesFor(row) {
   try {
     await page.goto(BASE + row.path, { waitUntil: 'load', timeout: 20000 });
     await page.waitForTimeout(waitFirst);
+    // Focus the game area so key presses reach the embedded player.
+    await page.mouse.click(640, 360).catch(() => {});
+    await page.waitForTimeout(1200);
     frames.push(await page.screenshot({ type: 'png' }));
     // Games chain several gates (flash warning, engine splash, "not associated
     // with" disclaimer), so dismiss repeatedly and keep a frame from each stage.

@@ -19230,28 +19230,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/eb-client-v1-0-0r2-wasm.webp"
     },
-    "friday-night-funkin": {
-      "assetSha256": "b81fc24aa71e76fe5a10fab46c98559cec654f58d46c924b51f106ddc4312779",
-      "frame": "friday-night-funkin@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/friday-night-funkin.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 619,
-        "coverage": 0.385,
-        "dominant": 0.91,
-        "edges": 5.61,
-        "stddev": 23.43
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/friday-night-funkin.html",
-      "title": "Friday Night Funkin'",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/friday-night-funkin.webp"
-    },
     "helios-offline--1": {
       "assetSha256": "e2e0c96a6a72db3474cfab19cce00e9a15241538deff109687c6790b36e4f502",
       "frame": "helios-offline--1@1.png",
@@ -19296,28 +19274,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/minecraft.webp"
     },
-    "minecrafttowerdefense": {
-      "assetSha256": "fb5a1d4983b5b3fbd1572999e355abd2fca10d7e76dbcae78957b6c9ee707bcd",
-      "frame": "minecrafttowerdefense@7.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/minecrafttowerdefense.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 139,
-        "coverage": 0.752,
-        "dominant": 0.25,
-        "edges": 3.5,
-        "stddev": 22.38
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/minecrafttowerdefense.html",
-      "title": "Minecraft Tower Defense",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/minecrafttowerdefense.webp"
-    },
     "redvbluefix": {
       "assetSha256": "8028c4736486e2940a4dc6777bdc77f5da4f5ac61e87221b2f66d28d2d1576b9",
       "frame": "redvbluefix@6.png",
@@ -19340,28 +19296,6 @@
       "title": "Red vs Blue Fix",
       "type": "gameplay-screenshot",
       "url": "/artwork/redvbluefix.webp"
-    },
-    "riddleuneversityfix": {
-      "assetSha256": "5f2f768326a0e321f36f8615001fa0193fd38b8865406e9323f1ae41890bbc58",
-      "frame": "riddleuneversityfix@7.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/riddleuneversityfix.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 304,
-        "coverage": 0.745,
-        "dominant": 0.039,
-        "edges": 8.43,
-        "stddev": 50.28
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/riddleuneversityfix.html",
-      "title": "Riddle University Fix",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/riddleuneversityfix.webp"
     },
     "smash-hit-ripoff": {
       "assetSha256": "a53b33af912ee86e2a738eb0ee33a53875d36f24b323309fa3593f00c0ff8907",

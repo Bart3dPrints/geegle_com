@@ -2,11 +2,11 @@
   "generated": "scripts/artwork/build-progress.py",
   "summary": {
     "catalogEntries": 2710,
-    "verified": 968,
-    "awaitingReview": 14,
+    "verified": 979,
+    "awaitingReview": 0,
     "rejected": 0,
     "blocked": 0,
-    "notStarted": 1728
+    "notStarted": 1731
   },
   "entries": [
     {
@@ -14399,7 +14399,7 @@
         "puzzle"
       ],
       "path": "/games/Drive%20Mad%20(1).html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/drive-mad.html",
       "imagePath": "/artwork/drive-mad.webp",
@@ -14407,7 +14407,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "a784e87f464c3c3fbde5df5889ecd68b56e4cc74e9a211659311c53e80ad56e6",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured title screen shows the actual game.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -14510,7 +14510,7 @@
         "action"
       ],
       "path": "/games/dta6.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/dta6.html",
       "imagePath": "/artwork/dta6.webp",
@@ -14518,7 +14518,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "c45e85f2bb192f7b6b287b61e4b75ed8580fdbbc595000ae2b7ac79030c0c790",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured menu shows the actual game.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched cdn.jsdelivr.net page metadata",
@@ -15259,7 +15259,7 @@
         "simulation"
       ],
       "path": "/games/Eaglercraft-Indev-Offline%20(1).html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/eaglercraft-indev-offline--1.html",
       "imagePath": "/artwork/eaglercraft-indev-offline--1.webp",
@@ -15267,7 +15267,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "dc0e84c09e7599ffbfb4757875502c7d9e71bd680a750a92af6533cb7fc37d43",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured menu shows the actual application.",
       "methodsInvestigated": [
         "no reachable remote distribution found",
         "title-screen capture (last resort)"
@@ -15520,7 +15520,7 @@
         "simulation"
       ],
       "path": "/games/EB.Client.V1.0.0R2.WASM.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/eb-client-v1-0-0r2-wasm.html",
       "imagePath": "/artwork/eb-client-v1-0-0r2-wasm.webp",
@@ -15528,7 +15528,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "3185f66013a885edb73deb4f706db973f889cab395d68c9c58122dca1d14afea",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured menu shows the actual application.",
       "methodsInvestigated": [
         "no reachable remote distribution found",
         "title-screen capture (last resort)"
@@ -20552,18 +20552,17 @@
         "rhythm"
       ],
       "path": "/games/Friday%20Night%20Funkin.html",
-      "status": "awaiting-review",
-      "method": "gameplay-screenshot",
-      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/friday-night-funkin.html",
-      "imagePath": "/artwork/friday-night-funkin.webp",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/friday-night-funkin.html after it rendered its own screen in Chromium.",
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/fnf0.7.5/index.html",
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
       "dimensions": null,
-      "sha256": "b81fc24aa71e76fe5a10fab46c98559cec654f58d46c924b51f106ddc4312779",
-      "visualVerification": "awaiting-review",
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "title-screen capture (last resort)"
+        "fetched cdn.jsdelivr.net page metadata"
       ],
       "blocker": null
     },
@@ -23561,7 +23560,7 @@
         "simulation"
       ],
       "path": "/games/Helios-Offline%20(1).html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/helios-offline--1.html",
       "imagePath": "/artwork/helios-offline--1.webp",
@@ -23569,7 +23568,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "e2e0c96a6a72db3474cfab19cce00e9a15241538deff109687c6790b36e4f502",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured the actual application interface this card launches.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -42847,7 +42846,7 @@
         "sandbox"
       ],
       "path": "/games/Minecraft%201.12.2.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/minecraft.html",
       "imagePath": "/artwork/minecraft.webp",
@@ -42855,7 +42854,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "fe41fa1558f693be4aed43ce447d1ece0a4eba6a110983f749aeb3f5b8eaa2c7",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured the actual game menu.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -42942,18 +42941,17 @@
         "sandbox"
       ],
       "path": "/games/MINECRAFTTOWERDEFENSE.html",
-      "status": "awaiting-review",
-      "method": "gameplay-screenshot",
-      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/minecrafttowerdefense.html",
-      "imagePath": "/artwork/minecrafttowerdefense.webp",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/minecrafttowerdefense.html after it rendered its own screen in Chromium.",
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": null,
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
       "dimensions": null,
-      "sha256": "fb5a1d4983b5b3fbd1572999e355abd2fca10d7e76dbcae78957b6c9ee707bcd",
-      "visualVerification": "awaiting-review",
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
+        "attempted live distribution fetch (no usable response)"
       ],
       "blocker": null
     },
@@ -43605,7 +43603,7 @@
         "arcade"
       ],
       "path": "/games/redvbluefix.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/redvbluefix.html",
       "imagePath": "/artwork/redvbluefix.webp",
@@ -43613,7 +43611,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "8028c4736486e2940a4dc6777bdc77f5da4f5ac61e87221b2f66d28d2d1576b9",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured character screen from the actual game.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched cdn.jsdelivr.net page metadata",
@@ -43674,18 +43672,17 @@
         "casual"
       ],
       "path": "/games/riddleuneversityfix.html",
-      "status": "awaiting-review",
-      "method": "gameplay-screenshot",
-      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/riddleuneversityfix.html",
-      "imagePath": "/artwork/riddleuneversityfix.webp",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/riddleuneversityfix.html after it rendered its own screen in Chromium.",
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "status": "not-started",
+      "method": null,
+      "sourceUrl": null,
+      "imagePath": null,
+      "identityEvidence": null,
+      "reuseEvidence": null,
       "dimensions": null,
-      "sha256": "5f2f768326a0e321f36f8615001fa0193fd38b8865406e9323f1ae41890bbc58",
-      "visualVerification": "awaiting-review",
+      "sha256": null,
+      "visualVerification": "not reviewed",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
+        "attempted live distribution fetch (no usable response)"
       ],
       "blocker": null
     },
@@ -46278,7 +46275,7 @@
         "action"
       ],
       "path": "/games/Smash%20Hit%20Ripoff.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/smash-hit-ripoff.html",
       "imagePath": "/artwork/smash-hit-ripoff.webp",
@@ -46286,7 +46283,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "a53b33af912ee86e2a738eb0ee33a53875d36f24b323309fa3593f00c0ff8907",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured game screen shows the actual title.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (last resort)"
@@ -46802,7 +46799,7 @@
         "racing"
       ],
       "path": "/games/snow-rider.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/snow-rider.html",
       "imagePath": "/artwork/snow-rider.webp",
@@ -46810,7 +46807,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "68c8087238fa39f8815f32a598230403a31ce08bf0bd65d96f7b8d972da5330d",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured title screen shows the actual game.",
       "methodsInvestigated": [
         "attempted live distribution fetch (no usable response)",
         "title-screen capture (last resort)"
@@ -52197,7 +52194,7 @@
         "action"
       ],
       "path": "/games/supremeduelistfix.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/supremeduelistfix.html",
       "imagePath": "/artwork/supremeduelistfix.webp",
@@ -52205,7 +52202,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "86b548ce4fd18cfdcfb6f31215ed2ce9988d4c59e0cc537e3a3c9b77cd9aeaea",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured character screen from the actual game.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "fetched cdn.jsdelivr.net page metadata",
@@ -53970,7 +53967,7 @@
         "puzzle"
       ],
       "path": "/games/thiefpuzzle.html",
-      "status": "awaiting-review",
+      "status": "verified",
       "method": "gameplay-screenshot",
       "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/thiefpuzzle.html",
       "imagePath": "/artwork/thiefpuzzle.webp",
@@ -53978,7 +53975,7 @@
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
       "sha256": "4f579a95cacc99a4999dd1b8a93d9610b1010a093675a0b5cf6cf8e0098cd39e",
-      "visualVerification": "awaiting-review",
+      "visualVerification": "verified 2026-11-27: Captured game art matches the title.",
       "methodsInvestigated": [
         "fetched cdn.jsdelivr.net page metadata",
         "title-screen capture (last resort)"

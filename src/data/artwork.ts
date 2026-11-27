@@ -7787,14 +7787,6 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/eb-client-v1-0-0r2-wasm.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
-  "friday-night-funkin": {
-    "title": "Friday Night Funkin'",
-    "url": "/artwork/friday-night-funkin.webp",
-    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/friday-night-funkin.html",
-    "type": "gameplay-screenshot",
-    "identityEvidence": "Captured from the actual game this repository serves at /games/friday-night-funkin.html after it rendered its own screen in Chromium.",
-    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
-  },
   "helios-offline--1": {
     "title": "Helios Offline",
     "url": "/artwork/helios-offline--1.webp",
@@ -7811,14 +7803,6 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/minecraft.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
-  "minecrafttowerdefense": {
-    "title": "Minecraft Tower Defense",
-    "url": "/artwork/minecrafttowerdefense.webp",
-    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/minecrafttowerdefense.html",
-    "type": "gameplay-screenshot",
-    "identityEvidence": "Captured from the actual game this repository serves at /games/minecrafttowerdefense.html after it rendered its own screen in Chromium.",
-    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
-  },
   "pvzm": {
     "title": "PvZ Multiplayer",
     "url": "/artwork/pvzm.webp",
@@ -7833,14 +7817,6 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/redvbluefix.html",
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/redvbluefix.html after it rendered its own screen in Chromium.",
-    "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
-  },
-  "riddleuneversityfix": {
-    "title": "Riddle University Fix",
-    "url": "/artwork/riddleuneversityfix.webp",
-    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/riddleuneversityfix.html",
-    "type": "gameplay-screenshot",
-    "identityEvidence": "Captured from the actual game this repository serves at /games/riddleuneversityfix.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
   "smash-hit-ripoff": {

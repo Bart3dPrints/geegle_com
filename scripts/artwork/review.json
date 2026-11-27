@@ -8921,11 +8921,59 @@
     "status": "verified",
     "title": "Zuma Shooter"
   },
+  "drive-mad": {
+    "reason": "Captured title screen shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Drive Mad"
+  },
+  "dta6": {
+    "reason": "Captured menu shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "DTA 6"
+  },
+  "eaglercraft-indev-offline--1": {
+    "reason": "Captured menu shows the actual application.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Eaglercraft Indev Offline"
+  },
+  "eb-client-v1-0-0r2-wasm": {
+    "reason": "Captured menu shows the actual application.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "EB Client WASM"
+  },
+  "friday-night-funkin": {
+    "reason": "Near-empty dark menu with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Friday Night Funkin'"
+  },
   "geometrydashlite": {
     "reason": "Store listing screenshot, not the game artwork.",
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "Geometry Dash Lite"
+  },
+  "helios-offline--1": {
+    "reason": "Captured the actual application interface this card launches.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Helios Offline"
+  },
+  "minecraft": {
+    "reason": "Captured the actual game menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Minecraft 1.12.2"
+  },
+  "minecrafttowerdefense": {
+    "reason": "Near-black frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Minecraft Tower Defense"
   },
   "nazi-zombies": {
     "reason": "Unrelated service page, not the game.",
@@ -8938,6 +8986,42 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "PvZ Multiplayer"
+  },
+  "redvbluefix": {
+    "reason": "Captured character screen from the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Red vs Blue Fix"
+  },
+  "riddleuneversityfix": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Riddle University Fix"
+  },
+  "smash-hit-ripoff": {
+    "reason": "Captured game screen shows the actual title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Smash Hit Ripoff"
+  },
+  "snow-rider": {
+    "reason": "Captured title screen shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Snow Rider 3D"
+  },
+  "supremeduelistfix": {
+    "reason": "Captured character screen from the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Supreme Duelist Fix"
+  },
+  "thiefpuzzle": {
+    "reason": "Captured game art matches the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Thief Puzzle"
   },
   "time-shooter-3": {
     "reason": "Image matches the catalog title; the two entries are the same Time Shooter 3 game, so shared artwork is legitimate.",
