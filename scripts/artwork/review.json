@@ -311,6 +311,12 @@
     "status": "rejected",
     "title": "A Date with Death"
   },
+  "cladofai": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "A Dance of Fire and Ice"
+  },
   "cladventneon": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -2783,6 +2789,12 @@
     "status": "verified",
     "title": "Extreme Run 3D"
   },
+  "clfactoryballs2": {
+    "reason": "Play overlay on a blank page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Factory Balls 2"
+  },
   "clfallguys": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -3029,6 +3041,12 @@
     "status": "verified",
     "title": "Fluidism"
   },
+  "clfnac1": {
+    "reason": "Console output, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNAC 1"
+  },
   "clfnac2": {
     "reason": "Captured settings screen from the actual game.",
     "reviewed": "2026-11-27",
@@ -3071,11 +3089,23 @@
     "status": "rejected",
     "title": "FNF: Annie"
   },
+  "clfnfblackbetrayal": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Black Betrayal"
+  },
   "clfnfcamelliarudeblaster": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: Camellia Rude Blaster"
+  },
+  "clfnfcitytales": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: City Tales"
   },
   "clfnfclassified": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -3089,6 +3119,12 @@
     "status": "verified",
     "title": "FNF: Doki Takeover Plus"
   },
+  "clfnffleetway": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Fleetway"
+  },
   "clfnffnaf1": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
@@ -3100,6 +3136,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: FNAF 3"
+  },
+  "clfnffnatpt": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: FNAF PT"
+  },
+  "clfnfgamebreakerbundle": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Game Breaker Bundle"
   },
   "clfnfgfmode": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -3130,6 +3178,24 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: Imposter V4"
+  },
+  "clfnfindiecross": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Indie Cross"
+  },
+  "clfnfinfiniteirida": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Infinite Irida"
+  },
+  "clfnfjapcreepypasta": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Jap Creepypasta"
   },
   "clfnfmadnesspoop": {
     "reason": "Non-identifying mod logo.",
@@ -3574,6 +3640,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Grow Your Garden"
+  },
+  "clgtaalty": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "GTA Alty"
+  },
+  "clgtachina": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "GTA China"
   },
   "clguesstheiranswer": {
     "reason": "Captured gameplay shows the actual game.",
@@ -4175,6 +4253,72 @@
     "status": "rejected",
     "title": "Kerosene Client"
   },
+  "clkilltheiceagebabyadventure": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kill the Ice Age Baby Adventure"
+  },
+  "clkingdomheartsdays": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Kingdom Hearts 358/2 Days"
+  },
+  "clkingdomheartsrecodedalt": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Kingdom Hearts Re:coded (Alt)"
+  },
+  "clkirbysoftandwet": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kirby's Soft and Wet"
+  },
+  "clkittencannon": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kitten Cannon"
+  },
+  "clklifur": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Klifur"
+  },
+  "clknifehit": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Knife Hit"
+  },
+  "clknightmaretower": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Knightmare Tower"
+  },
+  "clknockknock": {
+    "reason": "Near-black frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Knock Knock"
+  },
+  "clkonkrio": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Konkrio"
+  },
+  "clkoopasrevenge": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Koopa's Revenge"
+  },
   "clkourio": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
@@ -4192,6 +4336,78 @@
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "KS 2 Teams"
+  },
+  "cllambdaclient": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Lambda Client"
+  },
+  "cllaststand": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Last Stand"
+  },
+  "clleapandavoid2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Leap and Avoid 2"
+  },
+  "cllearntofly": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Learn to Fly"
+  },
+  "cllearntofly2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Learn to Fly 2"
+  },
+  "cllearntofly2hacked": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Learn to Fly 2 Hacked"
+  },
+  "cllearntofly3": {
+    "reason": "Advertisement overlay, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Learn to Fly 3"
+  },
+  "cllearntofly3debug": {
+    "reason": "Advertisement overlay, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Learn to Fly 3 Debug"
+  },
+  "cllearntoflyidle": {
+    "reason": "Error page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Learn to Fly Idle"
+  },
+  "cllearntoflyidlehack": {
+    "reason": "Portal splash (Kongregate), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Learn to Fly Idle Hack"
+  },
+  "cllegobatman": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "LEGO Batman"
+  },
+  "cllegobatman2superheroes": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "LEGO Batman 2: Superheroes"
   },
   "clleveldevil": {
     "reason": "Placeholder image literally labelled \"Icon\".",
