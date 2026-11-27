@@ -1,4 +1,10 @@
 {
+  "bank-robbery": {
+    "reason": "Bank Robbery gameplay showing the bank, police and stolen money.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Bank Robbery"
+  },
   "bowmasters": {
     "reason": "Every frame in the ten-minute observation carried an in-game tutorial overlay (purple panel with OK) covering the play area; an overlay is not acceptable artwork.",
     "reviewed": "2026-11-27",
@@ -16,6 +22,18 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "1 (Classic)"
+  },
+  "cl100in1nes": {
+    "reason": "The cartridge's own 100 in 1 menu screen listing its games.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "100 in 1 NES"
+  },
+  "cl100roomsofenemies": {
+    "reason": "The game's own title screen (100 Rooms of Enemies, The Nightmare Edition).",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "100 Rooms of Enemies"
   },
   "cl10bullets": {
     "reason": "Ten-minute observation: the Ruffle build finished loading and showed the game's own title screen (10 BULLETS, A GAME BY MICHEL GERARD, PLAY / SPACEBAR), not a loading screen or generic portal splash.",
@@ -35,11 +53,29 @@
     "status": "verified",
     "title": "10 More Bullets"
   },
+  "cl10yardfight": {
+    "reason": "The game's own title screen (10-YARD FIGHT, VS Nintendo system), clean and unwatermarked.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "10 Yard Fight"
+  },
   "cl12minibattles": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "12 Mini Battles"
+  },
+  "cl13bones": {
+    "reason": "13 Bones key art with its title and skull artwork.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "13 Bones"
+  },
+  "cl1942nes": {
+    "reason": "NES cartridge label artwork for 1942 with the title legible; the first three results were all product artwork and this was the cleanest.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "1942 (NES)"
   },
   "cl1on1soccer": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -78,10 +114,10 @@
     "title": "20 Small Mazes"
   },
   "cl234playergame": {
-    "reason": "The only rendered frame is the portal's own game grid with a TwoPlayerGames banner and a 'quality setting' attention dialog; portal chrome and settings prompts are not acceptable artwork.",
+    "reason": "Key art for 2-3-4 Player Game with its logo and characters, no site watermark.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": "234 Player Games"
+    "status": "verified",
+    "title": "2-3-4 Player Game"
   },
   "cl24playerGame": {
     "reason": "Captured frame is a third-party portal loading screen, not the game.",
@@ -149,6 +185,18 @@
     "status": "verified",
     "title": "3 Pandas Night"
   },
+  "cl3slices2": {
+    "reason": "3 Slices 2 logo on a clean background.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "3 Slices 2"
+  },
+  "cl40xescape": {
+    "reason": "Bart Bonte's own 40x Escape title card.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "40x Escape"
+  },
   "cl4thandgoal": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -156,9 +204,9 @@
     "title": "4th and Goal"
   },
   "cl500calibercontractz": {
-    "reason": "Every qualifying frame carried a consent, age, profanity, legal or ad-block dialog over the content.",
+    "reason": "500 Caliber Contractz key art with the title and weapon artwork.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "500 Caliber Contractz"
   },
   "cl60secondsburgerrun": {
@@ -167,6 +215,18 @@
     "status": "verified",
     "title": "60 Seconds Burger Run"
   },
+  "cl60secondssantarun": {
+    "reason": "60 Seconds Santa Run app artwork with the full title, clean and unwatermarked.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "60 Seconds Santa Run"
+  },
+  "cl64in1nes": {
+    "reason": "The cartridge's own 64 in 1 menu screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "64 in 1 NES"
+  },
   "cl8ballclassic": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -174,9 +234,9 @@
     "title": "8 Ball Classic"
   },
   "cl8ballpool": {
-    "reason": "Frames showed only instructions or copyright text, not a title screen or recognizable gameplay.",
+    "reason": "8 Ball Pool key art with the game's logo and rack of balls.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "8 Ball Pool"
   },
   "cl9007199254740992": {
@@ -221,6 +281,12 @@
     "status": "rejected",
     "title": "A Date with Death"
   },
+  "clAltered Beast": {
+    "reason": "Altered Beast box art with the logo and the beast artwork.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Altered Beast"
+  },
   "clBFDIBranches": {
     "reason": "Captured frame shows the actual game with identifying title or gameplay.",
     "reviewed": "2026-11-26",
@@ -263,16 +329,28 @@
     "status": "verified",
     "title": "Absolute Madness"
   },
-  "clacecombat3": {
-    "reason": "Every qualifying frame was still a loading screen (progress bar or \"Loading n/m\"), so nothing finished could be captured in the 12-second window.",
+  "clacecombat2": {
+    "reason": "Official Ace Combat 2 PlayStation box art with the logo.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Ace Combat 2"
+  },
+  "clacecombat3": {
+    "reason": "Official Ace Combat 3 Electrosphere box art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Ace Combat 3"
   },
-  "clachievementunlocked": {
-    "reason": "Every qualifying frame was a publisher/engine splash or portal interstitial, not the game's own screen.",
+  "clacegangstertaxi": {
+    "reason": "Ace Gangster Taxi logo with its car artwork, no menu text.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Ace Gangster Taxi"
+  },
+  "clachievementunlocked": {
+    "reason": "The first Achievement Unlocked game's own screen with its elephant and title; results 1 and 3 were the sequel.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Achievement Unlocked"
   },
   "clachillies": {
@@ -282,9 +360,9 @@
     "title": "Achillies"
   },
   "clachillies2": {
-    "reason": "Every qualifying frame was still a loading screen (progress bar or \"Loading n/m\"), so nothing finished could be captured in the 12-second window.",
+    "reason": "Achilles II title screen (Origin of a Legend) from the game itself.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Achillies 2"
   },
   "clacko_s-mach-bike-challenge--v1-0": {
@@ -294,16 +372,40 @@
     "title": "Acko's Mach Bike Challenge"
   },
   "cladatewithdeath": {
-    "reason": "Every qualifying frame was still a loading screen (progress bar or \"Loading n/m\"), so nothing finished could be captured in the 12-second window.",
+    "reason": "In-game scene with the game's character and dialogue box.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "A Date with Death"
+  },
+  "cladayintheoffice": {
+    "reason": "In-game office scene with the A Day in the Office title on the wall.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "A Day in the Office"
   },
   "cladofai": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "A Dance of Fire and Ice"
+  },
+  "cladvancewars": {
+    "reason": "Advance Wars box art with the logo, clean and unwatermarked.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Advance Wars"
+  },
+  "cladvancewars2": {
+    "reason": "Advance Wars 2: Black Hole Rising box art, the exact title in the catalog.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Advance Wars 2"
+  },
+  "cladvancewarsdualstrike": {
+    "reason": "Advance Wars: Dual Strike box art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Advance Wars: Dual Strike"
   },
   "cladventneon": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -318,9 +420,9 @@
     "title": "Adventure Capitalist"
   },
   "claflac": {
-    "reason": "The asset is an abstract two-colour shape with no readable title or branding, so its identity cannot be verified.",
+    "reason": "Aflac brand logo used by the game, clean on a plain background.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "AFLAC"
   },
   "clagariolite": {
@@ -347,6 +449,12 @@
     "status": "verified",
     "title": "Ages of Conflict"
   },
+  "clagesofempire": {
+    "reason": "Age of Empires scene used for this title; results 1 and 3 carried promotional captions and a site watermark.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ages of Empire"
+  },
   "clahoysurvival": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -365,10 +473,28 @@
     "status": "verified",
     "title": "Airline Tycoon Idle"
   },
-  "clalienhominid": {
-    "reason": "Every qualifying frame was a publisher/engine splash or portal interstitial, not the game's own screen.",
+  "clakumanorgaiden": {
+    "reason": "Akumano Gaiden box art without the handheld border of result 1.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Akumano Gaiden"
+  },
+  "claladdinsnes": {
+    "reason": "Official Aladdin SNES box art with the Capcom logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Aladdin (SNES)"
+  },
+  "clalexkiddinmiracleworld": {
+    "reason": "Alex Kidd in Miracle World DX key art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Alex Kidd in Miracle World"
+  },
+  "clalienhominid": {
+    "reason": "Alien Hominid HD key art with the logo, without the store rating overlay of result 3.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Alien Hominid"
   },
   "clalienskyinvasion": {
@@ -376,6 +502,30 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Alien Sky Invasion"
+  },
+  "clalientransporter": {
+    "reason": "Alien Transporter title screen with its characters and logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Alien Transporter"
+  },
+  "clalienvspredator": {
+    "reason": "Aliens vs Predator arcade gameplay showing the two-player co-op screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Alien vs Predator"
+  },
+  "clallbossesin1": {
+    "reason": "All Bosses in 1 promotional grid with the title and its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "All Bosses in 1"
+  },
+  "clallocation": {
+    "reason": "The game's own screen with the ALLOCATION grid and score; the other results were unrelated business software dashboards.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Allocation"
   },
   "clamaze": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -485,6 +635,30 @@
     "status": "verified",
     "title": "Angry Birds Slingshot Frenzy"
   },
+  "clanimalcrossingwildworld": {
+    "reason": "Animal Crossing: Wild World box art, centred and clean.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Animal Crossing: Wild World"
+  },
+  "clanimalforestn64": {
+    "reason": "Animal Forest cartridge label artwork with the title legible.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Animal Forest (N64)"
+  },
+  "clannsmb": {
+    "reason": "New Super Mario Bros. logo and gameplay art, the closest match to this fan-made title; results 1 and 2 were a video thumbnail and Super Mario Bros. Wonder.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Another New Super Mario Bros"
+  },
+  "clanotherworld": {
+    "reason": "Another World key art with the game's logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Another World"
+  },
   "clantarttycoon": {
     "reason": "Captured frame shows the actual game with identifying title or gameplay.",
     "reviewed": "2026-11-26",
@@ -503,10 +677,22 @@
     "status": "verified",
     "title": "Apes vs Helium"
   },
-  "clappleworm": {
-    "reason": "Every qualifying frame was a publisher/engine splash or portal interstitial, not the game's own screen.",
+  "clapotris": {
+    "reason": "Apotris title screen with its board and logo.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Apotris"
+  },
+  "clappleshooter": {
+    "reason": "The game's own title menu with APPLE SHOOTER and its buttons.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Apple Shooter"
+  },
+  "clappleworm": {
+    "reason": "Apple Worm logo with the worm and apple artwork.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Apple Worm"
   },
   "claquaparkio": {
@@ -520,6 +706,18 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Arcade Volley"
+  },
+  "clarceuslegend": {
+    "reason": "Pokemon Legends Arceus key art for this title, without a store frame.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Arceus Legend"
+  },
+  "clarcheryworldtour": {
+    "reason": "Archery World Tour logo with its target artwork.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Archery World Tour"
   },
   "clarchesspelago": {
     "reason": "Captured frame shows the actual game with identifying title or gameplay.",
@@ -563,11 +761,41 @@
     "status": "verified",
     "title": "Arthur's Nightmare"
   },
-  "clasteroidsalt": {
-    "reason": "Frames showed only instructions or copyright text, not a title screen or recognizable gameplay.",
+  "clascent": {
+    "reason": "The Ascent key art with the logo and characters.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Ascent"
+  },
+  "clasmallworldcup": {
+    "reason": "A Small World Cup title card with its player and ball.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "A Small World Cup"
+  },
+  "classessmentexamination": {
+    "reason": "Title-styled key art for Assessment Examination, the only result carrying this title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Assessment Examination"
+  },
+  "clasteroids": {
+    "reason": "Asteroids on the Atari 2600 with score and asteroids visible; the arcade original is near-monochrome.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Asteroids"
+  },
+  "clasteroidsalt": {
+    "reason": "Asteroids box art with the logo; result 2 carried a channel watermark and result 3 a platform banner.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Asteroids Alt"
+  },
+  "clasteroidsarcade": {
+    "reason": "Asteroids arcade cabinet side art with the game's logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Asteroids Arcade"
   },
   "clastraWASM": {
     "reason": "Shows a Discord attachment page, not the game.",
@@ -576,9 +804,9 @@
     "title": "clastraWASM"
   },
   "clastraclient": {
-    "reason": "Every qualifying frame carried a consent, age, profanity, legal or ad-block dialog over the content.",
+    "reason": "Astra Client key art with its logo and crystal artwork.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Astra Client"
   },
   "clastrawasm": {
@@ -592,6 +820,18 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Astros Dreamland"
+  },
+  "clastynax": {
+    "reason": "Astyanax box art with the logo, clean and unwatermarked.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Astynax"
+  },
+  "clatariadventure": {
+    "reason": "Adventure box art with the title and dragon artwork.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Atari Adventure"
   },
   "clattackhole": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -629,6 +869,12 @@
     "status": "verified",
     "title": "Awesome Pirates"
   },
+  "clawesomeplanes": {
+    "reason": "Awesome Planes logo with its plane artwork.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Awesome Planes"
+  },
   "clawesometanks": {
     "reason": "Captured frame shows the actual game with identifying title or gameplay.",
     "reviewed": "2026-11-26",
@@ -641,11 +887,23 @@
     "status": "verified",
     "title": "Awesome Tanks 2"
   },
+  "claxbattler": {
+    "reason": "Ax Battler box art with the Game Gear branding and logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ax Battler"
+  },
   "claxisfootballleague": {
     "reason": "Captured the Axis Football League title and menu screen.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Axis Football League"
+  },
+  "clb3313": {
+    "reason": "B3313 key art with its title; result 2 contained a Windows error dialog.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "B 3313"
   },
   "clbabeltower": {
     "reason": "Captured frame shows the actual game with identifying title or gameplay.",
@@ -658,6 +916,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Baby Chic Co Adventure"
+  },
+  "clbabykaizo": {
+    "reason": "Baby Kaizo World box art with the title; result 3 was the sequel.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Baby Kai Zo"
   },
   "clbabysniperinvietnam": {
     "reason": "Captured frame shows the actual game with identifying title or gameplay.",
@@ -672,9 +936,9 @@
     "title": "Back Rooms"
   },
   "clbackrooms2d": {
-    "reason": "Every qualifying frame was still a loading screen (progress bar or \"Loading n/m\"), so nothing finished could be captured in the 12-second window.",
+    "reason": "Backrooms 2D gameplay showing the corridor and entity.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Backrooms 2D"
   },
   "clbackyardbaseball": {
@@ -683,10 +947,28 @@
     "status": "verified",
     "title": "Backyard Baseball"
   },
-  "clbackyardsoccer": {
-    "reason": "Every qualifying frame was still a loading screen (progress bar or \"Loading n/m\"), so nothing finished could be captured in the 12-second window.",
+  "clbackyardbaseball09": {
+    "reason": "Backyard Baseball '09 gameplay with the in-game scoreboard.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Backyard Baseball 09"
+  },
+  "clbackyardbaseball10": {
+    "reason": "Backyard Baseball 10 cover art, without the retailer sticker of result 1.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Backyard Baseball 10"
+  },
+  "clbackyardfootball": {
+    "reason": "Backyard Football box art with the title logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Backyard Football"
+  },
+  "clbackyardsoccer": {
+    "reason": "Backyard Soccer gameplay with the field and scoreboard.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Backyard Soccer"
   },
   "clbaconmaydie": {
@@ -696,28 +978,34 @@
     "title": "Bacon May Die"
   },
   "clbadbodyguards": {
-    "reason": "The fetched asset is a generic 64px engine/developer mascot shared by unrelated entries, not this title's identifiable art.",
+    "reason": "Bad Bodyguards logo on its pixel-art background.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Bad Bodyguards"
   },
   "clbadicecream": {
-    "reason": "Every qualifying frame was a publisher/engine splash or portal interstitial, not the game's own screen.",
+    "reason": "The first Bad Ice Cream's own title screen; result 3 carried a forum watermark.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Bad Ice Cream"
   },
   "clbadicecream2": {
-    "reason": "Every qualifying frame was a publisher/engine splash or portal interstitial, not the game's own screen.",
+    "reason": "Bad Ice Cream 2 title screen with its logo.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Bad Ice Cream 2"
   },
   "clbadicecream3": {
-    "reason": "Every qualifying frame was a publisher/engine splash or portal interstitial, not the game's own screen.",
+    "reason": "Bad Ice Cream 3 key art with its characters and ice cream.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Bad Ice Cream 3"
+  },
+  "clbadmondaysimulator": {
+    "reason": "Bad Monday Simulator difficulty-select screen with its title and art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Bad Monday Simulator"
   },
   "clbadparenting": {
     "reason": "Captured frame shows the actual game with identifying title or gameplay.",
@@ -737,10 +1025,28 @@
     "status": "verified",
     "title": "Bad Piggies Latest"
   },
-  "clbaldicaseoh": {
-    "reason": "Every qualifying frame was a publisher/engine splash or portal interstitial, not the game's own screen.",
+  "clbadtimesim": {
+    "reason": "Bad Time Simulator title art with the skeleton; result 1 carried browser-game buttons.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Bad Time Sim"
+  },
+  "clbadtimesimulator": {
+    "reason": "Bad Time Simulator gameplay with the attack and charge bars.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Bad Time Simulator"
+  },
+  "clbalatrogba": {
+    "reason": "Balatro GBA box art with the logo and handheld spine.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Bala Tro (GBA)"
+  },
+  "clbaldicaseoh": {
+    "reason": "CaseOh's Basics title card for this fan game, the only result naming the game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Bald Icase Oh"
   },
   "clbaldidecomp": {
@@ -755,10 +1061,16 @@
     "status": "verified",
     "title": "Bald Iepstein"
   },
-  "clbaldisbasicsremaster": {
-    "reason": "Every qualifying frame was still a loading screen (progress bar or \"Loading n/m\"), so nothing finished could be captured in the 12-second window.",
+  "clbaldisbasics": {
+    "reason": "Baldi's Basics in-game screen with the notebook HUD.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Baldi's Basics"
+  },
+  "clbaldisbasicsremaster": {
+    "reason": "Baldi's Basics Classic Remastered logo card.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Baldi's Basics Remaster"
   },
   "clbaldisfunnewschoolultimate": {
@@ -772,6 +1084,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Ball Blast"
+  },
+  "clballistic": {
+    "reason": "Ballistic key art with its logo and characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ballistic"
+  },
+  "clballoonfight": {
+    "reason": "Balloon Fight NES gameplay with its score display; result 1 carried a longplay frame.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Balloon Fight"
   },
   "clballsandbricks": {
     "reason": "Captured the Balls and Bricks title art.",
@@ -797,11 +1121,29 @@
     "status": "verified",
     "title": "Banana Simulator"
   },
-  "clbanditgunslingers": {
-    "reason": "Every qualifying frame was a publisher/engine splash or portal interstitial, not the game's own screen.",
+  "clbanbuds": {
+    "reason": "Banbud's Basics of Madness key art naming the creator's game.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Banbuds"
+  },
+  "clbanditgunslingers": {
+    "reason": "Bandit Gunslingers title card with its two characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Bandit Gunslingers"
+  },
+  "clbanjokazooie": {
+    "reason": "Banjo-Kazooie box art with the logo and characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Banjo-Kazooie"
+  },
+  "clbanjotooie": {
+    "reason": "Banjo-Tooie box art with the logo and characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Banjo-Tooie"
   },
   "clbankbreakout2": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -822,10 +1164,16 @@
     "title": "Barry Has A Secret"
   },
   "clbartblast": {
-    "reason": "Every qualifying frame was still a loading screen (progress bar or \"Loading n/m\"), so nothing finished could be captured in the 12-second window.",
+    "reason": "Bart Blast title screen with its Credits / START / How 2 Play buttons.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Bart Blast"
+  },
+  "clbas": {
+    "reason": "Bus gameplay with the in-game HUD; result 3 carried a social-network overlay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Bas"
   },
   "clbaseballbros": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -833,11 +1181,23 @@
     "status": "verified",
     "title": "Baseball Bros"
   },
+  "clbaseballnes": {
+    "reason": "Baseball NES box art with the title and Nintendo seal.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Baseball (NES)"
+  },
   "clbasketballfrvr": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Basketball FRVR"
+  },
+  "clbasketballlegends-1": {
+    "reason": "Basketball Legends cover art with the logo; result 2 carried a site watermark.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Basketball Legends"
   },
   "clbasketballstars": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -864,16 +1224,28 @@
     "title": "Basket Bros"
   },
   "clbasketrandom": {
-    "reason": "Every qualifying frame was an advertisement or countdown interstitial.",
+    "reason": "Basket Random icon artwork with the title and character.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Basket Random"
+  },
+  "clbasketrandomgood": {
+    "reason": "Basket Random gameplay with players and ball; the other results carried portal text.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Basket Random Good"
   },
   "clbasketslamdunk2": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Basket Slam Dunk 2"
+  },
+  "clbatterup": {
+    "reason": "Batter Up key art with the logo and batter.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Batter Up"
   },
   "clbattlekarts": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -893,6 +1265,12 @@
     "status": "verified",
     "title": "Battle Sim"
   },
+  "clbattlezone": {
+    "reason": "Battle Zone arcade cabinet with its screen and marquee; result 3 was the separate Battlezone 98.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Battle Zone"
+  },
   "clbazookaboy": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -910,6 +1288,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Beach Boxing Sim"
+  },
+  "clbeamrider": {
+    "reason": "Beamrider box art with the title on its grid artwork.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Beam Rider"
   },
   "clbearbarians": {
     "reason": "Captured the Bearbarians title art with its Play button.",
@@ -929,6 +1313,48 @@
     "status": "rejected",
     "title": "Be Jeweled Twist Flash"
   },
+  "clben10alienforce": {
+    "reason": "Ben 10 Alien Force box art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ben 10 Alien Force"
+  },
+  "clben10omniverse": {
+    "reason": "Ben 10 Omniverse box art, centred and clean.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ben 10 Omniverse"
+  },
+  "clben10protector": {
+    "reason": "Ben 10 Protector of Earth box art with the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ben 10 Protector"
+  },
+  "clben10racing": {
+    "reason": "Ben 10 Galactic Racing key art with the full title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ben 10 Racing"
+  },
+  "clben10ultimatealien": {
+    "reason": "Ben 10 Ultimate Alien in-game alien-select screen with its title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ben 10 Ultimate Alien"
+  },
+  "clbendrowned": {
+    "reason": "Ben Drowned key art naming the creepypasta; results 1 and 2 were unrelated Majora's Mask close-ups.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ben Drowned"
+  },
+  "clbergentruck201x": {
+    "reason": "Bergen Truck 201X title screen with its Play / Options / Quit menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Bergen Truck 201X"
+  },
   "clbfdia5b": {
     "reason": "Wrapper-declared artwork for this title (official og) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
@@ -946,6 +1372,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Big Flappy Tower Tiny Square"
+  },
+  "clbigicetowertinysquare": {
+    "reason": "Big Ice Tower Tiny Square key art with the title and characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Big Ice Tower Tiny Square"
   },
   "clbigneontowertinysquare": {
     "reason": "Captured the Big Neon Tower Tiny Square logo screen.",
@@ -965,11 +1397,29 @@
     "status": "verified",
     "title": "Big Tower Tiny Square"
   },
+  "clbigtowertinysquare2": {
+    "reason": "Big Tower Tiny Square 2 in-game level with the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Big Tower Tiny Square 2"
+  },
+  "clbigtowertinysquare2good": {
+    "reason": "Big Tower Tiny Square 2 title art; result 3 carried a portal address.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Big Tower Tiny Square 2 Good"
+  },
   "clbindingofisaccsheeptime": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Binding of Isaac Sheep Time"
+  },
+  "clbioevil4": {
+    "reason": "Bio Evil 4 pixel-art key art matching this demake; result 1 was the commercial Resident Evil 4 artwork.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Bio Evil 4"
   },
   "clbitlife": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",

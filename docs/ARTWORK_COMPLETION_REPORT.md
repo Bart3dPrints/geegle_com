@@ -15,24 +15,24 @@ Identity evidence and reuse basis are recorded separately on every record. Captu
 | Measure | Count |
 | --- | --- |
 | Catalog rows (unique IDs) | 2,710 |
-| Verified artwork | 1,095 |
+| Verified artwork | 1,193 |
 | Awaiting review | 0 |
-| Rejected (removed from the UI, queued for a new capture) | 150 |
+| Rejected (removed from the UI, queued for a new capture) | 127 |
 | Blocked | 0 |
 | Reopened after the blocked classification was rejected | 1,676 |
 | Ten-minute render investigations completed | 590 |
 | ... that rendered an authentic frame | 551 |
 | ... that stopped at their own start gate | 6 |
 | ... that stayed blank for the whole observation | 26 |
-| Remaining unprocessed | 1,615 |
-| Actual verified coverage | 40.4% |
-| Total optimized asset size (verified images) | 22136 KiB |
+| Remaining unprocessed | 1,517 |
+| Actual verified coverage | 44.0% |
+| Total optimized asset size (verified images) | 25135 KiB |
 
 ## Verified artwork by acquisition method
 
 | Method | Count |
 | --- | --- |
-| game-asset | 34 |
+| game-asset | 132 |
 | gameplay-screenshot | 962 |
 | official-icon | 72 |
 | official-og | 27 |
@@ -45,16 +45,16 @@ The pre-existing set was audited rather than trusted. 35 of 73 records were reje
 
 Rejection reasons recorded:
 
-- 21x Every qualifying frame was still a loading screen (progress bar or "Loading n/m"), so nothing finished could be captured in the 12-second window.
-- 15x Every qualifying frame was a publisher/engine splash or portal interstitial, not the game's own screen.
+- 14x Every qualifying frame was still a loading screen (progress bar or "Loading n/m"), so nothing finished could be captured in the 12-second window.
 - 14x Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.
 - 13x Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.
 - 11x Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.
-- 10x Every qualifying frame carried a consent, age, profanity, legal or ad-block dialog over the content.
-- 7x Frames showed only instructions or copyright text, not a title screen or recognizable gameplay.
+- 8x Every qualifying frame carried a consent, age, profanity, legal or ad-block dialog over the content.
 - 7x Every qualifying frame was an error page ("Something went wrong"), which is never acceptable artwork.
+- 7x Every qualifying frame was a publisher/engine splash or portal interstitial, not the game's own screen.
 - 7x The frame shows only the shared Friday Night Funkin base logo, which does not identify this specific mod.
 - 6x Every qualifying frame carried a consent, language, license or age dialog over the content.
+- 5x Frames showed only instructions or copyright text, not a title screen or recognizable gameplay.
 - 4x Every qualifying frame was an error page ("Something went wrong", a 404 loader), which is never acceptable artwork.
 - 4x The frame is an empty background with no legible title or gameplay.
 
@@ -81,10 +81,10 @@ No entry is left in a blocked state: the whole 1,676-entry blocked manifest was 
 
 ## Remaining work
 
-The next unprocessed batch starts at `bank-robbery`:
+The next unprocessed batch starts at `bowmasters`:
 
 ```
-bank-robbery,bowmasters,cl100in1nes,cl100roomsofenemies,cl10yardfight,cl13bones,cl1942nes,cl234playergame,cl3slices2,cl40xescape,cl500calibercontractz,cl60secondssantarun,cl64in1nes,cl8ballpool,clAltered Beast,clBMX2,clFF3,clFNAF,clFNAF2,clFNAF3,clFNAF4,clGXclient,cla-walk-in-the-forest--v1-0,clacecombat2,clacecombat3,clacegangstertaxi,clachievementunlocked,clachillies2,clacko_s-mach-bike-challenge--v1-0,cladarkroom,cladatewithdeath,cladayintheoffice,cladvancewars,cladvancewars2,cladvancewarsdualstrike,claflac,claftertheweek,clagesofempire,clai,clakumanorgaiden,claladdinsnes,clalexkiddinmiracleworld,clalienhominid,clalienhominidgba,clalientransporter,clalienvspredator,clallbossesin1,clallocation,claltered-beast,clanemonesfall
+bowmasters,clBMX2,clFF3,clFNAF,clFNAF2,clFNAF3,clFNAF4,clGXclient,cla-walk-in-the-forest--v1-0,clacko_s-mach-bike-challenge--v1-0,cladarkroom,claftertheweek,clai,clalienhominidgba,claltered-beast,clanemonesfall,clasdutydemands,clb3313unabandoneda2,clb3313v102,clbejeweledtwistds,clbejeweledtwistflash,clbfdibranches,clbitlifeencrypted,clbitplanes,clblackjackhhhh,clblackout,clbleachvsnaruto,clblobsstory2,clblockblast,clblockcraftshooter,clbloodmoney,clbloonspp3,clbloonspp4,clbloonspp5,clbloonstd2,clbloonstd4,clbloonstd5,clbloonstd6scratch,clbloxorz,clblumgiracers,clbmx2,clbomberman,clbomberman2,clbombermanhero,clbombermanworld,clbonanza-bros,clbonkerssnes,clboomslingers,clbottlecracks,clbottleflip3d
 ```
 
 Resume commands:
