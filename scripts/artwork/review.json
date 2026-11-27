@@ -6437,17 +6437,161 @@
     "status": "verified",
     "title": "Riddle School (Alt)"
   },
+  "clriddletransfer": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Riddle Transfer"
+  },
+  "clriddletransfer2": {
+    "reason": "Credits text screen, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Riddle Transfer 2"
+  },
+  "clrisehigher": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rise Higher"
+  },
+  "clroadffury": {
+    "reason": "Error page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "clroadffury"
+  },
+  "clroadfighter": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Road Fighter"
+  },
+  "clrocketgoalio": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rocket Goal.io"
+  },
+  "clrocketjump": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rocket Jump"
+  },
+  "clrocketleague": {
+    "reason": "Instructional credits screen, not game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Rocket League"
+  },
+  "clrocketsoccerderby": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rocket Soccer Derby"
+  },
+  "clroguesoul": {
+    "reason": "Publisher purchase prompt, not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Rogue Soul"
+  },
+  "clroguesoul2": {
+    "reason": "Publisher purchase prompt, not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Rogue Soul 2"
+  },
+  "clrollerballer": {
+    "reason": "Near-empty frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Rollerballer"
+  },
+  "clrollingsky": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rolling Sky"
+  },
   "clrollyvortex": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Rolly Vortex"
   },
+  "clrooftoprun": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rooftop Run"
+  },
+  "clrooftopsnipers": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rooftop Snipers"
+  },
+  "clrooftopsnipers2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rooftop Snipers 2"
+  },
+  "clroomclicker": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Room Clicker"
+  },
+  "clrosegold": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Rose Gold"
+  },
+  "clrotate": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rotate"
+  },
+  "clroulettehero": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Roulette Hero"
+  },
+  "clrun": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Run"
+  },
+  "clrun2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Run 2"
+  },
+  "clrunningfred": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Running Fred"
+  },
   "clrussianbuckshot": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Russian Buckshot"
+  },
+  "clrussiancardriver": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Russian Car Driver"
   },
   "clrussiansandbox": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -6473,11 +6617,101 @@
     "status": "verified",
     "title": "Sandboxels"
   },
+  "clsandsofthecoliseum": {
+    "reason": "Near-black frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Sands of the Coliseum"
+  },
+  "clsandstone-1": {
+    "reason": "Near-black frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Sandstone"
+  },
+  "clsandtris": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sandtris"
+  },
+  "clsanty": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Santy"
+  },
+  "clsatryn": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Satryn"
+  },
+  "clsaulgoodmanrun": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Saul Goodman Run"
+  },
   "clsausageflip": {
     "reason": "Portal wordmark (bestgames.com), not the game.",
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "Sausage Flip"
+  },
+  "clsayorisnotebook": {
+    "reason": "Engine splash, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Sayori's Notebook"
+  },
+  "clscalethedepths": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Scale the Depths"
+  },
+  "clscamptonthegreatfightrecreate": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Scampton the Great Fight"
+  },
+  "clscaryshawarma": {
+    "reason": "Non-identifying text page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Scary Shawarma"
+  },
+  "clscaryteacher3d": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Scary Teacher 3D"
+  },
+  "clschoolboyrunaway": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Schoolboy Runaway"
+  },
+  "clscrapmetal3": {
+    "reason": "Engine splash (Unity), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Scrap Metal 3"
+  },
+  "clscratchoptions": {
+    "reason": "Launcher options page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Scratch Options"
+  },
+  "clscubabear": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Scuba Bear"
   },
   "clsd-thewar": {
     "reason": "Portal logo (Two Player Games), not the game.",
@@ -6485,17 +6719,125 @@
     "status": "rejected",
     "title": "SD: The War"
   },
+  "clseamongrel": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sea Mongrel"
+  },
+  "clsentryfortress": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sentry Fortress"
+  },
+  "clserenitrove": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sere Nitro Ve"
+  },
   "clsevendays": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Seven Days"
   },
+  "clsfk": {
+    "reason": "Publisher splash (BigDino), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "SFK"
+  },
+  "clsfk2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SFK 2"
+  },
+  "clsfklaststand": {
+    "reason": "Blank frame with no game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "SFK Last Stand"
+  },
+  "clsfkleague": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SFK League"
+  },
   "clshadowcourier": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Shadow Courier"
+  },
+  "clshaggy--1": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Shaggy"
+  },
+  "clshapetransform": {
+    "reason": "Page notice with no game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Shape Transform"
+  },
+  "clshiftatmidnight": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Shift at Midnight"
+  },
+  "clshinmegamitenseidevilsurvivor": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Shin Megami Tensei: Devil Survivor"
+  },
+  "clshoppingcarthero": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Shopping Cart Hero"
+  },
+  "clshortlife": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Short Life"
+  },
+  "clshotout4": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Shot Out 4"
+  },
+  "clshrubnaut": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Shrub Naut"
+  },
+  "clsideeffects": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Side Effects"
+  },
+  "clsierra7": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sierra 7"
+  },
+  "clsilenthillalt": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Silent Hill (Alt)"
   },
   "clsilk": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -6514,6 +6856,24 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Silo Showdown"
+  },
+  "clsilver": {
+    "reason": "Engine splash, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Silver"
+  },
+  "clsinglefile": {
+    "reason": "Non-identifying table interface, not game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Single File"
+  },
+  "clsixwaystodie": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Six Ways to Die"
   },
   "clskibidiinthebackrooms": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
