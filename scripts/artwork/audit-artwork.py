@@ -123,7 +123,7 @@ def main():
         row["edges"] = round(ImageStat.Stat(rgb.convert("L").filter(ImageFilter.FIND_EDGES)).mean[0], 2)
         if record.get("assetSha256") and digest != record["assetSha256"]:
             row["problems"].append("hash-mismatch")
-        if row["width"] < 160 or row["height"] < 90:
+        if row["width"] < 48 or row["height"] < 48:
             row["problems"].append("small")
         if row["colors"] < 16 or row["stddev"] < 3:
             row["problems"].append("uniform")

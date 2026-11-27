@@ -72,8 +72,8 @@
     "title": "20 Small Mazes"
   },
   "cl234playergame": {
-    "reason": "Third-party portal loading screen, not the game.",
-    "reviewed": "2026-11-26",
+    "reason": "Portal logo (Two Player Games), not the game.",
+    "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "2-3-4 Player Game"
   },
@@ -102,8 +102,8 @@
     "title": "cl3dash"
   },
   "cl3dasheditor": {
-    "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
-    "reviewed": "2026-11-26",
+    "reason": "Watermarked generic sketch, not this title's artwork.",
+    "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "3 Dash Editor"
   },
@@ -192,8 +192,8 @@
     "title": "cl99nightsft"
   },
   "cl99nightsitf": {
-    "reason": "Generic \"Made with Unity\" splash.",
-    "reviewed": "2026-11-26",
+    "reason": "Portal logo (Unblocked Games G+), not the game.",
+    "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "99 Nights in the Forest"
   },
@@ -292,6 +292,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Adventure Capitalist"
+  },
+  "claflac": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "AFLAC"
   },
   "clagariolite": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -480,10 +486,10 @@
     "title": "clappleshooter"
   },
   "claquaparkio": {
-    "reason": "Loading screen.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
-    "title": "claquaparkio"
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Aqua Park IO"
   },
   "clarcadevolley": {
     "reason": "Captured frame shows the actual game with identifying title or gameplay.",
@@ -659,6 +665,12 @@
     "status": "verified",
     "title": "Bacon May Die"
   },
+  "clbadbodyguards": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Bad Bodyguards"
+  },
   "clbadicecream": {
     "reason": "Blank capture with no game content.",
     "reviewed": "2026-11-26",
@@ -708,9 +720,9 @@
     "title": "Bald Icase Oh"
   },
   "clbaldidecomp": {
-    "reason": "Credits splash, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Bald Ide Comp"
   },
   "clbaldiepstein": {
@@ -894,9 +906,9 @@
     "title": "Be Jeweled Twist Flash"
   },
   "clbfdia5b": {
-    "reason": "Blurred backdrop with no identifying content.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "BFDI A5B"
   },
   "clbig_time_butter_baron": {
@@ -934,6 +946,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Binding of Isaac Sheep Time"
+  },
+  "clbioevil4": {
+    "reason": "Non-identifying clock asset, not recognizable as the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Bio Evil 4"
   },
   "clbitlife": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1127,6 +1145,12 @@
     "status": "verified",
     "title": "Bob the Robber 5"
   },
+  "clbollybeat": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Bollybeat"
+  },
   "clbombermanworld": {
     "reason": "Loading screen.",
     "reviewed": "2026-11-26",
@@ -1253,6 +1277,12 @@
     "status": "rejected",
     "title": "Bullet Force"
   },
+  "clbunzobunny": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Bun Zo Bunny"
+  },
   "clburgerandfrights": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
@@ -1306,6 +1336,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Cannonballs 3D"
+  },
+  "clcapybaraclicker": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Capybara Clicker"
   },
   "clcarcrash3": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1446,8 +1482,8 @@
     "title": "Chicken CS"
   },
   "clchickenscream": {
-    "reason": "Shows a generic game-portal logo, not Chicken Scream.",
-    "reviewed": "2026-11-26",
+    "reason": "Portal logo (Rocket Games), not the game.",
+    "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "Chicken Scream"
   },
@@ -1564,6 +1600,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Cluster Rush"
+  },
+  "clcoalllcdemo": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Coal LLC Demo"
   },
   "clcodercraft": {
     "reason": "License agreement screen, not the game.",
@@ -1788,9 +1830,9 @@
     "title": "Customer Support"
   },
   "clcybersensation": {
-    "reason": "Collage of unrelated thumbnails, not the game.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Cyber Sensation"
   },
   "cldadish": {
@@ -1870,6 +1912,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Deadly Descent"
+  },
+  "cldeadseat": {
+    "reason": "Identical to another title's icon; not this title's own art.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Dead Seat"
   },
   "cldeadzed": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2129,6 +2177,12 @@
     "status": "verified",
     "title": "Dreader"
   },
+  "cldreadheadparkour": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dreadhead Parkour"
+  },
   "cldriftboss": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -2148,9 +2202,9 @@
     "title": "Drive Mad Y"
   },
   "cldriverussia": {
-    "reason": "Non-identifying photograph, not gameplay.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Drive Russia"
   },
   "clducklfe5": {
@@ -2381,11 +2435,41 @@
     "status": "rejected",
     "title": "Edelweiss"
   },
+  "clegg": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Egg"
+  },
+  "clescalatingduel": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Escalating Duel"
+  },
+  "clescaperoad": {
+    "reason": "Portal splash (Games.co), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Escape Road"
+  },
   "clescapeschoolduel": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Escape School Duel"
+  },
+  "clextremerun3d": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Extreme Run 3D"
+  },
+  "clfearassessment": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Fear Assessment"
   },
   "clfeedthevoid": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -2399,11 +2483,71 @@
     "status": "rejected",
     "title": "Fire Blob"
   },
+  "clfireboyandwatergirl5": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Fireboy and Watergirl 5"
+  },
+  "clfisheatgettingbig": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Fish Eat Getting Big"
+  },
   "clfivenightsatshreks": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Five Nights at Shrek's"
+  },
+  "clfnfagoti": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Agoti"
+  },
+  "clfnfanimation": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF Animation"
+  },
+  "clfnfcamelliarudeblaster": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Camellia Rude Blaster"
+  },
+  "clfnfclassified": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Classified"
+  },
+  "clfnfdokitakeoverplus": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Doki Takeover Plus"
+  },
+  "clfnffnaf1": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: FNAF 1"
+  },
+  "clfnffnaf3": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: FNAF 3"
+  },
+  "clfnfgfmode": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF GF Mode"
   },
   "clfnfgodot": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -2411,11 +2555,155 @@
     "status": "verified",
     "title": "FNF: Godot"
   },
+  "clfnfgoldenapple": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Golden Apple"
+  },
+  "clfnfimposterv4": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Imposter V4"
+  },
+  "clfnfmadnesspoop": {
+    "reason": "Non-identifying mod logo.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Madness Poop"
+  },
+  "clfnfmaginagematches": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Maginage Matches"
+  },
+  "clfnfremnants": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Remnants"
+  },
+  "clfnfrottensmoothie": {
+    "reason": "Artwork belongs to an unrelated franchise.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Rotten Smoothie"
+  },
+  "clfnfshaggyxmatt": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Shaggy X Matt"
+  },
+  "clfnfsoft": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF Soft"
+  },
+  "clfnfstarlightmayhem": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Starlight Mayhem"
+  },
+  "clfnfstridentcrisis": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF Strident Crisis"
+  },
+  "clfnftailsgetstrolled": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Tails Gets Trolled"
+  },
+  "clfnftricky": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Tricky"
+  },
+  "clfnfundertale": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Undertale"
+  },
+  "clfnfvoid": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF Void"
+  },
+  "clfnfwaltenfiles": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF Walten Files"
+  },
+  "clfnfwednesday-infedility": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF Wednesday Infidelity"
+  },
+  "clfootballbros": {
+    "reason": "Artwork shows a different title than this entry.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Football Bros"
+  },
+  "clforknsausage": {
+    "reason": "Portal logo (SAWGAMES), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Fork n Sausage"
+  },
+  "clfunkinmix": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Funk in Mix"
+  },
+  "clfunnybattle": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Funny Battle"
+  },
+  "clfunnybattle2": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Funny Battle 2"
+  },
+  "clfunnymadracing": {
+    "reason": "Portal logo (Two Player Games), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Funny Mad Racing"
+  },
+  "clfunnyshooter2": {
+    "reason": "Image is effectively identical to the existing Funny Shooter 22 card; the previously verified artwork is kept.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Funny Shooter 2"
+  },
   "clfunnyshooter22": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Funny Shooter 22"
+  },
+  "clfused240": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Fused 240"
   },
   "clgeometryvibes": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -2423,11 +2711,53 @@
     "status": "verified",
     "title": "Geometry Vibes"
   },
+  "clgetontop": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Get on Top"
+  },
+  "clgolfbattle": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Golf Battle"
+  },
+  "clgranny22": {
+    "reason": "Store badge, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Granny 22"
+  },
+  "clgranny3": {
+    "reason": "Portal logo (KIZ10), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Granny 3"
+  },
+  "clgrn": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Grn"
+  },
+  "clhardwaretycoon": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hardware Tycoon"
+  },
   "clhelltaker": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Helltaker"
+  },
+  "clhero3flyingrobot": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hero 3 Flying Robot"
   },
   "clhextris": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -2447,6 +2777,42 @@
     "status": "rejected",
     "title": "Huggy Wuggy Pixel"
   },
+  "clicypurplehead": {
+    "reason": "Generic clock asset shared with other titles.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Icy Purple Head"
+  },
+  "clinkgame": {
+    "reason": "Non-identifying photograph, not game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Ink Game"
+  },
+  "clinnkeeper": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Innkeeper"
+  },
+  "clintellisphere": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Intellisphere"
+  },
+  "clitgetssolonelyhere": {
+    "reason": "Tiny sprite on a blank field with no identifying content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "It Gets So Lonely Here"
+  },
+  "cljazzjackrabbit2": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Jazz Jackrabbit 2"
+  },
   "cljefflings": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
     "reviewed": "2026-11-26",
@@ -2459,11 +2825,35 @@
     "status": "verified",
     "title": "Jelly Mario"
   },
+  "cljetskiracing": {
+    "reason": "Portal logo (AZ Games), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Jet Ski Racing"
+  },
+  "cljsvecx": {
+    "reason": "Emulator page, not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "JSVecx"
+  },
+  "cljumpingshell": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Jumping Shell"
+  },
   "clkanyezone": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Kanye Zone"
+  },
+  "clkaratebros": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Karate Bros"
   },
   "clkartbros": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -2471,11 +2861,41 @@
     "status": "verified",
     "title": "Kart Bros"
   },
+  "clkourio": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Kour.io"
+  },
+  "clkrillion": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Krillion"
+  },
+  "clks2teams": {
+    "reason": "Store badge, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "KS 2 Teams"
+  },
+  "clleveldevil": {
+    "reason": "Placeholder image literally labelled \"Icon\".",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Level Devil"
+  },
   "clleverwarriors": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Lever Warriors"
+  },
+  "clluckyblocks": {
+    "reason": "Portal logo (Unblocked Games G+), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Lucky Blocks"
   },
   "cllummm": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
@@ -2483,11 +2903,59 @@
     "status": "rejected",
     "title": "Lummm"
   },
+  "clmadalinstuntcarsmultiplayerfixed": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madalin Stunt Cars Multiplayer"
+  },
+  "clmadstick": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mad Stick"
+  },
+  "clmagictiles3": {
+    "reason": "Logo belongs to an unrelated music company.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Magic Tiles 3"
+  },
+  "clmariomadness": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mario Madness"
+  },
+  "clmattv2": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Matt V2"
+  },
   "clmcfpsfbhd": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "MCFP SF BHD"
+  },
+  "clminecraftshooter": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Minecraft Shooter"
+  },
+  "clminishooters": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mini Shooters"
+  },
+  "clmomoscrushers": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Momo Crushers"
   },
   "clmonsterderby": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
@@ -2501,11 +2969,23 @@
     "status": "rejected",
     "title": "Monster Truck Port Stunt"
   },
+  "clmxoffroadmaster": {
+    "reason": "Portal logo (Two Player Games), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "MX Off Road Master"
+  },
   "clnetattack": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Net Attack"
+  },
+  "clneverendinglegacy": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Neverending Legacy"
   },
   "clninjaobbyparkor": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
@@ -2513,11 +2993,35 @@
     "status": "rejected",
     "title": "Ninja Obby Parkour"
   },
+  "clobby-99-will-lose": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Obby: 99 Will Lose"
+  },
+  "clobbybike": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Obby: Bike"
+  },
+  "clobbyswing": {
+    "reason": "Store badge, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Obby: Swing"
+  },
   "clomegalayers": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Omega Layers"
+  },
+  "clomnipresent": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Omnipresent"
   },
   "clonlyup": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -2537,6 +3041,18 @@
     "status": "verified",
     "title": "Paper.io"
   },
+  "clparkingrush": {
+    "reason": "Non-identifying letter icon, not recognizable as the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Parking Rush"
+  },
+  "clphasma": {
+    "reason": "Portal logo (Unblocked Games G+), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Phasma"
+  },
   "clpinkbike": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
@@ -2549,11 +3065,89 @@
     "status": "verified",
     "title": "Pixel Client"
   },
+  "clplonky": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Plonky"
+  },
   "clpogo3d": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Pogo 3D"
+  },
+  "clpokeacademylifeforever": {
+    "reason": "Tiny sprite on a blank field; not recognizable at card size.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Poke Academy Life Forever"
+  },
+  "clpoorbunny": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Poor Bunny"
+  },
+  "clpostal": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Postal"
+  },
+  "clpuppethockey": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Puppet Hockey"
+  },
+  "clracemaster3d": {
+    "reason": "Portal logo (SAWGAMES), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Race Master 3D"
+  },
+  "clragdollachivement": {
+    "reason": "Watermarked generic sketch, not this title's artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Ragdoll Achievement"
+  },
+  "clrecoil": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Recoil"
+  },
+  "clredball4": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Red Ball 4"
+  },
+  "clredvsbluewar": {
+    "reason": "Publisher logo, not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Red vs Blue War"
+  },
+  "clrewrite2": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rewrite 2"
+  },
+  "clrollyvortex": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rolly Vortex"
+  },
+  "clrussianbuckshot": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Russian Buckshot"
   },
   "clrussiansandbox": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -2561,11 +3155,35 @@
     "status": "verified",
     "title": "Russian Sandbox"
   },
+  "clsaihatestation": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Saihate Station"
+  },
+  "clsandboxcity": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sandbox City"
+  },
   "clsandboxels": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Sandboxels"
+  },
+  "clsausageflip": {
+    "reason": "Portal wordmark (bestgames.com), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Sausage Flip"
+  },
+  "clsd-thewar": {
+    "reason": "Portal logo (Two Player Games), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "SD: The War"
   },
   "clsevendays": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
@@ -2591,17 +3209,53 @@
     "status": "rejected",
     "title": "Silk Melody"
   },
+  "clsiloshowdow": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Silo Showdown"
+  },
   "clskibidiinthebackrooms": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Skibidi in the Backrooms"
   },
+  "clslotornot": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Slot or Not"
+  },
   "clsmashkarts": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Smash Karts"
+  },
+  "clsmc": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SMC"
+  },
+  "clsnowrider": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Snow Rider"
+  },
+  "clsoccerbros": {
+    "reason": "Tiny generic ball on a blank field; not recognizable as the title.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Soccer Bros"
+  },
+  "clsolarsandbox": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Solar Sandbox"
   },
   "clsoniccdmobile": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -2615,6 +3269,36 @@
     "status": "verified",
     "title": "Sonic Mania Plus"
   },
+  "clspacecompany": {
+    "reason": "Near-black screenshot with no identifying content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Space Company"
+  },
+  "clsquidplayground": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Squid Playground"
+  },
+  "clstacktris": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Stacktris"
+  },
+  "clstickjetchallenge": {
+    "reason": "Asset does not correspond to the game title.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Stick Jet Challenge"
+  },
+  "clstickmankingdomclash": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Stickman Kingdom Clash"
+  },
   "clstickslasher": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
     "reviewed": "2026-11-26",
@@ -2627,17 +3311,59 @@
     "status": "verified",
     "title": "Super Cold"
   },
+  "clsuperkidadventure": {
+    "reason": "Generic clock asset shared with another title.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Super Kid Adventure"
+  },
+  "clsupersantakicker": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Santa Kicker"
+  },
+  "clsupremeduelist2019": {
+    "reason": "Publisher logo, not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Supreme Duelist 2019"
+  },
+  "clswerve": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Swerve"
+  },
   "clswingforbrainrots": {
     "reason": "Shows an unrelated Classroom Center lunch icon.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Swing for Brain Rots"
   },
+  "cltagcm": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tag CM"
+  },
+  "cltailofthedragon": {
+    "reason": "Tiny icon on a blank field; no recognizable detail at card size.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Tail of the Dragon"
+  },
   "cltallio": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Tall.io"
+  },
+  "cltaproad": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tap Road"
   },
   "cltimeshooter2": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -2646,10 +3372,28 @@
     "title": "Time Shooter 2"
   },
   "cltimeshooter3": {
-    "reason": "Image matches the catalog title; the two entries are the same Time Shooter 3 game, so shared artwork is legitimate.",
-    "reviewed": "2026-11-26",
-    "status": "rejected",
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Time Shooter 3"
+  },
+  "cltrappedwithjester": {
+    "reason": "Tiny sprite on a blank field; not recognizable as the title.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Trapped with Jester"
+  },
+  "cltungtungtungsahurobby": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tung Tung Tung Sahur Obby"
+  },
+  "cluncannycatgolf": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Uncanny Cat Golf"
   },
   "clundertaleyellow": {
     "reason": "Effectively blank yellow crop with no identifying content.",
@@ -2657,11 +3401,23 @@
     "status": "rejected",
     "title": "Undertale Yellow"
   },
+  "clunicyclehero": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Unicycle Hero"
+  },
   "cluzg": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "UZG"
+  },
+  "clvampiresurvivors": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Vampire Survivors"
   },
   "clvaportrails": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
@@ -2681,11 +3437,41 @@
     "status": "verified",
     "title": "Vex 5"
   },
+  "clvsnonsense": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "VS Nonsense"
+  },
+  "clwheeliebike": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wheelie Bike"
+  },
   "clwordle": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Wordle"
+  },
+  "clyohohoio": {
+    "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Yohoho.io"
+  },
+  "geometrydashlite": {
+    "reason": "Store listing screenshot, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Geometry Dash Lite"
+  },
+  "nazi-zombies": {
+    "reason": "Unrelated service page, not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Nazi Zombies Portable"
   },
   "pvzm": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",

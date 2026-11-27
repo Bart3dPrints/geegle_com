@@ -1,5 +1,19 @@
 {
   "assets": {
+    "claflac": {
+      "assetSha256": "b02c083dc84370113482b1f778e9e352c1fd1d18c9ca08598f69aee361defda9",
+      "identityEvidence": "Published by the distribution for AFLAC at https://game.fnfhub.net/24921/favicon.png, found by fetching that distribution's own pages/assets (fetched game.fnfhub.net page metadata).",
+      "methodsInvestigated": [
+        "fetched game.fnfhub.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://game.fnfhub.net/24921/favicon.png",
+      "title": "AFLAC",
+      "type": "official-icon",
+      "url": "/artwork/claflac.webp"
+    },
     "clangrybirdsslingshotfrenzy": {
       "assetSha256": "21aea6e8e0ae09d02b7228d75899f9eaccb19bac91b55eb14013337bf5f4f982",
       "identityEvidence": "The wrapper this repository distributes for Angry Birds Slingshot Frenzy declares this image as its own artwork (official-icon).",
@@ -9,6 +23,20 @@
       "type": "official-icon",
       "url": "/artwork/clangrybirdsslingshotfrenzy.webp"
     },
+    "claquaparkio": {
+      "assetSha256": "f278a8c51b529a2917c22f987d857cace82e612e9bc3fc7db799d012eba907dc",
+      "identityEvidence": "Published by the distribution for Aqua Park IO at https://igroutka.ru/uploads/pwa/icon.png, found by fetching that distribution's own pages/assets (fetched igroutka.ru page metadata).",
+      "methodsInvestigated": [
+        "fetched igroutka.ru page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://igroutka.ru/uploads/pwa/icon.png",
+      "title": "Aqua Park IO",
+      "type": "official-og",
+      "url": "/artwork/claquaparkio.webp"
+    },
     "clastrosdreamland": {
       "assetSha256": "f4402de4f7551e0cb5f905f04d5ba69821058fffa6c7335fa9a8996bcbb04be2",
       "identityEvidence": "The wrapper this repository distributes for Astros Dreamland declares this image as its own artwork (official-icon).",
@@ -17,6 +45,34 @@
       "title": "Astros Dreamland",
       "type": "official-icon",
       "url": "/artwork/clastrosdreamland.webp"
+    },
+    "clbadbodyguards": {
+      "assetSha256": "540f6437f2c091ae900591e775b1a9bc407f9d6a3ca8208facf5484993a535ab",
+      "identityEvidence": "Published by the distribution for Bad Bodyguards at https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/MISC/badbodyguards/index.icon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/MISC/badbodyguards/index.icon.png",
+      "title": "Bad Bodyguards",
+      "type": "official-icon",
+      "url": "/artwork/clbadbodyguards.webp"
+    },
+    "clbaldidecomp": {
+      "assetSha256": "5113da4ab476c77cb6fd486b78682d52513df102a3c77be3b91950e9f76afa90",
+      "identityEvidence": "Published by the distribution for Bald Ide Comp at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@104c364f36401fd94165923f6b5a76c113e3540e/baldi%20decomp/TemplateData/AppIcon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@104c364f36401fd94165923f6b5a76c113e3540e/baldi%20decomp/TemplateData/AppIcon.png",
+      "title": "Bald Ide Comp",
+      "type": "official-icon",
+      "url": "/artwork/clbaldidecomp.webp"
     },
     "clbananasimulator": {
       "assetSha256": "1392dcb5cbdb920f7b8106400ada4b17822b037c9299baa2d5eaf94aa41429ec",
@@ -36,6 +92,36 @@
       "type": "official-icon",
       "url": "/artwork/clbasketslamdunk2.webp"
     },
+    "clbfdia5b": {
+      "assetSha256": "8ab14a09c807e7c7ab4481cc4194481cde2cd9c1b1b7019d94fc58e3154cf654",
+      "identityEvidence": "Published by the distribution for BFDI A5B at https://coppersalts.github.io/HTML5b/visuals/bg/bg0002.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://coppersalts.github.io/HTML5b/visuals/bg/bg0002.png",
+      "title": "BFDI A5B",
+      "type": "official-og",
+      "url": "/artwork/clbfdia5b.webp"
+    },
+    "clbollybeat": {
+      "assetSha256": "bce2b0aa46ecfcfd53c62c0400537997823b2117f14dab848ce1f5dd4c67d593",
+      "identityEvidence": "Published by the distribution for Bollybeat at https://rawcdn.githack.com/bubbls/youtube-playables/main/bolly-beat/logo.png, found by fetching that distribution's own pages/assets (fetched rawcdn.githack.com page metadata; probed build asset paths).",
+      "methodsInvestigated": [
+        "fetched rawcdn.githack.com page metadata",
+        "probed build asset paths",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://rawcdn.githack.com/bubbls/youtube-playables/main/bolly-beat/logo.png",
+      "title": "Bollybeat",
+      "type": "game-asset",
+      "url": "/artwork/clbollybeat.webp"
+    },
     "clbrawlstars": {
       "assetSha256": "f458a6dde0647375e2e0c5791bc49c4549063780e2fededeb6f99f9fec66cb31",
       "identityEvidence": "The wrapper this repository distributes for Brawl Stars declares this image as its own artwork (game-asset).",
@@ -44,6 +130,21 @@
       "title": "Brawl Stars",
       "type": "game-asset",
       "url": "/artwork/clbrawlstars.webp"
+    },
+    "clbunzobunny": {
+      "assetSha256": "a27efb191084706412abd4cffe371e177b2eb978f4ae339ac8336e3007f39cb3",
+      "identityEvidence": "Published by the distribution for Bun Zo Bunny at https://game.fnfhub.net/24880/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched game.fnfhub.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched game.fnfhub.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://game.fnfhub.net/24880/favicon.png",
+      "title": "Bun Zo Bunny",
+      "type": "official-icon",
+      "url": "/artwork/clbunzobunny.webp"
     },
     "clburgerandfrights": {
       "assetSha256": "2cdd115451b7e8ed9d928ae3efb4a5ef503c9fae828e0cf0ab17a0fa4ffd4fba",
@@ -54,6 +155,34 @@
       "type": "game-asset",
       "url": "/artwork/clburgerandfrights.webp"
     },
+    "clcapybaraclicker": {
+      "assetSha256": "68e0df844c3a0c9d75560229511d91a5eaced77cb3fde88f1d7e48a36f268895",
+      "identityEvidence": "Published by the distribution for Capybara Clicker at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@027a7fc4b20820dc401547a74cf4f2ee875cd3e2/capybara%20clicker/logo-capybara-licker.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@027a7fc4b20820dc401547a74cf4f2ee875cd3e2/capybara%20clicker/logo-capybara-licker.png",
+      "title": "Capybara Clicker",
+      "type": "official-icon",
+      "url": "/artwork/clcapybaraclicker.webp"
+    },
+    "clcoalllcdemo": {
+      "assetSha256": "0b2e255e66704f03a6a1761ea325fd8db05dd4b6d698f7b6c7d4d4a8643e37ec",
+      "identityEvidence": "Published by the distribution for Coal LLC Demo at https://cdn.jsdelivr.net/gh/Stinkalistic/SWAGgames@main/coalllc/index.icon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/SWAGgames@main/coalllc/index.icon.png",
+      "title": "Coal LLC Demo",
+      "type": "official-icon",
+      "url": "/artwork/clcoalllcdemo.webp"
+    },
     "clcrazycattle3d": {
       "assetSha256": "0914234441b463261ea157164b0dfa1054045f0fa0919e96f045db9095b8cace",
       "identityEvidence": "The wrapper this repository distributes for Crazy Cattle 3D declares this image as its own artwork (official-icon).",
@@ -62,6 +191,21 @@
       "title": "Crazy Cattle 3D",
       "type": "official-icon",
       "url": "/artwork/clcrazycattle3d.webp"
+    },
+    "clcybersensation": {
+      "assetSha256": "beaa8821789901312a15f287c2e16dba83636ddbe616d7107d28f350106812b0",
+      "identityEvidence": "Published by the distribution for Cyber Sensation at https://gamaverse.com/c/i/y/fnf-cyber-sensation-friday-night-funkin.jpg, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched gamaverse.com page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched gamaverse.com page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://gamaverse.com/c/i/y/fnf-cyber-sensation-friday-night-funkin.jpg",
+      "title": "Cyber Sensation",
+      "type": "official-og",
+      "url": "/artwork/clcybersensation.webp"
     },
     "cldodecadragons": {
       "assetSha256": "6db4b9dbdb1e6fbbfb9a521c3dbf1868173fe76afd6168ac1d4f16b561dca4a2",
@@ -81,6 +225,35 @@
       "type": "official-icon",
       "url": "/artwork/cldogeminer.webp"
     },
+    "cldreadheadparkour": {
+      "assetSha256": "e4ebc6c542a1892755e89574d7ea9603cfbdca5b4d3a2cd1121a855c43453163",
+      "identityEvidence": "Published by the distribution for Dreadhead Parkour at https://cdn.jsdelivr.net/gh/cooldude2349/everything@main/dreadheadparkour/icons/icon-128.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/cooldude2349/everything@main/dreadheadparkour/icons/icon-128.png",
+      "title": "Dreadhead Parkour",
+      "type": "official-icon",
+      "url": "/artwork/cldreadheadparkour.webp"
+    },
+    "cldriverussia": {
+      "assetSha256": "94c67297a783e14fccd1d653c06634f85e88bc8c99aa92f4fa9fc0f4a97d75b3",
+      "identityEvidence": "Published by the distribution for Drive Russia at https://cdn.jsdelivr.net/gh/karala-ar/vaydanam@main/logo.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; probed build asset paths).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/karala-ar/vaydanam@main/logo.png",
+      "title": "Drive Russia",
+      "type": "game-asset",
+      "url": "/artwork/cldriverussia.webp"
+    },
     "clducklingsio": {
       "assetSha256": "071ce266b94530bcf6c96ba8bdfa42e04182cac7d96bf4cb17b8cecdf078cb0d",
       "identityEvidence": "The wrapper this repository distributes for Ducklings.io declares this image as its own artwork (official-og).",
@@ -89,6 +262,63 @@
       "title": "Ducklings.io",
       "type": "official-og",
       "url": "/artwork/clducklingsio.webp"
+    },
+    "clegg": {
+      "assetSha256": "87a6cb54760a8e333a040f9cc9fc0709464f70c9eaf41dc51c3e3d24a31aa857",
+      "identityEvidence": "Published by the distribution for Egg at https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/MISC/egg/index.icon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/MISC/egg/index.icon.png",
+      "title": "Egg",
+      "type": "official-icon",
+      "url": "/artwork/clegg.webp"
+    },
+    "clescalatingduel": {
+      "assetSha256": "ea69037cf6f2add9a85b93da34fcd5ad3db68ee018d1700299a613edc9250806",
+      "identityEvidence": "Published by the distribution for Escalating Duel at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/escalating-duel/icons/icon-256.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/escalating-duel/icons/icon-256.png",
+      "title": "Escalating Duel",
+      "type": "official-icon",
+      "url": "/artwork/clescalatingduel.webp"
+    },
+    "clextremerun3d": {
+      "assetSha256": "58db125352bdb61915a76a618345e67e8be5106dc78afd1eda2a3e87d18b0f6b",
+      "identityEvidence": "Published by the distribution for Extreme Run 3D at https://cdn.jsdelivr.net/gh/faralong/all@main/extremerun/logo.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; probed build asset paths).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/faralong/all@main/extremerun/logo.png",
+      "title": "Extreme Run 3D",
+      "type": "game-asset",
+      "url": "/artwork/clextremerun3d.webp"
+    },
+    "clfearassessment": {
+      "assetSha256": "1e212b0e1439f47a0f0ddc3294981b5d06bf9ee5cec6d33ff2a21427925524fa",
+      "identityEvidence": "Published by the distribution for Fear Assessment at https://cdn.jsdelivr.net/gh/shayderrr/portsv4@715fc257ff1afbde48faa9faf30902bb93cb977e/8991133/Fear%20Assessment%20HTML%202.0/icon-256.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/shayderrr/portsv4@715fc257ff1afbde48faa9faf30902bb93cb977e/8991133/Fear%20Assessment%20HTML%202.0/icon-256.png",
+      "title": "Fear Assessment",
+      "type": "official-icon",
+      "url": "/artwork/clfearassessment.webp"
     },
     "clfeedthevoid": {
       "assetSha256": "64394d3cdb26e675f69899048d2cd780c8fd2a389d7a88029af488cfc38d2f9a",
@@ -99,6 +329,150 @@
       "type": "official-icon",
       "url": "/artwork/clfeedthevoid.webp"
     },
+    "clfireboyandwatergirl5": {
+      "assetSha256": "cff65704a25a19679d7fb303a303fdcdc0dbb20a4f6288800d5d2754b28c5959",
+      "identityEvidence": "Published by the distribution for Fireboy and Watergirl 5 at https://ssl.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_74x24dp.png, found by fetching that distribution's own pages/assets (fetched script.google.com page metadata; fetched script.google.com page metadata).",
+      "methodsInvestigated": [
+        "fetched script.google.com page metadata",
+        "fetched script.google.com page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://ssl.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_74x24dp.png",
+      "title": "Fireboy and Watergirl 5",
+      "type": "game-asset",
+      "url": "/artwork/clfireboyandwatergirl5.webp"
+    },
+    "clfisheatgettingbig": {
+      "assetSha256": "d85cea33209a4057d59e4a0698e89a1c632d77b4a34b125e0f3069a614700ecd",
+      "identityEvidence": "Published by the distribution for Fish Eat Getting Big at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@5f29e7882a21bcc33ff3bb6ab1638a459da2ae94/fish-eat-big/icons/icon-256.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@5f29e7882a21bcc33ff3bb6ab1638a459da2ae94/fish-eat-big/icons/icon-256.png",
+      "title": "Fish Eat Getting Big",
+      "type": "official-icon",
+      "url": "/artwork/clfisheatgettingbig.webp"
+    },
+    "clfnfagoti": {
+      "assetSha256": "ae67c1a48b14488648529f3ac5c53c4841ddfb35f2129952cbaf03b30eaf267b",
+      "identityEvidence": "Published by the distribution for FNF: Agoti at https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/agoti/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/agoti/favicon.png",
+      "title": "FNF: Agoti",
+      "type": "official-icon",
+      "url": "/artwork/clfnfagoti.webp"
+    },
+    "clfnfanimation": {
+      "assetSha256": "549a4773d126f95fe1e52537bbedd5015adb234371e53ec3c2f1bcaf5f25acea",
+      "identityEvidence": "Published by the distribution for FNF Animation at https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/animation/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/animation/favicon.png",
+      "title": "FNF Animation",
+      "type": "official-icon",
+      "url": "/artwork/clfnfanimation.webp"
+    },
+    "clfnfcamelliarudeblaster": {
+      "assetSha256": "583d8121fe30b56e04965c61b2b710d9fa7ca9d6a9da9b006373739cc89fb0e8",
+      "identityEvidence": "Published by the distribution for FNF: Camellia Rude Blaster at https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@dc03eaf9807af93db9daf4510d396dff898f0705/camellia-rude-buster/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@dc03eaf9807af93db9daf4510d396dff898f0705/camellia-rude-buster/favicon.png",
+      "title": "FNF: Camellia Rude Blaster",
+      "type": "official-icon",
+      "url": "/artwork/clfnfcamelliarudeblaster.webp"
+    },
+    "clfnfclassified": {
+      "assetSha256": "64c8519d72714966af6c822a90556ef118dd6d4be93d1e92f40a50e2743f8bc2",
+      "identityEvidence": "Published by the distribution for FNF: Classified at https://game.fnfhub.net/24825/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched game.fnfhub.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched game.fnfhub.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://game.fnfhub.net/24825/favicon.png",
+      "title": "FNF: Classified",
+      "type": "official-icon",
+      "url": "/artwork/clfnfclassified.webp"
+    },
+    "clfnfdokitakeoverplus": {
+      "assetSha256": "3be264d5aa5a7a730cb3c7b39b82a818df6790f3da3dedd1b869cb9de9778b2b",
+      "identityEvidence": "Published by the distribution for FNF: Doki Takeover Plus at https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/doki-takeover-plus/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched game3.glov3.me page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched game3.glov3.me page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/doki-takeover-plus/favicon.png",
+      "title": "FNF: Doki Takeover Plus",
+      "type": "official-icon",
+      "url": "/artwork/clfnfdokitakeoverplus.webp"
+    },
+    "clfnffnaf1": {
+      "assetSha256": "2df54ab62ade527112c93ed7290dd3611b7798454a8b68009ef8176255638bac",
+      "identityEvidence": "Published by the distribution for FNF: FNAF 1 at https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@dbdf272148d47429d3f019f5f2c226f9d6e140a9/fnaf1/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@dbdf272148d47429d3f019f5f2c226f9d6e140a9/fnaf1/favicon.png",
+      "title": "FNF: FNAF 1",
+      "type": "official-icon",
+      "url": "/artwork/clfnffnaf1.webp"
+    },
+    "clfnffnaf3": {
+      "assetSha256": "84336f6ae92f1fa560989c31c1089bb1439c1a0322c2a4d39866033d55a098f0",
+      "identityEvidence": "Published by the distribution for FNF: FNAF 3 at https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/fnaf-3/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/fnaf-3/favicon.png",
+      "title": "FNF: FNAF 3",
+      "type": "official-icon",
+      "url": "/artwork/clfnffnaf3.webp"
+    },
+    "clfnfgfmode": {
+      "assetSha256": "433cf39f860e37194a22be2285a17346e6106d1cc3c3b513675a3b9952d2da4d",
+      "identityEvidence": "Published by the distribution for FNF GF Mode at https://gamaverse.com/c/i/y/fnf-week-end-1.jpg, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched gamaverse.com page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched gamaverse.com page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://gamaverse.com/c/i/y/fnf-week-end-1.jpg",
+      "title": "FNF GF Mode",
+      "type": "official-og",
+      "url": "/artwork/clfnfgfmode.webp"
+    },
     "clfnfgodot": {
       "assetSha256": "fcb64656756e0299c7adffd552eb188ae86b5177e31aed83f48e1684bfd5bccd",
       "identityEvidence": "The wrapper this repository distributes for FNF: Godot declares this image as its own artwork (official-icon).",
@@ -107,6 +481,252 @@
       "title": "FNF: Godot",
       "type": "official-icon",
       "url": "/artwork/clfnfgodot.webp"
+    },
+    "clfnfgoldenapple": {
+      "assetSha256": "72b1902d794b05bb9462dda4746fc4a99078c04e685c1e97a17eda37466d6c64",
+      "identityEvidence": "Published by the distribution for FNF: Golden Apple at https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/golden-apple/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/golden-apple/favicon.png",
+      "title": "FNF: Golden Apple",
+      "type": "official-icon",
+      "url": "/artwork/clfnfgoldenapple.webp"
+    },
+    "clfnfimposterv4": {
+      "assetSha256": "48c1707d9d95319fd98ac47e46623adf75262f9b92e9fe5ac0f1a18e9f335d66",
+      "identityEvidence": "Published by the distribution for FNF: Imposter V4 at https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/imposter-v4%20copy/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/imposter-v4%20copy/favicon.png",
+      "title": "FNF: Imposter V4",
+      "type": "official-icon",
+      "url": "/artwork/clfnfimposterv4.webp"
+    },
+    "clfnfmaginagematches": {
+      "assetSha256": "6664ca47f9758d7537b2a52c922e54fe63f6e80450a6346d90c4ab9cd422d743",
+      "identityEvidence": "Published by the distribution for FNF: Maginage Matches at https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/maginage-matches/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched game.fnfhub.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched game.fnfhub.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/maginage-matches/favicon.png",
+      "title": "FNF: Maginage Matches",
+      "type": "official-icon",
+      "url": "/artwork/clfnfmaginagematches.webp"
+    },
+    "clfnfremnants": {
+      "assetSha256": "a2443770cd670856451ffa641cde9eb840df256ef41de7554b191b929ed4310b",
+      "identityEvidence": "Published by the distribution for FNF: Remnants at https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/remnants/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/remnants/favicon.png",
+      "title": "FNF: Remnants",
+      "type": "official-icon",
+      "url": "/artwork/clfnfremnants.webp"
+    },
+    "clfnfshaggyxmatt": {
+      "assetSha256": "c0c50722dc9493872ef195ab2d8bc9766b8b6b9452107cace25705496f51e6bc",
+      "identityEvidence": "Published by the distribution for FNF: Shaggy X Matt at https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/shaggyxmatt/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched game.fnfhub.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched game.fnfhub.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/shaggyxmatt/favicon.png",
+      "title": "FNF: Shaggy X Matt",
+      "type": "official-icon",
+      "url": "/artwork/clfnfshaggyxmatt.webp"
+    },
+    "clfnfsoft": {
+      "assetSha256": "9a101228d876fd9f64d610cd457a1de3d2ee75cf2d86ad70e3a3913838577df7",
+      "identityEvidence": "Published by the distribution for FNF Soft at https://gamasexual.com/c/i/y/fnf-soft-online-friday-night-funkin.jpg, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched gamasexual.com page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched gamasexual.com page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://gamasexual.com/c/i/y/fnf-soft-online-friday-night-funkin.jpg",
+      "title": "FNF Soft",
+      "type": "official-og",
+      "url": "/artwork/clfnfsoft.webp"
+    },
+    "clfnfstarlightmayhem": {
+      "assetSha256": "3c1d4afb0b3a00dd01a4c9914d4e0e915975345f453b2a3a646752a503f3feb1",
+      "identityEvidence": "Published by the distribution for FNF: Starlight Mayhem at https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/starlight-mayhem/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/starlight-mayhem/favicon.png",
+      "title": "FNF: Starlight Mayhem",
+      "type": "official-icon",
+      "url": "/artwork/clfnfstarlightmayhem.webp"
+    },
+    "clfnfstridentcrisis": {
+      "assetSha256": "006db8a9f4b055ccc456c8746ac516bac4873dec9a774cd2227a6235bebe08a4",
+      "identityEvidence": "Published by the distribution for FNF Strident Crisis at https://game3.glov3.me/uploads/game/html5/28107/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched game3.glov3.me page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched game3.glov3.me page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://game3.glov3.me/uploads/game/html5/28107/favicon.png",
+      "title": "FNF Strident Crisis",
+      "type": "official-icon",
+      "url": "/artwork/clfnfstridentcrisis.webp"
+    },
+    "clfnftailsgetstrolled": {
+      "assetSha256": "c97f4f27062e8127d473b0f093001519b68550e6a7ce595516ee0cad8b390c09",
+      "identityEvidence": "Published by the distribution for FNF: Tails Gets Trolled at https://game.fnfhub.net/24918/favicon.png, found by fetching that distribution's own pages/assets (fetched game.fnfhub.net page metadata).",
+      "methodsInvestigated": [
+        "fetched game.fnfhub.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://game.fnfhub.net/24918/favicon.png",
+      "title": "FNF: Tails Gets Trolled",
+      "type": "official-icon",
+      "url": "/artwork/clfnftailsgetstrolled.webp"
+    },
+    "clfnftricky": {
+      "assetSha256": "4a1786a2827f31f2a08879940df97a7a0c65dee8f8d3e397c2a172e8bc457d02",
+      "identityEvidence": "Published by the distribution for FNF: Tricky at https://gamasexual.com/c/i/y/friday-night-funkin-vs-tricky.jpg, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched gamasexual.com page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched gamasexual.com page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://gamasexual.com/c/i/y/friday-night-funkin-vs-tricky.jpg",
+      "title": "FNF: Tricky",
+      "type": "official-og",
+      "url": "/artwork/clfnftricky.webp"
+    },
+    "clfnfundertale": {
+      "assetSha256": "5913f08008499b2a1b1947141c48e1396808487bda64ac9df3d4f04a7801f1f6",
+      "identityEvidence": "Published by the distribution for FNF: Undertale at https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@latest/undertale/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@latest/undertale/favicon.png",
+      "title": "FNF: Undertale",
+      "type": "official-icon",
+      "url": "/artwork/clfnfundertale.webp"
+    },
+    "clfnfvoid": {
+      "assetSha256": "8a105ecf32129e1900c50287a31749ead47749ae5a7e86b5d7e75ecc34181139",
+      "identityEvidence": "Published by the distribution for FNF Void at https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@5b03befe7318e2256e4f304ff21262cee710177b/void/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@5b03befe7318e2256e4f304ff21262cee710177b/void/favicon.png",
+      "title": "FNF Void",
+      "type": "official-icon",
+      "url": "/artwork/clfnfvoid.webp"
+    },
+    "clfnfwaltenfiles": {
+      "assetSha256": "4f5a86d2a53b31aa6098169375a10eb3165516e03cb7f02be5a4e623804fee39",
+      "identityEvidence": "Published by the distribution for FNF Walten Files at https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/walten-files/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/walten-files/favicon.png",
+      "title": "FNF Walten Files",
+      "type": "official-icon",
+      "url": "/artwork/clfnfwaltenfiles.webp"
+    },
+    "clfnfwednesday-infedility": {
+      "assetSha256": "94da3a3ea599f79f5efbabb8299518310a4654f3b7039eb2140c1ac901e68354",
+      "identityEvidence": "Published by the distribution for FNF Wednesday Infidelity at https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/wednesday-infedility/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/wednesday-infedility/favicon.png",
+      "title": "FNF Wednesday Infidelity",
+      "type": "official-icon",
+      "url": "/artwork/clfnfwednesday-infedility.webp"
+    },
+    "clfunkinmix": {
+      "assetSha256": "da22ebd8bd606be903624735c48c140fb47b661438f0ee48f9dd64d1dffeb364",
+      "identityEvidence": "Published by the distribution for Funk in Mix at https://game.fnfhub.net/24828/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched game.fnfhub.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched game.fnfhub.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://game.fnfhub.net/24828/favicon.png",
+      "title": "Funk in Mix",
+      "type": "official-icon",
+      "url": "/artwork/clfunkinmix.webp"
+    },
+    "clfunnybattle": {
+      "assetSha256": "8040d407d0e2eeae2e6921f91e0e4b7a1bf2a506da8628556ee595de7f2b8315",
+      "identityEvidence": "Published by the distribution for Funny Battle at https://cdn.jsdelivr.net/gh/CoolDude2349/everything@main/funnybattle/logo.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; probed build asset paths).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/CoolDude2349/everything@main/funnybattle/logo.png",
+      "title": "Funny Battle",
+      "type": "game-asset",
+      "url": "/artwork/clfunnybattle.webp"
+    },
+    "clfunnybattle2": {
+      "assetSha256": "ef31190f82e6b01b45d0d93d632f3de255b3fb27df4df8c12ae2876dca6f7c72",
+      "identityEvidence": "Published by the distribution for Funny Battle 2 at https://cdn.jsdelivr.net/gh/CoolDude2349/everything@main/funnybattle2/logo.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; probed build asset paths).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/CoolDude2349/everything@main/funnybattle2/logo.png",
+      "title": "Funny Battle 2",
+      "type": "game-asset",
+      "url": "/artwork/clfunnybattle2.webp"
     },
     "clfunnyshooter22": {
       "assetSha256": "8cbed8bf561625a0b34013d3c6077c82f8222a7bd90b96b222c8e7094ca98e04",
@@ -117,6 +737,20 @@
       "type": "game-asset",
       "url": "/artwork/clfunnyshooter22.webp"
     },
+    "clfused240": {
+      "assetSha256": "459bda0e217a0691598c96d5304b1fa4e91c49632c4add8f4ae2a97550cdcfe5",
+      "identityEvidence": "Published by the distribution for Fused 240 at https://cdn.jsdelivr.net/gh/shayderrr/portsv4@5a492db2b4d7a2b409989961977f882530416920/fused240/Fused%20240.icon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/shayderrr/portsv4@5a492db2b4d7a2b409989961977f882530416920/fused240/Fused%20240.icon.png",
+      "title": "Fused 240",
+      "type": "official-icon",
+      "url": "/artwork/clfused240.webp"
+    },
     "clgeometryvibes": {
       "assetSha256": "22b77ff8a80e8cfde7a919ff2e05a1ae5417f50d172bae3ea6478417117ee310",
       "identityEvidence": "The wrapper this repository distributes for Geometry Vibes declares this image as its own artwork (game-asset).",
@@ -125,6 +759,120 @@
       "title": "Geometry Vibes",
       "type": "game-asset",
       "url": "/artwork/clgeometryvibes.webp"
+    },
+    "clgetontop": {
+      "assetSha256": "05f5d445695ad5777edb4680bd5431d5a21871f9988920580ec5b0185ec5da05",
+      "identityEvidence": "Published by the distribution for Get on Top at https://cdn.jsdelivr.net/gh/GetOnTopUnblocked/GetOnTopUnblocked.github.io@693e592e4c9f1910a9b5ccc9c6624f8687e963e3/icons/icon-512.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/GetOnTopUnblocked/GetOnTopUnblocked.github.io@693e592e4c9f1910a9b5ccc9c6624f8687e963e3/icons/icon-512.png",
+      "title": "Get on Top",
+      "type": "official-icon",
+      "url": "/artwork/clgetontop.webp"
+    },
+    "clgolfbattle": {
+      "assetSha256": "8b0a20f0237e0bcf7e02631fd399c43989f05e3a2eb600cc4e5e44029307cfe6",
+      "identityEvidence": "Published by the distribution for Golf Battle at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/golf-battle/logo.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; probed build asset paths).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/golf-battle/logo.png",
+      "title": "Golf Battle",
+      "type": "game-asset",
+      "url": "/artwork/clgolfbattle.webp"
+    },
+    "clgrn": {
+      "assetSha256": "5c2c728af09d58af57b89b36a57f4a6764df22638ec32865dd338d8f1d59a4af",
+      "identityEvidence": "Published by the distribution for Grn at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/grn/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/grn/favicon.png",
+      "title": "Grn",
+      "type": "official-icon",
+      "url": "/artwork/clgrn.webp"
+    },
+    "clhardwaretycoon": {
+      "assetSha256": "1f5206bbcda0dc4bf016d421e6703a789644181fde612ad076b6c9931ef3a51a",
+      "identityEvidence": "Published by the distribution for Hardware Tycoon at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@8d3c8217ec14be44027d6fced6f837cc7ffa1249/hardware%20tycoon/icon-256.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@8d3c8217ec14be44027d6fced6f837cc7ffa1249/hardware%20tycoon/icon-256.png",
+      "title": "Hardware Tycoon",
+      "type": "official-icon",
+      "url": "/artwork/clhardwaretycoon.webp"
+    },
+    "clhero3flyingrobot": {
+      "assetSha256": "c151c87c5c127d2f983178e72478d376f78873f95a9394a15789455e4147d990",
+      "identityEvidence": "Published by the distribution for Hero 3 Flying Robot at https://cdn.jsdelivr.net/gh/faralong/all@main/hero3/logo.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; probed build asset paths).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/faralong/all@main/hero3/logo.png",
+      "title": "Hero 3 Flying Robot",
+      "type": "game-asset",
+      "url": "/artwork/clhero3flyingrobot.webp"
+    },
+    "clinnkeeper": {
+      "assetSha256": "9ff99db1e059a474c85d26c9e151d538f9854011e8aa104d50b08e7aad9764c9",
+      "identityEvidence": "Published by the distribution for Innkeeper at https://www.gstatic.com/images/branding/googleg_gradient/2x/googleg_gradient_standard_192dp.png, found by fetching that distribution's own pages/assets (fetched www.google-analytics.com page metadata).",
+      "methodsInvestigated": [
+        "fetched www.google-analytics.com page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://www.gstatic.com/images/branding/googleg_gradient/2x/googleg_gradient_standard_192dp.png",
+      "title": "Innkeeper",
+      "type": "official-icon",
+      "url": "/artwork/clinnkeeper.webp"
+    },
+    "clintellisphere": {
+      "assetSha256": "e7028056aa1b5ec9f9d5e13f99f3a6c990bf3008c836a2b70f0dede6bfae075a",
+      "identityEvidence": "Published by the distribution for Intellisphere at https://cdn.jsdelivr.net/gh/Deformed-steve/the-chesse-stash@main/games/intellisphere/IntelliSphere.icon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/Deformed-steve/the-chesse-stash@main/games/intellisphere/IntelliSphere.icon.png",
+      "title": "Intellisphere",
+      "type": "official-icon",
+      "url": "/artwork/clintellisphere.webp"
+    },
+    "cljazzjackrabbit2": {
+      "assetSha256": "b3d686123830c813f2a965aa1ec69bbae95fe574acfaf0ebe5956d8fa61df9b3",
+      "identityEvidence": "Published by the distribution for Jazz Jackrabbit 2 at https://rawcdn.githack.com/Stinkalistic/UGS/cead580593b0a81e9dc197057521ccbcb7e7ca61/MISC/jazz2/logo.gif, found by fetching that distribution's own pages/assets (fetched rawcdn.githack.com page metadata).",
+      "methodsInvestigated": [
+        "fetched rawcdn.githack.com page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://rawcdn.githack.com/Stinkalistic/UGS/cead580593b0a81e9dc197057521ccbcb7e7ca61/MISC/jazz2/logo.gif",
+      "title": "Jazz Jackrabbit 2",
+      "type": "game-asset",
+      "url": "/artwork/cljazzjackrabbit2.webp"
     },
     "cljellymario": {
       "assetSha256": "6c02411f7fa4a71fb519c084e5f47d6dbdd4ce5816ed753ca4fbbb478ec2de06",
@@ -135,6 +883,20 @@
       "type": "official-og",
       "url": "/artwork/cljellymario.webp"
     },
+    "cljumpingshell": {
+      "assetSha256": "6aab96d5f7f94b3040127b34cb21456f877c009fd827312d4d33bb4af6b15d7b",
+      "identityEvidence": "Published by the distribution for Jumping Shell at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@dbdca8d3035fa078b774545e33c85a7eb6110088/jumping%20shell/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@dbdca8d3035fa078b774545e33c85a7eb6110088/jumping%20shell/favicon.png",
+      "title": "Jumping Shell",
+      "type": "official-icon",
+      "url": "/artwork/cljumpingshell.webp"
+    },
     "clkanyezone": {
       "assetSha256": "c457a72a13d2bd5c85b6f193cb526caca7f43e72aa1ddc145215669d82634af4",
       "identityEvidence": "The wrapper this repository distributes for Kanye Zone declares this image as its own artwork (official-og).",
@@ -143,6 +905,21 @@
       "title": "Kanye Zone",
       "type": "official-og",
       "url": "/artwork/clkanyezone.webp"
+    },
+    "clkaratebros": {
+      "assetSha256": "4b63fbf3957065cd94688ff5133b42e23257666f7c4e08d3007e44eac3aeee1f",
+      "identityEvidence": "Published by the distribution for Karate Bros at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@ba0d3910bd7dde2f6171c57d658113f9df69dd77/karate%20bros/icon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; probed build asset paths).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@ba0d3910bd7dde2f6171c57d658113f9df69dd77/karate%20bros/icon.png",
+      "title": "Karate Bros",
+      "type": "game-asset",
+      "url": "/artwork/clkaratebros.webp"
     },
     "clkartbros": {
       "assetSha256": "c73c4848cd188f69df3c8a6381f11621f83735404483d7686ebfb4157970cfe1",
@@ -153,6 +930,183 @@
       "type": "official-og",
       "url": "/artwork/clkartbros.webp"
     },
+    "clkourio": {
+      "assetSha256": "da1a70ea6cf0e38221a3799319a75b620993efd688bdbf355f38bded9ee87486",
+      "identityEvidence": "Published by the distribution for Kour.io at https://cdn.jsdelivr.net/gh/Pok12d/ta@main/kour/kour-title.webp, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/Pok12d/ta@main/kour/kour-title.webp",
+      "title": "Kour.io",
+      "type": "game-asset",
+      "url": "/artwork/clkourio.webp"
+    },
+    "clkrillion": {
+      "assetSha256": "9202586dcb96e37349686091fe40f01d24f5de48fecd5a28af3abb2efa3237bb",
+      "identityEvidence": "Published by the distribution for Krillion at https://krillion.cc/opengraph-image.png?opengraph-image.2nlv12kzc_1ph.png, found by fetching that distribution's own pages/assets (fetched krillion.cc page metadata).",
+      "methodsInvestigated": [
+        "fetched krillion.cc page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://krillion.cc/opengraph-image.png?opengraph-image.2nlv12kzc_1ph.png",
+      "title": "Krillion",
+      "type": "official-og",
+      "url": "/artwork/clkrillion.webp"
+    },
+    "clmadalinstuntcarsmultiplayerfixed": {
+      "assetSha256": "af6bf795ca523cd61d592526004edd12cfe750b83f98bde594ffdc8810890747",
+      "identityEvidence": "Published by the distribution for Madalin Stunt Cars Multiplayer at https://www.madalingames.com/wp-content/uploads/2023/04/madalin-cars-multiplayer-1280.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched www.madalingames.com page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched www.madalingames.com page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://www.madalingames.com/wp-content/uploads/2023/04/madalin-cars-multiplayer-1280.png",
+      "title": "Madalin Stunt Cars Multiplayer",
+      "type": "official-og",
+      "url": "/artwork/clmadalinstuntcarsmultiplayerfixed.webp"
+    },
+    "clmadstick": {
+      "assetSha256": "3c1e49ea9fd3266cbb11b1393b31861c7dc15ef335dee7db9f90ace9c08afbb3",
+      "identityEvidence": "Published by the distribution for Mad Stick at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/mad-stick/logo.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; probed build asset paths).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/mad-stick/logo.png",
+      "title": "Mad Stick",
+      "type": "game-asset",
+      "url": "/artwork/clmadstick.webp"
+    },
+    "clmariomadness": {
+      "assetSha256": "a8fbcfb9a07c10c919c098a50b3e674f352ebb5be3216c79744445c556c1b439",
+      "identityEvidence": "Published by the distribution for Mario Madness at https://cdn.jsdelivr.net/gh/mll-enh/diesmosfilehost@8679c0fe47a99f5657f04958fd06c5abdaa4a6b9/MM/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched game3.glov3.me page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched game3.glov3.me page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/mll-enh/diesmosfilehost@8679c0fe47a99f5657f04958fd06c5abdaa4a6b9/MM/favicon.png",
+      "title": "Mario Madness",
+      "type": "official-icon",
+      "url": "/artwork/clmariomadness.webp"
+    },
+    "clmattv2": {
+      "assetSha256": "b806af31e8fb75c6cf53717ba0aa9a0c272bf3ed19836981f858e3315f7a9bce",
+      "identityEvidence": "Published by the distribution for Matt V2 at https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/matt-v2/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/matt-v2/favicon.png",
+      "title": "Matt V2",
+      "type": "official-icon",
+      "url": "/artwork/clmattv2.webp"
+    },
+    "clminecraftshooter": {
+      "assetSha256": "3dacda16548bed7f1c8e77fbef5db6d2014bad7ba902635c0dcdeb1137e455b2",
+      "identityEvidence": "Published by the distribution for Minecraft Shooter at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/mineshootmm/logo.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; probed build asset paths).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/mineshootmm/logo.png",
+      "title": "Minecraft Shooter",
+      "type": "game-asset",
+      "url": "/artwork/clminecraftshooter.webp"
+    },
+    "clminishooters": {
+      "assetSha256": "dfa1e356d4ed91fb6411dc138ea44322cc17824bd91870e693d253708a8be14c",
+      "identityEvidence": "Published by the distribution for Mini Shooters at https://cdn.jsdelivr.net/gh/faralong/all@main/minisho/icons/icon-128.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/faralong/all@main/minisho/icons/icon-128.png",
+      "title": "Mini Shooters",
+      "type": "official-icon",
+      "url": "/artwork/clminishooters.webp"
+    },
+    "clmomoscrushers": {
+      "assetSha256": "634b27afd21d439240bd8e57958a836a1c42a4d155a52d35261eb4aec5660840",
+      "identityEvidence": "Published by the distribution for Momo Crushers at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/momos-crusher/icons/icon-128.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/momos-crusher/icons/icon-128.png",
+      "title": "Momo Crushers",
+      "type": "official-icon",
+      "url": "/artwork/clmomoscrushers.webp"
+    },
+    "clneverendinglegacy": {
+      "assetSha256": "c68f0eef13281437cc32d9ecfbec0aa9a284e29a02c8f7947d9ec3076ece3c7f",
+      "identityEvidence": "Published by the distribution for Neverending Legacy at https://cdn.jsdelivr.net/gh/plasma4/magix-fix@e15144dd5573b5ca9a1395116d56620ef19548ba/img/logo.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched cdn.jsdelivr.net page metadata; probed build asset paths).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/plasma4/magix-fix@e15144dd5573b5ca9a1395116d56620ef19548ba/img/logo.png",
+      "title": "Neverending Legacy",
+      "type": "game-asset",
+      "url": "/artwork/clneverendinglegacy.webp"
+    },
+    "clobby-99-will-lose": {
+      "assetSha256": "244f1f1c48de5bf1f5102357a5c1c00bb75bc79808e2a5dc66e200e3790bda6d",
+      "identityEvidence": "Published by the distribution for Obby: 99 Will Lose at https://cdn.jsdelivr.net/gh/google-gl-games-schools/6@main/logo.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched cdn.jsdelivr.net page metadata; probed build asset paths).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/google-gl-games-schools/6@main/logo.png",
+      "title": "Obby: 99 Will Lose",
+      "type": "game-asset",
+      "url": "/artwork/clobby-99-will-lose.webp"
+    },
+    "clobbybike": {
+      "assetSha256": "d8e54fbbf63d18541879da70727c12dd2c891b1229da527527307c72e4ab0c13",
+      "identityEvidence": "Published by the distribution for Obby: Bike at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/obby-bike/logo.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; probed build asset paths).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/obby-bike/logo.png",
+      "title": "Obby: Bike",
+      "type": "game-asset",
+      "url": "/artwork/clobbybike.webp"
+    },
     "clomegalayers": {
       "assetSha256": "00461287b96828826b278dcf7b50a73dac771629fbc00cb9b60b56b403a5b441",
       "identityEvidence": "The wrapper this repository distributes for Omega Layers declares this image as its own artwork (official-og).",
@@ -161,6 +1115,20 @@
       "title": "Omega Layers",
       "type": "official-og",
       "url": "/artwork/clomegalayers.webp"
+    },
+    "clomnipresent": {
+      "assetSha256": "e3c784fa51b69d930ccd2c69bc844e765887e95eb0158f2fee1fe8fd99b02a14",
+      "identityEvidence": "Published by the distribution for Omnipresent at https://mod.fnfhub.net/uploads/game/icon/24047/fnf-omnipresent-sung-by-sonic-exe-characters-1.jpg, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://mod.fnfhub.net/uploads/game/icon/24047/fnf-omnipresent-sung-by-sonic-exe-characters-1.jpg",
+      "title": "Omnipresent",
+      "type": "game-asset",
+      "url": "/artwork/clomnipresent.webp"
     },
     "clonlyup": {
       "assetSha256": "c0cecd1054d6760e1464d607d89cdf612dc911a4e7c966b08f9a3a51b5d3b9cf",
@@ -207,6 +1175,135 @@
       "type": "official-og",
       "url": "/artwork/clpixelclient.webp"
     },
+    "clplonky": {
+      "assetSha256": "fd871d1c198d4f503c635cd399a6afc20c5cd066e596b44a8fe2bd81f3b15aa7",
+      "identityEvidence": "Published by the distribution for Plonky at https://cdn.jsdelivr.net/gh/faralong/all@main/plonkyy/icons/icon-128.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/faralong/all@main/plonkyy/icons/icon-128.png",
+      "title": "Plonky",
+      "type": "official-icon",
+      "url": "/artwork/clplonky.webp"
+    },
+    "clpoorbunny": {
+      "assetSha256": "b107f333ae167b2c8a09edcb209250204b847ff554e61104bb266a24ab763e39",
+      "identityEvidence": "Published by the distribution for Poor Bunny at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@00b33545cc0fd6086f72f2a635822983fcf2b7c4/poor-bunny/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@00b33545cc0fd6086f72f2a635822983fcf2b7c4/poor-bunny/favicon.png",
+      "title": "Poor Bunny",
+      "type": "official-icon",
+      "url": "/artwork/clpoorbunny.webp"
+    },
+    "clpostal": {
+      "assetSha256": "5d4512450d1a4e28982f8506556b3cc8ef6a203f17820f5cb2088eac4b3ec2ec",
+      "identityEvidence": "Published by the distribution for Postal at https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/MISC/postal/play-postal-free.jpg, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/MISC/postal/play-postal-free.jpg",
+      "title": "Postal",
+      "type": "official-og",
+      "url": "/artwork/clpostal.webp"
+    },
+    "clpuppethockey": {
+      "assetSha256": "f743cc1c4e8e38b3f0882512798a826b7657eebf2a6d288cfc48f066f5a018c2",
+      "identityEvidence": "Published by the distribution for Puppet Hockey at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@927c5e7b35d9117d0bfc986f7bb5a3778d360f13/puppet%20hockey/icon-256.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@927c5e7b35d9117d0bfc986f7bb5a3778d360f13/puppet%20hockey/icon-256.png",
+      "title": "Puppet Hockey",
+      "type": "official-icon",
+      "url": "/artwork/clpuppethockey.webp"
+    },
+    "clrecoil": {
+      "assetSha256": "9fc77e308d6d96636c482e3c23a6c26210277512670a2c656a20fa6a9cbc4260",
+      "identityEvidence": "Published by the distribution for Recoil at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/recoil/webapp/cover.jpg, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/recoil/webapp/cover.jpg",
+      "title": "Recoil",
+      "type": "game-asset",
+      "url": "/artwork/clrecoil.webp"
+    },
+    "clredball4": {
+      "assetSha256": "f21c159a270daa62b1e786ec693e98f3cbd9b0f5d4d9a205e69f35b19739dbee",
+      "identityEvidence": "Published by the distribution for Red Ball 4 at https://cdn.jsdelivr.net/gh/greeniYT/y@main/rdbal/images/logo.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; probed build asset paths).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/greeniYT/y@main/rdbal/images/logo.png",
+      "title": "Red Ball 4",
+      "type": "game-asset",
+      "url": "/artwork/clredball4.webp"
+    },
+    "clrewrite2": {
+      "assetSha256": "646017f2e52bf52471f62bcc2595b686a77795b02650f50939e6c7fe2af7ed06",
+      "identityEvidence": "Published by the distribution for Rewrite 2 at https://w8.snokido.com/img/large/fnf-rewrite-sonic.jpg, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched www.snokido.com page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched www.snokido.com page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://w8.snokido.com/img/large/fnf-rewrite-sonic.jpg",
+      "title": "Rewrite 2",
+      "type": "official-og",
+      "url": "/artwork/clrewrite2.webp"
+    },
+    "clrollyvortex": {
+      "assetSha256": "94ffaad34b10f3affbbd0dec7f823207c88fb38ff48c13a3a66f9d4982ea03f0",
+      "identityEvidence": "Published by the distribution for Rolly Vortex at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@4533a55cb065e8df0208d9023236d5ee62dbf116/rolly%20vortex/icon-256.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@4533a55cb065e8df0208d9023236d5ee62dbf116/rolly%20vortex/icon-256.png",
+      "title": "Rolly Vortex",
+      "type": "official-icon",
+      "url": "/artwork/clrollyvortex.webp"
+    },
+    "clrussianbuckshot": {
+      "assetSha256": "2680eb2a26f4199171e9e38b694a8c69783317b82abc5c9eea8c619c3e4f1d9f",
+      "identityEvidence": "Published by the distribution for Russian Buckshot at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/russian-buckshot/logo.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; probed build asset paths).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/russian-buckshot/logo.png",
+      "title": "Russian Buckshot",
+      "type": "game-asset",
+      "url": "/artwork/clrussianbuckshot.webp"
+    },
     "clrussiansandbox": {
       "assetSha256": "e57d094c00ead556de49a6a1296c50e7954fc2324a8954efeac19c440e53aa84",
       "identityEvidence": "The wrapper this repository distributes for Russian Sandbox declares this image as its own artwork (game-asset).",
@@ -215,6 +1312,35 @@
       "title": "Russian Sandbox",
       "type": "game-asset",
       "url": "/artwork/clrussiansandbox.webp"
+    },
+    "clsaihatestation": {
+      "assetSha256": "e26b908ba7e4cd5bfe8010e314692b3cb26cca80d98cf54b015aed854c355939",
+      "identityEvidence": "Published by the distribution for Saihate Station at https://cdn.jsdelivr.net/gh/web-ports/saihate-station@main/icon/icon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/web-ports/saihate-station@main/icon/icon.png",
+      "title": "Saihate Station",
+      "type": "official-icon",
+      "url": "/artwork/clsaihatestation.webp"
+    },
+    "clsandboxcity": {
+      "assetSha256": "e822e111860764d3026a6d1082a6e78ecf71e115f749eb00d93e20e2fe953559",
+      "identityEvidence": "Published by the distribution for Sandbox City at https://cdn.jsdelivr.net/gh/faralong/all@main/sandboxcity/logo.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; probed build asset paths).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/faralong/all@main/sandboxcity/logo.png",
+      "title": "Sandbox City",
+      "type": "game-asset",
+      "url": "/artwork/clsandboxcity.webp"
     },
     "clsandboxels": {
       "assetSha256": "6189cffd886564b8dec80171cffa00936f653f25818a89ab27b6cfb73bda289d",
@@ -234,6 +1360,20 @@
       "type": "official-og",
       "url": "/artwork/clsilk.webp"
     },
+    "clsiloshowdow": {
+      "assetSha256": "42fde3c9eae69fea61d17b6618b488ab50c0c3c1e046be23d409a40cc3933c13",
+      "identityEvidence": "Published by the distribution for Silo Showdown at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@5a10e4807bce6070b5f3f7f18c1eed34230cddf2/silohuette%20showdown/SilhoutteShowdownV090.icon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@5a10e4807bce6070b5f3f7f18c1eed34230cddf2/silohuette%20showdown/SilhoutteShowdownV090.icon.png",
+      "title": "Silo Showdown",
+      "type": "official-icon",
+      "url": "/artwork/clsiloshowdow.webp"
+    },
     "clskibidiinthebackrooms": {
       "assetSha256": "07077b4ead48199ab6a6acb4193e6b22f01fbd4a2e65cd3790280bb3220240ae",
       "identityEvidence": "The wrapper this repository distributes for Skibidi in the Backrooms declares this image as its own artwork (official-icon).",
@@ -242,6 +1382,63 @@
       "title": "Skibidi in the Backrooms",
       "type": "official-icon",
       "url": "/artwork/clskibidiinthebackrooms.webp"
+    },
+    "clslotornot": {
+      "assetSha256": "19a5e35ade8004245400021fe4bb10d18c724bd6530cfe6f3f05ceb09970037e",
+      "identityEvidence": "Published by the distribution for Slot or Not at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@3fd4770c44c7de90d99d09b31d8cc0d4fb1ebcb5/slot%20or%20not/index.icon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@3fd4770c44c7de90d99d09b31d8cc0d4fb1ebcb5/slot%20or%20not/index.icon.png",
+      "title": "Slot or Not",
+      "type": "official-icon",
+      "url": "/artwork/clslotornot.webp"
+    },
+    "clsmc": {
+      "assetSha256": "1f3f538ec23de0c73adc2f0bab1f14727cb149a5c6df5f27d417d73ddc9ffbe5",
+      "identityEvidence": "Published by the distribution for SMC at https://cdn.jsdelivr.net/gh/greeniYT/smc@main/icons/icon-512.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/greeniYT/smc@main/icons/icon-512.png",
+      "title": "SMC",
+      "type": "official-icon",
+      "url": "/artwork/clsmc.webp"
+    },
+    "clsnowrider": {
+      "assetSha256": "1bd44657546f2209b461849b761f9e88d812348132cc728235fdd340a046c2ed",
+      "identityEvidence": "Published by the distribution for Snow Rider at https://cdn.jsdelivr.net/gh/Vrkids2009/snowrider3d@6b7c2b9167b592528b221428414e63f06c4640b9/TemplateData/logo.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; probed build asset paths).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/Vrkids2009/snowrider3d@6b7c2b9167b592528b221428414e63f06c4640b9/TemplateData/logo.png",
+      "title": "Snow Rider",
+      "type": "game-asset",
+      "url": "/artwork/clsnowrider.webp"
+    },
+    "clsolarsandbox": {
+      "assetSha256": "6ab1ddae7f9b685773aa3a920b21f7fac89664f8e4af3fc6a1d29cb9939cb314",
+      "identityEvidence": "Published by the distribution for Solar Sandbox at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/solar-sandbox/index.icon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/solar-sandbox/index.icon.png",
+      "title": "Solar Sandbox",
+      "type": "official-icon",
+      "url": "/artwork/clsolarsandbox.webp"
     },
     "clsoniccdmobile": {
       "assetSha256": "6123315343c0f0582deec6b18496e8cc096df18385b6b4612f5bcd54b933b4d8",
@@ -261,6 +1458,49 @@
       "type": "official-icon",
       "url": "/artwork/clsonicmaniaplus.webp"
     },
+    "clsquidplayground": {
+      "assetSha256": "6a858011a4f1cb3116c3aa510024d9bb3f9987b342fba18916eac76656efcbd2",
+      "identityEvidence": "Published by the distribution for Squid Playground at https://cdn.jsdelivr.net/gh/kamalyahyha/lol@main/icons/icon-128.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/kamalyahyha/lol@main/icons/icon-128.png",
+      "title": "Squid Playground",
+      "type": "official-icon",
+      "url": "/artwork/clsquidplayground.webp"
+    },
+    "clstacktris": {
+      "assetSha256": "0223da7cb4f6329794cdc74d50a502e2629fb010da22760cef2a8922d13c5735",
+      "identityEvidence": "Published by the distribution for Stacktris at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@7edd971a7c7283829db983c25289230aa9c782d1/stacktris/webapp/cover.jpg, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@7edd971a7c7283829db983c25289230aa9c782d1/stacktris/webapp/cover.jpg",
+      "title": "Stacktris",
+      "type": "game-asset",
+      "url": "/artwork/clstacktris.webp"
+    },
+    "clstickmankingdomclash": {
+      "assetSha256": "fea541167110855633db21246267a25e2300953d83ab4fbbbdcd3a01eda4e947",
+      "identityEvidence": "Published by the distribution for Stickman Kingdom Clash at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@646b8183aa1d6c61b073dc5ade2f550bace125b9/Stickman%20Clash/index.icon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@646b8183aa1d6c61b073dc5ade2f550bace125b9/Stickman%20Clash/index.icon.png",
+      "title": "Stickman Kingdom Clash",
+      "type": "official-icon",
+      "url": "/artwork/clstickmankingdomclash.webp"
+    },
     "clsupercold": {
       "assetSha256": "36d52644768326118e0fd15417571569434cc6a27e34ebbf7daea3e6dbfd3de3",
       "identityEvidence": "The wrapper this repository distributes for Super Cold declares this image as its own artwork (official-og).",
@@ -270,6 +1510,64 @@
       "type": "official-og",
       "url": "/artwork/clsupercold.webp"
     },
+    "clsupersantakicker": {
+      "assetSha256": "34858491f8ac4374e42c7ca2152e05abcdb1f255968ddb5628594e3924971be5",
+      "identityEvidence": "Published by the distribution for Super Santa Kicker at https://gamaverse.com/c/i/y/super-santa-kicker.jpg, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; fetched gamaverse.com page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched gamaverse.com page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://gamaverse.com/c/i/y/super-santa-kicker.jpg",
+      "title": "Super Santa Kicker",
+      "type": "official-og",
+      "url": "/artwork/clsupersantakicker.webp"
+    },
+    "clswerve": {
+      "assetSha256": "e0655b371f00d802311d62bd592369afc4e6812a6653a35944da94bea6c86312",
+      "identityEvidence": "Published by the distribution for Swerve at https://s3-eu-west-1.amazonaws.com/apps.playcanvas.com/VecAxR3e/logo.png, found by fetching that distribution's own pages/assets (fetched s3-eu-west-1.amazonaws.com page metadata; probed build asset paths).",
+      "methodsInvestigated": [
+        "fetched s3-eu-west-1.amazonaws.com page metadata",
+        "probed build asset paths",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://s3-eu-west-1.amazonaws.com/apps.playcanvas.com/VecAxR3e/logo.png",
+      "title": "Swerve",
+      "type": "game-asset",
+      "url": "/artwork/clswerve.webp"
+    },
+    "cltagcm": {
+      "assetSha256": "81e18cc21db38cf5481e4bc5b0c4f5c8e8a0937f6c1f2f46b799901e7bb3325d",
+      "identityEvidence": "Published by the distribution for Tag CM at https://www.coolmathgames.com/sites/default/files/tag-update.png, found by fetching that distribution's own pages/assets (fetched www.coolmathgames.com page metadata).",
+      "methodsInvestigated": [
+        "fetched www.coolmathgames.com page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://www.coolmathgames.com/sites/default/files/tag-update.png",
+      "title": "Tag CM",
+      "type": "official-og",
+      "url": "/artwork/cltagcm.webp"
+    },
+    "cltaproad": {
+      "assetSha256": "494e55db54b06a6d520ba01bf46c4a70ec403e69e404118574f2f41311cb3107",
+      "identityEvidence": "Published by the distribution for Tap Road at https://cdn.jsdelivr.net/gh/faralong/all@main/taproad/image/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/faralong/all@main/taproad/image/favicon.png",
+      "title": "Tap Road",
+      "type": "official-icon",
+      "url": "/artwork/cltaproad.webp"
+    },
     "cltimeshooter2": {
       "assetSha256": "805660e6377b6870845916c6817fe077819c6be205db1fb2a0ab33c6286e6d71",
       "identityEvidence": "The wrapper this repository distributes for Time Shooter 2 declares this image as its own artwork (game-asset).",
@@ -278,6 +1576,77 @@
       "title": "Time Shooter 2",
       "type": "game-asset",
       "url": "/artwork/cltimeshooter2.webp"
+    },
+    "cltimeshooter3": {
+      "assetSha256": "d723c7dedf7f2ff394e6184fd2d472f05863b2d63ef40210bd55ce30e82c564b",
+      "identityEvidence": "Published by the distribution for Time Shooter 3 at https://cdn.jsdelivr.net/gh/mistirk/google@eebffdf79a14f6e01e153d5cd4bed23c432874fb/version/time-s3/logo.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata; probed build asset paths).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "probed build asset paths",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/mistirk/google@eebffdf79a14f6e01e153d5cd4bed23c432874fb/version/time-s3/logo.png",
+      "title": "Time Shooter 3",
+      "type": "game-asset",
+      "url": "/artwork/cltimeshooter3.webp"
+    },
+    "cltungtungtungsahurobby": {
+      "assetSha256": "1a9d685d88156fd2e31b27c61dc2abc6e698efed93cfe474dd4962e7278106cf",
+      "identityEvidence": "Published by the distribution for Tung Tung Tung Sahur Obby at https://cdn.jsdelivr.net/gh/Pok12d/ta@main/tungobby/TemplateData/preview.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/Pok12d/ta@main/tungobby/TemplateData/preview.png",
+      "title": "Tung Tung Tung Sahur Obby",
+      "type": "game-asset",
+      "url": "/artwork/cltungtungtungsahurobby.webp"
+    },
+    "cluncannycatgolf": {
+      "assetSha256": "b88dd3f0830132537def6e7ff054eb824ddde16cc32e2ffd00e7067dc4bcc9cb",
+      "identityEvidence": "Published by the distribution for Uncanny Cat Golf at https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/MISC/catgolf/Uncanny%20Cat%20Golf.icon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/MISC/catgolf/Uncanny%20Cat%20Golf.icon.png",
+      "title": "Uncanny Cat Golf",
+      "type": "official-icon",
+      "url": "/artwork/cluncannycatgolf.webp"
+    },
+    "clunicyclehero": {
+      "assetSha256": "b6f18c50c8800e3e292b6dbc0ddb8a7004268c8a79e60491a644b4c780054a26",
+      "identityEvidence": "Published by the distribution for Unicycle Hero at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@8874e6849ea73acaedd853ff61ea04d981fce7dd/unicycle%20hero/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@8874e6849ea73acaedd853ff61ea04d981fce7dd/unicycle%20hero/favicon.png",
+      "title": "Unicycle Hero",
+      "type": "official-icon",
+      "url": "/artwork/clunicyclehero.webp"
+    },
+    "clvampiresurvivors": {
+      "assetSha256": "bcea17ecc88327c69dbfc628613948d32fa4f3d379a6b22e65746b8a764abed3",
+      "identityEvidence": "Published by the distribution for Vampire Survivors at https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/vampiresurvivors/icons/icons-192.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/vampiresurvivors/icons/icons-192.png",
+      "title": "Vampire Survivors",
+      "type": "official-icon",
+      "url": "/artwork/clvampiresurvivors.webp"
     },
     "clvex4": {
       "assetSha256": "528d3f414ad41de1c63d23b294bde1c2286c938829366c2911bed3b542feb9e1",
@@ -297,6 +1666,34 @@
       "type": "official-icon",
       "url": "/artwork/clvex5.webp"
     },
+    "clvsnonsense": {
+      "assetSha256": "44e3499d7c099c0342ff23f8a84b38751d5268163eb1540be48158f7e33157e8",
+      "identityEvidence": "Published by the distribution for VS Nonsense at https://cdn.jsdelivr.net/gh/mll-enh/die@fe0e5b08118dacdefc79f2b1427b283be80a9447/nonsence/favicon.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/mll-enh/die@fe0e5b08118dacdefc79f2b1427b283be80a9447/nonsence/favicon.png",
+      "title": "VS Nonsense",
+      "type": "official-icon",
+      "url": "/artwork/clvsnonsense.webp"
+    },
+    "clwheeliebike": {
+      "assetSha256": "7e4bc0a3c45f3626df256c42fd6ce81a45bae1be83238fbcea4509f6a4ac60bb",
+      "identityEvidence": "Published by the distribution for Wheelie Bike at https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@1a8377d87253610bca22dc9dc44f79020b395c1e/wheelie-bike/icons/icon-128.png, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@1a8377d87253610bca22dc9dc44f79020b395c1e/wheelie-bike/icons/icon-128.png",
+      "title": "Wheelie Bike",
+      "type": "official-icon",
+      "url": "/artwork/clwheeliebike.webp"
+    },
     "clwordle": {
       "assetSha256": "3b556a9ad28acaeb1ea3be0ff476a7c32e8d04aca701926b3adfb4894fe7e41b",
       "identityEvidence": "The wrapper this repository distributes for Wordle declares this image as its own artwork (official-icon).",
@@ -305,6 +1702,20 @@
       "title": "Wordle",
       "type": "official-icon",
       "url": "/artwork/clwordle.webp"
+    },
+    "clyohohoio": {
+      "assetSha256": "5182a8345c14a7604c84ebf77e26251b182401b4f02f1f2f59b9d2683adb7b88",
+      "identityEvidence": "Published by the distribution for Yohoho.io at https://cdn.jsdelivr.net/gh/deformed-steve/yohohoio@main/img/banner1200x630.jpg, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (fallback)"
+      ],
+      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "source": "https://cdn.jsdelivr.net/gh/deformed-steve/yohohoio@main/img/banner1200x630.jpg",
+      "title": "Yohoho.io",
+      "type": "official-og",
+      "url": "/artwork/clyohohoio.webp"
     },
     "pvzm": {
       "assetSha256": "f2d60881795af775ad245c787ab349cd1634adfe736c8b2284369bc2bb413180",

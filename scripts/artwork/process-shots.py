@@ -180,6 +180,7 @@ def main():
     args = parser.parse_args()
 
     titles = catalog_titles()
+    research = load_json(os.path.join(ROOT, "scripts", "artwork", "research-log.json"), {})
     records = load_json(CAPTURED, {"assets": {}, "screens": {}})
     records.setdefault("assets", {})
     records.setdefault("screens", {})
@@ -264,6 +265,8 @@ def main():
                 "assetSha256": digest,
                 "signal": {key: info[key] for key in ("coverage", "colors", "stddev", "edges", "dominant")},
                 "frame": os.path.basename(file),
+                "methodsInvestigated": (research.get(game_id, {}).get("methods") or [])
+                + ["title-screen capture (last resort)"],
                 "reviewStatus": "awaiting-review",
             }
             save_json(CAPTURED, records)
