@@ -870,7 +870,10 @@
       "imagePath": "/artwork/clADOFAI.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clADOFAI.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 639,
+        "height": 360
+      },
       "sha256": "b0bd3621829d7f93f4ca48e29572890649f507f122c8c5d5bd2061f50f519380",
       "visualVerification": "verified 2026-11-27: Captured gameplay shows the actual game.",
       "methodsInvestigated": [
@@ -8946,7 +8949,10 @@
       "imagePath": "/artwork/clhelios-offline--1.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhelios-offline--1.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "e9460ffd57186c33295a1e93623bb0576718281198cd32bd3a4f6451acaf9263",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -8968,7 +8974,10 @@
       "imagePath": "/artwork/clhinohomo.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhinohomo.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "4595ed587f1a6f7f9e165719f29766aba7c1cd66739dd21b0cf5af8e916bb730",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -9011,7 +9020,10 @@
       "imagePath": "/artwork/clhil-climbracing2.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhil-climbracing2.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "1f5962db516a83f1613e8c8a6b8f249457147b753fde6aec60b773c1a180334d",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -18846,7 +18858,7 @@
       "identityEvidence": "Captured from the actual game this repository serves at /games/clfnffleetway.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": {
-        "width": 640,
+        "width": 639,
         "height": 360
       },
       "sha256": "f396fca4c6529349f6029393f567766b0d485c2a9ecfab52bd5513dcb9cdbb3f",
@@ -19208,7 +19220,10 @@
       "imagePath": "/artwork/clfnfjapcreepypasta.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clfnfjapcreepypasta.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "9fa3e678d8e612a6b6c6f7524f34ceecac895c750c5a3362f0091e61aa2b4469",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -21549,7 +21564,10 @@
       "imagePath": "/artwork/clgoalsouthafrica.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgoalsouthafrica.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "2900af2aa22d549319a2c80e851f07134a8eb561b47a8b71322ebbbe272359ad",
       "visualVerification": "verified 2026-11-27: Captured title screen shows the actual game.",
       "methodsInvestigated": [
@@ -21592,7 +21610,10 @@
       "imagePath": "/artwork/clgoingballs.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgoingballs.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "b15904185bc518f5b8a981d5864e45827f2c795f8c9396dc0a585fca602b84ba",
       "visualVerification": "verified 2026-11-27: Captured gameplay shows the actual game.",
       "methodsInvestigated": [
@@ -21614,7 +21635,10 @@
       "imagePath": "/artwork/clgolddiggerfrvr.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgolddiggerfrvr.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "423f9cad8dabee931ec53d1a9c2ec637a437dea00ba30146ad4e0398745a9f5b",
       "visualVerification": "verified 2026-11-27: Captured gameplay shows the actual game.",
       "methodsInvestigated": [
@@ -21636,7 +21660,10 @@
       "imagePath": "/artwork/clgoldminer.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgoldminer.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "7b9e1092a76acae9007e8689ed91234c8d51b7b1688afec563df3a803be99faf",
       "visualVerification": "verified 2026-11-27: Captured title screen shows the actual game.",
       "methodsInvestigated": [
@@ -21831,7 +21858,10 @@
       "imagePath": "/artwork/clgolforbit.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgolforbit.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "ff5f1d194935b56088ba94a8895b0eaab6b39709ce9ba471f4e2a0c9f0db7e04",
       "visualVerification": "verified 2026-11-27: Captured gameplay shows the actual game.",
       "methodsInvestigated": [
@@ -22105,7 +22135,10 @@
       "imagePath": "/artwork/clgranddad.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgranddad.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "492cc599ca652a6d1701a3927e11b15d3c5eab29dfd456bc5e26b639825bbe86",
       "visualVerification": "verified 2026-11-27: Captured title screen shows the actual game.",
       "methodsInvestigated": [
@@ -22233,7 +22266,10 @@
       "imagePath": "/artwork/clgrannynightmare.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgrannynightmare.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "2edf9e5b71c237fa7ac2903f2e50636db0038a7d54a226e415dc8892a2ef4845",
       "visualVerification": "verified 2026-11-27: Captured gameplay shows the actual game.",
       "methodsInvestigated": [
@@ -22319,7 +22355,10 @@
       "imagePath": "/artwork/clgrassmowing.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgrassmowing.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "94aeb82a38d35f5b627e99240b72975549f8828fd1cef031d6ba0735aa574771",
       "visualVerification": "verified 2026-11-27: Captured gameplay shows the actual game.",
       "methodsInvestigated": [
@@ -22341,7 +22380,10 @@
       "imagePath": "/artwork/clgravity.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgravity.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "d071666b53726dbfe14da6654bde0200b035db951dbc7d82874b7a5d4923b0f5",
       "visualVerification": "verified 2026-11-27: Captured title screen shows the actual game.",
       "methodsInvestigated": [
@@ -22363,7 +22405,10 @@
       "imagePath": "/artwork/clgravitymod.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgravitymod.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "bff13273853f9f00f47e131ea95ff561a678c0692e5ac05725555f2dcafd39ac",
       "visualVerification": "verified 2026-11-27: Captured gameplay shows the actual game.",
       "methodsInvestigated": [
@@ -22450,7 +22495,10 @@
       "imagePath": "/artwork/clgrindcraft.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgrindcraft.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 318,
+        "height": 179
+      },
       "sha256": "78fc74e282d6d5aa70f890081f0084e11357822808b391c6264f341511fd3b52",
       "visualVerification": "verified 2026-11-27: Captured title screen shows the actual game.",
       "methodsInvestigated": [
@@ -22497,7 +22545,10 @@
       "imagePath": "/artwork/clgrowagarden.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgrowagarden.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "749a1bacffa68580c6a29493ff89e72246b2623c7e60f578e5114d283a14788f",
       "visualVerification": "verified 2026-11-27: Captured gameplay shows the actual game.",
       "methodsInvestigated": [
@@ -22540,7 +22591,10 @@
       "imagePath": "/artwork/clgrowyourgarden.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgrowyourgarden.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "8ef6e248f0f8c9c13a3bb212e6a73c07fd91d08bd16c9cbf1a1e7247fd02c9ec",
       "visualVerification": "verified 2026-11-27: Captured gameplay shows the actual game.",
       "methodsInvestigated": [
@@ -22646,7 +22700,10 @@
       "imagePath": "/artwork/clgtachina.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgtachina.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 255,
+        "height": 143
+      },
       "sha256": "a309aebc8e846a63546662c39ad6fabc57498a0ed538e6fc60228bfd5ba793a5",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -22668,7 +22725,10 @@
       "imagePath": "/artwork/clgtaalty.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgtaalty.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 255,
+        "height": 143
+      },
       "sha256": "07e9eb8ede4af56185512769eb762f633479367c704653b8622172ac39d94482",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -22712,7 +22772,10 @@
       "imagePath": "/artwork/clguesstheiranswer.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clguesstheiranswer.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "479ab837855cbd006539bd08756d5745c248a2091d275ada8f757337d28eeef2",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -22734,7 +22797,10 @@
       "imagePath": "/artwork/clgunblood.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgunblood.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "89966afa0b99e0b4be81ad6aad2b42c58cd57f234962d590e7b9c945234bdd05",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -22756,7 +22822,10 @@
       "imagePath": "/artwork/clgunknight.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgunknight.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "24978c0df1d6a7d77656a5d22555c96563b948f9d17237a60a2ee61971a9ed55",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -22778,7 +22847,10 @@
       "imagePath": "/artwork/clgunmayhem.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgunmayhem.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 396,
+        "height": 223
+      },
       "sha256": "2f4fdfa8d56efcac83e11546cb2f0007a1b38a8c6d589ca13c128fdc1c43a766",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -22821,7 +22893,10 @@
       "imagePath": "/artwork/clgunmayhem2goof.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgunmayhem2goof.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 396,
+        "height": 223
+      },
       "sha256": "087acc2a91c51b9536a590c1f3489ba788beebd72fe89390348dda4d74474148",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -22843,7 +22918,10 @@
       "imagePath": "/artwork/clgunmayhemredux.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgunmayhemredux.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "f936be3fae3a92a9015102c361c378c8d9bd9ea3e7fbcbebf10e563fffd439c5",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -22865,7 +22943,10 @@
       "imagePath": "/artwork/clgunnight.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgunnight.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "9a1c731cea899f152f4dd33821288142578ae1e62d3e7532db824eb0aa59630b",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -22887,7 +22968,10 @@
       "imagePath": "/artwork/clgun-spin.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgun-spin.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "1ba878cc68810adaa5eaeccf4e64125cb31265aa70bfdb57963ff3e0d884d6a5",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -22931,7 +23015,10 @@
       "imagePath": "/artwork/clguncho.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clguncho.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "925b33fe75dfcada7c30612fb26c98e2f077811d59446e26e6d3c0bd988733ac",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -22953,7 +23040,10 @@
       "imagePath": "/artwork/clgunfighterjessejames.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgunfighterjessejames.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 255,
+        "height": 143
+      },
       "sha256": "a06874a0f00d83fa0299a0488be17466029cf0936a876950470733756e71e682",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -23017,7 +23107,10 @@
       "imagePath": "/artwork/clgymstack.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clgymstack.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "1ff82e186060b1ae4cf4e7ac72d41161a608a3b250622b39f4864b1f4e879b56",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -23060,7 +23153,10 @@
       "imagePath": "/artwork/clhacx.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhacx.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "2b8063fd00563c9767a040942af9b92631ffbfd69291d9ac09c6386bbef41341",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -23229,7 +23325,10 @@
       "imagePath": "/artwork/clhanger.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhanger.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "c325bb3ee7f264f35a180852d98799112348d3e6f045d1bc95f8a185831a4bd9",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -23251,7 +23350,10 @@
       "imagePath": "/artwork/clhanger2.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhanger2.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "50449d87ce53d838835d2e8924c7e45de9f5304805254b5dc78f6e6cd9447a78",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -23273,7 +23375,10 @@
       "imagePath": "/artwork/clhappyroom.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhappyroom.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "1d00201d7ef47a6d6056e6bfe08597ab702759f199ded2fd987371c585d3f75f",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -23467,7 +23572,10 @@
       "imagePath": "/artwork/clhauntthehouse.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhauntthehouse.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "d3c348fd780c1940718614b4d8c59c94913b5181a9dfc85c23c5c562250d9731",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -23489,7 +23597,10 @@
       "imagePath": "/artwork/clhauntedschool.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhauntedschool.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "11681312a735b2d57fe4165c9ac240dc56065a60b3e95af96b82e582540ad7de",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -23553,7 +23664,10 @@
       "imagePath": "/artwork/clhei-t.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhei-t.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "a1b49f985ffe2043aae8985e1f2a8bfdc70dd24e5d78e1e51b2a8e0e8645ce51",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -23596,7 +23710,10 @@
       "imagePath": "/artwork/clhelixjump.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhelixjump.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "7e310adb1ce9247623b44b26cec223c59a17c80a748b636a7e8d1ae6c180d053",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -23681,7 +23798,10 @@
       "imagePath": "/artwork/clheretic.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clheretic.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "c3928d5bfb7d1cfac3e3b9034f914530255ec297a4bddd6f2258634c3ac6edcc",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -23794,7 +23914,10 @@
       "imagePath": "/artwork/clhighwayracer2.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhighwayracer2.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "367450a877d38a5025f827a4899da98a8894df0a6b9cc90f141dff9d492d9c58",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -23816,7 +23939,10 @@
       "imagePath": "/artwork/clhighwaytraffic3d.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhighwaytraffic3d.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "5499c1a14a47fcbf9f5aeabaab1fde68eb64798278aadb1abc562d391a0679e1",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -23838,7 +23964,10 @@
       "imagePath": "/artwork/clhillclimbracinglite.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhillclimbracinglite.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "6e89291dfc3ed101444261588b76386c0e59b6c49a142318cc469b31f4131d11",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -23860,7 +23989,10 @@
       "imagePath": "/artwork/clhipsterkickball.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhipsterkickball.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "c7c74689f0cca2b2b9488a586cc48a8b4a4d53e4413fdc6d1676fca7f4494e61",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -23882,7 +24014,10 @@
       "imagePath": "/artwork/clhitsinglereal.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhitsinglereal.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "7235623cad2f2c3a791a7aa7b318353dfe0d4e2140be1a1d628d89cc025e6924",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -23904,7 +24039,10 @@
       "imagePath": "/artwork/clhitstunfly.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhitstunfly.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 577,
+        "height": 325
+      },
       "sha256": "fa8755d1db1b6e4707e249c38448486076319b7686a00ee6c9cecc0b146fba21",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -23926,7 +24064,10 @@
       "imagePath": "/artwork/clhl2doom.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhl2doom.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "1adfa457863a1e0578e29488558ff03ff4c6e3deafde99efba10fe9b0457a204",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -23948,7 +24089,10 @@
       "imagePath": "/artwork/clhobo.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhobo.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "fc60b70180303768d6700e2ceda8a25746188c58ed8a35b643e661ae69069134",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -23970,7 +24114,10 @@
       "imagePath": "/artwork/clhobo2.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhobo2.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "5cb05597be0d5863e1243904e9d2c1c79273bb518127bb7a046953e994eaa6a9",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -23992,7 +24139,10 @@
       "imagePath": "/artwork/clhobo3.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhobo3.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "59b37c91a53f5d80d819974ff0967eb125498af0b08d98f404ea3443b48a6d2d",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -24014,7 +24164,10 @@
       "imagePath": "/artwork/clhobo4.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhobo4.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "c2690e3c8b39df557a02f15a6819f034fc0186d445465acd326d906854d59fd9",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -24036,7 +24189,10 @@
       "imagePath": "/artwork/clhobo5.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhobo5.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "df18d6723fd8d20385d024f27c8fd1dca31379b88086b649bb18224c10c20200",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -24058,7 +24214,10 @@
       "imagePath": "/artwork/clhobo6.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhobo6.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "fa6b6e1d2c1bd84694d8a7da882758f3923f3fee504a9e885d1dbbe976d9e77a",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -24080,7 +24239,10 @@
       "imagePath": "/artwork/clhobo7.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhobo7.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "8e4fed30e4baae2e0712390dfabea09d4ce0304f6487216053d6fb70eb9a3734",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -24102,7 +24264,10 @@
       "imagePath": "/artwork/clhobovszombies.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhobovszombies.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "8be0806f7e493ce8624f63c1382251c8316268b791b8371da72aff41470e859b",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -24146,7 +24311,10 @@
       "imagePath": "/artwork/clholeio.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clholeio.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "0c9427ebb5890da67fa073fdc7d104260f71bda645a7a49e2c2531968ecab6e9",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -24210,7 +24378,10 @@
       "imagePath": "/artwork/clhomesheephome.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhomesheephome.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "9cfeddad5a2b9dc0d3e67974e243999d666d0610073c07e45abffa25235afa02",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -24232,7 +24403,10 @@
       "imagePath": "/artwork/clhorrormickeymouse.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhorrormickeymouse.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "675cdf7ef50dc274ea9b37c12c372bf1a81d34282dc0a3af61bfe7b632411061",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -24255,7 +24429,10 @@
       "imagePath": "/artwork/clhotdogbush.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhotdogbush.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "3de5a6253087f2c5c02a213bf1859748127530046c356c224e8dd45a4bdb1bf9",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -24277,7 +24454,10 @@
       "imagePath": "/artwork/clhotwax.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhotwax.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "72f2e77d9ad299232263b8ee5a31a4273b785efe86c60728b8de4f28187476db",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -24299,7 +24479,10 @@
       "imagePath": "/artwork/clhouseofhazards.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhouseofhazards.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "1f8fbb31c8313ed84362cfd5d282abbf84da7027a384d1ce2303118e914dfdf3",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -24321,7 +24504,10 @@
       "imagePath": "/artwork/clhoverracerdrive.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhoverracerdrive.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "c3f7e8c3f9478fed7e913c7600b07834cc177ab18c62bc424344d8ad3d32a56c",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -24407,7 +24593,10 @@
       "imagePath": "/artwork/clhungrylamu.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clhungrylamu.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "97ef79068493a68bb3b53f2d9cf48777f8db58dcbe0232e060e2e3efb1553949",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
@@ -42253,7 +42442,10 @@
       "imagePath": "/artwork/clicantbelievegoogleflaggedmeforthenameofthefilelol.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clicantbelievegoogleflaggedmeforthenameofthefilelol.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "e896a7e8146381ffbe7027fd3e599063ddcfd649cd36859a6a3b979cdbd20335",
       "visualVerification": "awaiting-review",
       "methodsInvestigated": [
