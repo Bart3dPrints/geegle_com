@@ -12521,6 +12521,12 @@
     "status": "verified",
     "title": "SM64: Hidden Stars"
   },
+  "clsm64land": {
+    "reason": "SM64 Land art with its title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "SM64 Land"
+  },
   "clsm64lastimpact": {
     "reason": "SM64 Last Impact box art.",
     "reviewed": "2026-11-27",
@@ -13367,6 +13373,12 @@
     "status": "verified",
     "title": "Squid Playground"
   },
+  "clssf2arcade": {
+    "reason": "Super Street Fighter II arcade cabinet.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Street Fighter 2 Arcade"
+  },
   "clssf2tarcade": {
     "reason": "Super Street Fighter II Turbo arcade screen.",
     "reviewed": "2026-11-27",
@@ -13637,17 +13649,83 @@
     "status": "verified",
     "title": "Strange Journey"
   },
+  "clstreangeropepolice": {
+    "reason": "Amazing Strange Rope Police key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Strange Rope Police"
+  },
+  "clstreetfighter1arcade": {
+    "reason": "Street Fighter arcade gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Street Fighter 1 Arcade"
+  },
+  "clstreetfighter2": {
+    "reason": "Street Fighter II SNES gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Street Fighter 2"
+  },
+  "clstreetfighter2arcade": {
+    "reason": "Street Fighter II arcade cabinet, kept distinct from the cabinet used by the other entry.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Street Fighter 2 Arcade"
+  },
+  "clstreetfighter2cearcade": {
+    "reason": "Street Fighter II Champion Edition arcade cabinet.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Street Fighter 2 CE Arcade"
+  },
   "clstreetfighter2hfarcade-1": {
     "reason": "Street Fighter II arcade cabinet on a clean background; result 1 carried a cabinet-brand credit.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Street Fighter 2 HF Arcade"
   },
+  "clstreetfighter2turbo": {
+    "reason": "Street Fighter II Turbo SNES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Street Fighter 2 Turbo"
+  },
+  "clstreetfighteralpha3": {
+    "reason": "Street Fighter Alpha 3 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Street Fighter Alpha 3"
+  },
   "clstreetfighterumuhsomething": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Street Fighter Umuh Something"
+  },
+  "clstreetofrage": {
+    "reason": "Streets of Rage key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Street of Rage"
+  },
+  "clstreetofrage2": {
+    "reason": "Streets of Rage 2 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Street of Rage 2"
+  },
+  "clstreetofrage3": {
+    "reason": "Streets of Rage 3 art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Street of Rage 3"
+  },
+  "clstrikeforceheroes": {
+    "reason": "Strike Force Heroes 3 key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Strike Force Heroes"
   },
   "clstrikeforceheroes2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -13667,11 +13745,29 @@
     "status": "verified",
     "title": "Striker Dummies"
   },
+  "clstylesavvy": {
+    "reason": "Style Savvy DS box art; result 2 was Fashion Forward.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Style Savvy"
+  },
+  "clsubwaysurfersbeijing": {
+    "reason": "Subway Surfers Beijing art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Subway Surfers: Beijing"
+  },
   "clsubwaysurfersberlin": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Subway Surfers: Berlin"
+  },
+  "clsubwaysurfersbuenosaires": {
+    "reason": "Subway Surfers Buenos Aires art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Subway Surfers: Buenos Aires"
   },
   "clsubwaysurfershavana": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -13685,11 +13781,59 @@
     "status": "verified",
     "title": "Subway Surfers: Houston"
   },
+  "clsubwaysurfersiceland": {
+    "reason": "Subway Surfers Iceland key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Subway Surfers: Iceland"
+  },
   "clsubwaysurferslondon": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Subway Surfers: London"
+  },
+  "clsubwaysurfersmexico": {
+    "reason": "Subway Surfers Mexico art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Subway Surfers: Mexico"
+  },
+  "clsubwaysurfersmiami": {
+    "reason": "Subway Surfers Miami key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Subway Surfers: Miami"
+  },
+  "clsubwaysurfersmonaco": {
+    "reason": "Subway Surfers Monaco key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Subway Surfers: Monaco"
+  },
+  "clsubwaysurfersneworeleans": {
+    "reason": "Subway Surfers New Orleans art for this variant.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Subway Surfers: New Oreleans"
+  },
+  "clsubwaysurfersneworleans": {
+    "reason": "Subway Surfers New Orleans art, kept distinct from the other variant.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Subway Surfers: New Orleans"
+  },
+  "clsubwaysurferssanfrancisco--1": {
+    "reason": "Subway Surfers San Francisco art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Subway Surfers: San Francisco"
+  },
+  "clsubwaysurfersstpetersburg": {
+    "reason": "Subway Surfers St Petersburg gameplay with its logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Subway Surfers: St Petersburg"
   },
   "clsubwaysurferswinterholiday": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -13697,11 +13841,35 @@
     "status": "verified",
     "title": "Subway Surfers: Winter Holiday"
   },
+  "clsubwaysurferszurich": {
+    "reason": "Subway Surfers Zurich key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Subway Surfers: Zurich"
+  },
+  "clsugarsugar": {
+    "reason": "Sugar, Sugar board.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sugar Sugar"
+  },
   "clsugaryspire": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Sugary Spire"
+  },
+  "clsuika": {
+    "reason": "Suika Game watermelon art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Suika"
+  },
+  "clsuikapico": {
+    "reason": "Suika Pico cart art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Suika Pico"
   },
   "clsummerrider": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -13709,11 +13877,59 @@
     "status": "verified",
     "title": "Summer Rider"
   },
+  "clsunandmoon": {
+    "reason": "Pokemon Sun and Moon DS-style box pair.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Sun and Moon"
+  },
+  "clsuperbomberman": {
+    "reason": "Super Bomberman SNES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Bomberman"
+  },
+  "clsuperbomberman2": {
+    "reason": "Super Bomberman 2 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Bomberman 2"
+  },
+  "clsuperbomberman3": {
+    "reason": "Super Bomberman 3 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Bomberman 3"
+  },
+  "clsuperbomberman4": {
+    "reason": "Super Bomberman 4 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Bomberman 4"
+  },
+  "clsuperbomberman5": {
+    "reason": "Super Bomberman 5 title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Bomberman 5"
+  },
+  "clsuperc": {
+    "reason": "Super C gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Superc"
+  },
   "clsupercarrush": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Supercar Rush"
+  },
+  "clsupercastlevaniavi": {
+    "reason": "Super Castlevania IV box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Castlevania IV"
   },
   "clsuperchibiknight": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -13732,6 +13948,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Super Dark Deception"
+  },
+  "clsuperdiagonalmario2": {
+    "reason": "Super Diagonal Mario 2 level gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Diagonal Mario 2"
   },
   "clsuperdromebugs-1": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -13763,17 +13985,197 @@
     "status": "verified",
     "title": "Superhotline Miami"
   },
+  "clsuperhouseofdeadninjas": {
+    "reason": "Super House of Dead Ninjas art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super House of Dead Ninjas"
+  },
+  "clsuperislandadventure": {
+    "reason": "Super Island Adventure box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Island Adventure"
+  },
+  "clsuperkidadventure": {
+    "reason": "Super Kid Adventure title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Kid Adventure"
+  },
   "clsuperliquidsoccer": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Super Liquid Soccer"
   },
+  "clsupermario": {
+    "reason": "Super Mario Bros. NES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario"
+  },
+  "clsupermario3mix": {
+    "reason": "Super Mario Bros 3 Mix box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario 3 Mix"
+  },
+  "clsupermario63": {
+    "reason": "Super Mario 63 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario 63"
+  },
+  "clsupermario64": {
+    "reason": "Super Mario 64 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario 64"
+  },
+  "clsupermario64ds": {
+    "reason": "Super Mario 64 DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario 64 DS"
+  },
+  "clsupermario74": {
+    "reason": "Super Mario 74 art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario 74"
+  },
+  "clsupermarioallstars": {
+    "reason": "Super Mario All-Stars box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario All-Stars"
+  },
   "clsupermariobros": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Super Mario Bros"
+  },
+  "clsupermariobros2": {
+    "reason": "Super Mario Bros 2 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario Bros 2"
+  },
+  "clsupermariobros2us": {
+    "reason": "Super Mario Bros 2 title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario Bros 2 (US)"
+  },
+  "clsupermariobros3": {
+    "reason": "Super Mario Bros 3 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario Bros 3"
+  },
+  "clsupermariobros3real": {
+    "reason": "Super Mario Bros 3 title screen for this build.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario Bros 3 (Real)"
+  },
+  "clsupermariokart": {
+    "reason": "Super Mario Kart box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario Kart"
+  },
+  "clsupermarioland": {
+    "reason": "Super Mario Land key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario Land"
+  },
+  "clsupermarioland2": {
+    "reason": "Super Mario Land 2 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario Land 2"
+  },
+  "clsupermarioland2dx": {
+    "reason": "Super Mario Land 2 DX box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario Land 2 DX"
+  },
+  "clsupermariolanddx": {
+    "reason": "Super Mario Land DX box art, kept distinct from the Land 2 DX cover.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario Land DX"
+  },
+  "clsupermariomon": {
+    "reason": "Super Mario Mon GBA box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario Mon"
+  },
+  "clsupermariorpg": {
+    "reason": "Super Mario RPG key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario RPG"
+  },
+  "clsupermariostarroad": {
+    "reason": "Super Mario Star Road box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario Star Road"
+  },
+  "clsupermariostarroadretooled": {
+    "reason": "Star Road Retooled title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario Star Road (Retooled)"
+  },
+  "clsupermariosunshine64": {
+    "reason": "Super Mario Sunshine 64 art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario Sunshine 64"
+  },
+  "clsupermarioworld": {
+    "reason": "Super Mario World art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario World"
+  },
+  "clsupermarioworld2": {
+    "reason": "Super Mario World 2: Yoshi's Island box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario World 2"
+  },
+  "clsupermarioworldthe-secretofthe7goldenstatues": {
+    "reason": "Super Mario World: Secret of the 7 Golden Statues box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Mario World: Secret of the 7 Golden Statues"
+  },
+  "clsupermetroid": {
+    "reason": "Super Metroid box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Metroid"
+  },
+  "clsupermonkeyballjr": {
+    "reason": "Super Monkey Ball Jr GBA box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Monkey Ball Jr"
+  },
+  "clsupernoahsark3d": {
+    "reason": "Super 3D Noah's Ark box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Noah's Ark 3D"
   },
   "clsuperoliverworld": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -13787,6 +14189,36 @@
     "status": "verified",
     "title": "Super Onion Boy 2"
   },
+  "clsuperpickleballadventure": {
+    "reason": "Pickleball Adventure key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Pickleball Adventure"
+  },
+  "clsuperpunchout": {
+    "reason": "Super Punch-Out!! box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Punch-Out!!"
+  },
+  "clsuperpunchouten": {
+    "reason": "Super Punch-Out!! key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Punch-Out!! (EN)"
+  },
+  "clsuperpuzzlefighter2turbo": {
+    "reason": "Super Puzzle Fighter II Turbo GBA box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Puzzle Fighter 2 Turbo"
+  },
+  "clsuperpuzzlefighter2turboalt": {
+    "reason": "Super Puzzle Fighter II Turbo art, kept distinct from the GBA cover.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Puzzle Fighter 2 Turbo (Alt)"
+  },
   "clsupersantakicker": {
     "reason": "Wrapper-declared artwork for this title (official og) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
@@ -13799,11 +14231,53 @@
     "status": "verified",
     "title": "Super Santa Kicker 2"
   },
+  "clsuperscribblenauts": {
+    "reason": "Super Scribblenauts DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Scribblenauts"
+  },
+  "clsupersmashbros": {
+    "reason": "Super Smash Bros Ultimate key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Smash Bros"
+  },
   "clsupersmashflash": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Super Smash Flash"
+  },
+  "clsupersmashflash0-8": {
+    "reason": "Super Smash Flash 0.8 title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Smash Flash 0.8"
+  },
+  "clsupersmashflash2": {
+    "reason": "Super Smash Flash 2 key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Smash Flash 2"
+  },
+  "clsupersmashflash2butdifversion": {
+    "reason": "Super Smash Flash 2 roster art for this build.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Smash Flash 2 (Alt Version)"
+  },
+  "clsuperstreetfighter2turbojp": {
+    "reason": "Super Street Fighter II Turbo arcade poster art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Street Fighter 2 Turbo JP"
+  },
+  "clsupertiltbros": {
+    "reason": "Super Tilt Bros box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Super Tilt Bros"
   },
   "clsupitdept": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -13817,6 +14291,12 @@
     "status": "verified",
     "title": "Supreme Duelist"
   },
+  "clsupremeduelist2019": {
+    "reason": "Supreme Duelist key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Supreme Duelist 2019"
+  },
   "clsurvevio": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -13828,6 +14308,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Survival Race V2"
+  },
+  "clsurvivorio": {
+    "reason": "Survivor.io logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Survivor.io"
   },
   "clsushicat": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -13853,11 +14339,23 @@
     "status": "verified",
     "title": "Swerve"
   },
+  "clswingforbrainrots": {
+    "reason": "Brainrot Hook Swing art, kept distinct from the Obby: Swing key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Swing for Brain Rots"
+  },
   "clswitchblade": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Switchblade"
+  },
+  "clswordandshieldultimateplus": {
+    "reason": "Pokemon Sword and Shield Ultimate Plus box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Sword and Shield Ultimate Plus"
   },
   "clswordfight": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -13865,17 +14363,41 @@
     "status": "verified",
     "title": "Sword Fight"
   },
+  "clswordplay": {
+    "reason": "SwordPlay logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Swordplay"
+  },
   "clswordsandsandals": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Swords and Sandals"
   },
+  "clswordsandsandals2": {
+    "reason": "Swords and Sandals 2 arena gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Swords and Sandals 2"
+  },
+  "clswordsandsouls": {
+    "reason": "Swords & Souls Armor Collection logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Swords and Souls"
+  },
   "clsydneyshark": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Sydney Shark"
+  },
+  "cltabi": {
+    "reason": "Tabi title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tabi"
   },
   "cltabletanks": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -13895,6 +14417,12 @@
     "status": "verified",
     "title": "Taco Stand"
   },
+  "cltag": {
+    "reason": "Results were stock photographs of children playing tag, not artwork for a game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
   "cltagc3": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -13907,11 +14435,47 @@
     "status": "verified",
     "title": "Tag CM"
   },
+  "cltaikonotatsujin": {
+    "reason": "Taiko no Tatsujin Rhythm Festival key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Taiko no Tatsujin"
+  },
+  "cltailofthedragon": {
+    "reason": "Tail of the Dragon tile art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tail of the Dragon"
+  },
+  "cltailsadventure": {
+    "reason": "Tails Adventure box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tails Adventure"
+  },
+  "cltailsskypatrol": {
+    "reason": "Tails SkyPatrol box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tails Sky Patrol"
+  },
   "cltaisei": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Taisei"
+  },
+  "cltakeover": {
+    "reason": "The Takeover key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Takeover"
+  },
+  "cltallio": {
+    "reason": "Tall.io gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tall.io"
   },
   "cltallmanrun": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -13931,6 +14495,12 @@
     "status": "verified",
     "title": "Tank Pixel"
   },
+  "cltanktrouble": {
+    "reason": "Tank Trouble logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tank Trouble"
+  },
   "cltanukisunset": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -13942,6 +14512,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Tanuki Sunset (Alt)"
+  },
+  "cltapper": {
+    "reason": "Tapper arcade cabinet.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tapper"
   },
   "cltaproad": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
@@ -13955,11 +14531,29 @@
     "status": "verified",
     "title": "Tasty Planet"
   },
+  "cltboidemo": {
+    "reason": "Binding of Isaac gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Binding of Isaac Demo"
+  },
+  "cltboilambeternal": {
+    "reason": "Wrath of the Lamb Eternal key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Binding of Isaac: Lamb Eternal"
+  },
   "cltelephonetrouble": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Telephone Trouble"
+  },
+  "cltelocation": {
+    "reason": "Telocation Gemini gameplay with its logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Telocation"
   },
   "cltempoverdose": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",

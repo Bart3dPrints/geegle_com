@@ -202,5 +202,9 @@
   "clslimelabratory": {
     "reason": "Results were Slime Laboratory 2 and 3 art, not the original title.",
     "recorded": "2026-11-27"
+  },
+  "cltag": {
+    "reason": "Results were stock photographs of children playing tag, not artwork for a game.",
+    "recorded": "2026-11-27"
   }
 }
