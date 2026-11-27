@@ -14543,6 +14543,24 @@
     "status": "verified",
     "title": "The Binding of Isaac: Lamb Eternal"
   },
+  "cltecmobowl": {
+    "reason": "Tecmo Bowl field gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tecmo Bowl"
+  },
+  "cltekken2ps1": {
+    "reason": "Tekken 2 PlayStation box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tekken 2 (PS1)"
+  },
+  "cltekken3ps1": {
+    "reason": "Tekken 3 PlayStation box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tekken 3 (PS1)"
+  },
   "cltelephonetrouble": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -14555,11 +14573,47 @@
     "status": "verified",
     "title": "Telocation"
   },
+  "cltempest2000": {
+    "reason": "Tempest 2000 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tempest 2000"
+  },
+  "cltempleofboom": {
+    "reason": "Temple of Boom title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Temple of Boom"
+  },
+  "cltemplerun2": {
+    "reason": "Temple Run 2 key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Temple Run 2"
+  },
   "cltempoverdose": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Tempo Overdose"
+  },
+  "cltennisnes": {
+    "reason": "Tennis NES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tennis (NES)"
+  },
+  "clteod": {
+    "reason": "Teod Missions gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Teod"
+  },
+  "clterra": {
+    "reason": "TERA key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Terra"
   },
   "clterritorialio": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -14585,6 +14639,30 @@
     "status": "verified",
     "title": "Territory War 3"
   },
+  "cltetris": {
+    "reason": "Tetris box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tetris"
+  },
+  "cltetrisattack": {
+    "reason": "Tetris Attack SNES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tetris Attack"
+  },
+  "cltetrisgba": {
+    "reason": "Tetris classic box art; the other results were Tetris Worlds.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tetris (GBA)"
+  },
+  "cltetrisgrandmaster2": {
+    "reason": "Tetris: The Grand Master 2 title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tetris: The Grand Master 2"
+  },
   "clthanksforremindingmeihadtofixthis": {
     "reason": "Results were a Steam developer console, a streamer photo and a Legion screen, not artwork for this entry.",
     "reviewed": "2026-11-27",
@@ -14596,6 +14674,24 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "The Classroom"
+  },
+  "cltheclassroom2": {
+    "reason": "The Classroom 2 room scene.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Classroom 2"
+  },
+  "cltheclassroom3": {
+    "reason": "The Classroom 3 title menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Classroom 3"
+  },
+  "clthedeadseat": {
+    "reason": "The Deadseat key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Dead Seat"
   },
   "clthedeepestsleep": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -14621,11 +14717,59 @@
     "status": "verified",
     "title": "The Impossible Game"
   },
+  "cltheincrediblemachine": {
+    "reason": "The Incredible Machine gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Incredible Machine"
+  },
+  "clthelaststand": {
+    "reason": "The Last Stand key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Last Stand"
+  },
   "clthelaststandunioncity--1": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "The Last Stand: Union City"
+  },
+  "cltheloneranger": {
+    "reason": "The Lone Ranger NES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Lone Ranger"
+  },
+  "clthemaninthewindow": {
+    "reason": "The Man in the Window key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Man in the Window"
+  },
+  "clthemepark": {
+    "reason": "Theme Park gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Theme Park"
+  },
+  "clthemeparkpsx": {
+    "reason": "Theme Park PlayStation box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Theme Park (PSX)"
+  },
+  "clthepit": {
+    "reason": "The Pit gameplay with its title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Pit"
+  },
+  "clthereisnofile": {
+    "reason": "Results were There Is No Game artwork, not this entry.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
   },
   "clthesodorrace": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -14645,11 +14789,29 @@
     "status": "verified",
     "title": "They Are Coming"
   },
+  "clthisistheonlylevel": {
+    "reason": "This Is the Only Level banner art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "This Is the Only Level"
+  },
+  "clthisistheonlylevel2": {
+    "reason": "This Is the Only Level Too banner art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "This Is the Only Level 2"
+  },
   "clthisistheonlyleveltoo": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "This Is the Only Level Too"
+  },
+  "clthreegoblets": {
+    "reason": "Three Goblets logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Three Goblets"
   },
   "clthrowapotato": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -14662,6 +14824,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Throw a Potato Again"
+  },
+  "clthwack": {
+    "reason": "Thwack court art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Thwack"
+  },
+  "cltiberiandawn": {
+    "reason": "Tiberian Dawn gameplay with its menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tiberian Dawn"
   },
   "cltimeshooter2": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -14687,17 +14861,95 @@
     "status": "verified",
     "title": "Tiny Fishing"
   },
+  "cltmnt": {
+    "reason": "TMNT: Shredder's Revenge key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "TMNT"
+  },
+  "cltmnt2arc": {
+    "reason": "TMNT 2 Arcade Game NES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "TMNT 2 Arcade"
+  },
+  "cltmntarc": {
+    "reason": "TMNT arcade cabinet.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "TMNT Arcade"
+  },
+  "cltmntturtlesintime": {
+    "reason": "TMNT: Turtles in Time box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "TMNT: Turtles in Time"
+  },
+  "cltoastarling": {
+    "reason": "Toastarling level.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Toastarling"
+  },
   "cltoasterball": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Toaster Ball"
   },
+  "cltoejam-earl": {
+    "reason": "ToeJam & Earl Back in the Groove key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "ToeJam & Earl"
+  },
+  "cltoejam-earlpof": {
+    "reason": "ToeJam & Earl Mega Drive box art, kept distinct from Back in the Groove.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "ToeJam & Earl (POF)"
+  },
   "cltombofthemass": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Tomb of the Mass"
+  },
+  "cltommorowandyesterday": {
+    "reason": "Tomorrow and Yesterday title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tomorrow and Yesterday"
+  },
+  "cltomodachicollection": {
+    "reason": "Tomodachi Collection DS box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tomodachi Collection"
+  },
+  "cltonyhawkskater2": {
+    "reason": "Tony Hawk's Pro Skater 2 GBA box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tony Hawk's Pro Skater 2"
+  },
+  "cltonyhawkskater4": {
+    "reason": "Tony Hawk's Pro Skater 4 GameCube box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tony Hawk's Pro Skater 4"
+  },
+  "cltonyhawksunderground": {
+    "reason": "Tony Hawk's Underground PlayStation 2 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tony Hawk's Underground"
+  },
+  "cltoomanytypes": {
+    "reason": "Pokemon Too Many Types GBA box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Too Many Types"
   },
   "cltopspeedracing3d": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -14747,11 +14999,23 @@
     "status": "verified",
     "title": "Touhou 5"
   },
+  "cltowerblocks": {
+    "reason": "Tower Blocks key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tower Blocks"
+  },
   "cltowercrash3d": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Tower Crash 3D"
+  },
+  "cltowerwizard": {
+    "reason": "Tower Wizard title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tower Wizard"
   },
   "cltownscraper": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -14777,6 +15041,12 @@
     "status": "verified",
     "title": "Tralalero Escape"
   },
+  "cltrappedwithjester": {
+    "reason": "Trapped with Jester key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Trapped with Jester"
+  },
   "cltrapthecat": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -14801,17 +15071,107 @@
     "status": "verified",
     "title": "Triachnid"
   },
+  "cltripleplay2000": {
+    "reason": "Triple Play 2000 PlayStation box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Triple Play 2000"
+  },
   "cltriviacrack": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Trivia Crack"
   },
+  "cltrollfacequest1": {
+    "reason": "Trollface Quest Game of Trolls title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Troll Face Quest 1"
+  },
+  "cltrollfacequest10": {
+    "reason": "Trollface Quest 10 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Troll Face Quest 10"
+  },
+  "cltrollfacequest11": {
+    "reason": "Trollface Quest 11 TV Shows logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Troll Face Quest 11"
+  },
+  "cltrollfacequest12": {
+    "reason": "Trollface Quest 12 Internet Memes logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Troll Face Quest 12"
+  },
+  "cltrollfacequest13": {
+    "reason": "Trollface Quest 13 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Troll Face Quest 13"
+  },
+  "cltrollfacequest2": {
+    "reason": "Trollface Quest 2 title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Troll Face Quest 2"
+  },
+  "cltrollfacequest3": {
+    "reason": "Trollface Quest 3 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Troll Face Quest 3"
+  },
+  "cltrollfacequest4": {
+    "reason": "Trollface Quest 4 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Troll Face Quest 4"
+  },
+  "cltrollfacequest5": {
+    "reason": "Trollface Quest 5 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Troll Face Quest 5"
+  },
+  "cltrollfacequest6": {
+    "reason": "Trollface Quest 6 Sports logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Troll Face Quest 6"
+  },
+  "cltrollfacequest7": {
+    "reason": "Trollface Quest 7 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Troll Face Quest 7"
+  },
+  "cltrollfacequest8": {
+    "reason": "Trollface Quest 8 Video Games art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Troll Face Quest 8"
+  },
+  "cltrollfacequest9": {
+    "reason": "Trollface Quest 9 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Troll Face Quest 9"
+  },
   "cltrucksim": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Truck Sim"
+  },
+  "cltsuzukimaze": {
+    "reason": "Tsuzuki Maze top-down view.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tsuzuki Maze"
   },
   "cltubejumpers": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -14843,17 +15203,35 @@
     "status": "verified",
     "title": "Tung Tung Tung Sahur Obby"
   },
+  "cltunnelrush": {
+    "reason": "Tunnel Rush title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tunnel Rush"
+  },
   "cltunnelrushbetter": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Tunnel Rush (Better)"
   },
+  "cltupertariotros": {
+    "reason": "Tupertariotros gameplay with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tupertariotros"
+  },
   "clturbostars": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Turbostars"
+  },
+  "clturokdinosaurhunter": {
+    "reason": "Turok: Dinosaur Hunter key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Turok: Dinosaur Hunter"
   },
   "cltwinshot--1": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -14885,6 +15263,18 @@
     "status": "verified",
     "title": "Lucky Block Obby: Euphrates River"
   },
+  "clufoswampoddysey": {
+    "reason": "UFO Swamp Odyssey arcade board.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "UFO Swamp Odyssey"
+  },
+  "clultima": {
+    "reason": "Ultima gameplay with its title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ultima"
+  },
   "clultimateassassian2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -14902,6 +15292,30 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Ultimate Car Driving Simulator"
+  },
+  "clultimatemortalkombat": {
+    "reason": "Mortal Kombat Ultimate key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ultimate Mortal Kombat"
+  },
+  "clultimatemortalkombat3": {
+    "reason": "Ultimate Mortal Kombat 3 SNES box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ultimate Mortal Kombat 3"
+  },
+  "clultrakill": {
+    "reason": "ULTRAKILL key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "ULTRAKILL"
+  },
+  "clumjammerlammy": {
+    "reason": "Um Jammer Lammy PlayStation box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Um Jammer Lammy"
   },
   "clumstickmangameidkiforgor": {
     "reason": "Stickman gameplay with its HUD.",
@@ -14921,11 +15335,35 @@
     "status": "verified",
     "title": "Underneath"
   },
+  "clundertale-gameboy-1": {
+    "reason": "Undertale Gameboy Edition banner art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Undertale (Gameboy)"
+  },
   "clundertalelb": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Undertale LB"
+  },
+  "clundertaler": {
+    "reason": "Undertale logo art with its cast.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Undertale R"
+  },
+  "clundertaleyellow": {
+    "reason": "Undertale Yellow box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Undertale Yellow"
+  },
+  "clunfairmario": {
+    "reason": "Unfair Mario title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Unfair Mario"
   },
   "clunfairmarioworkquestionmark": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -14944,6 +15382,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Unicycle Hero"
+  },
+  "clunitresdreams": {
+    "reason": "Unitres Dreams logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Unitres Dreams"
   },
   "cluno": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -14969,6 +15413,30 @@
     "status": "verified",
     "title": "Untitled Goose Game"
   },
+  "clupgradecomplete": {
+    "reason": "Upgrade Complete key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Upgrade Complete"
+  },
+  "clupgradecomplete2": {
+    "reason": "Upgrade Complete 2 menu art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Upgrade Complete 2"
+  },
+  "clupslash": {
+    "reason": "Upslash title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Upslash"
+  },
+  "clurbanchampion": {
+    "reason": "Urban Champion title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Urban Champion"
+  },
   "clusterrush": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -14987,17 +15455,53 @@
     "status": "verified",
     "title": "Uwu Client"
   },
+  "cluzg": {
+    "reason": "UZG Remastered title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "UZG"
+  },
   "clvampiresurvivors": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Vampire Survivors"
   },
+  "clvanguard": {
+    "reason": "Vanguard Chapter 1 key art; results 2 and 3 were Call of Duty: Vanguard.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Vanguard"
+  },
+  "clvaportrails": {
+    "reason": "Vapor Trails key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Vapor Trails"
+  },
   "clvex": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Vex"
+  },
+  "clvex2": {
+    "reason": "Vex 2 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Vex 2"
+  },
+  "clvex3": {
+    "reason": "Vex 3 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Vex 3"
+  },
+  "clvex3xmas": {
+    "reason": "Vex 3 Xmas art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Vex 3 Xmas"
   },
   "clvex4": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -15011,6 +15515,54 @@
     "status": "verified",
     "title": "Vex 5"
   },
+  "clvex6": {
+    "reason": "Vex 6 art with its ninja.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Vex 6"
+  },
+  "clvex7": {
+    "reason": "Vex 7 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Vex 7"
+  },
+  "clvex8": {
+    "reason": "Vex 8 logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Vex 8"
+  },
+  "clvexchallenges": {
+    "reason": "Vex Challenges logo art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Vex Challenges"
+  },
+  "clvexx3m": {
+    "reason": "Vex X3M art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Vexx 3M"
+  },
+  "clvexx3m2": {
+    "reason": "Vex X3M 2 title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Vexx 3M 2"
+  },
+  "clvibribbon": {
+    "reason": "Vib-Ribbon title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Vib-Ribbon"
+  },
+  "clvillager": {
+    "reason": "Virtual Villagers: New Believers key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Villager"
+  },
   "clvincentmansionofthedead": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -15022,6 +15574,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Visitor"
+  },
+  "clvolleyball": {
+    "reason": "Results were stock photographs of volleyball matches, not artwork for a game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
   },
   "clvolleyrandom": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -15053,6 +15611,24 @@
     "status": "verified",
     "title": "VS Nonsense"
   },
+  "clvssmb": {
+    "reason": "VS. Super Mario Bros. arcade art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "VS SMB"
+  },
+  "clvvvvvv-1": {
+    "reason": "VVVVVV title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "VVVVVV"
+  },
+  "clwaluigitacostand": {
+    "reason": "Waluigi's Taco Stand box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Waluigi's Taco Stand"
+  },
   "clwarfare1917": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -15064,6 +15640,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Warfare 1944"
+  },
+  "clwartheknight": {
+    "reason": "War of the Knights key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "War the Knight"
   },
   "clwavedash": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -15406,6 +15988,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Thief Puzzle"
+  },
+  "time-shooter-3": {
+    "reason": "Time Shooter 3 SWAT key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Time Shooter 3: SWAT"
+  },
+  "unownking": {
+    "reason": "Pokemon The Unown King GBA box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Unown King"
   },
   "youtube": {
     "reason": "Official YouTube logo from youtube.com branding asset, matching the YouTube app card.",
