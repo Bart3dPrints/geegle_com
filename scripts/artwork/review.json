@@ -2801,6 +2801,12 @@
     "status": "rejected",
     "title": "Factory Balls 3"
   },
+  "clfactoryballs4": {
+    "reason": "Play overlay on a blank page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Factory Balls 4"
+  },
   "clfallguys": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -4433,6 +4439,12 @@
     "status": "rejected",
     "title": "LEGO Indiana Jones"
   },
+  "cllegoindianajones2": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "LEGO Indiana Jones 2"
+  },
   "cllegoninjago": {
     "reason": "Loading screen, not rendered gameplay.",
     "reviewed": "2026-11-27",
@@ -4757,6 +4769,12 @@
     "status": "rejected",
     "title": "Mega Man X5"
   },
+  "clmegamanx6": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Mega Man X6"
+  },
   "clmelonplayground": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -4823,17 +4841,59 @@
     "status": "rejected",
     "title": "Mine Caves"
   },
+  "clminecraft1-8-8": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Minecraft 1 8 8"
+  },
+  "clminecraftcasesim": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Minecraft Cases Im"
+  },
   "clminecraftshooter": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Minecraft Shooter"
   },
+  "clmineshooter": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mine Shooter"
+  },
+  "clminesweeperplus": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Minesweeper Plus"
+  },
+  "clminhero": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Minhero"
+  },
   "clminishooters": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Mini Shooters"
+  },
+  "clminitooth": {
+    "reason": "Placeholder video player, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Mini Tooth"
+  },
+  "clmiraginewar": {
+    "reason": "Portal splash (MoFunZone), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Mira Gin Ewar"
   },
   "clmomoscrushers": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -4847,17 +4907,167 @@
     "status": "rejected",
     "title": "Monster Derby"
   },
+  "clmonstertracks": {
+    "reason": "Blank frame inside a tournament page.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Monster Tracks"
+  },
+  "clmonstertruckcurfew": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Monster Truck Curfew"
+  },
   "clmonstertruckportstunt": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Monster Truck Port Stunt"
   },
+  "clmortkom4": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Mort Kom 4"
+  },
+  "clmotherload": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Motherload"
+  },
+  "clmotoroadrash": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Moto Road Rash"
+  },
+  "clmotox3m2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Moto X3M 2"
+  },
+  "clmotox3m3": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Moto X3M 3"
+  },
+  "clmotox3mm": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Moto X3M"
+  },
+  "clmotox3mpoolparty": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Moto X3M Pool Party"
+  },
+  "clmotox3mspookyland": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Moto X3M Spooky Land"
+  },
+  "clmotox3mwinter": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Moto X3M Winter"
+  },
+  "clmrmine": {
+    "reason": "Terms page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Mr. Mine"
+  },
+  "clmrracer": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mr. Racer"
+  },
+  "clmultitask": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Multitask"
+  },
+  "clmutilate-a-doll": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Mutilate a Doll"
+  },
   "clmxoffroadmaster": {
     "reason": "Portal logo (Two Player Games), not the game.",
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "MX Off Road Master"
+  },
+  "clmyteardrop": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "My Teardrop"
+  },
+  "clnatsuki64": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Natsuki 64"
+  },
+  "clnaturalselection": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Natural Selection"
+  },
+  "clnautilusos-1": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Nautilus OS"
+  },
+  "clnbalive2000": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "NBA Live 2000"
+  },
+  "clnbalive2003": {
+    "reason": "Publisher splash (EA Sports), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "NBA Live 2003"
+  },
+  "clnblox": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "NBlox"
+  },
+  "clneonblaster": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Neon Blaster"
+  },
+  "clneonrider": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Neon Rider"
+  },
+  "clnesworldchampion": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "NES World Champion"
   },
   "clnetattack": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
@@ -4871,11 +5081,125 @@
     "status": "verified",
     "title": "Neverending Legacy"
   },
+  "clnewgroundsrumble": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Newgrounds Rumble"
+  },
+  "clnewyorkshark": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "New York Shark"
+  },
+  "clnextdoor": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Next Door"
+  },
+  "clngon-1": {
+    "reason": "Near-black frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "N-gon"
+  },
+  "clnguidle": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "NGU Idle"
+  },
+  "clnhl98": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "NHL 98"
+  },
+  "clnickelodeonsuperbrawl2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Nickelodeon Super Brawl 2"
+  },
+  "clnightcatsurvival": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Night Cat Survival"
+  },
+  "clnightclubshowdown": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Nightclub Showdown"
+  },
+  "clnimrods": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Nimrods"
+  },
   "clninjaobbyparkor": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Ninja Obby Parkour"
+  },
+  "clnitclient": {
+    "reason": "License agreement page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Nit Client"
+  },
+  "clnitromemustdie": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Nitrome Must Die"
+  },
+  "clnoobminer": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Noob Miner"
+  },
+  "clnotyourpawn": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Not Your Pawn"
+  },
+  "clnovaclient": {
+    "reason": "Publisher logo (Mojang), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Nova Client"
+  },
+  "clnubbysnumberfactory": {
+    "reason": "Download prompt with no game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Nubby's Number Factory"
+  },
+  "clnutsandboltsscrewingpuzzle": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Nuts and Bolts Screwing Puzzle"
+  },
+  "clnzp": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "NZP"
+  },
+  "clo-oo": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Oo"
   },
   "clobby-99-will-lose": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -4883,11 +5207,35 @@
     "status": "verified",
     "title": "Obby: 99 Will Lose"
   },
+  "clobby1jumpperclick": {
+    "reason": "Advert-laden page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Obby: 1 Jump Per Click"
+  },
+  "clobby456": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Obby 456"
+  },
   "clobbybike": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Obby: Bike"
+  },
+  "clobbycart": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Obby: Cart"
+  },
+  "clobbyonlyup": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Obby: Only Up"
   },
   "clobbyswing": {
     "reason": "Store badge, not the game artwork.",
