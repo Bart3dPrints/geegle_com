@@ -257,6 +257,12 @@
     "status": "rejected",
     "title": "Five Nights at Freddy's 2"
   },
+  "clFNAF3": {
+    "reason": "Blank frame, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Five Nights at Freddy's 3"
+  },
   "clGXClient": {
     "reason": "Captured frame is a generic resolution selector with no identifying game content.",
     "reviewed": "2026-11-26",
@@ -2675,11 +2681,23 @@
     "status": "verified",
     "title": "Earth Taken 3"
   },
+  "cleccothedolphin": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ecco the Dolphin"
+  },
   "cledelweiss": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Edelweiss"
+  },
+  "cleffinghail": {
+    "reason": "Tiny window on a blank field; not recognizable at card size.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Effing Hail"
   },
   "cleffingmachines": {
     "reason": "Portal loading screen (Kongregate), not the game.",
@@ -2704,6 +2722,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Egg"
+  },
+  "cleggycar": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Eggycar"
   },
   "clelasticface": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -2939,6 +2963,12 @@
     "status": "verified",
     "title": "Feed Us 3"
   },
+  "clfeedus5": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Feed Us 5"
+  },
   "clffaf": {
     "reason": "Portal logo (Kiz10), not the game.",
     "reviewed": "2026-11-27",
@@ -3071,6 +3101,12 @@
     "status": "rejected",
     "title": "Five Nights at Shrek's"
   },
+  "clfivenightsatyoshis": {
+    "reason": "Content warning gate, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Five Nights at Yoshi's"
+  },
   "clflappybird": {
     "reason": "Captured gameplay shows the actual game.",
     "reviewed": "2026-11-27",
@@ -3191,6 +3227,12 @@
     "status": "verified",
     "title": "FNF: Camellia Rude Blaster"
   },
+  "clfnfchara": {
+    "reason": "Engine splash, not the mod artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF Chara"
+  },
   "clfnfcitytales": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -3215,11 +3257,23 @@
     "status": "verified",
     "title": "FNF: Deceiver"
   },
+  "clfnfdesolation": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Desolation"
+  },
   "clfnfdokitakeoverplus": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: Doki Takeover Plus"
+  },
+  "clfnfdropandroll": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Drop and Roll"
   },
   "clfnfdsides": {
     "reason": "Captured mod artwork shows the actual title.",
@@ -3293,11 +3347,35 @@
     "status": "verified",
     "title": "FNF: Golden Apple"
   },
+  "clfnfhank": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF Hank"
+  },
+  "clfnfhex": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF Hex"
+  },
   "clfnfholiday": {
     "reason": "Engine splash, not the mod artwork.",
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "FNF: Holiday"
+  },
+  "clfnfhotline": {
+    "reason": "Default engine menu shared across mods.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Hotline"
+  },
+  "clfnfhypnoslullaby": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Hypno's Lullaby"
   },
   "clfnfimposter3": {
     "reason": "Engine splash, not the mod artwork.",
@@ -3347,6 +3425,12 @@
     "status": "verified",
     "title": "FNF: Mario Madness D-Side"
   },
+  "clfnfmarioport": {
+    "reason": "Engine splash, not the mod artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Mario Port"
+  },
   "clfnfmcmadness": {
     "reason": "Default engine menu shared across mods.",
     "reviewed": "2026-11-27",
@@ -3364,6 +3448,18 @@
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "FNF: Mob Mod"
+  },
+  "clfnfneo": {
+    "reason": "Default engine menu shared across mods.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF Neo"
+  },
+  "clfnfpiggyfield": {
+    "reason": "Press-enter gate, not the mod artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Piggy Field"
   },
   "clfnfpokepastaperdition": {
     "reason": "Content warning gate, not the mod artwork.",
@@ -3418,6 +3514,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: Shaggy X Matt"
+  },
+  "clfnfshucks-v2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF Shucks V2"
   },
   "clfnfsky": {
     "reason": "Default engine menu shared across mods.",
@@ -3514,6 +3616,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF Wednesday Infidelity"
+  },
+  "clfnfwhitty": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Whitty"
+  },
+  "clfnfzardy": {
+    "reason": "Default engine menu shared across mods.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Zardy"
   },
   "clfolderdungeon": {
     "reason": "Captured gameplay shows the actual game.",
@@ -3767,11 +3881,23 @@
     "status": "rejected",
     "title": "Good Monkey Mart"
   },
+  "clgoogledino": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Google Dino"
+  },
   "clgorillatag": {
     "reason": "Loading screen, not rendered gameplay.",
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "Gorilla Tag"
+  },
+  "clgrandactionsimulator-ny": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Grand Action Simulator NY"
   },
   "clgranddad": {
     "reason": "Captured title screen shows the actual game.",
@@ -3862,6 +3988,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Grow a Garden"
+  },
+  "clgrowmi": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Growmi"
   },
   "clgrowyourgarden": {
     "reason": "Captured gameplay shows the actual game.",
@@ -4012,6 +4144,12 @@
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Helltaker"
+  },
+  "clhelpnobrakes": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Help No Brakes"
   },
   "clheretic": {
     "reason": "Captured title screen shows the actual game.",
@@ -4192,6 +4330,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Hungry Lamu"
+  },
+  "clhyppersandbox": {
+    "reason": "Publisher logo, not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Hypper Sandbox"
   },
   "clicantbelievegoogleflaggedmeforthenameofthefilelol": {
     "reason": "Screen shown belongs to a different game.",
@@ -4445,6 +4589,12 @@
     "status": "rejected",
     "title": "Jungle Deer Hunting"
   },
+  "cljurassicpark": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Jurassic Park"
+  },
   "cljustaplatformer": {
     "reason": "License agreement page, not the game artwork.",
     "reviewed": "2026-11-27",
@@ -4456,6 +4606,12 @@
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "Just a Platformer E"
+  },
+  "cljustaplatformere2": {
+    "reason": "Blank application shell, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Just a Platformer E2"
   },
   "cljustfalllol": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -4589,11 +4745,23 @@
     "status": "verified",
     "title": "Lambda Client"
   },
+  "cllasthorizon": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Last Horizon"
+  },
   "cllaststand": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Last Stand"
+  },
+  "clleaderstrike": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Leader Strike"
   },
   "clleapandavoid2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -4703,6 +4871,12 @@
     "status": "rejected",
     "title": "Light It Up"
   },
+  "cllilrunmo": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Lil Runmo"
+  },
   "cllittlealchemy2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -4714,6 +4888,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Lock the Door"
+  },
+  "cllonewolf": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Lone Wolf"
   },
   "cllosangelesshark": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -4787,6 +4967,12 @@
     "status": "verified",
     "title": "Madness Interactive"
   },
+  "clmadnessoffcolor": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madness Off Color"
+  },
   "clmadnessretaliation": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -4798,6 +4984,12 @@
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "Madness 2010"
+  },
+  "clmadnessstand": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Madness Stand"
   },
   "clmadskillsmotocross2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -8614,6 +8806,12 @@
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "Troll Face Quest 11"
+  },
+  "cltrollfacequest12": {
+    "reason": "Error page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Troll Face Quest 12"
   },
   "cltrucksim": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
