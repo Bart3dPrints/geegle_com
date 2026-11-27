@@ -5030,9 +5030,9 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
   "cleaglercraft152": {
     "title": "Eaglercraft 1.5.2",
     "url": "/artwork/cleaglercraft152.webp",
-    "source": "https://eaglercraftweb.com/",
+    "source": "https://eaglercraftgame.io/eaglercraft-152",
     "type": "game-asset",
-    "identityEvidence": "Found by searching \"Eaglercraft 1.5.2 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Eaglercraft 1.5.2\" before use. Source page: https://eaglercraftweb.com/",
+    "identityEvidence": "Found by searching \"Eaglercraft 1.5.2 game\" in Bing Images and taking result 5; the image was checked against the catalog title \"Eaglercraft 1.5.2\" before use. Source page: https://eaglercraftgame.io/eaglercraft-152",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "cleaglercraftl_19_v0_7_0_offline_signed-1": {
@@ -5046,25 +5046,25 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
   "cleaglercraftlite": {
     "title": "Eaglercraft Lite",
     "url": "/artwork/cleaglercraftlite.webp",
-    "source": "https://eaglercraftweb.com/",
+    "source": "https://slithergame.io/eaglercraft-unblocked",
     "type": "game-asset",
-    "identityEvidence": "Found by searching \"Eaglercraft Lite game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Eaglercraft Lite\" before use. Source page: https://eaglercraftweb.com/",
+    "identityEvidence": "Found by searching \"Eaglercraft Lite game\" in Bing Images and taking result 4; the image was checked against the catalog title \"Eaglercraft Lite\" before use. Source page: https://slithergame.io/eaglercraft-unblocked",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "cleaglercraftmagic": {
     "title": "Eaglercraft Magic",
     "url": "/artwork/cleaglercraftmagic.webp",
-    "source": "https://eaglercraftweb.com/",
+    "source": "https://eaglercraft.com.co/es/all-eaglercraft-versions-list-every-build-you-can-play-right-now/",
     "type": "game-asset",
-    "identityEvidence": "Found by searching \"Eaglercraft Magic game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Eaglercraft Magic\" before use. Source page: https://eaglercraftweb.com/",
+    "identityEvidence": "Found by searching \"Eaglercraft Magic game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Eaglercraft Magic\" before use. Source page: https://eaglercraft.com.co/es/all-eaglercraft-versions-list-every-build-you-can-play-right-now/",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "cleaglercraftnebula": {
     "title": "Eaglercraft Nebula",
     "url": "/artwork/cleaglercraftnebula.webp",
-    "source": "https://eaglercraftweb.com/",
+    "source": "https://eaglercraft.com.co/de/download-eaglercraft/",
     "type": "game-asset",
-    "identityEvidence": "Found by searching \"Eaglercraft Nebula game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Eaglercraft Nebula\" before use. Source page: https://eaglercraftweb.com/",
+    "identityEvidence": "Found by searching \"Eaglercraft Nebula game\" in Bing Images and taking result 5; the image was checked against the catalog title \"Eaglercraft Nebula\" before use. Source page: https://eaglercraft.com.co/de/download-eaglercraft/",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "cleaglercraftsky": {
@@ -5542,17 +5542,17 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
   "clfamidashcsides1-2-8": {
     "title": "Famidash C-Sides 1.2.8",
     "url": "/artwork/clfamidashcsides1-2-8.webp",
-    "source": "https://www.youtube.com/watch?v=83NgpW6MtX8",
+    "source": "https://www.reddit.com/r/geometrydash/comments/1c5faai/famidash_update_new_level_select_screen/",
     "type": "game-asset",
-    "identityEvidence": "Found by searching \"Famidash C-Sides 1.2.8 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Famidash C-Sides 1.2.8\" before use. Source page: https://www.youtube.com/watch?v=83NgpW6MtX8",
+    "identityEvidence": "Found by searching \"Famidash C-Sides 1.2.8 game\" in Bing Images and taking result 5; the image was checked against the catalog title \"Famidash C-Sides 1.2.8\" before use. Source page: https://www.reddit.com/r/geometrydash/comments/1c5faai/famidash_update_new_level_select_screen/",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clfamidashdsides1-2-8": {
     "title": "Famidash D-Sides 1.2.8",
     "url": "/artwork/clfamidashdsides1-2-8.webp",
-    "source": "https://www.youtube.com/watch?v=83NgpW6MtX8",
+    "source": "https://www.rocketgames.io/game/famidash",
     "type": "game-asset",
-    "identityEvidence": "Found by searching \"Famidash D-Sides 1.2.8 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Famidash D-Sides 1.2.8\" before use. Source page: https://www.youtube.com/watch?v=83NgpW6MtX8",
+    "identityEvidence": "Found by searching \"Famidash D-Sides 1.2.8 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Famidash D-Sides 1.2.8\" before use. Source page: https://www.rocketgames.io/game/famidash",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
   "clfancypantsadventure": {

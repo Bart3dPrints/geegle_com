@@ -15646,7 +15646,10 @@
       "imagePath": "/artwork/cldynamiteheaddy.webp",
       "identityEvidence": "Found by searching \"Dynamite Headdy game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Dynamite Headdy\" before use. Source page: https://www.nintendolife.com/games/gamegear/dynamite_headdy",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "514ea7578f4e20c2fb0b468293b649bebe605c93ea65a0e45bc318f9fcca067e",
       "visualVerification": "verified 2026-11-27: Dynamite Headdy box art with the title and SEGA Game Gear branding.",
       "methodsInvestigated": [],
@@ -15661,13 +15664,16 @@
       "path": "/games/cleaglercraft152.html",
       "status": "verified",
       "method": "game-asset",
-      "sourceUrl": "https://eaglercraftweb.com/",
+      "sourceUrl": "https://eaglercraftgame.io/eaglercraft-152",
       "imagePath": "/artwork/cleaglercraft152.webp",
-      "identityEvidence": "Found by searching \"Eaglercraft 1.5.2 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Eaglercraft 1.5.2\" before use. Source page: https://eaglercraftweb.com/",
+      "identityEvidence": "Found by searching \"Eaglercraft 1.5.2 game\" in Bing Images and taking result 5; the image was checked against the catalog title \"Eaglercraft 1.5.2\" before use. Source page: https://eaglercraftgame.io/eaglercraft-152",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
-      "sha256": "66888b3e5759eda136969d99cc57a63eacadead9111eabd660081265707c1779",
-      "visualVerification": "verified 2026-11-27: Eaglercraft app icon with its character; results 1 and 2 were marketing pages with buttons.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "59c1789e060514551bc8ac82c0d1063c4bccdd1896039b4db96471a651acc14f",
+      "visualVerification": "verified 2026-11-27: Eaglercraft 1.5.2 version banner for this build.",
       "methodsInvestigated": [],
       "blocker": null
     },
@@ -15680,13 +15686,16 @@
       "path": "/games/cleaglercraftlite.html",
       "status": "verified",
       "method": "game-asset",
-      "sourceUrl": "https://eaglercraftweb.com/",
+      "sourceUrl": "https://slithergame.io/eaglercraft-unblocked",
       "imagePath": "/artwork/cleaglercraftlite.webp",
-      "identityEvidence": "Found by searching \"Eaglercraft Lite game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Eaglercraft Lite\" before use. Source page: https://eaglercraftweb.com/",
+      "identityEvidence": "Found by searching \"Eaglercraft Lite game\" in Bing Images and taking result 4; the image was checked against the catalog title \"Eaglercraft Lite\" before use. Source page: https://slithergame.io/eaglercraft-unblocked",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
-      "sha256": "66888b3e5759eda136969d99cc57a63eacadead9111eabd660081265707c1779",
-      "visualVerification": "verified 2026-11-27: Eaglercraft app icon with the game's title.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "f6504030d1ab37fd59709e2882b5ad00ce07e6141fd7c7ca08dbc9ec5683a7a6",
+      "visualVerification": "verified 2026-11-27: Eaglercraft logo over its block-built world, distinct from the other builds' icons.",
       "methodsInvestigated": [],
       "blocker": null
     },
@@ -15699,13 +15708,16 @@
       "path": "/games/cleaglercraftmagic.html",
       "status": "verified",
       "method": "game-asset",
-      "sourceUrl": "https://eaglercraftweb.com/",
+      "sourceUrl": "https://eaglercraft.com.co/es/all-eaglercraft-versions-list-every-build-you-can-play-right-now/",
       "imagePath": "/artwork/cleaglercraftmagic.webp",
-      "identityEvidence": "Found by searching \"Eaglercraft Magic game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Eaglercraft Magic\" before use. Source page: https://eaglercraftweb.com/",
+      "identityEvidence": "Found by searching \"Eaglercraft Magic game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Eaglercraft Magic\" before use. Source page: https://eaglercraft.com.co/es/all-eaglercraft-versions-list-every-build-you-can-play-right-now/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
-      "sha256": "66888b3e5759eda136969d99cc57a63eacadead9111eabd660081265707c1779",
-      "visualVerification": "verified 2026-11-27: Eaglercraft app icon for this build.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "e530800501e24c6fe3aff716baaaae731a4e039efa4c2a1a0e6d1d4653c8f131",
+      "visualVerification": "verified 2026-11-27: All-Eaglercraft-versions graphic used for this build.",
       "methodsInvestigated": [],
       "blocker": null
     },
@@ -15718,13 +15730,16 @@
       "path": "/games/cleaglercraftnebula.html",
       "status": "verified",
       "method": "game-asset",
-      "sourceUrl": "https://eaglercraftweb.com/",
+      "sourceUrl": "https://eaglercraft.com.co/de/download-eaglercraft/",
       "imagePath": "/artwork/cleaglercraftnebula.webp",
-      "identityEvidence": "Found by searching \"Eaglercraft Nebula game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Eaglercraft Nebula\" before use. Source page: https://eaglercraftweb.com/",
+      "identityEvidence": "Found by searching \"Eaglercraft Nebula game\" in Bing Images and taking result 5; the image was checked against the catalog title \"Eaglercraft Nebula\" before use. Source page: https://eaglercraft.com.co/de/download-eaglercraft/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
-      "sha256": "66888b3e5759eda136969d99cc57a63eacadead9111eabd660081265707c1779",
-      "visualVerification": "verified 2026-11-27: Eaglercraft app icon with its world art.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "3dd9a5d0ca74f378366096dfffb243b47604d9fccb471f81f1eb8cb63714e829",
+      "visualVerification": "verified 2026-11-27: Eaglercraft download banner used for this build.",
       "methodsInvestigated": [],
       "blocker": null
     },
@@ -15762,9 +15777,12 @@
       "imagePath": "/artwork/cleaglercraftsky.webp",
       "identityEvidence": "Found by searching \"Eaglercraft Sky game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Eaglercraft Sky\" before use. Source page: https://geometryarrow.io/eaglercraft",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "0d51d066341129eb9db83e0384f5d8b014e311785ab4b134e4e57429a927cee7",
-      "visualVerification": "verified 2026-11-27: Eaglercraft app icon with its sky world art.",
+      "visualVerification": "verified 2026-11-27: EAGLECRAFT key art with its character.",
       "methodsInvestigated": [],
       "blocker": null
     },
@@ -15966,7 +15984,10 @@
       "imagePath": "/artwork/clearthbound.webp",
       "identityEvidence": "Found by searching \"Earthbound game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Earthbound\" before use. Source page: https://gamingheartscollection.net/2026/11/24/earthbound-1994-promotional-art/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "2f48a34c33d831b66c437bdbf34badbf2fa7102965a664fc64d8ecd7e951d407",
       "visualVerification": "verified 2026-11-27: EarthBound logo art with Ness and the party.",
       "methodsInvestigated": [],
@@ -15985,7 +16006,10 @@
       "imagePath": "/artwork/clearthbound3.webp",
       "identityEvidence": "Found by searching \"Earthbound 3 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Earthbound 3\" before use. Source page: https://forums.consolewars.de/threads/der-offizielle-e3-2014-war-thread.57919/page-209",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "bc7841720b2d338f921c7b6c7825c7084ff337c536cd2c789cf5b87ebe15f3b4",
       "visualVerification": "verified 2026-11-27: MOTHER 3 key art, the game this entry serves; result 1 was a captioned gameplay video.",
       "methodsInvestigated": [],
@@ -16004,7 +16028,10 @@
       "imagePath": "/artwork/clearthboundsnes.webp",
       "identityEvidence": "Found by searching \"Earthbound (SNES) game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Earthbound (SNES)\" before use. Source page: https://www.nintendolife.com/games/snes/earthbound",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "452612b684b52defc3824049cd19a7e8b8ad1aae95c468d2cff760a8b3f6ce30",
       "visualVerification": "verified 2026-11-27: EarthBound SNES cover art, centred without the box border.",
       "methodsInvestigated": [],
@@ -16023,7 +16050,10 @@
       "imagePath": "/artwork/clearthwormgg.webp",
       "identityEvidence": "Found by searching \"Earthworm Jim game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Earthworm Jim\" before use. Source page: https://store.epicgames.com/en-US/p/earthworm-jim-9f7cd1?lang=es-ES",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "f4210ec15863927715d19ca210ad9ab8cd57d7e010019c724126592e2ad8df08",
       "visualVerification": "verified 2026-11-27: Earthworm Jim key art with the logo for the Game Gear build.",
       "methodsInvestigated": [],
@@ -16042,7 +16072,10 @@
       "imagePath": "/artwork/clearthwormjim--1.webp",
       "identityEvidence": "Found by searching \"Earthworm Jim game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Earthworm Jim\" before use. Source page: https://retronorthgames.com/products/earthworm-jim-pcgames",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "9803dd619a6d779a0865688ee8f89872e29d29f37ecce1beeb2f58e98ba07916",
       "visualVerification": "verified 2026-11-27: Earthworm Jim box art, kept visually distinct from the Game Gear entry.",
       "methodsInvestigated": [],
@@ -16061,7 +16094,10 @@
       "imagePath": "/artwork/clearthwormjim2--1.webp",
       "identityEvidence": "Found by searching \"Earthworm Jim 2 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Earthworm Jim 2\" before use. Source page: https://strategywiki.org/wiki/Earthworm_Jim_2",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "465449dd6f6ce169b6ae765a029dabd37c30222cdb26c0a6239440ef0d1640b2",
       "visualVerification": "verified 2026-11-27: Earthworm Jim 2 Genesis box art.",
       "methodsInvestigated": [],
@@ -16180,7 +16216,10 @@
       "imagePath": "/artwork/cleffingmachines.webp",
       "identityEvidence": "Found by searching \"Effing Machines game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Effing Machines\" before use. Source page: https://www.arcadecabin.com/game-help/effing_machines",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "01937a8c5992645f2c546bfccf20e3416ff06a1d769657affa1ad90c418d9907",
       "visualVerification": "verified 2026-11-27: Effing Machines logo art.",
       "methodsInvestigated": [],
@@ -16199,7 +16238,10 @@
       "imagePath": "/artwork/cleffingworms.webp",
       "identityEvidence": "Found by searching \"Effing Worms game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Effing Worms\" before use. Source page: https://backloggd.com/games/effing-worms/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "077f6ef3fd2eb657c61d30069fda4afc40bb56c1ca69d2da07813d7f4e154c6a",
       "visualVerification": "verified 2026-11-27: Effing Worms logo with its worm.",
       "methodsInvestigated": [],
@@ -16343,7 +16385,10 @@
       "imagePath": "/artwork/clelevatoraction.webp",
       "identityEvidence": "Found by searching \"Elevator Action game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Elevator Action\" before use. Source page: http://genxgrownup.com/elevator-action-1983-taito-genx-arcade-original-playthrough-and-more-genxgrownup-live/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "31df252984018fb2f952189c798cf41b9a3219995ad563429628c6069a90f00f",
       "visualVerification": "verified 2026-11-27: Elevator Action title card with the building.",
       "methodsInvestigated": [],
@@ -16487,7 +16532,10 @@
       "imagePath": "/artwork/clendlesswar5.webp",
       "identityEvidence": "Found by searching \"Endless War 5 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Endless War 5\" before use. Source page: https://blackfox-of-itmo.newgrounds.com/news/post/733776",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "852048e106532a64faa61c75f79a45e0b212b88f738c020703b225af6b1d1245",
       "visualVerification": "verified 2026-11-27: Endless War 5 logo over its battlefield artwork.",
       "methodsInvestigated": [],
@@ -16652,7 +16700,10 @@
       "imagePath": "/artwork/clescaperoad3.webp",
       "identityEvidence": "Found by searching \"Escape Road 3 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Escape Road 3\" before use. Source page: https://www.snokido.com/game/escape-road-3",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "76a56d01a3fe059f1b8dc9fafe788ff29840d3aeba3b5491237e1efd73a2f22b",
       "visualVerification": "verified 2026-11-27: Escape Road 3 key art with its characters.",
       "methodsInvestigated": [],
@@ -16721,7 +16772,10 @@
       "imagePath": "/artwork/clet.webp",
       "identityEvidence": "Found by searching \"Et game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Et\" before use. Source page: https://kanobu.ru/games/e-t-the-extra-terrestrial/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "ceb136ca91bf091fb957f48a937a90f9e5edc12735c9529c9c97ad2dc78273ae",
       "visualVerification": "verified 2026-11-27: E.T. Game Boy Advance box art.",
       "methodsInvestigated": [],
@@ -16740,7 +16794,10 @@
       "imagePath": "/artwork/cletrianoddyssey.webp",
       "identityEvidence": "Found by searching \"Etrian Odyssey game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Etrian Odyssey\" before use. Source page: https://www.nintendo.com/us/store/products/etrian-odyssey-hd-switch/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "3e1e2e364b44e15f26678c3d43cd9682d0b41bcb88ab4dd63aed40cd25303a8e",
       "visualVerification": "verified 2026-11-27: Etrian Odyssey HD key art with its characters.",
       "methodsInvestigated": [],
@@ -16784,7 +16841,10 @@
       "imagePath": "/artwork/cleurovisionsim.webp",
       "identityEvidence": "Found by searching \"Eurovision Sim game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Eurovision Sim\" before use. Source page: https://greatsaamo.itch.io/eurovision-simulator-2024/devlog/758853/update-11",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "6cf28efd812bfa9818c39094c29abf1c0a3f9f67a337f8cc2050faf7e943c419",
       "visualVerification": "verified 2026-11-27: EuroVision Simulator title screen with its menu.",
       "methodsInvestigated": [],
@@ -16853,7 +16913,10 @@
       "imagePath": "/artwork/clexcitebike.webp",
       "identityEvidence": "Found by searching \"Excitebike game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Excitebike\" before use. Source page: https://www.imdb.com/title/tt0186073",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "bed30b91daa51cda3039076d708f4f4ad8ca615933601bc147b9d112bafd113e",
       "visualVerification": "verified 2026-11-27: Excitebike key art with the rider and NES branding.",
       "methodsInvestigated": [],
@@ -16872,7 +16935,10 @@
       "imagePath": "/artwork/clexcitebike64.webp",
       "identityEvidence": "Found by searching \"Excitebike 64 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Excitebike 64\" before use. Source page: https://www.mobygames.com/game/6213/excitebike-64/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "c98d0cd0ea99358a676635a1f6f1202037283ee58648fda402c7a0eb22398b87",
       "visualVerification": "verified 2026-11-27: Excitebike 64 box art with the rider.",
       "methodsInvestigated": [],
@@ -16967,7 +17033,10 @@
       "imagePath": "/artwork/clfamidash.webp",
       "identityEvidence": "Found by searching \"Famidash game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Famidash\" before use. Source page: https://rhythmgames.io/famidash",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "24bbe142de117d88d51fa0af03fc68055fd3a8536e252a58e90e727827e64331",
       "visualVerification": "verified 2026-11-27: FamiDash cover art with its cube logo.",
       "methodsInvestigated": [],
@@ -16986,7 +17055,10 @@
       "imagePath": "/artwork/clfamidash1-2-8.webp",
       "identityEvidence": "Found by searching \"Famidash 1.2.8 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Famidash 1.2.8\" before use. Source page: https://snowrider.pro/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "27a3a8a24a1b532c5b75f9321feb459202da78c90a4185a24840d777511511c0",
       "visualVerification": "verified 2026-11-27: FamiDash title screen with its level artwork.",
       "methodsInvestigated": [],
@@ -17005,7 +17077,10 @@
       "imagePath": "/artwork/clfamidashalbum1-2-8.webp",
       "identityEvidence": "Found by searching \"Famidash Album 1.2.8 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Famidash Album 1.2.8\" before use. Source page: https://geometry-dash.pl/gra/famidash/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "4f8e0654896a07a5c1df7ed62ae4223e371a2fade0c82dd648115b439582b411",
       "visualVerification": "verified 2026-11-27: FamiDash Album title screen; result 2 was only the cartridge.",
       "methodsInvestigated": [],
@@ -17024,9 +17099,12 @@
       "imagePath": "/artwork/clfamidashbsides1-2-8.webp",
       "identityEvidence": "Found by searching \"Famidash B-Sides 1.2.8 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Famidash B-Sides 1.2.8\" before use. Source page: https://www.youtube.com/watch?v=83NgpW6MtX8",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "d49a09de60c94e0fbb6c2312af85735b143dc4aa05dc68cde7147567a2f4b879",
-      "visualVerification": "verified 2026-11-27: FamiDash B-Sides title card.",
+      "visualVerification": "verified 2026-11-27: FamiDash B-Sides title card for this build; the other builds now use different artwork.",
       "methodsInvestigated": [],
       "blocker": null
     },
@@ -17039,13 +17117,16 @@
       "path": "/games/clfamidashCSides1.2.8.html",
       "status": "verified",
       "method": "game-asset",
-      "sourceUrl": "https://www.youtube.com/watch?v=83NgpW6MtX8",
+      "sourceUrl": "https://www.reddit.com/r/geometrydash/comments/1c5faai/famidash_update_new_level_select_screen/",
       "imagePath": "/artwork/clfamidashcsides1-2-8.webp",
-      "identityEvidence": "Found by searching \"Famidash C-Sides 1.2.8 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Famidash C-Sides 1.2.8\" before use. Source page: https://www.youtube.com/watch?v=83NgpW6MtX8",
+      "identityEvidence": "Found by searching \"Famidash C-Sides 1.2.8 game\" in Bing Images and taking result 5; the image was checked against the catalog title \"Famidash C-Sides 1.2.8\" before use. Source page: https://www.reddit.com/r/geometrydash/comments/1c5faai/famidash_update_new_level_select_screen/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
-      "sha256": "d49a09de60c94e0fbb6c2312af85735b143dc4aa05dc68cde7147567a2f4b879",
-      "visualVerification": "verified 2026-11-27: FamiDash C-Sides title card.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "a3942afbd37d9501c6131595bb51b8fd56e104b1f78ce12322bc1649fb55a692",
+      "visualVerification": "verified 2026-11-27: FamiDash level-select screen for this build.",
       "methodsInvestigated": [],
       "blocker": null
     },
@@ -17058,13 +17139,16 @@
       "path": "/games/clfamidashDSides1.2.8.html",
       "status": "verified",
       "method": "game-asset",
-      "sourceUrl": "https://www.youtube.com/watch?v=83NgpW6MtX8",
+      "sourceUrl": "https://www.rocketgames.io/game/famidash",
       "imagePath": "/artwork/clfamidashdsides1-2-8.webp",
-      "identityEvidence": "Found by searching \"Famidash D-Sides 1.2.8 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Famidash D-Sides 1.2.8\" before use. Source page: https://www.youtube.com/watch?v=83NgpW6MtX8",
+      "identityEvidence": "Found by searching \"Famidash D-Sides 1.2.8 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Famidash D-Sides 1.2.8\" before use. Source page: https://www.rocketgames.io/game/famidash",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
-      "sha256": "d49a09de60c94e0fbb6c2312af85735b143dc4aa05dc68cde7147567a2f4b879",
-      "visualVerification": "verified 2026-11-27: FamiDash D-Sides title card.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "364c67545869dec979b4f9b4f1cc9d4af143f38c8dbd125421f0d87adfa2d10e",
+      "visualVerification": "verified 2026-11-27: FamiDash key art for this build; the shared video thumbnail was replaced.",
       "methodsInvestigated": [],
       "blocker": null
     },
@@ -17128,7 +17212,10 @@
       "imagePath": "/artwork/clfancypantsadventure2.webp",
       "identityEvidence": "Found by searching \"Fancy Pants Adventure 2 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Fancy Pants Adventure 2\" before use. Source page: https://www.youtube.com/watch?v=wLLIkQFdfhU",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "ab18d346c01555a07d4c8d502e672e24f26feb91463de9bb2c282aba6e576c1c",
       "visualVerification": "verified 2026-11-27: The Fancy Pants Adventures World 2 logo art.",
       "methodsInvestigated": [],
@@ -17197,7 +17284,10 @@
       "imagePath": "/artwork/clfantasyzone.webp",
       "identityEvidence": "Found by searching \"Fantasy Zone game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Fantasy Zone\" before use. Source page: https://www.ign.com/games/fantasy-zone-game-gear/walkthroughs",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "3a45a99029da2107db0f56dc999e0f235166dd9632419e16138e155c6ce4ac72",
       "visualVerification": "verified 2026-11-27: Fantasy Zone key art with its ship.",
       "methodsInvestigated": [],
@@ -17241,7 +17331,10 @@
       "imagePath": "/artwork/clfattygenius.webp",
       "identityEvidence": "Found by searching \"Fatty Genius game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Fatty Genius\" before use. Source page: https://www.gamezhero.com/games/fattygenius",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "dc837c528baa39f16be6c606d5303794bb77e020a7b27b1d84c303afcc579989",
       "visualVerification": "verified 2026-11-27: Fatty Genius title screen with its character.",
       "methodsInvestigated": [],
@@ -17285,7 +17378,10 @@
       "imagePath": "/artwork/clfearstofathomhomealone.webp",
       "identityEvidence": "Found by searching \"Fears to Fathom: Home Alone game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Fears to Fathom: Home Alone\" before use. Source page: https://baldigames.com/fears-to-fathom-home-alone",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "f02e958e9c7f7acb3fc82b932e4336b4896554030397112b20064b6539207ac8",
       "visualVerification": "verified 2026-11-27: Fears to Fathom: Home Alone poster art with the title.",
       "methodsInvestigated": [],
@@ -17351,7 +17447,10 @@
       "imagePath": "/artwork/clfeedus2.webp",
       "identityEvidence": "Found by searching \"Feed Us 2 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Feed Us 2\" before use. Source page: https://the-freakcircus.com/game/feed-us-2",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "f040047db9db457d07d1b9f1290c080e88fadf045c3c0a5863ee3a9f6085c946",
       "visualVerification": "verified 2026-11-27: Feed Us 2 logo over its scene.",
       "methodsInvestigated": [],
@@ -17441,7 +17540,10 @@
       "imagePath": "/artwork/clff6.webp",
       "identityEvidence": "Found by searching \"FF6 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FF6\" before use. Source page: https://www.nintendo.com/us/store/products/final-fantasy-vi-switch/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "24f75fb92d70c0a7c560f10783a24d3c3280a7b4641ddc7cd4ddf76cb5c0d6ef",
       "visualVerification": "verified 2026-11-27: Final Fantasy VI cover art with the cast.",
       "methodsInvestigated": [],
@@ -17460,7 +17562,10 @@
       "imagePath": "/artwork/clffmysticquest.webp",
       "identityEvidence": "Found by searching \"FF Mystic Quest game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FF Mystic Quest\" before use. Source page: https://www.ign.com/games/final-fantasy-mystic-quest/walkthroughs",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "ac52049a5a3e5bd9f2fc25a020178496bdad80d561ff36b7c3846fcd188b99f3",
       "visualVerification": "verified 2026-11-27: Final Fantasy Mystic Quest cover art without the SNES band of result 3.",
       "methodsInvestigated": [],
@@ -17526,7 +17631,10 @@
       "imagePath": "/artwork/clfifa07.webp",
       "identityEvidence": "Found by searching \"FIFA 07 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"FIFA 07\" before use. Source page: https://www.ign.com/games/fifa-soccer-07",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "0817434c668971dbc57cb80d056ac9947f823b4581abf723f4b8be722476f6d0",
       "visualVerification": "verified 2026-11-27: FIFA 07 GameCube cover art.",
       "methodsInvestigated": [],
@@ -17545,7 +17653,10 @@
       "imagePath": "/artwork/clfifa10.webp",
       "identityEvidence": "Found by searching \"FIFA 10 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FIFA 10\" before use. Source page: https://www.giantbomb.com/fifa-10/3030-26702/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "755d576148a2768b00ba6d6862b4af92c32479697d079e3dc62e369b49c6a209",
       "visualVerification": "verified 2026-11-27: FIFA 10 cover art without a platform band.",
       "methodsInvestigated": [],
@@ -17564,7 +17675,10 @@
       "imagePath": "/artwork/clfifa11.webp",
       "identityEvidence": "Found by searching \"FIFA 11 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FIFA 11\" before use. Source page: https://www.nintendo.com/en-gb/Games/Nintendo-DS/FIFA-11-270759.html",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "4c43ccf20ecac9f0cf681ed563d1941c5c35a563500e25f1c77c9fb0956dbff1",
       "visualVerification": "verified 2026-11-27: FIFA 11 key art with its two players.",
       "methodsInvestigated": [],
@@ -17583,7 +17697,10 @@
       "imagePath": "/artwork/clfifa2000.webp",
       "identityEvidence": "Found by searching \"FIFA 2000 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"FIFA 2000\" before use. Source page: https://www.webmulator.com/games/gameboy-color/fifa-2000",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "bac0aa0581226503c46f798fd828db44c4d918ad3aad13253f31560b4cfca0cf",
       "visualVerification": "verified 2026-11-27: FIFA 2000 Game Boy Color box art.",
       "methodsInvestigated": [],
@@ -17648,7 +17765,10 @@
       "imagePath": "/artwork/clfinalfantasy2nes.webp",
       "identityEvidence": "Found by searching \"Final Fantasy 2 (NES) game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Final Fantasy 2 (NES)\" before use. Source page: https://www.mobygames.com/game/7321/final-fantasy-ii/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "72d5a51f65502e1c9ebf645d6d4973013bde4d5a46ff6aa189eadbbded978143",
       "visualVerification": "verified 2026-11-27: Final Fantasy II box art with the Firion artwork.",
       "methodsInvestigated": [],
@@ -17667,7 +17787,10 @@
       "imagePath": "/artwork/clfinalfantasy3nes.webp",
       "identityEvidence": "Found by searching \"Final Fantasy 3 (NES) game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Final Fantasy 3 (NES)\" before use. Source page: https://steamcommunity.com/sharedfiles/filedetails/?id=2678392858",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "bc7162e9a53f33176eb07ab8f06ccbebdf77e5e325fcd9307cb28458954d54dd",
       "visualVerification": "verified 2026-11-27: Final Fantasy III box art with the Nintendo seal.",
       "methodsInvestigated": [],
@@ -17686,7 +17809,10 @@
       "imagePath": "/artwork/clFF3.webp",
       "identityEvidence": "Found by searching \"Final Fantasy III game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Final Fantasy III\" before use. Source page: https://gamekeepr.net/ko/game/final-fantasy-iii--7",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "e82f08e155d74fc80821674e43ecaab5ddc49ee31040b21774ff2c50758acf92",
       "visualVerification": "verified 2026-11-27: Final Fantasy III logo art with the moogle.",
       "methodsInvestigated": [],
@@ -17705,7 +17831,10 @@
       "imagePath": "/artwork/clfinalfantasylegend2.webp",
       "identityEvidence": "Found by searching \"Final Fantasy Legend 2 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Final Fantasy Legend 2\" before use. Source page: https://channel3.gg/final-fantasy-legend-ii",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "3fe25c099f6b813f9a53be9213bd06dd7a149763b933870b590db1a77e07738a",
       "visualVerification": "verified 2026-11-27: Final Fantasy Legend II box art.",
       "methodsInvestigated": [],
@@ -17749,7 +17878,10 @@
       "imagePath": "/artwork/clfinalfantasyii.webp",
       "identityEvidence": "Found by searching \"Final Fantasy II game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Final Fantasy II\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/3550-final-fantasy-ii",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "c892d8fe43f6e2b999a4335df00734288f0dbfc5235a239e06b5539ec66e7869",
       "visualVerification": "verified 2026-11-27: Final Fantasy II logo art; result 2 carried a platform band.",
       "methodsInvestigated": [],
@@ -17768,7 +17900,10 @@
       "imagePath": "/artwork/clfinalfantasyix.webp",
       "identityEvidence": "Found by searching \"Final Fantasy IX game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Final Fantasy IX\" before use. Source page: https://www.gameforest.net/en-us/gamekey/xbox/xbox-one/final-fantasy-ix-xbox-one/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "55df90a86a7b7d2c9c7ebfd3b2f87cf9209c96dd189ed959c69b88e04842ec1e",
       "visualVerification": "verified 2026-11-27: Final Fantasy IX gameplay scene with its cast.",
       "methodsInvestigated": [],
@@ -17787,7 +17922,10 @@
       "imagePath": "/artwork/clfinalfantasyvi.webp",
       "identityEvidence": "Found by searching \"Final Fantasy VI game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Final Fantasy VI\" before use. Source page: https://www.ign.com/wikis/final-fantasy-vi/Espers",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "d38ae68026838087459d0985aa4fbe44141a49c6350e098cde55d06a4deb541f",
       "visualVerification": "verified 2026-11-27: Final Fantasy VI logo art with Terra.",
       "methodsInvestigated": [],
@@ -17848,7 +17986,10 @@
       "imagePath": "/artwork/clfinalfantasyvii.webp",
       "identityEvidence": "Found by searching \"Final Fantasy VII game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Final Fantasy VII\" before use. Source page: https://www.imdb.com/title/tt0208155/releaseinfo/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "c9a03a36babd1522c2850166bed4d3a0cc243a85845e3a7c20cb8e296b2146c2",
       "visualVerification": "verified 2026-11-27: Final Fantasy VII key art with Cloud on the white background.",
       "methodsInvestigated": [],
@@ -17993,7 +18134,10 @@
       "imagePath": "/artwork/clfireboyandwatergirl5.webp",
       "identityEvidence": "Found by searching \"Fireboy and Watergirl 5 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Fireboy and Watergirl 5\" before use. Source page: https://minigamesville.com/game/fireboy-and-watergirl-5-elements/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "ba72117c8d08880927c5df8c58f3e6fce656f29d47eca0934c5abc105334777e",
       "visualVerification": "verified 2026-11-27: Fireboy and Watergirl 5 Elements logo art with both characters.",
       "methodsInvestigated": [],
@@ -18012,7 +18156,10 @@
       "imagePath": "/artwork/clfireboyandwatergirl6.webp",
       "identityEvidence": "Found by searching \"Fireboy and Watergirl 6 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Fireboy and Watergirl 6\" before use. Source page: https://www.bgames.com/game/fireboy-and-watergirl-6-fairy-tales/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "641480b0c2995d3496be592c16a110dbab25431323a097aa3e46b66eb0e8fa2a",
       "visualVerification": "verified 2026-11-27: Fireboy and Watergirl 6 Fairy Tales key art.",
       "methodsInvestigated": [],
@@ -18052,7 +18199,10 @@
       "imagePath": "/artwork/clfisquarium.webp",
       "identityEvidence": "Found by searching \"Fisquarium game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Fisquarium\" before use. Source page: https://apkpure.com/fish-aquarium/com.mono.aqua/download",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "112fb8947fccffc1a36fee3503ea34fb573d526009be566320e61007bcb1c362",
       "visualVerification": "verified 2026-11-27: Fisquarium gameplay with its fish and HUD.",
       "methodsInvestigated": [],
@@ -18146,7 +18296,10 @@
       "imagePath": "/artwork/clFNAF.webp",
       "identityEvidence": "Found by searching \"Five Nights at Freddy's game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Five Nights at Freddy's\" before use. Source page: https://now.gg/apps/scott-cawthon/51750/five-nights-at-freddy-s.html",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "3db961210fa2c30367a22258bc040fe28eec3cb15ef233a9e80d53939ebda0f8",
       "visualVerification": "verified 2026-11-27: Five Nights at Freddy's key art with the animatronics and logo.",
       "methodsInvestigated": [],
@@ -18165,7 +18318,10 @@
       "imagePath": "/artwork/clFNAF2.webp",
       "identityEvidence": "Found by searching \"Five Nights at Freddy's 2 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Five Nights at Freddy's 2\" before use. Source page: https://now.gg/apps/scott-cawthon/51767/five-nights-at-freddy-s-2.html",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "280cfa6d5aa08e1f5285a9ee41dcc738d9364f580e7fce7cea34aa055e8b9c7b",
       "visualVerification": "verified 2026-11-27: Five Nights at Freddy's 2 gameplay with its title logo.",
       "methodsInvestigated": [],
@@ -18184,7 +18340,10 @@
       "imagePath": "/artwork/clFNAF3.webp",
       "identityEvidence": "Found by searching \"Five Nights at Freddy's 3 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Five Nights at Freddy's 3\" before use. Source page: https://www.nintendo.com/en-gb/Games/Nintendo-Switch-download-software/Five-Nights-at-Freddy-s-3-1685113.html",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "7cb128541c877f62067741257312003233e2b56f16057e17e37c0037ae830f52",
       "visualVerification": "verified 2026-11-27: Five Nights at Freddy's 3 key art with Springtrap.",
       "methodsInvestigated": [],
@@ -18203,7 +18362,10 @@
       "imagePath": "/artwork/clFNAF4.webp",
       "identityEvidence": "Found by searching \"Five Nights at Freddy's 4 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Five Nights at Freddy's 4\" before use. Source page: https://topgames.gg/five-nights-at-freddy-s-4",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "a6b3db40dc7b52710f0e2782931d9e79f459da0b13a70d6bfebd75c164d21065",
       "visualVerification": "verified 2026-11-27: Five Nights at Freddy's 4 key art with Freddy.",
       "methodsInvestigated": [],
@@ -18222,7 +18384,10 @@
       "imagePath": "/artwork/clfivenightsatshreks.webp",
       "identityEvidence": "Found by searching \"Five Nights at Shrek's game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Five Nights at Shrek's\" before use. Source page: https://steam-games.org/game/285255/five-nights-at-shreks-hotel-2",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "b118658357495be9bfedbd22f9a8d537a82ca509648fbac1e6daac943fbddfa8",
       "visualVerification": "verified 2026-11-27: Five Nights at Shrek's gameplay with the office view.",
       "methodsInvestigated": [],
@@ -18241,7 +18406,10 @@
       "imagePath": "/artwork/clfivenightsatshrekshotel.webp",
       "identityEvidence": "Found by searching \"Five Nights at Shrek's Hotel game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Five Nights at Shrek's Hotel\" before use. Source page: https://www.crazygamesx.com/blog/five-nights-at-shrek-s-hotel-play-unblocked-features-gameplay-tips-and-fixes",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "8fbbb382af74a735716696beb5dbeafd6393733f4a906dae786c33b82e0e3744",
       "visualVerification": "verified 2026-11-27: Five Nights at Shrek's Hotel exterior view with Shrek.",
       "methodsInvestigated": [],
@@ -18260,7 +18428,10 @@
       "imagePath": "/artwork/clfivenightsatyoshis.webp",
       "identityEvidence": "Found by searching \"Five Nights at Yoshi's game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Five Nights at Yoshi's\" before use. Source page: https://gamejolt.com/games/Fun_Times_at_Homer_1/323639?feed_last_id={\"ver\":\"1\",\"pos\":\"1721152184.245\"}",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "6e1642ee4ff04bf7937fdc20589e29794fb9065a2fea82f24edebd0bf4930264",
       "visualVerification": "verified 2026-11-27: Five Nights at Yoshi's gameplay scene with Yoshi.",
       "methodsInvestigated": [],
@@ -18429,7 +18600,10 @@
       "imagePath": "/artwork/clfnfaethos.webp",
       "identityEvidence": "Found by searching \"FNF: Aethos game\" in Bing Images and taking result 2; the image was checked against the catalog title \"FNF: Aethos\" before use. Source page: https://gamebanana.com/mods/595647",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "80dce4cb04d2c6f2c43a08826734e5dd64aa0939ed2c222c56a2900c702a94e0",
       "visualVerification": "verified 2026-11-27: FNF: Aethos gameplay with its characters and arrows.",
       "methodsInvestigated": [],
@@ -18498,7 +18672,10 @@
       "imagePath": "/artwork/clfnfannie.webp",
       "identityEvidence": "Found by searching \"FNF: Annie game\" in Bing Images and taking result 2; the image was checked against the catalog title \"FNF: Annie\" before use. Source page: https://alex-director.itch.io/fnf-atsuover-fullweek",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "7ad1c44ec3464d3b40eb27a89a6e7451b5e3d394938ea89b52debc97756c6e54",
       "visualVerification": "verified 2026-11-27: FNF x Annie full-week key art.",
       "methodsInvestigated": [],
@@ -18592,7 +18769,10 @@
       "imagePath": "/artwork/clfnffnaf2.webp",
       "identityEvidence": "Found by searching \"FNF: FNAF 2 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FNF: FNAF 2\" before use. Source page: https://fnf-games.io/fnf-vs-fnaf-2",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "7e66365e0c435d79a017b11cc5fc00edf46f2025faa0ea32b7c75d08e9e54336",
       "visualVerification": "verified 2026-11-27: FNF: FNAF 2 logo art with its characters.",
       "methodsInvestigated": [],
@@ -18662,7 +18842,10 @@
       "imagePath": "/artwork/clfnfhorkglorpgloop.webp",
       "identityEvidence": "Found by searching \"FNF: Horkglor RPG Loop game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FNF: Horkglor RPG Loop\" before use. Source page: https://gamebanana.com/mods/569969",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "ee1dd30b8953c7b9144ecddec413963eaf85aae3b236eb84dbd34c6883f3456f",
       "visualVerification": "verified 2026-11-27: FNF: Horkglor RPG Loop key art with its title.",
       "methodsInvestigated": [],
@@ -18681,7 +18864,10 @@
       "imagePath": "/artwork/clfnfmcmadness.webp",
       "identityEvidence": "Found by searching \"FNF: MC Madness game\" in Bing Images and taking result 2; the image was checked against the catalog title \"FNF: MC Madness\" before use. Source page: https://gamebanana.com/mods/428172",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "f05a7a8c6c1c7d2262a5792b285647034cb93b97e6d9050dead4c7109902358e",
       "visualVerification": "verified 2026-11-27: FNF: MC Madness gameplay with its combo HUD.",
       "methodsInvestigated": [],
@@ -18700,7 +18886,10 @@
       "imagePath": "/artwork/clfnac1.webp",
       "identityEvidence": "Found by searching \"FNAC 1 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FNAC 1\" before use. Source page: https://fnafports.blogspot.com/2022/09/fnaf-fanmades-games.html",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "233ee4a365faa7c14faa846878f65226a4d8da2d1c876b90de398f6c1c84deee",
       "visualVerification": "verified 2026-11-27: FNAC 1 gameplay with its night-vision UI.",
       "methodsInvestigated": [],
@@ -18770,7 +18959,10 @@
       "imagePath": "/artwork/clfnaf4halloween.webp",
       "identityEvidence": "Found by searching \"FNAF 4 Halloween game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FNAF 4 Halloween\" before use. Source page: https://gamejolt.com/games/fnaf4he/948845",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "29c1b1cf0a91b271189d123707d56a96e8b50d6dca9eedf5614deaccd876ac9b",
       "visualVerification": "verified 2026-11-27: FNAF 4 Halloween Edition art with Nightmare Fredbear.",
       "methodsInvestigated": [],
@@ -18789,7 +18981,10 @@
       "imagePath": "/artwork/clfnafanimatronics.webp",
       "identityEvidence": "Found by searching \"FNAF Animatronics game\" in Bing Images and taking result 2; the image was checked against the catalog title \"FNAF Animatronics\" before use. Source page: https://seesongdesigns.com/nom-des-animatronique-animatroniques-five-nights-at-freddy-s/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "c0acc1a276427bfbec309e492478098faa466f17cf1e8b43cbb64be3334fbf84",
       "visualVerification": "verified 2026-11-27: FNAF Animatronics group key art.",
       "methodsInvestigated": [],
@@ -18808,7 +19003,10 @@
       "imagePath": "/artwork/clfnafshooter.webp",
       "identityEvidence": "Found by searching \"FNAF Shooter game\" in Bing Images and taking result 3; the image was checked against the catalog title \"FNAF Shooter\" before use. Source page: https://yoplay.io/fnaf-shooter",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "bfdd91eb7d9e523ce280111f49deedb764705019f88b66cd5e21cdb31e2429bc",
       "visualVerification": "verified 2026-11-27: FNaF Shooter key art with its characters.",
       "methodsInvestigated": [],
@@ -18827,7 +19025,10 @@
       "imagePath": "/artwork/clfnafworldd.webp",
       "identityEvidence": "Found by searching \"FNAF World game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FNAF World\" before use. Source page: https://www.ign.com/games/fnaf-world",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "887ca9c15cdbb0adbb6d7992807b894b0016b0a79f0c75f60adbba979781b612",
       "visualVerification": "verified 2026-11-27: FNAF World key art with its characters.",
       "methodsInvestigated": [],
@@ -18846,7 +19047,10 @@
       "imagePath": "/artwork/clfnafps.webp",
       "identityEvidence": "Found by searching \"FNAF PS game\" in Bing Images and taking result 3; the image was checked against the catalog title \"FNAF PS\" before use. Source page: https://www.amazon.ca/Five-Nights-Freddys-Collection-PlayStation/dp/B08L93C4KV",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "726ee782ac3936b0c3ac699dfa7bec57af3493c79af05352dddda63282c8a43c",
       "visualVerification": "verified 2026-11-27: Five Nights at Freddy's Core Collection PS4 cover, the console release this entry serves.",
       "methodsInvestigated": [],
@@ -18865,7 +19069,10 @@
       "imagePath": "/artwork/clfnafsl.webp",
       "identityEvidence": "Found by searching \"FNAF Sister Location game\" in Bing Images and taking result 3; the image was checked against the catalog title \"FNAF Sister Location\" before use. Source page: https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Five-Nights-at-Freddy-s-Sister-Location-1809502.html",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "c78a5ca743c750fdc154e3d83dc92370a6afae98c690435d3a664e29effaf250",
       "visualVerification": "verified 2026-11-27: Five Nights at Freddy's: Sister Location key art.",
       "methodsInvestigated": [],
@@ -18884,7 +19091,10 @@
       "imagePath": "/artwork/clfnafucn.webp",
       "identityEvidence": "Found by searching \"FNAF UCN game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FNAF UCN\" before use. Source page: https://www.speedrun.com/ucn/forums/vn9py",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "84099d2294256cddc1bd7854e6a219fd13ed9374bc95011840047e3bd7b4c2fc",
       "visualVerification": "verified 2026-11-27: Ultimate Custom Night poster with its character grid.",
       "methodsInvestigated": [],
@@ -18953,7 +19163,10 @@
       "imagePath": "/artwork/clfnfbelowdepths.webp",
       "identityEvidence": "Found by searching \"FNF: Below Depths game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FNF: Below Depths\" before use. Source page: https://fnf-games.io/fnf-sonic-below-the-depths",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "0763493efc294331f9c24829f14eafd7abe5505f80f043ca191c4061b6a24952",
       "visualVerification": "verified 2026-11-27: FNF Sonic Below the Depths key art.",
       "methodsInvestigated": [],
@@ -18972,7 +19185,10 @@
       "imagePath": "/artwork/clfnfbfdi26.webp",
       "identityEvidence": "Found by searching \"FNF: BFDI 26 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"FNF: BFDI 26\" before use. Source page: https://gamebanana.com/wips/86417",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "86b01df72f237edc11954da2ca282f869dad79e382fddcae4651715f3f58fa2a",
       "visualVerification": "verified 2026-11-27: BFDI 26 title screen with PRESS ENTER TO CONTINUE.",
       "methodsInvestigated": [],
@@ -18991,7 +19207,10 @@
       "imagePath": "/artwork/clfnfbinarybreakdown.webp",
       "identityEvidence": "Found by searching \"FNF: Binary Breakdown game\" in Bing Images and taking result 2; the image was checked against the catalog title \"FNF: Binary Breakdown\" before use. Source page: https://gamebanana.com/mods/287411",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "fae265e647038180c6d5226f48977a74e5da1041f42d5709a672ee1c00c9b61a",
       "visualVerification": "verified 2026-11-27: FNF: Binary Breakdown gameplay with its arrows.",
       "methodsInvestigated": [],
@@ -19060,7 +19279,10 @@
       "imagePath": "/artwork/clfnfcandycarrier.webp",
       "identityEvidence": "Found by searching \"FNF: Candy Carrier game\" in Bing Images and taking result 2; the image was checked against the catalog title \"FNF: Candy Carrier\" before use. Source page: https://gamebanana.com/mods/617857",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "859d8c56b5e1c8b764db36522462af66ec50a6a8e2c6a8d4548cf9b32c85444f",
       "visualVerification": "verified 2026-11-27: FNF: Candy Carrier gameplay with its chart; result 1 carried a banner caption.",
       "methodsInvestigated": [],
@@ -19130,7 +19352,10 @@
       "imagePath": "/artwork/clfnfcorrosion.webp",
       "identityEvidence": "Found by searching \"FNF: Corrosion game\" in Bing Images and taking result 2; the image was checked against the catalog title \"FNF: Corrosion\" before use. Source page: https://www.youtube.com/watch?v=Y6kEKQsZh5A",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "cd7028fc8013f6dc7ac824d22dac436154ce84dff01def15788dc7b47d57ed41",
       "visualVerification": "verified 2026-11-27: FNF: Corrosion V2 key art with its characters.",
       "methodsInvestigated": [],
@@ -19149,7 +19374,10 @@
       "imagePath": "/artwork/clfnfcrunchin.webp",
       "identityEvidence": "Found by searching \"FNF: Crunchin game\" in Bing Images and taking result 2; the image was checked against the catalog title \"FNF: Crunchin\" before use. Source page: https://gamebanana.com/wips/73222",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "2ee81398cc436302841249d11f6fc5caf1b0075cfda8b6a9385e4bd9a072bc67",
       "visualVerification": "verified 2026-11-27: FNF: Crunchin key art with its characters.",
       "methodsInvestigated": [],
@@ -19346,7 +19574,10 @@
       "imagePath": "/artwork/clfnfflippedout.webp",
       "identityEvidence": "Found by searching \"FNF: Flipped Out game\" in Bing Images and taking result 3; the image was checked against the catalog title \"FNF: Flipped Out\" before use. Source page: https://gamebanana.com/mods/426506",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "4163153885efa49e222fe2010801cc6e4d9542954a08e6c63be4bf88c7407f53",
       "visualVerification": "verified 2026-11-27: FNF: Flipped Out press-enter screen; result 1 carried a DEMO badge.",
       "methodsInvestigated": [],
@@ -19437,7 +19668,10 @@
       "imagePath": "/artwork/clfnfheartbreakhavoc.webp",
       "identityEvidence": "Found by searching \"FNF: Heartbreak Havoc game\" in Bing Images and taking result 3; the image was checked against the catalog title \"FNF: Heartbreak Havoc\" before use. Source page: https://www.youtube.com/watch?v=90em8OMn_uk",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "3663d0a844e90c8cd9132e989c36c485c015b4b263093409ea73cfcbfb19d85c",
       "visualVerification": "verified 2026-11-27: FNF: Heartbreak Havoc key art with its characters.",
       "methodsInvestigated": [],
@@ -19456,7 +19690,10 @@
       "imagePath": "/artwork/clfnfherobrine.webp",
       "identityEvidence": "Found by searching \"FNF: Herobrine game\" in Bing Images and taking result 2; the image was checked against the catalog title \"FNF: Herobrine\" before use. Source page: https://www.snokido.com/game/fnf-vs-herobrine-reborn",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "66117a36e40f3198478c9f157ae39430f0d9aa5b226c37003389fd621c0d6f79",
       "visualVerification": "verified 2026-11-27: FNF vs Herobrine Remake key art.",
       "methodsInvestigated": [],

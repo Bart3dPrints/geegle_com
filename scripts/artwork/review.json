@@ -3912,7 +3912,7 @@
     "title": "Eaglercraft Indev Offline"
   },
   "cleaglercraft152": {
-    "reason": "Eaglercraft app icon with its character; results 1 and 2 were marketing pages with buttons.",
+    "reason": "Eaglercraft 1.5.2 version banner for this build.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Eaglercraft 1.5.2"
@@ -3924,19 +3924,19 @@
     "title": "Eaglercraft 1.19 v0.7.0 Offline"
   },
   "cleaglercraftlite": {
-    "reason": "Eaglercraft app icon with the game's title.",
+    "reason": "Eaglercraft logo over its block-built world, distinct from the other builds' icons.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Eaglercraft Lite"
   },
   "cleaglercraftmagic": {
-    "reason": "Eaglercraft app icon for this build.",
+    "reason": "All-Eaglercraft-versions graphic used for this build.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Eaglercraft Magic"
   },
   "cleaglercraftnebula": {
-    "reason": "Eaglercraft app icon with its world art.",
+    "reason": "Eaglercraft download banner used for this build.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Eaglercraft Nebula"
@@ -3948,7 +3948,7 @@
     "title": null
   },
   "cleaglercraftsky": {
-    "reason": "Eaglercraft app icon with its sky world art.",
+    "reason": "EAGLECRAFT key art with its character.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Eaglercraft Sky"
@@ -4308,19 +4308,19 @@
     "title": "Famidash Album 1.2.8"
   },
   "clfamidashbsides1-2-8": {
-    "reason": "FamiDash B-Sides title card.",
+    "reason": "FamiDash B-Sides title card for this build; the other builds now use different artwork.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Famidash B-Sides 1.2.8"
   },
   "clfamidashcsides1-2-8": {
-    "reason": "FamiDash C-Sides title card.",
+    "reason": "FamiDash level-select screen for this build.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Famidash C-Sides 1.2.8"
   },
   "clfamidashdsides1-2-8": {
-    "reason": "FamiDash D-Sides title card.",
+    "reason": "FamiDash key art for this build; the shared video thumbnail was replaced.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Famidash D-Sides 1.2.8"

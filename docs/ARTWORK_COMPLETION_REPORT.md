@@ -26,7 +26,7 @@ Identity evidence and reuse basis are recorded separately on every record. Captu
 | ... that stayed blank for the whole observation | 26 |
 | Remaining unprocessed | 1,172 |
 | Actual verified coverage | 56.8% |
-| Total optimized asset size (verified images) | 35865 KiB |
+| Total optimized asset size (verified images) | 35882 KiB |
 
 ## Verified artwork by acquisition method
 
