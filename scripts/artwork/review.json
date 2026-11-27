@@ -8105,6 +8105,108 @@
     "status": "verified",
     "title": "Territory War 3"
   },
+  "clthanksforremindingmeihadtofixthis": {
+    "reason": "Blank frame with a play button; not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Thanks for Reminding Mei Had to Fix This"
+  },
+  "cltheclassroom": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Classroom"
+  },
+  "cltheclassroom2": {
+    "reason": "Portal logo (Flash Portal), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "The Classroom 2"
+  },
+  "cltheclassroom3": {
+    "reason": "Unrelated splash, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "The Classroom 3"
+  },
+  "clthedeepestsleep": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Deepest Sleep"
+  },
+  "clthedude": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Dude"
+  },
+  "cltheenchantedcave2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Enchanted Cave 2"
+  },
+  "cltheimpossiblegame": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Impossible Game"
+  },
+  "clthelaststandunioncity--1": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Last Stand: Union City"
+  },
+  "clthemaninthewindow": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "The Man in the Window"
+  },
+  "clthemeparkpsx": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Theme Park (PSX)"
+  },
+  "clthesodorrace": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "The Sodor Race"
+  },
+  "clthesunforthevampire": {
+    "reason": "Portal logo (Kiz10), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "The Sun for the Vampire"
+  },
+  "cltheyarecoming": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "They Are Coming"
+  },
+  "clthisistheonlylevel2": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "This Is the Only Level 2"
+  },
+  "clthisistheonlyleveltoo": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "This Is the Only Level Too"
+  },
+  "clthrowapotatoagain": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Throw a Potato Again"
+  },
   "cltimeshooter2": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
@@ -8117,11 +8219,179 @@
     "status": "verified",
     "title": "Time Shooter 3"
   },
+  "cltimewarriors": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Time Warriors"
+  },
+  "cltinyfishing": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tiny Fishing"
+  },
+  "cltoasterball": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Toaster Ball"
+  },
+  "cltombofthemass": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tomb of the Mass"
+  },
+  "cltommorowandyesterday": {
+    "reason": "Instructional text screen, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Tomorrow and Yesterday"
+  },
+  "cltopspeedracing3d": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Top Speed Racing 3D"
+  },
+  "cltosstheturtle": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Toss the Turtle"
+  },
+  "cltotm": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tomb of the Mask"
+  },
+  "cltouhou": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Touhou"
+  },
+  "cltouhou2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Touhou 2"
+  },
+  "cltouhou3": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Touhou 3"
+  },
+  "cltouhou4": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Touhou 4"
+  },
+  "cltouhou5": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Touhou 5"
+  },
+  "cltowercrash3d": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tower Crash 3D"
+  },
+  "cltownscraper": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Townscaper"
+  },
+  "cltrace": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Trace"
+  },
+  "cltrafficjam3d": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Traffic Jam 3D"
+  },
+  "cltralalerotralalaescapetungtungtungsahur": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tralalero Escape"
+  },
   "cltrappedwithjester": {
     "reason": "Tiny sprite on a blank field; not recognizable as the title.",
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "Trapped with Jester"
+  },
+  "cltrapthecat": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Trap the Cat"
+  },
+  "cltrechoroustrialspart2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Treacherous Trials Part 2"
+  },
+  "cltriachnid": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Triachnid"
+  },
+  "cltriviacrack": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Trivia Crack"
+  },
+  "cltrollfacequest1": {
+    "reason": "Error page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Troll Face Quest 1"
+  },
+  "cltrucksim": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Truck Sim"
+  },
+  "cltubejumpers": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tube Jumpers"
+  },
+  "cltuff_client_offline_wasm": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tuff Client (WASM)"
+  },
+  "cltuff_client_offline_wasm-1": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tuff Client Offline WASM"
+  },
+  "cltungtunghorror": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tung Tung Horror"
   },
   "cltungtungtungsahurobby": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -8129,11 +8399,101 @@
     "status": "verified",
     "title": "Tung Tung Tung Sahur Obby"
   },
+  "cltunnelrushbetter": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Tunnel Rush (Better)"
+  },
+  "cltupertariotros": {
+    "reason": "Near-black frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Tupertariotros"
+  },
+  "clturbostars": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Turbostars"
+  },
+  "cltwinshot--1": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Twin Shot"
+  },
+  "cltwoball3d": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Two Ball 3D"
+  },
+  "clucds": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "UCDS"
+  },
+  "cluckyblockobbyeuophratesriver": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Lucky Block Obby: Euphrates River"
+  },
+  "clultimateassassian2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ultimate Assassin 2"
+  },
+  "clultimateassassian3": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ultimate Assassin 3"
+  },
+  "clultimatecardrivingsimulator": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ultimate Car Driving Simulator"
+  },
+  "clultrakill": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "ULTRAKILL"
+  },
+  "clumjammerlammy": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Um Jammer Lammy"
+  },
+  "clumstickmangameidkiforgor": {
+    "reason": "Screen shown belongs to a different application.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Umstickman Game (I Forgot)"
+  },
   "cluncannycatgolf": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Uncanny Cat Golf"
+  },
+  "clunderneath": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Underneath"
+  },
+  "clundertalelb": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Undertale LB"
   },
   "clundertaler": {
     "reason": "Error page, not the game artwork.",
