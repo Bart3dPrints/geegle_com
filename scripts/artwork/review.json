@@ -245,6 +245,12 @@
     "status": "rejected",
     "title": "clFF3"
   },
+  "clFNAF": {
+    "reason": "Blank frame, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Five Nights at Freddy's"
+  },
   "clGXClient": {
     "reason": "Captured frame is a generic resolution selector with no identifying game content.",
     "reviewed": "2026-11-26",
@@ -3083,6 +3089,12 @@
     "status": "verified",
     "title": "FNAW"
   },
+  "clfnfaethos": {
+    "reason": "Default engine menu shared across mods.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Aethos"
+  },
   "clfnfagoti": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
@@ -3106,6 +3118,24 @@
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "FNF: Annie"
+  },
+  "clfnfbelowdepths": {
+    "reason": "Default engine menu shared across mods.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Below Depths"
+  },
+  "clfnfbfdi26": {
+    "reason": "Engine splash, not the mod artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: BFDI 26"
+  },
+  "clfnfbinarybreakdown": {
+    "reason": "Engine splash, not the mod artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Binary Breakdown"
   },
   "clfnfblackbetrayal": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -3131,11 +3161,35 @@
     "status": "verified",
     "title": "FNF: Classified"
   },
+  "clfnfcrunchin": {
+    "reason": "Engine splash, not the mod artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Crunchin"
+  },
+  "clfnfdeciever": {
+    "reason": "Captured mod menu with its own logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Deceiver"
+  },
   "clfnfdokitakeoverplus": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: Doki Takeover Plus"
+  },
+  "clfnfdsides": {
+    "reason": "Captured mod artwork shows the actual title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: D-Sides"
+  },
+  "clfnfdustin": {
+    "reason": "Captured mod artwork shows the actual title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Dustin"
   },
   "clfnffleetway": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -3148,6 +3202,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: FNAF 1"
+  },
+  "clfnffnaf2": {
+    "reason": "Engine splash, not the mod artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: FNAF 2"
   },
   "clfnffnaf3": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -3184,6 +3244,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: Golden Apple"
+  },
+  "clfnfholiday": {
+    "reason": "Engine splash, not the mod artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Holiday"
   },
   "clfnfimposter3": {
     "reason": "Engine splash, not the mod artwork.",
@@ -3227,11 +3293,41 @@
     "status": "verified",
     "title": "FNF: Maginage Matches"
   },
+  "clfnfmariomadnessdside": {
+    "reason": "Captured mod artwork shows the actual title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Mario Madness D-Side"
+  },
+  "clfnfmcmadness": {
+    "reason": "Default engine menu shared across mods.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: MC Madness"
+  },
   "clfnfmiku": {
     "reason": "Engine credit splash, not the mod artwork.",
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "FNF Miku"
+  },
+  "clfnfmobmod": {
+    "reason": "Engine splash, not the mod artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Mob Mod"
+  },
+  "clfnfpokepastaperdition": {
+    "reason": "Content warning gate, not the mod artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Pokepasta Perdition"
+  },
+  "clfnfqt": {
+    "reason": "Default engine menu shared across mods.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF QT"
   },
   "clfnfremnants": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -3239,11 +3335,35 @@
     "status": "verified",
     "title": "FNF: Remnants"
   },
+  "clfnfretrospecter": {
+    "reason": "Captured mod artwork shows the actual title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Retrospecter"
+  },
+  "clfnfrevmixed": {
+    "reason": "Default engine menu shared across mods.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Rev Mixed"
+  },
+  "clfnfrewrite": {
+    "reason": "Default engine menu shared across mods.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Rewrite"
+  },
   "clfnfrottensmoothie": {
     "reason": "Artwork belongs to an unrelated franchise.",
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "FNF: Rotten Smoothie"
+  },
+  "clfnfselfpaced": {
+    "reason": "Captured mod artwork shows the actual title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Self Paced"
   },
   "clfnfshaggyxmatt": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -3251,11 +3371,35 @@
     "status": "verified",
     "title": "FNF: Shaggy X Matt"
   },
+  "clfnfsky": {
+    "reason": "Default engine menu shared across mods.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF Sky"
+  },
   "clfnfsoft": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF Soft"
+  },
+  "clfnfsohv2": {
+    "reason": "Engine splash, not the mod artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: SOHV 2"
+  },
+  "clfnfsonicexe": {
+    "reason": "Content warning gate, not the mod artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Sonic.EXE"
+  },
+  "clfnfsonicexe4": {
+    "reason": "Engine splash, not the mod artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Sonic.EXE 4"
   },
   "clfnfstarlightmayhem": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -3275,11 +3419,23 @@
     "status": "verified",
     "title": "FNF: Tails Gets Trolled"
   },
+  "clfnftooslowfran": {
+    "reason": "Captured mod artwork shows the actual title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Too Slow Fran"
+  },
   "clfnftricky": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: Tricky"
+  },
+  "clfnftwiddlefinger": {
+    "reason": "Default engine menu shared across mods.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FNF: Twiddlefinger"
   },
   "clfnfundertale": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -3292,6 +3448,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF Void"
+  },
+  "clfnfvstabi": {
+    "reason": "Captured mod artwork shows the actual title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: vs Tabi"
   },
   "clfnfwaltenfiles": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -3862,6 +4024,12 @@
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "Hit Single Real"
+  },
+  "clhitstunfly": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Hitstun Fly"
   },
   "clhl2doom": {
     "reason": "Loading progress screen, not rendered gameplay.",
@@ -4918,6 +5086,12 @@
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Monster Derby"
+  },
+  "clmonsterswing": {
+    "reason": "Engine splash, not the mod artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Monsters Wing"
   },
   "clmonstertracks": {
     "reason": "Blank frame inside a tournament page.",
