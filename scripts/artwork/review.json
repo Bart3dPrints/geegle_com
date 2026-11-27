@@ -342,9 +342,9 @@
     "title": "clGXClient"
   },
   "clGXclient": {
-    "reason": "Every qualifying frame carried a consent, age, profanity, legal or ad-block dialog over the content.",
+    "reason": "GX Corner client interface.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "GX Client"
   },
   "cla-walk-in-the-forest--v1-0": {
@@ -4853,6 +4853,12 @@
     "status": "verified",
     "title": "FNF: Annie"
   },
+  "clfnfasdf": {
+    "reason": "ASDF Movie mod key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF ASDF"
+  },
   "clfnfbelowdepths": {
     "reason": "FNF Sonic Below the Depths key art.",
     "reviewed": "2026-11-27",
@@ -4895,6 +4901,12 @@
     "status": "verified",
     "title": "FNF: Candy Carrier"
   },
+  "clfnfchara": {
+    "reason": "FNF vs Chara key art with Chara, Frisk and Flowey.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF Chara"
+  },
   "clfnfcitytales": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -4914,9 +4926,9 @@
     "title": "FNF: Corrosion"
   },
   "clfnfcory": {
-    "reason": "The frame is an empty background with no legible title or gameplay.",
+    "reason": "FNF CoryKenShin key art with Cory.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF Cory"
   },
   "clfnfcrunchin": {
@@ -4936,6 +4948,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: Desolation"
+  },
+  "clfnfdocumic-txtv3": {
+    "reason": "Documic.txt gameplay screen with its cabinet and title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF Documic TXT V3"
   },
   "clfnfdokitakeoverplus": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
@@ -5052,9 +5070,9 @@
     "title": "FNF Hex"
   },
   "clfnfholiday": {
-    "reason": "The frame shows only the shared Friday Night Funkin base logo, which does not identify this specific mod.",
+    "reason": "FNF Holiday title screen with Santa and the logo.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF: Holiday"
   },
   "clfnfhorkglorpgloop": {
@@ -5063,11 +5081,23 @@
     "status": "verified",
     "title": "FNF: Horkglor RPG Loop"
   },
+  "clfnfhotline": {
+    "reason": "FNF: Hotline gameplay with its stage and chart.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Hotline"
+  },
   "clfnfhypnoslullaby": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: Hypno's Lullaby"
+  },
+  "clfnfimposter3": {
+    "reason": "Imposter mod gameplay with the red impostor and Boyfriend.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Imposter 3"
   },
   "clfnfimposterv4": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
@@ -5093,6 +5123,12 @@
     "status": "verified",
     "title": "FNF: Infinite Irida"
   },
+  "clfnfironlung": {
+    "reason": "Iron Lung Re-Wacked key art with its title; result 1 carried a RECREATION caption and result 3 a watermark.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Iron Lung"
+  },
   "clfnfjapcreepypasta": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -5117,6 +5153,12 @@
     "status": "verified",
     "title": "FNF: Mario Madness D-Side"
   },
+  "clfnfmarioport": {
+    "reason": "FNF Mario Port key art with its characters; result 1 was the separate Mario PC Port.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Mario Port"
+  },
   "clfnfmcmadness": {
     "reason": "FNF: MC Madness gameplay with its combo HUD.",
     "reviewed": "2026-11-27",
@@ -5136,45 +5178,45 @@
     "title": "FNF Miku"
   },
   "clfnfmobmod": {
-    "reason": "The frame shows only the shared Friday Night Funkin base logo, which does not identify this specific mod.",
+    "reason": "FNF: Mob Mod gameplay with its characters and arrows; result 2 carried a chat overlay.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF: Mob Mod"
   },
   "clfnfneo": {
-    "reason": "The frame is a washed-out near-white image; the title is not legible enough to verify.",
+    "reason": "FNF Neo key art with its logo.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF Neo"
   },
   "clfnfpiggyfield": {
-    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reason": "FNF: Piggy Field key art with Piggy and Boyfriend.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF: Piggy Field"
   },
   "clfnfplutoshi": {
-    "reason": "The frame shows only the shared Friday Night Funkin base logo, which does not identify this specific mod.",
+    "reason": "FNF: Plutosh gameplay stage; results 2 and 3 were plush product photos.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF: Plutosh"
   },
   "clfnfpokepastaperdition": {
-    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reason": "Pokepasta Perdition key art with its characters.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF: Pokepasta Perdition"
   },
   "clfnfporifera": {
-    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reason": "FNF: Porifera gameplay with its logo and character.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF: Porifera"
   },
   "clfnfqt": {
-    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reason": "FNF QT key art with QT and Boyfriend.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF QT"
   },
   "clfnfremnants": {
@@ -5190,16 +5232,28 @@
     "title": "FNF: Retrospecter"
   },
   "clfnfrevmixed": {
-    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reason": "FNF: Rev Mixed gameplay with its title and stage.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF: Rev Mixed"
   },
   "clfnfrewrite": {
-    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reason": "FNF Rewrite title art with Sonic; result 2 was a numbered round banner.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF: Rewrite"
+  },
+  "clfnfrhythmicrev": {
+    "reason": "FNF Rhythmic Revolution title card for this build.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Rhythmic Rev"
+  },
+  "clfnfrottensmoothie": {
+    "reason": "Rotten Smoothie key art with its monster.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Rotten Smoothie"
   },
   "clfnfselfpaced": {
     "reason": "Captured mod artwork shows the actual title.",
@@ -5220,9 +5274,9 @@
     "title": "FNF Shucks V2"
   },
   "clfnfsky": {
-    "reason": "The frame is a publisher or engine splash, not the game's own screen.",
+    "reason": "FNF vs Sky title art.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF Sky"
   },
   "clfnfsoft": {
@@ -5232,21 +5286,21 @@
     "title": "FNF Soft"
   },
   "clfnfsohv2": {
-    "reason": "The frame shows only the shared Friday Night Funkin base logo, which does not identify this specific mod.",
+    "reason": "SOHV2 gameplay stage; result 3 was a portal collage.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF: SOHV 2"
   },
   "clfnfsonicexe": {
-    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reason": "VS Sonic.EXE key art for this build.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF: Sonic.EXE"
   },
   "clfnfsonicexe4": {
-    "reason": "Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.",
+    "reason": "Sonic.EXE 4 gameplay with its characters.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FNF: Sonic.EXE 4"
   },
   "clfnfstarlightmayhem": {
@@ -5278,6 +5332,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "FNF: Tricky"
+  },
+  "clfnftwiddlefinger": {
+    "reason": "FNF Twiddlefinger key art with both characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "FNF: Twiddlefinger"
   },
   "clfnfundertale": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
@@ -5321,6 +5381,12 @@
     "status": "verified",
     "title": "FNF: Zardy"
   },
+  "clfocus": {
+    "reason": "Results were physical card and board games (The FOCUS Game, OldCap Focus), not the game this entry serves.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": null
+  },
   "clfolderdungeon": {
     "reason": "Captured gameplay shows the actual game.",
     "reviewed": "2026-11-27",
@@ -5339,6 +5405,12 @@
     "status": "verified",
     "title": "Football Legends"
   },
+  "clforknsausage": {
+    "reason": "Fork n Sausage key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Fork n Sausage"
+  },
   "clfortzone": {
     "reason": "Captured title screen shows the actual game.",
     "reviewed": "2026-11-27",
@@ -5346,9 +5418,9 @@
     "title": "Fortzone"
   },
   "clfpa4p1": {
-    "reason": "Every qualifying frame was an error page.",
+    "reason": "FPA Game 4 Fun start screen with its menu.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "FPA 4 P1"
   },
   "clfpa4p2": {
@@ -5357,17 +5429,47 @@
     "status": "verified",
     "title": "FPA 4 P2"
   },
+  "clfreegemas": {
+    "reason": "Free Gemas gameplay board with its HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Free Gemas"
+  },
   "clfreerider": {
     "reason": "Captured game window shows the actual title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Free Rider"
   },
-  "clfreerider3": {
-    "reason": "The frame is a publisher or engine splash, not the game's own screen.",
+  "clfreerider2": {
+    "reason": "Free Rider 2 logo art with the rider.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Free Rider 2"
+  },
+  "clfreerider3": {
+    "reason": "Free Rider 3 menu art; result 1 carried a portal credit.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Free Rider 3"
+  },
+  "clfridaynightfunkin": {
+    "reason": "Friday Night Funkin' gameplay with Boyfriend, Girlfriend and the chart.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Friday Night Funkin'"
+  },
+  "clfroggerarcade": {
+    "reason": "Frogger arcade cabinet and marquee.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Frogger Arcade"
+  },
+  "clfromrusttoash": {
+    "reason": "From Rust to Ash PICO-8 cartridge label with the exact title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "From Rust to Ash"
   },
   "clfunkinmix": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
@@ -5387,6 +5489,18 @@
     "status": "verified",
     "title": "Funny Battle 2"
   },
+  "clfunnymadracing": {
+    "reason": "Funny Mad Racing key art with its truck.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Funny Mad Racing"
+  },
+  "clfunnyshooter2": {
+    "reason": "Funny Shooter 2 key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Funny Shooter 2"
+  },
   "clfunnyshooter22": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
@@ -5399,10 +5513,16 @@
     "status": "verified",
     "title": "Fused 240"
   },
-  "clfzerox": {
-    "reason": "The frame is an empty background with no legible title or gameplay.",
+  "clfzero": {
+    "reason": "F-Zero box art with Captain Falcon.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "F-Zero"
+  },
+  "clfzerox": {
+    "reason": "F-Zero X box art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "F-Zero X"
   },
   "clgachaverse": {
@@ -5417,10 +5537,34 @@
     "status": "verified",
     "title": "Gain Ground"
   },
-  "clgangstabean2": {
-    "reason": "The frame is a publisher or engine splash, not the game's own screen.",
+  "clgalaga": {
+    "reason": "Galaga arcade gameplay with its title and formation; result 1 carried an Arcade Archives label.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Galaga"
+  },
+  "clgameandwatchcollection": {
+    "reason": "Results were photographs of Game & Watch hardware, not the DS collection this entry serves.",
     "reviewed": "2026-11-27",
     "status": "rejected",
+    "title": null
+  },
+  "clgamewatchgallery3": {
+    "reason": "Game & Watch Gallery 3 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Game & Watch Gallery 3"
+  },
+  "clgangstabean": {
+    "reason": "Gangsta Bean logo art with its silhouettes.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Gangsta Bean"
+  },
+  "clgangstabean2": {
+    "reason": "Gangsta Bean 2 title art with its menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Gangsta Bean 2"
   },
   "clgangsterbros": {
@@ -5428,6 +5572,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Gangster Bros"
+  },
+  "clgarcello": {
+    "reason": "FNF vs Garcello key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Garcello"
   },
   "clgarfcaughtinact": {
     "reason": "Captured title screen shows the actual game.",
@@ -5441,11 +5591,35 @@
     "status": "verified",
     "title": "GD Lite"
   },
+  "clgdwaveover100mb": {
+    "reason": "Geometry Dash wave gameplay without overlaid captions.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "GD Wave (100MB+)"
+  },
+  "clgeneralchaos": {
+    "reason": "General Chaos box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "General Chaos"
+  },
+  "clgenericfightermaybe": {
+    "reason": "Generic Fighter Maybe gameplay with its hit counter; result 3 carried a PLAYTEST badge.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Generic Fighter Maybe"
+  },
   "clgeometrydashscratch": {
     "reason": "Captured title screen shows the actual game.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Geometry Dash Scratch"
+  },
+  "clgeometrydashwave": {
+    "reason": "Geometry Dash wave level screen with its title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Geometry Dash Wave"
   },
   "clgeometryvibes": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -5483,6 +5657,24 @@
     "status": "verified",
     "title": "Get Yoked"
   },
+  "clggshinobi": {
+    "reason": "Shinobi Game Gear box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "GG Shinobi"
+  },
+  "clggshinobi2": {
+    "reason": "Shinobi II: The Silent Fury box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "GG Shinobi 2"
+  },
+  "clghosttrick": {
+    "reason": "Ghost Trick: Phantom Detective key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ghost Trick"
+  },
   "clgimmietheairpod": {
     "reason": "Captured title screen shows the actual game.",
     "reviewed": "2026-11-27",
@@ -5500,6 +5692,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "GL Fighters"
+  },
+  "clgloryhunters": {
+    "reason": "Glory Hunters box art; results 2 and 3 were box photographs.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Glory Hunters"
+  },
+  "clglover": {
+    "reason": "Glover N64 box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Glover"
   },
   "clgoalsouthafrica": {
     "reason": "Captured title screen shows the actual game.",
@@ -5525,11 +5729,47 @@
     "status": "verified",
     "title": "Gold Digger FRVR"
   },
-  "clgoldensunnds": {
-    "reason": "Still a loading screen when the 15-second window ended.",
+  "clgoldenaxe": {
+    "reason": "Golden Axe Genesis box art.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Golden Axe"
+  },
+  "clgoldenaxe2": {
+    "reason": "Golden Axe II key art without the platform band.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Golden Axe 2"
+  },
+  "clgoldenaxe3": {
+    "reason": "Golden Axe III key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Golden Axe 3"
+  },
+  "clgoldeneye007": {
+    "reason": "GoldenEye 007 N64 gameplay with the title logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "GoldenEye 007"
+  },
+  "clgoldensun": {
+    "reason": "Golden Sun key art with its cast.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Golden Sun"
+  },
+  "clgoldensunnds": {
+    "reason": "Golden Sun: Dark Dawn key art without the DS spine.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Golden Sun NDS"
+  },
+  "clgoldensunthelostage": {
+    "reason": "Golden Sun: The Lost Age box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Golden Sun: The Lost Age"
   },
   "clgoldminer": {
     "reason": "Captured title screen shows the actual game.",
@@ -5549,11 +5789,41 @@
     "status": "verified",
     "title": "Golf Orbit"
   },
-  "clgoodmonkeymart": {
-    "reason": "The only frame was a fullscreen button overlay.",
+  "clgolfsunday": {
+    "reason": "Golf Sunday PICO-8 title art; result 3 was a cartridge photo.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Golf Sunday"
+  },
+  "clgoodbigtowertinysquare": {
+    "reason": "Big Tower Tiny Square key art on its neon tower.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Good Big Tower Tiny Square"
+  },
+  "clgoodbigtowertinysquare2": {
+    "reason": "Big Tower Tiny Square 2 title art, the blue variant, kept distinct from the main entry.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Good Big Tower Tiny Square 2"
+  },
+  "clgoodboygalaxy": {
+    "reason": "Goodboy Galaxy key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Good Boy Galaxy"
+  },
+  "clgoodmonkeymart": {
+    "reason": "Monkey Mart key art with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Good Monkey Mart"
+  },
+  "clgooftroopsnes": {
+    "reason": "Goof Troop box art without platform borders.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Goondu Troops (NES)"
   },
   "clgoogledino": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -5561,11 +5831,23 @@
     "status": "verified",
     "title": "Google Dino"
   },
-  "clgorillatag": {
-    "reason": "The frame is a publisher or engine splash, not the game's own screen.",
+  "clgorescriptclassic": {
+    "reason": "Gore Script Classic key art.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Gore Script Classic"
+  },
+  "clgorillatag": {
+    "reason": "Gorilla Tag key art with its players.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Gorilla Tag"
+  },
+  "clgotobed": {
+    "reason": "Go to Bed title screen with its lettering.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Go to Bed"
   },
   "clgrandactionsimulator-ny": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -5579,17 +5861,47 @@
     "status": "verified",
     "title": "Granddad"
   },
+  "clgrandescapeprison": {
+    "reason": "Grand Escape: Prison app icon with the title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Grand Escape Prison"
+  },
+  "clgrandtheftautoadvance": {
+    "reason": "Grand Theft Auto Advance GBA box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Grand Theft Auto Advance"
+  },
+  "clgranny": {
+    "reason": "Granny title screen with its menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Granny"
+  },
+  "clgranny2": {
+    "reason": "Granny Chapter Two key art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Granny 2"
+  },
   "clgranny22": {
     "reason": "Captured the Granny 22 title screen with Play.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Granny 22"
   },
+  "clgranny3": {
+    "reason": "Granny 3 key art with its three characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Granny 3"
+  },
   "clgrannycreepy": {
-    "reason": "The frame is an in-game view covered by a play overlay, not a title screen or clean gameplay.",
+    "reason": "Results were the retail Granny titles, not artwork for this mod; using them would mislabel the card.",
     "reviewed": "2026-11-27",
     "status": "rejected",
-    "title": "Granny Creepy"
+    "title": null
   },
   "clgrannynightmare": {
     "reason": "Captured gameplay shows the actual game.",
@@ -5597,16 +5909,22 @@
     "status": "verified",
     "title": "Granny Nightmare"
   },
-  "clgranturismo": {
-    "reason": "Still a loading screen when the 15-second window ended.",
+  "clgrannyy": {
+    "reason": "Granny Horror Game key art with its characters, kept distinct from the Granny entry.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
+    "title": "Granny Y"
+  },
+  "clgranturismo": {
+    "reason": "Gran Turismo 5 logo art; the other results were GT6 and GT7.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
     "title": "Gran Turismo"
   },
   "clgranturismo2": {
-    "reason": "Still a loading screen when the 15-second window ended.",
+    "reason": "Gran Turismo 2 logo art.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
+    "status": "verified",
     "title": "Gran Turismo 2"
   },
   "clgrassmowing": {
@@ -5627,11 +5945,23 @@
     "status": "verified",
     "title": "Gravity Mod"
   },
+  "clgreenergrassawaits": {
+    "reason": "Greener Grass Awaits title art with its hand and dog.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Greener Grass Awaits"
+  },
   "clgrey-box-testing": {
     "reason": "Captured the Grey-Box Testing title menu.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Grey Box Testing"
+  },
+  "clgrimacebirthday": {
+    "reason": "Grimace's Birthday key art with its characters.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Grimace Birthday"
   },
   "clgrindcraft": {
     "reason": "Captured title screen shows the actual game.",
@@ -5651,6 +5981,12 @@
     "status": "verified",
     "title": "Grow a Garden"
   },
+  "clgrowdenio": {
+    "reason": "Growden.io logo art with its carrot.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Growdenio"
+  },
   "clgrowmi": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -5662,6 +5998,42 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Grow Your Garden"
+  },
+  "clgta": {
+    "reason": "Grand Theft Auto V key art grid with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "GTA"
+  },
+  "clgta2": {
+    "reason": "GTA 2 top-down gameplay with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "GTA 2"
+  },
+  "clgta22": {
+    "reason": "GTA 22 key art with its masked figure.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "GTA 22"
+  },
+  "clgtaalty": {
+    "reason": "GTA Vice City gameplay with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "GTA Alty"
+  },
+  "clgtachina": {
+    "reason": "Grand Theft Auto: Chinatown Wars box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "GTA China"
+  },
+  "clgtamods": {
+    "reason": "GTA V modded vehicles with the logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "GTA Mods"
   },
   "clguesstheiranswer": {
     "reason": "Captured gameplay shows the actual game.",
@@ -5687,11 +6059,59 @@
     "status": "verified",
     "title": "Guncho"
   },
+  "clgunfighterjessejames": {
+    "reason": "Gunfighter: The Legend of Jesse James box art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Gunfighter Jesse James"
+  },
+  "clgunknight": {
+    "reason": "Gun Knight gameplay with its title.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Gun Knight"
+  },
+  "clgunmayhem": {
+    "reason": "Gun Mayhem key art with its character.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Gun Mayhem"
+  },
+  "clgunmayhem2": {
+    "reason": "Gun Mayhem 2 gameplay with its title and players.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Gun Mayhem 2"
+  },
+  "clgunmayhem2goof": {
+    "reason": "Gun Mayhem 2 bot-fight gameplay, kept distinct from the main entry's art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Gun Mayhem 2 Goof"
+  },
+  "clgunmayhemredux": {
+    "reason": "Gun Mayhem Redux key art with its two gunmen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Gun Mayhem Redux"
+  },
   "clgunnight": {
     "reason": "Captured title screen shows the actual game.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Gun Night"
+  },
+  "clgunsmoke": {
+    "reason": "Gun.Smoke title screen with its logo.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Gunsmoke"
+  },
+  "clgunstarheroes": {
+    "reason": "Gunstar Heroes box art without the spine.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Gunstar Heroes"
   },
   "clgxclient": {
     "reason": "Frames showed only instructions or copyright text, not a title screen or recognizable gameplay.",
@@ -5705,11 +6125,23 @@
     "status": "verified",
     "title": "Gym Stack"
   },
+  "clgyromite": {
+    "reason": "Gyromite box art with R.O.B.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Gyromite"
+  },
   "clhacx": {
     "reason": "Captured game artwork matches the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "HACX"
+  },
+  "clhajimeippo": {
+    "reason": "Hajime no Ippo gameplay in the ring.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Hajime no Ippo"
   },
   "clhanger": {
     "reason": "Captured title screen shows the actual game.",
@@ -9568,6 +10000,18 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "EB Client WASM"
+  },
+  "friday-night-funkin": {
+    "reason": "Friday Night Funkin' Week 7 title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Friday Night Funkin'"
+  },
+  "geometrydashlite": {
+    "reason": "Geometry Dash Lite app icon.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Geometry Dash Lite"
   },
   "helios-offline--1": {
     "reason": "Captured the actual application interface this card launches.",

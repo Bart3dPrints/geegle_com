@@ -2,11 +2,11 @@
   "generated": "scripts/artwork/build-progress.py",
   "summary": {
     "catalogEntries": 2710,
-    "verified": 1538,
+    "verified": 1635,
     "awaitingReview": 0,
     "rejected": 0,
     "blocked": 0,
-    "notStarted": 1172
+    "notStarted": 1075
   },
   "entries": [
     {
@@ -19706,18 +19706,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfholiday.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/holiday/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://gamebanana.com/mods/638698",
+      "imagePath": "/artwork/clfnfholiday.webp",
+      "identityEvidence": "Found by searching \"FNF: Holiday game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FNF: Holiday\" before use. Source page: https://gamebanana.com/mods/638698",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "c244893acc187be5dbb78d4eb36d96d2588bd8dadd380b16f0c358a04e367bf3",
+      "visualVerification": "verified 2026-11-27: FNF Holiday title screen with Santa and the logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -19727,18 +19725,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfhotline.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/waycrosspublicmedia.github.io@main/hotline/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.youtube.com/watch?v=hU5X0WEw5Hc",
+      "imagePath": "/artwork/clfnfhotline.webp",
+      "identityEvidence": "Found by searching \"FNF: Hotline game\" in Bing Images and taking result 3; the image was checked against the catalog title \"FNF: Hotline\" before use. Source page: https://www.youtube.com/watch?v=hU5X0WEw5Hc",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "83e975792bf4930bbb6658053fb04666d81734bd2cffadb774e805474f607873",
+      "visualVerification": "verified 2026-11-27: FNF: Hotline gameplay with its stage and chart.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -19774,18 +19770,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfimposter3.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/mll-enh/die@main/impo/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://gamebanana.com/mods/378764",
+      "imagePath": "/artwork/clfnfimposter3.webp",
+      "identityEvidence": "Found by searching \"FNF: Imposter 3 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"FNF: Imposter 3\" before use. Source page: https://gamebanana.com/mods/378764",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "e078a4b543f738b3b90fed441d97a387196d37213b653e32957f5bbfabfe859f",
+      "visualVerification": "verified 2026-11-27: Imposter mod gameplay with the red impostor and Boyfriend.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -19895,18 +19889,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfironlung.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/iron-lung/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://gamebanana.com/mods/562081",
+      "imagePath": "/artwork/clfnfironlung.webp",
+      "identityEvidence": "Found by searching \"FNF: Iron Lung game\" in Bing Images and taking result 2; the image was checked against the catalog title \"FNF: Iron Lung\" before use. Source page: https://gamebanana.com/mods/562081",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "3584bc7bffc2247aab99c52beb5a6e88d297ff250f16e1f9ca5cca28ad89ff8b",
+      "visualVerification": "verified 2026-11-27: Iron Lung Re-Wacked key art with its title; result 1 carried a RECREATION caption and result 3 a watermark.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -20017,18 +20009,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfmarioport.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/mario-port/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://stiftung-sfs.de/vs-mario-fnf-port-fnf-vs-mario-fnf-port/",
+      "imagePath": "/artwork/clfnfmarioport.webp",
+      "identityEvidence": "Found by searching \"FNF: Mario Port game\" in Bing Images and taking result 2; the image was checked against the catalog title \"FNF: Mario Port\" before use. Source page: https://stiftung-sfs.de/vs-mario-fnf-port-fnf-vs-mario-fnf-port/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "67a31cd53936be93b1a353905d32fff79f4cdfaf714000257b5d8f55f3fca0dd",
+      "visualVerification": "verified 2026-11-27: FNF Mario Port key art with its characters; result 1 was the separate Mario PC Port.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -20063,18 +20053,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfmobmod.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/mobmod/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://apkfab.com/es/friday-night-funkin-music-game-mobile-fnf-mod/com.fridaynightfunkinmobilegame.fnfmobilemod",
+      "imagePath": "/artwork/clfnfmobmod.webp",
+      "identityEvidence": "Found by searching \"FNF: Mob Mod game\" in Bing Images and taking result 3; the image was checked against the catalog title \"FNF: Mob Mod\" before use. Source page: https://apkfab.com/es/friday-night-funkin-music-game-mobile-fnf-mod/com.fridaynightfunkinmobilegame.fnfmobilemod",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "a2cf988b86bf43017a6e33e7cefd2aa370317a5d8231caabb3a01daed6eda08f",
+      "visualVerification": "verified 2026-11-27: FNF: Mob Mod gameplay with its characters and arrows; result 2 carried a chat overlay.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -20084,18 +20072,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfpiggyfield.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/piggyfield/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.youtube.com/watch?v=aBWY5dVSLso",
+      "imagePath": "/artwork/clfnfpiggyfield.webp",
+      "identityEvidence": "Found by searching \"FNF: Piggy Field game\" in Bing Images and taking result 3; the image was checked against the catalog title \"FNF: Piggy Field\" before use. Source page: https://www.youtube.com/watch?v=aBWY5dVSLso",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "b00f2f5bb583cea21de0d00e9f540da916f5e748cb563144b1ba8d22ce7d8ec4",
+      "visualVerification": "verified 2026-11-27: FNF: Piggy Field key art with Piggy and Boyfriend.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -20105,18 +20091,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfplutoshi.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/pluto/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://gamebanana.com/mods/360514",
+      "imagePath": "/artwork/clfnfplutoshi.webp",
+      "identityEvidence": "Found by searching \"FNF: Plutosh game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FNF: Plutosh\" before use. Source page: https://gamebanana.com/mods/360514",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "bd62973a87f7fc3806f1370e80d9f2ca67e783317f3c930d87dba36b9f68c545",
+      "visualVerification": "verified 2026-11-27: FNF: Plutosh gameplay stage; results 2 and 3 were plush product photos.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -20126,18 +20110,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfpokepastaperdition.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://game3.glov3.me/uploads/game/html5/26971/",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://gamebanana.com/mods/476937",
+      "imagePath": "/artwork/clfnfpokepastaperdition.webp",
+      "identityEvidence": "Found by searching \"FNF: Pokepasta Perdition game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FNF: Pokepasta Perdition\" before use. Source page: https://gamebanana.com/mods/476937",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched game3.glov3.me page metadata"
-      ],
+      "sha256": "74009ce4703980dc60bb77cc8cd9ac110de28b17a2c308b719bffe4f10de9922",
+      "visualVerification": "verified 2026-11-27: Pokepasta Perdition key art with its characters.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -20147,18 +20129,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfporifera.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/fnf@main/porifera/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://gamebanana.com/mods/620653",
+      "imagePath": "/artwork/clfnfporifera.webp",
+      "identityEvidence": "Found by searching \"FNF: Porifera game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FNF: Porifera\" before use. Source page: https://gamebanana.com/mods/620653",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "5126192683b1439f15b96b59c615c1774cf60c57b36e30c11b8738767ba87c8e",
+      "visualVerification": "verified 2026-11-27: FNF: Porifera gameplay with its logo and character.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -20219,18 +20199,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfrevmixed.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/rev-mixed/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://gamebanana.com/mods/451376",
+      "imagePath": "/artwork/clfnfrevmixed.webp",
+      "identityEvidence": "Found by searching \"FNF: Rev Mixed game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FNF: Rev Mixed\" before use. Source page: https://gamebanana.com/mods/451376",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "d828ac98379b556aee9fee9bad4f20a57523e4728e5cdf4f8fac98838bfc7f13",
+      "visualVerification": "verified 2026-11-27: FNF: Rev Mixed gameplay with its title and stage.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -20240,18 +20218,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfrewrite.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/rewrite/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://fnf-games.io/fnf-vs-rewrite-sonic-exe",
+      "imagePath": "/artwork/clfnfrewrite.webp",
+      "identityEvidence": "Found by searching \"FNF: Rewrite game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FNF: Rewrite\" before use. Source page: https://fnf-games.io/fnf-vs-rewrite-sonic-exe",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "c92b121fa2b180f8f4900723b8ba53a50d40c981e904a6e5e1bbd00e8a3bcd03",
+      "visualVerification": "verified 2026-11-27: FNF Rewrite title art with Sonic; result 2 was a numbered round banner.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -20261,18 +20237,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfrhythmicrev.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/ryhthmic-revolution/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://fridaynightfunking.fandom.com/wiki/Friday_Night_Funkin'_Rhythmic_Revolution",
+      "imagePath": "/artwork/clfnfrhythmicrev.webp",
+      "identityEvidence": "Found by searching \"FNF: Rhythmic Rev game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FNF: Rhythmic Rev\" before use. Source page: https://fridaynightfunking.fandom.com/wiki/Friday_Night_Funkin'_Rhythmic_Revolution",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "782e19a35ce4250b984f8a450c14aefd98a005857937a95988cbddafbf732577",
+      "visualVerification": "verified 2026-11-27: FNF Rhythmic Revolution title card for this build.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -20282,19 +20256,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfrottensmoothie.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/fnf@main/rottensmoothie/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://genius.com/Denkin-and-fruiteater677-amazing-grace-rotten-smoothie-but-every-turn-a-different-character-sings-fnf-rotten-smoothie-lyrics",
+      "imagePath": "/artwork/clfnfrottensmoothie.webp",
+      "identityEvidence": "Found by searching \"FNF: Rotten Smoothie game\" in Bing Images and taking result 3; the image was checked against the catalog title \"FNF: Rotten Smoothie\" before use. Source page: https://genius.com/Denkin-and-fruiteater677-amazing-grace-rotten-smoothie-but-every-turn-a-different-character-sings-fnf-rotten-smoothie-lyrics",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "fetched www.snokido.com page metadata"
-      ],
+      "sha256": "179427c43a5fc061cd53b2f77b1f8628e1c6d8ec102c7eb395d67c595872412b",
+      "visualVerification": "verified 2026-11-27: Rotten Smoothie key art with its monster.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -20355,19 +20326,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfsohv2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/sohv2/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://apkpure.com/fnf-for-friday-night-funkin-mods/com.fnf.fnf",
+      "imagePath": "/artwork/clfnfsohv2.webp",
+      "identityEvidence": "Found by searching \"FNF: SOHV 2 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FNF: SOHV 2\" before use. Source page: https://apkpure.com/fnf-for-friday-night-funkin-mods/com.fnf.fnf",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "fetched game.fnfhub.net page metadata"
-      ],
+      "sha256": "b670b77c0a52356174c59871768957d6b880ec2bcaf67b2a4396a4bc3c8a12ac",
+      "visualVerification": "verified 2026-11-27: SOHV2 gameplay stage; result 3 was a portal collage.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -20377,19 +20345,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfsonicexe.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/waycrosspublicmedia.github.io@c0c89e613656c1b43eb96cebc5cdd33ff4aa851c/sonic.exe/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://storage.googleapis.com/btbgjvlnuarxapsvbbqyvtbl-blog/fnf-vs-sonic-exe-v2.html",
+      "imagePath": "/artwork/clfnfsonicexe.webp",
+      "identityEvidence": "Found by searching \"FNF: Sonic.EXE game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FNF: Sonic.EXE\" before use. Source page: https://storage.googleapis.com/btbgjvlnuarxapsvbbqyvtbl-blog/fnf-vs-sonic-exe-v2.html",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "fetched game3.glov3.me page metadata"
-      ],
+      "sha256": "38f143c5a42b1441b08f8c6a13553b32d7617320dee48abec1f0f6659b787c5d",
+      "visualVerification": "verified 2026-11-27: VS Sonic.EXE key art for this build.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -20399,19 +20364,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfsonicexe4.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/sonic-exe-4/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://gamebanana.com/mods/341133",
+      "imagePath": "/artwork/clfnfsonicexe4.webp",
+      "identityEvidence": "Found by searching \"FNF: Sonic.EXE 4 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"FNF: Sonic.EXE 4\" before use. Source page: https://gamebanana.com/mods/341133",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "fetched game3.glov3.me page metadata"
-      ],
+      "sha256": "72f82d36fc80ecb0a6ec57b008ac83e5743ec19b6322e36e7777e6d6c9b1902d",
+      "visualVerification": "verified 2026-11-27: Sonic.EXE 4 gameplay with its characters.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -20522,18 +20484,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfTWIDDLEFINGER.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/fnfmods/twiddlefinger/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.play-games.com/pt/jogos-fnf.html",
+      "imagePath": "/artwork/clfnftwiddlefinger.webp",
+      "identityEvidence": "Found by searching \"FNF: Twiddlefinger game\" in Bing Images and taking result 2; the image was checked against the catalog title \"FNF: Twiddlefinger\" before use. Source page: https://www.play-games.com/pt/jogos-fnf.html",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "10e5d5108b24eafd25ae33ecff51c13029d3c39677b28c542e90ec272f107180",
+      "visualVerification": "verified 2026-11-27: FNF Twiddlefinger key art with both characters.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -20643,18 +20603,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfasdf.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/asdf-muffin/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://kbhgames.com/game/fnf-asdfs-endless-muffin-time",
+      "imagePath": "/artwork/clfnfasdf.webp",
+      "identityEvidence": "Found by searching \"FNF ASDF game\" in Bing Images and taking result 3; the image was checked against the catalog title \"FNF ASDF\" before use. Source page: https://kbhgames.com/game/fnf-asdfs-endless-muffin-time",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "df340d41888a5661576074bd2fb0a034320b258d6445ecd94a8ee0dc93c3b5f3",
+      "visualVerification": "verified 2026-11-27: ASDF Movie mod key art with its characters.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -20664,18 +20622,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfchara.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@latest/chara/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.snokido.com/game/vs-chara",
+      "imagePath": "/artwork/clfnfchara.webp",
+      "identityEvidence": "Found by searching \"FNF Chara game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FNF Chara\" before use. Source page: https://www.snokido.com/game/vs-chara",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "96a2e44238cc466ec5a4d54496e4e0978d10158ff26b98d39a72de4287ce5685",
+      "visualVerification": "verified 2026-11-27: FNF vs Chara key art with Chara, Frisk and Flowey.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -20685,18 +20641,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfcory.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/cory/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://fnf-games.io/friday-night-funkin-vs-coryxkenshion",
+      "imagePath": "/artwork/clfnfcory.webp",
+      "identityEvidence": "Found by searching \"FNF Cory game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FNF Cory\" before use. Source page: https://fnf-games.io/friday-night-funkin-vs-coryxkenshion",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "249cf2904b1890156663b724393609d157429ee9b1163c9838fa8d4c8d994637",
+      "visualVerification": "verified 2026-11-27: FNF CoryKenShin key art with Cory.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -20706,18 +20660,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfdocumic.txtv3.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://game.fnfhub.net/24815/",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.y9freegames.com/game/fnf-documic-txt-v3-not-so-finished-but-restored/",
+      "imagePath": "/artwork/clfnfdocumic-txtv3.webp",
+      "identityEvidence": "Found by searching \"FNF Documic TXT V3 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FNF Documic TXT V3\" before use. Source page: https://www.y9freegames.com/game/fnf-documic-txt-v3-not-so-finished-but-restored/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched game.fnfhub.net page metadata"
-      ],
+      "sha256": "07d668a84ed0524d6404c26b4823f5a8cb0e7e6a13db3b64cabe842c69f65901",
+      "visualVerification": "verified 2026-11-27: Documic.txt gameplay screen with its cabinet and title.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -20828,18 +20780,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfneo.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@6b6680f79ab8c4e8349a920c2a240c5e7ee689ea/neo/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.snokido.com/game/friday-night-funkin-neo",
+      "imagePath": "/artwork/clfnfneo.webp",
+      "identityEvidence": "Found by searching \"FNF Neo game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FNF Neo\" before use. Source page: https://www.snokido.com/game/friday-night-funkin-neo",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "96c88b03c274393bf25d1ff6bec9553ef1d4d18afd7bf8553295344e3e2a4554",
+      "visualVerification": "verified 2026-11-27: FNF Neo key art with its logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -20849,18 +20799,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfqt.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/fnf/qt/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.snokido.com/game/vs-qt",
+      "imagePath": "/artwork/clfnfqt.webp",
+      "identityEvidence": "Found by searching \"FNF QT game\" in Bing Images and taking result 2; the image was checked against the catalog title \"FNF QT\" before use. Source page: https://www.snokido.com/game/vs-qt",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "4126854b465598031cf6d3ac6a090e4beddd1776f25f6225672b00a57ddb95bd",
+      "visualVerification": "verified 2026-11-27: FNF QT key art with QT and Boyfriend.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -20921,18 +20869,16 @@
         "rhythm"
       ],
       "path": "/games/clfnfsky.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/fnf-mods@6b6680f79ab8c4e8349a920c2a240c5e7ee689ea/sky/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.snokido.com/game/vs-sky",
+      "imagePath": "/artwork/clfnfsky.webp",
+      "identityEvidence": "Found by searching \"FNF Sky game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FNF Sky\" before use. Source page: https://www.snokido.com/game/vs-sky",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "1f7ef0fde11318c7397a69be6ed1bd1ad1dca8319fbcb1b475700020fc1a58b5",
+      "visualVerification": "verified 2026-11-27: FNF vs Sky title art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21140,19 +21086,16 @@
         "puzzle"
       ],
       "path": "/games/clforknsausage.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/youtube-playables@main/fork-n-sausage/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://play.google.com/pc-store/games/details?id=com.kadka.forknsausage",
+      "imagePath": "/artwork/clforknsausage.webp",
+      "identityEvidence": "Found by searching \"Fork n Sausage game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Fork n Sausage\" before use. Source page: https://play.google.com/pc-store/games/details?id=com.kadka.forknsausage",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "probed build asset paths"
-      ],
+      "sha256": "1e15a55ebabf0174b90c64d616053c50cae4661507cf6a177d230de6286f7e82",
+      "visualVerification": "verified 2026-11-27: Fork n Sausage key art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21187,18 +21130,16 @@
         "platformer"
       ],
       "path": "/games/clfpa4p1.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://view.genially.com/60cf6beead54880d4953e876/interactive-content-e-game-fpa-ndegree1-minuteur",
+      "imagePath": "/artwork/clfpa4p1.webp",
+      "identityEvidence": "Found by searching \"FPA 4 P1 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"FPA 4 P1\" before use. Source page: https://view.genially.com/60cf6beead54880d4953e876/interactive-content-e-game-fpa-ndegree1-minuteur",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "cbd73f46e392b7131ec91826a3544f622f67faf986724e56b686c86c9894a737",
+      "visualVerification": "verified 2026-11-27: FPA Game 4 Fun start screen with its menu.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21233,18 +21174,16 @@
         "puzzle"
       ],
       "path": "/games/clfreegemas.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://playminigames.net/game/freegemas",
+      "imagePath": "/artwork/clfreegemas.webp",
+      "identityEvidence": "Found by searching \"Free Gemas game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Free Gemas\" before use. Source page: https://playminigames.net/game/freegemas",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "9fe41477e5807b8176b6e5fde7b0f59e288bf4579563664ab01daefbed9afd33",
+      "visualVerification": "verified 2026-11-27: Free Gemas gameplay board with its HUD.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21279,18 +21218,16 @@
         "simulation"
       ],
       "path": "/games/clfreerider2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.newgrounds.com/portal/view/424015",
+      "imagePath": "/artwork/clfreerider2.webp",
+      "identityEvidence": "Found by searching \"Free Rider 2 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Free Rider 2\" before use. Source page: https://www.newgrounds.com/portal/view/424015",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "f28e28ccc9189a090cb0e078959bebe4ba8488277049e3d4738d23de44eb4900",
+      "visualVerification": "verified 2026-11-27: Free Rider 2 logo art with the rider.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21300,18 +21237,16 @@
         "simulation"
       ],
       "path": "/games/clfreerider3.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://bubblebox.com/free-rider-3",
+      "imagePath": "/artwork/clfreerider3.webp",
+      "identityEvidence": "Found by searching \"Free Rider 3 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Free Rider 3\" before use. Source page: https://bubblebox.com/free-rider-3",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "45b86b7eb3b3522d531dca014b2c37e16acc52509231f8eb1711985246a48bdf",
+      "visualVerification": "verified 2026-11-27: Free Rider 3 menu art; result 1 carried a portal credit.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21321,18 +21256,16 @@
         "rhythm"
       ],
       "path": "/games/clfridaynightfunkin.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.indiegamewebsite.com/2021/04/05/you-should-play-friday-night-funkin/",
+      "imagePath": "/artwork/clfridaynightfunkin.webp",
+      "identityEvidence": "Found by searching \"Friday Night Funkin' game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Friday Night Funkin'\" before use. Source page: https://www.indiegamewebsite.com/2021/04/05/you-should-play-friday-night-funkin/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "2c85c2fb5c2b44405ba679705c7c07c5496448b41d9f2ac9408f380598a89942",
+      "visualVerification": "verified 2026-11-27: Friday Night Funkin' gameplay with Boyfriend, Girlfriend and the chart.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21342,18 +21275,16 @@
         "rhythm"
       ],
       "path": "/games/Friday%20Night%20Funkin.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/fnf0.7.5/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://portal.inmet.gov.br/store/apps/details/?id=jogos-friday-night-funkin",
+      "imagePath": "/artwork/friday-night-funkin.webp",
+      "identityEvidence": "Found by searching \"Friday Night Funkin' game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Friday Night Funkin'\" before use. Source page: https://portal.inmet.gov.br/store/apps/details/?id=jogos-friday-night-funkin",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "3536763cae6e63ad02a7bc3d5d323a8db802f8ad67514af107a14eec26dc3614",
+      "visualVerification": "verified 2026-11-27: Friday Night Funkin' Week 7 title screen.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21363,18 +21294,16 @@
         "arcade"
       ],
       "path": "/games/clfroggerarcade.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.danielleelizabeth.com.au/auction-lot/frogger-tabletop-arcade-game-in-original-box_AB0656F5FA",
+      "imagePath": "/artwork/clfroggerarcade.webp",
+      "identityEvidence": "Found by searching \"Frogger Arcade game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Frogger Arcade\" before use. Source page: https://www.danielleelizabeth.com.au/auction-lot/frogger-tabletop-arcade-game-in-original-box_AB0656F5FA",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "e70f4947cad87ea0c420a1d5cacb766ff52fc41b86be54078fea0e86bfc6dacb",
+      "visualVerification": "verified 2026-11-27: Frogger arcade cabinet and marquee.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21384,18 +21313,16 @@
         "action"
       ],
       "path": "/games/clfromrusttoash.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/MISC/rusttoash/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.lexaloffle.com/bbs/?pid=172855",
+      "imagePath": "/artwork/clfromrusttoash.webp",
+      "identityEvidence": "Found by searching \"From Rust to Ash game\" in Bing Images and taking result 2; the image was checked against the catalog title \"From Rust to Ash\" before use. Source page: https://www.lexaloffle.com/bbs/?pid=172855",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "b3ae7bf188c456a33667db1badeb67d7239519a0fb32b43095d08c89c5577d27",
+      "visualVerification": "verified 2026-11-27: From Rust to Ash PICO-8 cartridge label with the exact title.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21457,18 +21384,16 @@
         "racing"
       ],
       "path": "/games/clfunnymadracing.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/cooldude2349/everything@main/funnyrace/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.snokido.com/game/funny-mad-racing",
+      "imagePath": "/artwork/clfunnymadracing.webp",
+      "identityEvidence": "Found by searching \"Funny Mad Racing game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Funny Mad Racing\" before use. Source page: https://www.snokido.com/game/funny-mad-racing",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "3d1da2b50fc1d1a8543837475483a33db9ce07f6d508c0e4fe47d6ddd5353a25",
+      "visualVerification": "verified 2026-11-27: Funny Mad Racing key art with its truck.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21478,19 +21403,16 @@
         "action"
       ],
       "path": "/games/clfunnyshooter2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/lolshooter2-main/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://globalwizahub.com/funny-shooter-2-game-guide-to-hilarious-combat/",
+      "imagePath": "/artwork/clfunnyshooter2.webp",
+      "identityEvidence": "Found by searching \"Funny Shooter 2 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Funny Shooter 2\" before use. Source page: https://globalwizahub.com/funny-shooter-2-game-guide-to-hilarious-combat/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "probed build asset paths"
-      ],
+      "sha256": "18402900d84aa8d62809e3d9822c2a0ae3baf19f1c20a56fc5f2b91951f85060",
+      "visualVerification": "verified 2026-11-27: Funny Shooter 2 key art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21547,18 +21469,16 @@
         "racing"
       ],
       "path": "/games/clfzero.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://gamerant.com/f-zero-99-february-2025-update-patch-notes/",
+      "imagePath": "/artwork/clfzero.webp",
+      "identityEvidence": "Found by searching \"F-Zero game\" in Bing Images and taking result 2; the image was checked against the catalog title \"F-Zero\" before use. Source page: https://gamerant.com/f-zero-99-february-2025-update-patch-notes/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "1e0154279505b376c18ecedbfb82e781cf65bcad04f4421dd36952c36e203ba4",
+      "visualVerification": "verified 2026-11-27: F-Zero box art with Captain Falcon.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21568,18 +21488,16 @@
         "racing"
       ],
       "path": "/games/clfzerox.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.lukiegames.com/F-Zero-X-Nintendo-64-N64-Game.html",
+      "imagePath": "/artwork/clfzerox.webp",
+      "identityEvidence": "Found by searching \"F-Zero X game\" in Bing Images and taking result 2; the image was checked against the catalog title \"F-Zero X\" before use. Source page: https://www.lukiegames.com/F-Zero-X-Nintendo-64-N64-Game.html",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "6cada266f5cc486dbf6a5aa9de6ba656e6c5cbaef6dc4d6c2bd45ae90225a3e6",
+      "visualVerification": "verified 2026-11-27: F-Zero X box art with the logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21614,18 +21532,16 @@
         "arcade"
       ],
       "path": "/games/clgalaga.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.dreamstime.com/classic-space-game-galaga-being-played-high-score-displayed-screen-arcade-image342620567",
+      "imagePath": "/artwork/clgalaga.webp",
+      "identityEvidence": "Found by searching \"Galaga game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Galaga\" before use. Source page: https://www.dreamstime.com/classic-space-game-galaga-being-played-high-score-displayed-screen-arcade-image342620567",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "6a121826dc32f7f86f45c948ef961e49da4aa37adbd35749d9ebdac510b1bc2c",
+      "visualVerification": "verified 2026-11-27: Galaga arcade gameplay with its title and formation; result 1 carried an Arcade Archives label.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21656,18 +21572,16 @@
         "arcade"
       ],
       "path": "/games/clgamewatchgallery3.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://gamesdb.launchbox-app.com/games/images/8293-game-watch-gallery-3",
+      "imagePath": "/artwork/clgamewatchgallery3.webp",
+      "identityEvidence": "Found by searching \"Game & Watch Gallery 3 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Game & Watch Gallery 3\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/8293-game-watch-gallery-3",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "27216f794a7aabd53910fe8c635686365bc8547b8e20a6f8534fcbf058dce6ff",
+      "visualVerification": "verified 2026-11-27: Game & Watch Gallery 3 box art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21677,18 +21591,16 @@
         "action"
       ],
       "path": "/games/clgangstabean.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://leafworthy.com/games",
+      "imagePath": "/artwork/clgangstabean.webp",
+      "identityEvidence": "Found by searching \"Gangsta Bean game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Gangsta Bean\" before use. Source page: https://leafworthy.com/games",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "1835c10f42cab226946eb4b97d3b331d18f2b96b9ba1131a27f54d64dab3ca0e",
+      "visualVerification": "verified 2026-11-27: Gangsta Bean logo art with its silhouettes.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21698,18 +21610,16 @@
         "action"
       ],
       "path": "/games/clgangstabean2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://browsercraft.com/game/gangsta-bean-2",
+      "imagePath": "/artwork/clgangstabean2.webp",
+      "identityEvidence": "Found by searching \"Gangsta Bean 2 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Gangsta Bean 2\" before use. Source page: https://browsercraft.com/game/gangsta-bean-2",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "990d5039dfe89d1e3b5c30c3644ae22237ce1bb57cebc8070f11c08484649417",
+      "visualVerification": "verified 2026-11-27: Gangsta Bean 2 title art with its menu.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21744,18 +21654,16 @@
         "rhythm"
       ],
       "path": "/games/clgarcello.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/maths@19a7910572966b9604b81bf6e9b85cacacc785ab/garcello/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.fridaynightfunkin.net/fnf-vs-garcello/",
+      "imagePath": "/artwork/clgarcello.webp",
+      "identityEvidence": "Found by searching \"Garcello game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Garcello\" before use. Source page: https://www.fridaynightfunkin.net/fnf-vs-garcello/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "8f034b0de7aa651fe3632f37eb12e9b28707969a5828a5de8cefdc8b5bb02992",
+      "visualVerification": "verified 2026-11-27: FNF vs Garcello key art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21790,18 +21698,16 @@
         "platformer"
       ],
       "path": "/games/clgdwaveover100mb.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://yandex.com/games/app/429406",
+      "imagePath": "/artwork/clgdwaveover100mb.webp",
+      "identityEvidence": "Found by searching \"GD Wave (100MB+) game\" in Bing Images and taking result 2; the image was checked against the catalog title \"GD Wave (100MB+)\" before use. Source page: https://yandex.com/games/app/429406",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "no reachable remote distribution found"
-      ],
+      "sha256": "ee19e77832d836d9108cc9e73362391ba13d0b0273522bd17bd55dce1e766504",
+      "visualVerification": "verified 2026-11-27: Geometry Dash wave gameplay without overlaid captions.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21836,18 +21742,16 @@
         "action"
       ],
       "path": "/games/clgeneralchaos.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://segabits.com/blog/2014/03/30/round-table-our-sega-genesis-memories/",
+      "imagePath": "/artwork/clgeneralchaos.webp",
+      "identityEvidence": "Found by searching \"General Chaos game\" in Bing Images and taking result 1; the image was checked against the catalog title \"General Chaos\" before use. Source page: https://segabits.com/blog/2014/03/30/round-table-our-sega-genesis-memories/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "9e7e816746b96e7f5f7db75d46f5cdcf519732a5a49cc0ab685cdd0106ac86ad",
+      "visualVerification": "verified 2026-11-27: General Chaos box art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21857,18 +21761,16 @@
         "action"
       ],
       "path": "/games/clgenericfightermaybe.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://en.gamespark.jp/article/2026/09/18/75.html",
+      "imagePath": "/artwork/clgenericfightermaybe.webp",
+      "identityEvidence": "Found by searching \"Generic Fighter Maybe game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Generic Fighter Maybe\" before use. Source page: https://en.gamespark.jp/article/2026/09/18/75.html",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "7441eb4860697a0f4884730adf7d7b46de3dfbbafd97d43dc53b3745cf1cd951",
+      "visualVerification": "verified 2026-11-27: Generic Fighter Maybe gameplay with its hit counter; result 3 carried a PLAYTEST badge.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21878,18 +21780,16 @@
         "platformer"
       ],
       "path": "/games/geometrydashlite.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://ixl.com/",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://block-blastonline.com/geometry-dash-lite-3d",
+      "imagePath": "/artwork/geometrydashlite.webp",
+      "identityEvidence": "Found by searching \"Geometry Dash Lite game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Geometry Dash Lite\" before use. Source page: https://block-blastonline.com/geometry-dash-lite-3d",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched ixl.com page metadata"
-      ],
+      "sha256": "7ddbf79ce02bb8bfecd5b71aa00168b582c06490f9ab3b7768ed012dd902b9e7",
+      "visualVerification": "verified 2026-11-27: Geometry Dash Lite app icon.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -21924,18 +21824,16 @@
         "platformer"
       ],
       "path": "/games/clGeometryDashWave.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.spacewavesgame.net/wave-x/",
+      "imagePath": "/artwork/clgeometrydashwave.webp",
+      "identityEvidence": "Found by searching \"Geometry Dash Wave game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Geometry Dash Wave\" before use. Source page: https://www.spacewavesgame.net/wave-x/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "862458012e960eca4c773f56228029bfc7f909d6fda5f3439a7503fbf4d47ef5",
+      "visualVerification": "verified 2026-11-27: Geometry Dash wave level screen with its title.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22067,18 +21965,16 @@
         "action"
       ],
       "path": "/games/clggshinobi.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://alchetron.com/The-G.G.-Shinobi",
+      "imagePath": "/artwork/clggshinobi.webp",
+      "identityEvidence": "Found by searching \"GG Shinobi game\" in Bing Images and taking result 1; the image was checked against the catalog title \"GG Shinobi\" before use. Source page: https://alchetron.com/The-G.G.-Shinobi",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "eab0ec7e847ef92fd7f551c42f8ba4bef46b11409cfca2c350c0ad05626b68d2",
+      "visualVerification": "verified 2026-11-27: Shinobi Game Gear box art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22088,18 +21984,16 @@
         "action"
       ],
       "path": "/games/clggshinobi2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.smspower.org/Games/GGShinobiII-GG",
+      "imagePath": "/artwork/clggshinobi2.webp",
+      "identityEvidence": "Found by searching \"GG Shinobi 2 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"GG Shinobi 2\" before use. Source page: https://www.smspower.org/Games/GGShinobiII-GG",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "ad45bd4f5eee19df39e0a72bf22f059ba71c286bd0dd1552a7b938e2be914f9b",
+      "visualVerification": "verified 2026-11-27: Shinobi II: The Silent Fury box art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22109,18 +22003,16 @@
         "puzzle"
       ],
       "path": "/games/clghosttrick.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.nintendo.com/en-gb/Games/Nintendo-DS/Ghost-Trick-Phantom-Detective-270880.html",
+      "imagePath": "/artwork/clghosttrick.webp",
+      "identityEvidence": "Found by searching \"Ghost Trick game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Ghost Trick\" before use. Source page: https://www.nintendo.com/en-gb/Games/Nintendo-DS/Ghost-Trick-Phantom-Detective-270880.html",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "c2dd68292713172b0cd674c1f9dc22dfce9523cbfec5e956058b954198f0e267",
+      "visualVerification": "verified 2026-11-27: Ghost Trick: Phantom Detective key art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22205,18 +22097,16 @@
         "sports"
       ],
       "path": "/games/clgloryhunters.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.nintendolife.com/games/gameboy/glory_hunters",
+      "imagePath": "/artwork/clgloryhunters.webp",
+      "identityEvidence": "Found by searching \"Glory Hunters game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Glory Hunters\" before use. Source page: https://www.nintendolife.com/games/gameboy/glory_hunters",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "5fb631ff60261dec0d88687057c0cd44efdb3e58efcefd8b26232bcd60ddceec",
+      "visualVerification": "verified 2026-11-27: Glory Hunters box art; results 2 and 3 were box photographs.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22226,18 +22116,16 @@
         "platformer"
       ],
       "path": "/games/clglover.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://strategywiki.org/wiki/Glover",
+      "imagePath": "/artwork/clglover.webp",
+      "identityEvidence": "Found by searching \"Glover game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Glover\" before use. Source page: https://strategywiki.org/wiki/Glover",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "975b930ceb1bf2924b41c7940f0ea3b3706ec294fa7d5c5e00dc67b283193052",
+      "visualVerification": "verified 2026-11-27: Glover N64 box art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22247,18 +22135,16 @@
         "action"
       ],
       "path": "/games/clgooftroopsnes.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "http://gamevn.com/threads/hoi-tuong-nho-game-cu-cau-hinh-yeu.1159422/",
+      "imagePath": "/artwork/clgooftroopsnes.webp",
+      "identityEvidence": "Found by searching \"Goondu Troops (NES) game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Goondu Troops (NES)\" before use. Source page: http://gamevn.com/threads/hoi-tuong-nho-game-cu-cau-hinh-yeu.1159422/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "68bf3092b87fe3474446f57c9efc74950a1fa091e990fe04de2b7d74a79de08b",
+      "visualVerification": "verified 2026-11-27: Goof Troop box art without platform borders.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22393,18 +22279,16 @@
         "action"
       ],
       "path": "/games/clgoldenaxe.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://storage.googleapis.com/dmgmzwixgxmzse/golden-axe-game-sega.html",
+      "imagePath": "/artwork/clgoldenaxe.webp",
+      "identityEvidence": "Found by searching \"Golden Axe game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Golden Axe\" before use. Source page: https://storage.googleapis.com/dmgmzwixgxmzse/golden-axe-game-sega.html",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "8a92a55a86367572afff2607e6a800784b91d93701c15345528672347259a2bd",
+      "visualVerification": "verified 2026-11-27: Golden Axe Genesis box art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22414,18 +22298,16 @@
         "action"
       ],
       "path": "/games/clgoldenaxe2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://classicgamezone.com/games/golden-axe-ii",
+      "imagePath": "/artwork/clgoldenaxe2.webp",
+      "identityEvidence": "Found by searching \"Golden Axe 2 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Golden Axe 2\" before use. Source page: https://classicgamezone.com/games/golden-axe-ii",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "faecf8372d6fe7c1b350df7dfff053ef87a1cbf3e6dc243d3d8e1526bfc35a70",
+      "visualVerification": "verified 2026-11-27: Golden Axe II key art without the platform band.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22435,18 +22317,16 @@
         "action"
       ],
       "path": "/games/clgoldenaxe3.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.ign.com/games/golden-axe-iii",
+      "imagePath": "/artwork/clgoldenaxe3.webp",
+      "identityEvidence": "Found by searching \"Golden Axe 3 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Golden Axe 3\" before use. Source page: https://www.ign.com/games/golden-axe-iii",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "1c171a70df5b926549c46f5d39d15406340d3454ec3d60474523ae460eeb1aa0",
+      "visualVerification": "verified 2026-11-27: Golden Axe III key art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22456,18 +22336,16 @@
         "rpg"
       ],
       "path": "/games/clgoldensun.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.nintendo.com/en-gb/Games/Game-Boy-Advance/Golden-Sun-866531.html",
+      "imagePath": "/artwork/clgoldensun.webp",
+      "identityEvidence": "Found by searching \"Golden Sun game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Golden Sun\" before use. Source page: https://www.nintendo.com/en-gb/Games/Game-Boy-Advance/Golden-Sun-866531.html",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "f735b046b6513cbbbfb3331a42e3dbafcd8c03e64e122bc0ed4241a8c116a42b",
+      "visualVerification": "verified 2026-11-27: Golden Sun key art with its cast.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22477,18 +22355,16 @@
         "rpg"
       ],
       "path": "/games/clgoldensunnds.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.nintendo.com/en-gb/Games/Nintendo-DS/Golden-Sun-Dark-Dawn-270902.html",
+      "imagePath": "/artwork/clgoldensunnds.webp",
+      "identityEvidence": "Found by searching \"Golden Sun NDS game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Golden Sun NDS\" before use. Source page: https://www.nintendo.com/en-gb/Games/Nintendo-DS/Golden-Sun-Dark-Dawn-270902.html",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "fd4ba7186b03951d0129012111ffcd8f2edb2530ab7343267df56abdbccbf2cd",
+      "visualVerification": "verified 2026-11-27: Golden Sun: Dark Dawn key art without the DS spine.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22498,18 +22374,16 @@
         "rpg"
       ],
       "path": "/games/clGoldenSunTheLostAge.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://strategywiki.org/wiki/Golden_Sun:_The_Lost_Age",
+      "imagePath": "/artwork/clgoldensunthelostage.webp",
+      "identityEvidence": "Found by searching \"Golden Sun: The Lost Age game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Golden Sun: The Lost Age\" before use. Source page: https://strategywiki.org/wiki/Golden_Sun:_The_Lost_Age",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "9224ab361350f824d4a989ae86e2cdeb495e2981bbe4146c0f5f8af0b508a039",
+      "visualVerification": "verified 2026-11-27: Golden Sun: The Lost Age box art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22519,18 +22393,16 @@
         "action"
       ],
       "path": "/games/clgoldeneye007.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://rwprd.grain-weizen.de/007-goldeneye-preis-james-bond-goldeneye-ganzer-film/",
+      "imagePath": "/artwork/clgoldeneye007.webp",
+      "identityEvidence": "Found by searching \"GoldenEye 007 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"GoldenEye 007\" before use. Source page: https://rwprd.grain-weizen.de/007-goldeneye-preis-james-bond-goldeneye-ganzer-film/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "5c95f8095f6710743dff114e69ad28cc4af3514efa348f6853db84a987f794f6",
+      "visualVerification": "verified 2026-11-27: GoldenEye 007 N64 gameplay with the title logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22591,18 +22463,16 @@
         "sports"
       ],
       "path": "/games/clgolfsunday.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://gamesdb.launchbox-app.com/games/details/404554-golf-sunday",
+      "imagePath": "/artwork/clgolfsunday.webp",
+      "identityEvidence": "Found by searching \"Golf Sunday game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Golf Sunday\" before use. Source page: https://gamesdb.launchbox-app.com/games/details/404554-golf-sunday",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "288e5617cdcf5d1a68e7b8a0cbc4322a21e741c9306c3e2c3b6119d5b8bc2869",
+      "visualVerification": "verified 2026-11-27: Golf Sunday PICO-8 title art; result 3 was a cartridge photo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22612,18 +22482,16 @@
         "platformer"
       ],
       "path": "/games/clgoodbigtowertinysquare.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://storage.googleapis.com/doqutmglcinxye/big-tower-tiny-square-3-cool-math-games.html",
+      "imagePath": "/artwork/clgoodbigtowertinysquare.webp",
+      "identityEvidence": "Found by searching \"Good Big Tower Tiny Square game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Good Big Tower Tiny Square\" before use. Source page: https://storage.googleapis.com/doqutmglcinxye/big-tower-tiny-square-3-cool-math-games.html",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "9e400aa3d36a2c597812b9e57a51086106635875f275c6a6e678e5637b2afaf3",
+      "visualVerification": "verified 2026-11-27: Big Tower Tiny Square key art on its neon tower.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22633,18 +22501,16 @@
         "platformer"
       ],
       "path": "/games/clgoodbigtowertinysquare2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://store.steampowered.com/app/1920440/Big_Tower_Tiny_Square_2/",
+      "imagePath": "/artwork/clgoodbigtowertinysquare2.webp",
+      "identityEvidence": "Found by searching \"Good Big Tower Tiny Square 2 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Good Big Tower Tiny Square 2\" before use. Source page: https://store.steampowered.com/app/1920440/Big_Tower_Tiny_Square_2/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "231aaf38b38407344c6b37654fd343ddae3dec5f04fc8884c3bd42dc4e842557",
+      "visualVerification": "verified 2026-11-27: Big Tower Tiny Square 2 title art, the blue variant, kept distinct from the main entry.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22654,18 +22520,16 @@
         "adventure"
       ],
       "path": "/games/clgoodboygalaxy.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://store.steampowered.com/app/2705890/Goodboy_Galaxy/",
+      "imagePath": "/artwork/clgoodboygalaxy.webp",
+      "identityEvidence": "Found by searching \"Good Boy Galaxy game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Good Boy Galaxy\" before use. Source page: https://store.steampowered.com/app/2705890/Goodboy_Galaxy/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "5b7523038a7aa30dd1ad5aa1d7a574449e0e57cb27900117cdcae476b94fdfed",
+      "visualVerification": "verified 2026-11-27: Goodboy Galaxy key art with its characters.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22675,18 +22539,16 @@
         "simulation"
       ],
       "path": "/games/clgoodmonkeymart.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.jeuxio.fr/game/monkey-mart/",
+      "imagePath": "/artwork/clgoodmonkeymart.webp",
+      "identityEvidence": "Found by searching \"Good Monkey Mart game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Good Monkey Mart\" before use. Source page: https://www.jeuxio.fr/game/monkey-mart/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "7dec6df7e47cc50bb986fbf6ddaa172de6a28890f6bfeb53ec4396ecd098fdfe",
+      "visualVerification": "verified 2026-11-27: Monkey Mart key art with the logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22721,18 +22583,16 @@
         "action"
       ],
       "path": "/games/clgorescriptclassic.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.youtube.com/watch?v=LNqGdjvhr0I",
+      "imagePath": "/artwork/clgorescriptclassic.webp",
+      "identityEvidence": "Found by searching \"Gore Script Classic game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Gore Script Classic\" before use. Source page: https://www.youtube.com/watch?v=LNqGdjvhr0I",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "0ed6a1de36154a3a7d821a3815a7e473d0a31ea2150c5e3ee7f37303c5cb6502",
+      "visualVerification": "verified 2026-11-27: Gore Script Classic key art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22742,18 +22602,16 @@
         "simulation"
       ],
       "path": "/games/clgorillatag.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/web-ports/gorilla-tag@latest/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://vgtimes.com/games/gorilla-tag/",
+      "imagePath": "/artwork/clgorillatag.webp",
+      "identityEvidence": "Found by searching \"Gorilla Tag game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Gorilla Tag\" before use. Source page: https://vgtimes.com/games/gorilla-tag/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "a8e915afabedb80eeca3eeda54a1379552199de04f71dcd508cfd3b042b251a7",
+      "visualVerification": "verified 2026-11-27: Gorilla Tag key art with its players.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22763,18 +22621,16 @@
         "casual"
       ],
       "path": "/games/clgotobed.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.fortnite.com/@tycoon-n-horror/7331-4378-2382",
+      "imagePath": "/artwork/clgotobed.webp",
+      "identityEvidence": "Found by searching \"Go to Bed game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Go to Bed\" before use. Source page: https://www.fortnite.com/@tycoon-n-horror/7331-4378-2382",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "8da808d309bd5eeade0694e8872fe913be7ac270edd58c557d223dd6228f9c4e",
+      "visualVerification": "verified 2026-11-27: Go to Bed title screen with its lettering.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22784,18 +22640,16 @@
         "adventure"
       ],
       "path": "/games/clgrandescapeprison.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/grand-escape-prison/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://kidygames.com/game/grand-escape-prison/",
+      "imagePath": "/artwork/clgrandescapeprison.webp",
+      "identityEvidence": "Found by searching \"Grand Escape Prison game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Grand Escape Prison\" before use. Source page: https://kidygames.com/game/grand-escape-prison/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "d171967bd5ca49bae0faa8440e770ef16dd18bdc4fa01e70bb6d11bbecdfcc9d",
+      "visualVerification": "verified 2026-11-27: Grand Escape: Prison app icon with the title.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22805,18 +22659,16 @@
         "action"
       ],
       "path": "/games/clgrandtheftautoadvance.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.thegamer.com/game-boy-advance-games-way-ahead-of-time/",
+      "imagePath": "/artwork/clgrandtheftautoadvance.webp",
+      "identityEvidence": "Found by searching \"Grand Theft Auto Advance game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Grand Theft Auto Advance\" before use. Source page: https://www.thegamer.com/game-boy-advance-games-way-ahead-of-time/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "c78b7da08eaaad5b457bd55054a8b0180a7ef2bfa62b0b27a4e38560053e5e6c",
+      "visualVerification": "verified 2026-11-27: Grand Theft Auto Advance GBA box art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22876,18 +22728,16 @@
         "horror"
       ],
       "path": "/games/clgrannyy.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/granny@212c543a85b243c4a0b92211f557e760d83d2292/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://wallpapercave.com/granny-game-wallpapers",
+      "imagePath": "/artwork/clgranny.webp",
+      "identityEvidence": "Found by searching \"Granny game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Granny\" before use. Source page: https://wallpapercave.com/granny-game-wallpapers",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "d050cd2009602c5999d9dac61097f0fb34c9b73de79fd2d2310ea5869c06714c",
+      "visualVerification": "verified 2026-11-27: Granny title screen with its menu.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22897,18 +22747,16 @@
         "horror"
       ],
       "path": "/games/clgranny2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.imdb.com/title/tt12723810/releaseinfo/",
+      "imagePath": "/artwork/clgranny2.webp",
+      "identityEvidence": "Found by searching \"Granny 2 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Granny 2\" before use. Source page: https://www.imdb.com/title/tt12723810/releaseinfo/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "1612584afc69cc775b5b80e543478783066c5e348d43e188d23aaa6db1365535",
+      "visualVerification": "verified 2026-11-27: Granny Chapter Two key art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -22943,19 +22791,16 @@
         "horror"
       ],
       "path": "/games/clgranny3.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@e33a208915bda83b7ba4356e5bb805b7f956336b/granny%203/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://wallpapercave.com/granny-3-wallpapers",
+      "imagePath": "/artwork/clgranny3.webp",
+      "identityEvidence": "Found by searching \"Granny 3 game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Granny 3\" before use. Source page: https://wallpapercave.com/granny-3-wallpapers",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "probed build asset paths"
-      ],
+      "sha256": "4f1ba1ea239e4113779afe5324da8806540e99b2bfa636d36f9a42dd73373616",
+      "visualVerification": "verified 2026-11-27: Granny 3 key art with its three characters.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23012,18 +22857,16 @@
         "horror"
       ],
       "path": "/games/clgrannyy.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/granny@212c543a85b243c4a0b92211f557e760d83d2292/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://refer.reed-agentur.de/granny-granny-horror-game-by-dvloper/",
+      "imagePath": "/artwork/clgrannyy.webp",
+      "identityEvidence": "Found by searching \"Granny Y game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Granny Y\" before use. Source page: https://refer.reed-agentur.de/granny-granny-horror-game-by-dvloper/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "c83763afd2927e2f44352d36cf8ad92c7438e342610b220256aa6aef08c896f9",
+      "visualVerification": "verified 2026-11-27: Granny Horror Game key art with its characters, kept distinct from the Granny entry.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23033,18 +22876,16 @@
         "racing"
       ],
       "path": "/games/clgranturismo.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.portgames.fun/en/games/gran-turismo-5",
+      "imagePath": "/artwork/clgranturismo.webp",
+      "identityEvidence": "Found by searching \"Gran Turismo game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Gran Turismo\" before use. Source page: https://www.portgames.fun/en/games/gran-turismo-5",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "3f6825448b4b5c49cb5d5e2de24530a7f238bbf8b951028c8d7d2206fd497d77",
+      "visualVerification": "verified 2026-11-27: Gran Turismo 5 logo art; the other results were GT6 and GT7.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23054,18 +22895,16 @@
         "racing"
       ],
       "path": "/games/clgranturismo2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://podiumlife.com/racing-game-history-gran-turismo-2-1999/",
+      "imagePath": "/artwork/clgranturismo2.webp",
+      "identityEvidence": "Found by searching \"Gran Turismo 2 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"Gran Turismo 2\" before use. Source page: https://podiumlife.com/racing-game-history-gran-turismo-2-1999/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "9e619a9c47162801f4be2d316edf78e69fb968be853da7f2c9795612ce11c3fc",
+      "visualVerification": "verified 2026-11-27: Gran Turismo 2 logo art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23151,19 +22990,16 @@
         "simulation"
       ],
       "path": "/games/clgreenergrassawaits.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/gzuidhof/coi-serviceworker@latest/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.youtube.com/watch?v=QLEwoqzajQk",
+      "imagePath": "/artwork/clgreenergrassawaits.webp",
+      "identityEvidence": "Found by searching \"Greener Grass Awaits game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Greener Grass Awaits\" before use. Source page: https://www.youtube.com/watch?v=QLEwoqzajQk",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "1b77a1df13ef56b97c90b34493df311c1bf3e5726a2eec4d404aa708a25f5ceb",
+      "visualVerification": "verified 2026-11-27: Greener Grass Awaits title art with its hand and dog.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23198,18 +23034,16 @@
         "arcade"
       ],
       "path": "/games/clgrimacebirthday.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.distractify.com/p/where-to-buy-grimace-birthday-video-game",
+      "imagePath": "/artwork/clgrimacebirthday.webp",
+      "identityEvidence": "Found by searching \"Grimace Birthday game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Grimace Birthday\" before use. Source page: https://www.distractify.com/p/where-to-buy-grimace-birthday-video-game",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "a1a91114da3879dc5b34ac02b7182c41ca804e99ee092944bd92d20417df2117",
+      "visualVerification": "verified 2026-11-27: Grimace's Birthday key art with its characters.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23294,18 +23128,16 @@
         "puzzle"
       ],
       "path": "/games/clgrowdenio.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.hahagames.com/game/growden-io",
+      "imagePath": "/artwork/clgrowdenio.webp",
+      "identityEvidence": "Found by searching \"Growdenio game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Growdenio\" before use. Source page: https://www.hahagames.com/game/growden-io",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "58e717ba74971ebbc8f302255e4e062b842e8853be24c5d2b780afff291bb023",
+      "visualVerification": "verified 2026-11-27: Growden.io logo art with its carrot.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23365,18 +23197,16 @@
         "action"
       ],
       "path": "/games/clgta.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.playstation.com/en-us/games/grand-theft-auto-v/",
+      "imagePath": "/artwork/clgta.webp",
+      "identityEvidence": "Found by searching \"GTA game\" in Bing Images and taking result 2; the image was checked against the catalog title \"GTA\" before use. Source page: https://www.playstation.com/en-us/games/grand-theft-auto-v/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "d5ed4e61197dc7143863f1d28cb954c89c880a557a075592f16fe3acb5279230",
+      "visualVerification": "verified 2026-11-27: Grand Theft Auto V key art grid with the logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23386,18 +23216,16 @@
         "action"
       ],
       "path": "/games/clgta2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://gamepedia.id/urutan-game-gta/",
+      "imagePath": "/artwork/clgta2.webp",
+      "identityEvidence": "Found by searching \"GTA 2 game\" in Bing Images and taking result 3; the image was checked against the catalog title \"GTA 2\" before use. Source page: https://gamepedia.id/urutan-game-gta/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "5a79872be7e88ac5071f51dc73be537d852c66a2532c4eccf1a39cb33522471e",
+      "visualVerification": "verified 2026-11-27: GTA 2 top-down gameplay with the logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23407,18 +23235,16 @@
         "action"
       ],
       "path": "/games/clgta22.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.youtube.com/watch?v=OQdiiFyqYZU",
+      "imagePath": "/artwork/clgta22.webp",
+      "identityEvidence": "Found by searching \"GTA 22 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"GTA 22\" before use. Source page: https://www.youtube.com/watch?v=OQdiiFyqYZU",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "254bf4e27faa9e78d3de9be7b7b1ce40772709a96d9615f615eac989b9a9d803",
+      "visualVerification": "verified 2026-11-27: GTA 22 key art with its masked figure.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23428,18 +23254,16 @@
         "action"
       ],
       "path": "/games/clgtachina.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.indiedb.com/games/grand-theft-auto-chinatown-wars",
+      "imagePath": "/artwork/clgtachina.webp",
+      "identityEvidence": "Found by searching \"GTA China game\" in Bing Images and taking result 2; the image was checked against the catalog title \"GTA China\" before use. Source page: https://www.indiedb.com/games/grand-theft-auto-chinatown-wars",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "96c44ad14038ebdc88028cf408fc93477b726da23d946153767103fcac381c8f",
+      "visualVerification": "verified 2026-11-27: Grand Theft Auto: Chinatown Wars box art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23449,18 +23273,16 @@
         "action"
       ],
       "path": "/games/clgtaalty.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.youtube.com/watch?v=1ZUJ4AHQSSk",
+      "imagePath": "/artwork/clgtaalty.webp",
+      "identityEvidence": "Found by searching \"GTA Alty game\" in Bing Images and taking result 3; the image was checked against the catalog title \"GTA Alty\" before use. Source page: https://www.youtube.com/watch?v=1ZUJ4AHQSSk",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "c8fd5536c70e8eaf4088e4d49c5ae8004b9793fefd12d262c0cda53f5a63bfe4",
+      "visualVerification": "verified 2026-11-27: GTA Vice City gameplay with the logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23470,19 +23292,16 @@
         "action"
       ],
       "path": "/games/clgtamods.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/centerclassroom/mc55@main/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://stealthsos.weebly.com/blog/top-gta-5-mods",
+      "imagePath": "/artwork/clgtamods.webp",
+      "identityEvidence": "Found by searching \"GTA Mods game\" in Bing Images and taking result 3; the image was checked against the catalog title \"GTA Mods\" before use. Source page: https://stealthsos.weebly.com/blog/top-gta-5-mods",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "8220d72ee55a5bf33cea1eb2fa617645f7e3656a4f4db5db56e6b4b4cab03869",
+      "visualVerification": "verified 2026-11-27: GTA V modded vehicles with the logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23542,18 +23361,16 @@
         "action"
       ],
       "path": "/games/clgunknight.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/gun-knight/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://stepford.itch.io/gun-knight",
+      "imagePath": "/artwork/clgunknight.webp",
+      "identityEvidence": "Found by searching \"Gun Knight game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Gun Knight\" before use. Source page: https://stepford.itch.io/gun-knight",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "85cbdec0dbf1fbb6d6eb419b6c72726c62fa9ee33584050d5a7aa044f9e54456",
+      "visualVerification": "verified 2026-11-27: Gun Knight gameplay with its title.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23563,18 +23380,16 @@
         "action"
       ],
       "path": "/games/clgunmayhem.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://slope2-game.com/gun-mayhem",
+      "imagePath": "/artwork/clgunmayhem.webp",
+      "identityEvidence": "Found by searching \"Gun Mayhem game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Gun Mayhem\" before use. Source page: https://slope2-game.com/gun-mayhem",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "ced85395f7f4779627756d94d888c9089d61386557ed4716546bf64b877f2f85",
+      "visualVerification": "verified 2026-11-27: Gun Mayhem key art with its character.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23584,18 +23399,16 @@
         "action"
       ],
       "path": "/games/clgunmayhem2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.mobygames.com/game/195996/gun-mayhem-2-more-mayhem/",
+      "imagePath": "/artwork/clgunmayhem2.webp",
+      "identityEvidence": "Found by searching \"Gun Mayhem 2 game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Gun Mayhem 2\" before use. Source page: https://www.mobygames.com/game/195996/gun-mayhem-2-more-mayhem/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "d0bd76d823b7f6feab6e8390b03cc6e2e6d0f603b696efb9154bb5bc0ad64080",
+      "visualVerification": "verified 2026-11-27: Gun Mayhem 2 gameplay with its title and players.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23605,18 +23418,16 @@
         "action"
       ],
       "path": "/games/clgunmayhem2goof.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://hydrovolter.com/gg/",
+      "imagePath": "/artwork/clgunmayhem2goof.webp",
+      "identityEvidence": "Found by searching \"Gun Mayhem 2 Goof game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Gun Mayhem 2 Goof\" before use. Source page: https://hydrovolter.com/gg/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "8715154470fdcba9ee0d440e4ef5fd0f3dd37e7113822c0f2fd2c56ed4ee057e",
+      "visualVerification": "verified 2026-11-27: Gun Mayhem 2 bot-fight gameplay, kept distinct from the main entry's art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23626,18 +23437,16 @@
         "action"
       ],
       "path": "/games/clgunmayhemredux.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/Hollow1109/Gun-Mayhem-Redux@bf3a170839d90148930ecddd7c47c617f5a84efd/",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.crazygamesonline.com/blog/experience-exciting-battles-in-gun-mayhem-redux-unblocked-today",
+      "imagePath": "/artwork/clgunmayhemredux.webp",
+      "identityEvidence": "Found by searching \"Gun Mayhem Redux game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Gun Mayhem Redux\" before use. Source page: https://www.crazygamesonline.com/blog/experience-exciting-battles-in-gun-mayhem-redux-unblocked-today",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "sha256": "c3412f2ad74e11001b91b4e34cd32a23e2503d849f0bf1772a176fd380fdf810",
+      "visualVerification": "verified 2026-11-27: Gun Mayhem Redux key art with its two gunmen.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23698,18 +23507,16 @@
         "action"
       ],
       "path": "/games/clgunstarheroes.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.imdb.com/title/tt0489066/mediaviewer/rm2782543617/",
+      "imagePath": "/artwork/clgunstarheroes.webp",
+      "identityEvidence": "Found by searching \"Gunstar Heroes game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Gunstar Heroes\" before use. Source page: https://www.imdb.com/title/tt0489066/mediaviewer/rm2782543617/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "aa7f060edae7dfbd343f11c7907bdb11804f1d50e068248ee7b8c305bee9cfa6",
+      "visualVerification": "verified 2026-11-27: Gunstar Heroes box art without the spine.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23744,18 +23551,16 @@
         "action"
       ],
       "path": "/games/clgunfighterjessejames.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.gamersgoretro.com/products/gunfighter-the-legend-of-jesse-james-playstation-1-ps1",
+      "imagePath": "/artwork/clgunfighterjessejames.webp",
+      "identityEvidence": "Found by searching \"Gunfighter Jesse James game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Gunfighter Jesse James\" before use. Source page: https://www.gamersgoretro.com/products/gunfighter-the-legend-of-jesse-james-playstation-1-ps1",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "4604dbb05de195a31bbfccbffd1c828bb06d97caed6cdad1307d645f0587e0ab",
+      "visualVerification": "verified 2026-11-27: Gunfighter: The Legend of Jesse James box art.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23765,18 +23570,16 @@
         "action"
       ],
       "path": "/games/clgunsmoke.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://retrokings.nl/nes-gun-smoke/",
+      "imagePath": "/artwork/clgunsmoke.webp",
+      "identityEvidence": "Found by searching \"Gunsmoke game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Gunsmoke\" before use. Source page: https://retrokings.nl/nes-gun-smoke/",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "247b7b7c1793fff2c3c9dd1fa4b0cd85d33bc39c873501f2555b99082d872fc7",
+      "visualVerification": "verified 2026-11-27: Gun.Smoke title screen with its logo.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23786,18 +23589,16 @@
         "simulation"
       ],
       "path": "/games/clGXclient.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://www.opera.com/vi/gx",
+      "imagePath": "/artwork/clGXclient.webp",
+      "identityEvidence": "Found by searching \"GX Client game\" in Bing Images and taking result 2; the image was checked against the catalog title \"GX Client\" before use. Source page: https://www.opera.com/vi/gx",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "no reachable remote distribution found"
-      ],
+      "sha256": "b3a793a17b0f569e1947cf8496e2d0cd68fa363423cdce27a5278b4e455358c9",
+      "visualVerification": "verified 2026-11-27: GX Corner client interface.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23832,18 +23633,16 @@
         "puzzle"
       ],
       "path": "/games/clgyromite.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "http://www.ign.com/games/gyromite/nes-7163",
+      "imagePath": "/artwork/clgyromite.webp",
+      "identityEvidence": "Found by searching \"Gyromite game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Gyromite\" before use. Source page: http://www.ign.com/games/gyromite/nes-7163",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "7f292ef8052caaaf996329e8f299e81ab48c32ba8d020bc9bd9a2d23a1306296",
+      "visualVerification": "verified 2026-11-27: Gyromite box art with R.O.B.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -23878,18 +23677,16 @@
         "sports"
       ],
       "path": "/games/clhajimeippo.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://gamesdb.launchbox-app.com/games/images/101044-hajime-no-ippo-the-fighting",
+      "imagePath": "/artwork/clhajimeippo.webp",
+      "identityEvidence": "Found by searching \"Hajime no Ippo game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Hajime no Ippo\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/101044-hajime-no-ippo-the-fighting",
+      "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "sha256": "149b00c10949eb2a891e381840175fa3e66abaeac0b8ad5f03c2e9ab51dd4380",
+      "visualVerification": "verified 2026-11-27: Hajime no Ippo gameplay in the ring.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {

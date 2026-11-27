@@ -15,24 +15,24 @@ Identity evidence and reuse basis are recorded separately on every record. Captu
 | Measure | Count |
 | --- | --- |
 | Catalog rows (unique IDs) | 2,710 |
-| Verified artwork | 1,538 |
+| Verified artwork | 1,635 |
 | Awaiting review | 0 |
-| Rejected (removed from the UI, queued for a new capture) | 65 |
+| Rejected (removed from the UI, queued for a new capture) | 42 |
 | Blocked | 0 |
 | Reopened after the blocked classification was rejected | 1,676 |
 | Render investigations from the earlier long-observation pass (that protocol was cancelled) | 590 |
 | ... that rendered an authentic frame | 551 |
 | ... that stopped at their own start gate | 6 |
 | ... that stayed blank for the whole observation | 26 |
-| Remaining unprocessed | 1,172 |
-| Actual verified coverage | 56.8% |
-| Total optimized asset size (verified images) | 35882 KiB |
+| Remaining unprocessed | 1,075 |
+| Actual verified coverage | 60.3% |
+| Total optimized asset size (verified images) | 39018 KiB |
 
 ## Verified artwork by acquisition method
 
 | Method | Count |
 | --- | --- |
-| game-asset | 477 |
+| game-asset | 574 |
 | gameplay-screenshot | 962 |
 | official-icon | 72 |
 | official-og | 27 |
@@ -45,18 +45,18 @@ The pre-existing set was audited rather than trusted. 35 of 73 records were reje
 
 Rejection reasons recorded:
 
-- 8x Every qualifying frame carried the mod's flashing-lights warning dialog, which is not acceptable artwork.
-- 4x The frame shows only the shared Friday Night Funkin base logo, which does not identify this specific mod.
-- 4x The frame is a publisher or engine splash, not the game's own screen.
-- 3x Still a loading screen when the 15-second window ended.
 - 2x Frames showed only instructions or copyright text, not a title screen or recognizable gameplay.
 - 2x Every qualifying frame was an error page ("Something went wrong"), which is never acceptable artwork.
-- 2x The frame is an empty background with no legible title or gameplay.
 - 1x Captured frame is a third-party portal loading screen, not the game.
 - 1x Captured frame is the generic "Made with Unity" splash.
 - 1x Captured frame shows developer credits and loading text, not the game title screen.
 - 1x Loading screen.
 - 1x Captured frame is a generic resolution selector with no identifying game content.
+- 1x Error page ("Something went wrong").
+- 1x Shows a GameTop.com portal logo, not the game.
+- 1x Shows artwork for a different game (The Elder Scrolls: Blades).
+- 1x Shows a Discord attachment page, not the game.
+- 1x Shows a game-portal homepage, not the game.
 
 ## Service card artwork
 
@@ -81,10 +81,10 @@ No entry is left in a blocked state: the whole 1,676-entry blocked manifest was 
 
 ## Remaining work
 
-The next unprocessed batch starts at `clGXclient`:
+The next unprocessed batch starts at `cladarkroom`:
 
 ```
-clGXclient,cladarkroom,claftertheweek,clai,clalienhominidgba,claltered-beast,clanemonesfall,clasdutydemands,clb3313v102,clbejeweledtwistds,clbejeweledtwistflash,clbfdibranches,clblackout,clbloonspp3,clbloonstd2,clbloonstd6scratch,clbmx2,clboxinglive2,clburritobison2,clchoroqwonderful,clclover,clcotlk,clcreepyinternetstories,clcvooc,cldonkeykong,cldoomps,cleaglercraftshadow,clenduro,clfactoryballs,clfactoryballs2,clfactoryballs3,clfactoryballs4,clfairytalevsonepiece,clfallout,clfamilyguycorrupted,clff2ws,clff3,clffaf,clfinalfantasy,clfinalfantasyviid2,clfinalfantasyviid3,clfireemblem,clfnfasdf,clfnfchara,clfnfcory,clfnfdocumic-txtv3,clfnfholiday,clfnfhotline,clfnfimposter3,clfnfironlung
+cladarkroom,claftertheweek,clai,clalienhominidgba,claltered-beast,clanemonesfall,clasdutydemands,clb3313v102,clbejeweledtwistds,clbejeweledtwistflash,clbfdibranches,clblackout,clbloonspp3,clbloonstd2,clbloonstd6scratch,clbmx2,clboxinglive2,clburritobison2,clchoroqwonderful,clclover,clcotlk,clcreepyinternetstories,clcvooc,cldonkeykong,cldoomps,cleaglercraftshadow,clenduro,clfactoryballs,clfactoryballs2,clfactoryballs3,clfactoryballs4,clfairytalevsonepiece,clfallout,clfamilyguycorrupted,clff2ws,clff3,clffaf,clfinalfantasy,clfinalfantasyviid2,clfinalfantasyviid3,clfireemblem,clfocus,clfuschiax,clgameandwatchcollection,clgrannycreepy,clgxclient,clhajimenoippo,clhalocombatdevolved,clhandshakes,clhandsofwar--1
 ```
 
 Resume commands:

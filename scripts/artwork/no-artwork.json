@@ -82,5 +82,17 @@
   "clfireemblem": {
     "reason": "Results were later Fire Emblem titles (Fortune's Weave, Engage); none represents this generic entry.",
     "recorded": "2026-11-27"
+  },
+  "clfocus": {
+    "reason": "Results were physical card and board games (The FOCUS Game, OldCap Focus), not the game this entry serves.",
+    "recorded": "2026-11-27"
+  },
+  "clgameandwatchcollection": {
+    "reason": "Results were photographs of Game & Watch hardware, not the DS collection this entry serves.",
+    "recorded": "2026-11-27"
+  },
+  "clgrannycreepy": {
+    "reason": "Results were the retail Granny titles, not artwork for this mod; using them would mislabel the card.",
+    "recorded": "2026-11-27"
   }
 }
