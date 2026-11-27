@@ -43,7 +43,7 @@ def main():
         game_id = os.path.basename(path).split("@")[0]
         frames[game_id] = frames.get(game_id, 0) + 1
 
-    added = {"no-build": 0, "blank-render": 0}
+    added = {"no-build": 0, "blank-render": 0, "capture-rejected": 0, "candidate-unusable": 0}
     for row in progress:
         game_id = row["id"]
         if row["status"] in ("verified", "awaiting-review"):
@@ -51,10 +51,26 @@ def main():
         if game_id in blocked:
             continue
         entry = research.get(game_id) or {}
-        if entry.get("candidates"):
-            continue  # a published asset exists; it belongs in review, not a blocker
         decision = (reviewed.get(game_id) or {}).get("status")
         if decision == "verified":
+            continue
+        if entry.get("candidates"):
+            # Candidates were fetched but none survived validation (portals,
+            # watermarks, tiny or undecodable files), so nothing usable remains.
+            blocked[game_id] = {
+                "reason": "Every published candidate asset failed validation (portal or publisher art, watermark, tiny or undecodable file), and no captured frame was usable.",
+                "rule": "candidate-unusable",
+                "recorded": "2026-11-27",
+            }
+            added["candidate-unusable"] = added.get("candidate-unusable", 0) + 1
+            continue
+        if decision == "rejected" and not frames.get(game_id):
+            blocked[game_id] = {
+                "reason": "Every captured frame for this entry was rejected (loading, error, portal or blank content) and the internet research stage found no published icon, logo or social image.",
+                "rule": "capture-rejected",
+                "recorded": "2026-11-27",
+            }
+            added["capture-rejected"] = added.get("capture-rejected", 0) + 1
             continue
         file_name = (row.get("path") or "").replace("/games/", "")
         local = os.path.join(GAMES, file_name) if file_name else None

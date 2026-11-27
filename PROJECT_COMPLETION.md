@@ -4,6 +4,20 @@ Track: project development.
 
 Specification: Geegle-final-prompt-7-percent-stop.md, supplied 2026-11-25. Continue PR #2 on `feature/platform-overhaul`; never merge without approval, purchase credits, or modify unrelated production data. Statuses: NOT STARTED, IN PROGRESS, IMPLEMENTED BUT UNVERIFIED, IMPLEMENTED AND VERIFIED, TEMPORARILY BLOCKED, EXTERNALLY BLOCKED. The checklist records work remaining, not claims of overall completion.
 
+## Current artwork status (2026-11-27, supersedes the artwork counts below)
+
+| Measure | Count |
+| --- | --- |
+| Catalog rows (unique IDs) | 2,710 |
+| Verified artwork | 1,036 (38.2%) |
+| Awaiting visual review | 0 |
+| Unprocessed | 0 |
+| Blocked with a recorded reason | 1,674 |
+
+Blockers by rule: `blank-render` 1,146 (the served wrapper rendered only blank, loading or portal content in every captured frame), `capture-rejected` 387 (every frame rejected during visual review), `candidate-unusable` 108 (published candidates failed validation), `no-build` 35 (no local build and no published asset). Every one of the 2,710 entries is therefore either verified or blocked for a stated, re-checkable reason; artwork coverage is **38.2%**, not 100%.
+
+Machine-readable state lives in `scripts/artwork/progress.json`, `captured.json`, `review.json` and `blocked.json`; `docs/ARTWORK_COMPLETION_REPORT.md` is regenerated from them by `scripts/artwork/report.py`. The artwork counts in the sections below are earlier snapshots.
+
 ## Work queue
 
 | Requirement / task | Status | Files / evidence | Next action |
@@ -177,7 +191,7 @@ here because it is a dashboard setting, not a code change.
 - Coverage table vs catalog: 2830 + 26 oversize + 63 cross-origin only describes
   wrapper files, not catalog entries, which is why its totals differ from 2621.
 
-### 6. Artwork
+### 6. Artwork (superseded by "Current artwork status" at the top)
 `scripts/artwork/captured.json` holds **73 authentic assets + 30 screenshots =
 103 records**, and every referenced file exists with non-zero size (110 files in
 `public/artwork`, 11 of them under 1 KB — small but valid 40–500 px thumbnails).

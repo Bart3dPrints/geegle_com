@@ -15,20 +15,20 @@ Identity evidence and reuse basis are recorded separately on every record. Captu
 | Measure | Count |
 | --- | --- |
 | Catalog rows (unique IDs) | 2,710 |
-| Verified artwork | 452 |
-| Awaiting review | 83 |
-| Rejected (removed from the UI, queued for a new capture) | 268 |
-| Blocked | 0 |
-| Remaining unprocessed | 2,175 |
-| Actual verified coverage | 16.7% |
-| Total optimized asset size (verified images) | 8607 KiB |
+| Verified artwork | 1,036 |
+| Awaiting review | 0 |
+| Rejected (removed from the UI, queued for a new capture) | 582 |
+| Blocked | 1,674 |
+| Remaining unprocessed | 0 |
+| Actual verified coverage | 38.2% |
+| Total optimized asset size (verified images) | 20947 KiB |
 
 ## Verified artwork by acquisition method
 
 | Method | Count |
 | --- | --- |
 | game-asset | 35 |
-| gameplay-screenshot | 316 |
+| gameplay-screenshot | 900 |
 | official-icon | 75 |
 | official-og | 26 |
 
@@ -40,18 +40,18 @@ The pre-existing set was audited rather than trusted. 35 of 73 records were reje
 
 Rejection reasons recorded:
 
+- 101x Loading screen, not rendered gameplay.
 - 26x Identical file shared with unrelated catalog entries; not this title's artwork.
+- 22x Error page, not the game artwork.
 - 21x Loading screen.
-- 18x Loading screen, not rendered gameplay.
+- 18x Near-black frame with no identifiable game content.
+- 15x Store promo banner for a different title, not this game.
+- 13x Default engine menu shared across mods.
+- 13x Engine splash, not the mod artwork.
+- 10x Generic tip overlay shared across titles.
 - 8x Error page ("Something went wrong").
 - 8x Portal splash, not the game.
 - 8x Options menu, not a title screen or gameplay.
-- 4x Portal logo (Two Player Games), not the game.
-- 4x Identical Bloons wordmark shared with other Bloons entries; not this installment's own art.
-- 3x Watermarked generic sketch, not this title's artwork.
-- 3x Portal logo (Unblocked Games G+), not the game.
-- 3x Emulator loading screen.
-- 3x Blank capture with no game content.
 
 ## Blocked
 
@@ -60,20 +60,7 @@ Rejection reasons recorded:
 
 ## Remaining work
 
-The next unprocessed batch starts at `bank-robbery`:
-
-```
-bank-robbery,bowmasters,cl100in1nes,cl100roomsofenemies,cl10bullets,cl10morebullets,cl10yardfight,cl13bones,cl1942nes,cl234playergame,cl3dash,cl3dasheditor,cl3slices2,cl40xescape,cl500calibercontractz,cl60secondssantarun,cl64in1nes,cl8ballpool,cl99nightsitf,clAltered Beast,clBMX2,clFF3,clFNAF,clFNAF2,clFNAF3,clFNAF4,clGXclient,cla-walk-in-the-forest--v1-0,clabandoned3,clacecombat2,clacecombat3,clacegangstertaxi,clachievementunlocked,clachillies2,clacko_s-mach-bike-challenge--v1-0,cladarkroom,cladatewithdeath,cladayintheoffice,cladofai,cladvancewars,cladvancewars2,cladvancewarsdualstrike,claftertheweek,clageofwar,clagesofempire,clai,clakumanorgaiden,claladdinsnes,clalexkiddinmiracleworld,clalienhominid
-```
-
-Resume commands:
-
-```sh
-node scripts/artwork/capture-screens.mjs --out /tmp/artshots-large --concurrency 3
-python3 scripts/artwork/process-shots.py --staging /tmp/artshots-large
-python3 scripts/artwork/audit-artwork.py
-python3 scripts/artwork/build-progress.py
-```
+No catalog entry remains unprocessed.
 
 ## Honest limitations
 

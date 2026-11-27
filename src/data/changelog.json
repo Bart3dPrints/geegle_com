@@ -2,6 +2,11 @@
   "source": "github:Bart3dPrints/geegle_com",
   "entries": [
     {
+      "pr": 12,
+      "mergedAt": "2026-11-27T01:37:13Z",
+      "summary": "More game cards now show artwork researched from each game's own published icon, logo or screenshot before any capture was attempted."
+    },
+    {
       "pr": 11,
       "mergedAt": "2026-11-27T00:07:23Z",
       "summary": "Game cards now show real artwork taken from the games themselves, so far more titles are recognisable instead of showing a placeholder."
