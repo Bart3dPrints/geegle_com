@@ -2,6 +2,11 @@
   "source": "github:Bart3dPrints/geegle_com",
   "entries": [
     {
+      "pr": 10,
+      "mergedAt": "2026-11-26T22:39:38Z",
+      "summary": "The original game catalogue is restored, missing series play again, and guest reminders can now be turned off permanently."
+    },
+    {
       "pr": 9,
       "mergedAt": "2026-11-26T21:08:39Z",
       "summary": "Remove the cloud-save overlay, add a Settings changelog, guest reminder and password visibility"
