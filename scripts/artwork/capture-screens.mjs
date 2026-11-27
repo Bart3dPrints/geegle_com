@@ -90,12 +90,20 @@ async function framesFor(row) {
   try {
     await page.goto(BASE + row.path, { waitUntil: 'load', timeout: 20000 });
     await page.waitForTimeout(waitFirst);
-    // Dismiss content warnings and "press any key" gates before the first frame.
-    for (const key of ['Escape', 'Enter', 'Space']) {
-      await page.keyboard.press(key).catch(() => {});
-      await page.waitForTimeout(800);
-    }
+    // Focus the game area so key presses reach the embedded player.
+    await page.mouse.click(640, 360).catch(() => {});
+    await page.waitForTimeout(1200);
     frames.push(await page.screenshot({ type: 'png' }));
+    // Games chain several gates (flash warning, engine splash, "not associated
+    // with" disclaimer), so dismiss repeatedly and keep a frame from each stage.
+    for (let round = 0; round < 4; round += 1) {
+      for (const key of ['Enter', 'Escape', 'Space']) {
+        await page.keyboard.press(key).catch(() => {});
+        await page.waitForTimeout(600);
+      }
+      await page.waitForTimeout(1500);
+      frames.push(await page.screenshot({ type: 'png' }));
+    }
     // Many games gate the title behind an explicit play/start control.
     for (const selector of ['button:has-text("PLAY")', 'button:has-text("Play")', 'text=PLAY', 'text=Play', 'text=START']) {
       const control = page.locator(selector).first();

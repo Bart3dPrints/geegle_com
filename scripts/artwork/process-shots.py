@@ -247,13 +247,23 @@ def main():
             report["rejected"].append({"id": game_id, "reason": "shared-frame"})
             continue
         known_hashes.add(digest)
-        out = os.path.join(ARTWORK, f"{game_id}.webp")
+        # Case-insensitive filesystems make id.webp collide when two catalog IDs
+        # differ only by case; give the second one its own file.
+        name = f"{game_id}.webp"
+        claimed = {
+            record.get("url")
+            for other, record in records["screens"].items()
+            if other != game_id
+        }
+        if f"/artwork/{name}" in claimed and os.path.exists(os.path.join(ARTWORK, name)):
+            name = f"{game_id}-{digest[:8]}.webp"
+        out = os.path.join(ARTWORK, name)
         if not args.dry_run:
             with open(out, "wb") as handle:
                 handle.write(data)
             records["screens"][game_id] = {
                 "title": titles.get(game_id, game_id),
-                "url": f"/artwork/{game_id}.webp",
+                "url": f"/artwork/{name}",
                 "source": f"{REPO}/public/games/{game_id}.html",
                 "type": "gameplay-screenshot",
                 "identityEvidence": (

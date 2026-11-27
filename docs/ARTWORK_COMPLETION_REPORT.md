@@ -15,20 +15,25 @@ Identity evidence and reuse basis are recorded separately on every record. Captu
 | Measure | Count |
 | --- | --- |
 | Catalog rows (unique IDs) | 2,710 |
-| Verified artwork | 452 |
-| Awaiting review | 83 |
-| Rejected (removed from the UI, queued for a new capture) | 268 |
+| Verified artwork | 1,038 |
+| Awaiting review | 0 |
+| Rejected (removed from the UI, queued for a new capture) | 13 |
 | Blocked | 0 |
-| Remaining unprocessed | 2,175 |
-| Actual verified coverage | 16.7% |
-| Total optimized asset size (verified images) | 8607 KiB |
+| Reopened after the blocked classification was rejected | 1,676 |
+| Ten-minute render investigations completed | 10 |
+| ... that rendered an authentic frame | 5 |
+| ... that stopped at their own start gate | 2 |
+| ... that stayed blank for the whole observation | 3 |
+| Remaining unprocessed | 1,672 |
+| Actual verified coverage | 38.3% |
+| Total optimized asset size (verified images) | 20991 KiB |
 
 ## Verified artwork by acquisition method
 
 | Method | Count |
 | --- | --- |
 | game-asset | 35 |
-| gameplay-screenshot | 316 |
+| gameplay-screenshot | 902 |
 | official-icon | 75 |
 | official-og | 26 |
 
@@ -40,30 +45,44 @@ The pre-existing set was audited rather than trusted. 35 of 73 records were reje
 
 Rejection reasons recorded:
 
-- 26x Identical file shared with unrelated catalog entries; not this title's artwork.
-- 21x Loading screen.
-- 18x Loading screen, not rendered gameplay.
-- 8x Error page ("Something went wrong").
-- 8x Portal splash, not the game.
-- 8x Options menu, not a title screen or gameplay.
-- 4x Portal logo (Two Player Games), not the game.
-- 4x Identical Bloons wordmark shared with other Bloons entries; not this installment's own art.
-- 3x Watermarked generic sketch, not this title's artwork.
-- 3x Portal logo (Unblocked Games G+), not the game.
-- 3x Emulator loading screen.
-- 3x Blank capture with no game content.
+- 1x Every frame in the ten-minute observation carried an in-game tutorial overlay (purple panel with OK) covering the play area; an overlay is not acceptable artwork.
+- 1x The only rendered frame is the portal's own game grid with a TwoPlayerGames banner and a 'quality setting' attention dialog; portal chrome and settings prompts are not acceptable artwork.
+- 1x Captured frame is a third-party portal loading screen, not the game.
+- 1x Captured frame is the generic "Made with Unity" splash.
+- 1x Captured frame shows developer credits and loading text, not the game title screen.
+- 1x Loading screen.
+- 1x Captured frame is a generic resolution selector with no identifying game content.
+- 1x Error page ("Something went wrong").
+- 1x Shows a GameTop.com portal logo, not the game.
+- 1x Shows artwork for a different game (The Elder Scrolls: Blades).
+- 1x Shows a Discord attachment page, not the game.
+- 1x Shows a game-portal homepage, not the game.
+
+## Service card artwork
+
+The owner-supplied screenshots are converted to WebP and shown on the matching cards from `src/data/serviceArtwork.ts`; a card without a supplied screenshot keeps its text-only layout rather than borrowing another service's image.
+
+| Card | Image |
+| --- | --- |
+| Helios Proxy | `/artwork/services/helios.webp` |
+| Arctic Proxy | `/artwork/services/arctic.webp` |
+| Cherry Proxy | `/artwork/services/cherry.webp` |
+| Achroma Proxy | `/artwork/services/achroma.webp` |
+| Bull-33 | `/artwork/services/bull-33.webp` |
+
+Unassigned, deliberately: `xylora.webp` (the owner's Xylora screenshot, with no Xylora endpoint anywhere in the repository to attach it to) and `unidentified-dark-blue.webp` (a clock-and-icons desktop with no branding, so assigning it to a named service would be a guess). Astra Proxy was removed from the catalog and its search results; its Bull-33 endpoints moved to the Bull-33 card instead of being relabelled.
 
 ## Blocked
 
-- **Service card artwork (Helios, Arctic, Cherri, Achroma, Xylora, Bull-33, and the unidentified dark-blue desktop service):** the owner-supplied screenshots named in the assignment are not present in the workspace or the conversation attachments, so they cannot be cropped without inventing artwork. Nothing was assigned. No proxy card layout or endpoint was changed. Provide the seven PNGs to complete this item.
-- Titles whose build renders nothing capturable (dead embed, blocked CDN, authentication wall) stay `not-started` rather than receiving a placeholder.
+No entry is left in a blocked state: the whole 1,676-entry blocked manifest was reopened, and each entry now carries a rendering investigation instead of a permanent label.
+- Titles whose build renders nothing capturable stay `not-started` rather than receiving a placeholder, and are only removed from the catalog once the full observation protocol is complete for them (see `docs/NONFUNCTIONAL_GAME_REMOVALS.md`).
 
 ## Remaining work
 
 The next unprocessed batch starts at `bank-robbery`:
 
 ```
-bank-robbery,bowmasters,cl100in1nes,cl100roomsofenemies,cl10bullets,cl10morebullets,cl10yardfight,cl13bones,cl1942nes,cl234playergame,cl3dash,cl3dasheditor,cl3slices2,cl40xescape,cl500calibercontractz,cl60secondssantarun,cl64in1nes,cl8ballpool,cl99nightsitf,clAltered Beast,clBMX2,clFF3,clFNAF,clFNAF2,clFNAF3,clFNAF4,clGXclient,cla-walk-in-the-forest--v1-0,clabandoned3,clacecombat2,clacecombat3,clacegangstertaxi,clachievementunlocked,clachillies2,clacko_s-mach-bike-challenge--v1-0,cladarkroom,cladatewithdeath,cladayintheoffice,cladofai,cladvancewars,cladvancewars2,cladvancewarsdualstrike,claftertheweek,clageofwar,clagesofempire,clai,clakumanorgaiden,claladdinsnes,clalexkiddinmiracleworld,clalienhominid
+bank-robbery,bowmasters,cl100in1nes,cl100roomsofenemies,cl10yardfight,cl13bones,cl1942nes,cl234playergame,cl3dash,cl3dasheditor,cl3slices2,cl40xescape,cl500calibercontractz,cl60secondssantarun,cl64in1nes,cl8ballpool,cl99nightsitf,clAltered Beast,clBMX2,clFF3,clFNAF,clFNAF2,clFNAF3,clFNAF4,clGXclient,cla-walk-in-the-forest--v1-0,clabandoned3,clacecombat2,clacecombat3,clacegangstertaxi,clachievementunlocked,clachillies2,clacko_s-mach-bike-challenge--v1-0,cladarkroom,cladatewithdeath,cladayintheoffice,cladvancewars,cladvancewars2,cladvancewarsdualstrike,claftertheweek,clageofwar,clagesofempire,clai,clakumanorgaiden,claladdinsnes,clalexkiddinmiracleworld,clalienhominid,clalienhominidgba,clalientransporter,clalienvspredator
 ```
 
 Resume commands:

@@ -4,6 +4,20 @@ Track: project development.
 
 Specification: Geegle-final-prompt-7-percent-stop.md, supplied 2026-11-25. Continue PR #2 on `feature/platform-overhaul`; never merge without approval, purchase credits, or modify unrelated production data. Statuses: NOT STARTED, IN PROGRESS, IMPLEMENTED BUT UNVERIFIED, IMPLEMENTED AND VERIFIED, TEMPORARILY BLOCKED, EXTERNALLY BLOCKED. The checklist records work remaining, not claims of overall completion.
 
+## Current artwork status (2026-11-27, supersedes the artwork counts below)
+
+| Measure | Count |
+| --- | --- |
+| Catalog rows (unique IDs) | 2,710 |
+| Verified artwork | 1,036 (38.2%) |
+| Awaiting visual review | 0 |
+| Unprocessed | 0 |
+| Blocked with a recorded reason | 1,674 |
+
+Blockers by rule: `blank-render` 1,146 (the served wrapper rendered only blank, loading or portal content in every captured frame), `capture-rejected` 387 (every frame rejected during visual review), `candidate-unusable` 108 (published candidates failed validation), `no-build` 35 (no local build and no published asset). Every one of the 2,710 entries is therefore either verified or blocked for a stated, re-checkable reason; artwork coverage is **38.2%**, not 100%.
+
+Machine-readable state lives in `scripts/artwork/progress.json`, `captured.json`, `review.json` and `blocked.json`; `docs/ARTWORK_COMPLETION_REPORT.md` is regenerated from them by `scripts/artwork/report.py`. The artwork counts in the sections below are earlier snapshots.
+
 ## Work queue
 
 | Requirement / task | Status | Files / evidence | Next action |
@@ -177,7 +191,7 @@ here because it is a dashboard setting, not a code change.
 - Coverage table vs catalog: 2830 + 26 oversize + 63 cross-origin only describes
   wrapper files, not catalog entries, which is why its totals differ from 2621.
 
-### 6. Artwork
+### 6. Artwork (superseded by "Current artwork status" at the top)
 `scripts/artwork/captured.json` holds **73 authentic assets + 30 screenshots =
 103 records**, and every referenced file exists with non-zero size (110 files in
 `public/artwork`, 11 of them under 1 KB — small but valid 40–500 px thumbnails).
@@ -909,3 +923,54 @@ after the play/content-warning gates were passed.
   `docs/ARTWORK_COMPLETION_REPORT.md`.
 - The seven service screenshots are still absent from the workspace, so no
   service card artwork was invented or reassigned.
+
+## Artwork completion, phase 3 — reopening the blocked entries
+
+The owner rejected the previous "blocked" result, so the whole 1,676-entry
+blocked manifest was reopened rather than treated as finished. Its old rule and
+reason are preserved per entry in `scripts/artwork/reopened.json`, `blocked.json`
+is empty, and the capture-based `rejected` decisions that made the pipeline skip
+those ids were cleared (571 of them, also preserved as evidence).
+
+The reopen is justified by measurement, not assumption: `cl10bullets` had been
+labelled `blank-render`, yet after a full ten-minute observation the Ruffle build
+finished and showed its own title screen. Ten entries have now been through the
+protocol in `scripts/artwork/investigate-render.mjs` — five rendered, two stopped
+at their own start gate, three stayed blank — which alone contradicts the old
+blanket label.
+
+| Measurement | Value |
+| --- | --- |
+| Catalog rows (unique IDs) | 2,710 |
+| Verified artwork | 1,038 (38.3%) |
+| Reopened blocked entries | 1,676 |
+| Ten-minute investigations completed | 10 |
+| New verified artwork from this pass | 2 (`cl10bullets`, `cl10morebullets`) |
+| Games removed as nonfunctional | 0 |
+| Service cards with owner-supplied artwork | 5 |
+
+### Service catalog corrections
+
+Helios, Arctic, Cherry, Achroma and Bull-33 now show the owner's own screenshots
+(`public/artwork/services/*.webp`, rendered by `src/components/ProxyCard.tsx` from
+`src/data/serviceArtwork.ts`). Astra Proxy is removed from the catalog, its search
+results and its navigation; its Bull-33 endpoints moved to a real Bull-33 card
+instead of being relabelled. `xylora.webp` and `unidentified-dark-blue.webp` are
+kept but deliberately unassigned: there is no Xylora endpoint in the repository,
+and the dark-blue screenshot carries no branding, so assigning either would be a
+guess. Krillion and Krillion (Backup) keep their separate, distinct artwork.
+
+### Not claimed
+
+- 1,672 catalog entries are still unprocessed. The required ten-minute
+  observation takes ten minutes per entry, so a full pass cannot finish in one
+  session; the queue, the evidence gathered so far and the exact resume command
+  are preserved in `scripts/artwork/reopened.json`,
+  `scripts/artwork/render-investigation.json` and
+  `docs/ARTWORK_COMPLETION_REPORT.md`.
+- No game was removed. The removal protocol requires a completed observation, a
+  clean retry and no obtainable artwork; nothing has met all seven conditions
+  yet, so `docs/NONFUNCTIONAL_GAME_REMOVALS.md` records zero removals instead of
+  converting old labels into deletions.
+- Coverage is 38.3%, not complete. "All entries classified" is explicitly not
+  accepted as completion.
