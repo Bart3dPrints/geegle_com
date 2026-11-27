@@ -14,21 +14,21 @@ Identity evidence and reuse basis are recorded separately on every record. Captu
 
 | Measure | Count |
 | --- | --- |
-| Catalog rows (unique IDs) | 2,711 |
-| Verified artwork | 110 |
+| Catalog rows (unique IDs) | 2,710 |
+| Verified artwork | 271 |
 | Awaiting review | 0 |
-| Rejected (not displayed) | 0 |
+| Rejected (removed from the UI, queued for a new capture) | 179 |
 | Blocked | 0 |
-| Remaining unprocessed | 2,601 |
-| Actual verified coverage | 4.1% |
-| Total optimized asset size (verified images) | 2175 KiB |
+| Remaining unprocessed | 2,439 |
+| Actual verified coverage | 10.0% |
+| Total optimized asset size (verified images) | 5594 KiB |
 
 ## Verified artwork by acquisition method
 
 | Method | Count |
 | --- | --- |
 | game-asset | 9 |
-| gameplay-screenshot | 72 |
+| gameplay-screenshot | 233 |
 | official-icon | 16 |
 | official-og | 13 |
 
@@ -38,6 +38,21 @@ Identity verification and reuse clearance are tracked separately: every record n
 
 The pre-existing set was audited rather than trusted. 35 of 73 records were rejected before counting any coverage: repeated portal logos assigned to many unrelated titles, blank or near-uniform crops, loading screens and mismatched artwork. Those records were pruned from the runtime index and are replaced through the same acquisition order. 
 
+Rejection reasons recorded:
+
+- 27x Identical file shared with unrelated catalog entries; not this title's artwork.
+- 22x Loading screen.
+- 8x Error page ("Something went wrong").
+- 8x Portal splash, not the game.
+- 8x Options menu, not a title screen or gameplay.
+- 4x Identical Bloons wordmark shared with other Bloons entries; not this installment's own art.
+- 3x Emulator loading screen.
+- 3x Blank capture with no game content.
+- 3x Video placeholder, not the game.
+- 3x Blank dark frame with unreadable text.
+- 3x Third-party splash, not the game.
+- 3x License agreement page, not the game.
+
 ## Blocked
 
 - **Service card artwork (Helios, Arctic, Cherri, Achroma, Xylora, Bull-33, and the unidentified dark-blue desktop service):** the owner-supplied screenshots named in the assignment are not present in the workspace or the conversation attachments, so they cannot be cropped without inventing artwork. Nothing was assigned. No proxy card layout or endpoint was changed. Provide the seven PNGs to complete this item.
@@ -45,10 +60,10 @@ The pre-existing set was audited rather than trusted. 35 of 73 records were reje
 
 ## Remaining work
 
-The next unprocessed batch starts at `# id`:
+The next unprocessed batch starts at `bank-robbery`:
 
 ```
-# id,bank-robbery,bowmasters,cl100in1nes,cl100roomsofenemies,cl10bullets,cl10morebullets,cl10yardfight,cl13bones,cl1942nes,cl234playergame,cl3dash,cl3dasheditor,cl3slices2,cl40xescape,cl500calibercontractz,cl60secondsburgerrun,cl60secondssantarun,cl64in1nes,cl8ballpool,cl99nightsitf,clADOFAI,clAltered Beast,clBMX2,clFF3,clFNAF,clFNAF2,clFNAF3,clFNAF4,clGXclient,cla-walk-in-the-forest--v1-0,clabandoned3,clacecombat2,clacecombat3,clacegangstertaxi,clachievementunlocked,clachillies,clachillies2,clacko_s-mach-bike-challenge--v1-0,cladarkroom,cladatewithdeath,cladayintheoffice,cladofai,cladvancewars,cladvancewars2,cladvancewarsdualstrike,claflac,claftertheweek,clageofwar,clagesofempire
+bank-robbery,bowmasters,cl100in1nes,cl100roomsofenemies,cl10bullets,cl10morebullets,cl10yardfight,cl13bones,cl1942nes,cl234playergame,cl3dash,cl3dasheditor,cl3slices2,cl40xescape,cl500calibercontractz,cl60secondsburgerrun,cl60secondssantarun,cl64in1nes,cl8ballpool,cl99nightsitf,clADOFAI,clAltered Beast,clBMX2,clFF3,clFNAF,clFNAF2,clFNAF3,clFNAF4,clGXclient,cla-walk-in-the-forest--v1-0,clabandoned3,clacecombat2,clacecombat3,clacegangstertaxi,clachievementunlocked,clachillies,clachillies2,clacko_s-mach-bike-challenge--v1-0,cladarkroom,cladatewithdeath,cladayintheoffice,cladofai,cladvancewars,cladvancewars2,cladvancewarsdualstrike,claflac,claftertheweek,clageofwar,clagesofempire,clai
 ```
 
 Resume commands:

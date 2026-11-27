@@ -813,3 +813,64 @@ missing-series wrappers, and added the reminder's permanent dismissal.
 - Five historical rows point at files that were never committed.
 - Production was not redeployed in this cycle; every browser result is from
   the local built artifact.
+
+## Comprehensive artwork pass (2026-11-26, branch `feature/geegle-comprehensive-artwork`)
+
+Artwork only. No catalog ID, launch path, save key, layout, navigation or
+authentication behavior was changed. One coherent branch and pull request.
+
+### What was done
+
+- Audited the pre-existing set instead of trusting it. 35 of the 73 records were
+  rejected before any coverage was claimed: repeated portal logos assigned to
+  unrelated titles (11 and 10 identical files), a watermarked generic banner,
+  blank or near-uniform crops, loading screens and mismatched images. Their
+  records were pruned from the runtime index and their files deleted, so no
+  rejected image stays on display.
+- Added a resumable acquisition pipeline that follows the required order:
+  wrapper-declared official icon/social image, wrapper game asset, then a
+  captured title screen or recognizable gameplay frame from the actual build
+  this repository serves. Blank, uniform, duplicated, low-information,
+  loading/error and generic play-splash frames are rejected automatically, and
+  every accepted frame was also inspected on a generated contact sheet.
+- 271 catalog entries now have verified artwork (233 captured screens plus 38
+  pre-existing wrapper-declared/licensed records), 10.0% of the 2,710 displayed
+  entries. Each record stores its source, identity evidence, reuse basis,
+  dimensions, SHA-256 and review result in `scripts/artwork/progress.json`.
+- New tooling: `capture-screens.mjs` (Playwright, resumable, browser restart),
+  `process-shots.py` (validation, crop-to-game-area, WebP, no upscaling),
+  `audit-artwork.py` (decode/hash/uniformity/duplicate checks),
+  `review.json` (durable decisions), `prune-rejected.py`,
+  `build-progress.py`, `contact-sheet.py`, `report.py`.
+- `tests/artwork-integrity.test.mjs` guards that every displayed record exists,
+  decodes, matches its hash, carries evidence, has no unrelated-title duplicate
+  and never re-displays a rejected file.
+- `docs/ARTWORK_COMPLETION_REPORT.md` is generated from the manifests, so its
+  counts cannot exceed the evidence.
+
+### Evidence (this session)
+
+| Check | Result |
+| --- | --- |
+| `python3 scripts/artwork/audit-artwork.py` | 271 records, 271 ok, 0 broken, 0 duplicate groups |
+| `node scripts/map-artwork.mjs --check` | exit 0 |
+| `npm run typecheck` | exit 0 |
+| `npm run lint` | exit 0 |
+| `npm run build` | exit 0 |
+| `bun test tests` | 124 pass, 0 fail |
+| Library at desktop and 390x844 mobile | artwork renders in cards, lazy loading active (below-fold images not requested), 0 failed, no horizontal overflow |
+| Search filter (`snow`) | Snow Rider first, cards keep their artwork |
+
+### Blocked / not claimed
+
+- The seven service screenshots named in the assignment (Helios, Arctic,
+  Cherri, Achroma, Xylora, Bull-33, and the unidentified dark-blue service) are
+  not present in the workspace or the conversation attachments, so no service
+  card artwork was assigned and no proxy card was changed. Supplying the PNGs
+  completes that item.
+- 2,439 entries remain unprocessed; the exact next batch and resume commands are
+  in `docs/ARTWORK_COMPLETION_REPORT.md`. Capture was stopped at a clean
+  checkpoint, not because the remaining work was judged complete.
+- Favorites and Recently Played were not exercised with a signed-in account in
+  this pass; they render through the same `GameArt` component as the library.
+- Coverage is not universal and is not claimed to be.

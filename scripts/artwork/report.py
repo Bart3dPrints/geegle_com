@@ -40,6 +40,7 @@ def main():
     rejected = [r for r in rows if r["status"] == "rejected"]
     blocked = [r for r in rows if r["status"] == "blocked"]
     remaining = [r for r in rows if r["status"] == "not-started"]
+    rejected_decisions = [v for v in review.values() if v.get("status") == "rejected"]
 
     by_method = collections.Counter(r["method"] or "unknown" for r in verified)
     by_tier = collections.Counter(
@@ -56,7 +57,7 @@ def main():
     coverage = (len(verified) / display_total * 100) if display_total else 0
 
     next_batch = sorted(r["id"] for r in remaining)[:50]
-    rejected_reasons = collections.Counter(r["blocker"] for r in rejected)
+    rejected_reasons = collections.Counter(v.get("reason") for v in rejected_decisions)
 
     lines = []
     lines.append("# Artwork completion report")
@@ -88,7 +89,7 @@ def main():
     lines.append(f"| Catalog rows (unique IDs) | {display_total:,} |")
     lines.append(f"| Verified artwork | {len(verified):,} |")
     lines.append(f"| Awaiting review | {len(awaiting):,} |")
-    lines.append(f"| Rejected (not displayed) | {len(rejected):,} |")
+    lines.append(f"| Rejected (removed from the UI, queued for a new capture) | {len(rejected_decisions):,} |")
     lines.append(f"| Blocked | {len(blocked):,} |")
     lines.append(f"| Remaining unprocessed | {len(remaining):,} |")
     lines.append(f"| Actual verified coverage | {coverage:.1f}% |")

@@ -1,12 +1,12 @@
 {
   "generated": "scripts/artwork/build-progress.py",
   "summary": {
-    "catalogEntries": 2711,
-    "verified": 157,
+    "catalogEntries": 2710,
+    "verified": 271,
     "awaitingReview": 0,
     "rejected": 0,
     "blocked": 0,
-    "notStarted": 2554
+    "notStarted": 2439
   },
   "entries": [
     {
@@ -3118,7 +3118,10 @@
       "imagePath": "/artwork/clbaldisfunnewschoolultimate.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbaldisfunnewschoolultimate.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "28e70d7cee0da6d15f2e4328d36cb8df968497501053b6f3369455df51e6fbe4",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -3208,7 +3211,10 @@
       "imagePath": "/artwork/clballsandbricksgood.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clballsandbricksgood.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "95ce9633ccbbcb9fd5c3e3415e1d33b4a491daa1915ebf78cc6c067521138162",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -3226,7 +3232,10 @@
       "imagePath": "/artwork/clballz.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clballz.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "1668e35a5fd023e944acefbebb97bbf73d1d3b648e78b6d579fb84eef923cd7e",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -3337,7 +3346,10 @@
       "imagePath": "/artwork/clbankbreakout2.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbankbreakout2.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "7e837e17925ac48fd7911f4179c4b852cab8cf6303343a804544dc2efa472b02",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -3373,7 +3385,10 @@
       "imagePath": "/artwork/clbankrobbery2.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbankrobbery2.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "1b7c3ace00b47bf1c23fbf41029e25362484333cbdc5f41835e5b3504ab4e33e",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -3391,7 +3406,10 @@
       "imagePath": "/artwork/clbarryhasasecret.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbarryhasasecret.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "b73f372dbb668caf2bf464df5a1e6f461bda638bbe324c4c2d8321dd3bf0f9a7",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -3445,7 +3463,10 @@
       "imagePath": "/artwork/clbaseballbros.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbaseballbros.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "61bf72adbe2c2e3cb330d74a1a9defebdad3130ff7a3f20c43b356a03feab1f9",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -3481,7 +3502,10 @@
       "imagePath": "/artwork/clbasketbattle.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbasketbattle.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "8e03412b6de555b510801cfb2da3cac6cc462470ab474e850eab36e956e28996",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -3499,7 +3523,10 @@
       "imagePath": "/artwork/clbasketbros.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbasketbros.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "c903a1057b2e21d5c8998afd45e3b140ae40f01ea0ca423c28a6df1d09842407",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -3574,7 +3601,10 @@
       "imagePath": "/artwork/clbasketballfrvr.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbasketballfrvr.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "f640077023c593c1a6d1694cd43c1fca588f6137b8a24ed97cbb5e67f89c915e",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -3610,7 +3640,10 @@
       "imagePath": "/artwork/clbasketballstars.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbasketballstars.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "e73a58d42298d001a562be6cb24bdde21cfb663e25bd91c92b0996ff93ba184f",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -3628,7 +3661,10 @@
       "imagePath": "/artwork/clbasketballsuperstars.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbasketballsuperstars.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "129b0958ef234ed61594cf5b2436a9230543fdc028b91a47e859c61b5ec82499",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -3664,7 +3700,10 @@
       "imagePath": "/artwork/clbattlekarts.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbattlekarts.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "f90fbd62205b2b19188f989caa4a5cebdfe88ea5bb3356a3c8931f34b1f3bcee",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -3682,7 +3721,10 @@
       "imagePath": "/artwork/clbattlesim.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbattlesim.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "2e882cc9b3faaaeeb45e8a8c1cb4988d308c5c0eef492903b141c52d44545070",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -3718,7 +3760,10 @@
       "imagePath": "/artwork/clbattles.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbattles.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "ff6fae8c1f0db6f0e30ce710e84ca2c737f12674bb4782d6ddb0b9bd43304eb6",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -3736,7 +3781,10 @@
       "imagePath": "/artwork/clbazookaboy.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbazookaboy.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "aa334daf4326ace5991b666c572592b2f9ddfa81cf8f1e25ccd06b4ef030d24b",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -3754,7 +3802,10 @@
       "imagePath": "/artwork/clbballlegend.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbballlegend.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "aaebb42f414fbef78ccd87d18ee4be898ea452c612f19616670f20663389efda",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -3772,7 +3823,10 @@
       "imagePath": "/artwork/clbeachboxingsim.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbeachboxingsim.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "510c1c43eb051fcc2488e847bda6336a5955f22e9786bcedbc3ddd2734a52f9d",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -3826,7 +3880,10 @@
       "imagePath": "/artwork/clbearsus.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbearsus.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "aa24238534fc8fca6268f472c089ffd21908569bee36dd42951d22616f450458",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4063,7 +4120,10 @@
       "imagePath": "/artwork/clbigshotboxing2.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbigshotboxing2.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "bd69004117d2822888ccbddfa67925d18e8f9dcf9f90f6dce12a2f8f7fca230f",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4081,7 +4141,10 @@
       "imagePath": "/artwork/clbig_time_butter_baron.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbig_time_butter_baron.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "57dcd3558c5be73bb934bb950151f8a6c4a2a7d4827f5cf995b1d68014e9054d",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4099,7 +4162,10 @@
       "imagePath": "/artwork/clbigtowertinysquare.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbigtowertinysquare.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "1f6d28c4649e74e135e0fcc8de0251e2f68a96b7b8833d66257bc08a0b216b5b",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4153,7 +4219,10 @@
       "imagePath": "/artwork/clbindingofisaccsheeptime.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbindingofisaccsheeptime.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "bdfa174a07c67dc147f8c4ae22608048fe9e2ddbf192d365d8a6fb1967a38fab",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4207,7 +4276,10 @@
       "imagePath": "/artwork/clbitlife.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbitlife.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "13c4e4143efde147c51771c3503ad084558b17477c791159282804dc5bddac5a",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4243,7 +4315,10 @@
       "imagePath": "/artwork/clblackjack.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clblackjack.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "bf024403a39535164da8c723f1b6387c0fb98c16a1b05b1f9c35e47a7c455945",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4315,7 +4390,10 @@
       "imagePath": "/artwork/clblacksmithlab.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clblacksmithlab.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "36fc5ca4a1a1ad83d35c70281ff79e885ce5f934b3a09951203bb9e6547faf1b",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4333,7 +4411,10 @@
       "imagePath": "/artwork/clblazedrifter.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clblazedrifter.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "9a85a237ef0c6304dabd032163f81887f22ce878e79e22c76c25afdde0e0c1ea",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4369,7 +4450,10 @@
       "imagePath": "/artwork/clblightborne.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clblightborne.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "c241946412e98c856a8bd9e0730f1c0b136b025bdfe7dbbb565d393fb959c844",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4441,7 +4525,10 @@
       "imagePath": "/artwork/clblockcraftparkour.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clblockcraftparkour.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "ccae34d8bd24c457f1e7010526479b39f4c246fa649771d548e951a453edc53a",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4477,7 +4564,10 @@
       "imagePath": "/artwork/clblockpost.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clblockpost.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "2254e954e30ae8a94d4a21f3d57962d8f2c37dfd001ae2aab46064584a8e7050",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4495,7 +4585,10 @@
       "imagePath": "/artwork/clblockthepig.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clblockthepig.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "2810286a7e8b63e45941d36803ecd62fb0b09e2daeeddb1f03bde2c988a6e41a",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4513,7 +4606,10 @@
       "imagePath": "/artwork/clblockydemolitionderby.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clblockydemolitionderby.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "9efb0a3a191420bedf75e43ad03a48214ab64adb3f946fcc8167e8af00d8c732",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4531,7 +4627,10 @@
       "imagePath": "/artwork/clblockysnakes.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clblockysnakes.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "5af2fadc72e785d839a12baadfd44394030955094e6229b303c3a7d41796a1a8",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4549,7 +4648,10 @@
       "imagePath": "/artwork/clblood.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clblood.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "02a5176c7765a923fd593e97dc8654eaddd224975b22c5e2c10b9a2990320321",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4585,7 +4687,10 @@
       "imagePath": "/artwork/clbloodtournament.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbloodtournament.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "2e6c406cc740f8be3b36a4b5417062fc8f81e784592d27ea5d9b81f613d8b221",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4603,7 +4708,10 @@
       "imagePath": "/artwork/clbloons.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbloons.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "0b5a21d16c847b30b1134f31ae029b08ca5b00206c49485591c62e5e1878e301",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4621,7 +4729,10 @@
       "imagePath": "/artwork/clbloons2.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbloons2.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "795f7d8cb84ac81235fe9f6c06e8b7b96528dce0c8d095ef5a3a190143fad720",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4765,7 +4876,10 @@
       "imagePath": "/artwork/clbloonstd3.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbloonstd3.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "c9eebeccc638cc731164ca854cde0fc6a723cca23a6170bc4a1d5dbae4e369c8",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4813,15 +4927,18 @@
         "strategy"
       ],
       "path": "/games/clBTD1.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbtd1.html",
+      "imagePath": "/artwork/clbtd1.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbtd1.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "7a5972846813ada99e7a03ca4998ce4fcb1d68d02cc070641a551b224a732da3",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -4891,7 +5008,10 @@
       "imagePath": "/artwork/clblumgirocket.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clblumgirocket.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "c24f16a31753dd3cdb53c0e4947035573f3af556b9a21353a22364cbba5fbe8e",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4927,7 +5047,10 @@
       "imagePath": "/artwork/clbntts.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbntts.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 219,
+        "height": 123
+      },
       "sha256": "263d99631a9627bf02ed3c46dbf3c64568f09e8d34197c3347cfd106526e80a6",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4945,7 +5068,10 @@
       "imagePath": "/artwork/clbobasimulator.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbobasimulator.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "0de1b426d847c9c653572c5b87a914c2e55ec5f8a5bda67f9c532e3f4c154cab",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4963,7 +5089,10 @@
       "imagePath": "/artwork/clbobtherobber.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbobtherobber.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "d7a9ea3d128d3d9bac0fa096959115b758263b2d4d0f594d69c5709a24c32c61",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4981,7 +5110,10 @@
       "imagePath": "/artwork/clbobtherobber2.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbobtherobber2.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "3c7aecd4aee126d189d8def1cdc8c863e4733a17d104a0c016d51817236630ed",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -4999,7 +5131,10 @@
       "imagePath": "/artwork/clbobtherobber5.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbobtherobber5.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "d940c8e96d6c3aa79ba9a6ce41dee560d49c30eb1efeb494f282e4ee5dff174d",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -5215,7 +5350,10 @@
       "imagePath": "/artwork/clbounceback.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clbounceback.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "eac01e38e389e6cff105dba69ffbd0e42e9e5b5f59e4973ba30ddae0120e844c",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -5245,15 +5383,18 @@
         "sports"
       ],
       "path": "/games/clbouncybasketball.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbouncybasketball.html",
+      "imagePath": "/artwork/clbouncybasketball.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbouncybasketball.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "91bb304f1ebc8e85cfa10413f6b0246fa7321d99caf3c2fb3108941714fd36b8",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -5263,15 +5404,18 @@
         "racing"
       ],
       "path": "/games/clbouncymotors.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbouncymotors.html",
+      "imagePath": "/artwork/clbouncymotors.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbouncymotors.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 308,
+        "height": 173
+      },
+      "sha256": "f63c9dce0bf3b404950bf9a7c82fae8f7a33b53adff694c691abe13aa6a82844",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -5281,15 +5425,18 @@
         "action"
       ],
       "path": "/games/clBountyOfOne.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbountyofone.html",
+      "imagePath": "/artwork/clbountyofone.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbountyofone.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "4e230a3d49380662b0b273a0f4024208f60c789c7fc4b4dab8db7b39d45de023",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -5353,15 +5500,18 @@
         "action"
       ],
       "path": "/games/clboxhead2playrooms.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clboxhead2playrooms.html",
+      "imagePath": "/artwork/clboxhead2playrooms.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clboxhead2playrooms.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "b90a56a95b8719c55d6961695fb048f770e36dc143ef229d5c6ee34cba3cf99d",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -5443,15 +5593,18 @@
         "casual"
       ],
       "path": "/games/clbrainrot.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbrainrot.html",
+      "imagePath": "/artwork/clbrainrot.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbrainrot.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "9183de5339d74a43a557de80e47a7cc7d3cf53d52db78129418eb631378a55ee",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -5536,15 +5689,18 @@
         "action"
       ],
       "path": "/games/clbrotato.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbrotato.html",
+      "imagePath": "/artwork/clbrotato.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbrotato.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "5c769bfee80d8b7ab1ee3fd65791536053253118927ff32277754496e5fb3f4a",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -5572,15 +5728,18 @@
         "puzzle"
       ],
       "path": "/games/clbubbleshooter.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbubbleshooter.html",
+      "imagePath": "/artwork/clbubbleshooter.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbubbleshooter.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "95d1a06468a09daff015370399566760e28640885da7f9f548b4b56d12c3e84e",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -5590,15 +5749,18 @@
         "puzzle"
       ],
       "path": "/games/clbubbleshooterpirate.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbubbleshooterpirate.html",
+      "imagePath": "/artwork/clbubbleshooterpirate.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbubbleshooterpirate.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "8724bb0f46fd0fc9d65ab56fd63b418ea5aada026e23520f5bf3a5071a128d06",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -5626,15 +5788,18 @@
         "action"
       ],
       "path": "/games/clbubbletanks2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbubbletanks2.html",
+      "imagePath": "/artwork/clbubbletanks2.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbubbletanks2.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "572cc1684d2692751785c237f861a1091bef8bc2f8a3d2c80b678221a8c83732",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -5716,15 +5881,18 @@
         "horror"
       ],
       "path": "/games/clbuckshotroulette.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbuckshotroulette.html",
+      "imagePath": "/artwork/clbuckshotroulette.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbuckshotroulette.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "085cdc9d3a10d2661d79913e477df44d8552e967946ab26cd791133bc291c839",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -5845,15 +6013,18 @@
         "arcade"
       ],
       "path": "/games/clburritobison.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clburritobison.html",
+      "imagePath": "/artwork/clburritobison.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clburritobison.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "df326734b3d9c536d83117c3aa0e2c38ba0b72aa1a2195e1c7075b1306a0e9b0",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -5881,15 +6052,18 @@
         "arcade"
       ],
       "path": "/games/clburritobisonlaunchalibre.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clburritobisonlaunchalibre.html",
+      "imagePath": "/artwork/clburritobisonlaunchalibre.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clburritobisonlaunchalibre.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "5accb82e74e065746de57bc39829c13a5372748f434d13c59e1172fa6a8f02a6",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -5899,15 +6073,18 @@
         "arcade"
       ],
       "path": "/games/clburritobisonrevenge.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clburritobisonrevenge.html",
+      "imagePath": "/artwork/clburritobisonrevenge.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clburritobisonrevenge.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "0f8bb0dfb3b49cad2d7adaee48fa164139341866435a3527a8371312e92cd030",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -5953,15 +6130,18 @@
         "platformer"
       ],
       "path": "/games/clcactusmccoy(1).html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcactusmccoy-1.html",
+      "imagePath": "/artwork/clcactusmccoy-1.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcactusmccoy-1.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "a57293676dc6e113e569abdd1b3f8d10692b37e19382af1e3267b0550adbd2f4",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -5971,15 +6151,18 @@
         "platformer"
       ],
       "path": "/games/clcactusmccoy2(1).html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcactusmccoy2-1.html",
+      "imagePath": "/artwork/clcactusmccoy2-1.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcactusmccoy2-1.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "a9460f6adfe7b5275c0d5164e383d6915a0d52c8ac982f0f9705c9d5c478c538",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -5989,15 +6172,18 @@
         "action"
       ],
       "path": "/games/clcallofbattle.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcallofbattle.html",
+      "imagePath": "/artwork/clcallofbattle.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcallofbattle.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "b0f12dc25f43a52917501e105eb485cb9c772e6c25da3cc9162238558ed49ba3",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -6061,15 +6247,18 @@
         "arcade"
       ],
       "path": "/games/clcannonballs3d.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcannonballs3d.html",
+      "imagePath": "/artwork/clcannonballs3d.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcannonballs3d.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "dda60fea5d4b9e27e06fdea707734dad1659efcb59d881fcf96f1a7daf4f9b31",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -6133,15 +6322,18 @@
         "racing"
       ],
       "path": "/games/clcarcrash3.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcarcrash3.html",
+      "imagePath": "/artwork/clcarcrash3.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcarcrash3.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "81f7af8b3238bbcaff84cbdc077c27c57bea3ce332944d21ec2911be37e7c1ae",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -6169,15 +6361,18 @@
         "racing"
       ],
       "path": "/games/clcarkingarena.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcarkingarena.html",
+      "imagePath": "/artwork/clcarkingarena.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcarkingarena.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "a83fd66aec110dc99554eb52ce88b1c5c3dbc448590b593c05a3d61afc4311e2",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -6187,15 +6382,18 @@
         "racing"
       ],
       "path": "/games/clcarrampvspolicechase.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcarrampvspolicechase.html",
+      "imagePath": "/artwork/clcarrampvspolicechase.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcarrampvspolicechase.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "e0ae3a799d86c544952130071e91f1a810082acb6acca707424b29db466fefbb",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -6277,15 +6475,18 @@
         "adventure"
       ],
       "path": "/games/clcastaway.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcastaway.html",
+      "imagePath": "/artwork/clcastaway.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcastaway.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "b58c299e4ffa70a1fd44654d049810153ce47c429090e29267375b1fb30e918d",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -6331,15 +6532,18 @@
         "strategy"
       ],
       "path": "/games/clcastlewarsmodern.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcastlewarsmodern.html",
+      "imagePath": "/artwork/clcastlewarsmodern.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcastlewarsmodern.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "338f7e772e02ea36b0356109cb817a6c999d0dea1542e8adc690e52fc18e263e",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -6475,15 +6679,18 @@
         "platformer"
       ],
       "path": "/games/clcatmariogood.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcatmariogood.html",
+      "imagePath": "/artwork/clcatmariogood.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcatmariogood.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "ce5ca753ea110644907d3ea00a861c6a7e71930c67fc18e6d8317779b3ff81fd",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -6493,15 +6700,18 @@
         "platformer"
       ],
       "path": "/games/clcatslovecake2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcatslovecake2.html",
+      "imagePath": "/artwork/clcatslovecake2.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcatslovecake2.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "f309f8ccebcc90e0cc54eb91dca3d692a569e0da06d0e0abc501697964425745",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -6511,15 +6721,18 @@
         "puzzle"
       ],
       "path": "/games/clcavecrawler.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcavecrawler.html",
+      "imagePath": "/artwork/clcavecrawler.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcavecrawler.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "ffd3a4d50dade320380ce18db3ab8a6b9281520d94b7d96297f0dc96dd0c1002",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -6673,15 +6886,18 @@
         "puzzle"
       ],
       "path": "/games/clcheckers.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcheckers.html",
+      "imagePath": "/artwork/clcheckers.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcheckers.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "dedcb1d6240758ec36a5925b328baa3f5a17348a7bf0ef4eeb7933a028d2c537",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -6691,15 +6907,18 @@
         "arcade"
       ],
       "path": "/games/clcheesechompers3d.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcheesechompers3d.html",
+      "imagePath": "/artwork/clcheesechompers3d.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcheesechompers3d.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "36313cbbb66d16d0c0aff6b7647f1f4c8abf9c28b094fc1173bb56b75d9361ef",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -6766,15 +6985,18 @@
         "puzzle"
       ],
       "path": "/games/clchess.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clchess.html",
+      "imagePath": "/artwork/clchess.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clchess.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "2c8e008ff2acb44bc55a299ee0feac177b707a580f634007c523a1e54563748a",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -6784,15 +7006,18 @@
         "puzzle"
       ],
       "path": "/games/clchessclassic.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clchessclassic.html",
+      "imagePath": "/artwork/clchessclassic.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clchessclassic.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "89ff60b82011b1b83ab3d525a7c51264295a6d1bb1f1cf2c635c69b7da81d3dc",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -6802,15 +7027,18 @@
         "action"
       ],
       "path": "/games/clchibiknight.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clchibiknight.html",
+      "imagePath": "/artwork/clchibiknight.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clchibiknight.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "b8b8e8763630a5639c7e87edd3ddb3f3e95909780954848ebe30fb56f1c0a505",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -6820,15 +7048,18 @@
         "strategy"
       ],
       "path": "/games/clchickenwar.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clchickenwar.html",
+      "imagePath": "/artwork/clchickenwar.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clchickenwar.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "059e8c49e8f2a58104a13057de1c9ff9a5a59b060066211691f16f2c9c7e1381",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -6910,15 +7141,18 @@
         "puzzle"
       ],
       "path": "/games/clchuzzle.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clchuzzle.html",
+      "imagePath": "/artwork/clchuzzle.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clchuzzle.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "93b972b6ab22bb10fcb0ba672e96ea84beee87e5b6998fb7b17e99cb3ac0b74e",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -6928,15 +7162,18 @@
         "puzzle"
       ],
       "path": "/games/clciviballs.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clciviballs.html",
+      "imagePath": "/artwork/clciviballs.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clciviballs.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "18258912ff816fae73154df2668de40dcbc84a7453e99501d988dd70e6937e90",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -6946,15 +7183,18 @@
         "puzzle"
       ],
       "path": "/games/clciviballs2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clciviballs2.html",
+      "imagePath": "/artwork/clciviballs2.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clciviballs2.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "2088ac8277fd0557bb9fd83e07a208ba1a33c2e3424e499b8b20411b583a231a",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -7054,15 +7294,18 @@
         "action"
       ],
       "path": "/games/clChickenCS.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clchickencs.html",
+      "imagePath": "/artwork/clchickencs.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clchickencs.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "2e2fb9b4acb752943e5183cd10baefa1155c419dc23fcd7fa2750e3f4cd9a045",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -7072,15 +7315,18 @@
         "puzzle"
       ],
       "path": "/games/clCircloO2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcircloo2.html",
+      "imagePath": "/artwork/clcircloo2.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcircloo2.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "2bf2a2bede26d83102eea1ea438cbad912e00ebb6f4484ae73e61a0947b6dd56",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -7234,15 +7480,18 @@
         "simulation"
       ],
       "path": "/games/clEaglercraft-Alpha-126-Offline.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cleaglercraft-alpha-126-offline.html",
+      "imagePath": "/artwork/cleaglercraft-alpha-126-offline.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cleaglercraft-alpha-126-offline.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "a08ef7aa36805a92d8d80b3eaabc4be1b5c211780ba7cc3c9106f42fc4e035c5",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -8566,15 +8815,18 @@
         "action"
       ],
       "path": "/games/clclashnslash.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clclashnslash.html",
+      "imagePath": "/artwork/clclashnslash.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clclashnslash.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "a57867674453ca711e9de625951ed6fae53cc08df658b1ceef5b8c3fd47cb282",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -8584,15 +8836,18 @@
         "strategy"
       ],
       "path": "/games/clclashofvikings.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clclashofvikings.html",
+      "imagePath": "/artwork/clclashofvikings.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clclashofvikings.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "a604243c6660c5251933c58320fba4992136154481184c48a905f0aa4a2da5ad",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -8638,15 +8893,18 @@
         "arcade"
       ],
       "path": "/games/clcleanupio.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcleanupio.html",
+      "imagePath": "/artwork/clcleanupio.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcleanupio.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "258be1f5e1ff55a08fecc1224fa14426d310623a4b56c47bd6e17d7df020c8f7",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -8800,15 +9058,18 @@
         "action"
       ],
       "path": "/games/clclubbytheseal.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clclubbytheseal.html",
+      "imagePath": "/artwork/clclubbytheseal.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clclubbytheseal.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "24092361162ac7069c2d28a6dd3afea62f1f580d09dba018d30db0556afab61d",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -8818,15 +9079,18 @@
         "platformer"
       ],
       "path": "/games/clclusterrush.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clclusterrush.html",
+      "imagePath": "/artwork/clclusterrush.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clclusterrush.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "abdc8771d91b926aa56b7d6e43adb1d2e3f86228f5ed59a0f8050e646439c0df",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -9034,15 +9298,18 @@
         "adventure"
       ],
       "path": "/games/clcoldfront.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcoldfront.html",
+      "imagePath": "/artwork/clcoldfront.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcoldfront.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "e7656ce9dbaadf488a2be1ff852526224a303c7288d77130da8228cf114a3b3e",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -9088,15 +9355,18 @@
         "puzzle"
       ],
       "path": "/games/clcolormatch.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcolormatch.html",
+      "imagePath": "/artwork/clcolormatch.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcolormatch.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "559b3d980fef2d12675060972e5965db2fe8d2ceb31009b7e491ab5234856232",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -9160,15 +9430,18 @@
         "strategy"
       ],
       "path": "/games/clcommandandconquer.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcommandandconquer.html",
+      "imagePath": "/artwork/clcommandandconquer.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcommandandconquer.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "d08a21841162d9b64f7661fb73a1fb0a0be3d351a13a275f7cbb95ffdddc904d",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -9232,15 +9505,18 @@
         "rhythm"
       ],
       "path": "/games/clconfrontingurself.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clconfrontingurself.html",
+      "imagePath": "/artwork/clconfrontingurself.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clconfrontingurself.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "bc1d978dcb31c8d61056bee6ae9ddb20ad1a2f9026ddb17de18c186929e4c64c",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -9250,15 +9526,18 @@
         "rhythm"
       ],
       "path": "/games/clconfrontingyourself.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clconfrontingyourself.html",
+      "imagePath": "/artwork/clconfrontingyourself.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clconfrontingyourself.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "b112b1aa386e1f2d36fa49aa852cdc8ba92ce92307aace28aa8bd5481aff2776",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -9322,15 +9601,18 @@
         "casual"
       ],
       "path": "/games/clcookieclicker.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcookieclicker.html",
+      "imagePath": "/artwork/clcookieclicker.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcookieclicker.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "c5c1b35d33d93c8ac77bc881dbbd1cf535e984ad528568d67d74e47ca8489757",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -9376,15 +9658,18 @@
         "casual"
       ],
       "path": "/games/clcookie-clicker.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcookie-clicker.html",
+      "imagePath": "/artwork/clcookie-clicker.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcookie-clicker.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "03ef889f4edf6b0b5fbbe51ba8e7a6b053093f697ee52260af34b933375bf9be",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -9448,15 +9733,18 @@
         "arcade"
       ],
       "path": "/games/clcoreball.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcoreball.html",
+      "imagePath": "/artwork/clcoreball.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcoreball.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 418,
+        "height": 235
+      },
+      "sha256": "19340ff35773434b1e791ff26d2a61d8b5a49221ae3b41daed277fcb995475dd",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -9520,15 +9808,18 @@
         "puzzle"
       ],
       "path": "/games/clcoverorange.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcoverorange.html",
+      "imagePath": "/artwork/clcoverorange.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcoverorange.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "5f7a478f050d01d9e7f8a294507198efb4fd21754f71d722737c325a81cdb585",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -9538,15 +9829,18 @@
         "puzzle"
       ],
       "path": "/games/clcoverorange2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcoverorange2.html",
+      "imagePath": "/artwork/clcoverorange2.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcoverorange2.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "bc937d643396857834554398e2154df2d4f261fb06439cfdac81ba4c05fe7035",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -9574,15 +9868,18 @@
         "puzzle"
       ],
       "path": "/games/clcoverorangejourneyknights.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcoverorangejourneyknights.html",
+      "imagePath": "/artwork/clcoverorangejourneyknights.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcoverorangejourneyknights.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "87c62bf606c0134fca5aee8ce9371ac978f8451cd4d8eb4bd7bf72dbaec37691",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -9592,15 +9889,18 @@
         "puzzle"
       ],
       "path": "/games/clcoverorangejourneypirates.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcoverorangejourneypirates.html",
+      "imagePath": "/artwork/clcoverorangejourneypirates.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcoverorangejourneypirates.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "ef8f25b140dc757274b892007e144b67380526e65dcd0ee1b2851d6c7e3ff11d",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -9610,15 +9910,18 @@
         "puzzle"
       ],
       "path": "/games/clcoverorangejourneyspace.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcoverorangejourneyspace.html",
+      "imagePath": "/artwork/clcoverorangejourneyspace.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcoverorangejourneyspace.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "dfacb2aa843bada18e3a46d76a922ad10e7371f7f39ce1aefe820c8226ef8424",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -9628,15 +9931,18 @@
         "puzzle"
       ],
       "path": "/games/clcoverorangeplayerspack.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcoverorangeplayerspack.html",
+      "imagePath": "/artwork/clcoverorangeplayerspack.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcoverorangeplayerspack.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "403529ffb205373c81cd07db02afeebbfa6062982a67f17aa7fd1e535509929d",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -9646,15 +9952,18 @@
         "puzzle"
       ],
       "path": "/games/clcoverorangeplayerspack2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcoverorangeplayerspack2.html",
+      "imagePath": "/artwork/clcoverorangeplayerspack2.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcoverorangeplayerspack2.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "840e2e941251e182dc86350f7af8abb39dfc5c4ca17bcd10a01a6795a201f289",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -9700,15 +10009,18 @@
         "puzzle"
       ],
       "path": "/games/clcrankit!.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcrankitbang.html",
+      "imagePath": "/artwork/clcrankitbang.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcrankitbang.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "31b715c72ebf9f5e460ab914689f07b8bf0f090719f17bd2a9b8fdb176349844",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -9883,15 +10195,18 @@
         "racing"
       ],
       "path": "/games/clcrazymotorcycle.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcrazymotorcycle.html",
+      "imagePath": "/artwork/clcrazymotorcycle.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcrazymotorcycle.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "f7cded753b91cb9c8d5a567ad9284a2116bb589479b675315672f786376e5c9b",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -9919,15 +10234,18 @@
         "simulation"
       ],
       "path": "/games/clcrazyplanelanding.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcrazyplanelanding.html",
+      "imagePath": "/artwork/clcrazyplanelanding.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcrazyplanelanding.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "b206e139c8a95d87ec4306caac1373440e907c9e337bb4a0fe1d12ee37918e09",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -9955,15 +10273,18 @@
         "arcade"
       ],
       "path": "/games/clcrazychicken3D.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcrazychicken3d.html",
+      "imagePath": "/artwork/clcrazychicken3d.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcrazychicken3d.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "d56e67d22a6f99d4972404b3b3156bb7f17c85e3b574b2ba90a6f5cde52e9f44",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -9973,15 +10294,18 @@
         "casual"
       ],
       "path": "/games/clcreaturecardidle.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcreaturecardidle.html",
+      "imagePath": "/artwork/clcreaturecardidle.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcreaturecardidle.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "0548a039dce5f5698fe5d3c865c488f1c84b4b726ad2460a6932d6e31f08cf0d",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -10063,15 +10387,18 @@
         "arcade"
       ],
       "path": "/games/clcrossyroad.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcrossyroad.html",
+      "imagePath": "/artwork/clcrossyroad.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcrossyroad.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "481ad5dd9da9d1df72b3513d04f02aa07d2f1f7dca5a167d0995c8c118a0ed8f",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -10099,15 +10426,18 @@
         "action"
       ],
       "path": "/games/clcs1.6.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcs1-6.html",
+      "imagePath": "/artwork/clcs1-6.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcs1-6.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "d7163b1d5494e219588a7a993b5eff832c808d8935b0362518734a19972e88db",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -10189,15 +10519,18 @@
         "arcade"
       ],
       "path": "/games/clcurveball(1).html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcurveball-1.html",
+      "imagePath": "/artwork/clcurveball-1.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcurveball-1.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "3aaba74039ec9bce4e7988e1b707b1bc779722a90ca03d4118d698216a077b6e",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -10207,15 +10540,18 @@
         "casual"
       ],
       "path": "/games/clcustomersupport.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcustomersupport.html",
+      "imagePath": "/artwork/clcustomersupport.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcustomersupport.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "c534a0ade5aed9c1e39d2b26d7c3c9bd6280052fc03819338a682bc10fb9ac64",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -10333,15 +10669,18 @@
         "platformer"
       ],
       "path": "/games/cldadish.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldadish.html",
+      "imagePath": "/artwork/cldadish.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldadish.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "9df050a5fd7c4ace864fcc12c47ac5723ac009b3f0968b06eaaa4c342e9cbd7c",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -10351,15 +10690,18 @@
         "action"
       ],
       "path": "/games/cldadnme.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldadnme.html",
+      "imagePath": "/artwork/cldadnme.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldadnme.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "d26899bdfb12d8167bd3d4dfd54072f9d82de18e988c9ef4ceb5e2e8a1fd4aba",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -10387,15 +10729,18 @@
         "casual"
       ],
       "path": "/games/cldandysworldclicker.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldandysworldclicker.html",
+      "imagePath": "/artwork/cldandysworldclicker.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldandysworldclicker.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "4044c8afc133b4d92b85cfd1306a872bda2af71829de3b51b21ebf648a0de9ff",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -10423,15 +10768,18 @@
         "action"
       ],
       "path": "/games/cldasharena.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldasharena.html",
+      "imagePath": "/artwork/cldasharena.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldasharena.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "dcba2d5628937cdd4eb5c5938e7bc2e6f59bc292bc7ccff605c9e9183874d1c2",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -10459,15 +10807,18 @@
         "action"
       ],
       "path": "/games/cldatewithiraq.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldatewithiraq.html",
+      "imagePath": "/artwork/cldatewithiraq.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldatewithiraq.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "04cfb07210fb7833c0758072639ad3c8cca696a2933582189f6f1ee1cc1dbdc6",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -10657,15 +11008,18 @@
         "action"
       ],
       "path": "/games/cldeadfrontieroutbreak.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldeadfrontieroutbreak.html",
+      "imagePath": "/artwork/cldeadfrontieroutbreak.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldeadfrontieroutbreak.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "ee3671cb344188081e52d080ba517c5ff68f358276107ab2479b967faece75a2",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -10675,15 +11029,18 @@
         "action"
       ],
       "path": "/games/cldeadfrontieroutbreak2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldeadfrontieroutbreak2.html",
+      "imagePath": "/artwork/cldeadfrontieroutbreak2.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldeadfrontieroutbreak2.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "f195bc41fd634645d844600ac7802824d7469c958dad9d90f59ecfcc3c6a5487",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -10729,15 +11086,18 @@
         "action"
       ],
       "path": "/games/cldeadzed2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldeadzed2.html",
+      "imagePath": "/artwork/cldeadzed2.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldeadzed2.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "4779699e23143dee6f893e5669c6f5a1f160c0fec16d04db36117a6a4f2cc7e8",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -10765,15 +11125,18 @@
         "racing"
       ],
       "path": "/games/cldeadlydescent.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldeadlydescent.html",
+      "imagePath": "/artwork/cldeadlydescent.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldeadlydescent.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "b00937f09985ec535057764438652a1e62c4c72ce259bddf3d8076074874ff3d",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -10783,15 +11146,18 @@
         "action"
       ],
       "path": "/games/cldeadzed.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldeadzed.html",
+      "imagePath": "/artwork/cldeadzed.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldeadzed.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "3cadd12205e285721cc9275f5ed777cb9f290bf55ddc98dd4c24ad4dcc0e1110",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -10801,15 +11167,18 @@
         "arcade"
       ],
       "path": "/games/cldeathchase.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldeathchase.html",
+      "imagePath": "/artwork/cldeathchase.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldeathchase.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "a908d074e873bbd4adbfd349ecf79233bfe727176acdb80d10acc46e3eb28f7d",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -10819,15 +11188,18 @@
         "platformer"
       ],
       "path": "/games/cldeathrun.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldeathrun.html",
+      "imagePath": "/artwork/cldeathrun.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldeathrun.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "1f3baebd27087421fa48157ac588f725462025b77c93f8d111667ae078615ad3",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -10927,15 +11299,18 @@
         "horror"
       ],
       "path": "/games/cldeepersleep.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldeepersleep.html",
+      "imagePath": "/artwork/cldeepersleep.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldeepersleep.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "717330856f9bb1482095dc6c2f16aaa81add1346ae94518112c162925c1b5b60",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -10945,15 +11320,18 @@
         "platformer"
       ],
       "path": "/games/cldeepestsword.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldeepestsword.html",
+      "imagePath": "/artwork/cldeepestsword.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldeepestsword.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "f17932d043657b364916a398be819850b6b31cc7412ed7775cae4fe7db060b20",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -10981,15 +11359,18 @@
         "action"
       ],
       "path": "/games/cldefendyournuts.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldefendyournuts.html",
+      "imagePath": "/artwork/cldefendyournuts.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldefendyournuts.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "71822dbeb49dd62d586f9baa2f0683f337c9ac646bb508a11765274a3096dacc",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -11035,15 +11416,18 @@
         "rpg"
       ],
       "path": "/games/cldeltarune.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldeltarune.html",
+      "imagePath": "/artwork/cldeltarune.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldeltarune.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "a9ea935e1d19fe2555a76cb9b8b019da4707f3e0c2bedac78a2a1cb6eb45d700",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -11071,15 +11455,18 @@
         "racing"
       ],
       "path": "/games/cldemolitionderbycrashracing.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldemolitionderbycrashracing.html",
+      "imagePath": "/artwork/cldemolitionderbycrashracing.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldemolitionderbycrashracing.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "c853a3993f643bc8f317fe3126ce232ada76c36e0d3b2347141daa355669862a",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -11143,15 +11530,18 @@
         "platformer"
       ],
       "path": "/games/cldiamondhollow.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldiamondhollow.html",
+      "imagePath": "/artwork/cldiamondhollow.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldiamondhollow.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "1ca173b621d3f6a7e19664b6fa79430f0262c6f1522bbdc235cfb416d1fbb9ba",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -11197,15 +11587,18 @@
         "puzzle"
       ],
       "path": "/games/cldieinthedungeon.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldieinthedungeon.html",
+      "imagePath": "/artwork/cldieinthedungeon.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldieinthedungeon.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "e5f09ce0a9d4ab1698a640a92414a620bfb4cf3fc2a4bc7e11ff8628abfcea4d",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -11377,15 +11770,18 @@
         "arcade"
       ],
       "path": "/games/cldinorun.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldinorun.html",
+      "imagePath": "/artwork/cldinorun.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldinorun.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "8af3527a42c9083f4e19cabc6f1c69d4e5e44148228ba4c4f3e5e7e53bfd9035",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -11452,15 +11848,18 @@
         "simulation"
       ],
       "path": "/games/cldoblox.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldoblox.html",
+      "imagePath": "/artwork/cldoblox.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldoblox.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "47561033d9f4289276a501e64f01a3d70fd76171a77bf4de9fa1bf0a0dc3609e",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -11653,15 +12052,18 @@
         "puzzle"
       ],
       "path": "/games/cldontescape.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldontescape.html",
+      "imagePath": "/artwork/cldontescape.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldontescape.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "539dae8c096b87caa069235f737aa4042608ac85cb591aac607ad23f1a8a79af",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -11671,15 +12073,18 @@
         "puzzle"
       ],
       "path": "/games/cldontescape2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldontescape2.html",
+      "imagePath": "/artwork/cldontescape2.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldontescape2.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "fc7deb644d365e7d02b694292898d114242288b0bf96e10b69b03088e7672ed1",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -11689,15 +12094,18 @@
         "puzzle"
       ],
       "path": "/games/cldontescape3.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldontescape3.html",
+      "imagePath": "/artwork/cldontescape3.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldontescape3.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "cd8ec8bb296fc093e8cd6b78e6966992d8dcb86cccd1b138e41ee4c3dd8a0612",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -11743,15 +12151,18 @@
         "platformer"
       ],
       "path": "/games/cldoodlejumpgoober.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldoodlejumpgoober.html",
+      "imagePath": "/artwork/cldoodlejumpgoober.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldoodlejumpgoober.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "85aba2df1fed8691a34fe4f971d4a1a868d15550d0039c75423d91e95bb50572",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -11797,15 +12208,18 @@
         "action"
       ],
       "path": "/games/cldoom2dos.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldoom2dos.html",
+      "imagePath": "/artwork/cldoom2dos.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldoom2dos.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "6b6b7137bc5e17f59ab369a6316ec9c4c6e6ccb14c06239ac7d631332ea2e366",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -11815,15 +12229,18 @@
         "action"
       ],
       "path": "/games/cldoom2d.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldoom2d.html",
+      "imagePath": "/artwork/cldoom2d.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldoom2d.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "3064de7ccb9800c950be80b8682ceaeb572356ade28366d876f079755308d1f0",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -11833,15 +12250,18 @@
         "action"
       ],
       "path": "/games/cldoom2dDOS.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldoom2ddos.html",
+      "imagePath": "/artwork/cldoom2ddos.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldoom2ddos.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "d7a97d0a6f5b851f13a27590d0346ee04306bd940e82558a5341448e5b114d1a",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -11923,15 +12343,18 @@
         "action"
       ],
       "path": "/games/cldoomzio.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldoomzio.html",
+      "imagePath": "/artwork/cldoomzio.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldoomzio.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "feb080d70ef2380c6955e003dc57af9a0c8df2218d69f08a0d2f81bea677cb4f",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -11941,15 +12364,18 @@
         "adventure"
       ],
       "path": "/games/cldoorscastle.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldoorscastle.html",
+      "imagePath": "/artwork/cldoorscastle.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldoorscastle.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "f16151952463eed8197c289c0ce6a2a7f95d5d8f1cc01d39f46a6644261df9cc",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -12121,15 +12547,18 @@
         "arcade"
       ],
       "path": "/games/cldrawclimber.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldrawclimber.html",
+      "imagePath": "/artwork/cldrawclimber.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldrawclimber.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "b5d638d1661167740c6420292ee79f305451a8d204b192c4be1c283850d2a1a3",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -12139,15 +12568,18 @@
         "puzzle"
       ],
       "path": "/games/cldrawtheline.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldrawtheline.html",
+      "imagePath": "/artwork/cldrawtheline.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldrawtheline.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "a96887d600128d4666348eca8178648493218accc7eca060a0b5fb175bb106da",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -12211,15 +12643,18 @@
         "horror"
       ],
       "path": "/games/cldreader.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldreader.html",
+      "imagePath": "/artwork/cldreader.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldreader.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "cc3bc2172a69a15b9cb3fc598e4294a8176c3774927b41e57609d3b14af0a7df",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -12229,15 +12664,18 @@
         "arcade"
       ],
       "path": "/games/cldriftboss.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldriftboss.html",
+      "imagePath": "/artwork/cldriftboss.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldriftboss.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "79db68aff1f6737750e408ccb006b24c68c1da4dbdd5c94bf5349ba8ea8f6075",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -12517,15 +12955,18 @@
         "sports"
       ],
       "path": "/games/clducklifespace.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clducklifespace.html",
+      "imagePath": "/artwork/clducklifespace.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clducklifespace.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "71bb1783abcf5f09abf6ee4c10ac05653dacdefe09786598a0384a17dc0e6969",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -12592,15 +13033,18 @@
         "action"
       ],
       "path": "/games/cldud.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldud.html",
+      "imagePath": "/artwork/cldud.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldud.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "12fa6ba073006a23a4c023d03f81929c210627dd4abfc864e44eae0f7973c670",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -12664,15 +13108,18 @@
         "casual"
       ],
       "path": "/games/cldumpling.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldumpling.html",
+      "imagePath": "/artwork/cldumpling.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldumpling.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "05934cd0998e8c3c2d59ea69796e3a09359c176a76e56c1686c01b84c11ca18b",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -12700,15 +13147,18 @@
         "arcade"
       ],
       "path": "/games/cldunedash.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldunedash.html",
+      "imagePath": "/artwork/cldunedash.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldunedash.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "38755d8aeb410241f3ee3cd08d68f95eb294bcc25d000ff9ea097c3cbfa9f4d5",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -12718,15 +13168,18 @@
         "strategy"
       ],
       "path": "/games/cldungeondeck.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldungeondeck.html",
+      "imagePath": "/artwork/cldungeondeck.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldungeondeck.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "a252e24ef82a4cb24606eda90a547fda01a228b43701afc59a4591c8b371ffd7",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -12754,15 +13207,18 @@
         "strategy"
       ],
       "path": "/games/cldungeonsanddegenerategamblers.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldungeonsanddegenerategamblers.html",
+      "imagePath": "/artwork/cldungeonsanddegenerategamblers.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldungeonsanddegenerategamblers.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "d6a514027405a77ca5726eaf10063b39bb1dc64ce53502efd240b9e3d6af5eb2",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -12772,15 +13228,18 @@
         "sports"
       ],
       "path": "/games/cldunkshot.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldunkshot.html",
+      "imagePath": "/artwork/cldunkshot.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldunkshot.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "4abc071b0995a437b2aab529c97a1d972d13c3d71980ade9ed0093ad18bb1a4d",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -12970,15 +13429,18 @@
         "arcade"
       ],
       "path": "/games/cleagleride.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cleagleride.html",
+      "imagePath": "/artwork/cleagleride.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cleagleride.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "cca409bcd8269bca3bf78a0851e90724fe39c47ee684f3746cca3d9a2957028e",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -13006,15 +13468,18 @@
         "racing"
       ],
       "path": "/games/clearntodie.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clearntodie.html",
+      "imagePath": "/artwork/clearntodie.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clearntodie.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "4363225ea22f1926b38027c3a1791175b95eae90f991607edfdd86f29130e444",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -13024,15 +13489,18 @@
         "racing"
       ],
       "path": "/games/clearntodie2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clearntodie2.html",
+      "imagePath": "/artwork/clearntodie2.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clearntodie2.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "30bfc800e33cc30e0e30452b3bd1dd6ea4ef0a39a7b00da1e673a1f1cb01e99b",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -13042,15 +13510,18 @@
         "action"
       ],
       "path": "/games/clearthtaken.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clearthtaken.html",
+      "imagePath": "/artwork/clearthtaken.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clearthtaken.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "a9ea36041e21931ebbf600cafeb593e28fa2e7648bb1e7000dc70d8bf1a41518",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -13060,15 +13531,18 @@
         "action"
       ],
       "path": "/games/clearthtaken2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clearthtaken2.html",
+      "imagePath": "/artwork/clearthtaken2.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clearthtaken2.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "d25b9dfcfbc57bd700d370913a41aa7cbd15e686a315ceb10ad5a457c369ef49",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {
@@ -34938,24 +35412,6 @@
       "blocker": null
     },
     {
-      "id": "# id",
-      "title": "title",
-      "categories": [
-        "categories"
-      ],
-      "path": "/games/# id.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "blocker": null
-    },
-    {
       "id": "cladofai",
       "title": "A Dance of Fire and Ice",
       "categories": [
@@ -35244,7 +35700,10 @@
       "imagePath": "/artwork/clblastronaut.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clblastronaut.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "c583160118df8ffe704c4c680711a2a57194d20aa89ad35b6f89ed590435b84e",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -35262,7 +35721,10 @@
       "imagePath": "/artwork/clblackknight.webp",
       "identityEvidence": "Captured from the actual game this repository serves at /games/clblackknight.html after it rendered its own screen in Chromium.",
       "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "7283f927e9661ae845146529f5058237ecf63081700dbdd8f8049ef846ce0950",
       "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
@@ -35310,15 +35772,18 @@
         "arcade"
       ],
       "path": "/games/clCartoonNetworkTableTennisUltimateTournament.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcartoonnetworktabletennisultimatetournament.html",
+      "imagePath": "/artwork/clcartoonnetworktabletennisultimatetournament.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcartoonnetworktabletennisultimatetournament.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "cbc3c419b5e49b255636044220c2d7c27e35b5ee4831ec1a3091aa120c0b022b",
+      "visualVerification": "verified 2026-11-26: Captured frame shows the actual game with its own title screen or recognizable gameplay.",
       "blocker": null
     },
     {

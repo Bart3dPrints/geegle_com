@@ -37,13 +37,16 @@ def catalog():
         if line and not line.startswith("#") and "|" in line:
             key, value = line.split("|", 1)
             exceptions[key] = value
+    # Same owner-authorized exclusion src/data/catalog.ts applies at runtime, so
+    # this manifest counts what the library actually shows.
+    excluded = {"clpolytrackbutnotflagged", "clpolytrackbutnotflagged-1"}
     order = []
     for name in sorted(os.listdir(raw)):
         if not name.endswith(".txt") or name == "path-exceptions.txt":
             continue
         for line in open(os.path.join(raw, name), encoding="utf-8"):
             parts = line.strip().split("|")
-            if len(parts) < 3 or not parts[0] or parts[0] in titles:
+            if len(parts) < 3 or not parts[0] or parts[0].startswith("#") or parts[0] in titles or parts[0] in excluded:
                 continue
             titles[parts[0]] = parts[1]
             cats[parts[0]] = parts[2]
