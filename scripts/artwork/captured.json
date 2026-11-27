@@ -3586,6 +3586,28 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clblackjack.webp"
     },
+    "clblackjackbattle": {
+      "assetSha256": "bab659ca47c8a0152fad4500851c7c3f3a39b445ecedb948d875fb1fb21cae9c",
+      "frame": "clblackjackbattle@8.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clblackjackbattle.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 68714,
+        "coverage": 0.974,
+        "dominant": 0.435,
+        "edges": 13.24,
+        "stddev": 75.99
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clblackjackbattle.html",
+      "title": "Blackjack Battle",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clblackjackbattle.webp"
+    },
     "clblackknight": {
       "assetSha256": "7283f927e9661ae845146529f5058237ecf63081700dbdd8f8049ef846ce0950",
       "frame": "clblackknight@3.png",
@@ -4130,6 +4152,28 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clbtd1.webp"
     },
+    "clbtd5": {
+      "assetSha256": "a1a9e050b1ba7a2edc99359a6a16653bf982a548f2b2c3bb756dec20eb8a50d3",
+      "frame": "clbtd5@8.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbtd5.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 5474,
+        "coverage": 0.752,
+        "dominant": 0.268,
+        "edges": 3.34,
+        "stddev": 66.02
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbtd5.html",
+      "title": "BTD 5",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clbtd5.webp"
+    },
     "clbtts": {
       "assetSha256": "43dc8898ee8df5995c6de5c10c6d4ceb249a1cbf4c964fbb2e2389760884f9cb",
       "frame": "clbtts@1.png",
@@ -4205,6 +4249,28 @@
       "title": "Bubble Tanks 2",
       "type": "gameplay-screenshot",
       "url": "/artwork/clbubbletanks2.webp"
+    },
+    "clbubbletankstd": {
+      "assetSha256": "3846a14141641d70e97975137a3d3a643c76da6bcfa821fc61fb86c0fcf5ddd1",
+      "frame": "clbubbletankstd@6.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbubbletankstd.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 235,
+        "coverage": 0.752,
+        "dominant": 0.124,
+        "edges": 2.98,
+        "stddev": 54.18
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbubbletankstd.html",
+      "title": "Bubble Tanks TD",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clbubbletankstd.webp"
     },
     "clbuckshotroulette": {
       "assetSha256": "085cdc9d3a10d2661d79913e477df44d8552e967946ab26cd791133bc291c839",
@@ -5570,6 +5636,28 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/cldefendyournuts.webp"
     },
+    "cldefendyournuts2": {
+      "assetSha256": "37cbd2b47c32c2df272ade9afa267214e5a54cccec1860ab38e69438531bf2a2",
+      "frame": "cldefendyournuts2@8.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldefendyournuts2.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 9592,
+        "coverage": 0.974,
+        "dominant": 0.032,
+        "edges": 11.86,
+        "stddev": 51.07
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldefendyournuts2.html",
+      "title": "Defend Your Nuts 2",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cldefendyournuts2.webp"
+    },
     "cldeltarune": {
       "assetSha256": "a9ea935e1d19fe2555a76cb9b8b019da4707f3e0c2bedac78a2a1cb6eb45d700",
       "frame": "cldeltarune@1.png",
@@ -5862,6 +5950,28 @@
       "title": "Doors Castle",
       "type": "gameplay-screenshot",
       "url": "/artwork/cldoorscastle.webp"
+    },
+    "cldouchebaglife": {
+      "assetSha256": "c7f9d02ef250bde4e1b88bf2ed574de625d68388d23c1f820362f5b0b4d8b8f0",
+      "frame": "cldouchebaglife@8.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldouchebaglife.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 29579,
+        "coverage": 0.258,
+        "dominant": 0.346,
+        "edges": 7.03,
+        "stddev": 34.51
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldouchebaglife.html",
+      "title": "Douchebag Life",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cldouchebaglife.webp"
     },
     "cldrawclimber": {
       "assetSha256": "b5d638d1661167740c6420292ee79f305451a8d204b192c4be1c283850d2a1a3",

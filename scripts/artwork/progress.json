@@ -2,11 +2,11 @@
   "generated": "scripts/artwork/build-progress.py",
   "summary": {
     "catalogEntries": 2710,
-    "verified": 989,
+    "verified": 994,
     "awaitingReview": 0,
     "rejected": 0,
     "blocked": 0,
-    "notStarted": 1721
+    "notStarted": 1716
   },
   "entries": [
     {
@@ -4843,17 +4843,18 @@
         "casual"
       ],
       "path": "/games/clblackjackbattle.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clblackjackbattle.html",
+      "imagePath": "/artwork/clblackjackbattle.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clblackjackbattle.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "bab659ca47c8a0152fad4500851c7c3f3a39b445ecedb948d875fb1fb21cae9c",
+      "visualVerification": "verified 2026-11-27: Captured title screen shows the actual game.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -5534,17 +5535,18 @@
         "strategy"
       ],
       "path": "/games/clbtd5.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbtd5.html",
+      "imagePath": "/artwork/clbtd5.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbtd5.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "a1a9e050b1ba7a2edc99359a6a16653bf982a548f2b2c3bb756dec20eb8a50d3",
+      "visualVerification": "verified 2026-11-27: Captured menu shows the actual game.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -6545,17 +6547,18 @@
         "strategy"
       ],
       "path": "/games/clbubbletankstd.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clbubbletankstd.html",
+      "imagePath": "/artwork/clbubbletankstd.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clbubbletankstd.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "3846a14141641d70e97975137a3d3a643c76da6bcfa821fc61fb86c0fcf5ddd1",
+      "visualVerification": "verified 2026-11-27: Captured menu shows the actual game.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -12899,17 +12902,18 @@
         "action"
       ],
       "path": "/games/cldefendyournuts2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldefendyournuts2.html",
+      "imagePath": "/artwork/cldefendyournuts2.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldefendyournuts2.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "37cbd2b47c32c2df272ade9afa267214e5a54cccec1860ab38e69438531bf2a2",
+      "visualVerification": "verified 2026-11-27: Captured menu shows the actual game.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },
@@ -14076,17 +14080,18 @@
         "simulation"
       ],
       "path": "/games/cldouchebaglife.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldouchebaglife.html",
+      "imagePath": "/artwork/cldouchebaglife.webp",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldouchebaglife.html after it rendered its own screen in Chromium.",
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
       "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
+      "sha256": "c7f9d02ef250bde4e1b88bf2ed574de625d68388d23c1f820362f5b0b4d8b8f0",
+      "visualVerification": "verified 2026-11-27: Captured title screen shows the actual game.",
       "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
       ],
       "blocker": null
     },

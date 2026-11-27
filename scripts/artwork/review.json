@@ -251,6 +251,12 @@
     "status": "rejected",
     "title": "Five Nights at Freddy's"
   },
+  "clFNAF2": {
+    "reason": "Blank frame, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Five Nights at Freddy's 2"
+  },
   "clGXClient": {
     "reason": "Captured frame is a generic resolution selector with no identifying game content.",
     "reviewed": "2026-11-26",
@@ -1043,11 +1049,23 @@
     "status": "verified",
     "title": "Blackjack"
   },
+  "clblackjackbattle": {
+    "reason": "Captured title screen shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Blackjack Battle"
+  },
   "clblackknight": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Black Knight"
+  },
+  "clblackout": {
+    "reason": "Press-enter gate, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Blackout"
   },
   "clblacksmithlab": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1337,6 +1355,12 @@
     "status": "verified",
     "title": "Bloons Tower Defense 1"
   },
+  "clbtd5": {
+    "reason": "Captured menu shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "BTD 5"
+  },
   "clbtts": {
     "reason": "Captured title screen shows the actual game.",
     "reviewed": "2026-11-27",
@@ -1372,6 +1396,12 @@
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Bubble Tanks 3"
+  },
+  "clbubbletankstd": {
+    "reason": "Captured menu shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Bubble Tanks TD"
   },
   "clbuckshotroulette": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2147,6 +2177,12 @@
     "status": "verified",
     "title": "Defend Your Nuts"
   },
+  "cldefendyournuts2": {
+    "reason": "Captured menu shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Defend Your Nuts 2"
+  },
   "cldeltarune": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -2308,6 +2344,12 @@
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "DOSWasmx"
+  },
+  "cldouchebaglife": {
+    "reason": "Captured title screen shows the actual game.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Douchebag Life"
   },
   "cldouchebagworkout2": {
     "reason": "Error page (\"Something went wrong\").",
@@ -8567,6 +8609,12 @@
     "status": "rejected",
     "title": "Troll Face Quest 10"
   },
+  "cltrollfacequest11": {
+    "reason": "Error page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Troll Face Quest 11"
+  },
   "cltrucksim": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -9172,6 +9220,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Helios Offline"
+  },
+  "lime": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Lime"
   },
   "minecraft": {
     "reason": "Captured the actual game menu.",
