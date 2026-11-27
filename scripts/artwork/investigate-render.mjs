@@ -66,7 +66,7 @@ function save() {
   writeFileSync(REPORT, JSON.stringify(report, null, 2) + '\n');
 }
 
-const browser = await chromium.launch({
+const launchOptions = {
   headless: process.env.HEADED ? false : true,
   args: [
     '--use-gl=angle',
@@ -78,7 +78,22 @@ const browser = await chromium.launch({
     '--disable-renderer-backgrounding',
     '--disable-backgrounding-occluded-windows',
   ],
-});
+};
+
+let browser = await chromium.launch(launchOptions);
+
+// A heavy build can wedge the shared browser. Relaunching per context keeps a
+// single bad game from failing the rest of the queue (and is not evidence that
+// the game itself is broken).
+async function freshContext(options) {
+  try {
+    return await browser.newContext(options);
+  } catch {
+    await browser.close().catch(() => {});
+    browser = await chromium.launch(launchOptions);
+    return browser.newContext(options);
+  }
+}
 
 // Wrappers call into a host API that only exists inside the Geegle player. A
 // stub keeps the served page from throwing before its own engine starts; it
@@ -150,7 +165,7 @@ async function investigate(id) {
     id,
     title: row?.title ?? null,
     path: row?.path ?? null,
-    launchUrl: row ? BASE + row.path : null,
+    launchUrl: row ? (/^https?:\/\//.test(row.path) ? row.path : BASE + row.path) : null,
     startedAt: new Date().toISOString(),
     observedSeconds: 0,
     classification: null,
@@ -169,7 +184,7 @@ async function investigate(id) {
     return entry;
   }
 
-  const context = await browser.newContext({ viewport: { width: 1280, height: 720 } });
+  const context = await freshContext({ viewport: { width: 1280, height: 720 } });
   await context.addInitScript(HOST_STUB);
   const page = await context.newPage();
   page.on('console', (message) => {

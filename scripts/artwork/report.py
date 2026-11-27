@@ -142,12 +142,15 @@ def main():
     lines.append("| Cherry Proxy | `/artwork/services/cherry.webp` |")
     lines.append("| Achroma Proxy | `/artwork/services/achroma.webp` |")
     lines.append("| Bull-33 | `/artwork/services/bull-33.webp` |")
+    lines.append("| Soluos Proxy | `/artwork/services/soluos.webp` |")
+    lines.append("| Xylora | `/artwork/services/xylora.webp` |")
     lines.append("")
-    lines.append("Unassigned, deliberately: `xylora.webp` (the owner's Xylora screenshot, with no Xylora "
-                 "endpoint anywhere in the repository to attach it to) and "
-                 "`unidentified-dark-blue.webp` (a clock-and-icons desktop with no branding, so assigning it "
-                 "to a named service would be a guess). Astra Proxy was removed from the catalog and its "
-                 "search results; its Bull-33 endpoints moved to the Bull-33 card instead of being relabelled.")
+    lines.append("The previously unidentified dark-blue screenshot was confirmed by the owner as Soluos and is "
+                 "now stored as `soluos.webp` and shown on the Soluos card. Xylora was missing from the "
+                 "catalog even though this repository already ships its wrapper "
+                 "(`public/games/xylora.html`), so the card was added with that supported local wrapper as "
+                 "its only endpoint. Astra Proxy was removed from the catalog and its search results; its "
+                 "Bull-33 endpoints moved to the Bull-33 card instead of being relabelled.")
     lines.append("")
     lines.append("## Blocked")
     lines.append("")
@@ -169,8 +172,8 @@ def main():
         lines.append("Resume commands:")
         lines.append("")
         lines.append("```sh")
-        lines.append("node scripts/artwork/capture-screens.mjs --out /tmp/artshots-large --concurrency 3")
-        lines.append("python3 scripts/artwork/process-shots.py --staging /tmp/artshots-large")
+        lines.append("GEEGLE_BASE=http://127.0.0.1:5173 node scripts/artwork/investigate-render.mjs --seconds 15 --concurrency 8 --limit 320 --out /tmp/artshots7")
+        lines.append("python3 scripts/artwork/process-shots.py --staging /tmp/artshots7")
         lines.append("python3 scripts/artwork/audit-artwork.py")
         lines.append("python3 scripts/artwork/build-progress.py")
         lines.append("```")

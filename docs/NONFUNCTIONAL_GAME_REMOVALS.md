@@ -11,7 +11,8 @@ A game is removed only when **all** of these hold:
 1. Independent artwork research (exact title, alternate names, developer,
    publisher, editions) found no usable image.
 2. Its actual served HTML build was executed in a real browser.
-3. It was observed for approximately ten minutes.
+3. It was observed for the owner's current 10–15 second window (the earlier
+   ten-minute requirement was cancelled).
 4. The final rendering was still completely blank or nonfunctional.
 5. No meaningful progress happened between the initial and final rendering.
 6. A clean retry confirmed the result.

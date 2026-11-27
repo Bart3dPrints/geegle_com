@@ -1487,6 +1487,12 @@
     "status": "verified",
     "title": "Cave Crawler"
   },
+  "clcellardoor": {
+    "reason": "Every qualifying frame was an error page (\"Something went wrong\", a 404 loader), which is never acceptable artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Cellar Door"
+  },
   "clcelltosingularity": {
     "reason": "Every qualifying frame carried a consent, age, profanity, legal or ad-block dialog over the content.",
     "reviewed": "2026-11-27",
@@ -1636,6 +1642,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Clear Vision 3"
+  },
+  "clclmadnessambulation": {
+    "reason": "Every qualifying frame was an error page (\"Something went wrong\", a 404 loader), which is never acceptable artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Madness Ambulation"
   },
   "clclubbytheseal": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1829,6 +1841,12 @@
     "status": "verified",
     "title": "Crazy Motorcycle"
   },
+  "clcrazypenguincatapult": {
+    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Crazy Penguin Catapult"
+  },
   "clcrazyplanelanding": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -1841,17 +1859,41 @@
     "status": "verified",
     "title": "Creature Card Idle"
   },
+  "clcreeperworld2": {
+    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Creeper World 2"
+  },
   "clcrossyroad": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Crossy Road"
   },
+  "clcrunchball3000": {
+    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Crunch Ball 3000"
+  },
   "clcs1-6": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "CS 1.6"
+  },
+  "clcs6": {
+    "reason": "Captured the CS6 game menu with its PLAY control.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "CS 6"
+  },
+  "clcsgoclicker": {
+    "reason": "Every qualifying frame carried a consent, language, license or age dialog over the content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "CS:GO Clicker"
   },
   "clcurveball-1": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1883,6 +1925,12 @@
     "status": "verified",
     "title": "Dad N Me"
   },
+  "cldaggerfall": {
+    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Daggerfall"
+  },
   "cldandysworldclicker": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -1895,6 +1943,18 @@
     "status": "verified",
     "title": "Dash Arena"
   },
+  "cldashio": {
+    "reason": "Captured 3D gameplay with the Dash Pass HUD.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dashio"
+  },
+  "cldashmetry": {
+    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Dashmetry"
+  },
   "cldatewithiraq": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -1906,6 +1966,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "DB Sniper"
+  },
+  "cldbzdevolution": {
+    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "DBZ Devolution"
   },
   "cldeadfrontieroutbreak": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1949,6 +2015,18 @@
     "status": "verified",
     "title": "Death Run"
   },
+  "cldecision": {
+    "reason": "Every qualifying frame was an error page (\"Something went wrong\", a 404 loader), which is never acceptable artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Decision"
+  },
+  "cldecision3": {
+    "reason": "Every qualifying frame was an error page (\"Something went wrong\", a 404 loader), which is never acceptable artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Decision 3"
+  },
   "cldeepersleep": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -1960,6 +2038,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Deepest Sword"
+  },
+  "cldefendyourcastle": {
+    "reason": "Captured the DEFEND YOUR CASTLE title art and its New Game menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Defend Your Castle"
   },
   "cldefendyournuts": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1979,11 +2063,23 @@
     "status": "verified",
     "title": "Deltarune"
   },
+  "cldeltatraveler": {
+    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Deltatraveler"
+  },
   "cldemolitionderbycrashracing": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Demolition Derby Crash Racing"
+  },
+  "cldemonbluff": {
+    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Demon Bluff"
   },
   "cldiamondhollow": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -1991,17 +2087,47 @@
     "status": "verified",
     "title": "Diamond Hollow"
   },
+  "cldiamondhollow2": {
+    "reason": "Captured the Diamond Hollow II title menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Diamond Hollow 2"
+  },
   "cldieinthedungeon": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Die in the Dungeon"
   },
+  "cldigdeep": {
+    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Dig Deep"
+  },
+  "cldimensionalincident": {
+    "reason": "Captured the Dimension Incident title menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dimensional Incident"
+  },
   "cldinorun": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Dino Run"
+  },
+  "cldinorunenterplanetd": {
+    "reason": "Captured the Dino Run 2 title art and Play button.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dino Run: Enter Planet D"
+  },
+  "cldinorunmarathonofdoom": {
+    "reason": "Captured the Dino Run: Marathon of Doom title card.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dino Run: Marathon of Doom"
   },
   "cldoblox": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2045,6 +2171,12 @@
     "status": "verified",
     "title": "Don't Escape 3"
   },
+  "cldoodlejump": {
+    "reason": "The only frame was a game-over sketch with no recognizable title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Doodle Jump"
+  },
   "cldoodlejumpgoober": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
@@ -2081,11 +2213,35 @@
     "status": "verified",
     "title": "Doors Castle"
   },
+  "cldoswasmx": {
+    "reason": "Captured the DOS Wasm X application interface.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "DOSWasmx"
+  },
   "cldouchebaglife": {
     "reason": "Captured title screen shows the actual game.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Douchebag Life"
+  },
+  "cldragonquest5ds": {
+    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Dragon Quest 5 DS"
+  },
+  "cldragonquestix": {
+    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Dragon Quest IX"
+  },
+  "cldragonxclient": {
+    "reason": "Captured the Dragon Client launcher profile screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dragon X Client"
   },
   "cldrawclimber": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2117,11 +2273,29 @@
     "status": "verified",
     "title": "Drift Boss"
   },
+  "cldrivemady": {
+    "reason": "Captured the Drive Mad / Fancade title card.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Drive Mad Y"
+  },
   "cldriverussia": {
     "reason": "Wrapper-declared artwork for this title (game asset) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Drive Russia"
+  },
+  "clducklfe5": {
+    "reason": "Every qualifying frame carried a consent, language, license or age dialog over the content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Duck Life 5"
+  },
+  "clducklife3": {
+    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Duck Life 3"
   },
   "clducklifespace": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2141,11 +2315,29 @@
     "status": "verified",
     "title": "Dud"
   },
+  "cldukenukem2": {
+    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Duke Nukem 2"
+  },
+  "cldumbwaystodie": {
+    "reason": "Captured the Dumb Ways to Die title screen with Start.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dumb Ways to Die"
+  },
   "cldumpling": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Dumpling"
+  },
+  "cldunebuggy": {
+    "reason": "Captured the Miniclip Dune Buggy title screen with Play.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dune Buggy"
   },
   "cldunedash": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2158,6 +2350,12 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Dungeon Deck"
+  },
+  "cldungeonraid": {
+    "reason": "Captured the Dungeon Raid title menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Dungeon Raid"
   },
   "cldungeonsanddegenerategamblers": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2176,6 +2374,84 @@
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Eaglercraft Alpha 1.2.6 Offline"
+  },
+  "cleaglercraft-beta-1-3-offline": {
+    "reason": "Captured the Eaglercraft launcher profile screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Eaglercraft Beta 1.3 Offline"
+  },
+  "cleaglercraft-beta-13-offline": {
+    "reason": "Captured the Eaglercraft launcher profile screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Eaglercraft Beta 1.3 Offline"
+  },
+  "cleaglercraft-indev-offline-1": {
+    "reason": "Every qualifying frame carried a consent, language, license or age dialog over the content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Eaglercraft Indev Offline"
+  },
+  "cleaglercraft152": {
+    "reason": "Every qualifying frame carried a consent, language, license or age dialog over the content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Eaglercraft 1.5.2"
+  },
+  "cleaglercraftl_19_v0_7_0_offline_signed-1": {
+    "reason": "Captured the Eaglercraft launcher profile screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Eaglercraft 1.19 v0.7.0 Offline"
+  },
+  "cleaglercraftlite": {
+    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Eaglercraft Lite"
+  },
+  "cleaglercraftnebula": {
+    "reason": "Every qualifying frame carried a consent, language, license or age dialog over the content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Eaglercraft Nebula"
+  },
+  "cleaglercraftshadow": {
+    "reason": "Every qualifying frame carried a consent, language, license or age dialog over the content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Eaglercraft Shadow"
+  },
+  "cleaglercraftsky": {
+    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Eaglercraft Sky"
+  },
+  "cleaglercraftx-188u29": {
+    "reason": "Captured the Eaglercraft launcher profile screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Eaglercraft X 1.8.8 U29"
+  },
+  "cleaglercraftx188-u29": {
+    "reason": "Captured the Eaglercraft launcher profile screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Eaglercraft X 1.8.8 (U29)"
+  },
+  "cleaglercraftz_1112-1": {
+    "reason": "Captured the Eaglercraft launcher profile screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Eaglercraft Z 1.12"
+  },
+  "cleaglerforge": {
+    "reason": "Captured the EagerForge mod manager interface.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "EaglerForge"
   },
   "cleagleride": {
     "reason": "Captured frame shows the actual game with its own title screen or recognizable gameplay.",
@@ -2218,6 +2494,30 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Ecco the Dolphin"
+  },
+  "cledelweiss": {
+    "reason": "Captured the Edelweiss title menu.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Edelweiss"
+  },
+  "cleffinghail": {
+    "reason": "Captured the Effing Hail title page.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Effing Hail"
+  },
+  "cleffingmachines": {
+    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Effing Machines"
+  },
+  "cleffingworms": {
+    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Effing Worms"
   },
   "cleffingzombies": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -2273,6 +2573,12 @@
     "status": "verified",
     "title": "Endacopia"
   },
+  "clendlesswar4": {
+    "reason": "Captured the Endless War 4 title art.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Endless War 4"
+  },
   "clendlesswar5wow": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -2297,17 +2603,41 @@
     "status": "verified",
     "title": "Escalating Duel"
   },
+  "clescaperoad": {
+    "reason": "Captured the Escape Road city view with its start prompt.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Escape Road"
+  },
+  "clescaperoad3": {
+    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Escape Road 3"
+  },
   "clescaperoadcity2": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Escape Road City 2"
   },
+  "clescapeschoolduel": {
+    "reason": "Captured the Escape School Duel title art and mode buttons.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Escape School Duel"
+  },
   "cleugeneslife": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Eugene's Life"
+  },
+  "cleurovisionsim": {
+    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Eurovision Sim"
   },
   "clevilglitch": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -2345,11 +2675,23 @@
     "status": "verified",
     "title": "Fall Guys"
   },
+  "clfallout": {
+    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Fallout"
+  },
   "clfancypantsadventure": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Fancy Pants Adventure"
+  },
+  "clfancypantsadventure2": {
+    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Fancy Pants Adventure 2"
   },
   "clfancypantsadventure3": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -2369,11 +2711,23 @@
     "status": "verified",
     "title": "Fashion Battle"
   },
+  "clfattygenius": {
+    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Fatty Genius"
+  },
   "clfearassessment": {
     "reason": "Wrapper-declared artwork for this title (official icon) matched the catalog name and was visually checked against it.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Fear Assessment"
+  },
+  "clfearstofathomhomealone": {
+    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Fears to Fathom: Home Alone"
   },
   "clfeedthevoid": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
@@ -2398,6 +2752,12 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Feed Us 5"
+  },
+  "clffaf": {
+    "reason": "Every qualifying frame was a publisher, portal or engine splash, not the game's own screen.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "FFAF"
   },
   "clffsonic1": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -2441,17 +2801,47 @@
     "status": "verified",
     "title": "Final Earth 2"
   },
+  "clfinalfantasyix": {
+    "reason": "Every qualifying frame was still a loading screen or a half-loaded engine frame inside the 15-second window.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Final Fantasy IX"
+  },
+  "clfinalninja": {
+    "reason": "Captured the Final Ninja logo title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Final Ninja"
+  },
   "clfindthealien": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Find the Alien"
   },
+  "clfireblob": {
+    "reason": "Captured Fireblob gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Fire Blob"
+  },
   "clfireboyandwatergirl": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Fireboy and Watergirl"
+  },
+  "clfireboyandwatergirl2": {
+    "reason": "Captured the Fireboy and Watergirl Light Temple title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Fireboy and Watergirl 2"
+  },
+  "clfireboyandwatergirl3": {
+    "reason": "Captured the Fireboy and Watergirl Ice Temple title screen.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Fireboy and Watergirl 3"
   },
   "clfireboyandwatergirl5": {
     "reason": "The fetched asset is the Google logo (ssl.gstatic.com branding image), not this game's artwork.",
@@ -6719,6 +7109,12 @@
     "status": "verified",
     "title": "Zuma Shooter"
   },
+  "code-editor": {
+    "reason": "Captured the app's own code editor page.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Code Editor"
+  },
   "drive-mad": {
     "reason": "Captured title screen shows the actual game.",
     "reviewed": "2026-11-27",
@@ -6779,6 +7175,18 @@
     "status": "verified",
     "title": "Snow Rider 3D"
   },
+  "soundboard": {
+    "reason": "The captured frame is a nearly empty toolbar with no recognizable content; kept out until a better image is found.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Soundboard"
+  },
+  "suggestions": {
+    "reason": "Captured the app's own Suggestions form page.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Suggestions"
+  },
   "supremeduelistfix": {
     "reason": "Captured character screen from the actual game.",
     "reviewed": "2026-11-27",
@@ -6790,5 +7198,11 @@
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Thief Puzzle"
+  },
+  "youtube": {
+    "reason": "Official YouTube logo from youtube.com branding asset, matching the YouTube app card.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "YouTube"
   }
 }
