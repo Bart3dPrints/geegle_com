@@ -5879,6 +5879,12 @@
     "status": "rejected",
     "title": "Pokemon Volume 3"
   },
+  "clpokemonvolume4": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pokemon Volume 4"
+  },
   "clpokeodyssey": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
@@ -5909,11 +5915,23 @@
     "status": "rejected",
     "title": "Pokemon Recharged Pink"
   },
+  "clpokerechargedyellow": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Pokemon Recharged Yellow"
+  },
   "clpokerecordkeepers": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Pokemon Record Keepers"
+  },
+  "clpokerenegadeplat": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pokemon Renegade Platinum"
   },
   "clpokerocketedition": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -6035,11 +6053,71 @@
     "status": "rejected",
     "title": "Processor Tycoon"
   },
+  "clprofessorlaytonandthecuriousvillage": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Professor Layton and the Curious Village"
+  },
+  "clpumpkinrun": {
+    "reason": "Near-black frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Pumpkin Run"
+  },
+  "clpunchthetrump": {
+    "reason": "Unrelated splash with no game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Punch the Trump"
+  },
   "clpuppethockey": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Puppet Hockey"
+  },
+  "clpuppetmaster": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Puppet Master"
+  },
+  "clpushyourluck": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Push Your Luck"
+  },
+  "clpvz": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Plants vs. Zombies"
+  },
+  "clpvz2gardenless": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "PvZ 2: Gardenless"
+  },
+  "clquake": {
+    "reason": "Error page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Quake"
+  },
+  "clquantumclicker": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Quantum Clicker"
+  },
+  "clqwop": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "QWOP"
   },
   "clracemaster3d": {
     "reason": "Portal logo (SAWGAMES), not the game.",
@@ -6047,11 +6125,137 @@
     "status": "rejected",
     "title": "Race Master 3D"
   },
+  "clraftwars": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Raft Wars"
+  },
+  "clraftwars2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Raft Wars 2"
+  },
+  "clragdoll-io": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ragdoll.io"
+  },
   "clragdollachivement": {
     "reason": "Watermarked generic sketch, not this title's artwork.",
     "reviewed": "2026-11-27",
     "status": "rejected",
     "title": "Ragdoll Achievement"
+  },
+  "clragdollarchers": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ragdoll Archers"
+  },
+  "clragdolldrop": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ragdoll Drop"
+  },
+  "clragdollhit": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ragdoll Hit"
+  },
+  "clragdollrunners": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ragdoll Runners"
+  },
+  "clragdollsoccer": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ragdoll Soccer"
+  },
+  "clragollhit": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ragdoll Hit"
+  },
+  "clrainbowsixalt": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Rainbow Six (Alt)"
+  },
+  "clraldiscrackhouse": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Raldis Crack House"
+  },
+  "clray1": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Ray 1"
+  },
+  "clraze": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Raze"
+  },
+  "clraze2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Raze 2"
+  },
+  "clre3": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Resident Evil 3"
+  },
+  "clreachthecore": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Reach the Core"
+  },
+  "clreacticore": {
+    "reason": "Instructional page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Reacticore"
+  },
+  "clrealflightsim": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Real Flight Sim"
+  },
+  "clrebornclient": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Reborn Client"
+  },
+  "clrebuild": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rebuild"
+  },
+  "clrebuild2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rebuild 2"
   },
   "clrecoil": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -6059,11 +6263,41 @@
     "status": "verified",
     "title": "Recoil"
   },
+  "clredball3": {
+    "reason": "Near-empty frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Red Ball 3"
+  },
   "clredball4": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Red Ball 4"
+  },
+  "clredball4vol2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Red Ball 4 Vol 2"
+  },
+  "clredball4vol3": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Red Ball 4 Vol 3"
+  },
+  "clredhanded": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Red Handed"
+  },
+  "clredtierunner": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Red Tie Runner"
   },
   "clredvsbluewar": {
     "reason": "Publisher logo, not the game.",
@@ -6071,11 +6305,137 @@
     "status": "rejected",
     "title": "Red vs Blue War"
   },
+  "clreignofcentipede": {
+    "reason": "Portal logo (Max Games), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Reign of Centipede"
+  },
+  "clrepobad": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Repo Bad"
+  },
+  "clresentclient": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Resent Client"
+  },
+  "clresidentevil": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Resident Evil"
+  },
+  "clresidentevil2d1": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Resident Evil 2D 1"
+  },
+  "clresidentevil2d2": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Resident Evil 2D 2"
+  },
+  "clresizer": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Resizer"
+  },
+  "clresortempire": {
+    "reason": "Portal splash (GamesFree), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Resort Empire"
+  },
+  "clretrobowlcollege": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Retro Bowl College"
+  },
+  "clretrohighway": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Retro Highway"
+  },
+  "clreturnman": {
+    "reason": "Portal logo (Arcade), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Return Man"
+  },
+  "clreturnman2": {
+    "reason": "Portal logo (Arcade), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Return Man 2"
+  },
+  "clreturntoriddleschool": {
+    "reason": "Near-black frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Return to Riddle School"
+  },
+  "clrevolutionidle": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Revolution Idle"
+  },
   "clrewrite2": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Rewrite 2"
+  },
+  "clrh": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Rh"
+  },
+  "clrhythymymheaven": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Rhythm Heaven (Alt)"
+  },
+  "clriddle": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Riddle"
+  },
+  "clriddleschool": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Riddle School"
+  },
+  "clriddleschool2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Riddle School 2"
+  },
+  "clriddleschool3": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Riddle School 3"
+  },
+  "clriddleschool445544444--444-444": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Riddle School (Alt)"
   },
   "clrollyvortex": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
