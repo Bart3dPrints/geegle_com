@@ -3,7 +3,7 @@
 // to the library without navigating.
 
 import { useEffect, useRef } from 'react';
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 
 export const PROXY_NOTICE_TEXT =
   'Please ignore and exit out of any pop-ups or redirects from these proxies.';
@@ -16,6 +16,7 @@ export function ProxyNotice({
   onCancel: () => void;
 }) {
   const confirmRef = useRef<HTMLButtonElement>(null);
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
     confirmRef.current?.focus();
@@ -36,9 +37,10 @@ export function ProxyNotice({
         aria-modal="true"
         aria-labelledby="proxy-notice-text"
         className="card w-full max-w-md p-6"
-        initial={{ opacity: 0, y: 6 }}
+        initial={reduceMotion ? false : { opacity: 0, y: 6 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.16, ease: 'easeOut' }}
+        exit={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 6 }}
+        transition={{ duration: reduceMotion ? 0 : 0.16, ease: 'easeOut' }}
       >
         <p id="proxy-notice-text" className="mb-5 text-sm">
           {PROXY_NOTICE_TEXT}

@@ -1,6 +1,8 @@
-// Release history: merged pull requests only, newest first, with the real
-// merge date and Eastern time. Plain grayscale text, no decoration.
+// Release history: merged pull requests only, with the real merge date and
+// Eastern time. Both sort directions are offered; newest first is the default.
+// Plain grayscale text, no decoration.
 
+import { useMemo, useState } from 'react';
 import data from '../data/changelog.json';
 import { formatEastern, type ChangelogEntry } from '../lib/changelog';
 
@@ -8,17 +10,42 @@ const ENTRIES = (data.entries as ChangelogEntry[]).filter(
   (entry) => entry.mergedAt && entry.summary && Number.isInteger(entry.pr)
 );
 
+type SortOrder = 'newest' | 'oldest';
+
 export function Changelog() {
+  const [order, setOrder] = useState<SortOrder>('newest');
+
+  const entries = useMemo(() => {
+    const sorted = [...ENTRIES].sort((a, b) => {
+      const delta = Date.parse(a.mergedAt) - Date.parse(b.mergedAt);
+      return delta !== 0 ? delta : a.pr - b.pr;
+    });
+    return order === 'newest' ? sorted.reverse() : sorted;
+  }, [order]);
+
   return (
     <section aria-labelledby="settings-changelog">
-      <h3 id="settings-changelog" className="mb-1 text-sm font-medium">
-        Changelog
-      </h3>
-      <p className="mb-4 text-xs text-neutral-500 dark:text-neutral-400">
-        Newest first. Times are Eastern.
-      </p>
+      <div className="mb-4 flex items-center justify-between gap-2">
+        <h3 id="settings-changelog" className="text-sm font-medium">
+          Changelog
+        </h3>
+        <div className="flex items-center gap-2">
+          <label className="sr-only" htmlFor="changelog-order">
+            Sort releases
+          </label>
+          <select
+            id="changelog-order"
+            className="input w-auto py-1 text-xs"
+            value={order}
+            onChange={(event) => setOrder(event.target.value as SortOrder)}
+          >
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+          </select>
+        </div>
+      </div>
       <ol className="space-y-4">
-        {ENTRIES.map((entry) => {
+        {entries.map((entry) => {
           const { date, time } = formatEastern(entry.mergedAt);
           return (
             <li

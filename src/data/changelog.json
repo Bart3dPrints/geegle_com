@@ -2,6 +2,11 @@
   "source": "github:Bart3dPrints/geegle_com",
   "entries": [
     {
+      "pr": 14,
+      "mergedAt": "2026-11-27T21:38:12Z",
+      "summary": "Game cards across the catalogue now show researched artwork, including every title that could be verified."
+    },
+    {
       "pr": 13,
       "mergedAt": "2026-11-27T17:03:11Z",
       "summary": "Reopen blocked artwork entries, add service artwork and remove Astra"

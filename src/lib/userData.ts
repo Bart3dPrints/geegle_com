@@ -4,6 +4,11 @@ import { supabase, isSupabaseConfigured, T } from './supabase';
 import type { OpResult, ThemePreference } from '../types';
 import { parseAppearance, type LandingAppearance } from '../landing/appearance';
 import {
+  DEFAULT_PERSONALIZATION,
+  parsePersonalization,
+  type Personalization,
+} from './personalization';
+import {
   DEFAULT_TAB_IDENTITY,
   readTabIdentityLocal,
   validateTabIdentity,
@@ -162,21 +167,35 @@ export async function loadLibraryNoticeDismissed(userId: string | null): Promise
   return error ? { ok: false, error: error.message } : { ok: true, data: data?.value === true };
 }
 
-/** Solid neutral appearance: background and card/surface colours only. */
-export interface AppearanceSettings {
+/**
+ * Appearance and personalization. Theme mode and the neutral surface colours
+ * come first; accent, typeface, text colour, wallpaper and the optional clock
+ * and date widgets follow with their defaults.
+ */
+export interface AppearanceSettings extends Personalization {
   mode: ThemePreference;
   background: string | null;
   card: string | null;
 }
 
-export const DEFAULT_APPEARANCE_SETTINGS: AppearanceSettings = { mode: 'system', background: null, card: null };
+export const DEFAULT_APPEARANCE_SETTINGS: AppearanceSettings = {
+  mode: 'system',
+  background: null,
+  card: null,
+  ...DEFAULT_PERSONALIZATION,
+};
 const HEX_COLOR = /^#[\da-f]{6}$/i;
 
 export function parseAppearanceSettings(value: unknown): AppearanceSettings {
   const record = settingsObject(value);
   const mode = record.mode === 'light' || record.mode === 'dark' ? record.mode : 'system';
   const color = (entry: unknown) => (typeof entry === 'string' && HEX_COLOR.test(entry) ? entry : null);
-  return { mode, background: color(record.background), card: color(record.card) };
+  return {
+    mode,
+    background: color(record.background),
+    card: color(record.card),
+    ...parsePersonalization(record),
+  };
 }
 
 export function readLocalAppearance(): AppearanceSettings {

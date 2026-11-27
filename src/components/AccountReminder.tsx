@@ -3,7 +3,7 @@
 // account or continues as a guest.
 
 import { useEffect, useRef, useState } from 'react';
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 
 export const ACCOUNT_REMINDER_TITLE = 'Save your progress';
 export const ACCOUNT_REMINDER_TEXT =
@@ -24,6 +24,7 @@ export function AccountReminder({
 }) {
   const guestRef = useRef<HTMLButtonElement>(null);
   const [permanent, setPermanent] = useState(false);
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
     guestRef.current?.focus();
@@ -45,9 +46,10 @@ export function AccountReminder({
         aria-labelledby="account-reminder-title"
         aria-describedby="account-reminder-text"
         className="card w-full max-w-md p-6"
-        initial={{ opacity: 0, y: 6 }}
+        initial={reduceMotion ? false : { opacity: 0, y: 6 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.16, ease: 'easeOut' }}
+        exit={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 6 }}
+        transition={{ duration: reduceMotion ? 0 : 0.16, ease: 'easeOut' }}
       >
         <h2 id="account-reminder-title" className="mb-2">
           {ACCOUNT_REMINDER_TITLE}

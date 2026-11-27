@@ -5,6 +5,7 @@
 
 import { useEffect, useState } from 'react';
 import { ArrowLeft, Search, Play, Loader2 } from 'lucide-react';
+import { normalizeExternalUrl } from '../lib/externalUrl';
 
 const NOCODDIE = 'https://www.youtube-nocookie.com';
 
@@ -16,10 +17,16 @@ function videoIdFromInput(input: string): string | null {
   if (/^[a-zA-Z0-9_-]{11}$/.test(trimmed)) return trimmed;
 
   // Watch URLs: youtube.com/watch?v=…, youtu.be/<id>, /embed/<id>, /shorts/<id>.
+  // The address is normalized once (exactly one https:// scheme), and only
+  // YouTube hosts are accepted rather than being redirected elsewhere.
+  const normalized = normalizeExternalUrl(trimmed);
+  if (!normalized || normalized.startsWith('/')) return null;
   try {
-    const u = new URL(
-      trimmed.startsWith('http') ? trimmed : `https://${trimmed}`
-    );
+    const u = new URL(normalized);
+    const host = u.hostname.toLowerCase().replace(/^www\.|^m\./, '');
+    if (!['youtube.com', 'youtu.be', 'youtube-nocookie.com', 'music.youtube.com'].includes(host)) {
+      return null;
+    }
     if (u.hostname.includes('youtu.be')) {
       const id = u.pathname.split('/').filter(Boolean)[0] ?? '';
       if (/^[a-zA-Z0-9_-]{11}$/.test(id)) return id;

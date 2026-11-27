@@ -46,7 +46,7 @@ import { ProxyNotice } from './components/ProxyNotice';
 import { ProxyCard } from './components/ProxyCard';
 import { YouTubeApp } from './components/YouTubeApp';
 import { EverythingleApp } from './components/EverythingleApp';
-import { Settings } from './components/Settings';
+import { Settings, type SettingsTab } from './components/Settings';
 import { SearchLanding } from './components/SearchLanding';
 import { PROXY_SERVICES, proxyUrl } from './data/proxies';
 import type { LandingAppearance } from './landing/appearance';
@@ -69,6 +69,7 @@ import {
   type TabIdentity,
 } from './lib/tabIdentity';
 import { loadTabIdentity, saveTabIdentity } from './lib/userData';
+import { contrastText, fontStack } from './lib/personalization';
 
 const APPS: GameEntry[] = [
   {
@@ -151,6 +152,7 @@ function dialogMotion(reduce: boolean | null) {
   return {
     initial: reduce ? false : { opacity: 0, y: 8 },
     animate: { opacity: 1, y: 0 },
+    exit: reduce ? { opacity: 1 } : { opacity: 0, y: 8 },
     transition: { duration: reduce ? 0 : 0.18, ease: 'easeOut' as const },
   };
 }
@@ -172,6 +174,7 @@ export default function App() {
   const userId = auth.user?.id ?? null;
   const [authOpen, setAuthOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [settingsTab, setSettingsTab] = useState<SettingsTab>('theme');
   const [accountMenuOpen, setAccountMenuOpen] = useState(false);
   const [authMode, setAuthMode] = useState<'login' | 'register'>('login');
   const [authError, setAuthError] = useState<string | null>(null);
@@ -282,15 +285,60 @@ export default function App() {
     return () => observer.disconnect();
   }, [showLanding, tab]);
 
-  // Solid appearance colours are applied as CSS variables; unset means the
-  // neutral default from index.css.
+  // Appearance and personalization are applied as CSS variables; unset values
+  // fall back to the neutral defaults in index.css.
   useEffect(() => {
     const root = document.documentElement;
     if (appearance.background) root.style.setProperty('--geegle-bg', appearance.background);
     else root.style.removeProperty('--geegle-bg');
     if (appearance.card) root.style.setProperty('--geegle-card', appearance.card);
     else root.style.removeProperty('--geegle-card');
-  }, [appearance.background, appearance.card]);
+    if (appearance.accent) {
+      root.style.setProperty('--geegle-accent', appearance.accent);
+      root.style.setProperty('--geegle-accent-contrast', contrastText(appearance.accent));
+    } else {
+      root.style.removeProperty('--geegle-accent');
+      root.style.removeProperty('--geegle-accent-contrast');
+    }
+    if (appearance.font !== 'default') root.style.setProperty('--geegle-font', fontStack(appearance.font));
+    else root.style.removeProperty('--geegle-font');
+    if (appearance.fontColor) root.style.setProperty('--geegle-text', appearance.fontColor);
+    else root.style.removeProperty('--geegle-text');
+
+    // A custom wallpaper sits behind the whole application with a soft scrim
+    // in the current surface colour, so text and cards stay readable.
+    const body = document.body.style;
+    if (appearance.wallpaper) {
+      body.backgroundImage = `linear-gradient(var(--geegle-scrim), var(--geegle-scrim)), url("${appearance.wallpaper}")`;
+      body.backgroundSize = 'cover';
+      body.backgroundPosition = 'center';
+      body.backgroundAttachment = 'fixed';
+      body.backgroundRepeat = 'no-repeat';
+    } else {
+      body.backgroundImage = '';
+      body.backgroundSize = '';
+      body.backgroundPosition = '';
+      body.backgroundAttachment = '';
+      body.backgroundRepeat = '';
+    }
+  }, [
+    appearance.background,
+    appearance.card,
+    appearance.accent,
+    appearance.font,
+    appearance.fontColor,
+    appearance.wallpaper,
+  ]);
+
+  // Optional clock and date widgets; the timer only runs while one is shown.
+  const [now, setNow] = useState(() => new Date());
+  useEffect(() => {
+    if (!appearance.clock && !appearance.date) return;
+    const timer = window.setInterval(() => setNow(new Date()), 30000);
+    return () => window.clearInterval(timer);
+  }, [appearance.clock, appearance.date]);
+  const clockText = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+  const dateText = now.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
 
   // The library notice appears on entry unless the user opted out permanently.
   useEffect(() => {
@@ -722,7 +770,10 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: 'var(--geegle-bg)' }}>
+    <div
+      className="min-h-screen"
+      style={{ backgroundColor: appearance.wallpaper ? 'transparent' : 'var(--geegle-bg)' }}
+    >
       <header ref={headerRef} className="sticky top-0 z-40 border-b border-neutral-200 dark:border-neutral-800" style={{ backgroundColor: 'var(--geegle-card)' }}>
         <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-4 py-2 sm:px-6">
           <button
@@ -735,7 +786,10 @@ export default function App() {
 
           <button
             className="rounded-md p-2 text-neutral-600 transition-colors hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
-            onClick={() => setSettingsOpen(true)}
+            onClick={() => {
+              setSettingsTab('theme');
+              setSettingsOpen(true);
+            }}
             aria-label="Settings"
             title="Settings"
           >
@@ -772,6 +826,14 @@ export default function App() {
 
           <div className="flex-1 md:hidden" />
 
+          {(appearance.clock || appearance.date) && (
+            <div className="hidden items-center gap-2 text-right text-xs leading-tight text-neutral-500 md:flex dark:text-neutral-400">
+              {appearance.clock && <span className="tabular-nums">{clockText}</span>}
+              {appearance.clock && appearance.date && <span aria-hidden="true">·</span>}
+              {appearance.date && <span>{dateText}</span>}
+            </div>
+          )}
+
           {syncError && (
             <span
               className="hidden max-w-48 truncate text-xs text-neutral-500 dark:text-neutral-400 md:inline"
@@ -806,6 +868,17 @@ export default function App() {
                     exit={reduceMotion ? { opacity: 1 } : { opacity: 0, y: -4 }}
                     transition={{ duration: reduceMotion ? 0 : 0.14, ease: 'easeOut' }}
                   >
+                    <button
+                      role="menuitem"
+                      className="flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                      onClick={() => {
+                        setSettingsTab('preferences');
+                        setSettingsOpen(true);
+                        setAccountMenuOpen(false);
+                      }}
+                    >
+                      <SettingsIcon size={15} /> Preferences
+                    </button>
                     <button
                       role="menuitem"
                       className="flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800"
@@ -860,7 +933,7 @@ export default function App() {
                 {tab === t && (
                   <motion.span
                     layoutId="tab-underline"
-                    className="absolute inset-x-3 bottom-0 h-0.5 bg-neutral-900 dark:bg-neutral-100"
+                    className="accent-surface absolute inset-x-3 bottom-0 h-0.5"
                     transition={{ duration: reduceMotion ? 0 : 0.2, ease: 'easeOut' }}
                   />
                 )}
@@ -905,12 +978,17 @@ export default function App() {
       <AnimatePresence>
         {settingsOpen && (
           <Settings
+            initialTab={settingsTab}
             username={auth.user ? auth.username : null}
             showRecent={showRecent}
             onShowRecentChange={handleShowRecent}
             tabIdentity={tabIdentity}
             onSaveTabIdentity={handleSaveTabIdentity}
             appearance={{ ...appearance, mode: theme }}
+            onPreviewAppearance={(value) => {
+              setAppearance(value);
+              setTheme(value.mode);
+            }}
             onSaveAppearance={async (value) => {
               setAppearance(value);
               setTheme(value.mode);
@@ -934,54 +1012,60 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      {pendingProxy && (
-        <ProxyNotice
-          onCancel={() => setPendingProxy(null)}
-          onConfirm={() => {
-            setActiveProxy(pendingProxy);
-            setActive(null);
-            setPendingProxy(null);
-          }}
-        />
-      )}
+      <AnimatePresence>
+        {pendingProxy && (
+          <ProxyNotice
+            onCancel={() => setPendingProxy(null)}
+            onConfirm={() => {
+              setActiveProxy(pendingProxy);
+              setActive(null);
+              setPendingProxy(null);
+            }}
+          />
+        )}
+      </AnimatePresence>
 
-      {reminderOpen && pendingLaunch && (
-        <AccountReminder
-          onSignIn={() => {
-            authFromReminderRef.current = true;
-            setReminderOpen(false);
-            setAuthMode('login');
-            setAuthError(null);
-            setAuthOpen(true);
-          }}
-          onCreateAccount={() => {
-            authFromReminderRef.current = true;
-            setReminderOpen(false);
-            setAuthMode('register');
-            setAuthError(null);
-            setAuthOpen(true);
-          }}
-          onContinueAsGuest={continueAsGuest}
-          onDismiss={() => {
-            dismissReminder();
-            setReminderOpen(false);
-            setPendingLaunch(null);
-          }}
-        />
-      )}
+      <AnimatePresence>
+        {reminderOpen && pendingLaunch && (
+          <AccountReminder
+            onSignIn={() => {
+              authFromReminderRef.current = true;
+              setReminderOpen(false);
+              setAuthMode('login');
+              setAuthError(null);
+              setAuthOpen(true);
+            }}
+            onCreateAccount={() => {
+              authFromReminderRef.current = true;
+              setReminderOpen(false);
+              setAuthMode('register');
+              setAuthError(null);
+              setAuthOpen(true);
+            }}
+            onContinueAsGuest={continueAsGuest}
+            onDismiss={() => {
+              dismissReminder();
+              setReminderOpen(false);
+              setPendingLaunch(null);
+            }}
+          />
+        )}
+      </AnimatePresence>
 
-      {noticeOpen && !showLanding && (
-        <LibraryNotice
-          onDismiss={() => setNoticeOpen(false)}
-          onDismissForever={() => {
-            setNoticeOpen(false);
-            setNoticeDismissed(true);
-            void saveLibraryNoticeDismissed(true, userId).then((result) => {
-              if (!result.ok) setSyncError(result.error ?? null);
-            });
-          }}
-        />
-      )}
+      <AnimatePresence>
+        {noticeOpen && !showLanding && (
+          <LibraryNotice
+            onDismiss={() => setNoticeOpen(false)}
+            onDismissForever={() => {
+              setNoticeOpen(false);
+              setNoticeDismissed(true);
+              void saveLibraryNoticeDismissed(true, userId).then((result) => {
+                if (!result.ok) setSyncError(result.error ?? null);
+              });
+            }}
+          />
+        )}
+      </AnimatePresence>
 
       {youtubeOpen && <YouTubeApp onExit={() => setYoutubeOpen(false)} />}
 
