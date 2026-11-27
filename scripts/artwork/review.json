@@ -8135,17 +8135,83 @@
     "status": "verified",
     "title": "Uncanny Cat Golf"
   },
+  "clundertaler": {
+    "reason": "Error page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Undertale R"
+  },
   "clundertaleyellow": {
     "reason": "Effectively blank yellow crop with no identifying content.",
     "reviewed": "2026-11-26",
     "status": "rejected",
     "title": "Undertale Yellow"
   },
+  "clunfairmarioworkquestionmark": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Unfair Mario Work"
+  },
+  "clunfairundyne": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Unfair Undyne"
+  },
   "clunicyclehero": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Unicycle Hero"
+  },
+  "cluno": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "UNO"
+  },
+  "clunonomercy": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "UNO No Mercy"
+  },
+  "cluntime": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Untime"
+  },
+  "cluntitledgoosegame": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Untitled Goose Game"
+  },
+  "clupgradecomplete": {
+    "reason": "Near-blank page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Upgrade Complete"
+  },
+  "clusterrush": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Cluster Rush"
+  },
+  "cluvuvwevwevweonyetenvewveugwemubwemossas": {
+    "reason": "Text-only warning page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Uvuvwevwevwe Onyetenvewve Ugwemubwem Ossas"
+  },
+  "cluwuclient": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Uwu Client"
   },
   "cluzg": {
     "reason": "Identical file shared with unrelated catalog entries; not this title's artwork.",
@@ -8165,6 +8231,12 @@
     "status": "rejected",
     "title": "Vapor Trails"
   },
+  "clvex": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Vex"
+  },
   "clvex4": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
@@ -8177,11 +8249,101 @@
     "status": "verified",
     "title": "Vex 5"
   },
+  "clvincentmansionofthedead": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Vincent Mansion of the Dead"
+  },
+  "clvisitor": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Visitor"
+  },
+  "clvolleyrandom": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Volley Random"
+  },
+  "clvollyballchallenge": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Volleyball Challenge"
+  },
+  "clvortex": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Vortex"
+  },
+  "clvsagore": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "VS Agore"
+  },
   "clvsnonsense": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "VS Nonsense"
+  },
+  "clwarfare1917": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Warfare 1917"
+  },
+  "clwarfare1944": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Warfare 1944"
+  },
+  "clwartheknight": {
+    "reason": "Near-black frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "War the Knight"
+  },
+  "clwavedash": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wave Dash"
+  },
+  "clwaverun": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wave Run"
+  },
+  "clwebecomewhatwebehold": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "We Become What We Behold"
+  },
+  "clweltling": {
+    "reason": "Text-only warning page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Weltling"
+  },
+  "clwhackthetheif": {
+    "reason": "Portal logo (Box10), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Whack the Thief"
+  },
+  "clwhackyourcomputer": {
+    "reason": "Text page with a play control, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Whack Your Computer"
   },
   "clwheeliebike": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
@@ -8189,17 +8351,215 @@
     "status": "verified",
     "title": "Wheelie Bike"
   },
+  "clwheely": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wheely"
+  },
+  "clwheely2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wheely 2"
+  },
+  "clwheely3": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wheely 3"
+  },
+  "clwheely4": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wheely 4"
+  },
+  "clwheely5": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wheely 5"
+  },
+  "clwheely6": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wheely 6"
+  },
+  "clwheely7": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wheely 7"
+  },
+  "clwheely8": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wheely 8"
+  },
+  "clwindowsdoors": {
+    "reason": "Error page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Windows Doors"
+  },
+  "clwinterfalling": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Winter Falling"
+  },
+  "clwipeout2097alt": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Wipeout 2097 (Alt)"
+  },
   "clwordle": {
     "reason": "Image matches the catalog title and shows the game's own identity artwork.",
     "reviewed": "2026-11-26",
     "status": "verified",
     "title": "Wordle"
   },
+  "clworldshardestgame2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "World's Hardest Game 2"
+  },
+  "clworldshardestgame3": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "World's Hardest Game 3"
+  },
+  "clworldshardestgame4": {
+    "reason": "Blank frame with a play button; not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "World's Hardest Game 4"
+  },
+  "clwpnfire": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "WPNFire"
+  },
+  "clwrassling": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wrassling"
+  },
+  "clwurstclient": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Wurst Client"
+  },
+  "clwwfsmackdown2": {
+    "reason": "Loading screen, not rendered gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "WWF Smackdown 2"
+  },
+  "clxevent": {
+    "reason": "Engine splash, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Xevent"
+  },
+  "clxor": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "XOR"
+  },
   "clyohohoio": {
     "reason": "Authentic icon/logo published by the game's own distribution and visually matched to the title.",
     "reviewed": "2026-11-27",
     "status": "verified",
     "title": "Yohoho.io"
+  },
+  "clyouvs100skibidi-1": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "You vs 100 Skibidi"
+  },
+  "clzeldaminishcap": {
+    "reason": "License text page, not the game artwork.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Zelda: The Minish Cap"
+  },
+  "clzetaclient": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Zeta Client"
+  },
+  "clzoinkz": {
+    "reason": "Near-black frame with no identifiable game content.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Zoinkz"
+  },
+  "clzombieexploder": {
+    "reason": "Portal logo (The Style Machine), not the game.",
+    "reviewed": "2026-11-27",
+    "status": "rejected",
+    "title": "Zombie Exploder"
+  },
+  "clzombieroad": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Zombie Road"
+  },
+  "clzombierush": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Zombie Rush"
+  },
+  "clzombopaclypse2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Zombocalypse 2"
+  },
+  "clzombotron": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Zombotron"
+  },
+  "clzombotron2": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Zombotron 2"
+  },
+  "clzombotronreboot": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Zombotron Reboot"
+  },
+  "clzuma": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Zuma"
+  },
+  "clzumashooter": {
+    "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
+    "reviewed": "2026-11-27",
+    "status": "verified",
+    "title": "Zuma Shooter"
   },
   "geometrydashlite": {
     "reason": "Store listing screenshot, not the game artwork.",

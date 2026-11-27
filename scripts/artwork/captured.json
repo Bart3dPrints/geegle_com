@@ -18433,28 +18433,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clundertalelb.webp"
     },
-    "clundertaler": {
-      "assetSha256": "b93218fd58fdf02cfb91b3c3f2a12c77460513be2db7a59b42a235e9ed413835",
-      "frame": "clundertaler@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clundertaler.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 192,
-        "coverage": 0.026,
-        "dominant": 0.904,
-        "edges": 14.93,
-        "stddev": 58.25
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clundertaler.html",
-      "title": "Undertale R",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clundertaler.webp"
-    },
     "clunfairmarioworkquestionmark": {
       "assetSha256": "f5d53fe0d9d43ba1ea741bc2f55080ac27b76988c6292f7d703fea78aaf1c893",
       "frame": "clunfairmarioworkquestionmark@7.png",
@@ -18588,28 +18566,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/cluntitledgoosegame.webp"
     },
-    "clupgradecomplete": {
-      "assetSha256": "7a062f3d5c475f9a7a267ff719a833efcc1498c31b411ddae6e917dc710c3c81",
-      "frame": "clupgradecomplete@8.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clupgradecomplete.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 156,
-        "coverage": 0.974,
-        "dominant": 0.891,
-        "edges": 4.19,
-        "stddev": 45.64
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clupgradecomplete.html",
-      "title": "Upgrade Complete",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clupgradecomplete.webp"
-    },
     "clusterrush": {
       "assetSha256": "d59b763a623189df2dfdbf93266ae09986fb0c7470ab4004651945a2f772bb0d",
       "frame": "clusterrush@1.png",
@@ -18631,28 +18587,6 @@
       "title": "Cluster Rush",
       "type": "gameplay-screenshot",
       "url": "/artwork/clusterrush.webp"
-    },
-    "cluvuvwevwevweonyetenvewveugwemubwemossas": {
-      "assetSha256": "93b19783528bef1a5fa1ab353986637f83a2fd0293357f5e37866ae6dcbf45a3",
-      "frame": "cluvuvwevwevweonyetenvewveugwemubwemossas@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/cluvuvwevwevweonyetenvewveugwemubwemossas.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 267,
-        "coverage": 0.529,
-        "dominant": 0.911,
-        "edges": 11.16,
-        "stddev": 58.86
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cluvuvwevwevweonyetenvewveugwemubwemossas.html",
-      "title": "Uvuvwevwevwe Onyetenvewve Ugwemubwem Ossas",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/cluvuvwevwevweonyetenvewveugwemubwemossas.webp"
     },
     "cluwuclient": {
       "assetSha256": "2e037aae86cf3724824fd6f08c6090ba55cc885c1276bc7ee1c78c5fb2c1cb6b",
@@ -18875,29 +18809,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clwarfare1944.webp"
     },
-    "clwartheknight": {
-      "assetSha256": "4e2e56dd8ebca81efef98ea9dada1acf99ae80d90e2f9ca02903924b3a6e0708",
-      "frame": "clwartheknight@4.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clwartheknight.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "probed build asset paths",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 11677,
-        "coverage": 0.949,
-        "dominant": 0.022,
-        "edges": 2.55,
-        "stddev": 40.46
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clwartheknight.html",
-      "title": "War the Knight",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clwartheknight.webp"
-    },
     "clwavedash": {
       "assetSha256": "435ea78281b72eab56bc9d282298ee791dcc434689641666bda572a56a954d58",
       "frame": "clwavedash@6.png",
@@ -18963,72 +18874,6 @@
       "title": "We Become What We Behold",
       "type": "gameplay-screenshot",
       "url": "/artwork/clwebecomewhatwebehold.webp"
-    },
-    "clweltling": {
-      "assetSha256": "45b70b0b20ab68478def651fe89c76ff2cb2ba56877e77d38c03c980acc1479c",
-      "frame": "clweltling@7.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clweltling.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 12230,
-        "coverage": 0.974,
-        "dominant": 0.384,
-        "edges": 18.17,
-        "stddev": 98.8
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clweltling.html",
-      "title": "Weltling",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clweltling.webp"
-    },
-    "clwhackthetheif": {
-      "assetSha256": "2866f5d9b8494060e4cfdffc1194376a909a593c3ee912ea27491c6436cde71d",
-      "frame": "clwhackthetheif@7.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clwhackthetheif.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 7911,
-        "coverage": 0.974,
-        "dominant": 0.243,
-        "edges": 10.73,
-        "stddev": 86.56
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clwhackthetheif.html",
-      "title": "Whack the Thief",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clwhackthetheif.webp"
-    },
-    "clwhackyourcomputer": {
-      "assetSha256": "f6ecce89b83d0f0e2a2fe3f3dbc2a01da60dfd6f3360e8ef1c56cd9180d91315",
-      "frame": "clwhackyourcomputer@7.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clwhackyourcomputer.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 32,
-        "coverage": 0.974,
-        "dominant": 0.935,
-        "edges": 6.65,
-        "stddev": 33.16
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clwhackyourcomputer.html",
-      "title": "Whack Your Computer",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clwhackyourcomputer.webp"
     },
     "clwheely": {
       "assetSha256": "8cc4b414b8a0f1c8e26ec0d4a92f9edb8ac5a11e3c0c78d040da93668e351f0e",
@@ -19206,28 +19051,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clwheely8.webp"
     },
-    "clwindowsdoors": {
-      "assetSha256": "ba1f93222f5b2f760758ff1e8399e96f85cad22dd8e84a7043ae4377e722c55d",
-      "frame": "clwindowsdoors@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clwindowsdoors.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 1968,
-        "coverage": 0.974,
-        "dominant": 0.012,
-        "edges": 4.27,
-        "stddev": 23.95
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clwindowsdoors.html",
-      "title": "Windows Doors",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clwindowsdoors.webp"
-    },
     "clwinterfalling": {
       "assetSha256": "f490f068fc24f94f4de5750236b3c43fcce0d484d33d6779c1de96ac5955814e",
       "frame": "clwinterfalling@1.png",
@@ -19249,28 +19072,6 @@
       "title": "Winter Falling",
       "type": "gameplay-screenshot",
       "url": "/artwork/clwinterfalling.webp"
-    },
-    "clwipeout2097alt": {
-      "assetSha256": "64888d987051adb56e0ca7c6c5aca86c009ccd126f6e3f9e95893d8c198ce594",
-      "frame": "clwipeout2097alt@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clwipeout2097alt.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 221,
-        "coverage": 0.017,
-        "dominant": 0.568,
-        "edges": 28.78,
-        "stddev": 65.97
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clwipeout2097alt.html",
-      "title": "Wipeout 2097 (Alt)",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clwipeout2097alt.webp"
     },
     "clworldshardestgame2": {
       "assetSha256": "4977358c3f5d936954fe6a23fa84f5f6f1b1a86c062827431482979271f1e358",
@@ -19315,28 +19116,6 @@
       "title": "World's Hardest Game 3",
       "type": "gameplay-screenshot",
       "url": "/artwork/clworldshardestgame3.webp"
-    },
-    "clworldshardestgame4": {
-      "assetSha256": "bdabb940ad87aacf62cf09379590ea5b57b22d3785de898c61772e4aba28a946",
-      "frame": "clworldshardestgame4@7.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clworldshardestgame4.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 642,
-        "coverage": 0.732,
-        "dominant": 0.332,
-        "edges": 3.2,
-        "stddev": 66.72
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clworldshardestgame4.html",
-      "title": "World's Hardest Game 4",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clworldshardestgame4.webp"
     },
     "clwpnfire": {
       "assetSha256": "94e79332f4793635ec82f646cc37c586ff75a4df20b29a4e02d885ab5cead497",
@@ -19404,50 +19183,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clwurstclient.webp"
     },
-    "clwwfsmackdown2": {
-      "assetSha256": "ba971a79b384ce8f91b38564d9ed28ea59205f42556d3a7725d50d2212ff9371",
-      "frame": "clwwfsmackdown2@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clwwfsmackdown2.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 217,
-        "coverage": 0.017,
-        "dominant": 0.593,
-        "edges": 27.74,
-        "stddev": 65.15
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clwwfsmackdown2.html",
-      "title": "WWF Smackdown 2",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clwwfsmackdown2.webp"
-    },
-    "clxevent": {
-      "assetSha256": "eaa99233d656ee8f9a0e74edfc4df32cfa11d5065655eed9476e5932d24a2c78",
-      "frame": "clxevent@1.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clxevent.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 1834,
-        "coverage": 0.999,
-        "dominant": 0.077,
-        "edges": 95.57,
-        "stddev": 43.39
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clxevent.html",
-      "title": "Xevent",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clxevent.webp"
-    },
     "clxor": {
       "assetSha256": "1d7fec4c1c8c407109efc7cef506cab26950bc443ce687af52015b69af835817",
       "frame": "clxor@1.png",
@@ -19492,29 +19227,6 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clyouvs100skibidi-1.webp"
     },
-    "clzeldaminishcap": {
-      "assetSha256": "a9f46d782364c0be12528a375d2e65350f8cc274260eacaf2260ccc24ab61665",
-      "frame": "clzeldaminishcap@6.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clzeldaminishcap.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "fetched script.google.com page metadata",
-        "fetched script.google.com page metadata",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 675,
-        "coverage": 0.972,
-        "dominant": 0.801,
-        "edges": 13.5,
-        "stddev": 96.09
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clzeldaminishcap.html",
-      "title": "Zelda: The Minish Cap",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clzeldaminishcap.webp"
-    },
     "clzetaclient": {
       "assetSha256": "cde1470277212000822d8d5a4420a971e83ac01dc1a29d5e4ccf5ee58ffd4184",
       "frame": "clzetaclient@2.png",
@@ -19536,50 +19248,6 @@
       "title": "Zeta Client",
       "type": "gameplay-screenshot",
       "url": "/artwork/clzetaclient.webp"
-    },
-    "clzoinkz": {
-      "assetSha256": "623523e22f17491f0b4ebabbafb6b73ba63d3cc3548320018c44d54bd1d3d06d",
-      "frame": "clzoinkz@8.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clzoinkz.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 67591,
-        "coverage": 0.514,
-        "dominant": 0.099,
-        "edges": 22.71,
-        "stddev": 44.44
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clzoinkz.html",
-      "title": "Zoinkz",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clzoinkz.webp"
-    },
-    "clzombieexploder": {
-      "assetSha256": "d07063b72e6de9fb3486465fd267a95040c6c81986eb817167554b65bbf5de44",
-      "frame": "clzombieexploder@7.png",
-      "identityEvidence": "Captured from the actual game this repository serves at /games/clzombieexploder.html after it rendered its own screen in Chromium.",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)",
-        "title-screen capture (last resort)"
-      ],
-      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "signal": {
-        "colors": 9659,
-        "coverage": 0.078,
-        "dominant": 0.29,
-        "edges": 13.19,
-        "stddev": 73.26
-      },
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clzombieexploder.html",
-      "title": "Zombie Exploder",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/clzombieexploder.webp"
     },
     "clzombieroad": {
       "assetSha256": "4554d18f12c86a86f4c4d42832583a5e6935bc3c152bb986e1baa2463d79e81c",
