@@ -91,7 +91,17 @@ async function framesFor(row) {
     await page.goto(BASE + row.path, { waitUntil: 'load', timeout: 20000 });
     await page.waitForTimeout(waitFirst);
     frames.push(await page.screenshot({ type: 'png' }));
-    // Pass an engine splash or a "tap/play to start" gate.
+    // Many games gate the title behind an explicit play/start control.
+    for (const selector of ['button:has-text("PLAY")', 'button:has-text("Play")', 'text=PLAY', 'text=Play', 'text=START']) {
+      const control = page.locator(selector).first();
+      if (await control.count()) {
+        await control.click({ timeout: 2000 }).catch(() => {});
+        await page.waitForTimeout(2500);
+        frames.push(await page.screenshot({ type: 'png' }));
+        break;
+      }
+    }
+    // Pass an engine splash or a "tap to start" gate.
     for (let step = 0; step < 3; step += 1) {
       await page.mouse.click(640, 360).catch(() => {});
       await page.waitForTimeout(2500);

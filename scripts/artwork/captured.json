@@ -2164,6 +2164,28 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clabsolutemadness.webp"
     },
+    "clachillies": {
+      "assetSha256": "43b3d386fd57f66a13f0e82989cb136f8cf2f2a1e01f40ac3987ce009019a539",
+      "frame": "clachillies@4.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clachillies.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 6480,
+        "coverage": 0.755,
+        "dominant": 0.022,
+        "edges": 2.73,
+        "stddev": 16.41
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clachillies.html",
+      "title": "Achillies",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clachillies.webp"
+    },
     "cladventneon": {
       "assetSha256": "a12ca8b98a9f4524174a946eadd27ac61b4bbbcd109999546485b60e3f1bbc00",
       "frame": "cladventneon@1.png",
@@ -4502,6 +4524,29 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clcheesechompers3d.webp"
     },
+    "clcheeseisthereason": {
+      "assetSha256": "8b2018ec21ab008ac711b76330285eff37cd0ba9865bea4e67d2eac1d9d18773",
+      "frame": "clcheeseisthereason@2.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcheeseisthereason.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 3031,
+        "coverage": 1.0,
+        "dominant": 0.303,
+        "edges": 19.85,
+        "stddev": 63.3
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcheeseisthereason.html",
+      "title": "Cheese Is the Reason",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clcheeseisthereason.webp"
+    },
     "clchess": {
       "assetSha256": "2c8e008ff2acb44bc55a299ee0feac177b707a580f634007c523a1e54563748a",
       "frame": "clchess@2.png",
@@ -4772,6 +4817,29 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/clcoldfront.webp"
     },
+    "clcoldpines": {
+      "assetSha256": "244fd395f9167865fdffa507737cbc85727d26a7803338a39f7183b2c75e1ee2",
+      "frame": "clcoldpines@4.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcoldpines.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 1412,
+        "coverage": 1.0,
+        "dominant": 0.77,
+        "edges": 5.87,
+        "stddev": 20.73
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcoldpines.html",
+      "title": "Cold Pines",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clcoldpines.webp"
+    },
     "clcolormatch": {
       "assetSha256": "559b3d980fef2d12675060972e5965db2fe8d2ceb31009b7e491ab5234856232",
       "frame": "clcolormatch@1.png",
@@ -4933,6 +5001,28 @@
       "title": "Cover Orange 2",
       "type": "gameplay-screenshot",
       "url": "/artwork/clcoverorange2.webp"
+    },
+    "clcoverorangejourneygangsters": {
+      "assetSha256": "63acf942535bf237afe73e54eb6e9e9e867bc1fca47c1b9d2ef201482a794477",
+      "frame": "clcoverorangejourneygangsters@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clcoverorangejourneygangsters.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 10210,
+        "coverage": 0.974,
+        "dominant": 0.259,
+        "edges": 10.7,
+        "stddev": 42.45
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcoverorangejourneygangsters.html",
+      "title": "Cover Orange Journey Gangsters",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clcoverorangejourneygangsters.webp"
     },
     "clcoverorangejourneyknights": {
       "assetSha256": "87c62bf606c0134fca5aee8ce9371ac978f8451cd4d8eb4bd7bf72dbaec37691",
@@ -5564,6 +5654,29 @@
       "type": "gameplay-screenshot",
       "url": "/artwork/cldoblox.webp"
     },
+    "cldomeromantik": {
+      "assetSha256": "e8f6c9a70f29a8bd2b5ac7a5a7ca152d461599fc947e8f88ce8b6976703aea34",
+      "frame": "cldomeromantik@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cldomeromantik.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 61,
+        "coverage": 1.0,
+        "dominant": 0.477,
+        "edges": 5.65,
+        "stddev": 31.2
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cldomeromantik.html",
+      "title": "Dome Romantik",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cldomeromantik.webp"
+    },
     "cldontescape": {
       "assetSha256": "539dae8c096b87caa069235f737aa4042608ac85cb591aac607ad23f1a8a79af",
       "frame": "cldontescape@3.png",
@@ -6031,6 +6144,820 @@
       "title": "Earth Taken 2",
       "type": "gameplay-screenshot",
       "url": "/artwork/clearthtaken2.webp"
+    },
+    "clearthtaken3": {
+      "assetSha256": "2416841a98d7da9718ba0dd92e3c7d163b7dc2792bff19637c5c9720e1857860",
+      "frame": "clearthtaken3@4.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clearthtaken3.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 47413,
+        "coverage": 0.961,
+        "dominant": 0.098,
+        "edges": 13.66,
+        "stddev": 46.94
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clearthtaken3.html",
+      "title": "Earth Taken 3",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clearthtaken3.webp"
+    },
+    "cleffingzombies": {
+      "assetSha256": "37146c1fcc82cdda077d0e6f9389f464ddf946a51b90e59f9d1b49e51adb4305",
+      "frame": "cleffingzombies@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cleffingzombies.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 15794,
+        "coverage": 0.974,
+        "dominant": 0.213,
+        "edges": 9.42,
+        "stddev": 62.43
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cleffingzombies.html",
+      "title": "Effing Zombies",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cleffingzombies.webp"
+    },
+    "clelasticface": {
+      "assetSha256": "a4bcbd195a4648cc77721ac68f88c618b8c0481bd74fbaea5278c3dd3125ec24",
+      "frame": "clelasticface@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clelasticface.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 26896,
+        "coverage": 0.646,
+        "dominant": 0.033,
+        "edges": 2.5,
+        "stddev": 54.83
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clelasticface.html",
+      "title": "Elastic Face",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clelasticface.webp"
+    },
+    "clelectricman2": {
+      "assetSha256": "28a5e3f578af6d7fa481e6b0216e3f88a1df0f96bec6f9cf72548c3d4f6d36b4",
+      "frame": "clelectricman2@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clelectricman2.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 2491,
+        "coverage": 0.982,
+        "dominant": 0.616,
+        "edges": 9.62,
+        "stddev": 48.35
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clelectricman2.html",
+      "title": "Electric Man 2",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clelectricman2.webp"
+    },
+    "clelytraflight": {
+      "assetSha256": "057ac32ef88a12c5af63e3aad7e5beee3ff429e9d6538f6f7fe339e026f661ae",
+      "frame": "clelytraflight@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clelytraflight.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 64742,
+        "coverage": 1.0,
+        "dominant": 0.029,
+        "edges": 8.78,
+        "stddev": 65.68
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clelytraflight.html",
+      "title": "Elytra Flight",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clelytraflight.webp"
+    },
+    "clemujs": {
+      "assetSha256": "1e84e975e5ef2460c774d5f58dc885de337fad852a336ad0c0da4fa4fd7f4cb7",
+      "frame": "clemujs@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clemujs.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 366,
+        "coverage": 0.461,
+        "dominant": 0.608,
+        "edges": 4.06,
+        "stddev": 31.72
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clemujs.html",
+      "title": "EmuJS",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clemujs.webp"
+    },
+    "clenchain": {
+      "assetSha256": "de79777105776a0827956ae85f255f0c00f2eb76ed15891fae67fa0d5dcb8580",
+      "frame": "clenchain@2.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clenchain.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 13484,
+        "coverage": 0.567,
+        "dominant": 0.015,
+        "edges": 11.45,
+        "stddev": 48.62
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clenchain.html",
+      "title": "Enchain",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clenchain.webp"
+    },
+    "clendacopia": {
+      "assetSha256": "6246a3e80ce51e07a981d2350d4a9494754b29fbde2621ec1fc718c06c31b779",
+      "frame": "clendacopia@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clendacopia.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 3746,
+        "coverage": 0.409,
+        "dominant": 0.503,
+        "edges": 5.45,
+        "stddev": 51.55
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clendacopia.html",
+      "title": "Endacopia",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clendacopia.webp"
+    },
+    "clendlesswar5wow": {
+      "assetSha256": "97014fb491f8bfd20b2bf500aa29af688a75fd7c79fad9594e4198f39b61c462",
+      "frame": "clendlesswar5wow@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clendlesswar5wow.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 6126,
+        "coverage": 0.974,
+        "dominant": 0.289,
+        "edges": 13.19,
+        "stddev": 73.69
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clendlesswar5wow.html",
+      "title": "Endless War 5 WOW",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clendlesswar5wow.webp"
+    },
+    "clendlesswar7": {
+      "assetSha256": "5353c6e3d7b505cf60b3f98f5081576f9c1252590cb63493fb789b2678d8fe79",
+      "frame": "clendlesswar7@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clendlesswar7.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 8280,
+        "coverage": 0.974,
+        "dominant": 0.248,
+        "edges": 9.05,
+        "stddev": 45.22
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clendlesswar7.html",
+      "title": "Endless War 7",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clendlesswar7.webp"
+    },
+    "clepicbattlefantasy5": {
+      "assetSha256": "3a5151a0d42c59f6c5de1e05be100679a6d1f8ed060531be269b040bee6b030d",
+      "frame": "clepicbattlefantasy5@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clepicbattlefantasy5.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 110757,
+        "coverage": 0.974,
+        "dominant": 0.141,
+        "edges": 23.38,
+        "stddev": 55.52
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clepicbattlefantasy5.html",
+      "title": "Epic Battle Fantasy 5",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clepicbattlefantasy5.webp"
+    },
+    "clescaperoadcity2": {
+      "assetSha256": "399e7684783a33de785f19b86c93fcbf73a269f6e5a7928dea65f576ac13b0e9",
+      "frame": "clescaperoadcity2@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clescaperoadcity2.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 21437,
+        "coverage": 1.0,
+        "dominant": 0.089,
+        "edges": 19.74,
+        "stddev": 53.69
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clescaperoadcity2.html",
+      "title": "Escape Road City 2",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clescaperoadcity2.webp"
+    },
+    "cleugeneslife": {
+      "assetSha256": "e6553995589f7f670e1b32c5721acb4b2f7a3d934a075f8c6e01aeb2ec0d41fb",
+      "frame": "cleugeneslife@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/cleugeneslife.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 55008,
+        "coverage": 1.0,
+        "dominant": 0.012,
+        "edges": 5.66,
+        "stddev": 36.87
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/cleugeneslife.html",
+      "title": "Eugene's Life",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/cleugeneslife.webp"
+    },
+    "clevilglitch": {
+      "assetSha256": "78e9b3600e27e19d30a72a1e5930506029621093867ec51786d3c21985cbfb93",
+      "frame": "clevilglitch@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clevilglitch.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "no reachable remote distribution found",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 62980,
+        "coverage": 0.85,
+        "dominant": 0.139,
+        "edges": 6.53,
+        "stddev": 37.12
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clevilglitch.html",
+      "title": "Evil Glitch",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clevilglitch.webp"
+    },
+    "clevolution": {
+      "assetSha256": "9689d4e3f09c5bfde9f5bc0588c061d27793ccf70c874873c3864cb35f757dbb",
+      "frame": "clevolution@2.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clevolution.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 2427,
+        "coverage": 0.63,
+        "dominant": 0.758,
+        "edges": 5.24,
+        "stddev": 49.54
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clevolution.html",
+      "title": "Evolution",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clevolution.webp"
+    },
+    "clexitpath": {
+      "assetSha256": "525401cb7cc7ac98ce1a978b2b6d87cf6f9e835590947d2078cd606e6e8811d3",
+      "frame": "clexitpath@4.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clexitpath.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 1497,
+        "coverage": 0.974,
+        "dominant": 0.365,
+        "edges": 5.55,
+        "stddev": 73.09
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clexitpath.html",
+      "title": "Exit Path",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clexitpath.webp"
+    },
+    "clexoobservation": {
+      "assetSha256": "f27fa55214f31cd14ae9d151864af4abd05e781d00546b550b8f8a4a21c28247",
+      "frame": "clexoobservation@4.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clexoobservation.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 56,
+        "coverage": 0.999,
+        "dominant": 0.377,
+        "edges": 4.85,
+        "stddev": 33.2
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clexoobservation.html",
+      "title": "Exo Observation",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clexoobservation.webp"
+    },
+    "clfallguys": {
+      "assetSha256": "8bb65e73cb360d73a22739c4d66c9d40493dbd87b1436ca829da083bda036c3a",
+      "frame": "clfallguys@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clfallguys.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 7684,
+        "coverage": 0.773,
+        "dominant": 0.369,
+        "edges": 2.52,
+        "stddev": 27.41
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clfallguys.html",
+      "title": "Fall Guys",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clfallguys.webp"
+    },
+    "clfancypantsadventure": {
+      "assetSha256": "b5ecaf31112f2e36938b521299a6a6e1960e4ce0d4fecd36b04d6e05d73b1313",
+      "frame": "clfancypantsadventure@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clfancypantsadventure.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 1327,
+        "coverage": 0.974,
+        "dominant": 0.186,
+        "edges": 6.79,
+        "stddev": 44.94
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clfancypantsadventure.html",
+      "title": "Fancy Pants Adventure",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clfancypantsadventure.webp"
+    },
+    "clfancypantsadventure3": {
+      "assetSha256": "83c0ce05123e9c3840fcf92eb399dd76a53213292be2b283103dfa60dd09737a",
+      "frame": "clfancypantsadventure3@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clfancypantsadventure3.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 913,
+        "coverage": 0.752,
+        "dominant": 0.405,
+        "edges": 11.05,
+        "stddev": 53.95
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clfancypantsadventure3.html",
+      "title": "Fancy Pants Adventure 3",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clfancypantsadventure3.webp"
+    },
+    "clfancysnowboarding": {
+      "assetSha256": "dccfae4570b0cd6fe0c2be75c71be86e5643cae059e979ecf5273610f1d116cd",
+      "frame": "clfancysnowboarding@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clfancysnowboarding.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 953,
+        "coverage": 0.974,
+        "dominant": 0.214,
+        "edges": 7.96,
+        "stddev": 43.76
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clfancysnowboarding.html",
+      "title": "Fancy Snowboarding",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clfancysnowboarding.webp"
+    },
+    "clfashionbattle": {
+      "assetSha256": "e71400ddca3f0fbfc6ab7a1fde692d3a4ec64d103e9f02ad7d8536409aa499a6",
+      "frame": "clfashionbattle@4.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clfashionbattle.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 29015,
+        "coverage": 1.0,
+        "dominant": 0.159,
+        "edges": 4.7,
+        "stddev": 35.32
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clfashionbattle.html",
+      "title": "Fashion Battle",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clfashionbattle.webp"
+    },
+    "clfeedus": {
+      "assetSha256": "5fe9320cd84abadf9ea4776c65af4b9b89e8e76cfb9c00b0e3293706a3f83951",
+      "frame": "clfeedus@4.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clfeedus.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 35014,
+        "coverage": 0.27,
+        "dominant": 0.375,
+        "edges": 7.36,
+        "stddev": 39.87
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clfeedus.html",
+      "title": "Feed Us",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clfeedus.webp"
+    },
+    "clfeedus3": {
+      "assetSha256": "c951aad8f99a067fa67471daf5c9827b1aef35323b56c45b5f50e7b1ab279fbb",
+      "frame": "clfeedus3@4.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clfeedus3.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 31525,
+        "coverage": 0.27,
+        "dominant": 0.378,
+        "edges": 7.17,
+        "stddev": 36.34
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clfeedus3.html",
+      "title": "Feed Us 3",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clfeedus3.webp"
+    },
+    "clffsonic1": {
+      "assetSha256": "5fac21d3f6e1d75fca150ad70f7c8664d3c810e00e8465257132c71d2a87ee4b",
+      "frame": "clffsonic1@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clffsonic1.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 4322,
+        "coverage": 0.69,
+        "dominant": 0.071,
+        "edges": 10.55,
+        "stddev": 62.14
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clffsonic1.html",
+      "title": "FF Sonic 1",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clffsonic1.webp"
+    },
+    "clffsonic2": {
+      "assetSha256": "ecb73dd5672eedd5b3cad8a6dc2eccde86c5c5668e40b16ebf10fbfa3e93c47f",
+      "frame": "clffsonic2@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clffsonic2.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 4322,
+        "coverage": 0.69,
+        "dominant": 0.07,
+        "edges": 10.53,
+        "stddev": 62.04
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clffsonic2.html",
+      "title": "FFSonic 2",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clffsonic2.webp"
+    },
+    "clffsonic3": {
+      "assetSha256": "a75e802fd4ca0f4a7cc1ea186f32b14145ca68ebaf3788b2667dbb7189a9c8f1",
+      "frame": "clffsonic3@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clffsonic3.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 14475,
+        "coverage": 0.389,
+        "dominant": 0.071,
+        "edges": 18.69,
+        "stddev": 38.92
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clffsonic3.html",
+      "title": "FFSonic 3",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clffsonic3.webp"
+    },
+    "clffsonic4": {
+      "assetSha256": "ccd72ec8c8a8c97d5f19fb9552ab19c41a950b17a50d0121c3cce5fa391b44a9",
+      "frame": "clffsonic4@4.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clffsonic4.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 24304,
+        "coverage": 0.69,
+        "dominant": 0.191,
+        "edges": 27.98,
+        "stddev": 91.43
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clffsonic4.html",
+      "title": "FFSonic 4",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clffsonic4.webp"
+    },
+    "clffsonic5": {
+      "assetSha256": "13266435562e1acf197a616bad330e35b89874b7b36bcfe61777008670d05558",
+      "frame": "clffsonic5@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clffsonic5.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 64288,
+        "coverage": 0.687,
+        "dominant": 0.205,
+        "edges": 51.28,
+        "stddev": 77.59
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clffsonic5.html",
+      "title": "FFSonic 5",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clffsonic5.webp"
+    },
+    "clffsonic61": {
+      "assetSha256": "1ea95388b18b2546b526e09d9a5b432c0b5283af0b7c84909b6b4c59c16bd9ef",
+      "frame": "clffsonic61@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clffsonic61.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 22802,
+        "coverage": 0.675,
+        "dominant": 0.376,
+        "edges": 15.51,
+        "stddev": 54.11
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clffsonic61.html",
+      "title": "FFSonic 6.1",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clffsonic61.webp"
+    },
+    "clfinalearth2": {
+      "assetSha256": "ee2ffcb61d602ef304bbbca95886da02aab017ad0e49addeaa7ec90dbd6498fe",
+      "frame": "clfinalearth2@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clfinalearth2.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 770,
+        "coverage": 0.993,
+        "dominant": 0.837,
+        "edges": 5.12,
+        "stddev": 31.89
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clfinalearth2.html",
+      "title": "Final Earth 2",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clfinalearth2.webp"
+    },
+    "clfindthealien": {
+      "assetSha256": "0f36c729991feef03d94367fc49101e1e006f61c3ae4acead655ffee85fa8546",
+      "frame": "clfindthealien@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clfindthealien.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 8682,
+        "coverage": 0.454,
+        "dominant": 0.238,
+        "edges": 10.46,
+        "stddev": 53.13
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clfindthealien.html",
+      "title": "Find the Alien",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clfindthealien.webp"
+    },
+    "clfireboyandwatergirl": {
+      "assetSha256": "6a589137a87d0b43a17b22b997d7b5beac56330e5f5440bef5ec6ba7d7069ee9",
+      "frame": "clfireboyandwatergirl@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clfireboyandwatergirl.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 1058,
+        "coverage": 0.438,
+        "dominant": 0.509,
+        "edges": 7.11,
+        "stddev": 40.26
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clfireboyandwatergirl.html",
+      "title": "Fireboy and Watergirl",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clfireboyandwatergirl.webp"
+    },
+    "clfisquarium": {
+      "assetSha256": "f08b0496a90a07cbcf391ea64952d0cb33511709b8493a7e4efcd96c6ad35d67",
+      "frame": "clfisquarium@1.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clfisquarium.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 63467,
+        "coverage": 1.0,
+        "dominant": 0.15,
+        "edges": 11.98,
+        "stddev": 74.36
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clfisquarium.html",
+      "title": "Fisquarium",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clfisquarium.webp"
+    },
+    "clfivenightsatbaldisredone": {
+      "assetSha256": "16dd21963d1d732b96ea5d54df938a9625b557211b2a1313a1cdaf412ebf2430",
+      "frame": "clfivenightsatbaldisredone@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clfivenightsatbaldisredone.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 15835,
+        "coverage": 0.664,
+        "dominant": 0.205,
+        "edges": 40.24,
+        "stddev": 68.26
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clfivenightsatbaldisredone.html",
+      "title": "Five Nights at Baldi's Redone",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clfivenightsatbaldisredone.webp"
+    },
+    "clfivenightsatepsteins": {
+      "assetSha256": "4e09ad9eaca934e8d3c878651a81d0aa59eeae0778322ef37d9a50e58d4caca5",
+      "frame": "clfivenightsatepsteins@3.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clfivenightsatepsteins.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "fetched cdn.jsdelivr.net page metadata",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 32426,
+        "coverage": 0.974,
+        "dominant": 0.66,
+        "edges": 5.32,
+        "stddev": 43.5
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clfivenightsatepsteins.html",
+      "title": "Five Nights at Epstein's",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clfivenightsatepsteins.webp"
+    },
+    "clflappybird": {
+      "assetSha256": "e64dc46ffe7e78940fdd852c48b4ce88f51c470444bbfe3ae046d7332bd38a93",
+      "frame": "clflappybird@2.png",
+      "identityEvidence": "Captured from the actual game this repository serves at /games/clflappybird.html after it rendered its own screen in Chromium.",
+      "methodsInvestigated": [
+        "attempted live distribution fetch (no usable response)",
+        "title-screen capture (last resort)"
+      ],
+      "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request.",
+      "reviewStatus": "awaiting-review",
+      "signal": {
+        "colors": 46009,
+        "coverage": 0.792,
+        "dominant": 0.493,
+        "edges": 5.55,
+        "stddev": 42.24
+      },
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clflappybird.html",
+      "title": "Flappy Bird",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clflappybird.webp"
     }
   }
 }
