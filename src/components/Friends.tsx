@@ -36,17 +36,25 @@ function Section({
   title,
   children,
   empty,
+  showEmpty = true,
 }: {
   title: string;
   children: React.ReactNode;
   empty?: string;
+  /**
+   * Empty copy is only a description of an empty list — never a caption under
+   * a populated one, and never a stand-in for a failed request.
+   */
+  showEmpty?: boolean;
 }) {
   return (
     <section className="mb-4">
       <h3 className={heading}>{title}</h3>
       <div className="card px-3 py-1">
         {children}
-        {empty && <p className="py-1.5 text-xs text-neutral-500 dark:text-neutral-400">{empty}</p>}
+        {empty && showEmpty && (
+          <p className="py-1.5 text-xs text-neutral-500 dark:text-neutral-400">{empty}</p>
+        )}
       </div>
     </section>
   );
@@ -74,15 +82,11 @@ export function Friends({
   onRequestSignIn,
   onlineKeys,
   presenceStatus,
-  hiddenStatus,
-  onHiddenStatusChange,
 }: {
   userId: string | null;
   onRequestSignIn: () => void;
   onlineKeys: Set<string>;
   presenceStatus: PresenceStatus;
-  hiddenStatus: boolean;
-  onHiddenStatusChange: (hidden: boolean) => void;
 }) {
   const [social, setSocial] = useState<SocialSnapshot>(EMPTY);
   const [query, setQuery] = useState('');
@@ -166,7 +170,7 @@ export function Friends({
     }
     void Promise.all(
       social.friends.map(async (friend) => {
-        const key = await presenceKeyFor(friend.userId, false);
+        const key = await presenceKeyFor(friend.userId);
         return [friend.userId, onlineKeys.has(key)] as const;
       }),
     ).then((entries) => {
@@ -230,7 +234,7 @@ export function Friends({
   return (
     <section aria-label="Friends" className="mx-auto w-full max-w-3xl">
       <div className="mb-3 flex flex-wrap items-center gap-2">
-        <div className="flex min-w-48 flex-1 items-center gap-1.5 rounded-md border border-neutral-300 bg-white px-2 py-1.5 dark:border-neutral-700 dark:bg-neutral-900">
+        <div className="flex min-w-48 flex-1 items-center gap-1.5 rounded-md border border-neutral-300 bg-[var(--geegle-card)] px-2 py-1.5 dark:border-neutral-700 dark:bg-neutral-900">
           <Search size={15} className="text-neutral-400" aria-hidden="true" />
           <input
             className="w-full bg-transparent text-sm outline-none"
@@ -246,14 +250,6 @@ export function Friends({
             </button>
           )}
         </div>
-        <label className="flex shrink-0 items-center gap-1.5 text-xs text-neutral-600 dark:text-neutral-300">
-          <input
-            type="checkbox"
-            checked={!hiddenStatus}
-            onChange={(event) => onHiddenStatusChange(!event.target.checked)}
-          />
-          Show me online
-        </label>
       </div>
 
       {error && (
@@ -263,7 +259,11 @@ export function Friends({
       )}
 
       {normalizeSearchTerm(query) && (
-        <Section title="Results" empty={searching ? 'Searching…' : 'No accounts found.'}>
+        <Section
+          title="Results"
+          empty={searching ? 'Searching…' : 'No accounts found.'}
+          showEmpty={results.length === 0}
+        >
           {results.map((user) => {
             const friend = friendIds.has(user.userId);
             const sent = outgoingIds.has(user.userId);
@@ -301,7 +301,11 @@ export function Friends({
         </Section>
       )}
 
-      <Section title="Requests" empty="No pending requests.">
+      <Section
+        title="Requests"
+        empty="No pending requests."
+        showEmpty={social.incoming.length + social.outgoing.length === 0}
+      >
         {social.incoming.map((request) => (
           <div key={request.requestId} className={row} data-incoming={request.requestId}>
             <span className={name}>{request.username}</span>
@@ -339,7 +343,7 @@ export function Friends({
         ))}
       </Section>
 
-      <Section title="Friends" empty="No friends yet.">
+      <Section title="Friends" empty="No friends yet." showEmpty={social.friends.length === 0}>
         {social.friends.map((friend) => (
           <div key={friend.userId} className={row} data-friend={friend.userId}>
             <span className={`${name} flex items-center`}>

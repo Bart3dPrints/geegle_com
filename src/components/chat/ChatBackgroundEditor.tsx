@@ -168,7 +168,7 @@ export function ChatBackgroundEditor({
 
   return (
     <div
-      className="mt-2 rounded-md border border-neutral-200 bg-white p-3 text-xs dark:border-neutral-700 dark:bg-neutral-900"
+      className="mt-2 rounded-md border border-neutral-200 bg-[var(--geegle-card)] p-3 text-xs dark:border-neutral-700 dark:bg-neutral-900"
       role="group"
       aria-label="Message background"
     >

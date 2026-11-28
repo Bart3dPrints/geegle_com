@@ -28,6 +28,8 @@ import {
   isWallpaperDataUrl,
   type FontKey,
 } from '../lib/personalization';
+import { DEFAULT_THEME_ID, THEME_PRESETS } from '../theme/palette';
+import { previewTheme } from '../theme/apply';
 import { prepareWallpaper } from '../lib/wallpaper';
 import { PasswordInput } from './PasswordInput';
 import { Changelog } from './Changelog';
@@ -65,6 +67,54 @@ const TABS = [
   { key: 'changelog', label: 'Changelog' },
 ] as const;
 export type SettingsTab = (typeof TABS)[number]['key'];
+
+/** One overridable colour: picker, hex field and its own reset. */
+function ColorRow({
+  label,
+  value,
+  fallback,
+  onChange,
+  onReset,
+  testId,
+}: {
+  label: string;
+  value: string | null;
+  fallback: string;
+  onChange: (value: string) => void;
+  onReset: () => void;
+  testId?: string;
+}) {
+  return (
+    <div className="flex items-center gap-2" data-color-row={testId}>
+      <span className="w-24 shrink-0 text-xs text-neutral-600 dark:text-neutral-300">{label}</span>
+      <input
+        type="color"
+        aria-label={`${label} colour`}
+        value={value ?? fallback}
+        onChange={(event) => onChange(event.target.value)}
+        className="h-7 w-9 shrink-0 cursor-pointer border-0 bg-transparent p-0"
+      />
+      <input
+        aria-label={`${label} hex value`}
+        className="w-20 rounded border border-neutral-300 bg-transparent px-1.5 py-1 font-mono text-[11px] dark:border-neutral-700"
+        value={value ?? fallback}
+        onChange={(event) => {
+          const next = event.target.value.trim();
+          if (/^#[0-9a-fA-F]{6}$/.test(next)) onChange(next);
+        }}
+      />
+      <button
+        type="button"
+        className="text-xs text-neutral-500 underline underline-offset-2 disabled:opacity-40 dark:text-neutral-400"
+        onClick={onReset}
+        disabled={!value}
+        aria-label={`Reset ${label.toLowerCase()}`}
+      >
+        Reset
+      </button>
+    </div>
+  );
+}
 
 /** Small heading with an optional per-group reset control. */
 function GroupHeading({
@@ -394,11 +444,15 @@ export function Settings({
 
           <div className="min-h-0 min-w-0 flex-1 overflow-y-auto pr-1">
             {tab === 'theme' && (
-              <section aria-labelledby="settings-theme">
-                <h3 id="settings-theme" className="mb-3 text-sm font-medium">
+              <section aria-labelledby="settings-theme" className="space-y-5">
+                <h3 id="settings-theme" className="text-sm font-medium">
                   Theme
                 </h3>
-                <div className="flex gap-1 rounded-md border border-neutral-200 p-1 dark:border-neutral-700" role="group" aria-label="Theme">
+                <div
+                  className="flex gap-1 rounded-md border border-neutral-200 p-1 dark:border-neutral-700"
+                  role="group"
+                  aria-label="Appearance mode"
+                >
                   {(['light', 'system', 'dark'] as const).map((mode) => (
                     <button
                       key={mode}
@@ -415,12 +469,101 @@ export function Settings({
                     </button>
                   ))}
                 </div>
+
+                <div>
+                  <p className="mb-2 text-xs text-neutral-500 dark:text-neutral-400">
+                    Colour theme — each preset is a complete palette for headers,
+                    surfaces, cards and chat, not just an accent.
+                  </p>
+                  <div
+                    className="grid grid-cols-2 gap-2 sm:grid-cols-3"
+                    role="radiogroup"
+                    aria-label="Colour theme"
+                  >
+                    {THEME_PRESETS.map((preset) => {
+                      const darkPreview =
+                        draft.mode === 'dark' ||
+                        (draft.mode === 'system' &&
+                          typeof window !== 'undefined' &&
+                          window.matchMedia('(prefers-color-scheme: dark)').matches);
+                      const palette = previewTheme(preset.id, darkPreview);
+                      const selected = draft.theme === preset.id;
+                      return (
+                        <button
+                          key={preset.id}
+                          type="button"
+                          role="radio"
+                          aria-checked={selected}
+                          aria-label={preset.name}
+                          data-theme-preset={preset.id}
+                          className={`rounded-md border p-2 text-left transition-colors ${
+                            selected
+                              ? 'border-neutral-900 ring-1 ring-neutral-900 dark:border-neutral-100 dark:ring-neutral-100'
+                              : 'border-neutral-200 hover:border-neutral-300 dark:border-neutral-700'
+                          }`}
+                          onClick={() => applyDraft({ theme: preset.id })}
+                        >
+                          <span
+                            className="mb-1.5 flex h-8 overflow-hidden rounded"
+                            aria-hidden="true"
+                          >
+                            <span className="flex-1" style={{ background: palette.bg }} />
+                            <span className="flex-1" style={{ background: palette.header }} />
+                            <span className="flex-1" style={{ background: palette.card }} />
+                            <span className="flex-1" style={{ background: palette.accent }} />
+                            <span className="flex-1" style={{ background: palette.bubbleOut }} />
+                          </span>
+                          <span className="text-xs">{preset.name}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div className="flex items-start justify-between gap-3 rounded-md border border-neutral-200 p-3 dark:border-neutral-700">
+                  <span>
+                    <span className="block text-sm">Ambient lighting</span>
+                    <span className="block text-xs text-neutral-500 dark:text-neutral-400">
+                      Soft colour around the interface, taken from the theme or the
+                      conversation background. Turning it off keeps every colour you chose.
+                    </span>
+                  </span>
+                  <button
+                    type="button"
+                    role="switch"
+                    aria-checked={draft.ambient}
+                    aria-label="Ambient lighting"
+                    data-ambient-toggle
+                    onClick={() => applyDraft({ ambient: !draft.ambient })}
+                    className={`relative h-6 w-11 shrink-0 rounded-full transition-colors ${
+                      draft.ambient ? 'bg-[var(--geegle-accent)]' : 'bg-neutral-300 dark:bg-neutral-700'
+                    }`}
+                  >
+                    <span
+                      className={`absolute top-0.5 h-5 w-5 rounded-full bg-[var(--geegle-card)] shadow transition-all ${
+                        draft.ambient ? 'left-[22px]' : 'left-0.5'
+                      }`}
+                    />
+                  </button>
+                </div>
+
                 <button
                   type="button"
-                  className="btn-secondary mt-4"
-                  onClick={() => applyDraft({ mode: 'system' })}
+                  className="btn-secondary"
+                  onClick={() =>
+                    applyDraft({
+                      theme: DEFAULT_THEME_ID,
+                      mode: 'system',
+                      background: null,
+                      card: null,
+                      header: null,
+                      accent: null,
+                      bubbleOut: null,
+                      fontColor: null,
+                    })
+                  }
                 >
-                  Reset to system
+                  Reset to the default theme
                 </button>
               </section>
             )}
@@ -488,6 +631,47 @@ export function Settings({
                       className="h-7 w-9 cursor-pointer border-0 bg-transparent p-0"
                     />
                   </div>
+                </div>
+
+                <div>
+                  <GroupHeading
+                    onReset={() =>
+                      applyDraft({ header: null, bubbleOut: null, fontColor: null })
+                    }
+                    resetLabel="Reset header, bubble and text colours"
+                  >
+                    Individual colours (override the theme)
+                  </GroupHeading>
+                  <div className="space-y-2">
+                    <ColorRow
+                      label="Header"
+                      testId="header"
+                      value={draft.header}
+                      fallback="#ffffff"
+                      onChange={(value) => applyDraft({ header: value })}
+                      onReset={() => applyDraft({ header: null })}
+                    />
+                    <ColorRow
+                      label="Messages I send"
+                      testId="bubble"
+                      value={draft.bubbleOut}
+                      fallback="#2563eb"
+                      onChange={(value) => applyDraft({ bubbleOut: value })}
+                      onReset={() => applyDraft({ bubbleOut: null })}
+                    />
+                    <ColorRow
+                      label="Text"
+                      testId="text"
+                      value={draft.fontColor}
+                      fallback="#171717"
+                      onChange={(value) => applyDraft({ fontColor: value })}
+                      onReset={() => applyDraft({ fontColor: null })}
+                    />
+                  </div>
+                  <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                    A preset sets every colour. Anything you change here overrides
+                    just that part, and Reset returns it to the preset.
+                  </p>
                 </div>
 
                 <div>
@@ -562,25 +746,10 @@ export function Settings({
                       </option>
                     ))}
                   </select>
-                  <div className="mt-2 flex items-center gap-2">
-                    <span className="text-xs text-neutral-500 dark:text-neutral-400">Text colour</span>
-                    <input
-                      type="color"
-                      aria-label="Text colour"
-                      value={draft.fontColor ?? '#171717'}
-                      onChange={(event) => applyDraft({ fontColor: event.target.value })}
-                      className="h-7 w-9 cursor-pointer border-0 bg-transparent p-0"
-                    />
-                    {draft.fontColor && (
-                      <button
-                        type="button"
-                        className="text-xs text-neutral-500 underline underline-offset-2 dark:text-neutral-400"
-                        onClick={() => applyDraft({ fontColor: null })}
-                      >
-                        Use default
-                      </button>
-                    )}
-                  </div>
+                  <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
+                    Text colour lives under Individual colours, so it can be reset on
+                    its own.
+                  </p>
                 </div>
 
                 <div>
@@ -931,7 +1100,7 @@ export function Settings({
                 />
 
                 <div className="mb-2 flex items-center gap-3">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full border border-neutral-300 bg-white dark:border-neutral-600">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full border border-neutral-300 bg-[var(--geegle-card)] dark:border-neutral-600">
                     {identity.icon ? (
                       <img src={identity.icon} alt="" className="h-full w-full object-cover" />
                     ) : (

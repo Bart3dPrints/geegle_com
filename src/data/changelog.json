@@ -2,6 +2,11 @@
   "source": "github:Bart3dPrints/geegle_com",
   "entries": [
     {
+      "pr": 19,
+      "mergedAt": "2026-11-28T18:37:06Z",
+      "summary": "Chat: a public room, private messages between friends, groups, forwarding, and your own message backgrounds."
+    },
+    {
       "pr": 18,
       "mergedAt": "2026-11-28T05:22:41Z",
       "summary": "Friends: add people by username, accept requests, block, report, and see who is online beside a live visitor count."

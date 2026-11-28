@@ -1,14 +1,14 @@
 .gl-page {
-  --gl-text:#202020; --gl-muted:#595959; --gl-surface:#fff; --gl-soft:#f5f5f5;
-  --gl-line:#dedede; --gl-accent:#202020; --gl-tint:#f0f0f0;
+  /* The landing page follows the active site theme; a landing colour or
+     wallpaper chosen for this account still takes precedence below. */
+  --gl-text:var(--geegle-text); --gl-muted:var(--geegle-muted); --gl-surface:var(--geegle-card);
+  --gl-soft:var(--geegle-hover); --gl-line:var(--geegle-border); --gl-accent:var(--geegle-accent);
+  --gl-tint:var(--geegle-selected); --gl-background:var(--geegle-bg); --gl-ink:var(--geegle-text);
   position:relative; isolation:isolate; display:flex; flex-direction:column; min-height:100vh; min-height:100dvh;
   font:400 14px/1.45 Arial, Helvetica, sans-serif; color:var(--gl-text); background-color:var(--gl-background);
   color-scheme:light;
 }
-.gl-page[data-mode=dark] {
-  --gl-text:#f5f5f5; --gl-muted:#b8b8b8; --gl-surface:#2c2c2c; --gl-soft:#333333;
-  --gl-line:#4d4d4d; --gl-accent:#f5f5f5; --gl-tint:#3a3a3a; color-scheme:dark;
-}
+.gl-page[data-mode=dark] { color-scheme:dark; }
 .gl-page[data-ink=dark] { --gl-ink:#101923; --gl-edge:rgba(20,34,48,.14) }
 .gl-page[data-ink=light] { --gl-ink:white; --gl-edge:rgba(255,255,255,.24) }
 .gl-page[data-custom=true][data-ink=dark] { --gl-ink:#202020 }
@@ -80,8 +80,7 @@
 .gl-check {display:flex;align-items:center;gap:8px;margin:14px 0}
 .gl-check input {accent-color:var(--gl-accent)}
 .gl-editor footer {border-top:1px solid var(--gl-line);margin-top:14px;padding-top:14px}
-.gl-editor .gl-primary {background:#202020;color:#fff;padding:9px 14px;border-radius:20px}
-.gl-page[data-mode=dark] .gl-editor .gl-primary {background:#f5f5f5;color:#181818}
+.gl-editor .gl-primary {background:var(--geegle-accent);color:var(--geegle-accent-ink);padding:9px 14px;border-radius:20px}
 .gl-error {color:var(--gl-text);border-left:3px solid #b73d32;padding-left:8px;margin-top:12px}
 @media(max-width:600px) {
  .gl-main {padding-bottom:14vh}.gl-bar {min-height:58px}.gl-bar nav {gap:16px}

@@ -42,7 +42,7 @@ export function LibrarySearchBar({
   const listId = `${inputId}-suggestions`;
   return (
     <div className="relative w-full">
-      <div className="flex items-center gap-2 rounded-md border border-neutral-300 bg-white px-3 dark:border-neutral-700 dark:bg-neutral-900">
+      <div className="flex items-center gap-2 rounded-md border border-neutral-300 bg-[var(--geegle-card)] px-3 dark:border-neutral-700 dark:bg-neutral-900">
         <Search size={16} className="shrink-0 text-neutral-400" aria-hidden="true" />
         <input
           id={inputId}
