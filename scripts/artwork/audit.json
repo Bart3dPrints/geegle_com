@@ -872,11 +872,14 @@
       "height": 138,
       "id": "clADarkRoom",
       "phash": "71c01713111bc031",
-      "problems": [],
+      "problems": [
+        "exact-duplicate:clADarkRoom,cladarkroom",
+        "near-duplicate:clADarkRoom,cladarkroom"
+      ],
       "recordedTitle": "A Dark Room",
       "sha256": "7b6f4e2a57570268a6d578764029c486485837b4c3efeda411f220f3cdbc6d88",
       "source": "https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/img/Logo1.jpg",
-      "status": "ok",
+      "status": "review",
       "stddev": 85.59,
       "tier": "cleared",
       "title": "A Dark Room",
@@ -1275,6 +1278,29 @@
       "type": "game-asset",
       "url": "/artwork/clacko_s-mach-bike-challenge--v1-0.webp",
       "width": 640
+    },
+    {
+      "bytes": 19438,
+      "colors": 2578,
+      "edges": 13.23,
+      "format": "WEBP",
+      "height": 138,
+      "id": "cladarkroom",
+      "phash": "71c01713111bc031",
+      "problems": [
+        "exact-duplicate:clADarkRoom,cladarkroom",
+        "near-duplicate:clADarkRoom,cladarkroom"
+      ],
+      "recordedTitle": "A Dark Room",
+      "sha256": "7b6f4e2a57570268a6d578764029c486485837b4c3efeda411f220f3cdbc6d88",
+      "source": "https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/img/Logo1.jpg",
+      "status": "review",
+      "stddev": 85.59,
+      "tier": "cleared",
+      "title": "A Dark Room",
+      "type": "game-asset",
+      "url": "/artwork/cladarkroom.webp",
+      "width": 576
     },
     {
       "bytes": 30682,
@@ -9063,6 +9089,28 @@
       "title": "Cory in the House",
       "type": "game-asset",
       "url": "/artwork/clcoryinthehouse.webp",
+      "width": 640
+    },
+    {
+      "bytes": 14168,
+      "colors": 11292,
+      "edges": 11.18,
+      "format": "WEBP",
+      "height": 360,
+      "id": "clcotlk",
+      "phash": "6979696969696969",
+      "problems": [
+        "title-mismatch: recorded 'Curse of the Lich King'"
+      ],
+      "recordedTitle": "Curse of the Lich King",
+      "sha256": "2e469344bbb1ce0ece7aff59d24435d96580949c2ad37b5beb5a8d355e78d0dc",
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcotlk.html",
+      "status": "review",
+      "stddev": 119.29,
+      "tier": "screens",
+      "title": "Cotlk",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clcotlk.webp",
       "width": 640
     },
     {
@@ -21022,6 +21070,26 @@
       "width": 640
     },
     {
+      "bytes": 16480,
+      "colors": 10111,
+      "edges": 11.07,
+      "format": "WEBP",
+      "height": 360,
+      "id": "clhighstakes",
+      "phash": "6961696969696969",
+      "problems": [],
+      "recordedTitle": "High Stakes",
+      "sha256": "cdf5b7d7b10aa334a08fe19f9390b4e16cc4f5ad17457b1f03429b90f2cbaf5e",
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clhighstakes.html",
+      "status": "ok",
+      "stddev": 112.82,
+      "tier": "screens",
+      "title": "High Stakes",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clhighstakes.webp",
+      "width": 640
+    },
+    {
       "bytes": 28756,
       "colors": 25259,
       "edges": 22.29,
@@ -25547,6 +25615,26 @@
       "title": "Make Sure It's Closed",
       "type": "game-asset",
       "url": "/artwork/clmakesureitsclosed.webp",
+      "width": 640
+    },
+    {
+      "bytes": 23324,
+      "colors": 22913,
+      "edges": 12.42,
+      "format": "WEBP",
+      "height": 360,
+      "id": "clmami",
+      "phash": "59595b7919a11b14",
+      "problems": [],
+      "recordedTitle": "Mami",
+      "sha256": "254e55a77c778a58e051406760336fbbd59dcbb9795dec8480f3926f356c950b",
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clmami.html",
+      "status": "ok",
+      "stddev": 30.16,
+      "tier": "screens",
+      "title": "Mami",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clmami.webp",
       "width": 640
     },
     {
@@ -32636,6 +32724,26 @@
       "width": 640
     },
     {
+      "bytes": 8450,
+      "colors": 9162,
+      "edges": 4.05,
+      "format": "WEBP",
+      "height": 360,
+      "id": "clpint",
+      "phash": "616161496e2b6361",
+      "problems": [],
+      "recordedTitle": "Pint",
+      "sha256": "828a2d48e143fedbf818a268622962f24e4abbdf14a45077a8194f3ed4ed57b1",
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpint.html",
+      "status": "ok",
+      "stddev": 13.32,
+      "tier": "screens",
+      "title": "Pint",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clpint.webp",
+      "width": 640
+    },
+    {
       "bytes": 24950,
       "colors": 49533,
       "edges": 19.32,
@@ -39425,6 +39533,26 @@
       "title": "Scuba Bear",
       "type": "gameplay-screenshot",
       "url": "/artwork/clscubabear.webp",
+      "width": 640
+    },
+    {
+      "bytes": 23766,
+      "colors": 44829,
+      "edges": 12.66,
+      "format": "WEBP",
+      "height": 360,
+      "id": "clsd-thewar",
+      "phash": "f096172b2b2b3313",
+      "problems": [],
+      "recordedTitle": "SD: The War",
+      "sha256": "0df54fe0f73f0e0e95fb636f308cf50f7a22552ff6712462119d002807f763fa",
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clsd-thewar.html",
+      "status": "ok",
+      "stddev": 60.16,
+      "tier": "screens",
+      "title": "SD: The War",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clsd-thewar.webp",
       "width": 640
     },
     {
@@ -53256,22 +53384,22 @@
       "width": 640
     },
     {
-      "bytes": 3772,
-      "colors": 2959,
-      "edges": 2.83,
+      "bytes": 3222,
+      "colors": 182,
+      "edges": 3.37,
       "format": "WEBP",
       "height": 512,
       "id": "everythingle",
-      "phash": "42b936232b37b649",
+      "phash": "002a55555555aa00",
       "problems": [],
       "recordedTitle": "Everythingle",
-      "sha256": "8e702adf18648c3c0806abae13631c4afd423c0b8653b73757b1b3ae07f65b07",
-      "source": "https://everythingle.com/icon-512.png",
+      "sha256": "be1da70d01b1171f17395ebdab40a68c09f3ddf822c57dafb2cf90d90b648389",
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/artwork/everythingle.webp",
       "status": "ok",
-      "stddev": 45.86,
+      "stddev": 79.93,
       "tier": "assets",
       "title": "Everythingle",
-      "type": "official-icon",
+      "type": "original-geegle-art",
       "url": "/artwork/everythingle.webp",
       "width": 512
     },
@@ -53782,10 +53910,10 @@
   ],
   "summary": {
     "broken": 0,
-    "exactDuplicateGroups": 8,
-    "nearDuplicateGroups": 20,
-    "ok": 2643,
-    "records": 2684,
-    "review": 41
+    "exactDuplicateGroups": 9,
+    "nearDuplicateGroups": 21,
+    "ok": 2646,
+    "records": 2690,
+    "review": 44
   }
 }

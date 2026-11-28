@@ -180,7 +180,6 @@ clbunnyland|Bunny Land|platformer
 clburgerandfrights|Burger and Frights|horror
 clburgertime|Burger Time|arcade
 clburritobison|Burrito Bison|arcade
-clburritobison2|Burrito Bison 2|arcade
 clburritobisonlaunchalibre|Burrito Bison Launcha Libre|arcade
 clburritobisonrevenge|Burrito Bison Revenge|arcade
 clbushidoblade|Bushido Blade|action

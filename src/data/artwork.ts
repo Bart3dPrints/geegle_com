@@ -3651,6 +3651,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Found by searching \"Cory in the House game\" in Bing Images and taking result 1; the image was checked against the catalog title \"Cory in the House\" before use. Source page: https://www.mobygames.com/game/86974/disney-cory-in-the-house/",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
+  "clcotlk": {
+    "title": "Curse of the Lich King",
+    "url": "/artwork/clcotlk.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcotlk.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "The local wrapper reached the game’s own title screen naming “Curse of the Lich King”, the title this catalogue entry abbreviates.",
+    "reuseEvidence": "Captured from this repository’s own local game wrapper for use only as this title’s thumbnail on this platform; no third-party asset is redistributed."
+  },
   "clcountmastersstickmangames": {
     "title": "Count Masters Stickman",
     "url": "/artwork/clcountmastersstickmangames.webp",
@@ -8419,6 +8427,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Found by searching \"High Speed game\" in Bing Images and taking result 1; the image was checked against the catalog title \"High Speed\" before use. Source page: https://high-speed-car-racing-game.en.softonic.com/android",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
+  "clhighstakes": {
+    "title": "High Stakes",
+    "url": "/artwork/clhighstakes.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clhighstakes.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "The local build’s own “HIGH STAKES — NEW GAME” title screen.",
+    "reuseEvidence": "Captured from this repository’s own local game wrapper for use only as this title’s thumbnail on this platform; no third-party asset is redistributed."
+  },
   "clhighwayracer2": {
     "title": "Highway Racer 2",
     "url": "/artwork/clhighwayracer2.webp",
@@ -10226,6 +10242,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "game-asset",
     "identityEvidence": "Found by searching \"Make Sure It's Closed game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Make Sure It's Closed\" before use. Source page: https://www.youtube.com/watch?v=7hJmCQT29tA",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
+  },
+  "clmami": {
+    "title": "Mami",
+    "url": "/artwork/clmami.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clmami.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "The mod’s own title screen shows “Friday Night Funkin’ VS Mami”, matching this entry.",
+    "reuseEvidence": "Captured from this repository’s own local game wrapper for use only as this title’s thumbnail on this platform; no third-party asset is redistributed."
   },
   "clmanagod": {
     "title": "Managod",
@@ -13059,6 +13083,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "The wrapper this repository distributes for Pink Bike declares this image as its own artwork (official-og).",
     "reuseEvidence": "Artwork published by the game's own distribution for this title and referenced by the copy this repository serves; shown only on the same platform. Rights remain with the game's owner and it is removed on request."
   },
+  "clpint": {
+    "title": "Pint",
+    "url": "/artwork/clpint.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpint.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "The local build’s in-game main menu with PLAY, ABOUT and QUIT.",
+    "reuseEvidence": "Captured from this repository’s own local game wrapper for use only as this title’s thumbnail on this platform; no third-party asset is redistributed."
+  },
   "clpitfall": {
     "title": "Pitfall",
     "url": "/artwork/clpitfall.webp",
@@ -15770,6 +15802,14 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/clscubabear.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
+  },
+  "clsd-thewar": {
+    "title": "SD: The War",
+    "url": "/artwork/clsd-thewar.webp",
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clsd-thewar.html",
+    "type": "gameplay-screenshot",
+    "identityEvidence": "The game’s own “STICK DUEL THE WAR” main menu.",
+    "reuseEvidence": "Captured from this repository’s own local game wrapper for use only as this title’s thumbnail on this platform; no third-party asset is redistributed."
   },
   "clsdf": {
     "title": "SDF",

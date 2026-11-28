@@ -41046,6 +41046,61 @@
       "title": "Winter Olympics",
       "type": "game-asset",
       "url": "/artwork/winterolympics.webp"
+    },
+    "clcotlk": {
+      "assetSha256": "2e469344bbb1ce0ece7aff59d24435d96580949c2ad37b5beb5a8d355e78d0dc",
+      "collectionMethod": "local-render-capture",
+      "identityEvidence": "The local wrapper reached the game\u2019s own title screen naming \u201cCurse of the Lich King\u201d, the title this catalogue entry abbreviates.",
+      "reuseEvidence": "Captured from this repository\u2019s own local game wrapper for use only as this title\u2019s thumbnail on this platform; no third-party asset is redistributed.",
+      "reviewStatus": "verified",
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcotlk.html",
+      "title": "Curse of the Lich King",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clcotlk.webp"
+    },
+    "clhighstakes": {
+      "assetSha256": "cdf5b7d7b10aa334a08fe19f9390b4e16cc4f5ad17457b1f03429b90f2cbaf5e",
+      "collectionMethod": "local-render-capture",
+      "identityEvidence": "The local build\u2019s own \u201cHIGH STAKES \u2014 NEW GAME\u201d title screen.",
+      "reuseEvidence": "Captured from this repository\u2019s own local game wrapper for use only as this title\u2019s thumbnail on this platform; no third-party asset is redistributed.",
+      "reviewStatus": "verified",
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clhighstakes.html",
+      "title": "High Stakes",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clhighstakes.webp"
+    },
+    "clmami": {
+      "assetSha256": "254e55a77c778a58e051406760336fbbd59dcbb9795dec8480f3926f356c950b",
+      "collectionMethod": "local-render-capture",
+      "identityEvidence": "The mod\u2019s own title screen shows \u201cFriday Night Funkin\u2019 VS Mami\u201d, matching this entry.",
+      "reuseEvidence": "Captured from this repository\u2019s own local game wrapper for use only as this title\u2019s thumbnail on this platform; no third-party asset is redistributed.",
+      "reviewStatus": "verified",
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clmami.html",
+      "title": "Mami",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clmami.webp"
+    },
+    "clpint": {
+      "assetSha256": "828a2d48e143fedbf818a268622962f24e4abbdf14a45077a8194f3ed4ed57b1",
+      "collectionMethod": "local-render-capture",
+      "identityEvidence": "The local build\u2019s in-game main menu with PLAY, ABOUT and QUIT.",
+      "reuseEvidence": "Captured from this repository\u2019s own local game wrapper for use only as this title\u2019s thumbnail on this platform; no third-party asset is redistributed.",
+      "reviewStatus": "verified",
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpint.html",
+      "title": "Pint",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clpint.webp"
+    },
+    "clsd-thewar": {
+      "assetSha256": "0df54fe0f73f0e0e95fb636f308cf50f7a22552ff6712462119d002807f763fa",
+      "collectionMethod": "local-render-capture",
+      "identityEvidence": "The game\u2019s own \u201cSTICK DUEL THE WAR\u201d main menu.",
+      "reuseEvidence": "Captured from this repository\u2019s own local game wrapper for use only as this title\u2019s thumbnail on this platform; no third-party asset is redistributed.",
+      "reviewStatus": "verified",
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clsd-thewar.html",
+      "title": "SD: The War",
+      "type": "gameplay-screenshot",
+      "url": "/artwork/clsd-thewar.webp"
     }
   }
 }

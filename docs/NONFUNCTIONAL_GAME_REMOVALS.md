@@ -126,3 +126,45 @@ from search results, categories, favorites or recently played listings, and no
 cloud-save record was touched. The local HTML capture fallback for the 31
 titles remains outstanding; the seven-condition protocol above still applies
 before any future removal.
+
+## Run 2 (2026-11-28): two removals after individual investigation
+
+Every one of Run 1's remaining 31 titles was run one at a time in a clean
+browser context: 12 seconds first, then a second clean context that pressed
+Enter/a key and clicked the wrapper's own Play control (Ruffle's green PLAY,
+the centred emulator/PICO-8 glyph) and allowed 15–20 more seconds. The frames
+were reviewed in contact sheets before any decision.
+
+### Removed
+
+| Game ID | Title | Observed (two clean sessions) | Reason |
+| --- | --- | --- | --- |
+| `clburritobison2` | Burrito Bison 2 | The wrapper's embedded Google Gadgets iframe returned **404 Not Found**; no game, no further loading. | The served build is missing at its source. Recoverable at `1dcae5f` and earlier. |
+| `clfocus` | Focus | Ruffle 0.2.0 nightly: **"Ruffle cannot parse the requested file. The most likely reason is that the requested file is not a valid SWF."** | The served SWF is invalid for the emulator the wrapper ships. Recoverable at `1dcae5f` and earlier. |
+
+Removal touched only the wrapper (`public/games/<id>.html`) and the raw
+catalog rows. Both ids are listed in `CONFIRMED_NONFUNCTIONAL` inside
+`scripts/restore-catalog.mjs`, so the historical-restore script (which runs in
+the test suite) cannot recreate the rows or files; this was verified by running
+the restore script and the full test suite after deletion. The catalog was
+regenerated with `node scripts/generate-catalog.mjs`; save coverage was
+regenerated; artwork progress dropped both ids. No favorites, history or saved
+game data were deleted.
+
+### Kept without artwork (24)
+
+These produced no acceptable frame after both passes: a content-warning screen
+the canvas never left, a blank frame after the wrapper's Play control, an
+engine splash or loading bar, an ad/portal splash, or a build whose title does
+not match the catalog. None meets condition 7, so none was removed.
+
+`clblackout`, `clbloonstd2`, `clcreepyinternetstories`, `clclover`, `clcvooc`,
+`clfamilyguycorrupted`, `clffaf`, `clfireemblem`, `clgrannycreepy`,
+`clinsomniary`, `clloz1`, `clmaddenfootball`, `clmariominusrabbids`,
+`clmeowuwu`, `cloddfuture`, `cloutnumbered`, `clpokered`, `clpokerowe`,
+`clicantbelievegoogleflaggedmeforthenameofthefilelol`, `clmonsterswing`,
+`clthanksforremindingmeihadtofixthis`, `clthereisnofile`, `clvolleyball`,
+`clweltling`.
+
+Correction: Run 1's PR text said "19 images"; the actual gain was 25 records
+(2,653 → 2,678), one per image (18 + 7). No record was double-counted.

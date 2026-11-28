@@ -4,18 +4,50 @@ Track: project development.
 
 Specification: Geegle-final-prompt-7-percent-stop.md, supplied 2026-11-25. Continue PR #2 on `feature/platform-overhaul`; never merge without approval, purchase credits, or modify unrelated production data. Statuses: NOT STARTED, IN PROGRESS, IMPLEMENTED BUT UNVERIFIED, IMPLEMENTED AND VERIFIED, TEMPORARILY BLOCKED, EXTERNALLY BLOCKED. The checklist records work remaining, not claims of overall completion.
 
-## Current artwork status (2026-11-27, supersedes the artwork counts below)
+## Current artwork status (2026-11-28, Run 2; supersedes the artwork counts below)
 
 | Measure | Count |
 | --- | --- |
-| Catalog rows (unique IDs) | 2,710 |
-| Verified artwork | 2,678 (98.8%) |
+| Catalog rows (unique IDs) | 2,708 |
+| Verified artwork | 2,684 (99.1%) |
 | Awaiting visual review | 0 |
-| Unprocessed | 32 |
+| Unprocessed | 24 |
 
-Thirty-one titles have no artwork after three independent searches each and are listed with their reasons in `scripts/artwork/no-artwork.json`. The thirty-second is `cladarkroom`, which shares the cleared A Dark Room logo through the case-insensitive file system and is already displayed. No placeholder is counted as artwork.
+Run 2 investigated Run 1's remaining 31 titles one at a time in clean browser
+sessions and added five authentic menu captures (`clcotlk`, `clhighstakes`,
+`clmami`, `clpint`, `clsd-thewar`). It also verified `cladarkroom` through the
+case-insensitive alias. Two entries were removed after twice reproducing their
+failure (`clburritobison2`: embedded build returns 404; `clfocus`: Ruffle
+reports an invalid SWF); both are documented with evidence in
+`docs/NONFUNCTIONAL_GAME_REMOVALS.md`. The remaining 24 have no artwork and stay
+in the catalog. The Run 1 count reconciliation (PR text said 19, actual +25) is
+recorded in `docs/RUN2_VERIFICATION.md`.
 
-Machine-readable state lives in `scripts/artwork/progress.json`, `captured.json`, `review.json` and `blocked.json`; `docs/ARTWORK_COMPLETION_REPORT.md` is regenerated from them by `scripts/artwork/report.py`. The artwork counts in the sections below are earlier snapshots.
+Machine-readable state lives in `scripts/artwork/progress.json`, `captured.json`,
+`review.json` and `blocked.json`; `docs/ARTWORK_COMPLETION_REPORT.md` is
+regenerated from them by `scripts/artwork/report.py`. The artwork counts in the
+sections below are earlier snapshots.
+
+## Run 2 (2026-11-28): apps, player, homepage
+
+Branch `feature/geegle-run2-apps-player`, based on `origin/main` at PR #15
+(`cc280c0`). Full evidence is in `docs/RUN2_VERIFICATION.md`.
+
+| Requirement / task | Status | Files / evidence |
+| --- | --- | --- |
+| Everythingle is a genuine in-Geegle puzzle, no proxy/CherryProxy selection | IMPLEMENTED AND VERIFIED | `src/lib/wordPuzzle.ts`, `src/components/EverythingleApp.tsx`, `tests/word-puzzle.test.mjs` (11 tests), 38-check browser script |
+| Krillion positioning and full-bleed wrapper | IMPLEMENTED AND VERIFIED | `public/games/krillion.html`, both entries kept |
+| YouTube player polish | IMPLEMENTED AND VERIFIED | `src/components/YouTubeApp.tsx` |
+| External-service audit; Xylora dead endpoint disabled | IMPLEMENTED AND VERIFIED | `src/data/proxies.ts` (`available: false`, NXDOMAIN reason), `public/games/xylora.html` unavailable message, artwork kept |
+| Minimal player controls (Exit/Back + Fullscreen) | IMPLEMENTED AND VERIFIED | `src/components/GamePlayer.tsx`; external-open control removed |
+| Configurable Backslash navigation shortcut | IMPLEMENTED AND VERIFIED | `src/lib/navigationShortcut.ts`, Settings → Preferences, `src/lib/userData.ts`, `tests/navigation-shortcut.test.mjs` (7 tests) |
+| Independent favicon | IMPLEMENTED AND VERIFIED | `public/favicon.svg`, `public/apple-touch-icon.png`, `index.html`; test asserts no Google brand colours |
+| Homepage simplifications | IMPLEMENTED AND VERIFIED | `src/components/SearchLanding.tsx` (footer credit and save message removed) |
+| Development announcement with single feedback link and dismissal | IMPLEMENTED AND VERIFIED | `src/components/DevelopmentNotice.tsx`, `src/lib/developmentNotice.ts`, Preferences restore action |
+| Changelog accuracy incl. PR #15 | IMPLEMENTED AND VERIFIED | `scripts/changelog-notes.json`, `src/data/changelog.json` (15 releases, both sorts) |
+| Artwork: investigate last 31 one at a time, remove only confirmed nonfunctional | IMPLEMENTED AND VERIFIED | 5 new captures, 2 removals with evidence, 24 kept; `docs/ARTWORK_COMPLETION_REPORT.md`, `docs/NONFUNCTIONAL_GAME_REMOVALS.md` |
+| Build, typecheck, lint, unit tests, browser checks | IMPLEMENTED AND VERIFIED | `npm run build` 0, `npm run typecheck` 0, `npm run lint` 0, `bun test tests` 166 pass, `node scripts/qa/run2-interface-check.mjs` 38/38 |
+| REA evidence | TEMPORARILY BLOCKED | `rea doctor` reports `healthy: false`; no REA MCP tools/engines exposed. Work used source inspection + Playwright |
 
 ## Work queue
 

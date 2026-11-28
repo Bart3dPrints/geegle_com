@@ -170,7 +170,6 @@ clfnfsoft|FNF Soft|rhythm
 clfnfvoid|FNF Void|rhythm
 clfnfwaltenfiles|FNF Walten Files|rhythm
 clfnfwednesday-infedility|FNF Wednesday Infidelity|rhythm
-clfocus|Focus|puzzle
 clfolderdungeon|Folder Dungeon|rpg
 clfootballbros|Football Bros|sports
 clfootballlegends|Football Legends|sports

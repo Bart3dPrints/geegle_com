@@ -95,10 +95,15 @@ test('the library footer is exactly the requested sentence', () => {
   assert.equal(visible, '{FOOTER_TEXT}');
 });
 
-test('the favicon is the circular Geegle G', () => {
+test('the favicon is an independent Geegle mark', () => {
   const svg = readFileSync('public/favicon.svg', 'utf8');
+  // A neutral rounded tile with a lens mark; never Google's multicolour G.
+  assert.match(svg, /<rect/);
   assert.match(svg, /<circle/);
-  assert.ok(!/<rect/.test(svg), 'the favicon must be a circle, not a rounded square');
+  assert.ok(!/4285f4|34a853|fbbc05|ea4335/i.test(svg), 'no Google brand colours');
+  const html = readFileSync('index.html', 'utf8');
+  assert.match(html, /rel="icon" type="image\/svg\+xml" href="\/favicon.svg"/);
+  assert.match(html, /rel="apple-touch-icon"/);
 });
 
 test('no development or agent wording appears in authored interface text', () => {
