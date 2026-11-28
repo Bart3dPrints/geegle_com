@@ -7,6 +7,7 @@
 // `bun scripts/qa/run41-browser-check.mjs`.
 
 import { chromium } from '@playwright/test';
+import { readFileSync } from 'node:fs';
 
 const BASE = process.env.GEEGLE_BASE ?? 'http://127.0.0.1:5173';
 let failures = 0;
@@ -49,7 +50,16 @@ async function register(page, username) {
 }
 
 async function openTab(page, name) {
-  await page.getByRole('button', { name, exact: true }).click();
+  // The tab button can carry a badge, which changes its accessible name, so
+  // the stable data attribute is the selector.
+  const target = page.locator(`nav[aria-label="Sections"] [data-tab="${name}"]`).first();
+  try {
+    await target.click({ timeout: 8000 });
+  } catch (error) {
+    console.log('DIAG body:', (await page.locator('body').innerText()).slice(0, 500).replace(/\s+/g, ' '));
+    await page.screenshot({ path: '/tmp/r41-fail.png' });
+    throw error;
+  }
   await page.waitForTimeout(450);
   await dismissNotices(page);
 }
@@ -170,7 +180,12 @@ try {
   const menuBox = await row.locator('[data-message-menu]').boundingBox();
   const bubbleBox = await row.locator('[data-bubble]').boundingBox();
   check('the outgoing menu sits immediately left of its bubble', menuBox && bubbleBox && bubbleBox.x - (menuBox.x + menuBox.width) >= 0 && bubbleBox.x - (menuBox.x + menuBox.width) <= 12, `${menuBox && bubbleBox ? Math.round(bubbleBox.x - (menuBox.x + menuBox.width)) : 'n/a'}px`);
-  await row.getByLabel('Account').first().count().catch(() => {});
+  const inRow = pageA.locator('[data-mine="false"]').last();
+  await inRow.hover();
+  await pageA.waitForTimeout(250);
+  const inMenu = await inRow.locator('[data-message-menu]').boundingBox();
+  const inBubble = await inRow.locator('[data-bubble]').boundingBox();
+  check('the incoming menu sits immediately right of its bubble', inMenu && inBubble && inMenu.x - (inBubble.x + inBubble.width) >= 0 && inMenu.x - (inBubble.x + inBubble.width) <= 12, `${inMenu && inBubble ? Math.round(inMenu.x - (inBubble.x + inBubble.width)) : 'n/a'}px`);
   await pageA.mouse.move(5, 5);
   await pageA.waitForTimeout(200);
   const bubbleHidden = await pageA.locator('[data-mine="true"]').last().locator('[data-bubble]').boundingBox();
@@ -239,6 +254,84 @@ try {
   await pageA.waitForTimeout(800);
   const afterReload = await pageA.locator('[data-conversation]').evaluateAll((rows) => rows.map((r) => ({ kind: r.getAttribute('data-conversation-kind'), pinned: r.getAttribute('data-pinned') })));
   check('the pin survives a reload', afterReload[0]?.kind === 'public' && afterReload[1]?.pinned === 'true', JSON.stringify(afterReload));
+
+  // --- DM background image ---------------------------------------------
+  await pageA.locator('[data-conversation-kind="dm"]').first().click();
+  await pageA.waitForTimeout(600);
+  const storageUp = await (async () => {
+    try {
+      const env = Object.fromEntries(
+        readFileSync('.env.qa.local', 'utf8')
+          .split('\n')
+          .filter((line) => line.includes('='))
+          .map((line) => [line.slice(0, line.indexOf('=')).trim(), line.slice(line.indexOf('=') + 1).trim()]),
+      );
+      const response = await fetch(`${env.VITE_SUPABASE_URL}/storage/v1/version`, {
+        headers: { apikey: env.VITE_SUPABASE_ANON_KEY ?? '' },
+      });
+      return response.ok;
+    } catch {
+      return false;
+    }
+  })();
+  await pageA.getByLabel('Message background').click();
+  await pageA.waitForTimeout(400);
+  if (!storageUp) {
+    console.log('SKIP  uploaded background image (the local stack has no storage API)');
+    await pageA.getByRole('button', { name: 'Close background editor' }).click();
+    await pageA.waitForTimeout(300);
+  } else {
+  await pageA.locator('input[type="file"]').setInputFiles('/tmp/geegle-bg.png');
+  await pageA.waitForTimeout(1800);
+  await pageA.locator('input[aria-label="Overlay darkness"]').fill('35');
+  await pageA.getByRole('button', { name: 'Save', exact: true }).last().click();
+  await pageA.waitForTimeout(1800);
+  const imageBackground = await pageA.evaluate(() => {
+    const layer = document.querySelector('[data-chat-background]');
+    const inner = layer?.firstElementChild;
+    return {
+      kind: layer?.getAttribute('data-chat-background') ?? 'none',
+      image: inner ? getComputedStyle(inner).backgroundImage : '',
+    };
+  });
+  check('an uploaded picture renders behind the conversation', imageBackground.kind === 'image' && /url\(/.test(imageBackground.image), imageBackground.kind);
+  check('the uploaded picture is served through a signed private link', /token=|sign\//.test(imageBackground.image), imageBackground.image.slice(0, 90));
+  await pageA.reload({ waitUntil: 'domcontentloaded' });
+  await pageA.waitForTimeout(2600);
+  await dismissNotices(pageA);
+  await openTab(pageA, 'chat');
+  await pageA.locator('[data-conversation-kind="dm"]').first().click();
+  await pageA.waitForTimeout(1600);
+  const afterReloadBg = await pageA.evaluate(() => document.querySelector('[data-chat-background]')?.getAttribute('data-chat-background') ?? 'none');
+  check('the uploaded picture survives a reload', afterReloadBg === 'image', afterReloadBg);
+  await pageA.getByLabel('Message background').click();
+  await pageA.waitForTimeout(300);
+  await pageA.getByRole('button', { name: /^Reset$/ }).click();
+  await pageA.waitForTimeout(1500);
+  const resetBg = await pageA.evaluate(() => document.querySelector('[data-chat-background]')?.getAttribute('data-chat-background') ?? 'default');
+  check('resetting the picture returns the conversation to the theme background', resetBg === 'default', resetBg);
+  }
+
+  // --- ambient toggle ---------------------------------------------------
+  await pageA.locator('button[aria-label="Settings"]').click();
+  await pageA.waitForTimeout(600);
+  const toggle = pageA.locator('[data-ambient-toggle]');
+  const toggleCount = await toggle.count();
+  if (toggleCount) {
+    const before = await pageA.evaluate(() => document.querySelectorAll('[data-ambient]').length);
+    await toggle.first().click();
+    await pageA.waitForTimeout(600);
+    const after = await pageA.evaluate(() => document.querySelectorAll('[data-ambient]').length);
+    check('ambient mode can be switched off and removes its layers', before >= 1 && after === 0, `${before} -> ${after}`);
+    await toggle.first().click();
+    await pageA.waitForTimeout(600);
+    const restored = await pageA.evaluate(() => document.querySelectorAll('[data-ambient]').length);
+    check('ambient mode comes back when switched on', restored >= 1, String(restored));
+  } else {
+    check('ambient mode has a settings switch', false);
+  }
+  await pageA.keyboard.press('Escape');
+  await pageA.waitForTimeout(400);
 
   // --- forwarding reference --------------------------------------------
   const publicRow = pageA.locator('[data-conversation-kind="public"]').first();

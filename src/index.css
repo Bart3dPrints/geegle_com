@@ -217,7 +217,9 @@
    content and stops at 75% of the column. */
 .bubble {
   @apply relative rounded-2xl px-3 py-1.5 text-sm leading-5;
-  max-width: 75%;
+  /* The row's column already caps the message at 75% of the conversation; a
+     second cap here would leave dead space between bubble and menu. */
+  max-width: 100%;
   overflow-wrap: anywhere;
   word-break: break-word;
   transition: background-color 260ms ease, color 260ms ease;
