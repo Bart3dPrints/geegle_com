@@ -53384,26 +53384,6 @@
       "width": 640
     },
     {
-      "bytes": 3222,
-      "colors": 182,
-      "edges": 3.37,
-      "format": "WEBP",
-      "height": 512,
-      "id": "everythingle",
-      "phash": "002a55555555aa00",
-      "problems": [],
-      "recordedTitle": "Everythingle",
-      "sha256": "be1da70d01b1171f17395ebdab40a68c09f3ddf822c57dafb2cf90d90b648389",
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/artwork/everythingle.webp",
-      "status": "ok",
-      "stddev": 79.93,
-      "tier": "assets",
-      "title": "Everythingle",
-      "type": "original-geegle-art",
-      "url": "/artwork/everythingle.webp",
-      "width": 512
-    },
-    {
       "bytes": 42976,
       "colors": 73989,
       "edges": 22.74,

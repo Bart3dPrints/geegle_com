@@ -2,9 +2,14 @@
   "source": "github:Bart3dPrints/geegle_com",
   "entries": [
     {
+      "pr": 17,
+      "mergedAt": "2026-11-28T03:18:59Z",
+      "summary": "Run 2 final: complete Everythingle collection, Time & Date settings, site favicon"
+    },
+    {
       "pr": 16,
       "mergedAt": "2026-11-28T01:25:41Z",
-      "summary": "Everythingle joins Apps, Krillion plays in a full window, the player keeps just Back and Fullscreen, and Settings gained a configurable navigation shortcut."
+      "summary": "Krillion plays in a full window, the player keeps just Back and Fullscreen, and Settings gained a configurable navigation shortcut."
     },
     {
       "pr": 15,

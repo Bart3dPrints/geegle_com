@@ -47,31 +47,6 @@ export const KRILLION_BACKUP: GameEntry = {
     'Independent fan-made Krillion-style trivia site. Not the official game.',
 };
 
-/** Everythingle: the complete 50-game collection, opened by Geegle's own hub.
- * Word formats marked "Geegle" are Geegle's original implementations; the rest
- * load the provider's official game page directly (no proxy, no mirror). */
-export const EVERYTHINGLE: GameEntry = {
-  id: 'everythingle',
-  title: 'Everythingle',
-  path: '',
-  categories: [],
-  kind: 'app',
-  aliases: [
-    'wordle unlimited',
-    'word puzzle',
-    'five letter word',
-    'unlimited wordle',
-    'dordle',
-    'quordle',
-    'middle word',
-    'globle',
-    'worldle',
-  ],
-  thumb: 'https://everythingle.com/icon-512.png',
-  source: 'Official games at everythingle.com; word formats implemented by Geegle',
-  description: 'The complete Everythingle collection: 50 unlimited puzzle games.',
-};
-
 /** Entries shown in BOTH Games and Apps sections. */
 export const DUAL_SECTION_ENTRIES: GameEntry[] = [
   KRILLION_BACKUP,

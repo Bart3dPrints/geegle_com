@@ -1659,46 +1659,6 @@
       "type": "official-icon",
       "url": "/artwork/clwordle.webp"
     },
-    "clyohohoio": {
-      "assetSha256": "5182a8345c14a7604c84ebf77e26251b182401b4f02f1f2f59b9d2683adb7b88",
-      "identityEvidence": "Published by the distribution for Yohoho.io at https://cdn.jsdelivr.net/gh/deformed-steve/yohohoio@main/img/banner1200x630.jpg, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata",
-        "title-screen capture (fallback)"
-      ],
-      "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
-      "reviewStatus": "awaiting-review",
-      "source": "https://cdn.jsdelivr.net/gh/deformed-steve/yohohoio@main/img/banner1200x630.jpg",
-      "title": "Yohoho.io",
-      "type": "official-og",
-      "url": "/artwork/clyohohoio.webp"
-    },
-    "code-editor": {
-      "assetSha256": "14140044e2e71e97c31b077765a6e1c4e3cd7c9734b1e1ac9523ef493dc3a077",
-      "identityEvidence": "Captured the served Code Editor page with its own title and HTML/Python editor controls.",
-      "methodsInvestigated": [
-        "captured the served app page in Chromium (15-second window)"
-      ],
-      "reuseEvidence": "Screenshot of the application as distributed by this platform, used only as its thumbnail on the same platform. Rights remain with the owner and it is removed on request.",
-      "reviewStatus": "verified",
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/Code%20Editor%20(1).html",
-      "title": "Code Editor",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/code-editor.webp"
-    },
-    "everythingle": {
-      "title": "Everythingle",
-      "url": "/artwork/everythingle.webp",
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/artwork/everythingle.webp",
-      "type": "original-geegle-art",
-      "identityEvidence": "Original cover art authored for the in-Geegle Everythingle word puzzle: four neutral letter tiles spelling GEEG.",
-      "reuseEvidence": "Created for this repository; no third-party artwork or trademark is used.",
-      "reviewStatus": "verified",
-      "assetSha256": "be1da70d01b1171f17395ebdab40a68c09f3ddf822c57dafb2cf90d90b648389",
-      "methodsInvestigated": [
-        "original artwork"
-      ]
-    },
     "krillion": {
       "assetSha256": "e51dad0a53ebb1f7e95eeb7f1626440a1bbeafd33fed42d729fb9cc3ff792dea",
       "identityEvidence": "Open Graph image served by krillion.cc itself, the official game this catalog embeds at /games/krillion.html. Shows the Krillion wordmark and tagline.",

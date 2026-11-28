@@ -16,7 +16,7 @@ import {
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import type { GameEntry, ThemePreference } from './types';
 import { legacyCatalog } from './data/catalog';
-import { DUAL_SECTION_ENTRIES, EVERYTHINGLE, KRILLION } from './data/external';
+import { DUAL_SECTION_ENTRIES, KRILLION } from './data/external';
 import { useAuth } from './hooks/useAuth';
 import {
   toggleFavorite,
@@ -47,7 +47,6 @@ import { LibraryNotice } from './components/LibraryNotice';
 import { ProxyNotice } from './components/ProxyNotice';
 import { ProxyCard } from './components/ProxyCard';
 import { YouTubeApp } from './components/YouTubeApp';
-import { EverythingleApp } from './components/EverythingleApp';
 import { DevelopmentNotice } from './components/DevelopmentNotice';
 import {
   announcementDismissed,
@@ -95,7 +94,6 @@ const APPS: GameEntry[] = [
     aliases: ['yt', 'videos', 'streaming', 'stream'],
     source: 'Official YouTube privacy-enhanced embed (youtube-nocookie.com)',
   },
-  EVERYTHINGLE,
   KRILLION,
   {
     id: 'suggestions',
@@ -224,7 +222,6 @@ export default function App() {
   const [tab, setTab] = useState<Tab>('games');
   const [active, setActive] = useState<GameEntry | null>(null);
   const [youtubeOpen, setYoutubeOpen] = useState(false);
-  const [everythingleOpen, setEverythingleOpen] = useState(false);
   const [activeProxy, setActiveProxy] = useState<{ url: string; title: string } | null>(null);
   const [pendingProxy, setPendingProxy] = useState<{ url: string; title: string } | null>(null);
 
@@ -483,7 +480,6 @@ export default function App() {
     setActive(null);
     setActiveProxy(null);
     setYoutubeOpen(false);
-    setEverythingleOpen(false);
     if (!historyTraversal && history.state?.geegleView === 'library') {
       history.replaceState({ geegleView: 'landing' }, '', location.pathname + location.search);
     }
@@ -588,7 +584,6 @@ export default function App() {
     flushSync(() => {
       setActive(null);
       setActiveProxy(null);
-      setEverythingleOpen(false);
       setSettingsOpen(false);
       setAccountMenuOpen(false);
       setPendingLaunch(null);
@@ -610,10 +605,6 @@ export default function App() {
       setActiveProxy(null);
       if (g.kind === 'stream' && g.id === 'youtube') {
         setYoutubeOpen(true);
-        return;
-      }
-      if (g.id === 'everythingle') {
-        setEverythingleOpen(true);
         return;
       }
       setActive(g);
@@ -1125,10 +1116,6 @@ export default function App() {
       </AnimatePresence>
 
       {youtubeOpen && <YouTubeApp onExit={() => setYoutubeOpen(false)} />}
-
-      {everythingleOpen && (
-        <EverythingleApp key={userId ?? 'guest'} userId={userId} onExit={() => setEverythingleOpen(false)} />
-      )}
 
       {(active || activeProxy) && (
         <GamePlayer
