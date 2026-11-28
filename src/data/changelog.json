@@ -4,7 +4,7 @@
     {
       "pr": 17,
       "mergedAt": "2026-11-28T03:18:59Z",
-      "summary": "Run 2 final: complete Everythingle collection, Time & Date settings, site favicon"
+      "summary": "Time & Date settings add a configurable clock and date to the library header, and the site has a fresh icon."
     },
     {
       "pr": 16,

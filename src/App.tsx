@@ -36,6 +36,8 @@ import {
   saveAppearanceSettings,
   loadNavigationShortcut,
   saveNavigationShortcut,
+  loadSocialStatusVisible,
+  saveSocialStatusVisible,
   DEFAULT_APPEARANCE_SETTINGS,
   type AppearanceSettings,
 } from './lib/userData';
@@ -47,6 +49,9 @@ import { LibraryNotice } from './components/LibraryNotice';
 import { ProxyNotice } from './components/ProxyNotice';
 import { ProxyCard } from './components/ProxyCard';
 import { YouTubeApp } from './components/YouTubeApp';
+import { Friends } from './components/Friends';
+import { VisitorCounter } from './components/VisitorCounter';
+import { useSocialPresence } from './hooks/useSocialPresence';
 import { DevelopmentNotice } from './components/DevelopmentNotice';
 import {
   announcementDismissed,
@@ -131,9 +136,9 @@ const SEARCHABLE = [...new Map([...legacyCatalog, ...APPS_GRID].map((entry) => [
 const SEARCH_INDEX = buildSearchIndex(SEARCHABLE);
 const APP_SEARCH_INDEX = buildSearchIndex(APPS_GRID);
 
-type Tab = 'games' | 'apps' | 'proxies';
+type Tab = 'games' | 'apps' | 'proxies' | 'friends';
 
-const TABS: Tab[] = ['games', 'apps', 'proxies'];
+const TABS: Tab[] = ['games', 'apps', 'proxies', 'friends'];
 
 function useTheme() {
   const [theme, setTheme] = useState<ThemePreference>(() => {
@@ -220,6 +225,7 @@ export default function App() {
   const [announcementOpen, setAnnouncementOpen] = useState(false);
 
   const [tab, setTab] = useState<Tab>('games');
+  const [socialHidden, setSocialHidden] = useState(false);
   const [active, setActive] = useState<GameEntry | null>(null);
   const [youtubeOpen, setYoutubeOpen] = useState(false);
   const [activeProxy, setActiveProxy] = useState<{ url: string; title: string } | null>(null);
@@ -259,7 +265,8 @@ export default function App() {
       loadLibraryNoticeDismissed(userId),
       loadAppearanceSettings(userId),
       loadNavigationShortcut(userId),
-    ]).then(([f, r, servers, savedTheme, recentVisible, notice, savedAppearance, savedShortcut]) => {
+      loadSocialStatusVisible(userId),
+    ]).then(([f, r, servers, savedTheme, recentVisible, notice, savedAppearance, savedShortcut, socialVisible]) => {
       if (cancelled) return;
       setFavorites(f.data ?? []);
       setRecent(r.data ?? []);
@@ -269,6 +276,7 @@ export default function App() {
       const saved = savedAppearance.data ?? DEFAULT_APPEARANCE_SETTINGS;
       setAppearance(saved);
       if (savedShortcut.data) setShortcut(savedShortcut.data);
+      setSocialHidden(socialVisible.data === false);
       const t = saved.mode !== 'system' ? saved.mode : savedTheme.data;
       setTheme(t === 'dark' || t === 'light' ? t : 'system');
       setSettingsLoaded(true);
@@ -361,6 +369,9 @@ export default function App() {
   const timeSettings = timeSettingsOf(appearance);
   const clockText = formatClock(now, timeSettings);
   const dateText = formatDate(now, timeSettings);
+
+  // One presence subscription serves both the visitor counter and Friends.
+  const presence = useSocialPresence({ userId, hidden: socialHidden, enabled: !showLanding });
 
   // The library notice appears on entry unless the user opted out permanently.
   useEffect(() => {
@@ -947,6 +958,8 @@ export default function App() {
               <span className="hidden pr-1 text-sm sm:inline">Sign in</span>
             </button>
           )}
+
+          <VisitorCounter status={presence.status} visitors={presence.visitors} />
         </div>
 
         <nav
@@ -1167,6 +1180,24 @@ export default function App() {
               ))}
             </div>
           </section>
+        )}
+
+        {tab === 'friends' && (
+          <Friends
+            userId={userId}
+            onRequestSignIn={() => {
+              authFromReminderRef.current = false;
+              setAuthOpen(true);
+              setAuthMode('login');
+            }}
+            onlineKeys={presence.onlineKeys}
+            presenceStatus={presence.status}
+            hiddenStatus={socialHidden}
+            onHiddenStatusChange={(hidden) => {
+              setSocialHidden(hidden);
+              void saveSocialStatusVisible(!hidden, userId);
+            }}
+          />
         )}
 
         {tab === 'proxies' && (

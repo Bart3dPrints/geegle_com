@@ -32,6 +32,7 @@ export const SERVERS_KEY = 'geegle-default-servers';
 export const RECENT_VISIBLE_KEY = 'geegle-recent-visible';
 export const LIBRARY_NOTICE_KEY = 'geegle-library-notice-dismissed';
 export const APPEARANCE_KEY = 'geegle-appearance';
+export const SOCIAL_VISIBLE_KEY = 'geegle-social-visible';
 // Storage optimization retained after deletion-feature cancellation: recently
 // played history is capped at 50 games per account.
 const RECENT_CAP = 50;
@@ -143,6 +144,19 @@ export async function loadServerDefaults(userId: string | null): Promise<OpResul
   if (!userId || !isSupabaseConfigured) return { ok: true, data: readLocalServerDefaults() };
   const { data, error } = await supabase.from(T.settings).select('defaults:settings->defaultServers').eq('id', userId).maybeSingle();
   return error ? { ok: false, error: error.message } : { ok: true, data: serverDefaults(data?.defaults) };
+}
+
+/** Whether accepted friends may see this account online. */
+export async function saveSocialStatusVisible(visible: boolean, userId: string | null): Promise<OpResult<null>> {
+  writeJson(SOCIAL_VISIBLE_KEY, visible);
+  if (!userId || !isSupabaseConfigured) return { ok: true };
+  return updateSettings(userId, (settings) => ({ ...settings, socialStatusVisible: visible }));
+}
+
+export async function loadSocialStatusVisible(userId: string | null): Promise<OpResult<boolean>> {
+  if (!userId || !isSupabaseConfigured) return { ok: true, data: readJson(SOCIAL_VISIBLE_KEY) !== false };
+  const { data, error } = await supabase.from(T.settings).select('value:settings->socialStatusVisible').eq('id', userId).maybeSingle();
+  return error ? { ok: false, error: error.message } : { ok: true, data: data?.value !== false };
 }
 
 /** Recently Played is hidden until the owner of the settings turns it on. */
