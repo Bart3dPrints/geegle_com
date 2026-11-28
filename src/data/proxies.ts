@@ -93,11 +93,16 @@ export const PROXY_SERVICES: ProxyService[] = [
     ],
   },
   {
-    // Xylora ships its own wrapper in this repository, which embeds the
-    // provider's page; the card launches that supported wrapper.
+    // Xylora's only known address stopped resolving (NXDOMAIN on 2026-11-27),
+    // so the endpoint is disabled rather than launched into a dead host. The
+    // card and its artwork stay in place.
     id: 'xylora',
     name: 'Xylora',
-    endpoints: [local('Server 1', '/games/xylora.html')],
+    endpoints: [{
+      ...local('Server 1', '/games/xylora.html'),
+      available: false,
+      unavailableReason: 'This service’s address no longer resolves (checked 2026-11-27).',
+    }],
   },
   {
     id: 'backup',

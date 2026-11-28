@@ -25,6 +25,14 @@ export const CLEARED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "The A Dark Room wrapper identifies Doublespeak Games and links its source repository. Its logo matches the title visually.",
     "reuseEvidence": "MPL-2.0; pinned repository license https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/LICENSE.md. License notice bundled at /artwork/licenses/cladarkroom-LICENSE.txt."
   },
+  "cladarkroom": {
+    "title": "A Dark Room",
+    "url": "/artwork/cladarkroom.webp",
+    "source": "https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/img/Logo1.jpg",
+    "type": "game-asset",
+    "identityEvidence": "The A Dark Room wrapper identifies Doublespeak Games and links its source repository. Its logo matches the title visually.",
+    "reuseEvidence": "MPL-2.0; pinned repository license https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/LICENSE.md. License notice bundled at /artwork/licenses/cladarkroom-LICENSE.txt."
+  },
   "clhextris": {
     "title": "Hextris",
     "url": "/artwork/clhextris.webp",
@@ -21286,10 +21294,10 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
   "everythingle": {
     "title": "Everythingle",
     "url": "/artwork/everythingle.webp",
-    "source": "https://everythingle.com/icon-512.png",
-    "type": "official-icon",
-    "identityEvidence": "512px application icon served by everythingle.com, the puzzle site this catalog embeds.",
-    "reuseEvidence": "Artwork published by the service's own site for this application and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request."
+    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/artwork/everythingle.webp",
+    "type": "original-geegle-art",
+    "identityEvidence": "Original cover art authored for the in-Geegle Everythingle word puzzle: four neutral letter tiles spelling GEEG.",
+    "reuseEvidence": "Created for this repository; no third-party artwork or trademark is used."
   },
   "friday-night-funkin": {
     "title": "Friday Night Funkin'",

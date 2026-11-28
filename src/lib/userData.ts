@@ -9,6 +9,12 @@ import {
   type Personalization,
 } from './personalization';
 import {
+  parseShortcut,
+  writeShortcutLocal,
+  readShortcutLocal,
+  type NavigationShortcut,
+} from './navigationShortcut';
+import {
   DEFAULT_TAB_IDENTITY,
   readTabIdentityLocal,
   validateTabIdentity,
@@ -250,4 +256,21 @@ export async function saveLandingAppearance(userId: string, value: LandingAppear
   const appearance = parseAppearance(value);
   if (!appearance) return { ok: false, error: 'Invalid landing appearance.' };
   return updateSettings(userId, (settings) => ({ ...settings, landingAppearance: appearance }));
+}
+
+/** Configurable one-key navigation shortcut; local for guests, synced for accounts. */
+export async function saveNavigationShortcut(
+  value: NavigationShortcut,
+  userId: string | null,
+): Promise<OpResult<null>> {
+  const shortcut = parseShortcut(value);
+  writeShortcutLocal(shortcut);
+  if (!userId || !isSupabaseConfigured) return { ok: true };
+  return updateSettings(userId, (settings) => ({ ...settings, navigationShortcut: shortcut }));
+}
+
+export async function loadNavigationShortcut(userId: string | null): Promise<OpResult<NavigationShortcut>> {
+  if (!userId || !isSupabaseConfigured) return { ok: true, data: readShortcutLocal() };
+  const { data, error } = await supabase.from(T.settings).select('value:settings->navigationShortcut').eq('id', userId).maybeSingle();
+  return error ? { ok: false, error: error.message } : { ok: true, data: parseShortcut(data?.value) };
 }

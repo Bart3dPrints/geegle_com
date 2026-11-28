@@ -15,7 +15,6 @@ import {
   FileDown,
   FileUp,
   AlertTriangle,
-  ExternalLink,
 } from 'lucide-react';
 import type { GameEntry } from '../types';
 import { attemptsAutomaticSave, saveSupportFor } from '../lib/saveManifest';
@@ -132,10 +131,6 @@ export function GamePlayer({
 
   const goFullscreen = () => {
     frameRef.current?.requestFullscreen?.();
-  };
-
-  const openExternally = () => {
-    if (url) window.open(url, '_blank', 'noopener');
   };
 
   // External sites that send X-Frame-Options/CSP frame-ancestors load the
@@ -262,17 +257,6 @@ export function GamePlayer({
     </button>
   );
 
-  const openButton = (
-    <button
-      className={clusterButton}
-      onClick={openExternally}
-      aria-label="Open in a new window"
-      title="Open in a new window"
-    >
-      <ExternalLink size={16} />
-    </button>
-  );
-
   const fullscreenButton = (
     <button
       className={clusterButton}
@@ -356,31 +340,24 @@ export function GamePlayer({
         )}
         {frameBlocked && !loaded && (
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-neutral-950 p-6 text-center">
-            <ExternalLink size={28} className="text-neutral-400" />
+            <AlertTriangle size={28} className="text-neutral-400" />
             <p className="max-w-md text-sm text-neutral-300">
-              {title} may not allow embedding inside other sites. You can open
-              it directly in a new window.
+              {title} is not available inside Geegle right now.
             </p>
-            <div className="flex flex-wrap justify-center gap-2">
-              {openButton}
-              <button className="btn-secondary" onClick={() => void exit()} disabled={busy}>
-                Back to library
-              </button>
-            </div>
+            <button className="btn-secondary" onClick={() => void exit()} disabled={busy}>
+              Back to library
+            </button>
           </div>
         )}
         {loadFailed && (
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-neutral-950 p-6 text-center">
             <AlertTriangle size={28} className="text-neutral-300" />
             <p className="text-sm text-neutral-300">
-              {title} failed to load. Try opening it in a new window.
+              {title} failed to load.
             </p>
-            <div className="flex flex-wrap justify-center gap-2">
-              {openButton}
-              <button className="btn-secondary" onClick={() => void exit()} disabled={busy}>
-                Back to library
-              </button>
-            </div>
+            <button className="btn-secondary" onClick={() => void exit()} disabled={busy}>
+              Back to library
+            </button>
           </div>
         )}
         {restoreReady && (gameId ? iframePath : url) && !frameBlocked && (
@@ -413,7 +390,6 @@ export function GamePlayer({
               </button>
             )}
             {saveControls}
-            {openButton}
             {fullscreenButton}
           </div>
         </>
@@ -421,7 +397,6 @@ export function GamePlayer({
         <>
           <div className="absolute bottom-3 left-3 z-20 flex items-center gap-1.5">{backButton}</div>
           <div className="absolute right-3 top-3 z-20 flex items-center gap-1.5">
-            {openButton}
             {fullscreenButton}
           </div>
         </>

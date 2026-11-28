@@ -1687,17 +1687,17 @@
       "url": "/artwork/code-editor.webp"
     },
     "everythingle": {
-      "assetSha256": "8e702adf18648c3c0806abae13631c4afd423c0b8653b73757b1b3ae07f65b07",
-      "identityEvidence": "512px application icon served by everythingle.com, the puzzle site this catalog embeds.",
-      "methodsInvestigated": [
-        "fetched provider page metadata (official image)"
-      ],
-      "reuseEvidence": "Artwork published by the service's own site for this application and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request.",
-      "reviewStatus": "verified",
-      "source": "https://everythingle.com/icon-512.png",
       "title": "Everythingle",
-      "type": "official-icon",
-      "url": "/artwork/everythingle.webp"
+      "url": "/artwork/everythingle.webp",
+      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/artwork/everythingle.webp",
+      "type": "original-geegle-art",
+      "identityEvidence": "Original cover art authored for the in-Geegle Everythingle word puzzle: four neutral letter tiles spelling GEEG.",
+      "reuseEvidence": "Created for this repository; no third-party artwork or trademark is used.",
+      "reviewStatus": "verified",
+      "assetSha256": "be1da70d01b1171f17395ebdab40a68c09f3ddf822c57dafb2cf90d90b648389",
+      "methodsInvestigated": [
+        "original artwork"
+      ]
     },
     "krillion": {
       "assetSha256": "e51dad0a53ebb1f7e95eeb7f1626440a1bbeafd33fed42d729fb9cc3ff792dea",
