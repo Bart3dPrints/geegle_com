@@ -1,4 +1,5 @@
 {
+  "17": "Time & Date settings add a configurable clock and date to the library header, and the site has a fresh icon.",
   "14": "Game cards across the catalogue now show researched artwork, including every title that could be verified.",
   "1": "Geegle's foundation: accounts and cloud saves backed by Supabase, plus the start of the neutral design system.",
   "10": "The original game catalogue is restored, missing series play again, and guest reminders can now be turned off permanently.",
@@ -14,5 +15,5 @@
   "15": "Settings now cover appearance, account preferences and a navigation shortcut, the alphabetical sidebar always fits the screen, and the library gained a development announcement.",
   "13": "Previously blocked artwork entries were reopened and checked again, the proxy cards gained their own artwork, and Astra was removed.",
   "9": "A Settings changelog, guest reminder controls and password visibility, with the cloud-save overlay removed.",
-  "16": "Everythingle joins Apps, Krillion plays in a full window, the player keeps just Back and Fullscreen, and Settings gained a configurable navigation shortcut."
+  "16": "Krillion plays in a full window, the player keeps just Back and Fullscreen, and Settings gained a configurable navigation shortcut."
 }

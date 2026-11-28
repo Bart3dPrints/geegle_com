@@ -37,9 +37,7 @@ is in `docs/RUN2_VERIFICATION.md`; the Everythingle investigation is in
 
 | Requirement / task | Status | Files / evidence |
 | --- | --- | --- |
-| Everythingle: the complete 50-game collection playable in Geegle, no proxy/CherryProxy selection | IMPLEMENTED AND VERIFIED (local Chromium) | `src/data/everythingle.ts` (50 games), `src/components/EverythingleApp.tsx` (hub), `src/components/everythingle/WordBoards.tsx`, `MiddleWord.tsx`, `src/lib/wordGames.ts`, `tests/everythingle.test.mjs` (9 tests), 30-check browser script |
-| Everythingle games implemented by Geegle rather than linked | PARTIAL (5 of 50) | Five Letter, Double Board, Quad Board, Word 500 and Middle Word are original Geegle code on Geegle's word list; the other 45 load the provider's official page unmodified. See `docs/EVERYTHINGLE_VERIFICATION.md` |
-| Everythingle reverse-proxy backend | EXTERNALLY BLOCKED | Provider terms forbid copying or redistributing its games; no proxy, mirror or rewrite path exists. Evidence quoted in `docs/EVERYTHINGLE_VERIFICATION.md` |
+| Everythingle collection | REMOVED (Run 3) | Removed at the owner's request: card, hub, the five in-Geegle word games, artwork and Everythingle-only tests are deleted. Stale favourites resolve to no card. See `docs/RUN3_VERIFICATION.md` |
 | Krillion positioning and full-bleed wrapper | IMPLEMENTED AND VERIFIED | `public/games/krillion.html`, both entries kept |
 | YouTube player polish | IMPLEMENTED AND VERIFIED | `src/components/YouTubeApp.tsx` |
 | External-service audit; Xylora dead endpoint disabled | IMPLEMENTED AND VERIFIED | `src/data/proxies.ts` (`available: false`, NXDOMAIN reason), `public/games/xylora.html` unavailable message, artwork kept |
@@ -1173,3 +1171,22 @@ Branch `feature/geegle-run1-settings-personalization` from `main` `342609b`
   them; no nonfunctional game was removed.
 - Deployment of this branch to production, which needs owner approval.
 - Real multi-device sync (one-device reload verified).
+
+
+## Run 3 (2026-11-28): Friends, presence and Everythingle removal
+
+Branch `feature/geegle-run3-friends` from `origin/main` `34be029`. Full evidence is
+in `docs/RUN3_VERIFICATION.md`.
+
+| Requirement / task | Status | Files / evidence |
+| --- | --- | --- |
+| Everythingle removed completely | VERIFIED (local) | App card, hub, five in-Geegle games, artwork, aliases and Everythingle-only tests deleted; both Krillion entries preserved |
+| Friends tab beside Games/Apps/Proxies | VERIFIED (local) | `src/App.tsx`, `src/components/Friends.tsx`; header height unchanged at every tested viewport |
+| Username discovery | VERIFIED (isolated Supabase) | `geegle_search_users`, 30/minute, prefix-only, excludes self and blocked pairs |
+| Friend-request lifecycle | VERIFIED (isolated Supabase) | send/accept/decline/cancel/remove/cancel-on-block, duplicates and self rejected, reciprocal requests accepted |
+| Accepted friendships persisted server-side | VERIFIED (isolated Supabase) | `geegle_friendships`, survives reload and a fresh sign-in |
+| Blocking and reporting | VERIFIED (isolated Supabase) | `geegle_block_user`/`geegle_unblock_user`/`geegle_report_user`; writes are function-only |
+| Live online status for friends | VERIFIED (local Realtime) | `src/hooks/useSocialPresence.ts`, opaque per-account keys, hide option |
+| Live visitor counter | VERIFIED (local Realtime) | `src/components/VisitorCounter.tsx`, distinct keys, includes the viewer, never invents a number |
+| Database migration 0007 | IMPLEMENTED BUT UNVERIFIED IN PRODUCTION | `supabase/migrations/0007_geegle_social.sql`; applied locally only, NOT applied to `oizdbkxnzwatytxcrvoo` |
+| Run 4 chat compatibility | DOCUMENTED | Friendship/block contract in `docs/RUN3_VERIFICATION.md` §11 |

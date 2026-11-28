@@ -246,15 +246,6 @@
       "reviewStatus": "identity-and-decode-verified",
       "withheldReason": "No repository-level license or image-specific reuse permission verified."
     },
-    "everythingle": {
-      "title": "Everythingle",
-      "url": "https://everythingle.com/icon-512.png",
-      "source": "https://everythingle.com/",
-      "type": "official-icon",
-      "identityEvidence": "Image served by the app or game website",
-      "reviewStatus": "identity-and-decode-verified",
-      "withheldReason": "Served by the game or app site; thumbnail reuse permission was not verified."
-    },
     "krillion-backup": {
       "title": "Krillion (Backup)",
       "url": "https://krillionunlimited.org/og.png",

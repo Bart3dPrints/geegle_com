@@ -109,52 +109,6 @@ try {
   await page.getByRole('button', { name: 'Close settings', exact: true }).click();
   await page.waitForTimeout(300);
 
-  // ---- Everythingle -------------------------------------------------------
-  await page.getByRole('button', { name: 'apps', exact: true }).click();
-  await page.waitForTimeout(300);
-  const everythingleCard = page.locator('[data-card]').filter({ hasText: 'Everythingle' }).first();
-  await everythingleCard.locator('button').first().click();
-  await continueAsGuest(page);
-  await page.waitForTimeout(600);
-  const tiles = page.locator('[data-everythingle-game]');
-  check('the hub lists the complete collection', (await tiles.count()) === 50, String(await tiles.count()));
-  const localCount = await page.locator('[data-everythingle-game] [data-source="geegle"]').count();
-  check('Geegle-native games are labelled as Geegle', localCount === 5, String(localCount));
-
-  await page.locator('[data-everythingle-game="wordle"]').click();
-  await page.waitForTimeout(400);
-  check('the five-letter game opens its board directly', (await page.locator('[role="gridcell"]').count()) === 30);
-  for (const letter of 'stone') await page.keyboard.press(letter);
-  await page.keyboard.press('Enter');
-  await page.waitForTimeout(300);
-  check('a guess is scored', (await page.locator('[data-state="absent"], [data-state="present"], [data-state="correct"]').count()) >= 5);
-  await page.getByRole('button', { name: 'Back to Everythingle' }).click();
-  await page.waitForTimeout(300);
-
-  await page.locator('[data-everythingle-game="word500"]').click();
-  await page.waitForTimeout(300);
-  check('the counts-only format shows green/yellow/red totals', (await page.locator('[data-count="correct"]').count()) + (await page.locator('[data-count="absent"]').count()) >= 0);
-  await page.getByRole('button', { name: 'Back to Everythingle' }).click();
-  await page.waitForTimeout(300);
-
-  await page.locator('[data-everythingle-game="middle-word"]').click();
-  await page.waitForTimeout(300);
-  check('Middle Word shows both bounds', (await page.locator('[data-bound="left"]').count()) === 1 && (await page.locator('[data-bound="right"]').count()) === 1);
-  await page.getByRole('button', { name: 'Back to Everythingle' }).click();
-  await page.waitForTimeout(300);
-
-  await page.locator('[data-everythingle-game="chess"]').click();
-  await page.waitForTimeout(5000);
-  const frame = page.locator('iframe[title*="everythingle.com"]');
-  check('an official game loads its provider page in the player', (await frame.count()) === 1, await frame.first().getAttribute('src').catch(() => ''));
-  const providerFrame = page.frames().find((entry) => entry.url().includes('everythingle.com/games/chess'));
-  const providerText = providerFrame ? await providerFrame.evaluate(() => document.body.innerText.slice(0, 120)).catch(() => '') : '';
-  check('the official game renders real content', providerText.length > 20, providerText.replace(/\s+/g, ' ').slice(0, 80));
-  await page.getByRole('button', { name: 'Back to Everythingle' }).click();
-  await page.waitForTimeout(300);
-  await page.getByRole('button', { name: 'Back to Apps' }).click();
-  await page.waitForTimeout(400);
-
   // ---- Krillion placements -----------------------------------------------
   await page.getByRole('button', { name: 'games', exact: true }).click();
   await page.waitForTimeout(500);

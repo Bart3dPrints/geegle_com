@@ -42,27 +42,6 @@ async function launchApp(title) {
 try {
   await openLibrary();
 
-  // Everythingle: Geegle's own collection hub, no proxy and no server choice.
-  await launchApp('Everythingle');
-  const tiles = page.locator('[data-everythingle-game]');
-  check('Everythingle opens the collection hub', (await tiles.count()) === 50, String(await tiles.count()));
-  check('Everythingle offers no proxy/server choice', !(await page.getByText(/proxy|server/i).count()));
-
-  await page.locator('[data-everythingle-game="krillion"]').click();
-  const officialFrame = page.locator('iframe[title*="everythingle.com" i]');
-  await officialFrame.first().waitFor({ timeout: 15000 }).catch(() => null);
-  const officialSrc = await officialFrame.first().getAttribute('src').catch(() => null);
-  check(
-    'an official Everythingle game loads its own page',
-    Boolean(officialSrc && officialSrc === 'https://everythingle.com/games/krillion/'),
-    officialSrc ?? '',
-  );
-  check('Everythingle offers an exit control', (await page.getByRole('button', { name: 'Back to Everythingle' }).count()) > 0);
-  await page.getByRole('button', { name: 'Back to Everythingle' }).click();
-  await page.waitForTimeout(400);
-  await page.getByRole('button', { name: 'Back to Apps' }).click();
-  await page.waitForTimeout(800);
-
   // YouTube: official privacy-enhanced embed.
   await launchApp('YouTube');
   check('YouTube offers its URL input', (await page.getByLabel('YouTube video URL').count()) === 1);

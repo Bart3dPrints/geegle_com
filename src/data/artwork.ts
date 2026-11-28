@@ -21083,14 +21083,6 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Found by searching \"Yellow game\" in Bing Images and taking result 2; the image was checked against the catalog title \"Yellow\" before use. Source page: https://storage.googleapis.com/didueedskejpue/what-is-the-baby-in-yellow-game.html",
     "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request."
   },
-  "clyohohoio": {
-    "title": "Yohoho.io",
-    "url": "/artwork/clyohohoio.webp",
-    "source": "https://cdn.jsdelivr.net/gh/deformed-steve/yohohoio@main/img/banner1200x630.jpg",
-    "type": "official-og",
-    "identityEvidence": "Published by the distribution for Yohoho.io at https://cdn.jsdelivr.net/gh/deformed-steve/yohohoio@main/img/banner1200x630.jpg, found by fetching that distribution's own pages/assets (fetched cdn.jsdelivr.net page metadata).",
-    "reuseEvidence": "Artwork published by the game's own distribution for this title and used only as its thumbnail on this platform. Rights remain with the owner and it is removed on request."
-  },
   "clyoshisstrangequest": {
     "title": "Yoshi's Strange Quest",
     "url": "/artwork/clyoshisstrangequest.webp",
@@ -21275,14 +21267,6 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "identityEvidence": "Captured from the actual game this repository serves at /games/clzumashooter.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
   },
-  "code-editor": {
-    "title": "Code Editor",
-    "url": "/artwork/code-editor.webp",
-    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/Code%20Editor%20(1).html",
-    "type": "gameplay-screenshot",
-    "identityEvidence": "Captured the served Code Editor page with its own title and HTML/Python editor controls.",
-    "reuseEvidence": "Screenshot of the application as distributed by this platform, used only as its thumbnail on the same platform. Rights remain with the owner and it is removed on request."
-  },
   "codeorg": {
     "title": "Code.org",
     "url": "/artwork/codeorg.webp",
@@ -21330,14 +21314,6 @@ export const CAPTURED_ARTWORK: Partial<Record<string, {
     "type": "gameplay-screenshot",
     "identityEvidence": "Captured from the actual game this repository serves at /games/eb-client-v1-0-0r2-wasm.html after it rendered its own screen in Chromium.",
     "reuseEvidence": "Screenshot of the game as distributed by this platform, used only as its thumbnail on the same platform. Game imagery remains the property of its owner and is removed on request."
-  },
-  "everythingle": {
-    "title": "Everythingle",
-    "url": "/artwork/everythingle.webp",
-    "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/artwork/everythingle.webp",
-    "type": "original-geegle-art",
-    "identityEvidence": "Original cover art authored for the in-Geegle Everythingle word puzzle: four neutral letter tiles spelling GEEG.",
-    "reuseEvidence": "Created for this repository; no third-party artwork or trademark is used."
   },
   "friday-night-funkin": {
     "title": "Friday Night Funkin'",
