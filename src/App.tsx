@@ -91,8 +91,11 @@ import { resolveTheme } from './theme/palette';
 import { AmbientLayer } from './theme/Ambient';
 import {
   getUnreadSummary,
+  loadConversations,
   setUnreadSummary,
+  summarizeUnread,
   unreadBadge,
+  watchChat,
   watchUnreadSummary,
   type ChatUnreadSummary,
 } from './lib/chat';
@@ -387,6 +390,28 @@ export default function App() {
 
   // The Chat tab badge reads the same summary Chat derives from its list.
   useEffect(() => watchUnreadSummary(() => setUnread(getUnreadSummary())), []);
+
+  // Unread totals have to be right even while Chat is closed, so the badge is
+  // fed from here rather than only from the Chat tab being mounted.
+  useEffect(() => {
+    if (!userId) {
+      setUnreadSummary({ publicUnread: 0, privateUnread: 0 });
+      return;
+    }
+    let cancelled = false;
+    const refresh = async () => {
+      const result = await loadConversations();
+      if (!cancelled && result.ok) setUnreadSummary(summarizeUnread(result.data ?? []));
+    };
+    void refresh();
+    const stop = watchChat(userId, () => {
+      void refresh();
+    });
+    return () => {
+      cancelled = true;
+      stop();
+    };
+  }, [userId]);
 
   // Optional clock and date widgets; the timer only runs while one is shown.
   const [now, setNow] = useState(() => new Date());

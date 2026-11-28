@@ -97,6 +97,7 @@ function ForwardEmbed({
   const when = forwarded.createdAt ? messageTime(forwarded.createdAt) : '';
   return (
     <div
+      data-forwarded={forwarded.messageId}
       className={`mb-1 rounded border-l-2 px-2 py-1 text-[11px] ${
         mine ? 'border-current/50 bg-white/15' : 'border-neutral-400 bg-black/5 dark:bg-white/10'
       }`}
@@ -229,7 +230,6 @@ function MessageRow({
       data-unsent={message.unsent ? 'true' : 'false'}
       data-mine={mine ? 'true' : 'false'}
     >
-      {!editing && menu}
       <div className={`flex min-w-0 max-w-[75%] flex-col ${mine ? 'items-end' : 'items-start'}`}>
         {showAuthor && !mine && (
           <span className="mb-0.5 px-1 text-[11px] font-medium text-neutral-600 dark:text-neutral-300">
@@ -282,11 +282,14 @@ function MessageRow({
           </div>
         )}
 
-        <span className="mt-0.5 px-1 text-[10px] text-neutral-500 dark:text-neutral-400">
+        <span className="mt-0.5 flex items-center gap-1 px-1 text-[10px] text-neutral-500 dark:text-neutral-400">
           {messageTime(message.createdAt)}
-          {message.editedAt && !message.unsent && !message.moderated ? ' · edited' : ''}
+          {message.editedAt && !message.unsent && !message.moderated && (
+            <span title="This message was edited" data-edited="true">edited</span>
+          )}
         </span>
       </div>
+      {!editing && menu}
     </div>
   );
 }
@@ -1340,7 +1343,7 @@ export function Chat({
       )}
 
       {picker === 'dm' && (
-        <Modal title="New direct message" onClose={() => setPicker(null)}>
+        <Modal title="New direct message" onClose={() => setPicker(null)}><div data-picker>
           {friends.length === 0 ? (
             <p className="text-xs text-neutral-500 dark:text-neutral-400">
               Direct messages need an accepted friend. Add one from the Friends tab first.
@@ -1363,7 +1366,7 @@ export function Chat({
               ))}
             </div>
           )}
-        </Modal>
+        </div></Modal>
       )}
 
       {(picker === 'group' || picker === 'renaming') && (

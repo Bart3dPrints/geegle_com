@@ -8,11 +8,11 @@
 // Ownership and teardown rules matter here:
 // - The connection lives in this module, because React 18 mounts effects twice
 //   in development and two channels on one topic fight each other.
-// - A key change (sign-in or sign-out) creates the new channel *first* and
-//   removes the old one afterwards. Awaiting `removeChannel` before creating
-//   the replacement is what used to leave the counter stuck at "—" after
-//   signing in: the leave was sent, the removal promise never settled, and the
-//   authenticated channel was never joined.
+// - A key change (sign-in or sign-out) leaves the old channel before joining
+//   the new one, because every visitor shares one topic: a second join on the
+//   same topic closes the first, and the server then drops the presence state
+//   the new channel had just published. The leave is bounded, so a stalled
+//   removal can never block the new join the way it used to.
 // - A failed or timed-out join is retried a bounded number of times. While
 //   presence is unknown the state says so; it is never presented as "everyone
 //   is offline".
@@ -60,12 +60,18 @@ function publish(next: Partial<SocialPresence>) {
   for (const listener of listeners) listener();
 }
 
-/** Removes a channel without letting a stalled removal block the next join. */
-function retire(previous: RealtimeChannel | null) {
+/** Leaves a channel, bounded, so one slow teardown cannot block the next join. */
+async function retire(previous: RealtimeChannel | null): Promise<void> {
   if (!previous) return;
-  void previous.untrack().catch(() => undefined);
-  const removal = supabase.removeChannel(previous).catch(() => undefined);
-  void Promise.race([removal, new Promise((resolve) => window.setTimeout(resolve, 3_000))]);
+  const leave = (async () => {
+    await previous.untrack().catch(() => undefined);
+    await previous.unsubscribe().catch(() => undefined);
+    await supabase.removeChannel(previous).catch(() => undefined);
+  })();
+  await Promise.race([
+    leave,
+    new Promise<void>((resolve) => window.setTimeout(resolve, 2_000)),
+  ]);
 }
 
 function watch(next: RealtimeChannel, myGeneration: number) {
@@ -123,6 +129,7 @@ async function connect(userId: string | null, enabled: boolean) {
     currentKey = null;
     retire(previous);
     publish({ status: 'unavailable', onlineKeys: new Set(), visitors: null });
+    await retire(previous);
     return;
   }
 
@@ -138,17 +145,17 @@ async function connect(userId: string | null, enabled: boolean) {
   currentKey = key;
   publish({ status: 'connecting', visitors: null });
 
+  // One topic is shared by every visitor, so the old join has to be closed
+  // before the new key joins; otherwise the two joins close each other.
+  await retire(previous);
+  if (generation !== myGeneration) return;
+
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt += 1) {
     if (generation !== myGeneration) return;
     const joined = await join(key, myGeneration);
     if (generation !== myGeneration) return;
-    if (joined) {
-      // The new channel is live before the old one is retired, so the visitor
-      // never disappears from the count during a sign-in.
-      if (previous) retire(previous);
-      return;
-    }
-    retire(channel);
+    if (joined) return;
+    await retire(channel);
     channel = null;
     if (attempt < MAX_ATTEMPTS) {
       publish({ status: 'connecting', visitors: null });

@@ -573,8 +573,9 @@ export function summarizeUnread(conversations: ChatConversation[]): ChatUnreadSu
   let publicUnread = 0;
   let privateUnread = 0;
   for (const conversation of conversations) {
-    if (conversation.kind === 'public') publicUnread += conversation.unread;
-    else privateUnread += conversation.unread;
+    const unread = Math.max(0, conversation.unread);
+    if (conversation.kind === 'public') publicUnread += unread;
+    else privateUnread += unread;
   }
   return { publicUnread, privateUnread };
 }
@@ -599,7 +600,8 @@ export function watchUnreadSummary(listener: () => void): () => void {
 }
 
 /** `99+` is the only cap; the stored number stays exact. */
-export function unreadBadge(count: number): string {
+export function unreadBadge(count: number): string | null {
+  if (count <= 0) return null;
   return count > 99 ? '99+' : String(count);
 }
 

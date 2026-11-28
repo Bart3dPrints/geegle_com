@@ -65,9 +65,11 @@ test('presence keys are stable for an account and opaque', async () => {
   assert.ok(one.length >= 16, 'the key is long enough to be opaque');
 });
 
-test('a hidden account still has a presence key, but not its own', async () => {
-  const visible = await friends.presenceKeyFor('user-1', false);
-  const hidden = await friends.presenceKeyFor('user-1', true);
-  assert.ok(hidden.length >= 16);
-  assert.notEqual(hidden, visible, 'a hidden account is counted but not shown as online');
+test('presence keys are stable per account, with no second hidden identity', async () => {
+  const first = await friends.presenceKeyFor('user-1');
+  const again = await friends.presenceKeyFor('user-1');
+  const other = await friends.presenceKeyFor('user-2');
+  assert.equal(first, again, 'the same account always uses one key');
+  assert.notEqual(first, other);
+  assert.ok(first.length >= 16);
 });

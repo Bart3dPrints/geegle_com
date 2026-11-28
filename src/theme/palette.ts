@@ -56,7 +56,7 @@ export const THEME_PRESETS: ThemePreset[] = [
   preset('navy', 'Navy', 222, 40, ['#1e3a8a', '#93c5fd'], 'cool'),
   preset('lime', 'Lime', 90, 24, ['#65a30d', '#bef264'], 'nature'),
   preset('mint', 'Mint', 158, 22, ['#10b981', '#6ee7b7'], 'nature'),
-  preset('lavender', 'Lavender', 275, 30, ['#8b5cf6', '#ddd6fe'], 'vivid'),
+  preset('lavender', 'Lavender', 275, 30, ['#7c3aed', '#ddd6fe'], 'vivid'),
   preset('rose', 'Rose', 350, 26, ['#e11d48', '#fda4af'], 'warm'),
   preset('brown', 'Brown', 28, 18, ['#92400e', '#d6b28c'], 'warm'),
   preset('beige', 'Beige', 40, 20, ['#a16207', '#e7d3a8'], 'warm'),
@@ -116,6 +116,45 @@ function neutralScale(hue: number, sat: number, dark: boolean): Record<NeutralSt
   return out;
 }
 
+/** WCAG contrast ratio between two hex colours. */
+function contrastRatio(a: string, b: string): number {
+  const lum = (value: string) => {
+    const rgb = [1, 3, 5].map((index) => parseInt(value.slice(index, index + 2), 16) / 255);
+    const linear = rgb.map((channel) =>
+      channel <= 0.03928 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4,
+    );
+    return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2];
+  };
+  const [hi, lo] = [lum(a), lum(b)].sort((x, y) => y - x);
+  return (hi + 0.05) / (lo + 0.05);
+}
+
+function shift(hex: string, amount: number): string {
+  const channels = [1, 3, 5].map((index) => parseInt(hex.slice(index, index + 2), 16));
+  return (
+    '#' +
+    channels
+      .map((channel) => Math.max(0, Math.min(255, Math.round(channel * (1 + amount)))))
+      .map((channel) => channel.toString(16).padStart(2, '0'))
+      .join('')
+  );
+}
+
+/**
+ * A bubble colour plus an ink that reaches 4.5:1. A chosen colour is nudged a
+ * few percent darker or lighter only when neither ink is readable as-is.
+ */
+export function bubbleInk(background: string, target = 4.5): { background: string; ink: string } {
+  if (!/^#[\da-f]{6}$/i.test(background)) return { background, ink: '#ffffff' };
+  let colour = background;
+  let ink = readableInk(colour);
+  for (let step = 0; step < 24 && contrastRatio(ink, colour) < target; step += 1) {
+    colour = shift(colour, ink === '#111111' ? -0.05 : 0.07);
+    ink = readableInk(colour);
+  }
+  return { background: colour, ink };
+}
+
 /** White or near-black, whichever reads better on the given hex colour. */
 export function readableInk(background: string): string {
   const value = background.trim();
@@ -127,7 +166,11 @@ export function readableInk(background: string): string {
     channel <= 0.03928 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4,
   );
   const luminance = 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2];
-  return luminance > 0.5 ? '#111111' : '#ffffff';
+  // Pick whichever ink actually has more contrast, rather than assuming a
+  // lightness threshold: mid greens and reds read better dark than white.
+  const onWhite = 1.05 / (luminance + 0.05);
+  const onBlack = (luminance + 0.05) / 0.05;
+  return onWhite >= onBlack ? '#ffffff' : '#111111';
 }
 
 export interface ThemeOverrides {
@@ -186,8 +229,8 @@ export function resolveTheme(
     hover: dark ? hex(spec.hue, spec.sat, 20) : hex(spec.hue, spec.sat, 94),
     selected: dark ? hex(spec.hue, Math.min(60, spec.sat + 10), 26) : hex(spec.hue, Math.min(70, spec.sat + 12), 90),
     chat: surfaces.chat,
-    bubbleOut,
-    bubbleOutInk: readableInk(bubbleOut),
+    bubbleOut: bubbleInk(bubbleOut).background,
+    bubbleOutInk: bubbleInk(bubbleOut).ink,
     bubbleIn: surfaces.bubbleIn,
     bubbleInInk: overrides.text ?? surfaces.text,
     scrim: dark ? `rgba(10, 10, 10, 0.82)` : `rgba(250, 250, 250, 0.84)`,
