@@ -14,7 +14,7 @@ export function PasswordInput({ className = 'input', ...rest }: PasswordInputPro
       <input {...rest} type={visible ? 'text' : 'password'} className={`${className} pr-10`} />
       <button
         type="button"
-        className="absolute inset-y-0 right-0 flex w-10 items-center justify-center rounded-r-md text-neutral-500 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+        className="absolute inset-y-0 right-0 flex w-10 items-center justify-center rounded-r-md text-[var(--geegle-muted)] transition-colors hover:text-neutral-900"
         aria-label={visible ? 'Hide password' : 'Show password'}
         aria-pressed={visible}
         title={visible ? 'Hide password' : 'Show password'}

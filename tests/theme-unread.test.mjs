@@ -147,3 +147,78 @@ test('an unknown preset falls back to the default palette', () => {
   assert.deepEqual(colors, fallback);
   assert.equal(palette.themePreset('not-a-theme').id, palette.DEFAULT_THEME_ID);
 });
+
+test('the neutral presets are visually distinct, not recoloured duplicates', () => {
+  for (const dark of [false, true]) {
+    const seen = new Map();
+    for (const id of ['neutral', 'gray', 'white', 'black']) {
+      const colors = palette.resolveTheme(id, dark);
+      const signature = [colors.bg, colors.header, colors.card, colors.elevated].join('|');
+      assert.ok(!seen.has(signature), `${id} matches ${seen.get(signature)} in ${dark ? 'dark' : 'light'} mode`);
+      seen.set(signature, id);
+    }
+    assert.notEqual(
+      palette.resolveTheme('gray', dark).card,
+      palette.resolveTheme('white', dark).card,
+      `gray and white cards are identical in ${dark ? 'dark' : 'light'} mode`,
+    );
+  }
+});
+
+test('white is genuinely bright and black is genuinely dark', () => {
+  const luminance = (color) =>
+    palette
+      .parseColor(color)
+      .map((channel) => channel / 255)
+      .map((c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4))
+      .reduce((sum, c, i) => sum + c * [0.2126, 0.7152, 0.0722][i], 0);
+  const white = palette.resolveTheme('white', false);
+  assert.ok(luminance(white.bg) > 0.9, `white background is ${white.bg}`);
+  assert.ok(luminance(white.card) > 0.9, `white cards are ${white.card}`);
+  const black = palette.resolveTheme('black', true);
+  assert.ok(luminance(black.bg) < 0.03, `black background is ${black.bg}`);
+  assert.ok(luminance(black.card) > luminance(black.bg), 'black cards must separate from the background');
+  const gray = palette.resolveTheme('gray', false);
+  assert.ok(luminance(gray.bg) < luminance(white.bg), 'gray must be deeper than white');
+});
+
+test('text fields follow the theme and keep readable ink', () => {
+  for (const dark of [false, true]) {
+    for (const preset of palette.THEME_PRESETS) {
+      const colors = palette.resolveTheme(preset.id, dark);
+      assert.ok(colors.field, `${preset.id} has no field surface`);
+      assert.ok(colors.fieldText, `${preset.id} has no field ink`);
+      assert.ok(
+        palette.contrast(colors.fieldText, colors.field) >= 4.5,
+        `${preset.id} ${dark ? 'dark' : 'light'} field text is ${palette.contrast(colors.fieldText, colors.field).toFixed(2)}:1`,
+      );
+      assert.ok(colors.muted, `${preset.id} has no secondary text`);
+    }
+  }
+  const darkTheme = palette.resolveTheme('green', true);
+  const lightTheme = palette.resolveTheme('green', false);
+  assert.notEqual(darkTheme.field, lightTheme.field, 'the field must change between modes');
+});
+
+test('an explicit override cannot make text unreadable', () => {
+  const colors = palette.resolveTheme('neutral', false, {
+    card: '#111111',
+    text: '#111111',
+    muted: '#101010',
+    field: '#101010',
+    fieldText: '#111111',
+  });
+  assert.ok(palette.contrast(colors.text, colors.card) >= 4.5, `text on a dark card is ${palette.contrast(colors.text, colors.card).toFixed(2)}:1`);
+  assert.ok(palette.contrast(colors.fieldText, colors.field) >= 4.5, 'field ink must stay readable');
+  assert.ok(palette.contrast(colors.muted, colors.bg) >= 4.5, 'secondary text must stay readable');
+});
+
+test('component overrides only change their own surface', () => {
+  const base = palette.resolveTheme('blue', false);
+  const custom = palette.resolveTheme('blue', false, { field: '#ff0000' });
+  assert.equal(custom.field, '#ff0000');
+  assert.equal(custom.bg, base.bg);
+  assert.equal(custom.card, base.card);
+  assert.equal(custom.header, base.header);
+  assert.equal(custom.bubbleIn, base.bubbleIn);
+});

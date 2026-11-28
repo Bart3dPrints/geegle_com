@@ -22,6 +22,8 @@ export function themeVariables(colors: ThemeColors): Record<string, string> {
     'accent-ink': colors.accentInk,
     // Kept as an alias for code written before the theme rewrite.
     'accent-contrast': colors.accentInk,
+    field: colors.field,
+    'field-text': colors.fieldText,
     hover: colors.hover,
     selected: colors.selected,
     chat: colors.chat,
@@ -33,6 +35,9 @@ export function themeVariables(colors: ThemeColors): Record<string, string> {
     'ambient-1': colors.ambient[0],
     'ambient-2': colors.ambient[1],
     'ambient-3': colors.ambient[2],
+    // Kept as an alias for the search bar and other text entry written before
+    // the field tokens landed.
+    'search-bg': colors.field,
   };
   for (const [name, value] of Object.entries(map)) vars[`--geegle-${name}`] = value;
   return vars;

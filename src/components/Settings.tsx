@@ -86,7 +86,7 @@ function ColorRow({
 }) {
   return (
     <div className="flex items-center gap-2" data-color-row={testId}>
-      <span className="w-24 shrink-0 text-xs text-neutral-600 dark:text-neutral-300">{label}</span>
+      <span className="w-24 shrink-0 text-xs text-neutral-600">{label}</span>
       <input
         type="color"
         aria-label={`${label} colour`}
@@ -96,7 +96,7 @@ function ColorRow({
       />
       <input
         aria-label={`${label} hex value`}
-        className="w-20 rounded border border-neutral-300 bg-transparent px-1.5 py-1 font-mono text-[11px] dark:border-neutral-700"
+        className="w-20 rounded border border-neutral-300 bg-transparent px-1.5 py-1 font-mono text-[11px] dark:border-[var(--geegle-border)]"
         value={value ?? fallback}
         onChange={(event) => {
           const next = event.target.value.trim();
@@ -105,7 +105,7 @@ function ColorRow({
       />
       <button
         type="button"
-        className="text-xs text-neutral-500 underline underline-offset-2 disabled:opacity-40 dark:text-neutral-400"
+        className="text-xs text-[var(--geegle-muted)] underline underline-offset-2 disabled:opacity-40"
         onClick={onReset}
         disabled={!value}
         aria-label={`Reset ${label.toLowerCase()}`}
@@ -128,11 +128,11 @@ function GroupHeading({
 }) {
   return (
     <div className="mb-2 flex items-center justify-between gap-2">
-      <p className="text-xs text-neutral-500 dark:text-neutral-400">{children}</p>
+      <p className="text-xs text-[var(--geegle-muted)]">{children}</p>
       {onReset && (
         <button
           type="button"
-          className="shrink-0 text-xs text-neutral-500 underline underline-offset-2 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+          className="shrink-0 text-xs text-[var(--geegle-muted)] underline underline-offset-2 hover:text-neutral-900"
           onClick={onReset}
           aria-label={resetLabel}
         >
@@ -386,6 +386,18 @@ export function Settings({
     setMessage(null);
   };
 
+  // Escape closes the window, matching every other Geegle dialog.
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        onClose();
+      }
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [onClose]);
+
   return (
     <motion.div
       className="fixed inset-0 z-50 flex items-center justify-center bg-neutral-950/60 p-4"
@@ -416,7 +428,7 @@ export function Settings({
 
         <div className="flex min-h-0 flex-1 flex-col gap-4 sm:flex-row sm:gap-5">
           <div
-            className="flex shrink-0 flex-wrap gap-1 rounded-md border border-neutral-200 p-1 sm:w-36 sm:flex-col sm:flex-nowrap sm:content-start sm:rounded-none sm:border-0 sm:border-r sm:border-neutral-200 sm:p-0 sm:pr-2 dark:border-neutral-700 dark:sm:border-neutral-700"
+            className="flex shrink-0 flex-wrap gap-1 rounded-md border border-neutral-200 p-1 sm:w-36 sm:flex-col sm:flex-nowrap sm:content-start sm:rounded-none sm:border-0 sm:border-r sm:border-neutral-200 sm:p-0 sm:pr-2 dark:border-[var(--geegle-border)]"
             role="tablist"
             aria-label="Settings sections"
             aria-orientation="vertical"
@@ -430,7 +442,7 @@ export function Settings({
                 className={`rounded px-2 py-1.5 text-xs sm:w-full sm:text-left sm:text-sm ${
                   tab === entry.key
                     ? 'accent-surface'
-                    : 'hover:bg-neutral-100 dark:hover:bg-neutral-800'
+                    : 'hover:bg-neutral-100'
                 }`}
                 onClick={() => {
                   setTab(entry.key);
@@ -449,7 +461,7 @@ export function Settings({
                   Theme
                 </h3>
                 <div
-                  className="flex gap-1 rounded-md border border-neutral-200 p-1 dark:border-neutral-700"
+                  className="flex gap-1 rounded-md border border-neutral-200 p-1 dark:border-[var(--geegle-border)]"
                   role="group"
                   aria-label="Appearance mode"
                 >
@@ -461,7 +473,7 @@ export function Settings({
                       className={`flex-1 rounded px-2 py-1.5 text-sm capitalize ${
                         draft.mode === mode
                           ? 'accent-surface'
-                          : 'hover:bg-neutral-100 dark:hover:bg-neutral-800'
+                          : 'hover:bg-neutral-100'
                       }`}
                       onClick={() => applyDraft({ mode })}
                     >
@@ -471,7 +483,7 @@ export function Settings({
                 </div>
 
                 <div>
-                  <p className="mb-2 text-xs text-neutral-500 dark:text-neutral-400">
+                  <p className="mb-2 text-xs text-[var(--geegle-muted)]">
                     Colour theme — each preset is a complete palette for headers,
                     surfaces, cards and chat, not just an accent.
                   </p>
@@ -498,8 +510,8 @@ export function Settings({
                           data-theme-preset={preset.id}
                           className={`rounded-md border p-2 text-left transition-colors ${
                             selected
-                              ? 'border-neutral-900 ring-1 ring-neutral-900 dark:border-neutral-100 dark:ring-neutral-100'
-                              : 'border-neutral-200 hover:border-neutral-300 dark:border-neutral-700'
+                              ? 'border-neutral-900 ring-1 ring-neutral-900'
+                              : 'border-neutral-200 hover:border-neutral-300 dark:border-[var(--geegle-border)]'
                           }`}
                           onClick={() => applyDraft({ theme: preset.id })}
                         >
@@ -520,10 +532,10 @@ export function Settings({
                   </div>
                 </div>
 
-                <div className="flex items-start justify-between gap-3 rounded-md border border-neutral-200 p-3 dark:border-neutral-700">
+                <div className="flex items-start justify-between gap-3 rounded-md border border-neutral-200 p-3 dark:border-[var(--geegle-border)]">
                   <span>
                     <span className="block text-sm">Ambient lighting</span>
-                    <span className="block text-xs text-neutral-500 dark:text-neutral-400">
+                    <span className="block text-xs text-[var(--geegle-muted)]">
                       Soft colour around the interface, taken from the theme or the
                       conversation background. Turning it off keeps every colour you chose.
                     </span>
@@ -536,7 +548,7 @@ export function Settings({
                     data-ambient-toggle
                     onClick={() => applyDraft({ ambient: !draft.ambient })}
                     className={`relative h-6 w-11 shrink-0 rounded-full transition-colors ${
-                      draft.ambient ? 'bg-[var(--geegle-accent)]' : 'bg-neutral-300 dark:bg-neutral-700'
+                      draft.ambient ? 'bg-[var(--geegle-accent)]' : 'bg-neutral-300'
                     }`}
                   >
                     <span
@@ -558,6 +570,11 @@ export function Settings({
                       card: null,
                       header: null,
                       accent: null,
+                      field: null,
+                      fieldText: null,
+                      muted: null,
+                      chat: null,
+                      bubbleIn: null,
                       bubbleOut: null,
                       fontColor: null,
                     })
@@ -590,8 +607,8 @@ export function Settings({
                         aria-pressed={(draft.background ?? '') === color}
                         className={`h-7 w-7 rounded-full border ${
                           (draft.background ?? '') === color
-                            ? 'border-neutral-900 ring-1 ring-neutral-900 dark:border-neutral-100 dark:ring-neutral-100'
-                            : 'border-neutral-300 dark:border-neutral-600'
+                            ? 'border-neutral-900 ring-1 ring-neutral-900'
+                            : 'border-neutral-300 dark:border-[var(--geegle-border)]'
                         }`}
                         style={{ background: color }}
                         onClick={() => applyDraft({ background: color })}
@@ -606,7 +623,7 @@ export function Settings({
                     />
                   </div>
 
-                  <p className="mb-1 mt-3 text-xs text-neutral-500 dark:text-neutral-400">Card colour</p>
+                  <p className="mb-1 mt-3 text-xs text-[var(--geegle-muted)]">Card colour</p>
                   <div className="flex flex-wrap items-center gap-2">
                     {CARDS.map((color) => (
                       <button
@@ -616,8 +633,8 @@ export function Settings({
                         aria-pressed={(draft.card ?? '') === color}
                         className={`h-7 w-7 rounded-full border ${
                           (draft.card ?? '') === color
-                            ? 'border-neutral-900 ring-1 ring-neutral-900 dark:border-neutral-100 dark:ring-neutral-100'
-                            : 'border-neutral-300 dark:border-neutral-600'
+                            ? 'border-neutral-900 ring-1 ring-neutral-900'
+                            : 'border-neutral-300 dark:border-[var(--geegle-border)]'
                         }`}
                         style={{ background: color }}
                         onClick={() => applyDraft({ card: color })}
@@ -652,6 +669,54 @@ export function Settings({
                       onReset={() => applyDraft({ header: null })}
                     />
                     <ColorRow
+                      label="Page background"
+                      testId="background"
+                      value={draft.background}
+                      fallback="#fafafa"
+                      onChange={(value) => applyDraft({ background: value })}
+                      onReset={() => applyDraft({ background: null })}
+                    />
+                    <ColorRow
+                      label="Cards"
+                      testId="card"
+                      value={draft.card}
+                      fallback="#ffffff"
+                      onChange={(value) => applyDraft({ card: value })}
+                      onReset={() => applyDraft({ card: null })}
+                    />
+                    <ColorRow
+                      label="Search field"
+                      testId="field"
+                      value={draft.field}
+                      fallback="#ffffff"
+                      onChange={(value) => applyDraft({ field: value })}
+                      onReset={() => applyDraft({ field: null })}
+                    />
+                    <ColorRow
+                      label="Search text"
+                      testId="field-text"
+                      value={draft.fieldText}
+                      fallback="#171717"
+                      onChange={(value) => applyDraft({ fieldText: value })}
+                      onReset={() => applyDraft({ fieldText: null })}
+                    />
+                    <ColorRow
+                      label="Secondary text"
+                      testId="muted"
+                      value={draft.muted}
+                      fallback="#6b7280"
+                      onChange={(value) => applyDraft({ muted: value })}
+                      onReset={() => applyDraft({ muted: null })}
+                    />
+                    <ColorRow
+                      label="Chat sidebar"
+                      testId="chat"
+                      value={draft.chat}
+                      fallback="#ffffff"
+                      onChange={(value) => applyDraft({ chat: value })}
+                      onReset={() => applyDraft({ chat: null })}
+                    />
+                    <ColorRow
                       label="Messages I send"
                       testId="bubble"
                       value={draft.bubbleOut}
@@ -660,15 +725,23 @@ export function Settings({
                       onReset={() => applyDraft({ bubbleOut: null })}
                     />
                     <ColorRow
-                      label="Text"
+                      label="Primary text"
                       testId="text"
                       value={draft.fontColor}
                       fallback="#171717"
                       onChange={(value) => applyDraft({ fontColor: value })}
                       onReset={() => applyDraft({ fontColor: null })}
                     />
+                    <ColorRow
+                      label="Messages I receive"
+                      testId="bubble-in"
+                      value={draft.bubbleIn}
+                      fallback="#e9ecf1"
+                      onChange={(value) => applyDraft({ bubbleIn: value })}
+                      onReset={() => applyDraft({ bubbleIn: null })}
+                    />
                   </div>
-                  <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                  <p className="mt-1 text-xs text-[var(--geegle-muted)]">
                     A preset sets every colour. Anything you change here overrides
                     just that part, and Reset returns it to the preset.
                   </p>
@@ -693,8 +766,8 @@ export function Settings({
                           aria-pressed={selected}
                           className={`h-7 w-7 rounded-full border ${
                             selected
-                              ? 'border-neutral-900 ring-1 ring-neutral-900 dark:border-neutral-100 dark:ring-neutral-100'
-                              : 'border-neutral-300 dark:border-neutral-600'
+                              ? 'border-neutral-900 ring-1 ring-neutral-900'
+                              : 'border-neutral-300 dark:border-[var(--geegle-border)]'
                           }`}
                           style={{
                             background: preset.value ?? 'linear-gradient(135deg, #171717 50%, #f5f5f5 50%)',
@@ -746,7 +819,7 @@ export function Settings({
                       </option>
                     ))}
                   </select>
-                  <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
+                  <p className="mt-2 text-xs text-[var(--geegle-muted)]">
                     Text colour lives under Individual colours, so it can be reset on
                     its own.
                   </p>
@@ -760,7 +833,7 @@ export function Settings({
                     Wallpaper
                   </GroupHeading>
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="flex h-10 w-16 shrink-0 items-center justify-center overflow-hidden rounded border border-neutral-300 bg-neutral-100 dark:border-neutral-600 dark:bg-neutral-800">
+                    <span className="flex h-10 w-16 shrink-0 items-center justify-center overflow-hidden rounded border border-neutral-300 bg-neutral-100 dark:border-[var(--geegle-border)]">
                       {draft.wallpaper ? (
                         <img src={draft.wallpaper} alt="" className="h-full w-full object-cover" />
                       ) : (
@@ -784,24 +857,24 @@ export function Settings({
                     {draft.wallpaper && (
                       <button
                         type="button"
-                        className="text-xs text-neutral-500 underline underline-offset-2 dark:text-neutral-400"
+                        className="text-xs text-[var(--geegle-muted)] underline underline-offset-2"
                         onClick={() => applyDraft({ wallpaper: null })}
                       >
                         Remove
                       </button>
                     )}
                   </div>
-                  <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                  <p className="mt-1 text-xs text-[var(--geegle-muted)]">
                     PNG, JPEG or WebP, under 8 MB.
                   </p>
                 </div>
 
-                <div className="border-t border-neutral-200 pt-4 dark:border-neutral-700">
+                <div className="border-t border-neutral-200 pt-4 dark:border-[var(--geegle-border)]">
                   <button type="button" className="btn-secondary w-full" onClick={resetAll}>
                     Reset all personalization
                   </button>
                   {saving && (
-                    <p className="mt-2 flex items-center gap-1 text-xs text-neutral-500 dark:text-neutral-400">
+                    <p className="mt-2 flex items-center gap-1 text-xs text-[var(--geegle-muted)]">
                       <Loader2 className="animate-spin" size={12} /> Saving
                     </p>
                   )}
@@ -821,7 +894,7 @@ export function Settings({
                     />
                     <span>
                       Show Recently Played
-                      <span className="mt-0.5 block text-xs text-neutral-500 dark:text-neutral-400">
+                      <span className="mt-0.5 block text-xs text-[var(--geegle-muted)]">
                         Adds a Recently Played row to the Games library.
                       </span>
                     </span>
@@ -838,7 +911,7 @@ export function Settings({
                 </section>
 
                 <section className="mb-6" aria-label="Guest reminder">
-                  <p className="mb-2 text-xs text-neutral-500 dark:text-neutral-400">
+                  <p className="mb-2 text-xs text-[var(--geegle-muted)]">
                     The guest account reminder can be turned back on.
                   </p>
                   <button
@@ -853,7 +926,7 @@ export function Settings({
                 </section>
 
                 <section className="mb-6" aria-label="Navigation shortcut">
-                  <p className="mb-2 text-xs text-neutral-500 dark:text-neutral-400">Navigation shortcut</p>
+                  <p className="mb-2 text-xs text-[var(--geegle-muted)]">Navigation shortcut</p>
                   <label className="mb-2 flex items-center gap-2 text-sm">
                     <input
                       type="checkbox"
@@ -879,7 +952,7 @@ export function Settings({
                       }}
                       aria-describedby="shortcut-key-hint"
                     />
-                    <span id="shortcut-key-hint" className="text-xs text-neutral-500 dark:text-neutral-400">
+                    <span id="shortcut-key-hint" className="text-xs text-[var(--geegle-muted)]">
                       Focus and press a symbol key
                     </span>
                   </div>
@@ -902,7 +975,7 @@ export function Settings({
                   </div>
                   <button
                     type="button"
-                    className="mt-2 text-xs text-neutral-500 underline underline-offset-2 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+                    className="mt-2 text-xs text-[var(--geegle-muted)] underline underline-offset-2 hover:text-neutral-900"
                     onClick={() => {
                       setDestinationDraft(DEFAULT_SHORTCUT.destination);
                       void persistShortcut({ ...DEFAULT_SHORTCUT });
@@ -925,8 +998,8 @@ export function Settings({
 
                 {username ? (
                   <section aria-label="Account">
-                    <p className="mb-4 text-sm text-neutral-500 dark:text-neutral-400">
-                      Signed in as <b className="text-neutral-900 dark:text-neutral-100">{username}</b>.
+                    <p className="mb-4 text-sm text-[var(--geegle-muted)]">
+                      Signed in as <b className="text-neutral-900">{username}</b>.
                     </p>
                     <form onSubmit={changePassword} className="mb-4">
                       <div className="mb-2 flex items-center gap-2 text-sm font-medium">
@@ -959,7 +1032,7 @@ export function Settings({
                     </button>
                   </section>
                 ) : (
-                  <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                  <p className="text-sm text-[var(--geegle-muted)]">
                     Sign in to sync favorites, settings and game progress.
                   </p>
                 )}
@@ -976,7 +1049,7 @@ export function Settings({
                   <GroupHeading resetLabel="Reset time and date" onReset={() => applyDraft({ ...DEFAULT_TIME_SETTINGS })}>
                     Preview
                   </GroupHeading>
-                  <div className="rounded-md border border-neutral-200 px-3 py-2 dark:border-neutral-700">
+                  <div className="rounded-md border border-neutral-200 px-3 py-2 dark:border-[var(--geegle-border)]">
                     <p className="text-lg tabular-nums" data-testid="time-preview">
                       <time className="sr-only" dateTime={tick.toISOString()} data-testid="time-tick" />
                       {draft.clock || draft.date
@@ -988,7 +1061,7 @@ export function Settings({
                             .join(' · ')
                         : 'Hidden'}
                     </p>
-                    <p className="mt-0.5 text-xs text-neutral-500 dark:text-neutral-400">
+                    <p className="mt-0.5 text-xs text-[var(--geegle-muted)]">
                       {describeTimeZone({ hour12: draft.hour12, timeZone: draft.timeZone }, tick)}
                     </p>
                   </div>
@@ -1019,7 +1092,7 @@ export function Settings({
                 <div>
                   <GroupHeading>Format</GroupHeading>
                   <div
-                    className="flex gap-1 rounded-md border border-neutral-200 p-1 dark:border-neutral-700"
+                    className="flex gap-1 rounded-md border border-neutral-200 p-1 dark:border-[var(--geegle-border)]"
                     role="group"
                     aria-label="Clock format"
                   >
@@ -1034,7 +1107,7 @@ export function Settings({
                         className={`flex-1 rounded px-2 py-1.5 text-sm ${
                           draft.hour12 === option.hour12
                             ? 'accent-surface'
-                            : 'hover:bg-neutral-100 dark:hover:bg-neutral-800'
+                            : 'hover:bg-neutral-100'
                         }`}
                         onClick={() => applyDraft({ hour12: option.hour12 })}
                       >
@@ -1071,7 +1144,7 @@ export function Settings({
                         <option value={draft.timeZone}>{draft.timeZone}</option>
                       )}
                   </select>
-                  <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                  <p className="mt-1 text-xs text-[var(--geegle-muted)]">
                     Daylight saving time is applied automatically.
                   </p>
                 </div>
@@ -1083,7 +1156,7 @@ export function Settings({
                 <h3 id="settings-tab-appearance" className="mb-1 text-sm font-medium">
                   Tab appearance
                 </h3>
-                <p className="mb-4 text-xs text-neutral-500 dark:text-neutral-400">
+                <p className="mb-4 text-xs text-[var(--geegle-muted)]">
                   Optional. Sets the page title and icon in your own browser tab. The library still shows Geegle.
                 </p>
 
@@ -1100,7 +1173,7 @@ export function Settings({
                 />
 
                 <div className="mb-2 flex items-center gap-3">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full border border-neutral-300 bg-[var(--geegle-card)] dark:border-neutral-600">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full border border-neutral-300 bg-[var(--geegle-card)] dark:border-[var(--geegle-border)]">
                     {identity.icon ? (
                       <img src={identity.icon} alt="" className="h-full w-full object-cover" />
                     ) : (
@@ -1119,14 +1192,14 @@ export function Settings({
                   {identity.icon && (
                     <button
                       type="button"
-                      className="text-xs text-neutral-500 underline underline-offset-2 dark:text-neutral-400"
+                      className="text-xs text-[var(--geegle-muted)] underline underline-offset-2"
                       onClick={() => setIdentity({ ...identity, icon: null })}
                     >
                       Remove
                     </button>
                   )}
                 </div>
-                <p className="mb-4 text-xs text-neutral-500 dark:text-neutral-400">
+                <p className="mb-4 text-xs text-[var(--geegle-muted)]">
                   PNG, JPEG or WebP, under 200 KB.
                 </p>
 
@@ -1157,7 +1230,7 @@ export function Settings({
           <p
             className={`mt-3 shrink-0 text-sm ${
               message.kind === 'ok'
-                ? 'text-neutral-700 dark:text-neutral-300'
+                ? 'text-neutral-700'
                 : 'text-red-600 dark:text-red-400'
             }`}
             role="alert"

@@ -16,11 +16,15 @@ const tag = () => Math.random().toString(36).slice(2, 7);
 const browser = await chromium.launch();
 
 async function closeNotices(page) {
+  // The library notice renders only after the catalog settles, so a fixed delay
+  // races it. Wait for the overlay to appear or the bounded wait to expire, then
+  // dismiss every notice modal until none is left.
+  await page.locator('div.fixed.inset-0.z-50').first().waitFor({ state: 'visible', timeout: 2500 }).catch(() => {});
   for (let i = 0; i < 3; i += 1) {
     const overlay = page.locator('div.fixed.inset-0.z-50').first();
     if (!(await overlay.count())) return;
-    await overlay.locator('button').last().click({ timeout: 2000 }).catch(() => {});
-    await page.waitForTimeout(200);
+    await overlay.locator('button').last().click({ timeout: 3000 }).catch(() => {});
+    await page.waitForTimeout(350);
   }
 }
 
@@ -46,7 +50,8 @@ async function register(page) {
 }
 
 async function pickTheme(page, id, mode) {
-  await page.getByRole('button', { name: 'Settings' }).click();
+  // "Close settings" also matches a loose name lookup, so anchor on the header.
+  await page.getByRole('button', { name: 'Settings', exact: true }).click();
   await page.waitForTimeout(400);
   await page.locator('[data-theme-preset]').first().waitFor({ state: 'visible' });
   const modeButton = page.getByRole('button', { name: mode }).first();
@@ -54,14 +59,16 @@ async function pickTheme(page, id, mode) {
   await page.locator(`[data-theme-preset="${id}"]`).click();
   await page.waitForTimeout(500);
   await page.keyboard.press('Escape');
-  await page.waitForTimeout(300);
+  const closeSettings = page.getByRole('button', { name: 'Close settings' });
+  if (await closeSettings.isVisible().catch(() => false)) await closeSettings.click().catch(() => {});
+  await page.waitForTimeout(350);
   await closeNotices(page);
 }
 
 const guestContext = await browser.newContext({ deviceScaleFactor: 1 });
 const guest = await openPage(guestContext, 1440, 900);
 
-await guest.getByRole('button', { name: 'Settings' }).click();
+await guest.getByRole('button', { name: 'Settings', exact: true }).click();
 await guest.waitForTimeout(500);
 await guest.locator('[data-theme-preset]').first().waitFor({ state: 'visible' });
 await guest.screenshot({ path: `${OUT}/theme-presets-1440.jpg`, type: 'jpeg', quality: 78 });

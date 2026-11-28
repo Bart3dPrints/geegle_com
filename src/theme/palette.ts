@@ -6,10 +6,25 @@
 // tailwind.config maps that scale onto these CSS variables, so choosing a
 // preset restyles every Geegle-owned surface without touching each file.
 //
+// The neutral scale is mirrored in dark mode, so a base utility such as
+// `text-neutral-700` is readable in both modes. That is why components must not
+// carry `dark:` colour overrides: they would invert an already-adapted value.
+//
 // Everything here is pure: no DOM access, no storage. `applyTheme` does the
 // writing.
 
 export type ThemeMode = 'light' | 'dark' | 'system';
+
+/** Lightness percentages that make one preset's surfaces recognisable. */
+export interface SurfaceTone {
+  bg: number;
+  header: number;
+  card: number;
+  elevated: number;
+  border: number;
+  chat: number;
+  bubbleIn: number;
+}
 
 export interface ThemePreset {
   id: string;
@@ -22,6 +37,8 @@ export interface ThemePreset {
   accent: [string, string];
   /** Optional outgoing-bubble default; accent is used when absent. */
   bubble?: [string, string];
+  /** Surface lightness where the default derived surfaces would be too close. */
+  surfaces?: { light?: Partial<SurfaceTone>; dark?: Partial<SurfaceTone> };
   swatch: string;
   family: 'neutral' | 'cool' | 'warm' | 'nature' | 'vivid';
 }
@@ -60,9 +77,30 @@ export const THEME_PRESETS: ThemePreset[] = [
   preset('rose', 'Rose', 350, 26, ['#e11d48', '#fda4af'], 'warm'),
   preset('brown', 'Brown', 28, 18, ['#92400e', '#d6b28c'], 'warm'),
   preset('beige', 'Beige', 40, 20, ['#a16207', '#e7d3a8'], 'warm'),
-  preset('gray', 'Gray', 0, 0, ['#525252', '#d4d4d4'], 'neutral'),
-  preset('white', 'White', 210, 8, ['#1f2937', '#e5e7eb'], 'neutral'),
-  preset('black', 'Black', 0, 0, ['#0a0a0a', '#fafafa'], 'neutral'),
+  // Three genuinely different neutral themes: a mid-gray palette, a bright
+  // white one and a near-black one, rather than the same ramp with a different
+  // accent colour.
+  {
+    ...preset('gray', 'Gray', 0, 0, ['#525252', '#d4d4d4'], 'neutral'),
+    surfaces: {
+      light: { bg: 93, header: 96, card: 99, elevated: 97, border: 85, chat: 98, bubbleIn: 89 },
+      dark: { bg: 12, header: 15, card: 18, elevated: 23, border: 30, chat: 14, bubbleIn: 26 },
+    },
+  },
+  {
+    ...preset('white', 'White', 210, 4, ['#1f2937', '#e5e7eb'], 'neutral'),
+    surfaces: {
+      light: { bg: 98.5, header: 100, card: 100, elevated: 99.5, border: 91, chat: 99, bubbleIn: 95 },
+      dark: { bg: 7, header: 9, card: 11.5, elevated: 15, border: 23, chat: 8.5, bubbleIn: 18 },
+    },
+  },
+  {
+    ...preset('black', 'Black', 0, 0, ['#0a0a0a', '#fafafa'], 'neutral'),
+    surfaces: {
+      light: { bg: 99, header: 100, card: 100, elevated: 98.5, border: 90, chat: 100, bubbleIn: 95 },
+      dark: { bg: 2, header: 3.5, card: 5.5, elevated: 9, border: 17, chat: 3, bubbleIn: 11 },
+    },
+  },
 ];
 
 export const DEFAULT_THEME_ID = 'blue';
@@ -86,6 +124,9 @@ export interface ThemeColors {
   hover: string;
   selected: string;
   chat: string;
+  /** Text-entry surface and its ink, including the search field. */
+  field: string;
+  fieldText: string;
   bubbleOut: string;
   bubbleOutInk: string;
   bubbleIn: string;
@@ -116,17 +157,58 @@ function neutralScale(hue: number, sat: number, dark: boolean): Record<NeutralSt
   return out;
 }
 
-/** WCAG contrast ratio between two hex colours. */
-function contrastRatio(a: string, b: string): number {
-  const lum = (value: string) => {
-    const rgb = [1, 3, 5].map((index) => parseInt(value.slice(index, index + 2), 16) / 255);
-    const linear = rgb.map((channel) =>
-      channel <= 0.03928 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4,
-    );
-    return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2];
-  };
-  const [hi, lo] = [lum(a), lum(b)].sort((x, y) => y - x);
+type Channels = [number, number, number];
+
+/** Parses the `#rrggbb` and `hsl(h s% l%)` forms this module produces. */
+export function parseColor(value: string): Channels | null {
+  const text = value.trim();
+  if (text.startsWith('#')) {
+    const raw = text.slice(1);
+    const full = raw.length === 3 ? raw.split('').map((ch) => ch + ch).join('') : raw;
+    if (!/^[\da-f]{6}$/i.test(full)) return null;
+    return [0, 2, 4].map((i) => parseInt(full.slice(i, i + 2), 16)) as Channels;
+  }
+  const match = /^hsl\(\s*([\d.]+)\s+([\d.]+)%\s+([\d.]+)%\s*\)$/i.exec(text);
+  if (!match) return null;
+  const [h, s, l] = [Number(match[1]), Number(match[2]) / 100, Number(match[3]) / 100];
+  const c = (1 - Math.abs(2 * l - 1)) * s;
+  const x = c * (1 - Math.abs(((h / 60) % 2) - 1));
+  const m = l - c / 2;
+  const table: Channels[] = [[c, x, 0], [x, c, 0], [0, c, x], [0, x, c], [x, 0, c], [c, 0, x]];
+  const [r, g, b] = table[Math.floor(h / 60) % 6];
+  return [Math.round((r + m) * 255), Math.round((g + m) * 255), Math.round((b + m) * 255)];
+}
+
+function luminanceOf([r, g, b]: Channels): number {
+  const linear = [r, g, b].map((channel) => {
+    const s = channel / 255;
+    return s <= 0.03928 ? s / 12.92 : ((s + 0.055) / 1.055) ** 2.4;
+  });
+  return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2];
+}
+
+/** WCAG contrast ratio between two CSS colours. */
+export function contrast(a: string, b: string): number {
+  const one = parseColor(a);
+  const two = parseColor(b);
+  if (!one || !two) return 1;
+  const [hi, lo] = [luminanceOf(one), luminanceOf(two)].sort((x, y) => y - x);
   return (hi + 0.05) / (lo + 0.05);
+}
+
+function toHsl([r, g, b]: Channels): [number, number, number] {
+  const [rn, gn, bn] = [r / 255, g / 255, b / 255];
+  const max = Math.max(rn, gn, bn);
+  const min = Math.min(rn, gn, bn);
+  const l = (max + min) / 2;
+  if (max === min) return [0, 0, l * 100];
+  const d = max - min;
+  const s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+  let h = 0;
+  if (max === rn) h = (gn - bn) / d + (gn < bn ? 6 : 0);
+  else if (max === gn) h = (bn - rn) / d + 2;
+  else h = (rn - gn) / d + 4;
+  return [h * 60, s * 100, l * 100];
 }
 
 function shift(hex: string, amount: number): string {
@@ -148,29 +230,51 @@ export function bubbleInk(background: string, target = 4.5): { background: strin
   if (!/^#[\da-f]{6}$/i.test(background)) return { background, ink: '#ffffff' };
   let colour = background;
   let ink = readableInk(colour);
-  for (let step = 0; step < 24 && contrastRatio(ink, colour) < target; step += 1) {
+  for (let step = 0; step < 24 && contrast(ink, colour) < target; step += 1) {
     colour = shift(colour, ink === '#111111' ? -0.05 : 0.07);
     ink = readableInk(colour);
   }
   return { background: colour, ink };
 }
 
-/** White or near-black, whichever reads better on the given hex colour. */
+/** White or near-black, whichever reads better on the given colour. */
 export function readableInk(background: string): string {
-  const value = background.trim();
-  const rgb = value.startsWith('#')
-    ? [1, 3, 5].map((index) => parseInt(value.slice(index, index + 2), 16) / 255)
-    : null;
-  if (!rgb || rgb.some((channel) => Number.isNaN(channel))) return '#ffffff';
-  const linear = rgb.map((channel) =>
-    channel <= 0.03928 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4,
-  );
-  const luminance = 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2];
-  // Pick whichever ink actually has more contrast, rather than assuming a
-  // lightness threshold: mid greens and reds read better dark than white.
+  const channels = parseColor(background);
+  if (!channels) return '#ffffff';
+  const luminance = luminanceOf(channels);
   const onWhite = 1.05 / (luminance + 0.05);
   const onBlack = (luminance + 0.05) / 0.05;
+  // Pick whichever ink actually has more contrast, rather than assuming a
+  // lightness threshold: mid greens and reds read better dark than white.
   return onWhite >= onBlack ? '#ffffff' : '#111111';
+}
+
+/** The more readable of the two candidate inks across every given surface. */
+function bestText(base: string, surfaces: string[]): string {
+  const score = (colour: string) => Math.min(...surfaces.map((surface) => contrast(colour, surface)));
+  if (score(base) >= 4.5) return base;
+  const dark = '#111111';
+  const light = '#f7f7f7';
+  return score(dark) >= score(light) ? dark : light;
+}
+
+/**
+ * Keeps an explicit text colour readable on the surface it sits on by nudging
+ * its lightness, so a chosen colour is preserved as far as possible.
+ */
+export function readableOn(colour: string, surface: string, target = 4.5): string {
+  const channels = parseColor(colour);
+  const surfaceChannels = parseColor(surface);
+  if (!channels || !surfaceChannels) return colour;
+  if (contrast(colour, surface) >= target) return colour;
+  const [h, s, start] = toHsl(channels);
+  const lighten = luminanceOf(surfaceChannels) < 0.4;
+  for (let step = 1; step <= 25; step += 1) {
+    const l = Math.max(0, Math.min(100, start + (lighten ? step : -step) * 4));
+    const candidate = `hsl(${Math.round(h)} ${Math.round(s)}% ${l}%)`;
+    if (contrast(candidate, surface) >= target) return candidate;
+  }
+  return readableInk(surface);
 }
 
 export interface ThemeOverrides {
@@ -179,8 +283,20 @@ export interface ThemeOverrides {
   card?: string | null;
   accent?: string | null;
   text?: string | null;
+  muted?: string | null;
+  chat?: string | null;
+  field?: string | null;
+  fieldText?: string | null;
   bubbleOut?: string | null;
+  bubbleIn?: string | null;
 }
+
+const BASE_TONE: SurfaceTone = {
+  bg: 97.5, header: 99.5, card: 100, elevated: 99, border: 89, chat: 99, bubbleIn: 93,
+};
+const BASE_TONE_DARK: SurfaceTone = {
+  bg: 9, header: 12.5, card: 15, elevated: 19, border: 26, chat: 11.5, bubbleIn: 23,
+};
 
 export function resolveTheme(
   presetId: string,
@@ -191,48 +307,45 @@ export function resolveTheme(
   const neutral = neutralScale(spec.hue, spec.sat, dark);
   const accent = overrides.accent ?? spec.accent[dark ? 1 : 0];
   const bubbleOut = overrides.bubbleOut ?? spec.bubble?.[dark ? 1 : 0] ?? accent;
-  const surfaces = dark
-    ? {
-        bg: hex(spec.hue, spec.sat, 9),
-        header: hex(spec.hue, spec.sat, 12.5),
-        card: hex(spec.hue, spec.sat, 15),
-        elevated: hex(spec.hue, spec.sat, 19),
-        border: hex(spec.hue, spec.sat, 26),
-        text: hex(spec.hue, spec.sat, 96),
-        muted: hex(spec.hue, spec.sat, 66),
-        chat: hex(spec.hue, spec.sat, 11.5),
-        bubbleIn: hex(spec.hue, spec.sat, 23),
-      }
-    : {
-        bg: hex(spec.hue, spec.sat, 97.5),
-        header: hex(spec.hue, spec.sat, 99.5),
-        card: hex(spec.hue, spec.sat, 100),
-        elevated: hex(spec.hue, spec.sat, 99),
-        border: hex(spec.hue, spec.sat, 89),
-        text: hex(spec.hue, spec.sat, 12),
-        muted: hex(spec.hue, spec.sat, 44),
-        chat: hex(spec.hue, spec.sat, 99),
-        bubbleIn: hex(spec.hue, spec.sat, 93),
-      };
+
+  const tone = { ...(dark ? BASE_TONE_DARK : BASE_TONE), ...(spec.surfaces?.[dark ? 'dark' : 'light'] ?? {}) };
+  const at = (lightness: number) => hex(spec.hue, spec.sat, lightness);
+  const bg = overrides.background ?? at(tone.bg);
+  const header = overrides.header ?? at(tone.header);
+  const card = overrides.card ?? at(tone.card);
+  const elevated = at(tone.elevated);
+  const chat = overrides.chat ?? at(tone.chat);
+  const field = overrides.field ?? at(dark ? Math.max(tone.card - 1, 3) : Math.min(tone.card - 1, 100));
+
+  // Text adapts to the surfaces that actually exist after overrides, so a dark
+  // card in a light theme still carries readable ink.
+  const text = bestText(overrides.text ?? (dark ? at(96) : at(12)), [bg, card, header, chat]);
+  const muted = readableOn(overrides.muted ?? (dark ? at(66) : at(44)), bg);
+  const fieldText = readableOn(overrides.fieldText ?? text, field);
+  const bubbleIn = overrides.bubbleIn ?? at(tone.bubbleIn);
+  const bubbleInInk = bestText(overrides.text ?? text, [bubbleIn]);
+  const outgoing = bubbleInk(bubbleOut);
 
   return {
     neutral,
-    bg: overrides.background ?? surfaces.bg,
-    header: overrides.header ?? surfaces.header,
-    card: overrides.card ?? surfaces.card,
-    elevated: surfaces.elevated,
-    border: surfaces.border,
-    text: overrides.text ?? surfaces.text,
-    muted: surfaces.muted,
+    bg,
+    header,
+    card,
+    elevated,
+    border: at(tone.border),
+    text,
+    muted,
     accent,
     accentInk: readableInk(accent),
     hover: dark ? hex(spec.hue, spec.sat, 20) : hex(spec.hue, spec.sat, 94),
     selected: dark ? hex(spec.hue, Math.min(60, spec.sat + 10), 26) : hex(spec.hue, Math.min(70, spec.sat + 12), 90),
-    chat: surfaces.chat,
-    bubbleOut: bubbleInk(bubbleOut).background,
-    bubbleOutInk: bubbleInk(bubbleOut).ink,
-    bubbleIn: surfaces.bubbleIn,
-    bubbleInInk: overrides.text ?? surfaces.text,
+    chat,
+    field,
+    fieldText,
+    bubbleOut: outgoing.background,
+    bubbleOutInk: outgoing.ink,
+    bubbleIn,
+    bubbleInInk,
     scrim: dark ? `rgba(10, 10, 10, 0.82)` : `rgba(250, 250, 250, 0.84)`,
     ambient: ambientFromAccent(accent, dark),
   };

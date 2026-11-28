@@ -194,7 +194,12 @@ export interface AppearanceSettings extends Personalization {
   background: string | null;
   card: string | null;
   header: string | null;
+  field: string | null;
+  fieldText: string | null;
+  muted: string | null;
+  chat: string | null;
   bubbleOut: string | null;
+  bubbleIn: string | null;
 }
 
 export const DEFAULT_APPEARANCE_SETTINGS: AppearanceSettings = {
@@ -204,7 +209,12 @@ export const DEFAULT_APPEARANCE_SETTINGS: AppearanceSettings = {
   background: null,
   card: null,
   header: null,
+  field: null,
+  fieldText: null,
+  muted: null,
+  chat: null,
   bubbleOut: null,
+  bubbleIn: null,
   ...DEFAULT_PERSONALIZATION,
 };
 const HEX_COLOR = /^#[\da-f]{6}$/i;
@@ -222,7 +232,12 @@ export function parseAppearanceSettings(value: unknown): AppearanceSettings {
     background: color(record.background),
     card: color(record.card),
     header: color(record.header),
+    field: color(record.field),
+    fieldText: color(record.fieldText),
+    muted: color(record.muted),
+    chat: color(record.chat),
     bubbleOut: color(record.bubbleOut),
+    bubbleIn: color(record.bubbleIn),
     ...parsePersonalization(record),
   };
 }

@@ -71,11 +71,11 @@ import { ChatBackgroundEditor } from './chat/ChatBackgroundEditor';
 import { ForwardDialog } from './chat/ForwardDialog';
 
 const iconButton =
-  'rounded-md p-1.5 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 disabled:opacity-40 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-100';
+  'rounded-md p-1.5 text-[var(--geegle-muted)] hover:bg-neutral-100 hover:text-neutral-800 disabled:opacity-40';
 const smallButton =
-  'rounded-md border border-neutral-300 px-2 py-1 text-xs text-neutral-700 hover:bg-neutral-100 disabled:opacity-50 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800';
+  'rounded-md border border-neutral-300 px-2 py-1 text-xs text-neutral-700 hover:bg-neutral-100 disabled:opacity-50 dark:border-[var(--geegle-border)]';
 const menuItem =
-  'flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-xs hover:bg-neutral-100 dark:hover:bg-neutral-800';
+  'flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-xs hover:bg-neutral-100';
 
 function kindLabel(conversation: ChatConversation): string {
   if (conversation.kind === 'public') return 'Public room';
@@ -187,7 +187,7 @@ function MessageRow({
         <>
           <div className="fixed inset-0 z-10" onClick={onCloseMenu} aria-hidden="true" />
           <div
-            className={`absolute top-full z-20 w-44 overflow-hidden rounded-md border border-neutral-200 bg-[var(--geegle-card)] p-1 shadow-xl dark:border-neutral-700 ${
+            className={`absolute top-full z-20 w-44 overflow-hidden rounded-md border border-neutral-200 bg-[var(--geegle-card)] p-1 shadow-xl dark:border-[var(--geegle-border)] ${
               mine ? 'right-0' : 'left-0'
             }`}
             role="menu"
@@ -232,7 +232,7 @@ function MessageRow({
     >
       <div className={`flex min-w-0 max-w-[75%] flex-col ${mine ? 'items-end' : 'items-start'}`}>
         {showAuthor && !mine && (
-          <span className="mb-0.5 px-1 text-[11px] font-medium text-neutral-600 dark:text-neutral-300">
+          <span className="mb-0.5 px-1 text-[11px] font-medium text-neutral-600">
             {message.authorName}
           </span>
         )}
@@ -282,7 +282,7 @@ function MessageRow({
           </div>
         )}
 
-        <span className="mt-0.5 flex items-center gap-1 px-1 text-[10px] text-neutral-500 dark:text-neutral-400">
+        <span className="mt-0.5 flex items-center gap-1 px-1 text-[10px] text-[var(--geegle-muted)]">
           {messageTime(message.createdAt)}
           {message.editedAt && !message.unsent && !message.moderated && (
             <span title="This message was edited" data-edited="true">edited</span>
@@ -363,7 +363,7 @@ function Modal({
       >
         <div className="mb-2 flex items-center justify-between">
           <h3 className="text-sm font-semibold">{title}</h3>
-          <button className="rounded p-1 hover:bg-neutral-100 dark:hover:bg-neutral-800" onClick={onClose} aria-label="Close">
+          <button className="rounded p-1 hover:bg-neutral-100" onClick={onClose} aria-label="Close">
             <X size={14} />
           </button>
         </div>
@@ -606,7 +606,7 @@ export function Chat({
       <section aria-label="Chat" className="mx-auto w-full max-w-md">
         <div className="card p-6 text-center">
           <h2 className="mb-1 text-base font-semibold">Chat</h2>
-          <p className="mb-4 text-sm text-neutral-500 dark:text-neutral-400">
+          <p className="mb-4 text-sm text-[var(--geegle-muted)]">
             Sign in to join the public room and message your friends.
           </p>
           <button className="btn-primary" onClick={onRequestSignIn}>
@@ -923,12 +923,12 @@ export function Chat({
       </div>
 
       {loading && conversations.length === 0 ? (
-        <div className="card flex items-center justify-center gap-2 p-8 text-sm text-neutral-500 dark:text-neutral-400">
+        <div className="card flex items-center justify-center gap-2 p-8 text-sm text-[var(--geegle-muted)]">
           <Loader2 size={15} className="animate-spin" /> Loading chat…
         </div>
       ) : error && conversations.length === 0 ? (
         <div className="card p-6 text-center" role="alert" data-chat-failed>
-          <p className="mb-3 text-sm text-neutral-600 dark:text-neutral-300">{error}</p>
+          <p className="mb-3 text-sm text-neutral-600">{error}</p>
           <button className="btn-primary" onClick={() => void refreshConversations()}>
             Retry
           </button>
@@ -937,14 +937,14 @@ export function Chat({
         <div className="card flex h-[min(72vh,620px)] min-h-[340px] overflow-hidden p-0">
           {/* Conversation list */}
           <div
-            className={`w-full shrink-0 flex-col border-r border-neutral-200 dark:border-neutral-800 md:flex md:w-64 ${
+            className={`w-full shrink-0 flex-col border-r border-neutral-200 bg-[var(--geegle-chat)] transition-colors dark:border-[var(--geegle-border)] md:flex md:w-64 ${
               selectedId ? 'hidden md:flex' : 'flex'
             }`}
             aria-label="Conversations"
           >
             <div className="min-h-0 flex-1 overflow-y-auto p-1.5">
               {conversations.length === 0 ? (
-                <p className="p-3 text-xs text-neutral-500 dark:text-neutral-400">
+                <p className="p-3 text-xs text-[var(--geegle-muted)]">
                   No conversations yet. Start one from the buttons above.
                 </p>
               ) : (
@@ -976,7 +976,7 @@ export function Chat({
                         }}
                         aria-current={selectedRow ? 'true' : undefined}
                       >
-                        <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-neutral-200 text-xs font-semibold text-neutral-600 dark:bg-neutral-700 dark:text-neutral-200">
+                        <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-neutral-200 text-xs font-semibold text-neutral-600">
                           {conversation.kind === 'public' ? '#' : conversation.kind === 'group' ? <Users size={13} /> : initials(conversation.title)}
                         </span>
                         <span className="min-w-0 flex-1">
@@ -992,7 +992,7 @@ export function Chat({
                             </span>
                           </span>
                           <span className="flex items-center justify-between gap-1">
-                            <span className="truncate text-xs text-neutral-500 dark:text-neutral-400">{preview}</span>
+                            <span className="truncate text-xs text-[var(--geegle-muted)]">{preview}</span>
                             {conversation.unread > 0 && conversation.kind === 'public' && (
                               <span
                                 className="h-2 w-2 shrink-0 rounded-full bg-[var(--geegle-accent)]"
@@ -1034,12 +1034,12 @@ export function Chat({
           {/* Thread */}
           <div className={`min-w-0 flex-1 flex-col md:flex ${selectedId ? 'flex' : 'hidden md:flex'}`}>
             {!selected ? (
-              <div className="flex h-full items-center justify-center p-6 text-sm text-neutral-500 dark:text-neutral-400">
+              <div className="flex h-full items-center justify-center p-6 text-sm text-[var(--geegle-muted)]">
                 Choose a conversation.
               </div>
             ) : (
               <>
-                <div className="flex items-center gap-1.5 border-b border-neutral-200 px-2 py-1.5 dark:border-neutral-800">
+                <div className="flex items-center gap-1.5 border-b border-neutral-200 px-2 py-1.5 dark:border-[var(--geegle-border)]">
                   <button
                     className={`${iconButton} md:hidden`}
                     onClick={() => setSelectedId(null)}
@@ -1051,7 +1051,7 @@ export function Chat({
                     <h2 className="truncate text-sm font-semibold" data-chat-title>
                       {selected.title}
                     </h2>
-                    <p className="truncate text-[11px] text-neutral-500 dark:text-neutral-400">{kindLabel(selected)}</p>
+                    <p className="truncate text-[11px] text-[var(--geegle-muted)]">{kindLabel(selected)}</p>
                   </div>
                   {selected.kind === 'dm' && (
                     <button
@@ -1081,7 +1081,7 @@ export function Chat({
                         <>
                           <div className="fixed inset-0 z-10" onClick={() => setMenuFor(null)} aria-hidden="true" />
                           <div
-                            className="absolute right-2 top-16 z-20 w-40 rounded-md border border-neutral-200 bg-[var(--geegle-card)] p-1 shadow-lg dark:border-neutral-700 dark:bg-neutral-900"
+                            className="absolute right-2 top-16 z-20 w-40 rounded-md border border-neutral-200 bg-[var(--geegle-card)] p-1 shadow-lg dark:border-[var(--geegle-border)]"
                             role="menu"
                           >
                             <button
@@ -1151,7 +1151,7 @@ export function Chat({
                     {hasMore && (
                       <div className="mb-2 text-center">
                         <button
-                          className="text-xs text-neutral-500 underline-offset-2 hover:underline disabled:opacity-50 dark:text-neutral-400"
+                          className="text-xs text-[var(--geegle-muted)] underline-offset-2 hover:underline disabled:opacity-50"
                           onClick={() => void loadOlder()}
                           disabled={olderLoading}
                         >
@@ -1161,7 +1161,7 @@ export function Chat({
                     )}
                     {threadError && messages.length === 0 ? (
                       <div className="p-3 text-center" role="alert" data-thread-error>
-                        <p className="mb-2 text-xs text-neutral-600 dark:text-neutral-300">{threadError}</p>
+                        <p className="mb-2 text-xs text-neutral-600">{threadError}</p>
                         <button className="btn-primary px-3 py-1 text-xs" onClick={() => void loadThread(selected.id)}>
                           Retry
                         </button>
@@ -1169,7 +1169,7 @@ export function Chat({
                     ) : !threadReady ? (
                       <div className="py-6" aria-hidden="true" />
                     ) : messages.length === 0 ? (
-                      <p className="py-8 text-center text-xs text-neutral-500 dark:text-neutral-400" data-empty-thread>
+                      <p className="py-8 text-center text-xs text-[var(--geegle-muted)]" data-empty-thread>
                         No messages yet.
                       </p>
                     ) : (
@@ -1184,7 +1184,7 @@ export function Chat({
                         return (
                           <Fragment key={message.id}>
                             {newDay && (
-                              <div className="my-2 text-center text-[10px] uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+                              <div className="my-2 text-center text-[10px] uppercase tracking-wide text-[var(--geegle-muted)]">
                                 {dayLabel(message.createdAt)}
                               </div>
                             )}
@@ -1222,7 +1222,7 @@ export function Chat({
                 </div>
 
                 <form
-                  className="flex items-end gap-1.5 border-t border-neutral-200 p-2 dark:border-neutral-800"
+                  className="flex items-end gap-1.5 border-t border-neutral-200 p-2 dark:border-[var(--geegle-border)]"
                   onSubmit={(event) => {
                     event.preventDefault();
                     void submit();
@@ -1276,33 +1276,33 @@ export function Chat({
 
       {modOpen && (
         <Modal title="Moderation" onClose={() => setModOpen(false)}>
-          <p className="mb-2 text-xs text-neutral-500 dark:text-neutral-400">
+          <p className="mb-2 text-xs text-[var(--geegle-muted)]">
             Public messages only. Private reports show what was reported and who reported
             it, never the message itself.
           </p>
           {modBusy && (
-            <p className="mb-2 flex items-center gap-1 text-xs text-neutral-500 dark:text-neutral-400">
+            <p className="mb-2 flex items-center gap-1 text-xs text-[var(--geegle-muted)]">
               <Loader2 size={12} className="animate-spin" /> Working
             </p>
           )}
           <div className="mb-3 max-h-64 space-y-2 overflow-y-auto" data-moderation-queue>
             {modQueue.length === 0 ? (
-              <p className="text-xs text-neutral-500 dark:text-neutral-400">No open reports.</p>
+              <p className="text-xs text-[var(--geegle-muted)]">No open reports.</p>
             ) : (
               modQueue.map((report) => (
-                <div key={report.reportId} className="rounded-md border border-neutral-200 p-2 text-xs dark:border-neutral-700" data-report={report.reportId}>
+                <div key={report.reportId} className="rounded-md border border-neutral-200 p-2 text-xs dark:border-[var(--geegle-border)]" data-report={report.reportId}>
                   <p className="font-medium">
                     {report.conversationTitle} · {report.authorName}
                   </p>
-                  <p className="text-neutral-500 dark:text-neutral-400">
+                  <p className="text-[var(--geegle-muted)]">
                     Reported by {report.reporter}: “{report.reason}”
                   </p>
                   {report.body !== null ? (
-                    <p className="mt-1 whitespace-pre-wrap break-words rounded bg-neutral-100 p-1.5 dark:bg-neutral-800">
+                    <p className="mt-1 whitespace-pre-wrap break-words rounded bg-neutral-100 p-1.5">
                       {report.body}
                     </p>
                   ) : (
-                    <p className="mt-1 italic text-neutral-500 dark:text-neutral-400">
+                    <p className="mt-1 italic text-[var(--geegle-muted)]">
                       {report.alreadyRemoved ? 'Message already removed.' : 'Private message — content withheld.'}
                     </p>
                   )}
@@ -1326,7 +1326,7 @@ export function Chat({
             )}
           </div>
           <p className="mb-1 text-xs font-medium">Recent moderation</p>
-          <ul className="max-h-40 space-y-1 overflow-y-auto text-[11px] text-neutral-500 dark:text-neutral-400">
+          <ul className="max-h-40 space-y-1 overflow-y-auto text-[11px] text-[var(--geegle-muted)]">
             {modHistory.length === 0 ? (
               <li>Nothing yet.</li>
             ) : (
@@ -1345,7 +1345,7 @@ export function Chat({
       {picker === 'dm' && (
         <Modal title="New direct message" onClose={() => setPicker(null)}><div data-picker>
           {friends.length === 0 ? (
-            <p className="text-xs text-neutral-500 dark:text-neutral-400">
+            <p className="text-xs text-[var(--geegle-muted)]">
               Direct messages need an accepted friend. Add one from the Friends tab first.
             </p>
           ) : (
@@ -1353,12 +1353,12 @@ export function Chat({
               {friends.map((friend) => (
                 <button
                   key={friend.userId}
-                  className="flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-sm hover:bg-neutral-100 disabled:opacity-50 dark:hover:bg-neutral-800"
+                  className="flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-sm hover:bg-neutral-100 disabled:opacity-50"
                   disabled={Boolean(busy)}
                   onClick={() => void startDirectMessage(friend)}
                   data-start-dm={friend.userId}
                 >
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-neutral-200 text-xs dark:bg-neutral-700">
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-neutral-200 text-xs">
                     {initials(friend.username)}
                   </span>
                   <span className="truncate">{friend.username}</span>
@@ -1401,7 +1401,7 @@ export function Chat({
       {picker === 'invite' && (
         <Modal title="Invite to group" onClose={() => setPicker(null)}>
           {friends.filter((friend) => !friendIds.has(friend.userId)).length === 0 ? (
-            <p className="text-xs text-neutral-500 dark:text-neutral-400">
+            <p className="text-xs text-[var(--geegle-muted)]">
               Every friend is already in this group.
             </p>
           ) : (
@@ -1411,7 +1411,7 @@ export function Chat({
                 .map((friend) => (
                   <button
                     key={friend.userId}
-                    className="flex w-full items-center justify-between gap-2 rounded px-2 py-1.5 text-left text-sm hover:bg-neutral-100 disabled:opacity-50 dark:hover:bg-neutral-800"
+                    className="flex w-full items-center justify-between gap-2 rounded px-2 py-1.5 text-left text-sm hover:bg-neutral-100 disabled:opacity-50"
                     disabled={Boolean(busy)}
                     onClick={() => void invite(friend.userId)}
                     data-invite={friend.userId}
@@ -1429,20 +1429,20 @@ export function Chat({
         <Modal title="Group members" onClose={() => setPicker(null)}>
           <div className="mb-2 max-h-64 overflow-y-auto">
             {membersBusy && members.length === 0 ? (
-              <p className="text-xs text-neutral-500 dark:text-neutral-400">Loading members…</p>
+              <p className="text-xs text-[var(--geegle-muted)]">Loading members…</p>
             ) : members.length === 0 ? (
-              <p className="text-xs text-neutral-500 dark:text-neutral-400">No members.</p>
+              <p className="text-xs text-[var(--geegle-muted)]">No members.</p>
             ) : (
               members.map((member) => (
                 <div
                   key={member.userId}
-                  className="flex items-center justify-between gap-2 border-b border-neutral-200 py-1.5 text-sm last:border-0 dark:border-neutral-800"
+                  className="flex items-center justify-between gap-2 border-b border-neutral-200 py-1.5 text-sm last:border-0 dark:border-[var(--geegle-border)]"
                   data-member={member.userId}
                 >
                   <span className="truncate">
                     {member.username}
                     {member.role === 'owner' && (
-                      <span className="ml-1 text-[10px] uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+                      <span className="ml-1 text-[10px] uppercase tracking-wide text-[var(--geegle-muted)]">
                         owner
                       </span>
                     )}

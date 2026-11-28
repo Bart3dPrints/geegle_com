@@ -42,12 +42,12 @@ export function LibrarySearchBar({
   const listId = `${inputId}-suggestions`;
   return (
     <div className="relative w-full">
-      <div className="flex items-center gap-2 rounded-md border border-neutral-300 bg-[var(--geegle-card)] px-3 dark:border-neutral-700 dark:bg-neutral-900">
-        <Search size={16} className="shrink-0 text-neutral-400" aria-hidden="true" />
+      <div className="geegle-field flex items-center gap-2 rounded-md border border-neutral-300 px-3 dark:border-[var(--geegle-border)]">
+        <Search size={16} className="shrink-0 opacity-70" aria-hidden="true" />
         <input
           id={inputId}
           type="text"
-          className="h-9 w-full bg-transparent text-sm outline-none placeholder:text-neutral-400 dark:placeholder:text-neutral-500"
+          className="h-9 w-full bg-transparent text-sm outline-none"
           placeholder={placeholder}
           aria-label="Search games, apps and proxies"
           role="combobox"
@@ -80,7 +80,7 @@ export function LibrarySearchBar({
         {(input || query) && (
           <button
             type="button"
-            className="rounded p-1 text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200"
+            className="rounded p-1 text-neutral-400 hover:text-neutral-700"
             onClick={onClear}
             aria-label="Clear search"
           >
@@ -107,8 +107,8 @@ export function LibrarySearchBar({
                 type="button"
                 className={`flex w-full items-center gap-3 rounded p-2 text-left ${
                   i === activeIndex
-                    ? 'bg-neutral-100 dark:bg-neutral-800'
-                    : 'hover:bg-neutral-50 dark:hover:bg-neutral-800/60'
+                    ? 'bg-neutral-100'
+                    : 'hover:bg-neutral-50'
                 }`}
                 onClick={() => onPick(entry)}
               >

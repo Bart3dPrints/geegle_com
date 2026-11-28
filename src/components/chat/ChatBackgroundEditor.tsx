@@ -18,9 +18,9 @@ import {
 const HEX = /^#[0-9a-fA-F]{6}$/;
 
 const swatch =
-  'h-7 w-7 rounded-full border border-neutral-300 dark:border-neutral-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:ring-neutral-500';
+  'h-7 w-7 rounded-full border border-neutral-300 dark:border-[var(--geegle-border)] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:ring-neutral-500';
 const ghostButton =
-  'rounded-md border border-neutral-300 px-2.5 py-1 text-xs text-neutral-700 hover:bg-neutral-100 disabled:opacity-50 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800';
+  'rounded-md border border-neutral-300 px-2.5 py-1 text-xs text-neutral-700 hover:bg-neutral-100 disabled:opacity-50 dark:border-[var(--geegle-border)]';
 
 export function ChatBackgroundEditor({
   conversationId,
@@ -168,13 +168,13 @@ export function ChatBackgroundEditor({
 
   return (
     <div
-      className="mt-2 rounded-md border border-neutral-200 bg-[var(--geegle-card)] p-3 text-xs dark:border-neutral-700 dark:bg-neutral-900"
+      className="mt-2 rounded-md border border-neutral-200 bg-[var(--geegle-card)] p-3 text-xs dark:border-[var(--geegle-border)]"
       role="group"
       aria-label="Message background"
     >
       <div className="mb-2 flex items-center justify-between">
         <h3 className="text-sm font-medium">Message background</h3>
-        <button className="rounded p-1 hover:bg-neutral-100 dark:hover:bg-neutral-800" onClick={cancel} aria-label="Close background editor">
+        <button className="rounded p-1 hover:bg-neutral-100" onClick={cancel} aria-label="Close background editor">
           <X size={14} />
         </button>
       </div>
@@ -200,17 +200,17 @@ export function ChatBackgroundEditor({
           />
         ))}
         <label className="ml-1 flex items-center gap-1">
-          <span className="text-neutral-500 dark:text-neutral-400">Custom</span>
+          <span className="text-[var(--geegle-muted)]">Custom</span>
           <input
             type="color"
             aria-label="Custom background colour"
-            className="h-7 w-9 cursor-pointer rounded border border-neutral-300 bg-transparent p-0 dark:border-neutral-600"
+            className="h-7 w-9 cursor-pointer rounded border border-neutral-300 bg-transparent p-0 dark:border-[var(--geegle-border)]"
             value={HEX.test(hex) ? hex : '#1f2937'}
             onChange={(event) => pickColor(event.target.value)}
           />
         </label>
         <input
-          className="w-20 rounded border border-neutral-300 bg-transparent px-1.5 py-1 font-mono text-[11px] dark:border-neutral-700"
+          className="w-20 rounded border border-neutral-300 bg-transparent px-1.5 py-1 font-mono text-[11px] dark:border-[var(--geegle-border)]"
           value={hex}
           aria-label="Background colour hex value"
           onChange={(event) => pickColor(event.target.value.trim())}
@@ -231,11 +231,11 @@ export function ChatBackgroundEditor({
           {busy ? <Loader2 size={12} className="animate-spin" /> : <Upload size={12} />}
           <span className="ml-1">Upload image</span>
         </button>
-        <span className="text-neutral-500 dark:text-neutral-400">PNG, JPEG or WebP · resized to 1600 px</span>
+        <span className="text-[var(--geegle-muted)]">PNG, JPEG or WebP · resized to 1600 px</span>
       </div>
 
       <label className="mb-2 flex items-center gap-2">
-        <span className="shrink-0 text-neutral-500 dark:text-neutral-400">Overlay</span>
+        <span className="shrink-0 text-[var(--geegle-muted)]">Overlay</span>
         <input
           type="range"
           min={0}

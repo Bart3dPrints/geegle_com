@@ -53,6 +53,9 @@
     --geegle-accent: #2563eb;
     --geegle-accent-ink: #ffffff;
     --geegle-accent-contrast: #ffffff;
+    --geegle-field: hsl(217 24% 99%);
+    --geegle-field-text: hsl(217 24% 12%);
+    --geegle-search-bg: hsl(217 24% 99%);
     --geegle-hover: hsl(217 36% 94%);
     --geegle-selected: hsl(217 36% 90%);
     --geegle-chat: hsl(217 24% 99%);
@@ -90,6 +93,9 @@
     --geegle-accent: #93c5fd;
     --geegle-accent-ink: #111111;
     --geegle-accent-contrast: #111111;
+    --geegle-field: hsl(217 24% 14%);
+    --geegle-field-text: hsl(217 24% 96%);
+    --geegle-search-bg: hsl(217 24% 14%);
     --geegle-hover: hsl(217 24% 20%);
     --geegle-selected: hsl(217 34% 26%);
     --geegle-chat: hsl(217 24% 11.5%);
@@ -138,24 +144,39 @@
     filter: brightness(1.06);
   }
   .btn-secondary {
-    @apply btn border-neutral-300 text-neutral-700 hover:bg-neutral-100 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800;
+    @apply btn border-neutral-300 text-neutral-700 hover:bg-neutral-100 dark:border-[var(--geegle-border)];
     background-color: var(--geegle-card);
   }
   .card {
-    @apply rounded-lg border border-neutral-200 dark:border-neutral-700;
+    @apply rounded-lg border border-neutral-200 dark:border-[var(--geegle-border)];
     background-color: var(--geegle-card);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 6px 16px -10px rgba(0, 0, 0, 0.25);
     transition: background-color 260ms ease, border-color 260ms ease;
   }
+  /* Text entry follows the active theme: a field surface with its own ink, so
+     no input stays glaring white in a dark theme. */
+  .geegle-field {
+    background-color: var(--geegle-field);
+    color: var(--geegle-field-text);
+    transition: background-color 260ms ease, color 260ms ease;
+  }
+  .geegle-field::placeholder,
+  .geegle-field input::placeholder,
+  .input::placeholder {
+    color: color-mix(in srgb, var(--geegle-field-text) 55%, var(--geegle-field));
+    opacity: 1;
+  }
   .input {
-    @apply w-full rounded-md border border-neutral-300 px-3 py-2 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none focus:ring-1 focus:ring-neutral-900 dark:border-neutral-700 dark:text-neutral-100 dark:placeholder-neutral-500 dark:focus:border-neutral-100 dark:focus:ring-neutral-100;
-    background-color: var(--geegle-card);
+    @apply w-full rounded-md border border-neutral-300 px-3 py-2 text-sm focus:border-neutral-900 focus:outline-none focus:ring-1 focus:ring-neutral-900 dark:border-[var(--geegle-border)];
+    background-color: var(--geegle-field);
+    color: var(--geegle-field-text);
+    transition: background-color 260ms ease, color 260ms ease;
   }
   .label {
-    @apply mb-1 block text-sm font-medium text-neutral-700 dark:text-neutral-300;
+    @apply mb-1 block text-sm font-medium text-neutral-700;
   }
   .chip {
-    @apply inline-flex shrink-0 items-center gap-1 rounded border border-neutral-200 px-2.5 py-1.5 text-sm font-medium text-neutral-600 transition-colors hover:border-neutral-300 hover:text-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:hover:border-neutral-600 dark:hover:text-neutral-200;
+    @apply inline-flex shrink-0 items-center gap-1 rounded border border-neutral-200 px-2.5 py-1.5 text-sm font-medium text-neutral-600 transition-colors hover:border-neutral-300 hover:text-neutral-900 dark:border-[var(--geegle-border)];
     background-color: var(--geegle-card);
   }
   .chip-active {

@@ -26,11 +26,11 @@ import type { PresenceStatus } from '../hooks/useSocialPresence';
 const EMPTY: SocialSnapshot = { friends: [], incoming: [], outgoing: [], blocked: [] };
 
 const row =
-  'flex items-center justify-between gap-2 border-b border-neutral-200 py-1.5 last:border-0 dark:border-neutral-800';
+  'flex items-center justify-between gap-2 border-b border-neutral-200 py-1.5 last:border-0 dark:border-[var(--geegle-border)]';
 const name = 'min-w-0 truncate text-sm';
 const action =
-  'shrink-0 rounded-md border border-neutral-300 px-2 py-1 text-xs text-neutral-700 hover:bg-neutral-100 disabled:opacity-50 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800';
-const heading = 'mb-1 text-xs font-medium text-neutral-500 dark:text-neutral-400';
+  'shrink-0 rounded-md border border-neutral-300 px-2 py-1 text-xs text-neutral-700 hover:bg-neutral-100 disabled:opacity-50 dark:border-[var(--geegle-border)]';
+const heading = 'mb-1 text-xs font-medium text-[var(--geegle-muted)]';
 
 function Section({
   title,
@@ -53,7 +53,7 @@ function Section({
       <div className="card px-3 py-1">
         {children}
         {empty && showEmpty && (
-          <p className="py-1.5 text-xs text-neutral-500 dark:text-neutral-400">{empty}</p>
+          <p className="py-1.5 text-xs text-[var(--geegle-muted)]">{empty}</p>
         )}
       </div>
     </section>
@@ -63,10 +63,10 @@ function Section({
 function StatusDot({ online, status }: { online: boolean; status: PresenceStatus }) {
   const tone =
     status !== 'live'
-      ? 'bg-neutral-300 dark:bg-neutral-700'
+      ? 'bg-neutral-300'
       : online
         ? 'bg-emerald-500'
-        : 'bg-neutral-400 dark:bg-neutral-600';
+        : 'bg-neutral-400';
   const label = status !== 'live' ? 'Status unavailable' : online ? 'Online' : 'Offline';
   return (
     <span
@@ -204,7 +204,7 @@ export function Friends({
       <section aria-label="Friends" className="mx-auto w-full max-w-md">
         <div className="card p-6 text-center">
           <h2 className="mb-1 text-base font-semibold">Friends</h2>
-          <p className="mb-4 text-sm text-neutral-500 dark:text-neutral-400">
+          <p className="mb-4 text-sm text-[var(--geegle-muted)]">
             Sign in to add friends and see who is online.
           </p>
           <button className="btn-primary" onClick={onRequestSignIn}>
@@ -220,7 +220,7 @@ export function Friends({
       <section aria-label="Friends" className="mx-auto w-full max-w-md">
         <div className="card p-6 text-center" role="alert" data-friends-failed>
           <p className="mb-1 text-sm font-medium">Friends could not be loaded</p>
-          <p className="mb-3 text-xs text-neutral-500 dark:text-neutral-400">
+          <p className="mb-3 text-xs text-[var(--geegle-muted)]">
             {error ?? 'The service did not answer. Your friends were not changed.'}
           </p>
           <button className="btn-primary" onClick={() => void refresh()}>
@@ -234,7 +234,7 @@ export function Friends({
   return (
     <section aria-label="Friends" className="mx-auto w-full max-w-3xl">
       <div className="mb-3 flex flex-wrap items-center gap-2">
-        <div className="flex min-w-48 flex-1 items-center gap-1.5 rounded-md border border-neutral-300 bg-[var(--geegle-card)] px-2 py-1.5 dark:border-neutral-700 dark:bg-neutral-900">
+        <div className="flex min-w-48 flex-1 items-center gap-1.5 rounded-md border border-neutral-300 bg-[var(--geegle-card)] px-2 py-1.5 dark:border-[var(--geegle-border)]">
           <Search size={15} className="text-neutral-400" aria-hidden="true" />
           <input
             className="w-full bg-transparent text-sm outline-none"
@@ -273,9 +273,9 @@ export function Friends({
               <div key={user.userId} className={row} data-search-result={user.userId}>
                 <span className={name}>{user.username}</span>
                 {friend ? (
-                  <span className="text-xs text-neutral-500 dark:text-neutral-400">Friends</span>
+                  <span className="text-xs text-[var(--geegle-muted)]">Friends</span>
                 ) : blocked ? (
-                  <span className="text-xs text-neutral-500 dark:text-neutral-400">Blocked</span>
+                  <span className="text-xs text-[var(--geegle-muted)]">Blocked</span>
                 ) : incoming ? (
                   <button
                     className={action}
@@ -285,7 +285,7 @@ export function Friends({
                     Accept
                   </button>
                 ) : sent ? (
-                  <span className="text-xs text-neutral-500 dark:text-neutral-400">Requested</span>
+                  <span className="text-xs text-[var(--geegle-muted)]">Requested</span>
                 ) : (
                   <button
                     className={action}
@@ -329,7 +329,7 @@ export function Friends({
         ))}
         {social.outgoing.map((request) => (
           <div key={request.requestId} className={row} data-outgoing={request.requestId}>
-            <span className={`${name} text-neutral-500 dark:text-neutral-400`}>
+            <span className={`${name} text-[var(--geegle-muted)]`}>
               {request.username} · requested
             </span>
             <button

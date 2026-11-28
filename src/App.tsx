@@ -342,7 +342,12 @@ export default function App() {
       header: appearance.header,
       accent: appearance.accent,
       text: appearance.fontColor,
+      muted: appearance.muted,
+      chat: appearance.chat,
+      field: appearance.field,
+      fieldText: appearance.fieldText,
       bubbleOut: appearance.bubbleOut,
+      bubbleIn: appearance.bubbleIn,
     });
     const root = document.documentElement;
     if (appearance.font !== 'default') root.style.setProperty('--geegle-font', fontStack(appearance.font));
@@ -780,11 +785,11 @@ export default function App() {
           onClick={(e) => e.stopPropagation()}
         >
           <h2 className="mb-1">{authMode === 'login' ? 'Sign in' : 'Create account'}</h2>
-          <p className="mb-4 text-xs text-neutral-500 dark:text-neutral-400">
+          <p className="mb-4 text-xs text-[var(--geegle-muted)]">
             Keep your progress and preferences across devices.
           </p>
           {!auth.enabled && (
-            <div className="mb-4 flex gap-2 rounded-md bg-neutral-100 p-3 text-sm text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">
+            <div className="mb-4 flex gap-2 rounded-md bg-neutral-100 p-3 text-sm text-neutral-700">
               <AlertTriangle size={16} className="mt-0.5 shrink-0" />
               <span>Accounts are not configured on this deployment.</span>
             </div>
@@ -830,7 +835,7 @@ export default function App() {
             </button>
           </form>
           <button
-            className="mt-4 w-full text-center text-sm text-neutral-600 underline-offset-2 hover:underline dark:text-neutral-300"
+            className="mt-4 w-full text-center text-sm text-neutral-600 underline-offset-2 hover:underline"
             onClick={() => {
               setAuthMode(authMode === 'login' ? 'register' : 'login');
               setAuthError(null);
@@ -898,7 +903,7 @@ export default function App() {
           </button>
 
           <button
-            className="rounded-md p-2 text-neutral-600 transition-colors hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
+            className="rounded-md p-2 text-neutral-600 transition-colors hover:bg-neutral-100"
             onClick={() => {
               setSettingsTab('theme');
               setSettingsOpen(true);
@@ -940,7 +945,7 @@ export default function App() {
           <div className="flex-1 md:hidden" />
 
           {(appearance.clock || appearance.date) && (
-            <div className="hidden items-center gap-2 text-right text-xs leading-tight text-neutral-500 md:flex dark:text-neutral-400">
+            <div className="hidden items-center gap-2 text-right text-xs leading-tight text-[var(--geegle-muted)] md:flex">
               {appearance.clock && <span className="tabular-nums">{clockText}</span>}
               {appearance.clock && appearance.date && <span aria-hidden="true">·</span>}
               {appearance.date && <span>{dateText}</span>}
@@ -949,7 +954,7 @@ export default function App() {
 
           {syncError && (
             <span
-              className="hidden max-w-48 truncate text-xs text-neutral-500 dark:text-neutral-400 md:inline"
+              className="hidden max-w-48 truncate text-xs text-[var(--geegle-muted)] md:inline"
               title={syncError}
             >
               {syncError}
@@ -959,13 +964,13 @@ export default function App() {
           {auth.user ? (
             <div className="relative" ref={accountMenuRef}>
               <button
-                className="flex items-center gap-1.5 rounded-full border border-neutral-300 p-1 pr-2 dark:border-neutral-700"
+                className="flex items-center gap-1.5 rounded-full border border-neutral-300 p-1 pr-2 dark:border-[var(--geegle-border)]"
                 onClick={() => setAccountMenuOpen((open) => !open)}
                 aria-label="Account"
                 aria-expanded={accountMenuOpen}
                 aria-haspopup="menu"
               >
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-neutral-200 text-neutral-600 dark:bg-neutral-700 dark:text-neutral-300">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-neutral-200 text-neutral-600">
                   <UserIcon size={14} />
                 </span>
                 <ChevronDown size={14} className="text-neutral-400" />
@@ -983,7 +988,7 @@ export default function App() {
                   >
                     <button
                       role="menuitem"
-                      className="flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                      className="flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm hover:bg-neutral-100"
                       onClick={() => {
                         setSettingsTab('preferences');
                         setSettingsOpen(true);
@@ -994,7 +999,7 @@ export default function App() {
                     </button>
                     <button
                       role="menuitem"
-                      className="flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                      className="flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm hover:bg-neutral-100"
                       onClick={() => void handleSignOut()}
                     >
                       <LogOut size={15} /> Sign out
@@ -1005,7 +1010,7 @@ export default function App() {
             </div>
           ) : (
             <button
-              className="flex items-center gap-1.5 rounded-full border border-neutral-300 p-1 pr-2 dark:border-neutral-700"
+              className="flex items-center gap-1.5 rounded-full border border-neutral-300 p-1 pr-2 dark:border-[var(--geegle-border)]"
               aria-label="Sign in"
               onClick={() => {
                 authFromReminderRef.current = false;
@@ -1013,7 +1018,7 @@ export default function App() {
                 setAuthMode('login');
               }}
             >
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-neutral-200 text-neutral-600 dark:bg-neutral-700 dark:text-neutral-300">
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-neutral-200 text-neutral-600">
                 <UserIcon size={14} />
               </span>
               <span className="hidden pr-1 text-sm sm:inline">Sign in</span>
@@ -1024,7 +1029,7 @@ export default function App() {
         </div>
 
         <nav
-          className="border-t border-neutral-200/70 dark:border-neutral-800/70"
+          className="border-t border-neutral-200/70 dark:border-[var(--geegle-border)]"
           aria-label="Sections"
         >
           <div className="mx-auto flex max-w-7xl px-2 sm:px-4">
@@ -1033,8 +1038,8 @@ export default function App() {
                 key={t}
                 className={`relative flex flex-1 items-center justify-center gap-1.5 px-3 py-3 text-[15px] font-medium capitalize transition-colors sm:flex-none sm:px-8 ${
                   tab === t
-                    ? 'text-neutral-900 dark:text-neutral-100'
-                    : 'text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100'
+                    ? 'text-neutral-900'
+                    : 'text-neutral-600 hover:text-neutral-900'
                 }`}
                 aria-current={tab === t ? 'page' : undefined}
                 data-tab={t}
@@ -1075,7 +1080,7 @@ export default function App() {
         </nav>
 
         {tab === 'games' && (
-          <div className="border-t border-neutral-200 dark:border-neutral-800">
+          <div className="border-t border-neutral-200 dark:border-[var(--geegle-border)]">
             <div
               className="mx-auto flex max-w-7xl flex-wrap gap-1.5 px-4 py-2 sm:px-6"
               role="tablist"
@@ -1308,7 +1313,7 @@ export default function App() {
         )}
       </main>
 
-      <footer className="border-t border-neutral-200 py-6 text-center text-sm text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
+      <footer className="border-t border-neutral-200 py-6 text-center text-sm text-[var(--geegle-muted)] dark:border-[var(--geegle-border)]">
         {FOOTER_TEXT}
       </footer>
     </div>
