@@ -165,13 +165,16 @@ try {
   check('Everythingle appears once in Apps', (await everythingleCard.count()) === 1);
   await everythingleCard.click();
   await continueAsGuest(page);
-  await page.getByRole('grid', { name: 'Guesses' }).waitFor();
+  await page.locator('[data-everythingle-game]').first().waitFor();
   check(
-    'Everythingle opens as a playable puzzle, not an external launcher',
-    (await page.getByRole('grid', { name: 'Guesses' }).count()) === 1 &&
+    'Everythingle opens the complete collection, not an external launcher',
+    (await page.locator('[data-everythingle-game]').count()) === 50 &&
       (await page.locator('iframe').count()) === 0,
-    `${await page.locator('iframe').count()} frames`
+    `${await page.locator('[data-everythingle-game]').count()} games, ${await page.locator('iframe').count()} frames`
   );
+
+  await page.locator('[data-everythingle-game="wordle"]').click();
+  await page.locator('[data-board="0"]').waitFor();
 
   // Invalid word, short word, a real guess and keyboard hints.
   for (const letter of 'zzzzz') await page.keyboard.press(letter);
@@ -187,19 +190,19 @@ try {
   await page.waitForTimeout(200);
   check(
     'short guesses are rejected',
-    (await page.getByText('Enter a 5-letter word.').count()) === 1
+    (await page.getByText('Enter a five-letter word.').count()) === 1
   );
   for (let i = 0; i < 3; i += 1) await page.keyboard.press('Backspace');
 
   const answer = await page.evaluate(() => {
-    const raw = localStorage.getItem('geegle-everythingle:guest');
-    return raw ? JSON.parse(raw).state.answer : null;
+    const raw = localStorage.getItem('geegle-word-boards:v1:single');
+    return raw ? JSON.parse(raw).answers[0] : null;
   });
   const firstGuess = 'about';
   for (const letter of firstGuess) await page.keyboard.press(letter);
   await page.keyboard.press('Enter');
   await page.waitForTimeout(300);
-  const states = await page.locator('[role="gridcell"]').evaluateAll((cells) =>
+  const states = await page.locator('[data-board="0"] [role="gridcell"]').evaluateAll((cells) =>
     cells.slice(0, 5).map((cell) => cell.getAttribute('data-state'))
   );
   check(
@@ -213,8 +216,9 @@ try {
   await openTab(page, 'apps');
   await page.getByRole('button', { name: 'Play Everythingle' }).click();
   await continueAsGuest(page);
-  await page.getByRole('grid', { name: 'Guesses' }).waitFor();
-  const persisted = await page.locator('[role="gridcell"]').first().innerText();
+  await page.locator('[data-everythingle-game="wordle"]').click();
+  await page.locator('[data-board="0"]').waitFor();
+  const persisted = await page.locator('[data-board="0"] [role="gridcell"]').first().innerText();
   check('puzzle progress survives a reload', persisted.trim().toLowerCase() === firstGuess[0], persisted);
 
   // Solve the current round from its own saved answer.
@@ -223,14 +227,16 @@ try {
   await page.waitForTimeout(300);
   check(
     'solving a round is recognised and advances progression',
-    (await page.getByText('Solved').count()) === 1 &&
-      (await page.getByRole('button', { name: 'Next puzzle' }).count()) === 1
+    (await page.getByText('Solved', { exact: true }).count()) === 1 &&
+      (await page.getByRole('button', { name: 'Next round' }).count()) === 1
   );
-  await page.getByRole('button', { name: 'Next puzzle' }).click();
+  await page.getByRole('button', { name: 'Next round' }).click();
   await page.waitForTimeout(300);
-  const empty = await page.locator('[role="gridcell"]').first().getAttribute('data-state');
-  check('Next puzzle starts a fresh round', empty === 'empty', String(empty));
+  const empty = await page.locator('[data-board="0"] [role="gridcell"]').first().getAttribute('data-state');
+  check('Next round starts a fresh word', empty === 'empty', String(empty));
 
+  await page.getByRole('button', { name: 'Back to Everythingle' }).click();
+  await page.locator('[data-everythingle-game]').first().waitFor();
   await page.getByRole('button', { name: 'Back to Apps' }).click();
   await page.waitForTimeout(300);
 
@@ -402,11 +408,16 @@ try {
   // ── Branding assets ─────────────────────────────────────────────────────
   const favicon = await page.evaluate(async () => {
     const link = document.querySelector('link[rel="icon"]');
-    const response = await fetch(link?.getAttribute('href') ?? '/favicon.svg');
-    const text = await response.text();
-    return { ok: response.ok, hasGoogleColours: /4285f4|34a853|fbbc05|ea4335/i.test(text), text };
+    const href = link?.getAttribute('href') ?? '/favicon-32.png';
+    const response = await fetch(href);
+    const type = response.headers.get('content-type') ?? '';
+    return { ok: response.ok, href, type };
   });
-  check('an independent Geegle favicon is served', favicon.ok && !favicon.hasGoogleColours);
+  check(
+    'the supplied favicon is served in the tab',
+    favicon.ok && /image\//.test(favicon.type) && !/favicon\.svg/.test(favicon.href),
+    `${favicon.href} ${favicon.type}`,
+  );
   const touchIcon = await page.evaluate(async () => (await fetch('/apple-touch-icon.png')).status);
   check('a mobile touch icon is served', touchIcon === 200, String(touchIcon));
 

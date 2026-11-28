@@ -5,6 +5,12 @@
 // neutral grayscale appearance exactly, and every value is parsed before use so
 // a corrupted local record or another account's data can never leak in.
 
+import {
+  DEFAULT_TIME_SETTINGS,
+  parseTimeSettings,
+  type TimeSettings,
+} from './timeSettings';
+
 export type FontKey = 'default' | 'poppins' | 'serif' | 'mono';
 
 export interface Personalization {
@@ -17,6 +23,10 @@ export interface Personalization {
   wallpaper: string | null;
   clock: boolean;
   date: boolean;
+  /** 12-hour (true) or 24-hour (false) clock. */
+  hour12: boolean;
+  /** IANA zone, or "auto" for the browser's configured zone. */
+  timeZone: string;
 }
 
 export const DEFAULT_PERSONALIZATION: Personalization = {
@@ -26,6 +36,7 @@ export const DEFAULT_PERSONALIZATION: Personalization = {
   wallpaper: null,
   clock: false,
   date: false,
+  ...DEFAULT_TIME_SETTINGS,
 };
 
 /** Readable presets; the first one is the untouched neutral appearance. */
@@ -111,6 +122,7 @@ export function parsePersonalization(value: unknown): Personalization {
   const font = FONT_OPTIONS.some((option) => option.key === record.font)
     ? (record.font as FontKey)
     : DEFAULT_PERSONALIZATION.font;
+  const time = parseTimeSettings(record);
   return {
     accent: isHexColor(record.accent) ? record.accent : null,
     font,
@@ -118,5 +130,11 @@ export function parsePersonalization(value: unknown): Personalization {
     wallpaper: isWallpaperDataUrl(record.wallpaper) ? record.wallpaper : null,
     clock: record.clock === true,
     date: record.date === true,
+    ...time,
   };
+}
+
+/** The clock/date part of a personalization record, for the widgets. */
+export function timeSettingsOf(value: Pick<Personalization, keyof TimeSettings>): TimeSettings {
+  return { hour12: value.hour12 !== false, timeZone: value.timeZone };
 }

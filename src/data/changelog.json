@@ -2,6 +2,11 @@
   "source": "github:Bart3dPrints/geegle_com",
   "entries": [
     {
+      "pr": 16,
+      "mergedAt": "2026-11-28T01:25:41Z",
+      "summary": "Everythingle joins Apps, Krillion plays in a full window, the player keeps just Back and Fullscreen, and Settings gained a configurable navigation shortcut."
+    },
+    {
       "pr": 15,
       "mergedAt": "2026-11-27T23:29:33Z",
       "summary": "Settings now cover appearance, account preferences and a navigation shortcut, the alphabetical sidebar always fits the screen, and the library gained a development announcement."

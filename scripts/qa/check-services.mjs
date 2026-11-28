@@ -42,14 +42,25 @@ async function launchApp(title) {
 try {
   await openLibrary();
 
-  // Everythingle: internal app with its own server choice and exit.
+  // Everythingle: Geegle's own collection hub, no proxy and no server choice.
   await launchApp('Everythingle');
-  const everythingleFrame = page.locator('iframe[title*="Everythingle" i]');
-  check('Everythingle opens its player', (await everythingleFrame.count()) > 0);
-  const everythingleSrc = await everythingleFrame.first().getAttribute('src').catch(() => null);
-  check('Everythingle loads the official destination or a verified server', Boolean(everythingleSrc && /everythingle\.com|chrivtx|s3\.amazonaws/.test(everythingleSrc)), everythingleSrc ?? '');
-  check('Everythingle offers an exit control', (await page.getByRole('button', { name: /back/i }).count()) > 0);
-  await page.getByRole('button', { name: /back/i }).first().click();
+  const tiles = page.locator('[data-everythingle-game]');
+  check('Everythingle opens the collection hub', (await tiles.count()) === 50, String(await tiles.count()));
+  check('Everythingle offers no proxy/server choice', !(await page.getByText(/proxy|server/i).count()));
+
+  await page.locator('[data-everythingle-game="krillion"]').click();
+  const officialFrame = page.locator('iframe[title*="everythingle.com" i]');
+  await officialFrame.first().waitFor({ timeout: 15000 }).catch(() => null);
+  const officialSrc = await officialFrame.first().getAttribute('src').catch(() => null);
+  check(
+    'an official Everythingle game loads its own page',
+    Boolean(officialSrc && officialSrc === 'https://everythingle.com/games/krillion/'),
+    officialSrc ?? '',
+  );
+  check('Everythingle offers an exit control', (await page.getByRole('button', { name: 'Back to Everythingle' }).count()) > 0);
+  await page.getByRole('button', { name: 'Back to Everythingle' }).click();
+  await page.waitForTimeout(400);
+  await page.getByRole('button', { name: 'Back to Apps' }).click();
   await page.waitForTimeout(800);
 
   // YouTube: official privacy-enhanced embed.
@@ -66,12 +77,17 @@ try {
   await page.waitForTimeout(800);
 
   // Krillion official (Games) and the fan-made backup (Apps) are distinct cards.
+  // Counted on the unfiltered Games grid: the shared search index deliberately
+  // also returns Apps, so a search would list the official app a second time.
   await page.getByRole('button', { name: 'games', exact: true }).click();
-  const krillionSearch = page.getByRole('combobox', { name: 'Search games' });
-  await krillionSearch.fill('krillion');
-  await krillionSearch.press('Enter');
-  await page.waitForTimeout(400);
-  check('Krillion official card exists once in Games', (await page.locator('[data-card]').filter({ hasText: /^Krillion$/ }).count()) === 1);
+  await page.waitForTimeout(500);
+  const gameTitles = await page
+    .locator('[data-card]')
+    .evaluateAll((nodes) => nodes.map((node) => node.innerText.replace(/\s+/g, ' ').trim()));
+  const krillionCount = gameTitles.filter((title) => title === 'Krillion').length;
+  const backupCount = gameTitles.filter((title) => title === 'Krillion (Backup)').length;
+  check('Krillion official card exists once in Games', krillionCount === 1, `${krillionCount} cards`);
+  check('Krillion backup card exists once in Games', backupCount === 1, `${backupCount} cards`);
   await page.getByRole('button', { name: 'apps', exact: true }).click();
   await page.waitForTimeout(500);
   check('Krillion backup card exists in Apps', (await page.locator('[data-card]').filter({ hasText: 'Krillion (Backup)' }).count()) === 1);

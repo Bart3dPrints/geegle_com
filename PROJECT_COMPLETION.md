@@ -30,18 +30,23 @@ sections below are earlier snapshots.
 
 ## Run 2 (2026-11-28): apps, player, homepage
 
-Branch `feature/geegle-run2-apps-player`, based on `origin/main` at PR #15
-(`cc280c0`). Full evidence is in `docs/RUN2_VERIFICATION.md`.
+Branches `feature/geegle-run2-apps-player` (merged as PR #16) and
+`feature/geegle-run2-final` (based on `origin/main` at `7df980a`). Full evidence
+is in `docs/RUN2_VERIFICATION.md`; the Everythingle investigation is in
+`docs/EVERYTHINGLE_VERIFICATION.md`.
 
 | Requirement / task | Status | Files / evidence |
 | --- | --- | --- |
-| Everythingle is a genuine in-Geegle puzzle, no proxy/CherryProxy selection | IMPLEMENTED AND VERIFIED | `src/lib/wordPuzzle.ts`, `src/components/EverythingleApp.tsx`, `tests/word-puzzle.test.mjs` (11 tests), 38-check browser script |
+| Everythingle: the complete 50-game collection playable in Geegle, no proxy/CherryProxy selection | IMPLEMENTED AND VERIFIED (local Chromium) | `src/data/everythingle.ts` (50 games), `src/components/EverythingleApp.tsx` (hub), `src/components/everythingle/WordBoards.tsx`, `MiddleWord.tsx`, `src/lib/wordGames.ts`, `tests/everythingle.test.mjs` (9 tests), 30-check browser script |
+| Everythingle games implemented by Geegle rather than linked | PARTIAL (5 of 50) | Five Letter, Double Board, Quad Board, Word 500 and Middle Word are original Geegle code on Geegle's word list; the other 45 load the provider's official page unmodified. See `docs/EVERYTHINGLE_VERIFICATION.md` |
+| Everythingle reverse-proxy backend | EXTERNALLY BLOCKED | Provider terms forbid copying or redistributing its games; no proxy, mirror or rewrite path exists. Evidence quoted in `docs/EVERYTHINGLE_VERIFICATION.md` |
 | Krillion positioning and full-bleed wrapper | IMPLEMENTED AND VERIFIED | `public/games/krillion.html`, both entries kept |
 | YouTube player polish | IMPLEMENTED AND VERIFIED | `src/components/YouTubeApp.tsx` |
 | External-service audit; Xylora dead endpoint disabled | IMPLEMENTED AND VERIFIED | `src/data/proxies.ts` (`available: false`, NXDOMAIN reason), `public/games/xylora.html` unavailable message, artwork kept |
 | Minimal player controls (Exit/Back + Fullscreen) | IMPLEMENTED AND VERIFIED | `src/components/GamePlayer.tsx`; external-open control removed |
 | Configurable Backslash navigation shortcut | IMPLEMENTED AND VERIFIED | `src/lib/navigationShortcut.ts`, Settings → Preferences, `src/lib/userData.ts`, `tests/navigation-shortcut.test.mjs` (7 tests) |
-| Independent favicon | IMPLEMENTED AND VERIFIED | `public/favicon.svg`, `public/apple-touch-icon.png`, `index.html`; test asserts no Google brand colours |
+| Favicon: the owner-supplied artwork in the browser tab, no second logo by the wordmark | IMPLEMENTED AND VERIFIED | `public/favicon.png` (512), `favicon-32.png`, `favicon.ico`, `apple-touch-icon.png` (180), `index.html`, `src/lib/tabIdentity.ts` (the removed `favicon.svg` is no longer referenced anywhere) |
+| Time & Date settings tab | IMPLEMENTED AND VERIFIED | `src/lib/timeSettings.ts`, Settings → Time & Date (live preview, Show time, Show date, 12/24-hour, IANA zone with automatic detection, Eastern default), `tests/time-settings.test.mjs` (7 tests) |
 | Homepage simplifications | IMPLEMENTED AND VERIFIED | `src/components/SearchLanding.tsx` (footer credit and save message removed) |
 | Development announcement with single feedback link and dismissal | IMPLEMENTED AND VERIFIED | `src/components/DevelopmentNotice.tsx`, `src/lib/developmentNotice.ts`, Preferences restore action |
 | Changelog accuracy incl. PR #15 | IMPLEMENTED AND VERIFIED | `scripts/changelog-notes.json`, `src/data/changelog.json` (15 releases, both sorts) |

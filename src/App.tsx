@@ -82,7 +82,8 @@ import {
   type TabIdentity,
 } from './lib/tabIdentity';
 import { loadTabIdentity, saveTabIdentity } from './lib/userData';
-import { contrastText, fontStack } from './lib/personalization';
+import { contrastText, fontStack, timeSettingsOf } from './lib/personalization';
+import { formatClock, formatDate } from './lib/timeSettings';
 
 const APPS: GameEntry[] = [
   {
@@ -125,6 +126,9 @@ const APPS: GameEntry[] = [
 // Apps grid shows APPS plus dual-section entries (Krillion backup appears in
 // BOTH Games and Apps from one stable ID, so favorites/history stay unified).
 const APPS_GRID = [...APPS, ...DUAL_SECTION_ENTRIES];
+// The Games grid already carries both Krillion titles from the catalogue
+// (clkrillion, clkrillion-backup), so they are not added a second time.
+const GAME_ENTRIES = legacyCatalog;
 const SEARCHABLE = [...new Map([...legacyCatalog, ...APPS_GRID].map((entry) => [entry.id, entry])).values()];
 const SEARCH_INDEX = buildSearchIndex(SEARCHABLE);
 const APP_SEARCH_INDEX = buildSearchIndex(APPS_GRID);
@@ -353,11 +357,13 @@ export default function App() {
   const [now, setNow] = useState(() => new Date());
   useEffect(() => {
     if (!appearance.clock && !appearance.date) return;
-    const timer = window.setInterval(() => setNow(new Date()), 30000);
+    setNow(new Date());
+    const timer = window.setInterval(() => setNow(new Date()), 15000);
     return () => window.clearInterval(timer);
   }, [appearance.clock, appearance.date]);
-  const clockText = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
-  const dateText = now.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+  const timeSettings = timeSettingsOf(appearance);
+  const clockText = formatClock(now, timeSettings);
+  const dateText = formatDate(now, timeSettings);
 
   // The library notice appears on entry unless the user opted out permanently.
   useEffect(() => {
@@ -530,8 +536,8 @@ export default function App() {
 
   const filteredGames = useMemo(() => {
     const base = searchQuery
-      ? searchIndex(SEARCH_INDEX, searchQuery, legacyCatalog.length).map((result) => result.entry)
-      : legacyCatalog;
+      ? searchIndex(SEARCH_INDEX, searchQuery, GAME_ENTRIES.length).map((result) => result.entry)
+      : GAME_ENTRIES;
     return category === 'all' ? base : base.filter((entry) => entry.categories.includes(category as never));
   }, [searchQuery, category]);
 

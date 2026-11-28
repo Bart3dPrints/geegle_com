@@ -1,8 +1,11 @@
 // Ordinary Geegle settings, organized as tabs:
 //   Theme         — light/dark/system.
-//   Appearance    — surfaces, accent colour, typeface, text colour, wallpaper,
-//                   optional clock/date widgets and their resets.
-//   Preferences   — Recently Played, the library notice, account and password.
+//   Appearance    — surfaces, accent colour, typeface, text colour, wallpaper
+//                   and their resets.
+//   Preferences   — Recently Played, the library notice, navigation shortcut,
+//                   account and password.
+//   Time & Date   — live clock, time and date toggles, 12/24-hour format and
+//                   time zone (including automatic browser detection).
 //   Tab appearance — optional user-owned page title and icon.
 //   Changelog     — release history from merged pull requests (always last).
 //
@@ -41,6 +44,15 @@ import {
   validateTabIdentity,
   type TabIdentity,
 } from '../lib/tabIdentity';
+import {
+  AUTO_TIME_ZONE,
+  DEFAULT_TIME_SETTINGS,
+  TIME_ZONE_OPTIONS,
+  browserTimeZone,
+  describeTimeZone,
+  formatClock,
+  formatDate,
+} from '../lib/timeSettings';
 
 const BACKGROUNDS = ['#fafafa', '#ffffff', '#e5e5e5', '#202020', '#181818'];
 const CARDS = ['#ffffff', '#f5f5f5', '#e5e5e5', '#2c2c2c', '#252525'];
@@ -48,6 +60,7 @@ const TABS = [
   { key: 'theme', label: 'Theme' },
   { key: 'appearance', label: 'Appearance' },
   { key: 'preferences', label: 'Preferences' },
+  { key: 'time', label: 'Time & Date' },
   { key: 'tab', label: 'Tab appearance' },
   { key: 'changelog', label: 'Changelog' },
 ] as const;
@@ -134,7 +147,16 @@ export function Settings({
   const [shortcutDraft, setShortcutDraft] = useState<NavigationShortcut>(shortcut);
   const [shortcutError, setShortcutError] = useState<string | null>(null);
   const [destinationDraft, setDestinationDraft] = useState(shortcut.destination);
+  const [tick, setTick] = useState(() => new Date());
   const reduceMotion = useReducedMotion();
+
+  // The Time & Date preview is a real live clock while its section is open.
+  useEffect(() => {
+    if (tab !== 'time') return;
+    setTick(new Date());
+    const timer = window.setInterval(() => setTick(new Date()), 1000);
+    return () => window.clearInterval(timer);
+  }, [tab]);
 
   useEffect(() => {
     setShortcutDraft(shortcut);
@@ -605,33 +627,6 @@ export function Settings({
                   </p>
                 </div>
 
-                <div>
-                  <GroupHeading
-                    onReset={() => applyDraft({ clock: false, date: false })}
-                    resetLabel="Reset widgets"
-                  >
-                    Widgets
-                  </GroupHeading>
-                  <div className="space-y-2">
-                    <label className="flex items-center gap-2 text-sm">
-                      <input
-                        type="checkbox"
-                        checked={draft.clock}
-                        onChange={(event) => applyDraft({ clock: event.target.checked })}
-                      />
-                      Clock
-                    </label>
-                    <label className="flex items-center gap-2 text-sm">
-                      <input
-                        type="checkbox"
-                        checked={draft.date}
-                        onChange={(event) => applyDraft({ date: event.target.checked })}
-                      />
-                      Date
-                    </label>
-                  </div>
-                </div>
-
                 <div className="border-t border-neutral-200 pt-4 dark:border-neutral-700">
                   <button type="button" className="btn-secondary w-full" onClick={resetAll}>
                     Reset all personalization
@@ -802,6 +797,118 @@ export function Settings({
               </>
             )}
 
+            {tab === 'time' && (
+              <section aria-labelledby="settings-time" className="space-y-5">
+                <h3 id="settings-time" className="text-sm font-medium">
+                  Time &amp; Date
+                </h3>
+
+                <div>
+                  <GroupHeading resetLabel="Reset time and date" onReset={() => applyDraft({ ...DEFAULT_TIME_SETTINGS })}>
+                    Preview
+                  </GroupHeading>
+                  <div className="rounded-md border border-neutral-200 px-3 py-2 dark:border-neutral-700">
+                    <p className="text-lg tabular-nums" data-testid="time-preview">
+                      <time className="sr-only" dateTime={tick.toISOString()} data-testid="time-tick" />
+                      {draft.clock || draft.date
+                        ? [
+                            draft.clock ? formatClock(tick, { hour12: draft.hour12, timeZone: draft.timeZone }) : null,
+                            draft.date ? formatDate(tick, { timeZone: draft.timeZone }) : null,
+                          ]
+                            .filter(Boolean)
+                            .join(' · ')
+                        : 'Hidden'}
+                    </p>
+                    <p className="mt-0.5 text-xs text-neutral-500 dark:text-neutral-400">
+                      {describeTimeZone({ hour12: draft.hour12, timeZone: draft.timeZone }, tick)}
+                    </p>
+                  </div>
+                </div>
+
+                <div>
+                  <GroupHeading>Show</GroupHeading>
+                  <div className="space-y-2">
+                    <label className="flex items-center gap-2 text-sm">
+                      <input
+                        type="checkbox"
+                        checked={draft.clock}
+                        onChange={(event) => applyDraft({ clock: event.target.checked })}
+                      />
+                      Show time
+                    </label>
+                    <label className="flex items-center gap-2 text-sm">
+                      <input
+                        type="checkbox"
+                        checked={draft.date}
+                        onChange={(event) => applyDraft({ date: event.target.checked })}
+                      />
+                      Show date
+                    </label>
+                  </div>
+                </div>
+
+                <div>
+                  <GroupHeading>Format</GroupHeading>
+                  <div
+                    className="flex gap-1 rounded-md border border-neutral-200 p-1 dark:border-neutral-700"
+                    role="group"
+                    aria-label="Clock format"
+                  >
+                    {[
+                      { hour12: true, label: '12-hour' },
+                      { hour12: false, label: '24-hour' },
+                    ].map((option) => (
+                      <button
+                        key={option.label}
+                        type="button"
+                        aria-pressed={draft.hour12 === option.hour12}
+                        className={`flex-1 rounded px-2 py-1.5 text-sm ${
+                          draft.hour12 === option.hour12
+                            ? 'accent-surface'
+                            : 'hover:bg-neutral-100 dark:hover:bg-neutral-800'
+                        }`}
+                        onClick={() => applyDraft({ hour12: option.hour12 })}
+                      >
+                        {option.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <GroupHeading
+                    onReset={() => applyDraft({ timeZone: DEFAULT_TIME_SETTINGS.timeZone })}
+                    resetLabel="Reset time zone"
+                  >
+                    Time zone
+                  </GroupHeading>
+                  <label className="sr-only" htmlFor="settings-time-zone">
+                    Time zone
+                  </label>
+                  <select
+                    id="settings-time-zone"
+                    className="input"
+                    value={draft.timeZone}
+                    onChange={(event) => applyDraft({ timeZone: event.target.value })}
+                  >
+                    <option value={AUTO_TIME_ZONE}>Automatic ({browserTimeZone()})</option>
+                    {TIME_ZONE_OPTIONS.map((zone) => (
+                      <option key={zone.value} value={zone.value}>
+                        {zone.label}
+                      </option>
+                    ))}
+                    {!TIME_ZONE_OPTIONS.some((zone) => zone.value === draft.timeZone) &&
+                      draft.timeZone !== AUTO_TIME_ZONE && (
+                        <option value={draft.timeZone}>{draft.timeZone}</option>
+                      )}
+                  </select>
+                  <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                    Daylight saving time is applied automatically.
+                  </p>
+                </div>
+              </section>
+            )}
+
             {tab === 'tab' && (
               <section aria-labelledby="settings-tab-appearance">
                 <h3 id="settings-tab-appearance" className="mb-1 text-sm font-medium">
@@ -828,7 +935,7 @@ export function Settings({
                     {identity.icon ? (
                       <img src={identity.icon} alt="" className="h-full w-full object-cover" />
                     ) : (
-                      <img src="/favicon.svg" alt="" className="h-full w-full" />
+                      <img src="/favicon.png" alt="" className="h-full w-full" />
                     )}
                   </span>
                   <label className="btn-secondary cursor-pointer text-sm">
