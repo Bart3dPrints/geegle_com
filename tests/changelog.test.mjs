@@ -94,12 +94,12 @@ test('the committed changelog holds the real merged history', () => {
   // Each release carries a written note rather than its development
   // pull-request title.
   const latest = entries[0];
-  assert.equal(latest.pr, 17);
-  assert.deepEqual(formatEastern(latest.mergedAt), { date: 'November 27, 2026', time: '10:18 PM EST' });
+  assert.equal(latest.pr, 18);
+  assert.deepEqual(formatEastern(latest.mergedAt), { date: 'November 28, 2026', time: '12:22 AM EST' });
   assert.ok(!/^Run \d/i.test(latest.summary), 'no raw development PR title is shown');
   const previous = entries[1];
-  assert.equal(previous.pr, 16);
-  assert.deepEqual(formatEastern(previous.mergedAt), { date: 'November 27, 2026', time: '8:25 PM EST' });
+  assert.equal(previous.pr, 17);
+  assert.deepEqual(formatEastern(previous.mergedAt), { date: 'November 27, 2026', time: '10:18 PM EST' });
   assert.ok(!/^Run \d/i.test(previous.summary), 'no raw development PR title is shown');
 });
 
