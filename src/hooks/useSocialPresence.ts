@@ -5,6 +5,11 @@
 // guest joins under a per-session key. The channel carries no usernames, no
 // e-mail addresses and no raw account ids.
 //
+// The connection is owned by this module rather than by a component: React 18
+// mounts effects twice in development, and a per-mount channel would fight
+// itself on the same topic. A key change (sign-in, sign-out, hidden status)
+// tears the old channel down before the new one subscribes.
+//
 // If Realtime is unreachable the state is reported as unavailable; it is never
 // presented as "everyone is offline".
 
@@ -26,6 +31,82 @@ export interface SocialPresence {
   visitors: number | null;
 }
 
+let channel: RealtimeChannel | null = null;
+let currentKey: string | null = null;
+let connecting: Promise<void> | null = null;
+let state: SocialPresence = { status: 'connecting', onlineKeys: new Set(), visitors: null };
+const listeners = new Set<() => void>();
+
+function publish(next: Partial<SocialPresence>) {
+  state = { ...state, ...next };
+  for (const listener of listeners) listener();
+}
+
+async function teardown() {
+  const previous = channel;
+  channel = null;
+  currentKey = null;
+  if (previous) await supabase.removeChannel(previous);
+}
+
+async function connect(userId: string | null, hidden: boolean, enabled: boolean) {
+  if (!enabled || !isSupabaseConfigured) {
+    await teardown();
+    publish({ status: 'unavailable', onlineKeys: new Set(), visitors: null });
+    return;
+  }
+
+  const key = await presenceKeyFor(userId, hidden);
+  if (channel && currentKey === key) return;
+
+  await teardown();
+  currentKey = key;
+  publish({ status: 'connecting', visitors: null });
+
+  const next = supabase.channel(CHANNEL, { config: { presence: { key } } });
+  channel = next;
+
+  next.on('presence', { event: 'sync' }, () => {
+    if (channel !== next) return;
+    const presence = next.presenceState() as Record<string, unknown[]>;
+    publish({
+      status: 'live',
+      onlineKeys: new Set(Object.keys(presence)),
+      visitors: countVisitors(presence),
+    });
+  });
+
+  const subscribed = new Promise<void>((resolve) => {
+    next.subscribe((status) => {
+      if (status === 'SUBSCRIBED') {
+        void next.track({ v: 1 });
+        resolve();
+      } else if (status === 'CHANNEL_ERROR' || status === 'TIMED_OUT' || status === 'CLOSED') {
+        if (channel === next) {
+          publish({ status: 'unavailable', onlineKeys: new Set(), visitors: null });
+        }
+        resolve();
+      }
+    });
+  });
+
+  const timeout = new Promise<void>((resolve) => {
+    window.setTimeout(resolve, SUBSCRIBE_TIMEOUT_MS);
+  });
+
+  await Promise.race([subscribed, timeout]);
+  if (state.status === 'connecting' && channel === next) {
+    publish({ status: 'unavailable', visitors: null });
+  }
+}
+
+function ensure(userId: string | null, hidden: boolean, enabled: boolean) {
+  connecting = (connecting ?? Promise.resolve())
+    .then(() => connect(userId, hidden, enabled))
+    .catch(() => publish({ status: 'unavailable', visitors: null }));
+  return connecting;
+}
+
 export function useSocialPresence({
   userId,
   hidden,
@@ -35,57 +116,17 @@ export function useSocialPresence({
   hidden: boolean;
   enabled: boolean;
 }): SocialPresence {
-  const [status, setStatus] = useState<PresenceStatus>('connecting');
-  const [onlineKeys, setOnlineKeys] = useState<Set<string>>(new Set());
-  const [visitors, setVisitors] = useState<number | null>(null);
+  const [snapshot, setSnapshot] = useState<SocialPresence>(state);
 
   useEffect(() => {
-    if (!enabled || !isSupabaseConfigured) {
-      setStatus('unavailable');
-      setVisitors(null);
-      return;
-    }
-
-    let cancelled = false;
-    let channel: RealtimeChannel | null = null;
-    setStatus('connecting');
-    setVisitors(null);
-
-    void presenceKeyFor(userId, hidden).then((key) => {
-      if (cancelled) return;
-
-      const current = supabase.channel(CHANNEL, { config: { presence: { key } } });
-      channel = current;
-
-      current.on('presence', { event: 'sync' }, () => {
-        if (cancelled) return;
-        const state = current.presenceState() as Record<string, unknown[]>;
-        setOnlineKeys(new Set(Object.keys(state)));
-        setVisitors(countVisitors(state));
-        setStatus('live');
-      });
-
-      current.subscribe((state) => {
-        if (cancelled) return;
-        if (state === 'SUBSCRIBED') {
-          void current.track({ v: 1 });
-        } else if (state === 'CHANNEL_ERROR' || state === 'TIMED_OUT' || state === 'CLOSED') {
-          setStatus('unavailable');
-          setVisitors(null);
-        }
-      });
-    });
-
-    const timeout = window.setTimeout(() => {
-      setStatus((current) => (current === 'connecting' ? 'unavailable' : current));
-    }, SUBSCRIBE_TIMEOUT_MS);
-
+    const listener = () => setSnapshot(state);
+    listeners.add(listener);
+    listener();
+    void ensure(userId, hidden, enabled);
     return () => {
-      cancelled = true;
-      window.clearTimeout(timeout);
-      if (channel) void supabase.removeChannel(channel);
+      listeners.delete(listener);
     };
   }, [userId, hidden, enabled]);
 
-  return { status, onlineKeys, visitors };
+  return snapshot;
 }

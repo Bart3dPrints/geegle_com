@@ -5,7 +5,6 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Loader2, Search, X } from 'lucide-react';
-import { supabase, isSupabaseConfigured } from '../lib/supabase';
 import {
   blockUser,
   cancelRequest,
@@ -18,6 +17,7 @@ import {
   searchAccounts,
   sendFriendRequest,
   unblockUser,
+  watchSocial,
   type SearchUser,
   type SocialSnapshot,
 } from '../lib/friends';
@@ -118,18 +118,9 @@ export function Friends({
     void refresh();
   }, [refresh]);
 
-  // Live updates: RLS decides which rows this account may see.
-  useEffect(() => {
-    if (!userId || !isSupabaseConfigured) return;
-    const channel = supabase
-      .channel(`geegle:social:${userId}`)
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'geegle_friend_requests' }, () => void refresh())
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'geegle_friendships' }, () => void refresh())
-      .subscribe();
-    return () => {
-      void supabase.removeChannel(channel);
-    };
-  }, [userId, refresh]);
+  // Live updates: one shared subscription, and RLS decides which rows this
+  // account may see.
+  useEffect(() => watchSocial(userId, () => void refresh()), [userId, refresh]);
 
   // Debounced discovery.
   useEffect(() => {

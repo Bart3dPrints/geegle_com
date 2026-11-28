@@ -45,9 +45,14 @@ create table if not exists public.geegle_friendships (
   user_low uuid not null references auth.users(id) on delete cascade,
   user_high uuid not null references auth.users(id) on delete cascade,
   created_at timestamptz not null default now(),
+  -- A removal is recorded, not deleted: Realtime can only deliver row changes
+  -- it can check against RLS, and a deleted row cannot be checked. Recording
+  -- the removal lets both accounts hear about it live.
+  removed_at timestamptz,
   primary key (user_low, user_high),
   constraint geegle_friendships_ordered check (user_low < user_high)
 );
+alter table public.geegle_friendships add column if not exists removed_at timestamptz;
 create index if not exists geegle_friendships_high_idx
   on public.geegle_friendships (user_high);
 
@@ -253,7 +258,9 @@ begin
   end if;
   if exists (
     select 1 from public.geegle_friendships
-    where user_low = least(v_uid, p_recipient) and user_high = greatest(v_uid, p_recipient)
+    where user_low = least(v_uid, p_recipient)
+      and user_high = greatest(v_uid, p_recipient)
+      and removed_at is null
   ) then
     return jsonb_build_object('status', 'already_friends');
   end if;
@@ -275,9 +282,9 @@ begin
     update public.geegle_friend_requests
       set status = 'accepted', updated_at = now()
       where id = v_existing.id;
-    insert into public.geegle_friendships (user_low, user_high)
-      values (least(v_uid, p_recipient), greatest(v_uid, p_recipient))
-      on conflict do nothing;
+    insert into public.geegle_friendships (user_low, user_high, removed_at)
+      values (least(v_uid, p_recipient), greatest(v_uid, p_recipient), null)
+      on conflict (user_low, user_high) do update set removed_at = null, created_at = now();
     return jsonb_build_object('status', 'accepted', 'id', v_existing.id);
   end if;
 
@@ -325,9 +332,9 @@ begin
     set status = 'accepted', updated_at = now()
     where id = v_req.id;
 
-  insert into public.geegle_friendships (user_low, user_high)
-    values (least(v_uid, v_req.sender_id), greatest(v_uid, v_req.sender_id))
-    on conflict do nothing;
+  insert into public.geegle_friendships (user_low, user_high, removed_at)
+    values (least(v_uid, v_req.sender_id), greatest(v_uid, v_req.sender_id), null)
+    on conflict (user_low, user_high) do update set removed_at = null, created_at = now();
 
   return jsonb_build_object('status', 'accepted');
 end;
@@ -367,8 +374,11 @@ begin
     raise exception 'invalid_target' using errcode = 'P0001';
   end if;
 
-  delete from public.geegle_friendships
-  where user_low = least(v_uid, p_other) and user_high = greatest(v_uid, p_other);
+  update public.geegle_friendships
+    set removed_at = now()
+    where user_low = least(v_uid, p_other)
+      and user_high = greatest(v_uid, p_other)
+      and removed_at is null;
 
   return jsonb_build_object('status', 'removed');
 end;
@@ -398,8 +408,11 @@ begin
     values (v_uid, p_other)
     on conflict do nothing;
 
-  delete from public.geegle_friendships
-  where user_low = least(v_uid, p_other) and user_high = greatest(v_uid, p_other);
+  update public.geegle_friendships
+    set removed_at = now()
+    where user_low = least(v_uid, p_other)
+      and user_high = greatest(v_uid, p_other)
+      and removed_at is null;
 
   update public.geegle_friend_requests
     set status = 'cancelled', updated_at = now()
@@ -480,7 +493,8 @@ begin
       from public.geegle_friendships f
       join public.geegle_profiles p
         on p.id = case when f.user_low = v_uid then f.user_high else f.user_low end
-      where f.user_low = v_uid or f.user_high = v_uid
+      where (f.user_low = v_uid or f.user_high = v_uid)
+        and f.removed_at is null
     ), '[]'::jsonb),
     'incoming', coalesce((
       select jsonb_agg(jsonb_build_object(

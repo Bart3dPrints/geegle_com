@@ -5,6 +5,7 @@
 // the session; the client never sends "who am I". Responses are treated as
 // untrusted input: only the fields the feature needs are kept.
 
+import type { RealtimeChannel } from '@supabase/supabase-js';
 import { supabase, isSupabaseConfigured } from './supabase';
 import type { OpResult } from '../types';
 
@@ -138,6 +139,47 @@ export async function presenceKeyFor(userId: string | null, hidden: boolean): Pr
   if (!userId) return guestKey();
   const salt = hidden ? PRESENCE_HIDDEN_SALT : PRESENCE_SALT;
   return `u${(await sha256(salt + userId)).slice(0, 32)}`;
+}
+
+// --- live relationship changes -------------------------------------------
+//
+// One channel per account for the whole app. React mounts effects twice in
+// development, and two channels on one topic fight each other, so the
+// connection is owned here instead of by a component.
+
+let socialChannel: RealtimeChannel | null = null;
+let socialChannelUser: string | null = null;
+let socialQueue: Promise<void> = Promise.resolve();
+const socialListeners = new Set<() => void>();
+
+function notifySocial() {
+  for (const listener of socialListeners) listener();
+}
+
+function connectSocial(userId: string) {
+  socialQueue = socialQueue.then(async () => {
+    if (socialChannelUser === userId && socialChannel) return;
+    const previous = socialChannel;
+    socialChannel = null;
+    if (previous) await supabase.removeChannel(previous);
+    socialChannelUser = userId;
+    const channel = supabase
+      .channel(`geegle:social:${userId}`)
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'geegle_friend_requests' }, notifySocial)
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'geegle_friendships' }, notifySocial);
+    socialChannel = channel;
+    channel.subscribe();
+  });
+  return socialQueue;
+}
+
+/** Subscribes to relationship changes; returns an unsubscribe function. */
+export function watchSocial(userId: string | null, onChange: () => void): () => void {
+  socialListeners.add(onChange);
+  if (userId && isSupabaseConfigured) void connectSocial(userId);
+  return () => {
+    socialListeners.delete(onChange);
+  };
 }
 
 const SOCIAL_ERRORS: Record<string, string> = {
