@@ -14,26 +14,26 @@ Identity evidence and reuse basis are recorded separately on every record. Captu
 
 | Measure | Count |
 | --- | --- |
-| Catalog rows (unique IDs) | 2,710 |
-| Verified artwork | 2,678 |
+| Catalog rows (unique IDs) | 2,708 |
+| Verified artwork | 2,684 |
 | Awaiting review | 0 |
-| Rejected (removed from the UI, queued for a new capture) | 42 |
+| Rejected (removed from the UI, queued for a new capture) | 37 |
 | Blocked | 0 |
 | Reopened after the blocked classification was rejected | 1,676 |
 | Render investigations from the earlier long-observation pass (that protocol was cancelled) | 590 |
 | ... that rendered an authentic frame | 551 |
 | ... that stopped at their own start gate | 6 |
 | ... that stayed blank for the whole observation | 26 |
-| Remaining unprocessed | 32 |
-| Actual verified coverage | 98.8% |
-| Total optimized asset size (verified images) | 72063 KiB |
+| Remaining unprocessed | 24 |
+| Actual verified coverage | 99.1% |
+| Total optimized asset size (verified images) | 72147 KiB |
 
 ## Verified artwork by acquisition method
 
 | Method | Count |
 | --- | --- |
-| game-asset | 1617 |
-| gameplay-screenshot | 962 |
+| game-asset | 1618 |
+| gameplay-screenshot | 967 |
 | official-icon | 72 |
 | official-og | 27 |
 
@@ -81,10 +81,10 @@ No entry is left in a blocked state: the whole 1,676-entry blocked manifest was 
 
 ## Remaining work
 
-The next unprocessed batch starts at `cladarkroom`:
+The next unprocessed batch starts at `clblackout`:
 
 ```
-cladarkroom,clblackout,clbloonstd2,clburritobison2,clclover,clcotlk,clcreepyinternetstories,clcvooc,clfamilyguycorrupted,clffaf,clfireemblem,clfocus,clgrannycreepy,clhighstakes,clicantbelievegoogleflaggedmeforthenameofthefilelol,clinsomniary,clloz1,clmaddenfootball,clmami,clmariominusrabbids,clmeowuwu,clmonsterswing,cloddfuture,cloutnumbered,clpint,clpokered,clpokerowe,clsd-thewar,clthanksforremindingmeihadtofixthis,clthereisnofile,clvolleyball,clweltling
+clblackout,clbloonstd2,clclover,clcreepyinternetstories,clcvooc,clfamilyguycorrupted,clffaf,clfireemblem,clgrannycreepy,clicantbelievegoogleflaggedmeforthenameofthefilelol,clinsomniary,clloz1,clmaddenfootball,clmariominusrabbids,clmeowuwu,clmonsterswing,cloddfuture,cloutnumbered,clpokered,clpokerowe,clthanksforremindingmeihadtofixthis,clthereisnofile,clvolleyball,clweltling
 ```
 
 Resume commands:

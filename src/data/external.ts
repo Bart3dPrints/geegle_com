@@ -3,7 +3,6 @@
 // truth, so favorites/history/settings cannot diverge between sections.
 
 import type { GameEntry } from '../types';
-import type { ProxyService } from './proxies';
 
 /**
  * Providers with EVIDENCE-BASED support for launching a supplied destination.
@@ -20,21 +19,6 @@ import type { ProxyService } from './proxies';
  * - Helios: user-input search launcher.
  * - Achroma/Bull-33/Backup: static landing pages, no documented interface.
  */
-export const DESTINATION_PROVIDERS: ProxyService[] = [
-  {
-    id: 'everythingle-direct',
-    name: 'Direct',
-    endpoints: [{ label: 'Direct framing', url: '/games/everythingle.html', verified: true }],
-  },
-];
-
-/** Build a Cherry-proxy URL that auto-supplies the Everythingle destination. */
-export function cherryDestinationUrl(baseUrl: string, destination: string): string {
-  // The wrapper forwards location.hash verbatim to its loader. Only the hash
-  // fragment is used; no query parameters are invented.
-  const clean = baseUrl.split('#')[0];
-  return `${clean}#${encodeURIComponent(destination)}`;
-}
 
 /** Official Krillion embed (documented at krillion.cc/embed-guide/). */
 export const KRILLION: GameEntry = {
@@ -63,18 +47,18 @@ export const KRILLION_BACKUP: GameEntry = {
     'Independent fan-made Krillion-style trivia site. Not the official game.',
 };
 
-/** Everythingle puzzle collection. Launched through the EverythingleApp
- * component, which offers direct framing or a compatible proxy server. */
+/** Everythingle: an original unlimited word puzzle that runs inside Geegle.
+ * It is not the external everythingle.com site and needs no proxy server. */
 export const EVERYTHINGLE: GameEntry = {
   id: 'everythingle',
   title: 'Everythingle',
-  path: '/games/everythingle.html',
+  path: '',
   categories: [],
   kind: 'app',
-  aliases: ['wordle unlimited', 'globle', 'worldle', 'puzzle collection', 'chess'],
+  aliases: ['wordle unlimited', 'word puzzle', 'five letter word', 'unlimited wordle'],
   thumb: 'https://everythingle.com/icon-512.png',
-  source: 'External site (everythingle.com); direct framing or authorized proxy',
-  description: 'Free unlimited Wordle, Globle, Worldle, chess and more.',
+  source: 'Original Geegle puzzle (local, no external service)',
+  description: 'Unlimited five-letter word puzzle.',
 };
 
 /** Entries shown in BOTH Games and Apps sections. */

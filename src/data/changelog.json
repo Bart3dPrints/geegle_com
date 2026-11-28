@@ -2,6 +2,11 @@
   "source": "github:Bart3dPrints/geegle_com",
   "entries": [
     {
+      "pr": 15,
+      "mergedAt": "2026-11-27T23:29:33Z",
+      "summary": "Settings now cover appearance, account preferences and a navigation shortcut, the alphabetical sidebar always fits the screen, and the library gained a development announcement."
+    },
+    {
       "pr": 14,
       "mergedAt": "2026-11-27T21:38:12Z",
       "summary": "Game cards across the catalogue now show researched artwork, including every title that could be verified."
@@ -9,7 +14,7 @@
     {
       "pr": 13,
       "mergedAt": "2026-11-27T17:03:11Z",
-      "summary": "Reopen blocked artwork entries, add service artwork and remove Astra"
+      "summary": "Previously blocked artwork entries were reopened and checked again, the proxy cards gained their own artwork, and Astra was removed."
     },
     {
       "pr": 12,
@@ -29,7 +34,7 @@
     {
       "pr": 9,
       "mergedAt": "2026-11-26T21:08:39Z",
-      "summary": "Remove the cloud-save overlay, add a Settings changelog, guest reminder and password visibility"
+      "summary": "A Settings changelog, guest reminder controls and password visibility, with the cloud-save overlay removed."
     },
     {
       "pr": 8,

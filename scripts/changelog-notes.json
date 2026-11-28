@@ -10,5 +10,8 @@
   "5": "Sticky header search, cleaner root-URL navigation, and fixes for production sign-up and session handling.",
   "6": "Username-only accounts can now sign up on the live site, and a deploy check catches a misconfigured backend.",
   "7": "Database fixes for registration, case-insensitive duplicate usernames and save revisions, with tighter permissions.",
-  "8": "Game saving fixed in three clicker games, cloud-save accuracy corrected, and the larger Geegle wordmark with a single Sign out action."
+  "8": "Game saving fixed in three clicker games, cloud-save accuracy corrected, and the larger Geegle wordmark with a single Sign out action.",
+  "15": "Settings now cover appearance, account preferences and a navigation shortcut, the alphabetical sidebar always fits the screen, and the library gained a development announcement.",
+  "13": "Previously blocked artwork entries were reopened and checked again, the proxy cards gained their own artwork, and Astra was removed.",
+  "9": "A Settings changelog, guest reminder controls and password visibility, with the cloud-save overlay removed."
 }

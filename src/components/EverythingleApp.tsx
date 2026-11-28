@@ -1,32 +1,56 @@
-// Everythingle app with server selection. The user clicks the Everythingle
-// card and lands inside the Geegle player — no manual URL entry. Compatible
-// servers are ONLY those whose destination interface was verified by direct
-// inspection (Cherry: hash-forwarding wrapper + URL-parsing loader). Direct
-// framing is the default; external open is the failure fallback.
-//
-// Preferences persist via the existing server-defaults mechanism (local +
-// account-synced), so they survive logout, storage clearing, and re-sign-in.
+// Everythingle: an original unlimited five-letter word puzzle that runs
+// entirely inside Geegle. There is no external site, proxy choice or server
+// dependency; the word list, scoring and progress are local to this app.
 
-import { useEffect, useMemo, useState } from 'react';
-import { ArrowLeft, RotateCcw, Maximize2, Loader2, AlertTriangle, ExternalLink } from 'lucide-react';
-import { cherryDestinationUrl } from '../data/external';
-import { saveServerDefault, loadServerDefaults } from '../lib/userData';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { ArrowLeft, Delete, Maximize2 } from 'lucide-react';
+import {
+  EMPTY_STATS,
+  MAX_GUESSES,
+  WORD_LENGTH,
+  letterHints,
+  parsePuzzleState,
+  parseStats,
+  roundsStats,
+  scoreGuess,
+  startRound,
+  submitGuess,
+  type LetterState,
+  type PuzzleStats,
+  type PuzzleState,
+} from '../lib/wordPuzzle';
 
-const DESTINATION = 'https://everythingle.com/';
+const MESSAGES = {
+  short: `Enter a ${WORD_LENGTH}-letter word.`,
+  unknown: 'Not in the word list.',
+  finished: 'This round is finished.',
+} as const;
 
-// Evidence-based compatible servers. Cherry mirrors were fetched directly;
-// the wrapper forwards location.hash to a URL-parsing loader.
-const CHERRY_MIRRORS = [
-  { label: 'Cherry 1', url: 'https://chrivtx.s3.amazonaws.com/math.html' },
-  { label: 'Cherry 2', url: 'https://s3.amazonaws.com/chrivtx/math.html' },
-  { label: 'Cherry 3', url: 'https://chrivtx.s3.dualstack.us-east-1.amazonaws.com/math.html' },
-  { label: 'Cherry 4', url: 'https://s3.us-east-1.amazonaws.com/chrivtx/math.html' },
-  { label: 'Cherry 5', url: 'https://s3.dualstack.us-east-1.amazonaws.com/chrivtx/math.html' },
-];
+function storageKey(userId: string | null): string {
+  return `geegle-everythingle:${userId ?? 'guest'}`;
+}
 
-type Mode = 'direct' | 'cherry';
+function readSaved(userId: string | null): { state: PuzzleState | null; stats: PuzzleStats } {
+  try {
+    const raw = localStorage.getItem(storageKey(userId));
+    const parsed = raw ? JSON.parse(raw) : null;
+    return {
+      state: parsePuzzleState(parsed?.state),
+      stats: parseStats(parsed?.stats),
+    };
+  } catch {
+    return { state: null, stats: EMPTY_STATS };
+  }
+}
 
-const SERVICE_ID = 'everythingle';
+const KEYS = ['qwertyuiop', 'asdfghjkl', 'zxcvbnm'];
+
+const TILE_CLASS: Record<LetterState | 'empty', string> = {
+  correct: 'border-neutral-900 bg-neutral-900 text-white dark:border-neutral-100 dark:bg-neutral-100 dark:text-neutral-900',
+  present: 'border-neutral-400 bg-neutral-400 text-neutral-950 dark:border-neutral-500 dark:bg-neutral-500 dark:text-neutral-950',
+  absent: 'border-neutral-300 bg-neutral-200 text-neutral-700 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300',
+  empty: 'border-neutral-300 bg-transparent text-neutral-900 dark:border-neutral-700 dark:text-neutral-100',
+};
 
 export function EverythingleApp({
   userId,
@@ -35,166 +59,196 @@ export function EverythingleApp({
   userId: string | null;
   onExit: () => void;
 }) {
-  const [mode, setMode] = useState<Mode>('direct');
-  const [serverIndex, setServerIndex] = useState(0);
-  const [loaded, setLoaded] = useState(false);
-  const [blocked, setBlocked] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [frameKey, setFrameKey] = useState(0);
+  const saved = useMemo(() => readSaved(userId), [userId]);
+  const [state, setState] = useState<PuzzleState>(
+    () => saved.state ?? startRound(1)
+  );
+  const [stats, setStats] = useState<PuzzleStats>(saved.stats);
+  const [draft, setDraft] = useState('');
+  const [message, setMessage] = useState<string | null>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
 
-  // Load persisted preferences (local + account). Server preferences live in
-  // the same settings JSON the proxy cards use, so they sync cross-device.
+  // Progress survives a reload for this account (or guest) on this device.
   useEffect(() => {
-    void loadServerDefaults(userId).then((res) => {
-      if (!res.ok || !res.data) return;
-      const pref = res.data[SERVICE_ID];
-      if (typeof pref === 'number') {
-        // 0 = direct; 1..N = cherry mirror (pref - 1).
-        if (pref === 0) setMode('direct');
-        else if (pref >= 1 && pref <= CHERRY_MIRRORS.length) {
-          setMode('cherry');
-          setServerIndex(pref - 1);
-        }
+    try {
+      localStorage.setItem(storageKey(userId), JSON.stringify({ state, stats }));
+    } catch {
+      /* Storage may be disabled; the round still works in memory. */
+    }
+  }, [state, stats, userId]);
+
+  const hints = useMemo(() => letterHints(state), [state]);
+
+  const play = useCallback(
+    (raw: string) => {
+      const result = submitGuess(state, raw);
+      if (!result.ok) {
+        setMessage(MESSAGES[result.reason]);
+        return;
       }
-    });
-  }, [userId]);
+      setMessage(null);
+      setDraft('');
+      setState(result.state);
+      setStats((current) => roundsStats(current, result.state.status));
+    },
+    [state]
+  );
 
-  const persist = async (nextMode: Mode, nextIndex: number) => {
-    const encoded = nextMode === 'direct' ? 0 : nextIndex + 1;
-    const res = await saveServerDefault(SERVICE_ID, encoded, userId);
-    if (!res.ok && res.error) setError(`Preference not synced: ${res.error}`);
-    else setError(null);
-  };
+  const typeLetter = useCallback((letter: string) => {
+    setMessage(null);
+    setDraft((current) => (current.length >= WORD_LENGTH ? current : current + letter));
+  }, []);
 
-  const chooseMode = (nextMode: Mode) => {
-    setMode(nextMode);
-    resetFrame();
-    void persist(nextMode, nextMode === 'cherry' ? serverIndex : 0);
-  };
+  const backspace = useCallback(() => {
+    setMessage(null);
+    setDraft((current) => current.slice(0, -1));
+  }, []);
 
-  const chooseServer = (index: number) => {
-    setServerIndex(index);
-    resetFrame();
-    void persist('cherry', index);
-  };
-
-  const src = useMemo(() => {
-    if (mode === 'direct') return DESTINATION;
-    return cherryDestinationUrl(CHERRY_MIRRORS[serverIndex].url, DESTINATION);
-  }, [mode, serverIndex]);
-
-  const resetFrame = () => {
-    setLoaded(false);
-    setBlocked(false);
-    setFrameKey((k) => k + 1);
-  };
-
-  const openExternally = () => {
-    window.open(DESTINATION, '_blank', 'noopener');
-  };
-
-  // Frame-refusal detection: X-Frame-Options/CSP block the load event.
+  // Physical keyboard: letters, Backspace and Enter, the usual puzzle controls.
   useEffect(() => {
-    if (loaded || blocked) return;
-    const timer = setTimeout(() => setBlocked(true), 9000);
-    return () => clearTimeout(timer);
-  }, [frameKey, loaded, blocked]);
+    const onKey = (event: KeyboardEvent) => {
+      if (event.ctrlKey || event.metaKey || event.altKey) return;
+      if (event.key === 'Escape') {
+        onExit();
+        return;
+      }
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        play(draft);
+        return;
+      }
+      if (event.key === 'Backspace') {
+        event.preventDefault();
+        backspace();
+        return;
+      }
+      if (/^[a-zA-Z]$/.test(event.key)) typeLetter(event.key.toLowerCase());
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [backspace, draft, onExit, play, typeLetter]);
 
-  const btn =
-    'btn-secondary border-neutral-700 bg-neutral-900 text-neutral-200 hover:bg-neutral-800';
+  const nextRound = () => {
+    const round = state.round + 1;
+    const next = startRound(round, `geegle-${round}-${userId ?? 'guest'}`);
+    setState(next);
+    setDraft('');
+    setMessage(null);
+  };
+
+  const finished = state.status !== 'playing';
+  const winRate = stats.played ? Math.round((stats.won / stats.played) * 100) : 0;
+  const rows = Array.from({ length: MAX_GUESSES }, (_, row) => row);
+  const button =
+    'rounded-md border border-neutral-300 bg-neutral-100 p-2 text-neutral-700 transition-colors hover:bg-neutral-200 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700';
 
   return (
-    <div className="fixed inset-0 z-50 bg-neutral-950">
-      <div className="absolute bottom-3 left-3 z-20">
-        <button className={btn} onClick={onExit} aria-label="Back to Apps">
-          <ArrowLeft size={16} />
-        </button>
-      </div>
-
-      <div className="absolute right-3 top-3 z-20 flex flex-wrap items-center justify-end gap-1.5">
-        {mode === 'cherry' && (
-          <select
-            className="input max-w-32 border-neutral-700 bg-neutral-900/95 py-1.5 text-xs text-neutral-100"
-            value={serverIndex}
-            onChange={(e) => chooseServer(Number(e.target.value))}
-            aria-label="Everythingle server"
-          >
-            {CHERRY_MIRRORS.map((m, i) => (
-              <option key={m.url} value={i}>
-                {m.label}
-              </option>
-            ))}
-          </select>
-        )}
-        <select
-          className="input max-w-32 border-neutral-700 bg-neutral-900/95 py-1.5 text-xs text-neutral-100"
-          value={mode}
-          onChange={(e) => chooseMode(e.target.value as Mode)}
-          aria-label="Connection method"
+    <div ref={rootRef} className="fixed inset-0 z-50 overflow-y-auto bg-neutral-950 text-neutral-100">
+      <div className="mx-auto flex min-h-full w-full max-w-md flex-col items-center justify-center gap-4 px-4 py-16">
+        <div
+          className="grid w-full gap-1.5"
+          role="grid"
+          aria-label="Guesses"
+          data-status={state.status}
+          data-round={state.round}
         >
-          <option value="direct">Direct</option>
-          <option value="cherry">Cherry proxy</option>
-        </select>
-        <button className={btn} onClick={openExternally} aria-label="Open in a new window">
-          <ExternalLink size={16} />
-        </button>
-        <button
-          className={btn}
-          onClick={() => document.getElementById('everythingle-frame')?.requestFullscreen?.()}
-          aria-label="Fullscreen"
-        >
-          <Maximize2 size={16} />
-        </button>
-      </div>
-
-      {error && (
-        <div className="absolute inset-x-0 top-16 z-10 mx-auto w-fit rounded-md bg-neutral-900/95 px-3 py-2 text-center text-xs text-neutral-300" role="status">
-          {error}
+          {rows.map((row) => {
+            const guess = state.guesses[row] ?? (row === state.guesses.length ? draft : '');
+            const scores = state.guesses[row]
+              ? scoreGuess(state.answer, guess)
+              : Array<LetterState | null>(WORD_LENGTH).fill(null);
+            return (
+              <div className="grid grid-cols-5 gap-1.5" role="row" key={row}>
+                {Array.from({ length: WORD_LENGTH }, (_, column) => {
+                  const letter = guess[column] ?? '';
+                  const score = scores[column];
+                  return (
+                    <div
+                      key={column}
+                      role="gridcell"
+                      data-state={score ?? (letter ? 'draft' : 'empty')}
+                      aria-label={letter ? `${letter}${score ? `, ${score}` : ''}` : 'empty'}
+                      className={`flex aspect-square items-center justify-center rounded-md border text-2xl font-semibold uppercase ${TILE_CLASS[score ?? 'empty']}`}
+                    >
+                      {letter}
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })}
         </div>
-      )}
 
-      <div className="absolute inset-0">
-        {!loaded && !blocked && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-neutral-950 text-neutral-400">
-            <Loader2 className="animate-spin" size={28} />
-            <span className="text-sm">Opening Everythingle…</span>
-          </div>
-        )}
-        {blocked && !loaded && (
-          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-neutral-950 p-6 text-center">
-            <AlertTriangle size={28} className="text-neutral-300" />
-            <p className="max-w-md text-sm text-neutral-300">
-              {mode === 'direct'
-                ? 'Everythingle could not be framed directly. Try the Cherry proxy connection, or open it in a new tab.'
-                : 'The Cherry proxy server did not respond. Try another server or open Everythingle directly.'}
-            </p>
-            <div className="flex flex-wrap justify-center gap-2">
-              <button className={btn} onClick={resetFrame}>
-                <RotateCcw size={14} /> Retry
+        <div className="h-5 text-center text-xs" role="status" aria-live="polite">
+          {message && <span className="text-neutral-300">{message}</span>}
+          {!message && finished && (
+            <span className="text-neutral-300">
+              {state.status === 'won' ? 'Solved' : `The word was ${state.answer.toUpperCase()}`}
+            </span>
+          )}
+        </div>
+
+        {finished ? (
+          <button className="btn-primary" onClick={nextRound}>
+            Next puzzle
+          </button>
+        ) : (
+          <div className="w-full space-y-1.5" aria-label="Keyboard">
+            {KEYS.map((row) => (
+              <div key={row} className="flex justify-center gap-1">
+                {row.split('').map((letter) => {
+                  const hint = hints[letter];
+                  return (
+                    <button
+                      key={letter}
+                      type="button"
+                      onClick={() => typeLetter(letter)}
+                      data-hint={hint ?? 'unused'}
+                      className={`h-11 w-8 rounded border text-sm font-medium uppercase ${
+                        hint === 'correct'
+                          ? 'border-neutral-900 bg-neutral-900 text-white dark:border-neutral-100 dark:bg-neutral-100 dark:text-neutral-900'
+                          : hint === 'present'
+                            ? 'border-neutral-400 bg-neutral-400 text-neutral-950'
+                            : hint === 'absent'
+                              ? 'border-neutral-700 bg-neutral-800 text-neutral-500'
+                              : 'border-neutral-600 bg-neutral-900 text-neutral-100'
+                      }`}
+                    >
+                      {letter}
+                    </button>
+                  );
+                })}
+              </div>
+            ))}
+            <div className="flex justify-center gap-1">
+              <button type="button" className="btn-secondary h-11 px-3" onClick={backspace} aria-label="Delete letter">
+                <Delete size={16} />
               </button>
-              {mode === 'direct' && (
-                <button className="btn-primary" onClick={() => chooseMode('cherry')}>
-                  Use Cherry proxy
-                </button>
-              )}
-              <button className={btn} onClick={openExternally}>
-                <ExternalLink size={14} /> Open in a new tab
-              </button>
-              <button className={btn} onClick={onExit}>
-                Back to Apps
+              <button type="button" className="btn-primary h-11 px-5" onClick={() => play(draft)}>
+                Enter
               </button>
             </div>
           </div>
         )}
-        <iframe
-          id="everythingle-frame"
-          key={frameKey}
-          src={src}
-          title="Everythingle"
-          className="h-full w-full"
-          onLoad={() => setLoaded(true)}
-          allow="fullscreen"
-        />
+
+        <p className="text-center text-xs text-neutral-400">
+          {stats.played} played · {winRate}% won · {stats.streak} streak · {stats.bestStreak} best
+        </p>
+      </div>
+
+      <div className="absolute bottom-3 left-3 z-20">
+        <button className={button} onClick={onExit} aria-label="Back to Apps">
+          <ArrowLeft size={16} />
+        </button>
+      </div>
+      <div className="absolute right-3 top-3 z-20">
+        <button
+          className={button}
+          onClick={() => rootRef.current?.requestFullscreen?.()}
+          aria-label="Fullscreen"
+        >
+          <Maximize2 size={16} />
+        </button>
       </div>
     </div>
   );

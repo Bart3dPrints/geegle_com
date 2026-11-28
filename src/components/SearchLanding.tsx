@@ -79,7 +79,8 @@ function LandingSession({ account, onSearch, onOpenLibrary, onAvatarClick, signe
       catch { throw new Error('Saved to your account, but could not update this device’s appearance cache.'); }
       setCached({ value, localOnly: false });
     }
-    setMessage(sync ? 'Appearance saved on this device and to your account.' : 'Appearance saved on this device.');
+    // Automatic saves stay silent; only a failure is reported.
+    setMessage('');
   }
 
   return <div className="gl-page" data-mode={dark ? 'dark' : 'light'} data-ink={lightInk ? 'light' : 'dark'}
@@ -117,7 +118,7 @@ function LandingSession({ account, onSearch, onOpenLibrary, onAvatarClick, signe
       </form>
       <p className="gl-status" role="status">{message && <><Check size={15}/>{message}</>}</p>
     </div></main>
-    <footer className="gl-foot"><span>Bart made this. Thank him</span><button type="button" onClick={() => {setDraft(saved);setMessage('');}}>
+    <footer className="gl-foot"><button type="button" onClick={() => {setDraft(saved);setMessage('');}}>
       <Palette size={16}/> Customize appearance</button></footer>
     {draft && <AppearanceEditor value={draft} canSync={!!account?.saveAppearance} onPreview={setDraft} onClose={() => setDraft(null)} onSave={save}/>}
   </div>;

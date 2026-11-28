@@ -413,6 +413,12 @@
     "status": "verified",
     "title": "Acko's Mach Bike Challenge"
   },
+  "cladarkroom": {
+    "reason": "The cleared A Dark Room logo serves this entry through the case-insensitive cladarkroom alias; the card shows the same artwork and title.",
+    "reviewed": "2026-11-28",
+    "status": "verified",
+    "title": "A Dark Room"
+  },
   "cladatewithdeath": {
     "reason": "In-game scene with the game's character and dialogue box.",
     "reviewed": "2026-11-27",
@@ -2796,10 +2802,10 @@
     "title": "Cory in the House"
   },
   "clcotlk": {
-    "reason": "No result identifiable as this title: the first results were game-portal logos and an unrelated product photo.",
+    "reason": "The local wrapper reached the game\u2019s own title screen naming \u201cCurse of the Lich King\u201d, the title this catalogue entry abbreviates.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Curse of the Lich King"
   },
   "clcountmastersstickmangames": {
     "reason": "Count Masters Stickman Games key art.",
@@ -6426,10 +6432,10 @@
     "title": "High Speed"
   },
   "clhighstakes": {
-    "reason": "Results were High Stakes on the Vegas Strip (poker) and a physical High Stakes board game, not this entry.",
+    "reason": "The local build\u2019s own \u201cHIGH STAKES \u2014 NEW GAME\u201d title screen.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "High Stakes"
   },
   "clhighwayracer2": {
     "reason": "Captured menu shows the actual game.",
@@ -7812,10 +7818,10 @@
     "title": "Make Sure It's Closed"
   },
   "clmami": {
-    "reason": "No result clearly identifies this entry; the results were Hotline Mami and an unrelated Japanese visual novel.",
+    "reason": "The mod\u2019s own title screen shows \u201cFriday Night Funkin\u2019 VS Mami\u201d, matching this entry.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Mami"
   },
   "clmanagod": {
     "reason": "Captured from the game this repository serves, showing its own title or gameplay.",
@@ -9972,10 +9978,10 @@
     "title": "Pink Bike"
   },
   "clpint": {
-    "reason": "Results were Spray Paint Simulator, a paper-painting photo and a watermarked Painter Game page.",
+    "reason": "The local build\u2019s in-game main menu with PLAY, ABOUT and QUIT.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "Pint"
   },
   "clpitfall": {
     "reason": "Pitfall! Atari cartridge art.",
@@ -12030,10 +12036,10 @@
     "title": "Scuba Bear"
   },
   "clsd-thewar": {
-    "reason": "Results were a Wargame: Red Dragon thumbnail and SD Gundam games, not this title.",
+    "reason": "The game\u2019s own \u201cSTICK DUEL THE WAR\u201d main menu.",
     "reviewed": "2026-11-27",
-    "status": "rejected",
-    "title": null
+    "status": "verified",
+    "title": "SD: The War"
   },
   "clsdf": {
     "reason": "SDF logo art.",

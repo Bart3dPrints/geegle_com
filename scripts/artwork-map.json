@@ -27,6 +27,15 @@
       "identityEvidence": "The A Dark Room wrapper identifies Doublespeak Games and links its source repository. Its logo matches the title visually.",
       "reuseEvidence": "MPL-2.0; pinned repository license https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/LICENSE.md. License notice bundled at /artwork/licenses/cladarkroom-LICENSE.txt.",
       "assetSha256": "7b6f4e2a57570268a6d578764029c486485837b4c3efeda411f220f3cdbc6d88"
+    },
+    "cladarkroom": {
+      "title": "A Dark Room",
+      "url": "/artwork/cladarkroom.webp",
+      "source": "https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/img/Logo1.jpg",
+      "type": "game-asset",
+      "identityEvidence": "The A Dark Room wrapper identifies Doublespeak Games and links its source repository. Its logo matches the title visually.",
+      "reuseEvidence": "MPL-2.0; pinned repository license https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/LICENSE.md. License notice bundled at /artwork/licenses/cladarkroom-LICENSE.txt.",
+      "assetSha256": "7b6f4e2a57570268a6d578764029c486485837b4c3efeda411f220f3cdbc6d88"
     }
   },
   "reviewedCandidates": {

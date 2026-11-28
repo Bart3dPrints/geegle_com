@@ -29,6 +29,12 @@ import { prepareWallpaper } from '../lib/wallpaper';
 import { PasswordInput } from './PasswordInput';
 import { Changelog } from './Changelog';
 import {
+  DEFAULT_SHORTCUT,
+  isAllowedShortcutKey,
+  parseDestination,
+  type NavigationShortcut,
+} from '../lib/navigationShortcut';
+import {
   DEFAULT_TAB_IDENTITY,
   TAB_ICON_MAX_BYTES,
   TAB_TITLE_MAX,
@@ -87,6 +93,10 @@ export function Settings({
   onShowNoticeAgain,
   accountReminderOff,
   onResetReminder,
+  shortcut,
+  onSaveShortcut,
+  announcementDismissed,
+  onShowAnnouncement,
   initialTab = 'theme',
   onClose,
   onSignedOut,
@@ -104,6 +114,10 @@ export function Settings({
   onShowNoticeAgain: () => Promise<void>;
   accountReminderOff: boolean;
   onResetReminder: () => void;
+  shortcut: NavigationShortcut;
+  onSaveShortcut: (value: NavigationShortcut) => Promise<void>;
+  announcementDismissed: boolean;
+  onShowAnnouncement: () => void;
   initialTab?: SettingsTab;
   onClose: () => void;
   onSignedOut: () => Promise<void>;
@@ -117,7 +131,35 @@ export function Settings({
   const [saving, setSaving] = useState(false);
   const [preparingWallpaper, setPreparingWallpaper] = useState(false);
   const [message, setMessage] = useState<{ kind: 'ok' | 'err'; text: string } | null>(null);
+  const [shortcutDraft, setShortcutDraft] = useState<NavigationShortcut>(shortcut);
+  const [shortcutError, setShortcutError] = useState<string | null>(null);
+  const [destinationDraft, setDestinationDraft] = useState(shortcut.destination);
   const reduceMotion = useReducedMotion();
+
+  useEffect(() => {
+    setShortcutDraft(shortcut);
+    setDestinationDraft(shortcut.destination);
+  }, [shortcut]);
+
+  const persistShortcut = async (next: NavigationShortcut) => {
+    setShortcutDraft(next);
+    setShortcutError(null);
+    try {
+      await onSaveShortcut(next);
+    } catch (error) {
+      setShortcutError(error instanceof Error ? error.message : 'Could not save the shortcut.');
+    }
+  };
+
+  const saveDestination = () => {
+    const parsed = parseDestination(destinationDraft);
+    if (!parsed) {
+      setShortcutError('Enter a valid https address.');
+      return;
+    }
+    setDestinationDraft(parsed);
+    void persistShortcut({ ...shortcutDraft, destination: parsed });
+  };
 
   // Debounced saves: one request after a burst of changes, and the last change
   // is flushed when the window closes.
@@ -645,6 +687,77 @@ export function Settings({
                     Reset account reminder
                   </button>
                 </section>
+
+                <section className="mb-6" aria-label="Navigation shortcut">
+                  <p className="mb-2 text-xs text-neutral-500 dark:text-neutral-400">Navigation shortcut</p>
+                  <label className="mb-2 flex items-center gap-2 text-sm">
+                    <input
+                      type="checkbox"
+                      checked={shortcutDraft.enabled}
+                      onChange={(event) => void persistShortcut({ ...shortcutDraft, enabled: event.target.checked })}
+                    />
+                    Enable shortcut
+                  </label>
+                  <div className="flex items-center gap-2">
+                    <label className="sr-only" htmlFor="shortcut-key">Shortcut key</label>
+                    <input
+                      id="shortcut-key"
+                      className="input w-20 text-center"
+                      value={shortcutDraft.key}
+                      readOnly
+                      onKeyDown={(event) => {
+                        event.preventDefault();
+                        if (!isAllowedShortcutKey(event.key)) {
+                          setShortcutError('Choose a symbol key such as the backslash or a slash.');
+                          return;
+                        }
+                        void persistShortcut({ ...shortcutDraft, key: event.key });
+                      }}
+                      aria-describedby="shortcut-key-hint"
+                    />
+                    <span id="shortcut-key-hint" className="text-xs text-neutral-500 dark:text-neutral-400">
+                      Focus and press a symbol key
+                    </span>
+                  </div>
+                  <div className="mt-2 flex items-center gap-2">
+                    <label className="sr-only" htmlFor="shortcut-destination">Destination</label>
+                    <input
+                      id="shortcut-destination"
+                      className="input flex-1"
+                      value={destinationDraft}
+                      onChange={(event) => setDestinationDraft(event.target.value)}
+                      onBlur={saveDestination}
+                      onKeyDown={(event) => {
+                        if (event.key === 'Enter') {
+                          event.preventDefault();
+                          saveDestination();
+                        }
+                      }}
+                      placeholder="https://example.com/"
+                    />
+                  </div>
+                  <button
+                    type="button"
+                    className="mt-2 text-xs text-neutral-500 underline underline-offset-2 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+                    onClick={() => {
+                      setDestinationDraft(DEFAULT_SHORTCUT.destination);
+                      void persistShortcut({ ...DEFAULT_SHORTCUT });
+                    }}
+                  >
+                    Restore defaults
+                  </button>
+                  {shortcutError && (
+                    <p className="mt-1 text-xs text-red-600 dark:text-red-400" role="alert">{shortcutError}</p>
+                  )}
+                </section>
+
+                {announcementDismissed && (
+                  <section className="mb-6" aria-label="Development announcement">
+                    <button type="button" className="btn-secondary w-full" onClick={onShowAnnouncement}>
+                      Show the development announcement again
+                    </button>
+                  </section>
+                )}
 
                 {username ? (
                   <section aria-label="Account">

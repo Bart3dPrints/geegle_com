@@ -1,12 +1,12 @@
 {
   "generated": "scripts/artwork/build-progress.py",
   "summary": {
-    "catalogEntries": 2710,
-    "verified": 2678,
+    "catalogEntries": 2708,
+    "verified": 2684,
     "awaitingReview": 0,
     "rejected": 0,
     "blocked": 0,
-    "notStarted": 32
+    "notStarted": 24
   },
   "entries": [
     {
@@ -6978,27 +6978,6 @@
       "blocker": null
     },
     {
-      "id": "clburritobison2",
-      "title": "Burrito Bison 2",
-      "categories": [
-        "arcade"
-      ],
-      "path": "/games/clburritobison2.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
-      "blocker": null
-    },
-    {
       "id": "clburritobisonlaunchalibre",
       "title": "Burrito Bison Launcha Libre",
       "categories": [
@@ -11500,18 +11479,19 @@
         "adventure"
       ],
       "path": "/games/clcotlk.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clcotlk.html",
+      "imagePath": "/artwork/clcotlk.webp",
+      "identityEvidence": "The local wrapper reached the game\u2019s own title screen naming \u201cCurse of the Lich King\u201d, the title this catalogue entry abbreviates.",
+      "reuseEvidence": "Captured from this repository\u2019s own local game wrapper for use only as this title\u2019s thumbnail on this platform; no third-party asset is redistributed.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "2e469344bbb1ce0ece7aff59d24435d96580949c2ad37b5beb5a8d355e78d0dc",
+      "visualVerification": "verified 2026-11-27: The local wrapper reached the game\u2019s own title screen naming \u201cCurse of the Lich King\u201d, the title this catalogue entry abbreviates.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -14033,7 +14013,10 @@
       "imagePath": "/artwork/cldonkeykong.webp",
       "identityEvidence": "Found by searching \"Donkey Kong game screenshot\" in Bing Images and taking result 3; the image was checked against the catalog title \"Donkey Kong\" before use. Source page: https://www.mobygames.com/game/574/donkey-kong/screenshots/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "b60afc8b6d5c41f9c1056109d9e5170b06062b6f7ad763b059065d19f1437837",
       "visualVerification": "verified 2026-11-27: Classic Donkey Kong arcade gameplay with the girder and barrel stage, matching the original arcade entry rather than Donkey Kong Country.",
       "methodsInvestigated": [],
@@ -15758,7 +15741,10 @@
       "imagePath": "/artwork/cleaglercraftshadow.webp",
       "identityEvidence": "Found by searching \"Eaglercraft Shadow game screenshot\" in Bing Images and taking result 1; the image was checked against the catalog title \"Eaglercraft Shadow\" before use. Source page: https://www.youtube.com/shorts/4wcz_nGSEyo",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "4e322d19f518e5161de654fda9af6e968e958063fe8cabc69d16b9b599675f74",
       "visualVerification": "verified 2026-11-27: Eaglercraft client welcome screen naming Eaglercraft and its version, matching this client entry.",
       "methodsInvestigated": [],
@@ -21063,27 +21049,6 @@
       "blocker": null
     },
     {
-      "id": "clfocus",
-      "title": "Focus",
-      "categories": [
-        "puzzle"
-      ],
-      "path": "/games/clfocus.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
-      "blocker": null
-    },
-    {
       "id": "clfolderdungeon",
       "title": "Folder Dungeon",
       "categories": [
@@ -24709,18 +24674,19 @@
         "puzzle"
       ],
       "path": "/games/clhighstakes.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clhighstakes.html",
+      "imagePath": "/artwork/clhighstakes.webp",
+      "identityEvidence": "The local build\u2019s own \u201cHIGH STAKES \u2014 NEW GAME\u201d title screen.",
+      "reuseEvidence": "Captured from this repository\u2019s own local game wrapper for use only as this title\u2019s thumbnail on this platform; no third-party asset is redistributed.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "cdf5b7d7b10aa334a08fe19f9390b4e16cc4f5ad17457b1f03429b90f2cbaf5e",
+      "visualVerification": "verified 2026-11-27: The local build\u2019s own \u201cHIGH STAKES \u2014 NEW GAME\u201d title screen.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -27740,7 +27706,10 @@
       "imagePath": "/artwork/clknockknock.webp",
       "identityEvidence": "Found by searching \"Knock Knock game screenshot\" in Bing Images and taking result 1; the image was checked against the catalog title \"Knock Knock\" before use. Source page: https://www.pushsquare.com/games/ps4/knock_knock",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "67207744ad97837e6a18917cc2c963a9330bcb9fbc5f6d78a199354338d3e4c8",
       "visualVerification": "verified 2026-11-27: Knock Knock gameplay showing its characters and the game's own site name, matching the horror game rather than a board game.",
       "methodsInvestigated": [],
@@ -29811,18 +29780,19 @@
         "adventure"
       ],
       "path": "/games/clmami.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/shayderrr/funkinmods@c404c9a174f21e5d142052224e371937397eff8a/mami/game.fnfhub.net/24391/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clmami.html",
+      "imagePath": "/artwork/clmami.webp",
+      "identityEvidence": "The mod\u2019s own title screen shows \u201cFriday Night Funkin\u2019 VS Mami\u201d, matching this entry.",
+      "reuseEvidence": "Captured from this repository\u2019s own local game wrapper for use only as this title\u2019s thumbnail on this platform; no third-party asset is redistributed.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "254e55a77c778a58e051406760336fbbd59dcbb9795dec8480f3926f356c950b",
+      "visualVerification": "verified 2026-11-27: The mod\u2019s own title screen shows \u201cFriday Night Funkin\u2019 VS Mami\u201d, matching this entry.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -37070,18 +37040,19 @@
         "puzzle"
       ],
       "path": "/games/clpint.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clpint.html",
+      "imagePath": "/artwork/clpint.webp",
+      "identityEvidence": "The local build\u2019s in-game main menu with PLAY, ABOUT and QUIT.",
+      "reuseEvidence": "Captured from this repository\u2019s own local game wrapper for use only as this title\u2019s thumbnail on this platform; no third-party asset is redistributed.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "828a2d48e143fedbf818a268622962f24e4abbdf14a45077a8194f3ed4ed57b1",
+      "visualVerification": "verified 2026-11-27: The local build\u2019s in-game main menu with PLAY, ABOUT and QUIT.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -43801,7 +43772,10 @@
       "imagePath": "/artwork/clrosegold.webp",
       "identityEvidence": "Found by searching \"Rose Gold game screenshot\" in Bing Images and taking result 2; the image was checked against the catalog title \"Rose Gold\" before use. Source page: https://www.youtube.com/watch?v=KplsiKweIhA",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "fb9ebd4797c700f4230f9f2a609fe66e2b5a4412e023e2e9396e98a3791bad4e",
       "visualVerification": "verified 2026-11-27: Pokemon Rose Gold title screen with the ROM hack's name and starter, matching this entry.",
       "methodsInvestigated": [],
@@ -44059,18 +44033,19 @@
         "arcade"
       ],
       "path": "/games/clADarkRoom.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": null,
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "attempted live distribution fetch (no usable response)"
-      ],
+      "status": "verified",
+      "method": "game-asset",
+      "sourceUrl": "https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/img/Logo1.jpg",
+      "imagePath": "/artwork/cladarkroom.webp",
+      "identityEvidence": "The A Dark Room wrapper identifies Doublespeak Games and links its source repository. Its logo matches the title visually.",
+      "reuseEvidence": "MPL-2.0; pinned repository license https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/LICENSE.md. License notice bundled at /artwork/licenses/cladarkroom-LICENSE.txt.",
+      "dimensions": {
+        "width": 576,
+        "height": 138
+      },
+      "sha256": "7b6f4e2a57570268a6d578764029c486485837b4c3efeda411f220f3cdbc6d88",
+      "visualVerification": "verified 2026-11-28: The cleared A Dark Room logo serves this entry through the case-insensitive cladarkroom alias; the card shows the same artwork and title.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -46637,18 +46612,19 @@
         "action"
       ],
       "path": "/games/clsd-thewar.html",
-      "status": "not-started",
-      "method": null,
-      "sourceUrl": "https://cdn.jsdelivr.net/gh/greeniYT/y@main/stick-duel-the-war/files.twoplayergames.org/files/games/o1/Stick_Duel_The_War/index.html",
-      "imagePath": null,
-      "identityEvidence": null,
-      "reuseEvidence": null,
-      "dimensions": null,
-      "sha256": null,
-      "visualVerification": "not reviewed",
-      "methodsInvestigated": [
-        "fetched cdn.jsdelivr.net page metadata"
-      ],
+      "status": "verified",
+      "method": "gameplay-screenshot",
+      "sourceUrl": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/clsd-thewar.html",
+      "imagePath": "/artwork/clsd-thewar.webp",
+      "identityEvidence": "The game\u2019s own \u201cSTICK DUEL THE WAR\u201d main menu.",
+      "reuseEvidence": "Captured from this repository\u2019s own local game wrapper for use only as this title\u2019s thumbnail on this platform; no third-party asset is redistributed.",
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
+      "sha256": "0df54fe0f73f0e0e95fb636f308cf50f7a22552ff6712462119d002807f763fa",
+      "visualVerification": "verified 2026-11-27: The game\u2019s own \u201cSTICK DUEL THE WAR\u201d main menu.",
+      "methodsInvestigated": [],
       "blocker": null
     },
     {
@@ -48202,7 +48178,10 @@
       "imagePath": "/artwork/clslimelabratory.webp",
       "identityEvidence": "Found by searching \"Slime Laboratory game screenshot\" in Bing Images and taking result 2; the image was checked against the catalog title \"Slime Laboratory\" before use. Source page: https://gamingkool.com/slime-laboratory/",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "f1e043bd1aa1f4d1dad6c129ea9ce722f614674b43e6a89405c0ded3672835d5",
       "visualVerification": "verified 2026-11-27: Slime Laboratory gameplay with the game's name in its own HUD and the green slime character.",
       "methodsInvestigated": [],
@@ -55505,7 +55484,10 @@
       "imagePath": "/artwork/cltag.webp",
       "identityEvidence": "Found by searching \"Tag game screenshot\" in Bing Images and taking result 1; the image was checked against the catalog title \"Tag\" before use. Source page: https://tag-game.en.softonic.com/chrome/extension",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "3281ebe36cc9ae30457a60346c968092ad3796345a6f1c59d5ef02b1aeb628cf",
       "visualVerification": "verified 2026-11-27: TAG title screen with its player-count menu, matching the arcade-style Tag game.",
       "methodsInvestigated": [],
@@ -60931,7 +60913,10 @@
       "imagePath": "/artwork/winterolympics.webp",
       "identityEvidence": "Found by searching \"Winter Olympics game screenshot\" in Bing Images and taking result 1; the image was checked against the catalog title \"Winter Olympics\" before use. Source page: https://gamesdb.launchbox-app.com/games/images/155966-winter-olympics",
       "reuseEvidence": "Artwork of this title obtained through an independent internet image search and shown only as its thumbnail on this platform; no license is claimed. Rights remain with the game's owner and the image is removed on request.",
-      "dimensions": null,
+      "dimensions": {
+        "width": 640,
+        "height": 360
+      },
       "sha256": "21e3b612912676980b1c9746c8b534e74b26573972b451a47191f3ebb8abdde9",
       "visualVerification": "verified 2026-11-27: Winter Olympics title screen with the event list, matching the classic game rather than ceremony photographs.",
       "methodsInvestigated": [],

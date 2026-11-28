@@ -53,6 +53,14 @@ const EXPLICIT_EXCLUSIONS = new Set([
   'clpolytrackbutnotflagged(1)',
 ]);
 
+// Owner-authorized Run 2 removals. Each was reproduced failing in two clean
+// browser sessions and is recorded in docs/NONFUNCTIONAL_GAME_REMOVALS.md.
+// Their rows and files must never return to the catalog.
+const CONFIRMED_NONFUNCTIONAL = new Set([
+  'clburritobison2', // embedded Google Gadgets build returns 404 Not Found
+  'clfocus',         // Ruffle: "cannot parse the requested file... not a valid SWF"
+]);
+
 const historical = execFileSync('git', ['show', `${HISTORICAL}:src/App.tsx`], {
   cwd: root,
   encoding: 'utf8',
@@ -136,7 +144,7 @@ const restored = [];
 const pathExceptions = [];
 const blocked = [];
 for (const entry of entries) {
-  if (EXCLUDE.has(entry.id) || EXPLICIT_EXCLUSIONS.has(entry.id)) continue;
+  if (EXCLUDE.has(entry.id) || EXPLICIT_EXCLUSIONS.has(entry.id) || CONFIRMED_NONFUNCTIONAL.has(entry.id)) continue;
   if (existingIds.has(entry.id) || restoredIds.has(entry.id)) continue;
   const file = localFile(entry.url);
   if (!file) {
@@ -170,7 +178,10 @@ if (pathExceptions.length > 0) {
   const current = readFileSync(exceptionsPath, 'utf8');
   const present = new Set(current.split('\n').map((line) => line.split('|')[0]));
   const additions = pathExceptions.filter(
-    (line) => !present.has(line.split('|')[0]) && !EXPLICIT_EXCLUSIONS.has(line.split('|')[0])
+    (line) =>
+      !present.has(line.split('|')[0]) &&
+      !EXPLICIT_EXCLUSIONS.has(line.split('|')[0]) &&
+      !CONFIRMED_NONFUNCTIONAL.has(line.split('|')[0])
   );
   if (additions.length > 0) {
     writeFileSync(exceptionsPath, current.replace(/\n*$/, '\n') + additions.join('\n') + '\n');

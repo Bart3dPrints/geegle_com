@@ -92,9 +92,9 @@ test('the committed changelog holds the real merged history', () => {
     assert.ok(!/prompt|codebuff|\bAI\b|supabase\.co|service_role/i.test(entry.summary), `PR ${entry.pr} summary is safe`);
   }
   const latest = entries[0];
-  assert.equal(latest.pr, 14);
-  assert.deepEqual(formatEastern(latest.mergedAt), { date: 'November 27, 2026', time: '4:38 PM EST' });
-  assert.ok(!entries.some((entry) => entry.pr === 15), 'an unmerged pull request is not listed');
+  assert.equal(latest.pr, 15);
+  assert.deepEqual(formatEastern(latest.mergedAt), { date: 'November 27, 2026', time: '6:29 PM EST' });
+  assert.ok(!entries.some((entry) => entry.pr === 16), 'the unmerged Run 2 pull request is not listed');
 });
 
 test('the Changelog offers both sort directions and no sorting explanation', () => {

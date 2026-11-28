@@ -34,6 +34,8 @@ import {
   saveLibraryNoticeDismissed,
   loadAppearanceSettings,
   saveAppearanceSettings,
+  loadNavigationShortcut,
+  saveNavigationShortcut,
   DEFAULT_APPEARANCE_SETTINGS,
   type AppearanceSettings,
 } from './lib/userData';
@@ -46,6 +48,17 @@ import { ProxyNotice } from './components/ProxyNotice';
 import { ProxyCard } from './components/ProxyCard';
 import { YouTubeApp } from './components/YouTubeApp';
 import { EverythingleApp } from './components/EverythingleApp';
+import { DevelopmentNotice } from './components/DevelopmentNotice';
+import {
+  announcementDismissed,
+  dismissAnnouncement,
+} from './lib/developmentNotice';
+import {
+  DEFAULT_SHORTCUT,
+  isEditableTarget,
+  shortcutMatches,
+  type NavigationShortcut,
+} from './lib/navigationShortcut';
 import { Settings, type SettingsTab } from './components/Settings';
 import { SearchLanding } from './components/SearchLanding';
 import { PROXY_SERVICES, proxyUrl } from './data/proxies';
@@ -201,6 +214,8 @@ export default function App() {
   const [serverDefaults, setServerDefaults] = useState<Record<string, number>>({});
   const [syncError, setSyncError] = useState<string | null>(null);
   const [landingAppearance, setLandingAppearance] = useState<{ owner: string; value: LandingAppearance | null } | null>(null);
+  const [shortcut, setShortcut] = useState<NavigationShortcut>(DEFAULT_SHORTCUT);
+  const [announcementOpen, setAnnouncementOpen] = useState(false);
 
   const [tab, setTab] = useState<Tab>('games');
   const [active, setActive] = useState<GameEntry | null>(null);
@@ -228,6 +243,8 @@ export default function App() {
     setSettingsLoaded(false);
     setAppearance(DEFAULT_APPEARANCE_SETTINGS);
     setTabIdentity(DEFAULT_TAB_IDENTITY);
+    setShortcut(DEFAULT_SHORTCUT);
+    setAnnouncementOpen(!announcementDismissed(userId));
     setTheme('system');
     setSyncError(null);
     if (auth.loading) return;
@@ -240,7 +257,8 @@ export default function App() {
       loadRecentVisible(userId),
       loadLibraryNoticeDismissed(userId),
       loadAppearanceSettings(userId),
-    ]).then(([f, r, servers, savedTheme, recentVisible, notice, savedAppearance]) => {
+      loadNavigationShortcut(userId),
+    ]).then(([f, r, servers, savedTheme, recentVisible, notice, savedAppearance, savedShortcut]) => {
       if (cancelled) return;
       setFavorites(f.data ?? []);
       setRecent(r.data ?? []);
@@ -249,10 +267,11 @@ export default function App() {
       setNoticeDismissed(notice.data === true);
       const saved = savedAppearance.data ?? DEFAULT_APPEARANCE_SETTINGS;
       setAppearance(saved);
+      if (savedShortcut.data) setShortcut(savedShortcut.data);
       const t = saved.mode !== 'system' ? saved.mode : savedTheme.data;
       setTheme(t === 'dark' || t === 'light' ? t : 'system');
       setSettingsLoaded(true);
-      setSyncError(f.error ?? r.error ?? servers.error ?? savedTheme.error ?? recentVisible.error ?? notice.error ?? savedAppearance.error ?? null);
+      setSyncError(f.error ?? r.error ?? servers.error ?? savedTheme.error ?? recentVisible.error ?? notice.error ?? savedAppearance.error ?? savedShortcut.error ?? null);
     });
     return () => { cancelled = true; };
   }, [auth.loading, userId, setTheme]);
@@ -381,6 +400,31 @@ export default function App() {
       document.removeEventListener('keydown', onKey);
     };
   }, [accountMenuOpen]);
+
+  // One ordinary navigation shortcut. It never fires while the visitor is
+  // typing or when a modifier is held, and it performs a normal page load.
+  useEffect(() => {
+    if (!shortcut.enabled) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.repeat || !shortcutMatches(event, shortcut)) return;
+      if (isEditableTarget(event.target)) return;
+      if (authOpen || settingsOpen) return;
+      event.preventDefault();
+      window.location.assign(shortcut.destination);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [authOpen, settingsOpen, shortcut]);
+
+  const handleSaveShortcut = async (value: NavigationShortcut) => {
+    const previous = shortcut;
+    setShortcut(value);
+    const result = await saveNavigationShortcut(value, userId);
+    if (!result.ok) {
+      setShortcut(previous);
+      throw new Error(result.error ?? 'Could not save the shortcut.');
+    }
+  };
 
   const closeGame = useCallback(async () => {
     if (transitionRef.current) return false;
@@ -984,6 +1028,13 @@ export default function App() {
             onShowRecentChange={handleShowRecent}
             tabIdentity={tabIdentity}
             onSaveTabIdentity={handleSaveTabIdentity}
+            shortcut={shortcut}
+            onSaveShortcut={handleSaveShortcut}
+            announcementDismissed={!announcementOpen}
+            onShowAnnouncement={() => {
+              setAnnouncementOpen(true);
+              try { localStorage.removeItem(`geegle-announcement-dismissed:${userId ?? 'guest'}`); } catch { /* storage disabled */ }
+            }}
             appearance={{ ...appearance, mode: theme }}
             onPreviewAppearance={(value) => {
               setAppearance(value);
@@ -1092,6 +1143,16 @@ export default function App() {
       )}
 
       <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
+        <AnimatePresence>
+          {announcementOpen && !showLanding && (
+            <DevelopmentNotice
+              onDismiss={() => {
+                setAnnouncementOpen(false);
+                dismissAnnouncement(userId);
+              }}
+            />
+          )}
+        </AnimatePresence>
         {tab === 'games' && (
           <Library
             games={filteredGames}
