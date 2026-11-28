@@ -52762,26 +52762,6 @@
       "width": 640
     },
     {
-      "bytes": 66892,
-      "colors": 84597,
-      "edges": 30.79,
-      "format": "WEBP",
-      "height": 336,
-      "id": "clyohohoio",
-      "phash": "37291b2f0d4d4d1e",
-      "problems": [],
-      "recordedTitle": "Yohoho.io",
-      "sha256": "5182a8345c14a7604c84ebf77e26251b182401b4f02f1f2f59b9d2683adb7b88",
-      "source": "https://cdn.jsdelivr.net/gh/deformed-steve/yohohoio@main/img/banner1200x630.jpg",
-      "status": "ok",
-      "stddev": 64.13,
-      "tier": "assets",
-      "title": "Yohoho.io",
-      "type": "official-og",
-      "url": "/artwork/clyohohoio.webp",
-      "width": 640
-    },
-    {
       "bytes": 38726,
       "colors": 83577,
       "edges": 22.03,
@@ -53239,26 +53219,6 @@
       "title": "Zuma Shooter",
       "type": "gameplay-screenshot",
       "url": "/artwork/clzumashooter.webp",
-      "width": 640
-    },
-    {
-      "bytes": 3344,
-      "colors": 674,
-      "edges": 4.67,
-      "format": "WEBP",
-      "height": 360,
-      "id": "code-editor",
-      "phash": "0000000000000000",
-      "problems": [],
-      "recordedTitle": "Code Editor",
-      "sha256": "14140044e2e71e97c31b077765a6e1c4e3cd7c9734b1e1ac9523ef493dc3a077",
-      "source": "https://github.com/Bart3dPrints/geegle_com/blob/main/public/games/Code%20Editor%20(1).html",
-      "status": "ok",
-      "stddev": 16.24,
-      "tier": "assets",
-      "title": "Code Editor",
-      "type": "gameplay-screenshot",
-      "url": "/artwork/code-editor.webp",
       "width": 640
     },
     {
@@ -53892,8 +53852,8 @@
     "broken": 0,
     "exactDuplicateGroups": 9,
     "nearDuplicateGroups": 21,
-    "ok": 2646,
-    "records": 2690,
+    "ok": 2643,
+    "records": 2687,
     "review": 44
   }
 }
