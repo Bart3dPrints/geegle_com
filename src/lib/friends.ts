@@ -194,10 +194,28 @@ const SOCIAL_ERRORS: Record<string, string> = {
   reason_required: 'Describe the problem first.',
 };
 
-function failure(error: { message?: string } | null): string {
+/**
+ * A deployment whose database has not been migrated says so plainly, instead
+ * of surfacing a PostgREST schema-cache message or looking like empty data.
+ */
+export function socialFailure(error: { message?: string; code?: string } | null): string {
   const raw = (error?.message ?? '').trim();
+  const code = error?.code ?? '';
+  if (
+    code === 'PGRST202' ||
+    code === 'PGRST205' ||
+    /schema cache/i.test(raw) ||
+    /Could not find the (table|function)/i.test(raw)
+  ) {
+    return 'Friends are not available on this deployment yet. Try again later.';
+  }
+  if (code === '42501' || /permission denied/i.test(raw)) {
+    return 'You do not have permission to do that.';
+  }
   return SOCIAL_ERRORS[raw] ?? (raw || 'Something went wrong.');
 }
+
+const failure = socialFailure;
 
 function unavailable<T>(): OpResult<T> {
   return { ok: false, error: 'Friends need an account on this deployment.' };

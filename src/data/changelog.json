@@ -2,6 +2,11 @@
   "source": "github:Bart3dPrints/geegle_com",
   "entries": [
     {
+      "pr": 18,
+      "mergedAt": "2026-11-28T05:22:41Z",
+      "summary": "Friends: add people by username, accept requests, block, report, and see who is online beside a live visitor count."
+    },
+    {
       "pr": 17,
       "mergedAt": "2026-11-28T03:18:59Z",
       "summary": "Time & Date settings add a configurable clock and date to the library header, and the site has a fresh icon."

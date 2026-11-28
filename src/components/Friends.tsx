@@ -90,6 +90,8 @@ export function Friends({
   const [searching, setSearching] = useState(false);
   const [busy, setBusy] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  // A failed request must never be presented as an empty friend list.
+  const [loadFailed, setLoadFailed] = useState(false);
   const [onlineFriends, setOnlineFriends] = useState<Set<string>>(new Set());
   const mounted = useRef(true);
 
@@ -103,12 +105,18 @@ export function Friends({
   const refresh = useCallback(async () => {
     if (!userId) {
       setSocial(EMPTY);
+      setLoadFailed(false);
       return;
     }
     const result = await loadSocial();
     if (!mounted.current) return;
-    if (result.ok && result.data) setSocial(result.data);
-    else if (!result.ok) setError(result.error ?? null);
+    if (result.ok && result.data) {
+      setSocial(result.data);
+      setLoadFailed(false);
+    } else if (!result.ok) {
+      setError(result.error ?? 'Friends could not be loaded.');
+      setLoadFailed(true);
+    }
   }, [userId]);
 
   useEffect(() => {
@@ -197,6 +205,22 @@ export function Friends({
           </p>
           <button className="btn-primary" onClick={onRequestSignIn}>
             Sign in
+          </button>
+        </div>
+      </section>
+    );
+  }
+
+  if (loadFailed) {
+    return (
+      <section aria-label="Friends" className="mx-auto w-full max-w-md">
+        <div className="card p-6 text-center" role="alert" data-friends-failed>
+          <p className="mb-1 text-sm font-medium">Friends could not be loaded</p>
+          <p className="mb-3 text-xs text-neutral-500 dark:text-neutral-400">
+            {error ?? 'The service did not answer. Your friends were not changed.'}
+          </p>
+          <button className="btn-primary" onClick={() => void refresh()}>
+            Retry
           </button>
         </div>
       </section>

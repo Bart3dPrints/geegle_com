@@ -50,6 +50,7 @@ import { ProxyNotice } from './components/ProxyNotice';
 import { ProxyCard } from './components/ProxyCard';
 import { YouTubeApp } from './components/YouTubeApp';
 import { Friends } from './components/Friends';
+import { Chat } from './components/Chat';
 import { VisitorCounter } from './components/VisitorCounter';
 import { useSocialPresence } from './hooks/useSocialPresence';
 import { DevelopmentNotice } from './components/DevelopmentNotice';
@@ -136,9 +137,9 @@ const SEARCHABLE = [...new Map([...legacyCatalog, ...APPS_GRID].map((entry) => [
 const SEARCH_INDEX = buildSearchIndex(SEARCHABLE);
 const APP_SEARCH_INDEX = buildSearchIndex(APPS_GRID);
 
-type Tab = 'games' | 'apps' | 'proxies' | 'friends';
+type Tab = 'games' | 'apps' | 'proxies' | 'friends' | 'chat';
 
-const TABS: Tab[] = ['games', 'apps', 'proxies', 'friends'];
+const TABS: Tab[] = ['games', 'apps', 'proxies', 'friends', 'chat'];
 
 function useTheme() {
   const [theme, setTheme] = useState<ThemePreference>(() => {
@@ -1196,6 +1197,17 @@ export default function App() {
             onHiddenStatusChange={(hidden) => {
               setSocialHidden(hidden);
               void saveSocialStatusVisible(!hidden, userId);
+            }}
+          />
+        )}
+
+        {tab === 'chat' && (
+          <Chat
+            userId={userId}
+            onRequestSignIn={() => {
+              authFromReminderRef.current = false;
+              setAuthOpen(true);
+              setAuthMode('login');
             }}
           />
         )}

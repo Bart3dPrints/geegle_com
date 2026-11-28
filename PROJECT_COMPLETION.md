@@ -1188,5 +1188,37 @@ in `docs/RUN3_VERIFICATION.md`.
 | Blocking and reporting | VERIFIED (isolated Supabase) | `geegle_block_user`/`geegle_unblock_user`/`geegle_report_user`; writes are function-only |
 | Live online status for friends | VERIFIED (local Realtime) | `src/hooks/useSocialPresence.ts`, opaque per-account keys, hide option |
 | Live visitor counter | VERIFIED (local Realtime) | `src/components/VisitorCounter.tsx`, distinct keys, includes the viewer, never invents a number |
-| Database migration 0007 | IMPLEMENTED BUT UNVERIFIED IN PRODUCTION | `supabase/migrations/0007_geegle_social.sql`; applied locally only, NOT applied to `oizdbkxnzwatytxcrvoo` |
+| Database migration 0007 | APPLIED AND VERIFIED IN PRODUCTION (Run 4) | `supabase/migrations/0007_geegle_social.sql`; applied to `oizdbkxnzwatytxcrvoo` on 2026-11-28 during Run 4, which fixed the live Friends error |
 | Run 4 chat compatibility | DOCUMENTED | Friendship/block contract in `docs/RUN3_VERIFICATION.md` §11 |
+
+
+## Run 4 (2026-11-28): production Friends repair and chat
+
+Branch `feature/geegle-run4-chat` from `origin/main` `88be3ec`. Full evidence is
+in `docs/RUN4_VERIFICATION.md`.
+
+| Requirement / task | Status | Files / evidence |
+| --- | --- | --- |
+| Production Friends error | FIXED AND VERIFIED | `0007` applied to `oizdbkxnzwatytxcrvoo`; live site signs in and renders Friends (disposable account `qa4live0qbdop`), no error card, no console errors |
+| Honest failure copy instead of raw DB errors | VERIFIED (local) | `src/lib/friends.ts`, `src/components/Friends.tsx`: schema-cache errors become a short message with Retry; a failed read never renders an empty list |
+| Chat tab, last in the nav order | VERIFIED (local) | `src/App.tsx`; header height and one-line tab row unchanged at six viewports |
+| Public room, DMs and groups | VERIFIED (isolated Supabase) | `geegle_conversations`, `geegle_conversation_members`; DMs require an accepted friendship |
+| Unread counts, timestamps, pagination | VERIFIED (isolated Supabase + browser) | Read state in `geegle_conversation_members`, keyset pagination in `geegle_chat_messages`, day separators in the UI |
+| Live delivery | VERIFIED (local Realtime + browser) | One `geegle:chat:<id>` channel; RLS decides delivery |
+| Three-dot actions (edit, unsend, delete for me, forward, report) | VERIFIED (isolated Supabase) | Function-only writes; author-only edit/unsend; personal hidden rows; unsent text destroyed |
+| Forwarding matrix | VERIFIED (isolated Supabase) | Public→DM (friend), Group→DM (friend and current member), DM→prohibited, never into public/groups, root-stable references |
+| Forwarded preview and jump to original | VERIFIED (browser) | Forwarded label, original author/time, "no longer available" state, click switches conversation and highlights |
+| DM background customisation | VERIFIED (isolated Supabase + browser) | Default, presets, custom hex, validated/resized upload, overlay, reset; per conversation and per account, private bucket, signed links |
+| Migration 0008 | APPLIED AND VERIFIED IN PRODUCTION | Six tables, 18 reviewed function bodies compared after apply, RLS on each, SELECT-only grants, publication and private bucket confirmed |
+| Rollback prepared | READY | `supabase/rollback/0007_geegle_social_rollback.sql`, `supabase/rollback/0008_geegle_chat_rollback.sql` |
+| Tests | VERIFIED | `tests/chat.test.mjs`; `bun test tests` 178 pass / 0 fail |
+| End-to-end checks | VERIFIED | `scripts/qa/run4-chat-check.mjs` 84/84 (four accounts, API-level abuse), `scripts/qa/run4-browser-check.mjs` 38/38 (three accounts, six viewports) |
+| User-facing changelog | DONE | Written notes for PR 18 and PR 19 in `scripts/changelog-notes.json` |
+
+### Still open after Run 4
+
+- The chat interface ships when this branch is merged; Render deploys `main`.
+  Merging needs owner approval, and Run 5 has not been started.
+- No automated upload of a real photograph through the file picker; solid
+  presets and persistence were verified in the browser.
+- No moderator tools: unsend is author-only and reports are owner-read only.
