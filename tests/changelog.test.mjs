@@ -91,10 +91,15 @@ test('the committed changelog holds the real merged history', () => {
     assert.ok(entry.summary.length > 10 && entry.summary.length <= 200, `PR ${entry.pr} summary is short`);
     assert.ok(!/prompt|codebuff|\bAI\b|supabase\.co|service_role/i.test(entry.summary), `PR ${entry.pr} summary is safe`);
   }
+  // PR 16 is merged, so it is the newest release and carries a written note
+  // rather than its development pull-request title.
   const latest = entries[0];
-  assert.equal(latest.pr, 15);
-  assert.deepEqual(formatEastern(latest.mergedAt), { date: 'November 27, 2026', time: '6:29 PM EST' });
-  assert.ok(!entries.some((entry) => entry.pr === 16), 'the unmerged Run 2 pull request is not listed');
+  assert.equal(latest.pr, 16);
+  assert.deepEqual(formatEastern(latest.mergedAt), { date: 'November 27, 2026', time: '8:25 PM EST' });
+  assert.ok(!/^Run 2:/i.test(latest.summary), 'no raw development PR title is shown');
+  const previous = entries[1];
+  assert.equal(previous.pr, 15);
+  assert.deepEqual(formatEastern(previous.mergedAt), { date: 'November 27, 2026', time: '6:29 PM EST' });
 });
 
 test('the Changelog offers both sort directions and no sorting explanation', () => {

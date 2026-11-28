@@ -29,6 +29,8 @@ test('the default personalization is the current neutral appearance', () => {
     wallpaper: null,
     clock: false,
     date: false,
+    hour12: true,
+    timeZone: 'America/New_York',
   });
 });
 
@@ -51,6 +53,8 @@ test('valid values round-trip and unknown keys are dropped', () => {
     fontColor: '#222222',
     clock: true,
     date: false,
+    hour12: false,
+    timeZone: 'Asia/Tokyo',
     unexpected: 'x',
   });
   assert.equal(parsed.accent, '#15803d');
@@ -58,7 +62,12 @@ test('valid values round-trip and unknown keys are dropped', () => {
   assert.equal(parsed.fontColor, '#222222');
   assert.equal(parsed.clock, true);
   assert.equal(parsed.date, false);
-  assert.deepEqual(Object.keys(parsed).sort(), ['accent', 'clock', 'date', 'font', 'fontColor', 'wallpaper']);
+  assert.equal(parsed.hour12, false);
+  assert.equal(parsed.timeZone, 'Asia/Tokyo');
+  assert.deepEqual(
+    Object.keys(parsed).sort(),
+    ['accent', 'clock', 'date', 'font', 'fontColor', 'hour12', 'timeZone', 'wallpaper'],
+  );
 });
 
 test('accent text switches to stay readable', () => {
@@ -126,10 +135,18 @@ test('the Settings window keeps one external size and scrolls internally', () =>
   assert.ok(!/max-h-\[calc\(100vh-2rem\)\][^"]*overflow-y-auto p-6/.test(settings), 'no content-sized window');
 });
 
-test('Settings has Theme, Appearance, Preferences, Tab appearance and a final Changelog', () => {
+test('Settings has Theme, Appearance, Preferences, Time & Date, Tab appearance and a final Changelog', () => {
   const tabs = settings.slice(settings.indexOf('const TABS = ['), settings.indexOf('] as const'));
   const labels = [...tabs.matchAll(/label: '([^']+)'/g)].map((match) => match[1]);
-  assert.deepEqual(labels, ['Theme', 'Appearance', 'Preferences', 'Tab appearance', 'Changelog']);
+  assert.deepEqual(labels, [
+    'Theme',
+    'Appearance',
+    'Preferences',
+    'Time & Date',
+    'Tab appearance',
+    'Changelog',
+  ]);
+  assert.equal(labels.at(-1), 'Changelog', 'Changelog stays the final section');
 });
 
 test('personalization groups are individually resettable and resettable together', () => {

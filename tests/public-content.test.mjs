@@ -95,15 +95,37 @@ test('the library footer is exactly the requested sentence', () => {
   assert.equal(visible, '{FOOTER_TEXT}');
 });
 
-test('the favicon is an independent Geegle mark', () => {
-  const svg = readFileSync('public/favicon.svg', 'utf8');
-  // A neutral rounded tile with a lens mark; never Google's multicolour G.
-  assert.match(svg, /<rect/);
-  assert.match(svg, /<circle/);
-  assert.ok(!/4285f4|34a853|fbbc05|ea4335/i.test(svg), 'no Google brand colours');
+test('the site ships the owner-supplied favicon in every required size', () => {
+  // The owner supplied this artwork and it is the site's official icon.
+  const png = readFileSync('public/favicon.png');
+  assert.deepEqual([...png.subarray(0, 8)], [0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a], 'favicon.png is a PNG');
+  assert.equal(png.readUInt32BE(16), 512);
+  assert.equal(png.readUInt32BE(20), 512);
+
+  const touch = readFileSync('public/apple-touch-icon.png');
+  assert.equal(touch.readUInt32BE(16), 180);
+  assert.equal(touch.readUInt32BE(20), 180);
+
+  const ico = readFileSync('public/favicon.ico');
+  assert.equal(ico.readUInt16LE(0), 0, 'favicon.ico has the ICO header');
+  assert.equal(ico.readUInt16LE(2), 1, 'favicon.ico is an icon file');
+
   const html = readFileSync('index.html', 'utf8');
-  assert.match(html, /rel="icon" type="image\/svg\+xml" href="\/favicon.svg"/);
-  assert.match(html, /rel="apple-touch-icon"/);
+  assert.match(html, /rel="icon" type="image\/png" sizes="32x32" href="\/favicon-32.png"/);
+  assert.match(html, /rel="icon" type="image\/png" sizes="512x512" href="\/favicon.png"/);
+  assert.match(html, /rel="shortcut icon" href="\/favicon.ico"/);
+  assert.match(html, /rel="apple-touch-icon" sizes="180x180" href="\/apple-touch-icon.png"/);
+  assert.ok(!/favicon\.svg/.test(html), 'the removed SVG mark is not still referenced');
+
+  // The icon belongs to the browser tab only; no second logo sits by the wordmark.
+  const app = readFileSync('src/App.tsx', 'utf8');
+  assert.ok(!/<img[^>]*favicon/i.test(app), 'no extra logo beside the wordmark');
+
+  // The owner deleted public/favicon.svg, so nothing may still point at it.
+  const sources = walk('src', ['.ts', '.tsx']);
+  const stale = sources.filter((file) => readFileSync(file, 'utf8').includes('favicon.svg'));
+  assert.deepEqual(stale, [], 'no source references the removed favicon.svg');
+  assert.ok(existsSync('public/favicon-32.png'));
 });
 
 test('no development or agent wording appears in authored interface text', () => {

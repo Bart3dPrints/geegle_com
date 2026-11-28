@@ -1,6 +1,6 @@
 // Optional, transparent tab identity: a user-owned page title and icon.
 //
-// The defaults are Geegle's own title and circular favicon. Nothing here can
+// The defaults are Geegle's own title and the site's favicon. Nothing here can
 // imitate another service: the title must contain text, and the icon has to be
 // a small raster image the user picked. Settings are stored locally while
 // signed out and synced per account when signed in.
@@ -15,7 +15,9 @@ export const TAB_TITLE_MAX = 60;
 export const TAB_ICON_MAX_BYTES = 200 * 1024;
 export const TAB_IDENTITY_TITLE_KEY = 'geegle-tab-title';
 export const TAB_IDENTITY_ICON_KEY = 'geegle-tab-icon';
-const DEFAULT_ICON = '/favicon.svg';
+// The owner-supplied site icon, shipped in public/. Never a removed asset.
+const DEFAULT_ICON = '/favicon-32.png';
+const DEFAULT_ICON_TYPE = 'image/png';
 const ICON_TYPES = ['image/png', 'image/jpeg', 'image/webp'];
 
 export function validateTabIdentity(value: TabIdentity): string | null {
@@ -41,8 +43,9 @@ export function applyTabIdentity(value: TabIdentity): void {
     link.rel = 'icon';
     document.head.appendChild(link);
   }
-  link.type = value.icon ? value.icon.slice(5, value.icon.indexOf(';')) : 'image/svg+xml';
+  link.type = value.icon ? value.icon.slice(5, value.icon.indexOf(';')) : DEFAULT_ICON_TYPE;
   link.href = value.icon ?? DEFAULT_ICON;
+  link.removeAttribute('sizes');
 }
 
 export function readTabIdentityLocal(): TabIdentity {

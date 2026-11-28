@@ -180,3 +180,146 @@ and asserts no Geegle-origin page errors.
   covered by local tests and earlier local Chromium verification, not by a new
   hosted run in this pass.
 - No merge was performed; the pull request is for owner review.
+
+---
+
+# Final pass (2026-11-28, after PR #16 merged)
+
+Branch: `feature/geegle-run2-final`, from `origin/main` at `7df980a`
+(PR #16 merged 2026-11-28T01:25:41Z; the only later commit deleted
+`public/favicon.svg`). No further pull requests were merged after #16, and none
+is open. Environment: local Vite dev server at `http://127.0.0.1:5175` and a
+local production build, macOS, headless Chromium via Playwright.
+
+## What changed in this pass
+
+### Everythingle: the whole collection, not one puzzle
+
+The previous pass substituted one five-letter puzzle for the collection. That
+was wrong and has been removed.
+
+- `src/data/everythingle.ts` records all **50** games from the provider's own
+  `/about` inventory, each with its slug, category and description.
+- `src/components/EverythingleApp.tsx` is now a collection hub: 50 tiles, a
+  search field and seven category filters. Selecting a game opens it directly —
+  no launcher screen, no direct-versus-proxy choice.
+- Five word formats are Geegle's own code and word list and are labelled
+  **Geegle**: Five Letter, Double Board, Quad Board, Word 500 and Middle Word
+  (`src/components/everythingle/WordBoards.tsx`, `MiddleWord.tsx`,
+  `src/lib/wordGames.ts`).
+- The other 45 load the provider's official page, unmodified, in the player,
+  labelled `everythingle.com`.
+- The reverse-proxy option was investigated first and rejected on the provider's
+  terms, which forbid copying or redistributing its games. Full reasoning,
+  the 50-row implementation matrix and the limitations are in
+  `docs/EVERYTHINGLE_VERIFICATION.md`.
+
+### Time & Date settings
+
+- New Settings tab **Time & Date**, placed after Preferences so Changelog stays
+  last. The window size and header height are unchanged.
+- Live preview clock, independent **Show time** and **Show date** toggles,
+  **12-hour**/**24-hour** format, and an IANA time-zone picker with
+  **Automatic (browser)** detection.
+- Default zone is `America/New_York`, applied through `Intl` so daylight saving
+  switches by itself; there is no fixed EST offset anywhere. No GPS or Google
+  location service is used.
+- The library header clock now uses the same settings. Preferences persist
+  locally for guests and sync inside the existing `settings.appearance` record
+  for signed-in accounts, so no schema change was needed.
+
+### Favicon
+
+- The owner supplied the site icon; it is now the official favicon in every
+  required size (`public/favicon.png`, `favicon-32.png`, `favicon.ico`,
+  `apple-touch-icon.png`) and is linked from `index.html`.
+- Two real defects were found and fixed while wiring it up:
+  1. `src/lib/tabIdentity.ts` rewrote the tab icon to `/favicon.svg` on **every**
+     page load, and that file had just been deleted by the owner. Every visitor
+     therefore received a broken tab icon regardless of `index.html`. It now
+     points at the shipped PNG.
+  2. `index.html` still linked the deleted SVG.
+- No second logo was added beside the wordmark.
+
+## Verification actually run
+
+| Command | Result |
+| --- | --- |
+| `npm run typecheck` | 0 errors |
+| `npm run lint` | 0 errors, 0 warnings |
+| `npm run build` | exit 0 (changelog regenerated, then Vite build) |
+| `bun test tests` | 182 tests, 0 failures (26 files) |
+| `node scripts/map-artwork.mjs --check` | exit 0, 2,690 records (4 licensed, 2,686 captured) |
+| `python3 scripts/artwork/audit-artwork.py` | 2,690 records, 0 broken, 0 missing files |
+| `python3 scripts/artwork/report.py` | 2,684 verified, 99.1% coverage |
+| `node scripts/qa/run2-final-check.mjs` | 30/30 browser checks |
+| `node scripts/qa/run2-interface-check.mjs` | updated favicon assertion (see note) |
+
+New or updated tests:
+
+- `tests/everythingle.test.mjs` — 50 unique slugs, one category per game, official
+  URL shape, exactly five local implementations, guess validation, multi-board
+  win/loss, counts totals, Middle Word bounds, and a source assertion that the
+  app has no proxy path.
+- `tests/time-settings.test.mjs` — documented defaults, strict parsing, automatic
+  detection, EST/EDT behaviour at fixed instants, 12/24-hour output, date
+  rollover by zone.
+- `tests/public-content.test.mjs` — the supplied icon exists at every size, is
+  linked correctly, and no source still references the deleted `favicon.svg`.
+- `tests/personalization.test.mjs` — defaults and Settings tab order now include
+  Time & Date.
+- `tests/changelog.test.mjs` — PR 16 is the newest entry and carries a written
+  user-facing note, not its development title.
+
+Browser checks (`run2-final-check.mjs`, 30/30) confirmed: all four icon files
+served with the right content types, the icon link in the live DOM, no logo
+beside the wordmark, the Settings tab order, a live preview clock, 12/24-hour
+output, automatic and manual zone selection, the header clock, 50 Everythingle
+tiles with exactly five Geegle labels, a scored guess in Five Letter, Word 500
+totals, Middle Word bounds, Chess loading and rendering from everythingle.com,
+one Krillion and one Krillion (Backup) in Games and both in Apps, the Xylora
+card with its unavailable reason, and no Geegle-origin page errors.
+
+Viewport checks at 1366×768 and 390×844: no horizontal overflow in the library
+or the Everythingle hub, 50 tiles reachable at both sizes.
+
+## Counts
+
+- Catalog rows: **2,708** (unchanged; no entries were added or removed).
+- Library cards in Games: 2,708 (the two Krillion titles come from the catalogue
+  as `clkrillion` and `clkrillion-backup`, exactly once each).
+- Artwork records: 2,690; verified artwork: 2,684 (99.1%); without artwork: 24.
+- `cladarkroom` is stored as `public/artwork/cladarkroom.webp` and referenced as
+  `/artwork/cladarkroom.webp`, so the match is exact on Linux too (the
+  `clADarkRoom` alias is a separate duplicate record from the historical
+  catalogue and is reported, not deleted).
+
+## A note on one weakened assertion
+
+`tests/public-content.test.mjs` previously asserted that the favicon was an
+independent mark with no Google brand colours. The owner deleted that mark and
+supplied this artwork as the official site icon, so the assertion was rewritten
+to check the supplied file instead. That is a deliberate change of requirement,
+not a test relaxed to hide a defect. The artwork is the well-known multicolour
+“G”; if the site must avoid that trademark, replacing `public/favicon*.png`
+restores the previous position without any code change.
+
+## Limitations
+
+- REA remains unavailable (`rea doctor` reports `healthy: false`, no engines or
+  MCP tools). No claim here depends on REA; it was not retried, per the owner's
+  instruction.
+- The 45 provider-hosted Everythingle games were verified as loading and
+  rendering their official pages, not played to completion.
+- No hosted production run was performed. All browser evidence is local
+  Chromium against the dev server and the local build.
+- The Supabase production project was not touched; no account or cloud-save
+  testing was repeated in this pass, and the Time & Date preferences ride the
+  existing appearance record that was already covered.
+- Nothing was merged. The branch is pushed for owner review.
+- Searching inside the Games tab uses the shared library index, which
+  deliberately also returns Apps (the search box says “games, apps and
+  proxies”). A search for “krillion” therefore lists the official Krillion app
+  as well as the two Krillion games; the unfiltered Games grid shows exactly
+  one Krillion and one Krillion (Backup). This behaviour predates this pass and
+  was left alone rather than narrowing the documented search scope.
