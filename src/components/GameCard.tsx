@@ -21,14 +21,14 @@ export function GameCard({
   return (
     <div
       data-card=""
-      className="card group relative overflow-hidden transition-[transform,border-color,box-shadow,background-color] duration-150 ease-out hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-[0_1px_2px_rgba(0,0,0,0.16),0_6px_14px_-6px_rgba(0,0,0,0.28)] dark:hover:border-neutral-600"
+      className="card group relative overflow-hidden transition-[transform,border-color,box-shadow,background-color] duration-150 ease-out hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-[0_1px_2px_rgba(0,0,0,0.16),0_6px_14px_-6px_rgba(0,0,0,0.28)]"
     >
       <button
         className="block w-full text-left"
         onClick={onLaunch}
         aria-label={`Play ${game.title}`}
       >
-        <div className="flex aspect-video items-center justify-center overflow-hidden bg-neutral-200 dark:bg-neutral-800">
+        <div className="flex aspect-video items-center justify-center overflow-hidden bg-neutral-200">
           <GameArt game={game} className="h-full w-full" />
         </div>
         <div className="p-3">
@@ -40,7 +40,7 @@ export function GameCard({
           type="button"
           whileTap={{ scale: 0.86 }}
           transition={{ duration: 0.12, ease: 'easeOut' }}
-          className="absolute right-2 top-2 rounded-md border border-neutral-200 bg-white/95 p-1.5 dark:border-neutral-700 dark:bg-neutral-900/95"
+          className="absolute right-2 top-2 rounded-md border border-neutral-200 bg-white/95 p-1.5 dark:border-[var(--geegle-border)]"
           onClick={(e) => {
             e.stopPropagation();
             onToggleFavorite();
@@ -56,8 +56,8 @@ export function GameCard({
             size={16}
             className={
               isFavorite
-                ? 'fill-neutral-900 text-neutral-900 dark:fill-neutral-100 dark:text-neutral-100'
-                : 'text-neutral-400 dark:text-neutral-500'
+                ? 'fill-neutral-900 text-neutral-900'
+                : 'text-neutral-400'
             }
           />
         </motion.button>
@@ -70,7 +70,7 @@ export function EmptyState({ title, body }: { title: string; body: string }) {
   return (
     <div className="card flex flex-col items-center justify-center p-12 text-center">
       <h3 className="mb-1 text-base font-semibold">{title}</h3>
-      <p className="max-w-sm text-sm text-neutral-500 dark:text-neutral-400">{body}</p>
+      <p className="max-w-sm text-sm text-[var(--geegle-muted)]">{body}</p>
     </div>
   );
 }

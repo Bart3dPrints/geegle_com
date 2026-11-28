@@ -18,6 +18,7 @@ export interface ChatLastMessage {
   authorName: string;
   body: string | null;
   unsent: boolean;
+  forwarded: boolean;
   createdAt: string;
   mine: boolean;
 }
@@ -28,6 +29,8 @@ export interface ChatConversation {
   title: string;
   otherUserId: string | null;
   role: 'owner' | 'member';
+  /** Pinned by this account; public chat is always first by rule. */
+  pinned: boolean;
   memberCount: number;
   lastActivityAt: string;
   lastMessage: ChatLastMessage | null;
@@ -49,6 +52,8 @@ export interface ChatMessage {
   createdAt: string;
   editedAt: string | null;
   unsent: boolean;
+  /** Removed by a moderator; the text is gone for everyone. */
+  moderated: boolean;
   authorId: string | null;
   authorName: string;
   mine: boolean;
@@ -109,6 +114,7 @@ export function parseConversation(value: unknown): ChatConversation | null {
     title: text(value.title) || 'Conversation',
     otherUserId: nullableText(value.otherUserId),
     role: text(value.role) === 'owner' ? 'owner' : 'member',
+    pinned: value.pinned === true,
     memberCount: num(value.memberCount),
     lastActivityAt: text(value.lastActivityAt),
     lastMessage: last
@@ -117,6 +123,7 @@ export function parseConversation(value: unknown): ChatConversation | null {
           authorName: text(last.authorName) || 'Unknown',
           body: nullableText(last.body),
           unsent: last.unsent === true,
+          forwarded: last.forwarded === true,
           createdAt: text(last.createdAt),
           mine: last.mine === true,
         }
@@ -143,6 +150,7 @@ export function parseMessage(value: unknown): ChatMessage | null {
     createdAt: text(value.createdAt),
     editedAt: nullableText(value.editedAt),
     unsent: value.unsent === true,
+    moderated: value.moderated === true,
     authorId: nullableText(value.authorId),
     authorName: text(value.authorName) || 'Deleted account',
     mine: value.mine === true,
@@ -203,6 +211,13 @@ const CHAT_ERRORS: Record<string, string> = {
   invalid_image: 'That image could not be used.',
   invalid_background: 'That background is not supported.',
   reason_required: 'Describe the problem first.',
+  not_pinnable: 'The public room is always first and cannot be pinned.',
+  forward_not_editable: 'A forwarded message cannot be edited.',
+  muted: 'A moderator has paused your public chat. You can still use direct messages.',
+  not_moderator: 'That tool is only available to moderators.',
+  not_public: 'Only public messages can be removed.',
+  report_not_found: 'That report was already handled.',
+  duplicate: 'That request is already pending.',
 };
 
 /** A deployment whose database has not been migrated reports it plainly. */
@@ -536,4 +551,180 @@ export function relativeStamp(iso: string, now = Date.now()): string {
   if (seconds < 86_400) return `${Math.floor(seconds / 3600)}h`;
   if (seconds < 604_800) return `${Math.floor(seconds / 86_400)}d`;
   return new Date(iso).toLocaleDateString(undefined, { day: 'numeric', month: 'short' });
+}
+
+// --- unread summary -------------------------------------------------------
+//
+// The Chat tab badge is derived from the same conversation list the sidebar
+// shows, so it cannot drift from it. Public chat contributes a dot; private
+// and group conversations contribute a combined count capped at 99+.
+
+export interface ChatUnreadSummary {
+  publicUnread: number;
+  privateUnread: number;
+}
+
+const EMPTY_UNREAD: ChatUnreadSummary = { publicUnread: 0, privateUnread: 0 };
+
+let unreadSummary: ChatUnreadSummary = EMPTY_UNREAD;
+const unreadListeners = new Set<() => void>();
+
+export function summarizeUnread(conversations: ChatConversation[]): ChatUnreadSummary {
+  let publicUnread = 0;
+  let privateUnread = 0;
+  for (const conversation of conversations) {
+    const unread = Math.max(0, conversation.unread);
+    if (conversation.kind === 'public') publicUnread += unread;
+    else privateUnread += unread;
+  }
+  return { publicUnread, privateUnread };
+}
+
+export function setUnreadSummary(next: ChatUnreadSummary): void {
+  if (next.publicUnread === unreadSummary.publicUnread && next.privateUnread === unreadSummary.privateUnread) {
+    return;
+  }
+  unreadSummary = next;
+  for (const listener of unreadListeners) listener();
+}
+
+export function getUnreadSummary(): ChatUnreadSummary {
+  return unreadSummary;
+}
+
+export function watchUnreadSummary(listener: () => void): () => void {
+  unreadListeners.add(listener);
+  return () => {
+    unreadListeners.delete(listener);
+  };
+}
+
+/** `99+` is the only cap; the stored number stays exact. */
+export function unreadBadge(count: number): string | null {
+  if (count <= 0) return null;
+  return count > 99 ? '99+' : String(count);
+}
+
+// --- pins -----------------------------------------------------------------
+
+export const setPinned = (conversationId: string, pinned: boolean) =>
+  call<{ pinned: boolean }>('geegle_chat_set_pinned', {
+    p_conversation: conversationId,
+    p_pinned: pinned,
+  });
+
+// --- moderation -----------------------------------------------------------
+//
+// Moderator status is never inferred from the client: the database answers
+// whether this account holds the grant, and every action re-checks it.
+
+export interface ModerationReport {
+  reportId: string;
+  reason: string;
+  createdAt: string;
+  reporter: string;
+  kind: ChatKind;
+  conversationTitle: string;
+  messageId: string;
+  authorName: string;
+  /** Only ever populated for public messages. */
+  authorId: string | null;
+  /** Only ever populated for public messages. */
+  body: string | null;
+  alreadyRemoved: boolean;
+}
+
+export interface ModerationAction {
+  id: string;
+  action: string;
+  moderator: string;
+  targetUser: string | null;
+  targetMessage: string | null;
+  reportId: string | null;
+  reason: string | null;
+  createdAt: string;
+}
+
+export async function amModerator(): Promise<boolean> {
+  if (!isSupabaseConfigured) return false;
+  const { data, error } = await supabase.rpc('geegle_is_moderator');
+  return !error && data === true;
+}
+
+export async function loadModerationQueue(): Promise<OpResult<ModerationReport[]>> {
+  const result = await call<unknown>('geegle_mod_queue');
+  if (!result.ok) return { ok: false, error: result.error };
+  const rows = Array.isArray(result.data) ? result.data : [];
+  return {
+    ok: true,
+    data: rows
+      .map((entry) => {
+        if (!isObject(entry)) return null;
+        const kind = text(entry.kind) as ChatKind;
+        if (!KINDS.includes(kind)) return null;
+        const reportId = text(entry.reportId);
+        const messageId = text(entry.messageId);
+        if (!reportId || !messageId) return null;
+        return {
+          reportId,
+          messageId,
+          kind,
+          reason: text(entry.reason),
+          createdAt: text(entry.createdAt),
+          reporter: text(entry.reporter) || 'Unknown',
+          conversationTitle: text(entry.conversationTitle) || 'Conversation',
+          authorName: text(entry.authorName) || 'Deleted account',
+          authorId: nullableText(entry.authorId),
+          body: nullableText(entry.body),
+          alreadyRemoved: entry.alreadyRemoved === true,
+        } as ModerationReport;
+      })
+      .filter((entry): entry is ModerationReport => Boolean(entry)),
+  };
+}
+
+export const removeMessageAsModerator = (messageId: string, reason: string, reportId: string | null) =>
+  call<{ status: string }>('geegle_mod_remove_message', {
+    p_message: messageId,
+    p_reason: reason,
+    p_report: reportId,
+  });
+
+export const muteUserAsModerator = (userId: string, minutes: number, reason: string) =>
+  call<{ until: string }>('geegle_mod_mute', {
+    p_user: userId,
+    p_minutes: minutes,
+    p_reason: reason,
+  });
+
+export const resolveReportAsModerator = (reportId: string, resolution: 'removed' | 'dismissed') =>
+  call<{ status: string }>('geegle_mod_resolve_report', {
+    p_report: reportId,
+    p_resolution: resolution,
+  });
+
+export async function loadModerationHistory(): Promise<OpResult<ModerationAction[]>> {
+  const result = await call<unknown>('geegle_mod_history');
+  if (!result.ok) return { ok: false, error: result.error };
+  const rows = Array.isArray(result.data) ? result.data : [];
+  return {
+    ok: true,
+    data: rows
+      .map((entry) => {
+        if (!isObject(entry)) return null;
+        const id = text(entry.id);
+        if (!id) return null;
+        return {
+          id,
+          action: text(entry.action),
+          moderator: text(entry.moderator) || 'Unknown',
+          targetUser: nullableText(entry.targetUser),
+          targetMessage: nullableText(entry.targetMessage),
+          reportId: nullableText(entry.reportId),
+          reason: nullableText(entry.reason),
+          createdAt: text(entry.createdAt),
+        } as ModerationAction;
+      })
+      .filter((entry): entry is ModerationAction => Boolean(entry)),
+  };
 }

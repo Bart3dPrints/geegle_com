@@ -42,12 +42,12 @@ export function ForwardDialog({
           <h3 className="flex items-center gap-1.5 text-sm font-semibold">
             <Forward size={14} /> Forward to
           </h3>
-          <button className="rounded p-1 hover:bg-neutral-100 dark:hover:bg-neutral-800" onClick={onClose} aria-label="Close">
+          <button className="rounded p-1 hover:bg-neutral-100" onClick={onClose} aria-label="Close">
             <X size={14} />
           </button>
         </div>
         {targets.length === 0 ? (
-          <p className="py-3 text-xs text-neutral-500 dark:text-neutral-400">
+          <p className="py-3 text-xs text-[var(--geegle-muted)]">
             Open a direct message with a friend first — messages can only be forwarded into a DM.
           </p>
         ) : (
@@ -55,7 +55,7 @@ export function ForwardDialog({
             {targets.map((target) => (
               <button
                 key={target.id}
-                className="flex w-full items-center justify-between gap-2 rounded px-2 py-1.5 text-left text-sm hover:bg-neutral-100 disabled:opacity-50 dark:hover:bg-neutral-800"
+                className="flex w-full items-center justify-between gap-2 rounded px-2 py-1.5 text-left text-sm hover:bg-neutral-100 disabled:opacity-50"
                 disabled={busy}
                 onClick={() => onPick(target.id)}
                 data-forward-target={target.id}

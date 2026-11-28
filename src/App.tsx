@@ -36,8 +36,6 @@ import {
   saveAppearanceSettings,
   loadNavigationShortcut,
   saveNavigationShortcut,
-  loadSocialStatusVisible,
-  saveSocialStatusVisible,
   DEFAULT_APPEARANCE_SETTINGS,
   type AppearanceSettings,
 } from './lib/userData';
@@ -87,7 +85,20 @@ import {
   type TabIdentity,
 } from './lib/tabIdentity';
 import { loadTabIdentity, saveTabIdentity } from './lib/userData';
-import { contrastText, fontStack, timeSettingsOf } from './lib/personalization';
+import { fontStack, timeSettingsOf } from './lib/personalization';
+import { applyTheme } from './theme/apply';
+import { resolveTheme } from './theme/palette';
+import { AmbientLayer } from './theme/Ambient';
+import {
+  getUnreadSummary,
+  loadConversations,
+  setUnreadSummary,
+  summarizeUnread,
+  unreadBadge,
+  watchChat,
+  watchUnreadSummary,
+  type ChatUnreadSummary,
+} from './lib/chat';
 import { formatClock, formatDate } from './lib/timeSettings';
 
 const APPS: GameEntry[] = [
@@ -141,6 +152,14 @@ type Tab = 'games' | 'apps' | 'proxies' | 'friends' | 'chat';
 
 const TABS: Tab[] = ['games', 'apps', 'proxies', 'friends', 'chat'];
 
+function prefersDark(): boolean {
+  try {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  } catch {
+    return false;
+  }
+}
+
 function useTheme() {
   const [theme, setTheme] = useState<ThemePreference>(() => {
     try {
@@ -150,14 +169,13 @@ function useTheme() {
       return 'system';
     }
   });
+  const [dark, setDark] = useState<boolean>(() => theme === 'dark' || (theme === 'system' && prefersDark()));
 
   useEffect(() => {
     const apply = () => {
-      const dark =
-        theme === 'dark' ||
-        (theme === 'system' &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches);
-      document.documentElement.classList.toggle('dark', dark);
+      const next = theme === 'dark' || (theme === 'system' && prefersDark());
+      document.documentElement.classList.toggle('dark', next);
+      setDark(next);
     };
     apply();
     const mq = window.matchMedia('(prefers-color-scheme: dark)');
@@ -165,7 +183,7 @@ function useTheme() {
     return () => mq.removeEventListener('change', apply);
   }, [theme]);
 
-  return { theme, setTheme };
+  return { theme, setTheme, dark };
 }
 
 /** Short dialog entrance that is skipped when reduced motion is requested. */
@@ -211,7 +229,7 @@ export default function App() {
   const authFromReminderRef = useRef(false);
   const reduceMotion = useReducedMotion();
 
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, dark } = useTheme();
   const [favorites, setFavorites] = useState<string[]>([]);
   const [recent, setRecent] = useState<string[]>([]);
   const [showRecent, setShowRecent] = useState(false);
@@ -226,7 +244,7 @@ export default function App() {
   const [announcementOpen, setAnnouncementOpen] = useState(false);
 
   const [tab, setTab] = useState<Tab>('games');
-  const [socialHidden, setSocialHidden] = useState(false);
+  const [unread, setUnread] = useState<ChatUnreadSummary>(() => getUnreadSummary());
   const [active, setActive] = useState<GameEntry | null>(null);
   const [youtubeOpen, setYoutubeOpen] = useState(false);
   const [activeProxy, setActiveProxy] = useState<{ url: string; title: string } | null>(null);
@@ -255,6 +273,8 @@ export default function App() {
     setAnnouncementOpen(!announcementDismissed(userId));
     setTheme('system');
     setSyncError(null);
+    // Notifications belong to the account that was signed in.
+    setUnreadSummary({ publicUnread: 0, privateUnread: 0 });
     if (auth.loading) return;
     let cancelled = false;
     void Promise.all([
@@ -266,8 +286,7 @@ export default function App() {
       loadLibraryNoticeDismissed(userId),
       loadAppearanceSettings(userId),
       loadNavigationShortcut(userId),
-      loadSocialStatusVisible(userId),
-    ]).then(([f, r, servers, savedTheme, recentVisible, notice, savedAppearance, savedShortcut, socialVisible]) => {
+    ]).then(([f, r, servers, savedTheme, recentVisible, notice, savedAppearance, savedShortcut]) => {
       if (cancelled) return;
       setFavorites(f.data ?? []);
       setRecent(r.data ?? []);
@@ -277,7 +296,6 @@ export default function App() {
       const saved = savedAppearance.data ?? DEFAULT_APPEARANCE_SETTINGS;
       setAppearance(saved);
       if (savedShortcut.data) setShortcut(savedShortcut.data);
-      setSocialHidden(socialVisible.data === false);
       const t = saved.mode !== 'system' ? saved.mode : savedTheme.data;
       setTheme(t === 'dark' || t === 'light' ? t : 'system');
       setSettingsLoaded(true);
@@ -314,25 +332,26 @@ export default function App() {
     return () => observer.disconnect();
   }, [showLanding, tab]);
 
-  // Appearance and personalization are applied as CSS variables; unset values
-  // fall back to the neutral defaults in index.css.
+  // One pass per change: the preset resolves the whole palette (neutral ramp,
+  // surfaces, chat colours, ambient wash), then explicit component overrides
+  // are layered on top. CSS variables carry it to every authored surface.
   useEffect(() => {
+    applyTheme(appearance.theme, dark, {
+      background: appearance.background,
+      card: appearance.card,
+      header: appearance.header,
+      accent: appearance.accent,
+      text: appearance.fontColor,
+      muted: appearance.muted,
+      chat: appearance.chat,
+      field: appearance.field,
+      fieldText: appearance.fieldText,
+      bubbleOut: appearance.bubbleOut,
+      bubbleIn: appearance.bubbleIn,
+    });
     const root = document.documentElement;
-    if (appearance.background) root.style.setProperty('--geegle-bg', appearance.background);
-    else root.style.removeProperty('--geegle-bg');
-    if (appearance.card) root.style.setProperty('--geegle-card', appearance.card);
-    else root.style.removeProperty('--geegle-card');
-    if (appearance.accent) {
-      root.style.setProperty('--geegle-accent', appearance.accent);
-      root.style.setProperty('--geegle-accent-contrast', contrastText(appearance.accent));
-    } else {
-      root.style.removeProperty('--geegle-accent');
-      root.style.removeProperty('--geegle-accent-contrast');
-    }
     if (appearance.font !== 'default') root.style.setProperty('--geegle-font', fontStack(appearance.font));
     else root.style.removeProperty('--geegle-font');
-    if (appearance.fontColor) root.style.setProperty('--geegle-text', appearance.fontColor);
-    else root.style.removeProperty('--geegle-text');
 
     // A custom wallpaper sits behind the whole application with a soft scrim
     // in the current surface colour, so text and cards stay readable.
@@ -351,13 +370,53 @@ export default function App() {
       body.backgroundRepeat = '';
     }
   }, [
+    appearance.theme,
     appearance.background,
     appearance.card,
+    appearance.header,
     appearance.accent,
+    appearance.bubbleOut,
     appearance.font,
     appearance.fontColor,
     appearance.wallpaper,
+    dark,
   ]);
+
+  // The ambient wash follows the preset (and any colour override), so turning
+  // the mode off leaves the chosen colours exactly as they were.
+  const ambientPalette = useMemo(
+    () =>
+      resolveTheme(appearance.theme, dark, {
+        accent: appearance.accent,
+        bubbleOut: appearance.bubbleOut,
+      }).ambient,
+    [appearance.theme, appearance.accent, appearance.bubbleOut, dark],
+  );
+
+  // The Chat tab badge reads the same summary Chat derives from its list.
+  useEffect(() => watchUnreadSummary(() => setUnread(getUnreadSummary())), []);
+
+  // Unread totals have to be right even while Chat is closed, so the badge is
+  // fed from here rather than only from the Chat tab being mounted.
+  useEffect(() => {
+    if (!userId) {
+      setUnreadSummary({ publicUnread: 0, privateUnread: 0 });
+      return;
+    }
+    let cancelled = false;
+    const refresh = async () => {
+      const result = await loadConversations();
+      if (!cancelled && result.ok) setUnreadSummary(summarizeUnread(result.data ?? []));
+    };
+    void refresh();
+    const stop = watchChat(userId, () => {
+      void refresh();
+    });
+    return () => {
+      cancelled = true;
+      stop();
+    };
+  }, [userId]);
 
   // Optional clock and date widgets; the timer only runs while one is shown.
   const [now, setNow] = useState(() => new Date());
@@ -372,7 +431,7 @@ export default function App() {
   const dateText = formatDate(now, timeSettings);
 
   // One presence subscription serves both the visitor counter and Friends.
-  const presence = useSocialPresence({ userId, hidden: socialHidden, enabled: !showLanding });
+  const presence = useSocialPresence({ userId, enabled: !showLanding });
 
   // The library notice appears on entry unless the user opted out permanently.
   useEffect(() => {
@@ -726,11 +785,11 @@ export default function App() {
           onClick={(e) => e.stopPropagation()}
         >
           <h2 className="mb-1">{authMode === 'login' ? 'Sign in' : 'Create account'}</h2>
-          <p className="mb-4 text-xs text-neutral-500 dark:text-neutral-400">
+          <p className="mb-4 text-xs text-[var(--geegle-muted)]">
             Keep your progress and preferences across devices.
           </p>
           {!auth.enabled && (
-            <div className="mb-4 flex gap-2 rounded-md bg-neutral-100 p-3 text-sm text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">
+            <div className="mb-4 flex gap-2 rounded-md bg-neutral-100 p-3 text-sm text-neutral-700">
               <AlertTriangle size={16} className="mt-0.5 shrink-0" />
               <span>Accounts are not configured on this deployment.</span>
             </div>
@@ -776,7 +835,7 @@ export default function App() {
             </button>
           </form>
           <button
-            className="mt-4 w-full text-center text-sm text-neutral-600 underline-offset-2 hover:underline dark:text-neutral-300"
+            className="mt-4 w-full text-center text-sm text-neutral-600 underline-offset-2 hover:underline"
             onClick={() => {
               setAuthMode(authMode === 'login' ? 'register' : 'login');
               setAuthError(null);
@@ -795,6 +854,7 @@ export default function App() {
   if (showLanding) {
     return (
       <>
+      {appearance.ambient && <AmbientLayer palette={ambientPalette} />}
       <SearchLanding
         signedIn={Boolean(userId)}
         onOpenLibrary={openLibrary}
@@ -824,10 +884,15 @@ export default function App() {
 
   return (
     <div
-      className="min-h-screen"
+      className="relative isolate min-h-screen"
       style={{ backgroundColor: appearance.wallpaper ? 'transparent' : 'var(--geegle-bg)' }}
     >
-      <header ref={headerRef} className="sticky top-0 z-40 border-b border-neutral-200 dark:border-neutral-800" style={{ backgroundColor: 'var(--geegle-card)' }}>
+      {appearance.ambient && <AmbientLayer palette={ambientPalette} />}
+      <header
+        ref={headerRef}
+        className="geegle-header top-0 z-40"
+        style={{ backgroundColor: 'var(--geegle-header)' }}
+      >
         <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-4 py-2 sm:px-6">
           <button
             className="geegle-wordmark mr-1"
@@ -838,7 +903,7 @@ export default function App() {
           </button>
 
           <button
-            className="rounded-md p-2 text-neutral-600 transition-colors hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
+            className="rounded-md p-2 text-neutral-600 transition-colors hover:bg-neutral-100"
             onClick={() => {
               setSettingsTab('theme');
               setSettingsOpen(true);
@@ -880,7 +945,7 @@ export default function App() {
           <div className="flex-1 md:hidden" />
 
           {(appearance.clock || appearance.date) && (
-            <div className="hidden items-center gap-2 text-right text-xs leading-tight text-neutral-500 md:flex dark:text-neutral-400">
+            <div className="hidden items-center gap-2 text-right text-xs leading-tight text-[var(--geegle-muted)] md:flex">
               {appearance.clock && <span className="tabular-nums">{clockText}</span>}
               {appearance.clock && appearance.date && <span aria-hidden="true">·</span>}
               {appearance.date && <span>{dateText}</span>}
@@ -889,7 +954,7 @@ export default function App() {
 
           {syncError && (
             <span
-              className="hidden max-w-48 truncate text-xs text-neutral-500 dark:text-neutral-400 md:inline"
+              className="hidden max-w-48 truncate text-xs text-[var(--geegle-muted)] md:inline"
               title={syncError}
             >
               {syncError}
@@ -899,13 +964,13 @@ export default function App() {
           {auth.user ? (
             <div className="relative" ref={accountMenuRef}>
               <button
-                className="flex items-center gap-1.5 rounded-full border border-neutral-300 p-1 pr-2 dark:border-neutral-700"
+                className="flex items-center gap-1.5 rounded-full border border-neutral-300 p-1 pr-2 dark:border-[var(--geegle-border)]"
                 onClick={() => setAccountMenuOpen((open) => !open)}
                 aria-label="Account"
                 aria-expanded={accountMenuOpen}
                 aria-haspopup="menu"
               >
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-neutral-200 text-neutral-600 dark:bg-neutral-700 dark:text-neutral-300">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-neutral-200 text-neutral-600">
                   <UserIcon size={14} />
                 </span>
                 <ChevronDown size={14} className="text-neutral-400" />
@@ -923,7 +988,7 @@ export default function App() {
                   >
                     <button
                       role="menuitem"
-                      className="flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                      className="flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm hover:bg-neutral-100"
                       onClick={() => {
                         setSettingsTab('preferences');
                         setSettingsOpen(true);
@@ -934,7 +999,7 @@ export default function App() {
                     </button>
                     <button
                       role="menuitem"
-                      className="flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                      className="flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm hover:bg-neutral-100"
                       onClick={() => void handleSignOut()}
                     >
                       <LogOut size={15} /> Sign out
@@ -945,7 +1010,7 @@ export default function App() {
             </div>
           ) : (
             <button
-              className="flex items-center gap-1.5 rounded-full border border-neutral-300 p-1 pr-2 dark:border-neutral-700"
+              className="flex items-center gap-1.5 rounded-full border border-neutral-300 p-1 pr-2 dark:border-[var(--geegle-border)]"
               aria-label="Sign in"
               onClick={() => {
                 authFromReminderRef.current = false;
@@ -953,7 +1018,7 @@ export default function App() {
                 setAuthMode('login');
               }}
             >
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-neutral-200 text-neutral-600 dark:bg-neutral-700 dark:text-neutral-300">
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-neutral-200 text-neutral-600">
                 <UserIcon size={14} />
               </span>
               <span className="hidden pr-1 text-sm sm:inline">Sign in</span>
@@ -964,19 +1029,20 @@ export default function App() {
         </div>
 
         <nav
-          className="border-t border-neutral-200 dark:border-neutral-800"
+          className="border-t border-neutral-200/70 dark:border-[var(--geegle-border)]"
           aria-label="Sections"
         >
           <div className="mx-auto flex max-w-7xl px-2 sm:px-4">
             {TABS.map((t) => (
               <button
                 key={t}
-                className={`relative flex-1 px-3 py-3 text-[15px] font-medium capitalize transition-colors sm:flex-none sm:px-8 ${
+                className={`relative flex flex-1 items-center justify-center gap-1.5 px-3 py-3 text-[15px] font-medium capitalize transition-colors sm:flex-none sm:px-8 ${
                   tab === t
-                    ? 'text-neutral-900 dark:text-neutral-100'
-                    : 'text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100'
+                    ? 'text-neutral-900'
+                    : 'text-neutral-600 hover:text-neutral-900'
                 }`}
                 aria-current={tab === t ? 'page' : undefined}
+                data-tab={t}
                 onClick={async () => {
                   if (!await closeGame()) return;
                   setTab(t);
@@ -985,6 +1051,22 @@ export default function App() {
                 }}
               >
                 {t}
+                {t === 'chat' && unread.privateUnread > 0 && (
+                  <span
+                    className="inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-[var(--geegle-accent)] px-1 text-[10px] font-semibold leading-none text-[var(--geegle-accent-ink)]"
+                    aria-label={`${unread.privateUnread} unread private messages`}
+                    data-chat-badge="count"
+                  >
+                    {unreadBadge(unread.privateUnread)}
+                  </span>
+                )}
+                {t === 'chat' && unread.privateUnread === 0 && unread.publicUnread > 0 && (
+                  <span
+                    className="h-2 w-2 rounded-full bg-[var(--geegle-accent)]"
+                    aria-label="Unread public messages"
+                    data-chat-badge="dot"
+                  />
+                )}
                 {tab === t && (
                   <motion.span
                     layoutId="tab-underline"
@@ -998,7 +1080,7 @@ export default function App() {
         </nav>
 
         {tab === 'games' && (
-          <div className="border-t border-neutral-200 dark:border-neutral-800">
+          <div className="border-t border-neutral-200 dark:border-[var(--geegle-border)]">
             <div
               className="mx-auto flex max-w-7xl flex-wrap gap-1.5 px-4 py-2 sm:px-6"
               role="tablist"
@@ -1193,11 +1275,6 @@ export default function App() {
             }}
             onlineKeys={presence.onlineKeys}
             presenceStatus={presence.status}
-            hiddenStatus={socialHidden}
-            onHiddenStatusChange={(hidden) => {
-              setSocialHidden(hidden);
-              void saveSocialStatusVisible(!hidden, userId);
-            }}
           />
         )}
 
@@ -1209,6 +1286,7 @@ export default function App() {
               setAuthOpen(true);
               setAuthMode('login');
             }}
+            ambientEnabled={appearance.ambient}
           />
         )}
 
@@ -1235,7 +1313,7 @@ export default function App() {
         )}
       </main>
 
-      <footer className="border-t border-neutral-200 py-6 text-center text-sm text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
+      <footer className="border-t border-neutral-200 py-6 text-center text-sm text-[var(--geegle-muted)] dark:border-[var(--geegle-border)]">
         {FOOTER_TEXT}
       </footer>
     </div>

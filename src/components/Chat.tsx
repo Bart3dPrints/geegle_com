@@ -14,14 +14,18 @@ import {
   MoreVertical,
   Palette,
   Pencil,
+  Pin,
+  PinOff,
   Plus,
   Send,
+  Shield,
   Trash2,
   UserPlus,
   Users,
   X,
 } from 'lucide-react';
 import {
+  amModerator,
   backgroundImageUrl,
   createGroup,
   dayKey,
@@ -33,33 +37,45 @@ import {
   leaveGroup,
   loadBackground,
   loadMembers,
+  loadModerationHistory,
+  loadModerationQueue,
   loadConversations,
   loadMessages,
   markRead,
   messageTime,
   openDirectMessage,
   relativeStamp,
+  muteUserAsModerator,
+  removeMessageAsModerator,
   renameGroup,
   reportMessage,
+  resolveReportAsModerator,
   sendMessage,
+  setPinned,
+  setUnreadSummary,
+  summarizeUnread,
   transferOwnership,
+  unreadBadge,
   unsendMessage,
   watchChat,
   type ChatBackground,
   type ChatConversation,
   type ChatMessage,
+  type ModerationAction,
+  type ModerationReport,
   DEFAULT_BACKGROUND,
 } from '../lib/chat';
+import { ChatAmbient, readThemeAmbient, useConversationAmbient } from '../theme/Ambient';
 import { loadSocial, type SocialFriend } from '../lib/friends';
 import { ChatBackgroundEditor } from './chat/ChatBackgroundEditor';
 import { ForwardDialog } from './chat/ForwardDialog';
 
 const iconButton =
-  'rounded-md p-1.5 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 disabled:opacity-40 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-100';
+  'rounded-md p-1.5 text-[var(--geegle-muted)] hover:bg-neutral-100 hover:text-neutral-800 disabled:opacity-40';
 const smallButton =
-  'rounded-md border border-neutral-300 px-2 py-1 text-xs text-neutral-700 hover:bg-neutral-100 disabled:opacity-50 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800';
+  'rounded-md border border-neutral-300 px-2 py-1 text-xs text-neutral-700 hover:bg-neutral-100 disabled:opacity-50 dark:border-[var(--geegle-border)]';
 const menuItem =
-  'flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-xs hover:bg-neutral-100 dark:hover:bg-neutral-800';
+  'flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-xs hover:bg-neutral-100';
 
 function kindLabel(conversation: ChatConversation): string {
   if (conversation.kind === 'public') return 'Public room';
@@ -70,31 +86,36 @@ function kindLabel(conversation: ChatConversation): string {
 function ForwardEmbed({
   message,
   onOpen,
+  mine,
 }: {
   message: ChatMessage;
   onOpen: () => void;
+  mine?: boolean;
 }) {
   const forwarded = message.forwarded;
   if (!forwarded) return null;
   const when = forwarded.createdAt ? messageTime(forwarded.createdAt) : '';
   return (
-    <div className="mb-1 rounded border-l-2 border-neutral-400 bg-neutral-100/80 px-2 py-1 text-[11px] text-neutral-600 dark:border-neutral-500 dark:bg-neutral-800/70 dark:text-neutral-300">
-      <div className="mb-0.5 flex items-center gap-1 font-medium">
+    <div
+      data-forwarded={forwarded.messageId}
+      className={`mb-1 rounded border-l-2 px-2 py-1 text-[11px] ${
+        mine ? 'border-current/50 bg-white/15' : 'border-neutral-400 bg-black/5 dark:bg-white/10'
+      }`}
+    >
+      <div className="mb-0.5 flex items-center gap-1 font-medium opacity-80">
         <Forward size={11} /> Forwarded from {forwarded.authorName}
-        {when && <span className="font-normal text-neutral-500 dark:text-neutral-400">· {when}</span>}
+        {when && <span className="font-normal opacity-80">· {when}</span>}
       </div>
       {forwarded.available ? (
         <button
-          className="underline-offset-2 hover:underline"
+          className="underline underline-offset-2 opacity-90 hover:opacity-100"
           onClick={onOpen}
           data-forward-original={forwarded.messageId}
         >
           View original
         </button>
       ) : (
-        <span className="italic text-neutral-500 dark:text-neutral-400">
-          Original message is no longer available
-        </span>
+        <span className="italic opacity-80">Original message is no longer available</span>
       )}
     </div>
   );
@@ -139,110 +160,136 @@ function MessageRow({
   onReport: () => void;
   onOpenOriginal: () => void;
 }) {
-  const canEdit = message.mine && !message.unsent;
-  const canUnsend = message.mine && !message.unsent;
-  const canForward = !message.unsent;
+  const mine = message.mine;
+  // A forwarded message carries no text of its own; its words come from the
+  // original, and the server has already decided whether this reader may see
+  // them. Editing is refused by the server for the same reason.
+  const canEdit = mine && !message.unsent && !message.moderated && !message.forwarded;
+  const canUnsend = mine && !message.unsent && !message.moderated;
+  const canForward = !message.unsent && !message.moderated;
+  const bubbleClass = mine
+    ? 'bubble bubble-out rounded-br-md'
+    : 'bubble bubble-in rounded-bl-md';
+
+  const menu = (
+    <div className="relative shrink-0 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100 group-focus-within:opacity-100 data-[open=true]:opacity-100" data-open={menuOpen ? 'true' : 'false'}>
+      <button
+        className={`${iconButton} h-6 w-6 p-0.5`}
+        aria-label={`Message options for ${message.authorName}`}
+        aria-haspopup="menu"
+        aria-expanded={menuOpen}
+        onClick={onToggleMenu}
+        data-message-menu={message.id}
+      >
+        <MoreVertical size={14} />
+      </button>
+      {menuOpen && (
+        <>
+          <div className="fixed inset-0 z-10" onClick={onCloseMenu} aria-hidden="true" />
+          <div
+            className={`absolute top-full z-20 w-44 overflow-hidden rounded-md border border-neutral-200 bg-[var(--geegle-card)] p-1 shadow-xl dark:border-[var(--geegle-border)] ${
+              mine ? 'right-0' : 'left-0'
+            }`}
+            role="menu"
+          >
+            {canEdit && (
+              <button className={menuItem} role="menuitem" onClick={onStartEdit}>
+                <Pencil size={12} /> Edit
+              </button>
+            )}
+            {canUnsend && (
+              <button className={menuItem} role="menuitem" onClick={onUnsend}>
+                <X size={12} /> Unsend
+              </button>
+            )}
+            <button className={menuItem} role="menuitem" onClick={onHide}>
+              <Trash2 size={12} /> Delete for me
+            </button>
+            {canForward && (
+              <button className={menuItem} role="menuitem" onClick={onForward}>
+                <Forward size={12} /> Forward
+              </button>
+            )}
+            {!mine && (
+              <button className={menuItem} role="menuitem" onClick={onReport}>
+                <MessageSquare size={12} /> Report
+              </button>
+            )}
+          </div>
+        </>
+      )}
+    </div>
+  );
 
   return (
     <div
-      className={`group relative rounded px-2 py-1 ${highlighted ? 'bg-amber-100/70 ring-1 ring-amber-400 dark:bg-amber-500/20' : ''}`}
+      className={`group flex w-full items-start gap-1.5 px-1 py-0.5 ${
+        mine ? 'flex-row-reverse' : 'flex-row'
+      } ${highlighted ? 'rounded-lg bg-amber-100/70 ring-1 ring-amber-400 dark:bg-amber-500/20' : ''}`}
       data-message={message.id}
       data-unsent={message.unsent ? 'true' : 'false'}
+      data-mine={mine ? 'true' : 'false'}
     >
-      {showAuthor && (
-        <div className="flex items-baseline gap-1.5">
-          <span className="truncate text-xs font-semibold">{message.authorName}</span>
-          <span className="shrink-0 text-[11px] text-neutral-500 dark:text-neutral-400">
-            {messageTime(message.createdAt)}
+      <div className={`flex min-w-0 max-w-[75%] flex-col ${mine ? 'items-end' : 'items-start'}`}>
+        {showAuthor && !mine && (
+          <span className="mb-0.5 px-1 text-[11px] font-medium text-neutral-600">
+            {message.authorName}
           </span>
-          {message.editedAt && !message.unsent && (
-            <span className="text-[10px] text-neutral-400" title="Edited">
-              edited
-            </span>
-          )}
-        </div>
-      )}
-
-      {editing ? (
-        <div className="mt-1">
-          <textarea
-            className="input w-full text-sm"
-            rows={2}
-            value={editText}
-            maxLength={4000}
-            aria-label="Edit message"
-            onChange={(event) => onEditText(event.target.value)}
-            onKeyDown={(event) => {
-              if (event.key === 'Enter' && !event.shiftKey) {
-                event.preventDefault();
-                onSaveEdit();
-              }
-              if (event.key === 'Escape') onCancelEdit();
-            }}
-          />
-          <div className="mt-1 flex gap-1">
-            <button className="btn-primary px-2 py-1 text-xs" onClick={onSaveEdit} disabled={busy}>
-              Save
-            </button>
-            <button className={smallButton} onClick={onCancelEdit} disabled={busy}>
-              Cancel
-            </button>
-          </div>
-        </div>
-      ) : message.unsent ? (
-        <p className="text-sm italic text-neutral-500 dark:text-neutral-400">Message unsent</p>
-      ) : (
-        <>
-          <ForwardEmbed message={message} onOpen={onOpenOriginal} />
-          <p className="whitespace-pre-wrap break-words text-sm">{message.body}</p>
-        </>
-      )}
-
-      <div className="absolute right-1 top-0.5 opacity-0 focus-within:opacity-100 group-hover:opacity-100">
-        <button
-          className={iconButton}
-          aria-label={`Message options for ${message.authorName}`}
-          aria-haspopup="menu"
-          aria-expanded={menuOpen}
-          onClick={onToggleMenu}
-          data-message-menu={message.id}
-        >
-          <MoreVertical size={13} />
-        </button>
-        {menuOpen && (
-          <>
-            <div className="fixed inset-0 z-10" onClick={onCloseMenu} aria-hidden="true" />
-            <div
-              className="absolute right-0 top-full z-20 w-40 overflow-hidden rounded-md border border-neutral-200 bg-white p-1 shadow-lg dark:border-neutral-700 dark:bg-neutral-900"
-              role="menu"
-            >
-              {canEdit && (
-                <button className={menuItem} role="menuitem" onClick={onStartEdit}>
-                  <Pencil size={12} /> Edit
-                </button>
-              )}
-              {canUnsend && (
-                <button className={menuItem} role="menuitem" onClick={onUnsend}>
-                  <X size={12} /> Unsend
-                </button>
-              )}
-              <button className={menuItem} role="menuitem" onClick={onHide}>
-                <Trash2 size={12} /> Delete for me
-              </button>
-              {canForward && (
-                <button className={menuItem} role="menuitem" onClick={onForward}>
-                  <Forward size={12} /> Forward
-                </button>
-              )}
-              {!message.mine && (
-                <button className={menuItem} role="menuitem" onClick={onReport}>
-                  <MessageSquare size={12} /> Report
-                </button>
-              )}
-            </div>
-          </>
         )}
+
+        {editing ? (
+          <div className="w-[min(28rem,70vw)]">
+            <textarea
+              className="input w-full text-sm"
+              rows={2}
+              value={editText}
+              maxLength={4000}
+              aria-label="Edit message"
+              onChange={(event) => onEditText(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter' && !event.shiftKey) {
+                  event.preventDefault();
+                  onSaveEdit();
+                }
+                if (event.key === 'Escape') onCancelEdit();
+              }}
+            />
+            <div className="mt-1 flex gap-1">
+              <button className="btn-primary px-2 py-1 text-xs" onClick={onSaveEdit} disabled={busy}>
+                Save
+              </button>
+              <button className={smallButton} onClick={onCancelEdit} disabled={busy}>
+                Cancel
+              </button>
+            </div>
+          </div>
+        ) : message.moderated ? (
+          <div className={`${bubbleClass} italic`} data-moderated="true">
+            Removed by a moderator
+          </div>
+        ) : message.unsent ? (
+          <div className={`${bubbleClass} italic`} data-unsent="true">
+            Message unsent
+          </div>
+        ) : (
+          <div className={bubbleClass} data-bubble={mine ? 'out' : 'in'}>
+            <ForwardEmbed message={message} onOpen={onOpenOriginal} mine={mine} />
+            {message.forwarded && !message.body ? (
+              <span className="italic">Original message is no longer available</span>
+            ) : (
+              <span className="whitespace-pre-wrap">{message.body}</span>
+            )}
+          </div>
+        )}
+
+        <span className="mt-0.5 flex items-center gap-1 px-1 text-[10px] text-[var(--geegle-muted)]">
+          {messageTime(message.createdAt)}
+          {message.editedAt && !message.unsent && !message.moderated && (
+            <span title="This message was edited" data-edited="true">edited</span>
+          )}
+        </span>
       </div>
+      {!editing && menu}
     </div>
   );
 }
@@ -316,7 +363,7 @@ function Modal({
       >
         <div className="mb-2 flex items-center justify-between">
           <h3 className="text-sm font-semibold">{title}</h3>
-          <button className="rounded p-1 hover:bg-neutral-100 dark:hover:bg-neutral-800" onClick={onClose} aria-label="Close">
+          <button className="rounded p-1 hover:bg-neutral-100" onClick={onClose} aria-label="Close">
             <X size={14} />
           </button>
         </div>
@@ -329,9 +376,11 @@ function Modal({
 export function Chat({
   userId,
   onRequestSignIn,
+  ambientEnabled = true,
 }: {
   userId: string | null;
   onRequestSignIn: () => void;
+  ambientEnabled?: boolean;
 }) {
   const [conversations, setConversations] = useState<ChatConversation[]>([]);
   const [loading, setLoading] = useState(true);
@@ -339,7 +388,10 @@ export function Chat({
   const [notice, setNotice] = useState<string | null>(null);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const [threadLoading, setThreadLoading] = useState(false);
+  // Which conversation the messages in memory belong to. While this does not
+  // match the open conversation the thread shows nothing: no spinner, and no
+  // "no messages" claim about a conversation that has not answered yet.
+  const [loadedId, setLoadedId] = useState<string | null>(null);
   const [threadError, setThreadError] = useState<string | null>(null);
   const [hasMore, setHasMore] = useState(false);
   const [olderLoading, setOlderLoading] = useState(false);
@@ -360,10 +412,19 @@ export function Chat({
   const [members, setMembers] = useState<ChatMember[]>([]);
   const [membersBusy, setMembersBusy] = useState(false);
   const [titleDraft, setTitleDraft] = useState('');
+  const [moderator, setModerator] = useState(false);
+  const [modOpen, setModOpen] = useState(false);
+  const [modQueue, setModQueue] = useState<ModerationReport[]>([]);
+  const [modHistory, setModHistory] = useState<ModerationAction[]>([]);
+  const [modBusy, setModBusy] = useState(false);
 
   const threadRef = useRef<HTMLDivElement>(null);
   const stateRef = useRef({ selectedId, hasMore });
   stateRef.current = { selectedId, hasMore };
+  // Every thread request carries a ticket; a response whose ticket is stale is
+  // dropped, so a slow answer for one conversation can never replace another
+  // conversation's messages.
+  const threadTicket = useRef(0);
 
   const selected = useMemo(
     () => conversations.find((entry) => entry.id === selectedId) ?? null,
@@ -384,53 +445,73 @@ export function Chat({
   }, [userId]);
 
   const loadThread = useCallback(async (id: string) => {
-    setThreadLoading(true);
-    setThreadError(null);
+    const ticket = ++threadTicket.current;
     const result = await loadMessages(id, null, 30);
+    // A newer request (or a conversation switch) has taken over.
+    if (ticket !== threadTicket.current) return;
     if (!result.ok) {
       setThreadError(result.error ?? 'Messages could not be loaded.');
-      setMessages([]);
-      setHasMore(false);
-    } else {
-      const rows = result.data ?? [];
-      setMessages(rows);
-      setHasMore(rows.length === 30);
+      return;
     }
-    setThreadLoading(false);
+    const rows = result.data ?? [];
+    setMessages(rows);
+    setHasMore(rows.length === 30);
+    setThreadError(null);
+    setLoadedId(id);
   }, []);
 
   // A new account starts from a clean surface.
   useEffect(() => {
     setConversations([]);
     setMessages([]);
+    setLoadedId(null);
     setSelectedId(null);
     setDraft('');
     setError(null);
     setThreadError(null);
     setBackground(DEFAULT_BACKGROUND);
     setBackgroundUrl(null);
+    setModerator(false);
+    setModOpen(false);
+    setModQueue([]);
     setLoading(Boolean(userId));
     if (userId) void refreshConversations();
     else setLoading(false);
   }, [userId, refreshConversations]);
 
-  // Live updates: the list and the open thread follow the database.
+  // Live updates: the list and the open thread follow the database. The thread
+  // is refreshed quietly, so arriving messages never replace the conversation
+  // with a loading state, and read state is confirmed by its own effect only
+  // when there is something new to confirm.
   useEffect(() => {
     if (!userId) return;
     let timer = 0;
     return watchChat(userId, () => {
       window.clearTimeout(timer);
-      timer = window.setTimeout(async () => {
+      timer = window.setTimeout(() => {
         const current = stateRef.current;
-        if (current.selectedId && !current.hasMore) {
-          await loadThread(current.selectedId);
-          // A message that arrives in the open conversation is already read.
-          await markRead(current.selectedId);
-        }
-        await refreshConversations();
+        if (current.selectedId && !current.hasMore) void loadThread(current.selectedId);
+        void refreshConversations();
       }, 250);
     });
   }, [userId, refreshConversations, loadThread]);
+
+  // The Chat tab badge and the sidebar read the same numbers.
+  useEffect(() => {
+    setUnreadSummary(summarizeUnread(conversations));
+  }, [conversations]);
+
+  // Moderator status comes from the database, never from client state.
+  useEffect(() => {
+    if (!userId) return;
+    let cancelled = false;
+    void amModerator().then((value) => {
+      if (!cancelled) setModerator(value);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [userId]);
 
   // Pick the public room on first load, so the tab is never an empty shell.
   useEffect(() => {
@@ -441,14 +522,27 @@ export function Chat({
 
   useEffect(() => {
     if (!selectedId) return;
-    // Opening a conversation clears its badge at once, then confirms it with
-    // the database so another device sees the same read state.
+    // Opening a conversation clears its badge at once and drops the previous
+    // conversation's messages; the thread stays blank until its own answer
+    // arrives, so nothing from another conversation is ever shown.
     setConversations((current) =>
       current.map((entry) => (entry.id === selectedId ? { ...entry, unread: 0 } : entry)),
     );
+    threadTicket.current += 1;
+    setMessages([]);
+    setLoadedId(null);
+    setHasMore(false);
+    setThreadError(null);
     void loadThread(selectedId);
+  }, [selectedId, loadThread]);
+
+  // Confirm read state once per genuine transition, not on every Realtime tick.
+  useEffect(() => {
+    if (!selectedId || loadedId !== selectedId) return;
+    const conversation = conversations.find((entry) => entry.id === selectedId);
+    if (!conversation || conversation.unread === 0) return;
     void markRead(selectedId).then(() => refreshConversations());
-  }, [selectedId, loadThread, refreshConversations]);
+  }, [selectedId, loadedId, conversations, refreshConversations]);
 
   // The DM background belongs to this account only. Keyed by conversation id
   // (not by the conversation object) so a live refresh cannot close the editor.
@@ -465,8 +559,14 @@ export function Chat({
       if (cancelled || !result.ok || !result.data) return;
       setBackground(result.data);
       if (result.data.kind === 'image' && result.data.imagePath) {
-        const url = await backgroundImageUrl(result.data.imagePath);
+        let url = await backgroundImageUrl(result.data.imagePath);
+        // A signed link can expire while the tab is open; ask again once.
+        if (!url) {
+          await new Promise((resolve) => window.setTimeout(resolve, 600));
+          url = await backgroundImageUrl(result.data.imagePath);
+        }
         if (!cancelled) setBackgroundUrl(url);
+        if (!url && !cancelled) setError('Your background picture could not be loaded. Open the background editor to replace it.');
       }
     });
     return () => {
@@ -490,12 +590,23 @@ export function Chat({
     return () => window.clearTimeout(timer);
   }, [focusId, messages]);
 
+  const shownBackground = previewBackground ?? background;
+  const shownBackgroundUrl = previewBackground ? previewUrl : backgroundUrl;
+  const themeAmbient = readThemeAmbient();
+  const chatAmbient = useConversationAmbient({
+    kind: shownBackground.kind,
+    color: shownBackground.color,
+    imageUrl: shownBackgroundUrl,
+    themeAmbient,
+  });
+  const threadReady = Boolean(selected) && loadedId === selected?.id;
+
   if (!userId) {
     return (
       <section aria-label="Chat" className="mx-auto w-full max-w-md">
         <div className="card p-6 text-center">
           <h2 className="mb-1 text-base font-semibold">Chat</h2>
-          <p className="mb-4 text-sm text-neutral-500 dark:text-neutral-400">
+          <p className="mb-4 text-sm text-[var(--geegle-muted)]">
             Sign in to join the public room and message your friends.
           </p>
           <button className="btn-primary" onClick={onRequestSignIn}>
@@ -702,8 +813,76 @@ export function Chat({
     }
   };
 
-  const shownBackground = previewBackground ?? background;
-  const shownBackgroundUrl = previewBackground ? previewUrl : backgroundUrl;
+  const togglePin = async (conversation: ChatConversation) => {
+    const ok = await run('pin', () => setPinned(conversation.id, !conversation.pinned));
+    if (ok) await refreshConversations();
+  };
+
+  const openModeration = async () => {
+    setModOpen(true);
+    setModBusy(true);
+    try {
+      const [queue, history] = await Promise.all([loadModerationQueue(), loadModerationHistory()]);
+      if (queue.ok) setModQueue(queue.data ?? []);
+      else setError(queue.error ?? null);
+      if (history.ok) setModHistory(history.data ?? []);
+    } finally {
+      setModBusy(false);
+    }
+  };
+
+  const refreshModeration = async () => {
+    const [queue, history] = await Promise.all([loadModerationQueue(), loadModerationHistory()]);
+    if (queue.ok) setModQueue(queue.data ?? []);
+    if (history.ok) setModHistory(history.data ?? []);
+  };
+
+  const moderateRemove = async (report: ModerationReport) => {
+    const reason = window.prompt('Reason for removing this public message. The author will not be told who reported it.');
+    if (!reason || !reason.trim()) return;
+    setModBusy(true);
+    try {
+      const result = await removeMessageAsModerator(report.messageId, reason.trim(), report.reportId);
+      if (!result.ok) setError(result.error ?? null);
+      else setNotice('Message removed and the report resolved.');
+      await refreshModeration();
+      await refreshConversations();
+      if (selectedId) await loadThread(selectedId);
+    } finally {
+      setModBusy(false);
+    }
+  };
+
+  const moderateDismiss = async (report: ModerationReport) => {
+    setModBusy(true);
+    try {
+      const result = await resolveReportAsModerator(report.reportId, 'dismissed');
+      if (!result.ok) setError(result.error ?? null);
+      else setNotice('Report dismissed.');
+      await refreshModeration();
+    } finally {
+      setModBusy(false);
+    }
+  };
+
+  const moderateMute = async (report: ModerationReport) => {
+    const minutes = Number(window.prompt('Pause this account from public chat for how many minutes?', '60'));
+    if (!Number.isFinite(minutes) || minutes < 1) return;
+    setModBusy(true);
+    try {
+      if (!report.authorId) {
+        setError('Muting applies to public messages only.');
+        return;
+      }
+      const result = await muteUserAsModerator(report.authorId, minutes, 'Reported public message');
+      if (!result.ok) setError(result.error ?? null);
+      else setNotice('Public chat paused for that account.');
+      await refreshModeration();
+    } finally {
+      setModBusy(false);
+    }
+  };
+
   const friendIds = new Set(members.map((member) => member.userId));
 
   return (
@@ -722,6 +901,11 @@ export function Chat({
         >
           <Plus size={13} className="mr-1 inline" /> New group
         </button>
+        {moderator && (
+          <button className={smallButton} onClick={() => void openModeration()} data-moderation-open>
+            <Shield size={13} className="mr-1 inline" /> Moderation
+          </button>
+        )}
         {error && (
           <p className="ml-auto text-xs text-red-600 dark:text-red-400" role="alert" data-chat-error>
             {error}
@@ -739,12 +923,12 @@ export function Chat({
       </div>
 
       {loading && conversations.length === 0 ? (
-        <div className="card flex items-center justify-center gap-2 p-8 text-sm text-neutral-500 dark:text-neutral-400">
+        <div className="card flex items-center justify-center gap-2 p-8 text-sm text-[var(--geegle-muted)]">
           <Loader2 size={15} className="animate-spin" /> Loading chat…
         </div>
       ) : error && conversations.length === 0 ? (
         <div className="card p-6 text-center" role="alert" data-chat-failed>
-          <p className="mb-3 text-sm text-neutral-600 dark:text-neutral-300">{error}</p>
+          <p className="mb-3 text-sm text-neutral-600">{error}</p>
           <button className="btn-primary" onClick={() => void refreshConversations()}>
             Retry
           </button>
@@ -753,14 +937,14 @@ export function Chat({
         <div className="card flex h-[min(72vh,620px)] min-h-[340px] overflow-hidden p-0">
           {/* Conversation list */}
           <div
-            className={`w-full shrink-0 flex-col border-r border-neutral-200 dark:border-neutral-800 md:flex md:w-64 ${
+            className={`w-full shrink-0 flex-col border-r border-neutral-200 bg-[var(--geegle-chat)] transition-colors dark:border-[var(--geegle-border)] md:flex md:w-64 ${
               selectedId ? 'hidden md:flex' : 'flex'
             }`}
             aria-label="Conversations"
           >
             <div className="min-h-0 flex-1 overflow-y-auto p-1.5">
               {conversations.length === 0 ? (
-                <p className="p-3 text-xs text-neutral-500 dark:text-neutral-400">
+                <p className="p-3 text-xs text-[var(--geegle-muted)]">
                   No conversations yet. Start one from the buttons above.
                 </p>
               ) : (
@@ -769,50 +953,78 @@ export function Chat({
                   const preview = last
                     ? last.unsent
                       ? 'Message unsent'
-                      : `${last.mine ? 'You: ' : ''}${last.body ?? ''}`
-                    : conversation.kind === 'dm'
-                      ? 'No messages yet'
-                      : 'No messages yet';
+                      : `${last.mine ? 'You: ' : ''}${last.forwarded ? 'Forwarded message' : last.body ?? ''}`
+                    : 'No messages yet';
+                  const selectedRow = conversation.id === selectedId;
                   return (
-                    <button
+                    <div
                       key={conversation.id}
-                      className={`mb-0.5 flex w-full items-start gap-2 rounded px-2 py-1.5 text-left ${
-                        conversation.id === selectedId
-                          ? 'bg-neutral-100 dark:bg-neutral-800'
-                          : 'hover:bg-neutral-50 dark:hover:bg-neutral-800/60'
+                      className={`group/row mb-0.5 flex items-stretch rounded ${
+                        selectedRow
+                          ? 'bg-[var(--geegle-selected)]'
+                          : 'hover:bg-[var(--geegle-hover)]'
                       }`}
-                      onClick={() => {
-                        setSelectedId(conversation.id);
-                        setMenuFor(null);
-                      }}
-                      aria-current={conversation.id === selectedId ? 'true' : undefined}
                       data-conversation={conversation.id}
                       data-conversation-kind={conversation.kind}
+                      data-pinned={conversation.pinned ? 'true' : 'false'}
                     >
-                      <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-neutral-200 text-xs font-semibold text-neutral-600 dark:bg-neutral-700 dark:text-neutral-200">
-                        {conversation.kind === 'public' ? '#' : conversation.kind === 'group' ? <Users size={13} /> : initials(conversation.title)}
-                      </span>
-                      <span className="min-w-0 flex-1">
-                        <span className="flex items-baseline justify-between gap-1">
-                          <span className="truncate text-sm font-medium">{conversation.title}</span>
-                          <span className="shrink-0 text-[10px] text-neutral-400">
-                            {relativeStamp(conversation.lastActivityAt)}
+                      <button
+                        className="flex min-w-0 flex-1 items-start gap-2 rounded px-2 py-1.5 text-left"
+                        onClick={() => {
+                          setSelectedId(conversation.id);
+                          setMenuFor(null);
+                        }}
+                        aria-current={selectedRow ? 'true' : undefined}
+                      >
+                        <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-neutral-200 text-xs font-semibold text-neutral-600">
+                          {conversation.kind === 'public' ? '#' : conversation.kind === 'group' ? <Users size={13} /> : initials(conversation.title)}
+                        </span>
+                        <span className="min-w-0 flex-1">
+                          <span className="flex items-baseline justify-between gap-1">
+                            <span className="flex min-w-0 items-center gap-1">
+                              <span className="truncate text-sm font-medium">{conversation.title}</span>
+                              {conversation.pinned && (
+                                <Pin size={10} className="shrink-0 text-neutral-400" aria-label="Pinned" />
+                              )}
+                            </span>
+                            <span className="shrink-0 text-[10px] text-neutral-400">
+                              {relativeStamp(conversation.lastActivityAt)}
+                            </span>
+                          </span>
+                          <span className="flex items-center justify-between gap-1">
+                            <span className="truncate text-xs text-[var(--geegle-muted)]">{preview}</span>
+                            {conversation.unread > 0 && conversation.kind === 'public' && (
+                              <span
+                                className="h-2 w-2 shrink-0 rounded-full bg-[var(--geegle-accent)]"
+                                aria-label="Unread public messages"
+                                data-unread-dot="true"
+                              />
+                            )}
+                            {conversation.unread > 0 && conversation.kind !== 'public' && (
+                              <span
+                                className="shrink-0 rounded-full bg-[var(--geegle-accent)] px-1.5 text-[10px] font-semibold leading-4 text-[var(--geegle-accent-ink)]"
+                                aria-label={`${conversation.unread} unread`}
+                                data-unread={conversation.unread}
+                              >
+                                {unreadBadge(conversation.unread)}
+                              </span>
+                            )}
                           </span>
                         </span>
-                        <span className="flex items-center justify-between gap-1">
-                          <span className="truncate text-xs text-neutral-500 dark:text-neutral-400">{preview}</span>
-                          {conversation.unread > 0 && (
-                            <span
-                              className="shrink-0 rounded-full bg-[var(--geegle-accent,#2563eb)] px-1.5 text-[10px] font-semibold leading-4 text-white"
-                              aria-label={`${conversation.unread} unread`}
-                              data-unread={conversation.unread}
-                            >
-                              {conversation.unread > 99 ? '99+' : conversation.unread}
-                            </span>
-                          )}
-                        </span>
-                      </span>
-                    </button>
+                      </button>
+                      {conversation.kind !== 'public' && (
+                        <button
+                          className={`${iconButton} my-auto mr-1 h-6 w-6 shrink-0 p-0.5 opacity-0 focus:opacity-100 group-hover/row:opacity-100`}
+                          aria-label={conversation.pinned ? `Unpin ${conversation.title}` : `Pin ${conversation.title}`}
+                          title={conversation.pinned ? 'Unpin' : 'Pin'}
+                          data-pin={conversation.id}
+                          disabled={Boolean(busy)}
+                          onClick={() => void togglePin(conversation)}
+                        >
+                          {conversation.pinned ? <PinOff size={12} /> : <Pin size={12} />}
+                        </button>
+                      )}
+                    </div>
                   );
                 })
               )}
@@ -822,12 +1034,12 @@ export function Chat({
           {/* Thread */}
           <div className={`min-w-0 flex-1 flex-col md:flex ${selectedId ? 'flex' : 'hidden md:flex'}`}>
             {!selected ? (
-              <div className="flex h-full items-center justify-center p-6 text-sm text-neutral-500 dark:text-neutral-400">
+              <div className="flex h-full items-center justify-center p-6 text-sm text-[var(--geegle-muted)]">
                 Choose a conversation.
               </div>
             ) : (
               <>
-                <div className="flex items-center gap-1.5 border-b border-neutral-200 px-2 py-1.5 dark:border-neutral-800">
+                <div className="flex items-center gap-1.5 border-b border-neutral-200 px-2 py-1.5 dark:border-[var(--geegle-border)]">
                   <button
                     className={`${iconButton} md:hidden`}
                     onClick={() => setSelectedId(null)}
@@ -839,7 +1051,7 @@ export function Chat({
                     <h2 className="truncate text-sm font-semibold" data-chat-title>
                       {selected.title}
                     </h2>
-                    <p className="truncate text-[11px] text-neutral-500 dark:text-neutral-400">{kindLabel(selected)}</p>
+                    <p className="truncate text-[11px] text-[var(--geegle-muted)]">{kindLabel(selected)}</p>
                   </div>
                   {selected.kind === 'dm' && (
                     <button
@@ -869,7 +1081,7 @@ export function Chat({
                         <>
                           <div className="fixed inset-0 z-10" onClick={() => setMenuFor(null)} aria-hidden="true" />
                           <div
-                            className="absolute right-2 top-16 z-20 w-40 rounded-md border border-neutral-200 bg-white p-1 shadow-lg dark:border-neutral-700 dark:bg-neutral-900"
+                            className="absolute right-2 top-16 z-20 w-40 rounded-md border border-neutral-200 bg-[var(--geegle-card)] p-1 shadow-lg dark:border-[var(--geegle-border)]"
                             role="menu"
                           >
                             <button
@@ -910,7 +1122,8 @@ export function Chat({
                   )}
                 </div>
 
-                <div className="relative min-h-0 flex-1">
+                <div className="relative min-h-0 flex-1" data-chat-surface>
+                  {ambientEnabled && <ChatAmbient palette={chatAmbient} enabled />}
                   {selected.kind === 'dm' && (
                     <BackgroundLayer background={shownBackground} imageUrl={shownBackgroundUrl} />
                   )}
@@ -938,7 +1151,7 @@ export function Chat({
                     {hasMore && (
                       <div className="mb-2 text-center">
                         <button
-                          className="text-xs text-neutral-500 underline-offset-2 hover:underline disabled:opacity-50 dark:text-neutral-400"
+                          className="text-xs text-[var(--geegle-muted)] underline-offset-2 hover:underline disabled:opacity-50"
                           onClick={() => void loadOlder()}
                           disabled={olderLoading}
                         >
@@ -946,20 +1159,18 @@ export function Chat({
                         </button>
                       </div>
                     )}
-                    {threadLoading && messages.length === 0 ? (
-                      <p className="flex items-center gap-2 py-4 text-xs text-neutral-500 dark:text-neutral-400">
-                        <Loader2 size={13} className="animate-spin" /> Loading messages…
-                      </p>
-                    ) : threadError ? (
+                    {threadError && messages.length === 0 ? (
                       <div className="p-3 text-center" role="alert" data-thread-error>
-                        <p className="mb-2 text-xs text-neutral-600 dark:text-neutral-300">{threadError}</p>
+                        <p className="mb-2 text-xs text-neutral-600">{threadError}</p>
                         <button className="btn-primary px-3 py-1 text-xs" onClick={() => void loadThread(selected.id)}>
                           Retry
                         </button>
                       </div>
+                    ) : !threadReady ? (
+                      <div className="py-6" aria-hidden="true" />
                     ) : messages.length === 0 ? (
-                      <p className="py-6 text-center text-xs text-neutral-500 dark:text-neutral-400">
-                        No messages yet. Say hello.
+                      <p className="py-8 text-center text-xs text-[var(--geegle-muted)]" data-empty-thread>
+                        No messages yet.
                       </p>
                     ) : (
                       messages.map((message, index) => {
@@ -973,7 +1184,7 @@ export function Chat({
                         return (
                           <Fragment key={message.id}>
                             {newDay && (
-                              <div className="my-2 text-center text-[10px] uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+                              <div className="my-2 text-center text-[10px] uppercase tracking-wide text-[var(--geegle-muted)]">
                                 {dayLabel(message.createdAt)}
                               </div>
                             )}
@@ -1011,7 +1222,7 @@ export function Chat({
                 </div>
 
                 <form
-                  className="flex items-end gap-1.5 border-t border-neutral-200 p-2 dark:border-neutral-800"
+                  className="flex items-end gap-1.5 border-t border-neutral-200 p-2 dark:border-[var(--geegle-border)]"
                   onSubmit={(event) => {
                     event.preventDefault();
                     void submit();
@@ -1063,10 +1274,78 @@ export function Chat({
         />
       )}
 
+      {modOpen && (
+        <Modal title="Moderation" onClose={() => setModOpen(false)}>
+          <p className="mb-2 text-xs text-[var(--geegle-muted)]">
+            Public messages only. Private reports show what was reported and who reported
+            it, never the message itself.
+          </p>
+          {modBusy && (
+            <p className="mb-2 flex items-center gap-1 text-xs text-[var(--geegle-muted)]">
+              <Loader2 size={12} className="animate-spin" /> Working
+            </p>
+          )}
+          <div className="mb-3 max-h-64 space-y-2 overflow-y-auto" data-moderation-queue>
+            {modQueue.length === 0 ? (
+              <p className="text-xs text-[var(--geegle-muted)]">No open reports.</p>
+            ) : (
+              modQueue.map((report) => (
+                <div key={report.reportId} className="rounded-md border border-neutral-200 p-2 text-xs dark:border-[var(--geegle-border)]" data-report={report.reportId}>
+                  <p className="font-medium">
+                    {report.conversationTitle} · {report.authorName}
+                  </p>
+                  <p className="text-[var(--geegle-muted)]">
+                    Reported by {report.reporter}: “{report.reason}”
+                  </p>
+                  {report.body !== null ? (
+                    <p className="mt-1 whitespace-pre-wrap break-words rounded bg-neutral-100 p-1.5">
+                      {report.body}
+                    </p>
+                  ) : (
+                    <p className="mt-1 italic text-[var(--geegle-muted)]">
+                      {report.alreadyRemoved ? 'Message already removed.' : 'Private message — content withheld.'}
+                    </p>
+                  )}
+                  <div className="mt-1.5 flex flex-wrap gap-1">
+                    {report.kind === 'public' && !report.alreadyRemoved && (
+                      <button className={smallButton} disabled={modBusy} onClick={() => void moderateRemove(report)}>
+                        Remove message
+                      </button>
+                    )}
+                    {report.kind === 'public' && (
+                      <button className={smallButton} disabled={modBusy} onClick={() => void moderateMute(report)}>
+                        Pause author
+                      </button>
+                    )}
+                    <button className={smallButton} disabled={modBusy} onClick={() => void moderateDismiss(report)}>
+                      Dismiss
+                    </button>
+                  </div>
+                </div>
+              ))
+            )}
+          </div>
+          <p className="mb-1 text-xs font-medium">Recent moderation</p>
+          <ul className="max-h-40 space-y-1 overflow-y-auto text-[11px] text-[var(--geegle-muted)]">
+            {modHistory.length === 0 ? (
+              <li>Nothing yet.</li>
+            ) : (
+              modHistory.map((entry) => (
+                <li key={entry.id} data-moderation-action={entry.id}>
+                  {new Date(entry.createdAt).toLocaleString()} · {entry.action}
+                  {entry.targetUser ? ' · ' + entry.targetUser : ''}
+                  {entry.reason ? ' — ' + entry.reason : ''}
+                </li>
+              ))
+            )}
+          </ul>
+        </Modal>
+      )}
+
       {picker === 'dm' && (
-        <Modal title="New direct message" onClose={() => setPicker(null)}>
+        <Modal title="New direct message" onClose={() => setPicker(null)}><div data-picker>
           {friends.length === 0 ? (
-            <p className="text-xs text-neutral-500 dark:text-neutral-400">
+            <p className="text-xs text-[var(--geegle-muted)]">
               Direct messages need an accepted friend. Add one from the Friends tab first.
             </p>
           ) : (
@@ -1074,12 +1353,12 @@ export function Chat({
               {friends.map((friend) => (
                 <button
                   key={friend.userId}
-                  className="flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-sm hover:bg-neutral-100 disabled:opacity-50 dark:hover:bg-neutral-800"
+                  className="flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-sm hover:bg-neutral-100 disabled:opacity-50"
                   disabled={Boolean(busy)}
                   onClick={() => void startDirectMessage(friend)}
                   data-start-dm={friend.userId}
                 >
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-neutral-200 text-xs dark:bg-neutral-700">
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-neutral-200 text-xs">
                     {initials(friend.username)}
                   </span>
                   <span className="truncate">{friend.username}</span>
@@ -1087,7 +1366,7 @@ export function Chat({
               ))}
             </div>
           )}
-        </Modal>
+        </div></Modal>
       )}
 
       {(picker === 'group' || picker === 'renaming') && (
@@ -1122,7 +1401,7 @@ export function Chat({
       {picker === 'invite' && (
         <Modal title="Invite to group" onClose={() => setPicker(null)}>
           {friends.filter((friend) => !friendIds.has(friend.userId)).length === 0 ? (
-            <p className="text-xs text-neutral-500 dark:text-neutral-400">
+            <p className="text-xs text-[var(--geegle-muted)]">
               Every friend is already in this group.
             </p>
           ) : (
@@ -1132,7 +1411,7 @@ export function Chat({
                 .map((friend) => (
                   <button
                     key={friend.userId}
-                    className="flex w-full items-center justify-between gap-2 rounded px-2 py-1.5 text-left text-sm hover:bg-neutral-100 disabled:opacity-50 dark:hover:bg-neutral-800"
+                    className="flex w-full items-center justify-between gap-2 rounded px-2 py-1.5 text-left text-sm hover:bg-neutral-100 disabled:opacity-50"
                     disabled={Boolean(busy)}
                     onClick={() => void invite(friend.userId)}
                     data-invite={friend.userId}
@@ -1150,20 +1429,20 @@ export function Chat({
         <Modal title="Group members" onClose={() => setPicker(null)}>
           <div className="mb-2 max-h-64 overflow-y-auto">
             {membersBusy && members.length === 0 ? (
-              <p className="text-xs text-neutral-500 dark:text-neutral-400">Loading members…</p>
+              <p className="text-xs text-[var(--geegle-muted)]">Loading members…</p>
             ) : members.length === 0 ? (
-              <p className="text-xs text-neutral-500 dark:text-neutral-400">No members.</p>
+              <p className="text-xs text-[var(--geegle-muted)]">No members.</p>
             ) : (
               members.map((member) => (
                 <div
                   key={member.userId}
-                  className="flex items-center justify-between gap-2 border-b border-neutral-200 py-1.5 text-sm last:border-0 dark:border-neutral-800"
+                  className="flex items-center justify-between gap-2 border-b border-neutral-200 py-1.5 text-sm last:border-0 dark:border-[var(--geegle-border)]"
                   data-member={member.userId}
                 >
                   <span className="truncate">
                     {member.username}
                     {member.role === 'owner' && (
-                      <span className="ml-1 text-[10px] uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+                      <span className="ml-1 text-[10px] uppercase tracking-wide text-[var(--geegle-muted)]">
                         owner
                       </span>
                     )}

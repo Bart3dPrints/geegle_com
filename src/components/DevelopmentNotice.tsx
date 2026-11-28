@@ -22,7 +22,7 @@ export function DevelopmentNotice({ onDismiss }: { onDismiss: () => void }) {
     >
       <button
         type="button"
-        className="absolute right-2 top-2 rounded p-1.5 text-neutral-500 transition-colors hover:bg-neutral-100 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-100"
+        className="absolute right-2 top-2 rounded p-1.5 text-[var(--geegle-muted)] transition-colors hover:bg-neutral-100 hover:text-neutral-900"
         onClick={onDismiss}
         aria-label="Dismiss announcement"
       >
@@ -30,7 +30,7 @@ export function DevelopmentNotice({ onDismiss }: { onDismiss: () => void }) {
       </button>
       <p className="text-sm font-medium">{ANNOUNCEMENT_TITLE}</p>
       {ANNOUNCEMENT_BODY.map((line) => (
-        <p key={line} className="mt-1 text-sm text-neutral-600 dark:text-neutral-300">
+        <p key={line} className="mt-1 text-sm text-neutral-600">
           {line}
         </p>
       ))}

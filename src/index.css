@@ -6,16 +6,13 @@
  * Geegle design system
  * - Spacing: Tailwind's 4px-based scale only (4/8px increments).
  * - Typography: single family (Inter), defined ramp, consistent line heights.
- * - Colors: neutral grayscale surfaces and accent. No gradients, no neon glows.
+ * - Colors: semantic CSS variables set by the active theme preset
+ *   (src/theme/palette.ts). Components use the neutral scale, which is mapped
+ *   onto those variables in tailwind.config.js.
  * - Borders/radius: 8px cards, 6px controls, 4px chips.
- * - Shadows: one subtle level only; motion is short and consistent.
+ * - Motion: short (150–340 ms), only where it communicates a change.
  */
 
-/*
- * Library wordmark typeface: Poppins Medium (SIL Open Font License 1.1, see
- * public/fonts/POPPINS-OFL.txt). Geometric letterforms close to the reference
- * search-engine typography, self-hosted so the mark never depends on a CDN.
- */
 @font-face {
   font-family: 'Geegle Wordmark';
   font-style: normal;
@@ -31,22 +28,84 @@
   html.dark {
     color-scheme: dark;
   }
+  /* First-paint defaults: the neutral preset. applyTheme overwrites these as
+     soon as the account's preferences are known. */
   :root {
-    /* Solid neutral defaults; Settings may override these with user choices. */
-    --geegle-bg: #fafafa;
+    --geegle-n-50: 0 0% 98.5%;
+    --geegle-n-100: 0 0% 96.5%;
+    --geegle-n-200: 0 0% 92%;
+    --geegle-n-300: 0 0% 87%;
+    --geegle-n-400: 0 0% 66%;
+    --geegle-n-500: 0 0% 48%;
+    --geegle-n-600: 0 0% 38%;
+    --geegle-n-700: 0 0% 29%;
+    --geegle-n-800: 0 0% 21%;
+    --geegle-n-900: 0 0% 14%;
+    --geegle-n-950: 0 0% 8%;
+
+    --geegle-bg: hsl(217 24% 97.5%);
+    --geegle-header: hsl(217 24% 99.5%);
     --geegle-card: #ffffff;
-    --geegle-accent: #171717;
+    --geegle-elevated: hsl(217 24% 99%);
+    --geegle-border: hsl(217 24% 89%);
+    --geegle-text: hsl(217 24% 12%);
+    --geegle-muted: hsl(217 24% 44%);
+    --geegle-accent: #2563eb;
+    --geegle-accent-ink: #ffffff;
     --geegle-accent-contrast: #ffffff;
-    --geegle-text: #171717;
+    --geegle-field: hsl(217 24% 99%);
+    --geegle-field-text: hsl(217 24% 12%);
+    --geegle-search-bg: hsl(217 24% 99%);
+    --geegle-hover: hsl(217 36% 94%);
+    --geegle-selected: hsl(217 36% 90%);
+    --geegle-chat: hsl(217 24% 99%);
+    --geegle-bubble-out: #2563eb;
+    --geegle-bubble-out-ink: #ffffff;
+    --geegle-bubble-in: hsl(217 24% 93%);
+    --geegle-bubble-in-ink: hsl(217 24% 12%);
+    --geegle-ambient-1: rgb(219 231 255);
+    --geegle-ambient-2: rgb(235 243 255);
+    --geegle-ambient-3: rgb(226 236 252);
     --geegle-font: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
     --geegle-scrim: rgba(250, 250, 250, 0.84);
+    --geegle-header-fade: 14px;
   }
   html.dark {
-    --geegle-bg: #181818;
-    --geegle-card: #252525;
-    --geegle-accent: #f5f5f5;
-    --geegle-accent-contrast: #171717;
-    --geegle-text: #f5f5f5;
+    --geegle-n-50: 0 0% 9%;
+    --geegle-n-100: 0 0% 12%;
+    --geegle-n-200: 0 0% 17%;
+    --geegle-n-300: 0 0% 24%;
+    --geegle-n-400: 0 0% 45%;
+    --geegle-n-500: 0 0% 56%;
+    --geegle-n-600: 0 0% 67%;
+    --geegle-n-700: 0 0% 77%;
+    --geegle-n-800: 0 0% 86%;
+    --geegle-n-900: 0 0% 92%;
+    --geegle-n-950: 0 0% 97%;
+
+    --geegle-bg: hsl(217 24% 9%);
+    --geegle-header: hsl(217 24% 12.5%);
+    --geegle-card: hsl(217 24% 15%);
+    --geegle-elevated: hsl(217 24% 19%);
+    --geegle-border: hsl(217 24% 26%);
+    --geegle-text: hsl(217 24% 96%);
+    --geegle-muted: hsl(217 24% 66%);
+    --geegle-accent: #93c5fd;
+    --geegle-accent-ink: #111111;
+    --geegle-accent-contrast: #111111;
+    --geegle-field: hsl(217 24% 14%);
+    --geegle-field-text: hsl(217 24% 96%);
+    --geegle-search-bg: hsl(217 24% 14%);
+    --geegle-hover: hsl(217 24% 20%);
+    --geegle-selected: hsl(217 34% 26%);
+    --geegle-chat: hsl(217 24% 11.5%);
+    --geegle-bubble-out: #93c5fd;
+    --geegle-bubble-out-ink: #111111;
+    --geegle-bubble-in: hsl(217 24% 23%);
+    --geegle-bubble-in-ink: hsl(217 24% 96%);
+    --geegle-ambient-1: rgb(37 62 99);
+    --geegle-ambient-2: rgb(30 51 82);
+    --geegle-ambient-3: rgb(24 41 66);
     --geegle-scrim: rgba(24, 24, 24, 0.84);
   }
   body {
@@ -54,6 +113,7 @@
     font-family: var(--geegle-font);
     color: var(--geegle-text);
     background-color: var(--geegle-bg);
+    transition: background-color 260ms ease, color 260ms ease;
   }
   input[type='checkbox'] {
     accent-color: var(--geegle-accent);
@@ -78,49 +138,66 @@
   .btn-primary {
     @apply btn border-transparent;
     background-color: var(--geegle-accent);
-    color: var(--geegle-accent-contrast);
+    color: var(--geegle-accent-ink);
   }
   .btn-primary:hover {
-    opacity: 0.9;
+    filter: brightness(1.06);
   }
   .btn-secondary {
-    @apply btn border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700;
+    @apply btn border-neutral-300 text-neutral-700 hover:bg-neutral-100 dark:border-[var(--geegle-border)];
+    background-color: var(--geegle-card);
   }
   .card {
-    @apply rounded-lg border border-neutral-200 dark:border-neutral-700;
+    @apply rounded-lg border border-neutral-200 dark:border-[var(--geegle-border)];
     background-color: var(--geegle-card);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16), 0 4px 10px -4px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 6px 16px -10px rgba(0, 0, 0, 0.25);
+    transition: background-color 260ms ease, border-color 260ms ease;
+  }
+  /* Text entry follows the active theme: a field surface with its own ink, so
+     no input stays glaring white in a dark theme. */
+  .geegle-field {
+    background-color: var(--geegle-field);
+    color: var(--geegle-field-text);
+    transition: background-color 260ms ease, color 260ms ease;
+  }
+  .geegle-field::placeholder,
+  .geegle-field input::placeholder,
+  .input::placeholder {
+    color: color-mix(in srgb, var(--geegle-field-text) 55%, var(--geegle-field));
+    opacity: 1;
   }
   .input {
-    @apply w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none focus:ring-1 focus:ring-neutral-900 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100 dark:placeholder-neutral-500 dark:focus:border-neutral-100 dark:focus:ring-neutral-100;
+    @apply w-full rounded-md border border-neutral-300 px-3 py-2 text-sm focus:border-neutral-900 focus:outline-none focus:ring-1 focus:ring-neutral-900 dark:border-[var(--geegle-border)];
+    background-color: var(--geegle-field);
+    color: var(--geegle-field-text);
+    transition: background-color 260ms ease, color 260ms ease;
   }
   .label {
-    @apply mb-1 block text-sm font-medium text-neutral-700 dark:text-neutral-300;
+    @apply mb-1 block text-sm font-medium text-neutral-700;
   }
   .chip {
-    @apply inline-flex shrink-0 items-center gap-1 rounded border border-neutral-200 bg-white px-2.5 py-1.5 text-sm font-medium text-neutral-600 transition-colors hover:border-neutral-300 hover:text-neutral-900 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-400 dark:hover:border-neutral-600 dark:hover:text-neutral-200;
+    @apply inline-flex shrink-0 items-center gap-1 rounded border border-neutral-200 px-2.5 py-1.5 text-sm font-medium text-neutral-600 transition-colors hover:border-neutral-300 hover:text-neutral-900 dark:border-[var(--geegle-border)];
+    background-color: var(--geegle-card);
   }
   .chip-active {
     @apply chip;
     border-color: var(--geegle-accent);
     background-color: var(--geegle-accent);
-    color: var(--geegle-accent-contrast);
+    color: var(--geegle-accent-ink);
   }
   .chip-active:hover {
     border-color: var(--geegle-accent);
-    color: var(--geegle-accent-contrast);
+    color: var(--geegle-accent-ink);
   }
   /* Accent surfaces used by settings controls, the nav underline and the
      alphabetical rail. */
   .accent-surface {
     background-color: var(--geegle-accent);
-    color: var(--geegle-accent-contrast);
+    color: var(--geegle-accent-ink);
   }
   .badge {
     @apply inline-flex items-center gap-1 rounded px-1.5 py-0.5 text-xs font-medium;
   }
-  /* 22px is a ~38% increase over the previous 16px, with tight leading so the
-     56px library header keeps its height. */
   .geegle-wordmark {
     font-family: 'Geegle Wordmark', Inter, ui-sans-serif, system-ui, sans-serif;
     font-size: 22px;
@@ -135,6 +212,52 @@
   .shadow-pop {
     @apply shadow-lg;
   }
+}
+
+/* The header ends in a short fade instead of a hard rule. It is a decorative
+   overlay inside the sticky header, so it never intercepts a click. */
+.geegle-header {
+  position: sticky;
+  border-bottom: 0;
+}
+.geegle-header::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  bottom: calc(-1 * var(--geegle-header-fade));
+  height: var(--geegle-header-fade);
+  pointer-events: none;
+  background-image: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--geegle-header) 92%, transparent),
+    color-mix(in srgb, var(--geegle-bg) 0%, transparent)
+  );
+}
+
+/* Message bubbles: the familiar conversational shape. The width follows the
+   content and stops at 75% of the column. */
+.bubble {
+  @apply relative rounded-2xl px-3 py-1.5 text-sm leading-5;
+  /* The row's column already caps the message at 75% of the conversation; a
+     second cap here would leave dead space between bubble and menu. */
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  transition: background-color 260ms ease, color 260ms ease;
+}
+.bubble-out {
+  background-color: var(--geegle-bubble-out);
+  color: var(--geegle-bubble-out-ink);
+}
+.bubble-in {
+  background-color: var(--geegle-bubble-in);
+  color: var(--geegle-bubble-in-ink);
+}
+
+/* Ambient layers fade between palettes rather than snapping. */
+[data-ambient='on'],
+[data-chat-ambient='on'] {
+  will-change: opacity;
 }
 
 /* Artwork fades in once decoded instead of popping into the grid. */

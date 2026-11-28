@@ -16,14 +16,16 @@ export function VisitorCounter({
 
   return (
     <span
-      className="flex shrink-0 items-center gap-1.5 text-[11px] tabular-nums text-neutral-500 dark:text-neutral-400"
+      className="flex shrink-0 items-center gap-1.5 text-[11px] tabular-nums text-[var(--geegle-muted)]"
+      data-visitors={live ? String(visitors) : "unavailable"}
       title={live ? `${visitors} ${visitors === 1 ? 'person is' : 'people are'} online now` : label}
       aria-label={label}
     >
       <span
         aria-hidden="true"
+        data-presence-dot={live ? "live" : "unknown"}
         className={`h-1.5 w-1.5 rounded-full ${
-          live ? 'bg-emerald-500' : 'bg-neutral-400 dark:bg-neutral-600'
+          live ? 'bg-emerald-500' : 'bg-neutral-400'
         }`}
       />
       {live ? visitors : '—'}

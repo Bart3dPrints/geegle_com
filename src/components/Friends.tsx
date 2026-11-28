@@ -26,27 +26,35 @@ import type { PresenceStatus } from '../hooks/useSocialPresence';
 const EMPTY: SocialSnapshot = { friends: [], incoming: [], outgoing: [], blocked: [] };
 
 const row =
-  'flex items-center justify-between gap-2 border-b border-neutral-200 py-1.5 last:border-0 dark:border-neutral-800';
+  'flex items-center justify-between gap-2 border-b border-neutral-200 py-1.5 last:border-0 dark:border-[var(--geegle-border)]';
 const name = 'min-w-0 truncate text-sm';
 const action =
-  'shrink-0 rounded-md border border-neutral-300 px-2 py-1 text-xs text-neutral-700 hover:bg-neutral-100 disabled:opacity-50 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800';
-const heading = 'mb-1 text-xs font-medium text-neutral-500 dark:text-neutral-400';
+  'shrink-0 rounded-md border border-neutral-300 px-2 py-1 text-xs text-neutral-700 hover:bg-neutral-100 disabled:opacity-50 dark:border-[var(--geegle-border)]';
+const heading = 'mb-1 text-xs font-medium text-[var(--geegle-muted)]';
 
 function Section({
   title,
   children,
   empty,
+  showEmpty = true,
 }: {
   title: string;
   children: React.ReactNode;
   empty?: string;
+  /**
+   * Empty copy is only a description of an empty list — never a caption under
+   * a populated one, and never a stand-in for a failed request.
+   */
+  showEmpty?: boolean;
 }) {
   return (
     <section className="mb-4">
       <h3 className={heading}>{title}</h3>
       <div className="card px-3 py-1">
         {children}
-        {empty && <p className="py-1.5 text-xs text-neutral-500 dark:text-neutral-400">{empty}</p>}
+        {empty && showEmpty && (
+          <p className="py-1.5 text-xs text-[var(--geegle-muted)]">{empty}</p>
+        )}
       </div>
     </section>
   );
@@ -55,10 +63,10 @@ function Section({
 function StatusDot({ online, status }: { online: boolean; status: PresenceStatus }) {
   const tone =
     status !== 'live'
-      ? 'bg-neutral-300 dark:bg-neutral-700'
+      ? 'bg-neutral-300'
       : online
         ? 'bg-emerald-500'
-        : 'bg-neutral-400 dark:bg-neutral-600';
+        : 'bg-neutral-400';
   const label = status !== 'live' ? 'Status unavailable' : online ? 'Online' : 'Offline';
   return (
     <span
@@ -74,15 +82,11 @@ export function Friends({
   onRequestSignIn,
   onlineKeys,
   presenceStatus,
-  hiddenStatus,
-  onHiddenStatusChange,
 }: {
   userId: string | null;
   onRequestSignIn: () => void;
   onlineKeys: Set<string>;
   presenceStatus: PresenceStatus;
-  hiddenStatus: boolean;
-  onHiddenStatusChange: (hidden: boolean) => void;
 }) {
   const [social, setSocial] = useState<SocialSnapshot>(EMPTY);
   const [query, setQuery] = useState('');
@@ -166,7 +170,7 @@ export function Friends({
     }
     void Promise.all(
       social.friends.map(async (friend) => {
-        const key = await presenceKeyFor(friend.userId, false);
+        const key = await presenceKeyFor(friend.userId);
         return [friend.userId, onlineKeys.has(key)] as const;
       }),
     ).then((entries) => {
@@ -200,7 +204,7 @@ export function Friends({
       <section aria-label="Friends" className="mx-auto w-full max-w-md">
         <div className="card p-6 text-center">
           <h2 className="mb-1 text-base font-semibold">Friends</h2>
-          <p className="mb-4 text-sm text-neutral-500 dark:text-neutral-400">
+          <p className="mb-4 text-sm text-[var(--geegle-muted)]">
             Sign in to add friends and see who is online.
           </p>
           <button className="btn-primary" onClick={onRequestSignIn}>
@@ -216,7 +220,7 @@ export function Friends({
       <section aria-label="Friends" className="mx-auto w-full max-w-md">
         <div className="card p-6 text-center" role="alert" data-friends-failed>
           <p className="mb-1 text-sm font-medium">Friends could not be loaded</p>
-          <p className="mb-3 text-xs text-neutral-500 dark:text-neutral-400">
+          <p className="mb-3 text-xs text-[var(--geegle-muted)]">
             {error ?? 'The service did not answer. Your friends were not changed.'}
           </p>
           <button className="btn-primary" onClick={() => void refresh()}>
@@ -230,7 +234,7 @@ export function Friends({
   return (
     <section aria-label="Friends" className="mx-auto w-full max-w-3xl">
       <div className="mb-3 flex flex-wrap items-center gap-2">
-        <div className="flex min-w-48 flex-1 items-center gap-1.5 rounded-md border border-neutral-300 bg-white px-2 py-1.5 dark:border-neutral-700 dark:bg-neutral-900">
+        <div className="flex min-w-48 flex-1 items-center gap-1.5 rounded-md border border-neutral-300 bg-[var(--geegle-card)] px-2 py-1.5 dark:border-[var(--geegle-border)]">
           <Search size={15} className="text-neutral-400" aria-hidden="true" />
           <input
             className="w-full bg-transparent text-sm outline-none"
@@ -246,14 +250,6 @@ export function Friends({
             </button>
           )}
         </div>
-        <label className="flex shrink-0 items-center gap-1.5 text-xs text-neutral-600 dark:text-neutral-300">
-          <input
-            type="checkbox"
-            checked={!hiddenStatus}
-            onChange={(event) => onHiddenStatusChange(!event.target.checked)}
-          />
-          Show me online
-        </label>
       </div>
 
       {error && (
@@ -263,7 +259,11 @@ export function Friends({
       )}
 
       {normalizeSearchTerm(query) && (
-        <Section title="Results" empty={searching ? 'Searching…' : 'No accounts found.'}>
+        <Section
+          title="Results"
+          empty={searching ? 'Searching…' : 'No accounts found.'}
+          showEmpty={results.length === 0}
+        >
           {results.map((user) => {
             const friend = friendIds.has(user.userId);
             const sent = outgoingIds.has(user.userId);
@@ -273,9 +273,9 @@ export function Friends({
               <div key={user.userId} className={row} data-search-result={user.userId}>
                 <span className={name}>{user.username}</span>
                 {friend ? (
-                  <span className="text-xs text-neutral-500 dark:text-neutral-400">Friends</span>
+                  <span className="text-xs text-[var(--geegle-muted)]">Friends</span>
                 ) : blocked ? (
-                  <span className="text-xs text-neutral-500 dark:text-neutral-400">Blocked</span>
+                  <span className="text-xs text-[var(--geegle-muted)]">Blocked</span>
                 ) : incoming ? (
                   <button
                     className={action}
@@ -285,7 +285,7 @@ export function Friends({
                     Accept
                   </button>
                 ) : sent ? (
-                  <span className="text-xs text-neutral-500 dark:text-neutral-400">Requested</span>
+                  <span className="text-xs text-[var(--geegle-muted)]">Requested</span>
                 ) : (
                   <button
                     className={action}
@@ -301,7 +301,11 @@ export function Friends({
         </Section>
       )}
 
-      <Section title="Requests" empty="No pending requests.">
+      <Section
+        title="Requests"
+        empty="No pending requests."
+        showEmpty={social.incoming.length + social.outgoing.length === 0}
+      >
         {social.incoming.map((request) => (
           <div key={request.requestId} className={row} data-incoming={request.requestId}>
             <span className={name}>{request.username}</span>
@@ -325,7 +329,7 @@ export function Friends({
         ))}
         {social.outgoing.map((request) => (
           <div key={request.requestId} className={row} data-outgoing={request.requestId}>
-            <span className={`${name} text-neutral-500 dark:text-neutral-400`}>
+            <span className={`${name} text-[var(--geegle-muted)]`}>
               {request.username} · requested
             </span>
             <button
@@ -339,7 +343,7 @@ export function Friends({
         ))}
       </Section>
 
-      <Section title="Friends" empty="No friends yet.">
+      <Section title="Friends" empty="No friends yet." showEmpty={social.friends.length === 0}>
         {social.friends.map((friend) => (
           <div key={friend.userId} className={row} data-friend={friend.userId}>
             <span className={`${name} flex items-center`}>

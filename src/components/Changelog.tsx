@@ -50,14 +50,14 @@ export function Changelog() {
           return (
             <li
               key={entry.pr}
-              className="border-b border-neutral-200 pb-4 last:border-0 last:pb-0 dark:border-neutral-700"
+              className="border-b border-neutral-200 pb-4 last:border-0 last:pb-0 dark:border-[var(--geegle-border)]"
             >
-              <p className="text-xs text-neutral-500 dark:text-neutral-400">
+              <p className="text-xs text-[var(--geegle-muted)]">
                 <time dateTime={entry.mergedAt}>{date}</time>
                 <span aria-hidden="true"> · </span>
                 <span>{time}</span>
               </p>
-              <p className="mt-1 text-sm text-neutral-800 dark:text-neutral-200">
+              <p className="mt-1 text-sm text-neutral-800">
                 {entry.summary}
               </p>
             </li>

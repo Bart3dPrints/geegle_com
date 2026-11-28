@@ -83,15 +83,15 @@ function LetterRail({
                     current
                       ? 'accent-surface'
                       : enabled
-                        ? 'text-neutral-500 hover:bg-neutral-100 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-100'
-                        : 'text-neutral-300 dark:text-neutral-700'
+                        ? 'text-[var(--geegle-muted)] hover:bg-neutral-100 hover:text-neutral-900'
+                        : 'text-neutral-300'
                   }`
                 : `flex h-6 w-7 shrink-0 items-center justify-center rounded text-xs font-medium transition-colors ${
                     current
                       ? 'accent-surface'
                       : enabled
-                        ? 'text-neutral-500 hover:bg-neutral-100 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-100'
-                        : 'text-neutral-300 dark:text-neutral-700'
+                        ? 'text-[var(--geegle-muted)] hover:bg-neutral-100 hover:text-neutral-900'
+                        : 'text-neutral-300'
                   }`
             }
             style={layout === 'column' ? { fontSize: rowHeight < 15 ? 9 : 11 } : undefined}
@@ -253,7 +253,7 @@ export function Library({
       </AnimatePresence>
 
       {query && (
-        <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-400" role="status">
+        <p className="mb-4 text-sm text-neutral-600" role="status">
           {games.length} {games.length === 1 ? 'result' : 'results'} for “{query}”
         </p>
       )}
@@ -303,7 +303,7 @@ export function Library({
                 >
                   <h2
                     id={`letter-heading-${section.letter}`}
-                    className="mb-3 border-b border-neutral-200 pb-2 text-sm font-semibold uppercase tracking-wide text-neutral-500 dark:border-neutral-800 dark:text-neutral-400"
+                    className="mb-3 border-b border-neutral-200 pb-2 text-sm font-semibold uppercase tracking-wide text-[var(--geegle-muted)] dark:border-[var(--geegle-border)]"
                   >
                     <button
                       type="button"

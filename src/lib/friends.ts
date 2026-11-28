@@ -101,7 +101,6 @@ export function countVisitors(state: Record<string, unknown[]> | null | undefine
 }
 
 const PRESENCE_SALT = 'geegle-presence:';
-const PRESENCE_HIDDEN_SALT = 'geegle-presence-hidden:';
 
 function randomKey(): string {
   const bytes = new Uint8Array(16);
@@ -132,13 +131,13 @@ async function sha256(value: string): Promise<string> {
  * The opaque key this browser uses on the shared presence channel.
  *
  * A signed-in account gets a stable hash of its id, so its tabs and devices
- * collapse into one visitor. A hidden account gets a different hash: it is
- * still counted, but no friend can match it and show it as online.
+ * collapse into one visitor. There is exactly one key per account now that
+ * invisible mode is gone: an account that is connected is visible to its
+ * accepted friends, and nothing else about it is published.
  */
-export async function presenceKeyFor(userId: string | null, hidden: boolean): Promise<string> {
+export async function presenceKeyFor(userId: string | null): Promise<string> {
   if (!userId) return guestKey();
-  const salt = hidden ? PRESENCE_HIDDEN_SALT : PRESENCE_SALT;
-  return `u${(await sha256(salt + userId)).slice(0, 32)}`;
+  return `u${(await sha256(PRESENCE_SALT + userId)).slice(0, 32)}`;
 }
 
 // --- live relationship changes -------------------------------------------

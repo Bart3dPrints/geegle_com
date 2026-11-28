@@ -45,10 +45,10 @@ test('a conversation keeps only permitted fields', () => {
   ]);
   assert.deepEqual(Object.keys(row).sort(), [
     'id', 'kind', 'lastActivityAt', 'lastMessage', 'memberCount',
-    'otherUserId', 'role', 'title', 'unread',
+    'otherUserId', 'pinned', 'role', 'title', 'unread',
   ]);
   assert.deepEqual(Object.keys(row.lastMessage).sort(), [
-    'authorName', 'body', 'createdAt', 'id', 'mine', 'unsent',
+    'authorName', 'body', 'createdAt', 'forwarded', 'id', 'mine', 'unsent',
   ]);
 });
 

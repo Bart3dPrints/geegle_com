@@ -54,10 +54,10 @@ export function AccountReminder({
         <h2 id="account-reminder-title" className="mb-2">
           {ACCOUNT_REMINDER_TITLE}
         </h2>
-        <p id="account-reminder-text" className="mb-4 text-sm text-neutral-600 dark:text-neutral-300">
+        <p id="account-reminder-text" className="mb-4 text-sm text-neutral-600">
           {ACCOUNT_REMINDER_TEXT}
         </p>
-        <label className="mb-5 flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-300">
+        <label className="mb-5 flex items-center gap-2 text-sm text-neutral-600">
           <input
             type="checkbox"
             className="h-4 w-4"

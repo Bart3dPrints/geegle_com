@@ -28,13 +28,13 @@ export function ProxyCard({
           height={360}
           loading="lazy"
           decoding="async"
-          className="mb-3 aspect-video w-full rounded-lg border border-neutral-200 object-cover dark:border-neutral-800"
+          className="mb-3 aspect-video w-full rounded-lg border border-neutral-200 object-cover dark:border-[var(--geegle-border)]"
         />
       )}
       <div className="mb-3 flex items-center gap-2">
         <h3 className="text-sm font-semibold">{service.name}</h3>
         {service.id === 'backup' && endpoint && !endpoint.verified && (
-          <span className="badge border border-neutral-300 text-neutral-600 dark:border-neutral-600 dark:text-neutral-300">
+          <span className="badge border border-neutral-300 text-neutral-600 dark:border-[var(--geegle-border)]">
             Unverified
           </span>
         )}
@@ -61,7 +61,7 @@ export function ProxyCard({
         </button>
       </div>
       {endpoint?.available === false && (
-        <p className="mt-2 text-xs text-neutral-600 dark:text-neutral-400" role="status">
+        <p className="mt-2 text-xs text-neutral-600" role="status">
           {endpoint.unavailableReason ?? 'This server is unavailable.'}
         </p>
       )}

@@ -14,6 +14,7 @@ import {
   readShortcutLocal,
   type NavigationShortcut,
 } from './navigationShortcut';
+import { DEFAULT_THEME_ID, THEME_PRESETS } from '../theme/palette';
 import {
   DEFAULT_TAB_IDENTITY,
   readTabIdentityLocal,
@@ -146,18 +147,9 @@ export async function loadServerDefaults(userId: string | null): Promise<OpResul
   return error ? { ok: false, error: error.message } : { ok: true, data: serverDefaults(data?.defaults) };
 }
 
-/** Whether accepted friends may see this account online. */
-export async function saveSocialStatusVisible(visible: boolean, userId: string | null): Promise<OpResult<null>> {
-  writeJson(SOCIAL_VISIBLE_KEY, visible);
-  if (!userId || !isSupabaseConfigured) return { ok: true };
-  return updateSettings(userId, (settings) => ({ ...settings, socialStatusVisible: visible }));
-}
-
-export async function loadSocialStatusVisible(userId: string | null): Promise<OpResult<boolean>> {
-  if (!userId || !isSupabaseConfigured) return { ok: true, data: readJson(SOCIAL_VISIBLE_KEY) !== false };
-  const { data, error } = await supabase.from(T.settings).select('value:settings->socialStatusVisible').eq('id', userId).maybeSingle();
-  return error ? { ok: false, error: error.message } : { ok: true, data: data?.value !== false };
-}
+// Invisible mode is gone: an account that is connected is visible to its
+// accepted friends. The old `socialStatusVisible` preference is no longer read
+// or written here, so accounts that had hidden themselves become visible.
 
 /** Recently Played is hidden until the owner of the settings turns it on. */
 export async function saveRecentVisible(visible: boolean, userId: string | null): Promise<OpResult<null>> {
@@ -194,14 +186,35 @@ export async function loadLibraryNoticeDismissed(userId: string | null): Promise
  */
 export interface AppearanceSettings extends Personalization {
   mode: ThemePreference;
+  /** Selected theme preset; a preset is a whole palette, not one accent. */
+  theme: string;
+  /** Ambient lighting around Geegle-owned surfaces. */
+  ambient: boolean;
+  /** Individual overrides on top of the preset. */
   background: string | null;
   card: string | null;
+  header: string | null;
+  field: string | null;
+  fieldText: string | null;
+  muted: string | null;
+  chat: string | null;
+  bubbleOut: string | null;
+  bubbleIn: string | null;
 }
 
 export const DEFAULT_APPEARANCE_SETTINGS: AppearanceSettings = {
   mode: 'system',
+  theme: DEFAULT_THEME_ID,
+  ambient: true,
   background: null,
   card: null,
+  header: null,
+  field: null,
+  fieldText: null,
+  muted: null,
+  chat: null,
+  bubbleOut: null,
+  bubbleIn: null,
   ...DEFAULT_PERSONALIZATION,
 };
 const HEX_COLOR = /^#[\da-f]{6}$/i;
@@ -210,10 +223,21 @@ export function parseAppearanceSettings(value: unknown): AppearanceSettings {
   const record = settingsObject(value);
   const mode = record.mode === 'light' || record.mode === 'dark' ? record.mode : 'system';
   const color = (entry: unknown) => (typeof entry === 'string' && HEX_COLOR.test(entry) ? entry : null);
+  const known = THEME_PRESETS.some((preset) => preset.id === record.theme);
   return {
     mode,
+    theme: known ? (record.theme as string) : DEFAULT_THEME_ID,
+    // Ambient lighting is on by default; an explicit false turns it off.
+    ambient: record.ambient !== false,
     background: color(record.background),
     card: color(record.card),
+    header: color(record.header),
+    field: color(record.field),
+    fieldText: color(record.fieldText),
+    muted: color(record.muted),
+    chat: color(record.chat),
+    bubbleOut: color(record.bubbleOut),
+    bubbleIn: color(record.bubbleIn),
     ...parsePersonalization(record),
   };
 }
